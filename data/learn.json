@@ -1,0 +1,53 @@
+{
+  "updatedAt": "2026-10-09",
+  "topics": [
+    {
+      "slug": "budget-80k", "title": "How to Make ₦80,000 Last a Month in Lagos", "angle": "Real numbers, real trade-offs, and where most people lose money.",
+      "keyPoints": ["Start with the non-negotiables: transport, data, and power are often more than food for city workers.", "Buy staples in bulk in your city's wholesale market, but only what you will use before it spoils.", "Cook the big pot twice a week and freeze what you can. Electricity cost is real, so check your power plan.", "Keep a weekly cash envelope so the month doesn't disappear by the 10th.", "Set a 'gbese' rule: no borrowing for owanbe or shakara you can't repay."],
+      "faqs": [["Is ₦80,000 enough for one person in Lagos?", "It can be, if you share a room, cook most meals, and keep transport tight. It is very tight if you pay rent alone."], ["What should I spend on food?", "Use the basket in our cost-of-living calculator as a starting point, then adjust for your life."], ["What is the easiest saving tip?", "Cut impulse buys from delivery apps and buy a fixed weekly list."]],
+      "relatedHustle": "provision-store", "relatedHowTo": "freelancer-tax-tin"
+    },
+    {
+      "slug": "spot-fake-job-offers", "title": "How to Spot Fake Job Offers and Recruitment Scams", "angle": "The red flags that show up in Nigerian WhatsApp and Instagram job posts.",
+      "keyPoints": ["Real employers do not ask for money to 'process' your application.", "Check the company on CAC's public search before you send any documents.", "Watch for free email domains for official jobs. Company emails should match the company's website.", "Never send your BVN, bank PIN, or full ID pack to a recruiter you have not verified.", "If the job is 'too good', assume it's bait until proven otherwise."],
+      "faqs": [["Do real companies charge an application fee?", "Generally no. Be very careful with any recruiter who asks for cash upfront."], ["What documents should I never send?", "Your bank PIN, OTP, full BVN and a clear selfie with your ID on an unverified chat."], ["Where can I check a company?", "Use CAC's public search and the company's official website and LinkedIn page."]],
+      "relatedHustle": "phone-accessories", "relatedHowTo": "police-character-certificate"
+    },
+    {
+      "slug": "electricity-bill-explained", "title": "How to Read Your Electricity Bill (Metered vs Estimated)", "angle": "Why your bill jumps, and how to check what you are actually paying for.",
+      "keyPoints": ["Check whether your bill is metered or estimated. Estimated bills can be far off from real use.", "Look at the kWh units consumed and compare with last month.", "Ask for a meter reading if you suspect estimate errors.", "Generator fuel is often the bigger cost for businesses in cities with weak supply.", "Solar and inverter systems can cut costs if the payback period works for you."],
+      "faqs": [["Why is my bill suddenly high?", "Common causes: an estimated bill, a faulty meter, or a new appliance running longer than you think."], ["Can I dispute my bill?", "Yes. Contact your distribution company with your meter number and account details."], ["Is solar worth it?", "It depends on your usage and how long you plan to stay. Use the solar payback calculator to test it."]],
+      "relatedHustle": "generator-service", "relatedHowTo": "bvn-correction"
+    },
+    {
+      "slug": "data-saving-tips", "title": "Data Saving Tips That Actually Work in Nigeria", "angle": "Stop the data leak: phone settings, app habits and smarter bundles.",
+      "keyPoints": ["Turn off auto-play videos on TikTok and Instagram.", "Use data saver mode on your browser and WhatsApp media auto-download off.", "Buy a bundle that matches your real usage, not the biggest bundle.", "Download offline maps and music on Wi-Fi.", "Check your app data usage every week in phone settings."],
+      "faqs": [["What is the cheapest data?", "It changes often. Check the telecom page for the current comparator and confirm before you buy."], ["Does night data help?", "Only if you can do your heavy downloads during that window."], ["Why does my data finish so fast?", "Background updates and auto-play are the usual culprits."]],
+      "relatedHustle": "phone-accessories", "relatedHowTo": "nin-correction"
+    },
+    {
+      "slug": "naira-vs-dollar-explained", "title": "Naira vs Dollar: Why the Black Market Rate Exists", "angle": "The official rate, the parallel rate, and what they mean for your money.",
+      "keyPoints": ["The official rate is set in the official FX window. The black market rate is what people pay on the street and in app-based dealers.", "The gap changes with dollar supply, demand for imports, and confidence in the naira.", "Importers, students paying school fees abroad, and travellers feel the gap the most.", "A bigger gap can push up the price of imported goods, including phones and fuel inputs.", "Always check a reliable rate source before you exchange money."],
+      "faqs": [["Which rate should I use for planning?", "Use the official rate for formal budgets and keep a buffer for the black market gap."], ["Why do prices rise when the dollar rises?", "Many goods are imported or priced in dollar inputs, so suppliers pass on the cost."], ["Is it safe to exchange on the street?", "Be careful. Use licensed dealers and verify every transaction."]],
+      "relatedHustle": "phone-accessories", "relatedHowTo": "freelancer-tax-tin"
+    },
+    {
+      "slug": "freelancer-paid-from-abroad", "title": "How Freelancers Get Paid From Abroad Without Losing Money", "angle": "Payment channels, fees, and the paperwork that keeps you out of trouble.",
+      "keyPoints": ["Compare the fees and the exchange rate on each platform before you choose a payout method.", "Keep invoices in dollars or pounds where possible, and state the currency clearly.", "Keep your payments in a separate account from personal spending.", "Declare the income for tax purposes and keep the records for the tax office.", "Ask for a clear payment schedule to avoid chasing money."],
+      "faqs": [["What records do I need?", "Invoices, bank statements, and a simple income log by month."], ["Do I need a TIN?", "If you earn income in Nigeria or from Nigerian tax-relevant sources, a TIN is important. Check the current rules."], ["Can I open a dollar account?", "Yes, through eligible banks. Check requirements and fees."]],
+      "relatedHustle": "home-baking", "relatedHowTo": "freelancer-tax-tin"
+    },
+    {
+      "slug": "small-money-side-hustles", "title": "Small Money Side Hustles That Start Under ₦50,000", "angle": "Low-capital ideas that let you test demand before you spend big.",
+      "keyPoints": ["Test demand with a WhatsApp Status before you buy stock.", "Start with pre-orders so you never buy more than you can sell.", "Use a shared fridge or chest freezer through a friend before you buy one.", "Offer services first: laundry pickup, graphic posts, or delivery runs need little capital.", "Reinvest the first profit before you spend on anything fancy."],
+      "faqs": [["What is the lowest capital business?", "Services like typing, laundry pickup or content creation can start with almost nothing."], ["Do I need CAC for a side hustle?", "Not always at the start. Register once you have regular customers or need a bank account for business."], ["How do I price my service?", "Add all costs, including your time, then add a margin you can live with."]],
+      "relatedHustle": "home-baking", "relatedHowTo": "cac-business-name"
+    },
+    {
+      "slug": "read-your-payslip", "title": "How to Read Your Payslip: PAYE, Pension and NHF Explained", "angle": "What each deduction means and how to check if your employer got it right.",
+      "keyPoints": ["Basic, housing and transport allowances make up gross pay. Check the breakdown.", "PAYE is income tax deducted by your employer. Ask HR for the tax band used.", "Pension contributions go into a retirement fund. Check your PFA statement.", "NHF (National Housing Fund) is a deduction that can help you access a housing loan later.", "Ask payroll for a monthly statement if the numbers don't add up."],
+      "faqs": [["Why is my take-home lower than expected?", "Deductions like PAYE, pension and NHF come off gross pay before you see it."], ["Can I check my pension balance?", "Yes. Ask your Pension Fund Administrator for a statement."], ["What if my payslip is wrong?", "Raise it with HR in writing and keep a copy."]],
+      "relatedHustle": "provision-store", "relatedHowTo": "tax-clearance-certificate"
+    }
+  ]
+}

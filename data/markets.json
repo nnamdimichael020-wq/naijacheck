@@ -1,0 +1,17 @@
+{
+  "markets": [
+    { "slug": "mile-12", "name": "Mile 12 International Market", "city": "lagos", "known_for": "rice, beans, garri, palm oil and wholesale food bags", "tip": "Buy early (before 9am) for the best bags. Haggle on 50kg bags, not on single kilos." },
+    { "slug": "idumota", "name": "Idumota Market", "city": "lagos", "known_for": "Lagos Island wholesale: provisions, dry goods and household staples", "tip": "Go on weekdays. Weekends are crowded and prices bounce around more." },
+    { "slug": "oyingbo", "name": "Oyingbo Market", "city": "lagos", "known_for": "fresh produce, fish, tomatoes and pepper that move fast", "tip": "Fresh items are cheapest at the end of the day, but quality drops. Choose wisely." },
+    { "slug": "onitsha-main-market", "name": "Onitsha Main Market", "city": "onitsha", "known_for": "general wholesale, electronics, provisions and building materials", "tip": "Bring cash and a trusted porter ID. Ask for the cluster where the goods you want are sold." },
+    { "slug": "kantin-kwari", "name": "Kantin Kwari Market", "city": "kano", "known_for": "textiles, fabrics and clothing wholesale", "tip": "Compare at least three shops. The first price you hear is usually the opening number." },
+    { "slug": "sabon-gari-kano", "name": "Sabon Gari Market (Kano)", "city": "kano", "known_for": "grains, beans, groundnut and dry goods", "tip": "Grain prices rise sharply during the lean season (roughly June to September)." },
+    { "slug": "ariaria", "name": "Ariaria International Market", "city": "aba", "known_for": "shoes, bags, fabrics, and Aba-made goods sold wholesale", "tip": "Ask about factory-direct pricing. Many traders sell both retail and wholesale." },
+    { "slug": "wuse-market", "name": "Wuse Market", "city": "abuja", "known_for": "provisions, vegetables and fish in the city centre", "tip": "Prices are slightly higher than in the outskirts. Compare with Garki or Kubwa markets." },
+    { "slug": "bodija-market", "name": "Bodija Market", "city": "ibadan", "known_for": "one of the biggest food markets in the South-West", "tip": "Market days move prices. Go early for vegetables and late for discounts on yam." },
+    { "slug": "mile-1", "name": "Mile 1 Market", "city": "port-harcourt", "known_for": "provisions, rice, beans and fish from the Rivers creeks", "tip": "Fish prices can jump in the rainy season. Check fresh stock before you pay." },
+    { "slug": "ogbete-market", "name": "Ogbete Main Market", "city": "enugu", "known_for": "Enugu's largest market: fabrics, provisions and general goods", "tip": "Use the Ogbete area for bulk. Smaller shops nearby are cheaper for single items." },
+    { "slug": "sabon-gari-kaduna", "name": "Sabon Gari Market (Kaduna)", "city": "kaduna", "known_for": "grains, beans, onions and textiles", "tip": "Buy grains directly from the lorry depot when possible; it saves a lot." },
+    { "slug": "oba-market", "name": "Oba Market", "city": "benin-city", "known_for": "food staples, palm oil, yam and fresh pepper", "tip": "Yam is cheaper right after harvest. Check the tubers for soft spots and bruises." }
+  ]
+}

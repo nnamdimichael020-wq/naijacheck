@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* shadcn-style theme tokens. Dark is the default (see ThemeProvider in app/layout.tsx). */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 25% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 25% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 25% 8%;
+    --primary: 156 100% 26%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 15% 94%;
+    --secondary-foreground: 150 25% 10%;
+    --muted: 150 12% 94%;
+    --muted-foreground: 150 8% 36%;
+    --accent: 45 100% 46%;
+    --accent-foreground: 150 30% 8%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 12% 87%;
+    --input: 150 12% 87%;
+    --ring: 156 100% 26%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 150 25% 5%;
+    --foreground: 140 15% 95%;
+    --card: 150 20% 8%;
+    --card-foreground: 140 15% 95%;
+    --popover: 150 20% 8%;
+    --popover-foreground: 140 15% 95%;
+    --primary: 152 62% 42%;
+    --primary-foreground: 150 30% 4%;
+    --secondary: 150 14% 13%;
+    --secondary-foreground: 140 15% 95%;
+    --muted: 150 12% 13%;
+    --muted-foreground: 140 8% 66%;
+    --accent: 45 95% 56%;
+    --accent-foreground: 150 30% 6%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 12% 18%;
+    --input: 150 12% 18%;
+    --ring: 152 62% 42%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+  .prose-naija p + p {
+    @apply mt-4;
+  }
+  .prose-naija h2 {
+    @apply mt-10 scroll-mt-24 text-2xl font-bold tracking-tight;
+  }
+  .prose-naija h3 {
+    @apply mt-6 text-lg font-semibold;
+  }
+}

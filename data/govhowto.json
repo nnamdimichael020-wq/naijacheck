@@ -1,0 +1,95 @@
+{
+  "updatedAt": "2026-10-09",
+  "docs": [
+    {
+      "slug": "passport-renewal-2026", "title": "Nigerian International Passport Renewal 2026", "short": "Renew your passport in 2026: fees, timelines, the online portal, and what to avoid.",
+      "category": "Travel documents", "fee": "₦100,000 (32 pages, 5 years) or ₦200,000 (64 pages, 10 years) for applications within Nigeria. Diaspora fees: $150 (5-year) or $230 (10-year).",
+      "feeSource": "Fee increase effective 1 Sept 2025, reported again in 2026 coverage. Confirm on immigration.gov.ng before paying.",
+      "timeline": "Roughly 3 weeks after biometric capture for renewals; about 6 weeks for fresh applications (reported 2026 range).",
+      "steps": ["Create or log into your account on the NIS online portal (immigration.gov.ng).", "Make sure your NIN is linked to your record, because the portal pulls details from NIMC.", "Select the booklet type: 32 pages (5-year) or 64 pages (10-year).", "Fill in the form exactly as it appears on your old passport and NIN slip.", "Pay online. NIS does not accept cash at its offices for this service.", "Book your biometric capture slot and attend with the original documents.", "Track your application using the reference number. Collect or request home delivery where offered."],
+      "documents": ["Old passport (if renewing)", "Valid NIN", "Passport photograph in the required format", "Payment receipt", "Email and phone number that you check daily"],
+      "pitfalls": ["Paying agents who promise 'fast track' for cash", "Name mismatch between your NIN and your passport", "Missing the biometric appointment", "Applying with a damaged photo"],
+      "officialSite": "https://immigration.gov.ng", "related": ["nin-correction", "police-character-certificate", "jamb-cutoff-2026"], "hustleLink": "/hustle/home-baking"
+    },
+    {
+      "slug": "nin-correction", "title": "NIN Correction and Modification 2026", "short": "Fix your NIN name, date of birth, address or phone number without paying a 'agent' ₦20,000.",
+      "category": "Identity", "fee": "Name, address, phone or other data field: ₦2,000 per request. Date of birth: ₦28,574. NIN slip reissue: ₦600.",
+      "feeSource": "NIMC service charges reported as of July 2026. Some older articles say the service is free, so check before you pay.",
+      "timeline": "Varies by field and by NIMC office. Self-service requests are often faster than walk-in visits.",
+      "steps": ["Go to NIMC's official self-service modification portal (nimc.gov.ng).", "Create an account with your NIN and a phone number you can access.", "Select the field to correct, such as name or DOB.", "Upload the supporting document in clear PDF or JPEG under 2MB.", "Pay the fee through the portal's Remita payment flow.", "Save your reference number and check the status regularly."],
+      "documents": ["Valid NIN", "Birth certificate or court affidavit (for name or DOB changes)", "Clear scan of supporting documents", "Debit card or mobile banking app for payment"],
+      "pitfalls": ["Cash 'processing' from touts at NIMC gates", "Fake NIMC websites that collect your details", "Uploading blurry or cropped documents", "Paying twice because the portal shows a timeout"],
+      "officialSite": "https://nimc.gov.ng", "related": ["passport-renewal-2026", "bvn-correction", "freelancer-tax-tin"], "hustleLink": "/hustle/phone-accessories"
+    },
+    {
+      "slug": "police-character-certificate", "title": "Police Character Certificate 2026 (Police Clearance)", "short": "How to get a police character certificate in 2026: official fees, steps, and the scam signs to avoid.",
+      "category": "Police and legal", "fee": "₦30,000 official fee through the POSSAP portal (reported 2026). Some in-person biometric stations add informal charges of ₦5,000 to ₦10,000.",
+      "feeSource": "Reported 2026 official fee. Check the POSSAP portal before paying, because informal charges are not official.",
+      "timeline": "Varies. Plan 2 to 6 weeks, and remember the certificate is commonly valid for about 3 months.",
+      "steps": ["Register on the POSSAP portal (Police Clearance / Character Certificate).", "Fill in your personal details and upload the required documents.", "Pay the official fee and keep the payment receipt.", "Book your biometric capture (fingerprints and photo) at the listed centre.", "Track the status on the portal and collect your certificate when it's ready.", "If you need international authentication, follow the Ministry of Foreign Affairs process separately."],
+      "documents": ["Valid NIN", "Passport photograph", "Passport or other valid ID", "Payment receipt", "Any supporting letters the portal asks for"],
+      "pitfalls": ["Paying 'express' cash fees to officers", "Using a fake portal link from a WhatsApp group", "Forgetting the 3-month validity window", "Not checking the spelling of your name on the certificate"],
+      "officialSite": "https://www.npf.gov.ng", "related": ["passport-renewal-2026", "nin-correction", "learn-spot-fake-job-offers"], "hustleLink": "/hustle/provision-store"
+    },
+    {
+      "slug": "cac-business-name", "title": "CAC Business Name Registration 2026", "short": "Register your business name in 2026: exact fees, steps, and how to avoid the agent markup.",
+      "category": "Business registration", "fee": "₦500 name reservation plus ₦10,000 registration fee (₦10,500 in official CAC fees, per the schedule reported in 2026). Some agent sites quote ₦20,000 or more, so check the current CAC schedule.",
+      "feeSource": "Multiple 2026 reports. Verify on cac.gov.ng or services.cac.gov.ng before paying.",
+      "timeline": "About 1 week for a business name, when the application is complete.",
+      "steps": ["Search for your name on the CAC public search portal (publicsearch.cac.gov.ng). It's free.", "Reserve the name and pay the reservation fee on the CAC portal (services.cac.gov.ng).", "Complete the business name registration form with your details and address.", "Pay the registration fee and keep the receipt.", "Download your certificate once approved. Keep a soft and hard copy.", "Get a TIN for the business from the tax authority."],
+      "documents": ["Valid NIN", "Two proposed business names (in order of preference)", "Business address", "Email and phone number", "Payment method (card or bank transfer)"],
+      "pitfalls": ["Agents adding hidden charges after you pay", "Choosing a name that is too close to an existing one", "Forgetting the 60-day reservation window", "Not keeping copies of your certificate"],
+      "officialSite": "https://cac.gov.ng", "related": ["freelancer-tax-tin", "provision-store", "learn-budget-80k"], "hustleLink": "/hustle/pos-business"
+    },
+    {
+      "slug": "freelancer-tax-tin", "title": "Tax for Freelancers in Nigeria 2026 (TIN and Filing)", "short": "How freelancers get a TIN, what they pay tax on in 2026, and how to stay out of trouble.",
+      "category": "Tax", "fee": "Getting a TIN is free through the official tax portal. Tax payable depends on your income and the reliefs you claim. Agents often charge for filing.",
+      "feeSource": "New tax laws took effect in 2026. Check the current rules with the tax authority or a registered tax professional.",
+      "timeline": "A TIN can be obtained within days. Annual filing deadlines apply.",
+      "steps": ["Get your TIN through the official tax portal using your NIN.", "Open a separate account for business income so records are clear.", "Keep invoices, bank statements and receipts for every expense.", "Calculate your taxable income each quarter so you're not caught out in December.", "File your returns on time through the official portal.", "Ask for a tax clearance certificate when you need it for contracts or bank loans."],
+      "documents": ["Valid NIN", "Bank account details", "Invoices and receipts", "Previous tax records (if any)"],
+      "pitfalls": ["Mixing personal and business money", "No invoices for foreign clients", "Ignoring the filing deadline", "Paying random agents for a free TIN"],
+      "officialSite": "https://www.nrs.gov.ng", "related": ["cac-business-name", "nin-correction", "learn-budget-80k"], "hustleLink": "/hustle/thrift-fashion"
+    },
+    {
+      "slug": "drivers-licence-frsc", "title": "Driver's Licence Renewal and New Licence (FRSC) 2026", "short": "Renew or apply for a Nigerian driver's licence the official way, and avoid the touts at the gate.",
+      "category": "Transport", "fee": "Fees are set by FRSC and vary by licence type and category. Check the official FRSC portal for the current figure. Agents usually add their own charges.",
+      "feeSource": "Confirm the current FRSC fee schedule at frsc.gov.ng before paying.",
+      "timeline": "Depends on the centre. Online pre-booking is usually faster.",
+      "steps": ["Go to the FRSC portal and create an account.", "Select the licence service you need (new licence or renewal).", "Upload your NIN and passport photograph.", "Pay the official fee and print or save the receipt.", "Book your appointment at a registration centre.", "Attend with your documents and complete the capture process."],
+      "documents": ["Valid NIN", "Passport photograph", "Old licence (for renewal)", "Payment receipt"],
+      "pitfalls": ["Paying touts at the centre", "Booking through unofficial 'shortcut' sites", "Missing the appointment window"],
+      "officialSite": "https://frsc.gov.ng", "related": ["nin-correction", "police-character-certificate", "learn-budget-80k"], "hustleLink": "/hustle/generator-service"
+    },
+    {
+      "slug": "bvn-correction", "title": "BVN Correction 2026 (Bank Verification Number)", "short": "How to correct your BVN details, what it costs, and why your NIN and BVN must match.",
+      "category": "Banking", "fee": "Usually done through your bank. Ask about charges before you start, since banks set their own service rules.",
+      "feeSource": "Bank-specific. Confirm with your bank's customer service.",
+      "timeline": "Varies. Your bank can tell you when the change is live.",
+      "steps": ["Confirm your NIN is correct and matches your ID.", "Visit your bank branch or use the bank's official app for BVN update requests.", "Provide supporting documents for the change (NIN slip, ID card, birth certificate for name changes).", "Ask for written confirmation and a reference number.", "Check your BVN update on your bank app after the change goes live."],
+      "documents": ["Valid NIN", "Passport or valid ID", "Supporting documents for the field you're changing", "Phone number linked to your BVN"],
+      "pitfalls": ["Mismatch between BVN and NIN that blocks transfers", "Sharing your BVN with strangers", "Paying cash to a 'bank officer' outside the branch"],
+      "officialSite": "https://www.cbn.gov.ng", "related": ["nin-correction", "freelancer-tax-tin", "learn-spot-fake-job-offers"], "hustleLink": "/hustle/pos-business"
+    },
+    {
+      "slug": "birth-certificate-replacement", "title": "Replacement Birth Certificate 2026", "short": "How to get a replacement birth certificate, what the process looks like, and common delays.",
+      "category": "Civil records", "fee": "Varies by state and by the registry office. Check the official state or National Population Commission guidance before paying.",
+      "feeSource": "State-specific. Confirm with the registry office.",
+      "timeline": "Varies. Can take several weeks depending on the registry.",
+      "steps": ["Find the registry office where you were born or registered.", "Get a statutory declaration or affidavit if the original is lost.", "Fill in the request form and attach your NIN and ID.", "Pay the official fee and collect a receipt.", "Follow up on the request with the reference number."],
+      "documents": ["Valid ID or NIN", "Affidavit or statutory declaration (if lost)", "Passport photograph", "Proof of payment"],
+      "pitfalls": ["Registry touts asking for cash", "Typos in your name", "Using the wrong state registry"],
+      "officialSite": "https://nationalpopulation.gov.ng", "related": ["nin-correction", "passport-renewal-2026", "police-character-certificate"], "hustleLink": "/hustle/provision-store"
+    },
+    {
+      "slug": "tax-clearance-certificate", "title": "Tax Clearance Certificate (TCC) for Small Business 2026", "short": "What a TCC is, why banks and government contracts ask for it, and how small businesses get one.",
+      "category": "Tax", "fee": "Check the current fee on the official tax portal. Fees can vary by state and by business type.",
+      "feeSource": "Confirm with the state internal revenue service or NRS portal.",
+      "timeline": "Varies by filing status. File your returns first to speed things up.",
+      "steps": ["Make sure your TIN is active and your business is registered.", "File your tax returns for the years you need.", "Pay any outstanding tax.", "Apply for the TCC through the official portal or tax office.", "Keep the certificate safe. Many banks and contracts ask for it."],
+      "documents": ["TIN", "CAC certificate (for registered businesses)", "Tax returns", "Proof of payment"],
+      "pitfalls": ["Assuming a TCC is automatic", "Not filing for years and then needing it fast", "Paying agents who skip official steps"],
+      "officialSite": "https://www.nrs.gov.ng", "related": ["cac-business-name", "freelancer-tax-tin", "learn-budget-80k"], "hustleLink": "/hustle/provision-store"
+    }
+  ]
+}
