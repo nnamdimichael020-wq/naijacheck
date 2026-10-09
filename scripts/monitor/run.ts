@@ -111,11 +111,13 @@ async function main() {
   const prevFx = readJson<any>(fxPath, {});
   const fx: any = {
     checkedAt: NOW_ISO,
+    // A failed source keeps its last confirmed value, so one bad fetch never blanks the page.
     official: {
-      USD: cbnHtml?.rate ?? (prevFx as { official?: { USD?: number } }).official?.USD ?? null,
-      GBP: openEr?.rates.GBP ? Math.round((openEr.rates.NGN / openEr.rates.GBP) * 100) / 100 : null,
-      EUR: openEr?.rates.EUR ? Math.round((openEr.rates.NGN / openEr.rates.EUR) * 100) / 100 : null,
+      USD: cbnHtml?.rate ?? prevFx.official?.USD ?? null,
+      GBP: openEr ? Math.round((openEr.rates.NGN / openEr.rates.GBP) * 100) / 100 : prevFx.official?.GBP ?? null,
+      EUR: openEr ? Math.round((openEr.rates.NGN / openEr.rates.EUR) * 100) / 100 : prevFx.official?.EUR ?? null,
     },
+    seeded: cbnHtml || aboki ? false : prevFx.seeded ?? false,
     officialAsOf: cbnHtml?.asOf ?? (prevFx as { officialAsOf?: string }).officialAsOf ?? null,
     officialSource: cbnHtml ? SOURCES.cbn : (prevFx as { officialSource?: unknown }).officialSource ?? SOURCES.cbn,
     crossRateAsOf: openEr?.asOf ?? null,
@@ -201,7 +203,8 @@ async function main() {
         console.warn(`[monitor] news topic ${t.slug}: ${(e as Error).message}`);
       }
     }
-    return any ? { asOf: NOW_ISO } : null;
+    if (!any) throw new Error("every news topic failed");
+    return { asOf: NOW_ISO };
   });
   if (feedOk) writeJson(path.join(LIVE, "feeds.json"), feeds);
 
