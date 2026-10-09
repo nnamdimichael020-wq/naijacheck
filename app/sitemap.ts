@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const fixed: MetadataRoute.Sitemap = [
     { url: absUrl("/"), lastModified: "2026-10-09", changeFrequency: "daily", priority: 1 },
     { url: absUrl("/about"), lastModified: "2026-10-09", changeFrequency: "monthly", priority: 0.4 },
+    { url: absUrl("/status"), lastModified: "2026-10-09", changeFrequency: "daily", priority: 0.4 },
     { url: absUrl("/privacy"), lastModified: "2026-10-09", changeFrequency: "yearly", priority: 0.3 },
   ];
 

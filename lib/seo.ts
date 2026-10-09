@@ -26,13 +26,13 @@ export function pageMetadata(opts: {
       title: opts.title,
       description: opts.description,
       locale: SITE_LOCALE,
-      images: [{ url: absUrl("/images/hero.jpg"), width: 1200, height: 670, alt: `${SITE_CONFIG.name}: ${SITE_CONFIG.description}` }],
+      images: [{ url: absUrl("/images/photos/lagos-tomato-seller.jpg"), width: 500, height: 625, alt: `${SITE_CONFIG.name}: ${SITE_CONFIG.description}` }],
     },
     twitter: {
       card: "summary_large_image",
       title: opts.title,
       description: opts.description,
-      images: [absUrl("/images/hero.jpg")],
+      images: [absUrl("/images/photos/lagos-tomato-seller.jpg")],
     },
   };
 }
@@ -76,7 +76,7 @@ export function articleSchema(a: Article) {
           wordCount: a.wordCount,
           author: { "@type": "Organization", name: SITE_CONFIG.name, url: SITE_CONFIG.url },
           publisher: { "@type": "Organization", name: SITE_CONFIG.name, url: SITE_CONFIG.url, logo: { "@type": "ImageObject", url: absUrl("/logo.svg") } },
-          image: absUrl("/images/hero.jpg"),
+          image: absUrl("/images/photos/lagos-tomato-seller.jpg"),
         };
   const faq = a.faqs.length
     ? {

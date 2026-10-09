@@ -1,0 +1,189 @@
+{
+  "checkedAt": "2026-10-09T17:10:00.000Z",
+  "seeded": true,
+  "asOf": "2026-10-09T16:21:00.000Z",
+  "source": {
+    "label": "Awajis fuel tables (petroleumprice.ng depot data)",
+    "url": "https://awajis.com/fuel-price-in-nigeria-today/"
+  },
+  "medians": {
+    "petrol": 1350,
+    "diesel": 1855,
+    "lpg": 1160
+  },
+  "depots": {
+    "petrol": [
+      {
+        "depot": "Aipec",
+        "state": "Lagos",
+        "price": 1340
+      },
+      {
+        "depot": "Sigmund",
+        "state": "Rivers",
+        "price": 1340
+      },
+      {
+        "depot": "Tsl",
+        "state": "Rivers",
+        "price": 1340
+      },
+      {
+        "depot": "Bulk Strategic",
+        "state": "Rivers",
+        "price": 1350
+      },
+      {
+        "depot": "Wosbab",
+        "state": "Lagos",
+        "price": 1350
+      },
+      {
+        "depot": "Aiteo",
+        "state": "Lagos",
+        "price": 1350
+      },
+      {
+        "depot": "Stockgap",
+        "state": "Rivers",
+        "price": 1360
+      },
+      {
+        "depot": "Virgin Forest",
+        "state": "Akwa Ibom",
+        "price": 1360
+      }
+    ],
+    "diesel": [
+      {
+        "depot": "Ibachem",
+        "state": "Lagos",
+        "price": 1800
+      },
+      {
+        "depot": "Intergrated",
+        "state": "Lagos",
+        "price": 1806
+      },
+      {
+        "depot": "Duport",
+        "state": "Lagos",
+        "price": 1806
+      },
+      {
+        "depot": "Prudent Lagos",
+        "state": "Lagos",
+        "price": 1810
+      },
+      {
+        "depot": "Gulf Treasure",
+        "state": "Lagos",
+        "price": 1900
+      },
+      {
+        "depot": "Ascon",
+        "state": "Lagos",
+        "price": 1900
+      },
+      {
+        "depot": "African Terminal",
+        "state": "Lagos",
+        "price": 1900
+      },
+      {
+        "depot": "Matrix Warri",
+        "state": "Delta",
+        "price": 2000
+      }
+    ],
+    "lpg": [
+      {
+        "depot": "Dangote",
+        "state": "Lagos",
+        "price": 1010
+      },
+      {
+        "depot": "Matrix Warri",
+        "state": "Delta",
+        "price": 1100
+      },
+      {
+        "depot": "11plc",
+        "state": "Lagos",
+        "price": 1160
+      },
+      {
+        "depot": "Ardova",
+        "state": "Lagos",
+        "price": 1160
+      },
+      {
+        "depot": "Rainoil Lagos",
+        "state": "Lagos",
+        "price": 1160
+      },
+      {
+        "depot": "Navgas",
+        "state": "Lagos",
+        "price": 1170
+      },
+      {
+        "depot": "Nipco Lagos",
+        "state": "Lagos",
+        "price": 1170
+      }
+    ]
+  },
+  "trend30d": [
+    {
+      "date": "9 Oct",
+      "petrol": 1352.38,
+      "diesel": 1870.39
+    },
+    {
+      "date": "6 Oct",
+      "petrol": 1310.64,
+      "diesel": 1758.11
+    },
+    {
+      "date": "2 Oct",
+      "petrol": 1322.03,
+      "diesel": 1795.09
+    },
+    {
+      "date": "29 Sep",
+      "petrol": 1313.64,
+      "diesel": 1834.69
+    },
+    {
+      "date": "25 Sep",
+      "petrol": 1318.29,
+      "diesel": 1836.5
+    },
+    {
+      "date": "22 Sep",
+      "petrol": 1327.47,
+      "diesel": 1846.63
+    },
+    {
+      "date": "18 Sep",
+      "petrol": 1342.15,
+      "diesel": 1894.98
+    },
+    {
+      "date": "15 Sep",
+      "petrol": 1351.95,
+      "diesel": 1875.47
+    },
+    {
+      "date": "12 Sep",
+      "petrol": 1355.0,
+      "diesel": 1850.0
+    },
+    {
+      "date": "9 Sep",
+      "petrol": 1271.6,
+      "diesel": null
+    }
+  ]
+}

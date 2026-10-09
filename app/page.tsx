@@ -8,12 +8,16 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { pageMetadata } from "@/lib/seo";
+import { LIVE_FX, LIVE_FUEL } from "@/lib/live";
+import { Freshness } from "@/components/live/freshness";
+import { LocationCard } from "@/components/live/location-card";
+import { LiveNewsFeed } from "@/components/live/news-feed";
 import {
   BLUEPRINT_BY_SLUG,
+  CITIES,
   CITY_BY_SLUG,
   DATA_DATE,
   EXAM,
-  FUEL,
   GOV_DOCS,
   LEARN_TOPICS,
   RATES,
@@ -52,10 +56,13 @@ export default function HomePage() {
   const trending = TRENDING_SLUGS.map((s) => SLANG_BY_SLUG[s]).filter(Boolean);
   const sotd = SLANG_BY_SLUG[SLANG_OF_THE_DAY];
   const picks = ["pos-business", "provision-store", "suya-spot"].map((s) => BLUEPRINT_BY_SLUG[s]).filter(Boolean);
-  const official = RATES.official.USD;
-  const black = RATES.blackMarket.USD;
-  const petrol = FUEL.petrolPump.find((p) => p.slug === "lagos");
-  const dieselMedian = FUEL.depots.find((d) => d.name === "National median depot (diesel)");
+  const official = LIVE_FX.official.USD ?? RATES.official.USD;
+  const black = LIVE_FX.blackMarket?.USD.buy ?? RATES.blackMarket.USD;
+  const petrolMedian = LIVE_FUEL.medians.petrol;
+  const dieselMedian = LIVE_FUEL.medians.diesel;
+  const lagosDiesel = LIVE_FUEL.depots.diesel.filter((d) => d.state === "Lagos").map((d) => d.price);
+  const dieselLagos: [number, number] | null = lagosDiesel.length ? [Math.min(...lagosDiesel), Math.max(...lagosDiesel)] : null;
+  const cityNames = Object.fromEntries(CITIES.map((c) => [c.slug, c.name]));
   const jamb = EXAM.nationalCutOff;
   const unilag = EXAM.institutions.find((i) => i.slug === "unilag");
 
@@ -98,17 +105,34 @@ export default function HomePage() {
           </p>
         </div>
         <Image
-          src="/images/hero.jpg"
-          alt="Illustration of a busy Lagos market with rice sacks, a POS terminal and a yellow danfo bus"
-          width={1200}
-          height={670}
+          src="/images/photos/lagos-tomato-seller.jpg"
+          alt="A woman selling tomatoes at a market stall in Lagos"
+          width={500}
+          height={625}
           priority
-          sizes="(min-width: 768px) 45vw, 100vw"
-          className="aspect-video w-full rounded-xl border object-cover"
+          sizes="(min-width: 768px) 360px, 90vw"
+          className="aspect-[4/5] w-full max-w-sm justify-self-center rounded-xl border object-cover md:justify-self-end"
         />
       </section>
 
       <AdSlot variant="banner" index={0} />
+
+      {/* Where you are + live headlines */}
+      <section aria-labelledby="where-h" className="grid gap-6 lg:grid-cols-[1fr_1.1fr]">
+        <h2 id="where-h" className="sr-only">
+          Prices for where you are, and live headlines
+        </h2>
+        <LocationCard
+          cityNames={cityNames}
+          usdOfficial={official}
+          usdBlack={black}
+          petrolMedian={petrolMedian}
+          dieselLagos={dieselLagos}
+          fxAsOf={LIVE_FX.officialAsOf}
+          fuelAsOf={LIVE_FUEL.asOf}
+        />
+        <LiveNewsFeed limit={6} />
+      </section>
 
       {/* Dashboard */}
       <section aria-labelledby="dash" className="space-y-4">
@@ -127,7 +151,9 @@ export default function HomePage() {
               <CardTitle className="flex items-center gap-2 text-base">
                 <Droplet className="size-4 text-accent" aria-hidden="true" /> Dollar and fuel
               </CardTitle>
-              <CardDescription>Indicative. Sourced {DATA_DATE}.</CardDescription>
+              <CardDescription>
+                <Freshness asOf={LIVE_FX.officialAsOf} label="FX" />
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <dl className="grid grid-cols-2 gap-3 text-sm">
@@ -140,12 +166,12 @@ export default function HomePage() {
                   <dd className="text-xl font-extrabold tabular-nums">₦{black.toLocaleString("en-NG")}</dd>
                 </div>
                 <div>
-                  <dt className="text-muted-foreground">Petrol, Lagos pump</dt>
-                  <dd className="text-xl font-extrabold tabular-nums">{petrol ? naira(petrol.price) : "n/a"}/L</dd>
+                  <dt className="text-muted-foreground">Petrol, depot median</dt>
+                  <dd className="text-xl font-extrabold tabular-nums">{petrolMedian ? naira(petrolMedian) : "n/a"}/L</dd>
                 </div>
                 <div>
                   <dt className="text-muted-foreground">Diesel, depot median</dt>
-                  <dd className="text-xl font-extrabold tabular-nums">{dieselMedian ? naira(dieselMedian.price as number) : "n/a"}/L</dd>
+                  <dd className="text-xl font-extrabold tabular-nums">{dieselMedian ? naira(dieselMedian) : "n/a"}/L</dd>
                 </div>
               </dl>
               <div className="mt-4 flex gap-3 text-sm font-semibold text-primary">

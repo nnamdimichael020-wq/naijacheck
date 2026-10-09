@@ -1,0 +1,50 @@
+name: Live monitor
+
+# Refreshes every live number on the site (FX, fuel depots, news feeds, trend signals, official-page
+# change flags), commits the result, and lets Cloudflare Pages rebuild and deploy.
+#
+# Cron runs only from the default branch. Use "Run workflow" to test on another branch.
+
+on:
+  schedule:
+    - cron: "17 */3 * * *" # every 3 hours, UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Parser tests (fails the run if a source layout changes in a way the parsers can't read)
+        run: npm run monitor:test
+
+      - name: Fetch live sources
+        run: npm run monitor
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "naijacheck-monitor"
+          git config user.email "monitor@naijacheck.ng"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes this run."
+          else
+            git commit -m "chore(live): refresh data $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push origin HEAD:"${GITHUB_REF_NAME}"
+          fi

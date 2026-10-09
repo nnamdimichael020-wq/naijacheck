@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-09T17:10:00.000Z",
+  "seeded": true,
+  "seedNote": "Seeded from pages captured on 9 Oct 2026. The first scheduled monitor run replaces these values.",
+  "official": {
+    "USD": 1331.186,
+    "GBP": 1759.4,
+    "EUR": 1491.75
+  },
+  "officialAsOf": "2026-10-09T14:00:00.000Z",
+  "officialSource": {
+    "label": "Central Bank of Nigeria: NFEM exchange rates",
+    "url": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html"
+  },
+  "crossRateAsOf": "2026-10-09T00:02:31.000Z",
+  "crossRateSource": {
+    "label": "open.er-api.com: daily reference rates",
+    "url": "https://open.er-api.com/v6/latest/USD"
+  },
+  "blackMarket": {
+    "USD": {
+      "buy": 1370,
+      "sell": 1380
+    },
+    "GBP": {
+      "buy": 1825,
+      "sell": 1845
+    },
+    "EUR": {
+      "buy": 1520,
+      "sell": 1540
+    }
+  },
+  "blackMarketAsOf": "2026-10-09T16:07:00.000Z",
+  "blackMarketSource": {
+    "label": "Aboki Forex: black market and CBN widget",
+    "url": "https://abokiforex.app/"
+  },
+  "cbnWidgetOfficial": {
+    "USD": 1332.1,
+    "GBP": 1759.17,
+    "EUR": 1490.22
+  }
+}

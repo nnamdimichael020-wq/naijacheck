@@ -33,11 +33,11 @@ export default function AboutPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold">How we handle numbers</h2>
         <ul className="list-disc space-y-2 pl-5 text-foreground/90">
-          <li>Every price is labelled with a date and a status. Anything we have not verified in the market is marked indicative.</li>
-          <li>Where a figure comes from a published report, we name the source on the page.</li>
+          <li>FX, fuel depot prices, news headlines and trend counts are read from their sources every three hours by an automated monitor, and each figure shows when it was read.</li>
+          <li>A source that fails or changes layout keeps its last confirmed value and is marked stale. We do not guess. Live health for every source is on the status page.</li>
+          <li>Trend counts come from Nigerian news and Wikipedia pageviews. We do not read X or TikTok.</li>
+          <li>Food prices, pump prices and telecom bundle prices are not auto-read yet. They carry their survey or check date.</li>
           <li>Ranges beat false precision. Confirm before you spend.</li>
-          <li>Our slang trend scores are editorial estimates from a weekly review. They are not an automated feed.</li>
-          <li>The monitoring panel on the Trends page is a simulation, and it says so.</li>
         </ul>
         <p className="text-sm text-muted-foreground">Figures on this site were last reviewed on {DATA_DATE}.</p>
       </section>
