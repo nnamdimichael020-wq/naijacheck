@@ -41,7 +41,7 @@ After a clean production build, `scripts/audit-static.mjs` enumerated every expo
 
 Routes by top-level page type: prices 78, hustle 41, trends 29, exam 15, tools 14, how-to 10, learn 9, telecom 9, plus home/about/admin/privacy/status/offline/404.
 
-Wrangler HTTP smoke results: `/`, `/status`, `/robots.txt`, `/sitemap.xml`, `/manifest.webmanifest`, `/sw.js`, and `/api/geo` returned 200; unknown `/api/nope` and `/definitely-missing` returned 404; `POST /api/geo` returned 405; `/api/geo` returned `Cache-Control: private, no-store`. Local geo metadata was Wrangler's placeholder and is not a real visitor-location test.
+An exhaustive local HTTP pass requested all 212 generated HTML routes from Wrangler and all 212 returned 200 (the exported `/404` document is directly addressable; an unknown route still returns that document with status 404). Additional smoke results: `/robots.txt`, `/sitemap.xml`, `/manifest.webmanifest`, `/sw.js`, and `/api/geo` returned 200; unknown `/api/nope` and `/definitely-missing` returned 404; `POST /api/geo` returned 405; `/api/geo` returned `Cache-Control: private, no-store`. Local geo metadata was Wrangler's placeholder and is not a real visitor-location test.
 
 ## Findings and changes
 
