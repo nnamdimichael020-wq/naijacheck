@@ -1,6 +1,6 @@
 /**
  * Single source of truth for brand + domain.
- * To migrate from Cloudflare Pages (*.pages.dev) to the real domain, change `domain` and `url` here.
+ * To migrate from a Cloudflare-managed hostname to the real domain, change `domain` and `url` here.
  */
 export const SITE_CONFIG = {
   name: "NaijaCheck",

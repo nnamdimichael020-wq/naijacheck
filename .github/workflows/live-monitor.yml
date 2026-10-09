@@ -1,7 +1,7 @@
 name: Live monitor
 
 # Refreshes every live number on the site (FX, fuel depots, news feeds, trend signals, official-page
-# change flags), commits the result, and lets Cloudflare Pages rebuild and deploy.
+# change flags), commits the result, and lets Cloudflare Workers Builds rebuild and deploy.
 #
 # Cron runs only from the default branch. Use "Run workflow" to test on another branch.
 
