@@ -1,1 +1,40 @@
-{}
+{
+  "cbn": {
+    "ok": false,
+    "checkedAt": "2026-10-09T21:30:37.656Z",
+    "asOf": null,
+    "lastSuccessfulAt": null,
+    "error": "layout not recognised"
+  },
+  "aboki": {
+    "ok": true,
+    "checkedAt": "2026-10-09T21:30:37.656Z",
+    "asOf": "2026-10-09T21:06:00.000Z",
+    "lastSuccessfulAt": "2026-10-09T21:30:37.656Z"
+  },
+  "openEr": {
+    "ok": true,
+    "checkedAt": "2026-10-09T21:30:37.656Z",
+    "asOf": "2026-10-09T00:02:31.000Z",
+    "lastSuccessfulAt": "2026-10-09T21:30:37.656Z"
+  },
+  "awajis": {
+    "ok": false,
+    "checkedAt": "2026-10-09T21:30:37.656Z",
+    "asOf": null,
+    "lastSuccessfulAt": null,
+    "error": "layout not recognised"
+  },
+  "news": {
+    "ok": true,
+    "checkedAt": "2026-10-09T21:30:37.656Z",
+    "asOf": "2026-10-09T21:30:37.656Z",
+    "lastSuccessfulAt": "2026-10-09T21:30:37.656Z"
+  },
+  "wiki": {
+    "ok": true,
+    "checkedAt": "2026-10-09T21:30:37.656Z",
+    "asOf": "2026-10-09T21:30:37.656Z",
+    "lastSuccessfulAt": "2026-10-09T21:30:37.656Z"
+  }
+}

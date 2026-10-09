@@ -1,11 +1,37 @@
 {
-  "updatedAt": "2026-10-09",
-  "status": "indicative",
+  "updatedAt": "2026-10-09T21:30:37.656Z",
+  "status": "live",
   "sources": [
-    { "label": "Aboki Forex: USD black market ₦1,370 and CBN official ₦1,331.77 (8-9 Oct 2026)", "url": "https://abokiforex.app/" },
-    { "label": "WithinNigeria: official ₦1,329.16 and black market ₦1,384 (1 Oct 2026)", "url": "https://www.withinnigeria.com/2026/10/01/dollar-to-naira-today-october-1-2026-official-and-black-market-exchange-rates/" }
+    {
+      "label": "Central Bank of Nigeria: NFEM exchange rates",
+      "url": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
+      "asOf": "2026-10-09T14:00:00.000Z"
+    },
+    {
+      "label": "Aboki Forex: black market and CBN widget",
+      "url": "https://abokiforex.app/",
+      "asOf": "2026-10-09T21:06:00.000Z"
+    },
+    {
+      "label": "open.er-api.com: daily reference rates",
+      "url": "https://open.er-api.com/v6/latest/USD",
+      "asOf": "2026-10-09T00:02:31.000Z"
+    }
   ],
-  "official": { "USD": 1331.77, "GBP": 1784, "EUR": 1545 },
-  "blackMarket": { "USD": 1370, "GBP": 1836, "EUR": 1590 },
-  "note": "USD figures are sourced. GBP and EUR are DERIVED from USD cross rates (not a quoted feed). Replace them from a real feed before publishing."
+  "official": {
+    "USD": 1331.186,
+    "GBP": 1759.4,
+    "EUR": 1491.75
+  },
+  "blackMarket": {
+    "USD": 1370,
+    "GBP": 1825,
+    "EUR": 1520
+  },
+  "note": "Official USD is the CBN NFEM closing rate. Black market is Aboki Forex's buy rate (sell in blackMarketSell). GBP and EUR official values are cross rates from open.er-api, labelled as reference, not CBN quotes.",
+  "blackMarketSell": {
+    "USD": 1380,
+    "GBP": 1845,
+    "EUR": 1540
+  }
 }

@@ -1,4 +1,14 @@
 {
-  "collectionStartedAt": null,
-  "points": []
+  "collectionStartedAt": "2026-10-09T21:30:37.656Z",
+  "points": [
+    {
+      "dataset": "parallel-usd-ngn-buy",
+      "observedAt": "2026-10-09T21:30:37.656Z",
+      "sourceTime": "2026-10-09T21:06:00.000Z",
+      "value": 1370,
+      "unit": "NGN per USD",
+      "geography": "Nigeria indicative quote",
+      "sourceUrl": "https://abokiforex.app/"
+    }
+  ]
 }

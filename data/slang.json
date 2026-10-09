@@ -1,241 +1,697 @@
 {
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-09T21:30:37.656Z",
   "slangOfTheDay": "sope-purr",
-  "trendingNow": ["kelebu", "oblee", "achalugo", "sope-purr", "demure-naija"],
+  "trendingNow": [
+    "japa",
+    "chop-life",
+    "oblee",
+    "achalugo",
+    "jara"
+  ],
   "terms": [
     {
-      "slug": "kelebu", "term": "Kelebu", "kind": "slang", "trend": "rising", "trendScore": 96, "confidence": "medium",
+      "slug": "kelebu",
+      "term": "Kelebu",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "medium",
       "meaning": "The 2026 Rema-era word and dance. Online, people treat it as a 'comeback' or 'spiritual shift' declaration.",
       "detail": "Kelebu is tied to Rema's 2026 song and its dance challenge, the 'Leopard Tail' move. Explainers online describe it as a kind of incantation: a call to shake off jealousy, lack and bitterness and step into a new season. Used casually, it can mean 'I'm back' or 'watch me shine', and it spreads fastest through dance videos rather than conversation.",
-      "examples": ["Kelebu don land for my timeline, everybody dey dance now.", "Make I do my kelebu after this exam, watch the glow up."],
-      "relatedHustle": "thrift-fashion", "relatedSlang": ["oblee", "sope-purr", "shakara"], "platform": "TikTok, Instagram Reels",
-      "source": "Public TikTok explainers and music coverage, Sept 2026. Meaning is community-interpreted, not an official dictionary entry."
+      "examples": [
+        "Kelebu don land for my timeline, everybody dey dance now.",
+        "Make I do my kelebu after this exam, watch the glow up."
+      ],
+      "relatedHustle": "thrift-fashion",
+      "relatedSlang": [
+        "oblee",
+        "sope-purr",
+        "shakara"
+      ],
+      "platform": "TikTok, Instagram Reels",
+      "source": "Public TikTok explainers and music coverage, Sept 2026. Meaning is community-interpreted, not an official dictionary entry.",
+      "mentions7d": 0
     },
     {
-      "slug": "oblee", "term": "Oblee", "kind": "slang", "trend": "peaking", "trendScore": 91, "confidence": "medium-high",
+      "slug": "oblee",
+      "term": "Oblee",
+      "kind": "slang",
+      "trend": "steady",
+      "trendScore": 40,
+      "confidence": "medium-high",
       "meaning": "Going out to enjoy yourself: vibes, party, outside life, whether you have money or not.",
       "detail": "Oblee became the clarion call of the festive nightlife season. Giftgram and other explainers define it as enjoying life, being outside, partying and living lavishly, even on a small budget. Some outlets give it a looser meaning, so context matters, but the common use is 'we dey oblee' meaning we are out here having fun.",
-      "examples": ["Friday don reach, we dey oblee tonight.", "Your salary no too big? Still oblee small small, na life."],
-      "relatedHustle": "phone-accessories", "relatedSlang": ["detty-december", "soft-life", "kelebu"], "platform": "Twitter/X, TikTok, nightlife",
-      "source": "Tribune Online (Dec 2025), Giftgram (Dec 2025), The Net (Dec 2024). Some outlets use different meanings."
+      "examples": [
+        "Friday don reach, we dey oblee tonight.",
+        "Your salary no too big? Still oblee small small, na life."
+      ],
+      "relatedHustle": "phone-accessories",
+      "relatedSlang": [
+        "detty-december",
+        "soft-life",
+        "kelebu"
+      ],
+      "platform": "Twitter/X, TikTok, nightlife",
+      "source": "Tribune Online (Dec 2025), Giftgram (Dec 2025), The Net (Dec 2024). Some outlets use different meanings.",
+      "mentions7d": 2
     },
     {
-      "slug": "achalugo", "term": "Achalugo", "kind": "slang", "trend": "steady", "trendScore": 78, "confidence": "medium",
+      "slug": "achalugo",
+      "term": "Achalugo",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 20,
+      "confidence": "medium",
       "meaning": "An Igbo expression for a beautiful, graceful woman. Some people also use it for a carefree, go-with-the-flow vibe.",
       "detail": "Achalugo is Igbo. Most usage is a compliment meaning a woman of beauty, grace and character, with some online sources translating it as 'God's treasure' or 'the abode of an eagle'. Gen Z also picked it up for its chill energy, so you will see it used for someone who is calm and unbothered. Check the context before you use it on someone.",
-      "examples": ["My achalugo, how far?", "She is achalugo, she carry grace well well."],
-      "relatedHustle": "home-baking", "relatedSlang": ["sope-purr", "gist"], "platform": "TikTok, WhatsApp status",
-      "source": "Premium Times year-in-review (Dec 2025), public TikTok explainers (Mar-Aug 2026), Awajis dictionary (Aug 2026). Translations vary."
+      "examples": [
+        "My achalugo, how far?",
+        "She is achalugo, she carry grace well well."
+      ],
+      "relatedHustle": "home-baking",
+      "relatedSlang": [
+        "sope-purr",
+        "gist"
+      ],
+      "platform": "TikTok, WhatsApp status",
+      "source": "Premium Times year-in-review (Dec 2025), public TikTok explainers (Mar-Aug 2026), Awajis dictionary (Aug 2026). Translations vary.",
+      "mentions7d": 1
     },
     {
-      "slug": "sope-purr", "term": "Sope Purr", "kind": "slang", "trend": "rising", "trendScore": 88, "confidence": "medium",
+      "slug": "sope-purr",
+      "term": "Sope Purr",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "medium",
       "meaning": "Hype: say it proudly, you nailed it, speak your truth without fear.",
       "detail": "Sope purr is a Nigerian-American blend that became a Gen Z affirmation. Premium Times described it as an expression of excitement or encouragement, and some explainers link it to Ayo Maff and the 'original girl' trend. Use it when you want to hype someone or to tell yourself to go hard without apology.",
-      "examples": ["You presented well well. Sope purr!", "Stop apologising for your prices, sope purr."],
-      "relatedHustle": "home-baking", "relatedSlang": ["oblee", "achalugo", "shakara"], "platform": "TikTok, X",
-      "source": "Premium Times (Dec 2025), Grok on X (Apr 2025), TikTok explainers (Oct 2026)."
+      "examples": [
+        "You presented well well. Sope purr!",
+        "Stop apologising for your prices, sope purr."
+      ],
+      "relatedHustle": "home-baking",
+      "relatedSlang": [
+        "oblee",
+        "achalugo",
+        "shakara"
+      ],
+      "platform": "TikTok, X",
+      "source": "Premium Times (Dec 2025), Grok on X (Apr 2025), TikTok explainers (Oct 2026).",
+      "mentions7d": 0
     },
     {
-      "slug": "demure-naija", "term": "Demure Naija version", "kind": "trend", "trend": "rising", "trendScore": 82, "confidence": "high",
+      "slug": "demure-naija",
+      "term": "Demure Naija version",
+      "kind": "trend",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "The 'very demure, very mindful' TikTok format, reworked for Naija: quiet, neat, polished, and still getting money.",
       "detail": "The original global trend was 'very demure, very mindful', a satire of polished, understated behaviour. The Naija version swaps in local things: a clean aso-ebi look, a serious hustle, calm replies to family WhatsApp groups, and a 'soft life' that still pays the rent. People use it to laugh at themselves and to share small wins.",
-      "examples": ["Her quotation dey demure, but the margin dey very mindful.", "I went to the bank in my Ankara, very demure, very mindful."],
-      "relatedHustle": "thrift-fashion", "relatedSlang": ["soft-life", "kelebu", "oblee"], "platform": "TikTok, Instagram Reels",
-      "source": "Global trend format (2024) adapted by Naija creators. This adaptation is our framing."
+      "examples": [
+        "Her quotation dey demure, but the margin dey very mindful.",
+        "I went to the bank in my Ankara, very demure, very mindful."
+      ],
+      "relatedHustle": "thrift-fashion",
+      "relatedSlang": [
+        "soft-life",
+        "kelebu",
+        "oblee"
+      ],
+      "platform": "TikTok, Instagram Reels",
+      "source": "Global trend format (2024) adapted by Naija creators. This adaptation is our framing.",
+      "mentions7d": 0
     },
     {
-      "slug": "labubu-in-nigeria", "term": "Labubu in Nigeria", "kind": "trend", "trend": "peaking", "trendScore": 85, "confidence": "high",
+      "slug": "labubu-in-nigeria",
+      "term": "Labubu in Nigeria",
+      "kind": "trend",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "The collectible toy craze that reached Lagos, Abuja and Onitsha, plus the fake-or-real question that comes with it.",
       "detail": "Labubu is a collectible toy character from Pop Mart. In Nigeria it became a status item for students and young professionals. Prices for genuine pieces are high, and fakes are common in markets, so buyers ask 'is it original?' as often as they ask about the price. Know the seller, buy from a verified source, and avoid paying more than you can afford for a toy.",
-      "examples": ["My Labubu cost me the price of a bag of rice, abeg help me check if e real.", "Don't pay full price until the seller shows the box and the QR code."],
-      "relatedHustle": "phone-accessories", "relatedSlang": ["oblee", "demure-naija"], "platform": "Instagram, TikTok, Computer Village",
-      "source": "Public retail and social media coverage, 2025-2026. Prices vary by seller; verify before buying."
+      "examples": [
+        "My Labubu cost me the price of a bag of rice, abeg help me check if e real.",
+        "Don't pay full price until the seller shows the box and the QR code."
+      ],
+      "relatedHustle": "phone-accessories",
+      "relatedSlang": [
+        "oblee",
+        "demure-naija"
+      ],
+      "platform": "Instagram, TikTok, Computer Village",
+      "source": "Public retail and social media coverage, 2025-2026. Prices vary by seller; verify before buying.",
+      "mentions7d": 0
     },
     {
-      "slug": "japa", "term": "Japa", "kind": "slang", "trend": "steady", "trendScore": 90, "confidence": "high",
+      "slug": "japa",
+      "term": "Japa",
+      "kind": "slang",
+      "trend": "rising",
+      "trendScore": 100,
+      "confidence": "high",
       "meaning": "To migrate or leave Nigeria, usually for work, study or a better life abroad.",
       "detail": "Japa is Yoruba street slang for escaping or running away. Since the mid-2020s it has meant migrating abroad. It shows up in family WhatsApp groups, church prayers and job chats. It is also a big money topic: passports, visas, IELTS and exam fees are all tied to japa.",
-      "examples": ["I dey japa to Canada next year if the visa approve.", "Everybody in my class don japa, I dey still dey wait."],
-      "relatedHustle": "thrift-fashion", "relatedSlang": ["soft-life", "gbese"], "platform": "Everywhere",
-      "source": "Common usage. See our passport and visa guides for the costs."
+      "examples": [
+        "I dey japa to Canada next year if the visa approve.",
+        "Everybody in my class don japa, I dey still dey wait."
+      ],
+      "relatedHustle": "thrift-fashion",
+      "relatedSlang": [
+        "soft-life",
+        "gbese"
+      ],
+      "platform": "Everywhere",
+      "source": "Common usage. See our passport and visa guides for the costs.",
+      "mentions7d": 5
     },
     {
-      "slug": "soft-life", "term": "Soft life", "kind": "slang", "trend": "steady", "trendScore": 74, "confidence": "high",
+      "slug": "soft-life",
+      "term": "Soft life",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "A low-stress, comfortable life. You protect your peace and avoid unnecessary struggle.",
       "detail": "Soft life became popular as a reaction to hard grind culture. It does not always mean being rich. For many people, it means paying rent on time, eating well, and not chasing every trend. The phrase is also used in jokes about budgeting, since a soft life still needs money.",
-      "examples": ["I want soft life this year, no more borrowing for ego.", "Soft life is paying your rent before the landlord send message."],
-      "relatedHustle": "home-baking", "relatedSlang": ["oblee", "chop-life", "demure-naija"], "platform": "TikTok, Twitter/X",
-      "source": "Common usage in Nigerian social media."
+      "examples": [
+        "I want soft life this year, no more borrowing for ego.",
+        "Soft life is paying your rent before the landlord send message."
+      ],
+      "relatedHustle": "home-baking",
+      "relatedSlang": [
+        "oblee",
+        "chop-life",
+        "demure-naija"
+      ],
+      "platform": "TikTok, Twitter/X",
+      "source": "Common usage in Nigerian social media.",
+      "mentions7d": 0
     },
     {
-      "slug": "wahala", "term": "Wahala", "kind": "slang", "trend": "steady", "trendScore": 80, "confidence": "high",
+      "slug": "wahala",
+      "term": "Wahala",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "Trouble, stress or problems. Sometimes a dramatic word for conflict.",
       "detail": "Wahala comes from Hausa and entered Nigerian pidgin long ago. It covers everything from small stress to full drama. 'No wahala' means no problem, and 'Wahala dey' means there is trouble. It is one of the most used words in Nigerian English.",
-      "examples": ["Traffic on Third Mainland na wahala.", "No wahala, I go handle am."],
-      "relatedHustle": "laundry-cleaning", "relatedSlang": ["gbese", "abeg"], "platform": "Everywhere",
-      "source": "Common usage in Nigerian pidgin."
+      "examples": [
+        "Traffic on Third Mainland na wahala.",
+        "No wahala, I go handle am."
+      ],
+      "relatedHustle": "laundry-cleaning",
+      "relatedSlang": [
+        "gbese",
+        "abeg"
+      ],
+      "platform": "Everywhere",
+      "source": "Common usage in Nigerian pidgin.",
+      "mentions7d": 0
     },
     {
-      "slug": "chop-life", "term": "Chop life", "kind": "slang", "trend": "steady", "trendScore": 65, "confidence": "high",
+      "slug": "chop-life",
+      "term": "Chop life",
+      "kind": "slang",
+      "trend": "rising",
+      "trendScore": 60,
+      "confidence": "high",
       "meaning": "Eating well, enjoying good food, and living the good life through meals.",
       "detail": "Chop is pidgin for eat. Chop life is about enjoying food, sometimes for less money, like buying a plate of jollof and sharing it with friends. It is also a way to talk about the food economy and how far a naira goes at the market.",
-      "examples": ["Chop life today: ofada and ayamase, no regret.", "Your jollof is chop life material, make I come taste."],
-      "relatedHustle": "suya-spot", "relatedSlang": ["soft-life", "oblee"], "platform": "Instagram, WhatsApp",
-      "source": "Common usage in Nigerian pidgin."
+      "examples": [
+        "Chop life today: ofada and ayamase, no regret.",
+        "Your jollof is chop life material, make I come taste."
+      ],
+      "relatedHustle": "suya-spot",
+      "relatedSlang": [
+        "soft-life",
+        "oblee"
+      ],
+      "platform": "Instagram, WhatsApp",
+      "source": "Common usage in Nigerian pidgin.",
+      "mentions7d": 3
     },
     {
-      "slug": "sharp-sharp", "term": "Sharp sharp", "kind": "slang", "trend": "steady", "trendScore": 70, "confidence": "high",
+      "slug": "sharp-sharp",
+      "term": "Sharp sharp",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "Quickly, right now, as soon as possible.",
       "detail": "Sharp sharp is pidgin for fast. You will hear it in offices, markets and families. 'Sharp sharp' can be a polite demand or a light joke. Use it to ask for speed, but remember that in some Nigerian settings it can sound pushy.",
-      "examples": ["Send the file sharp sharp, client dey wait.", "Come here sharp sharp!"],
-      "relatedHustle": "provision-store", "relatedSlang": ["abeg", "gist"], "platform": "Everywhere",
-      "source": "Common usage in Nigerian pidgin."
+      "examples": [
+        "Send the file sharp sharp, client dey wait.",
+        "Come here sharp sharp!"
+      ],
+      "relatedHustle": "provision-store",
+      "relatedSlang": [
+        "abeg",
+        "gist"
+      ],
+      "platform": "Everywhere",
+      "source": "Common usage in Nigerian pidgin.",
+      "mentions7d": 0
     },
     {
-      "slug": "owanbe", "term": "Owanbe", "kind": "slang", "trend": "steady", "trendScore": 77, "confidence": "high",
+      "slug": "owanbe",
+      "term": "Owanbe",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "A lavish Yoruba party or celebration, where guests dress up and spend money.",
       "detail": "Owanbe comes from Yoruba and describes big social events: weddings, birthdays, and burials. It is a big cost centre, from aso-ebi fabric to food and gifts. Owanbe is where many traders make their month, from tailors to caterers to chair-and-tent rental.",
-      "examples": ["The owanbe fit finish your budget before the cake even cut.", "Make we dress for the owanbe, no be small thing."],
-      "relatedHustle": "generator-service", "relatedSlang": ["oblee", "chop-life", "shakara"], "platform": "Instagram, WhatsApp",
-      "source": "Common usage in Nigerian social culture."
+      "examples": [
+        "The owanbe fit finish your budget before the cake even cut.",
+        "Make we dress for the owanbe, no be small thing."
+      ],
+      "relatedHustle": "generator-service",
+      "relatedSlang": [
+        "oblee",
+        "chop-life",
+        "shakara"
+      ],
+      "platform": "Instagram, WhatsApp",
+      "source": "Common usage in Nigerian social culture.",
+      "mentions7d": 0
     },
     {
-      "slug": "gbese", "term": "Gbese", "kind": "slang", "trend": "steady", "trendScore": 68, "confidence": "high",
+      "slug": "gbese",
+      "term": "Gbese",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "Debt or a serious financial problem. Often used as a joke, but it is real stress for many people.",
       "detail": "Gbese is Yoruba and pidgin. It is used for loans, owed money and bills. In Naija, gbese can ruin relationships, so many people use the word to talk about credit responsibly and avoid getting trapped in the cycle of borrowing for ego.",
-      "examples": ["The gbese from December still dey worry me.", "No borrow for owanbe if you no fit repay."],
-      "relatedHustle": "provision-store", "relatedSlang": ["wahala", "soft-life"], "platform": "Everywhere",
-      "source": "Common usage in Nigerian English and pidgin."
+      "examples": [
+        "The gbese from December still dey worry me.",
+        "No borrow for owanbe if you no fit repay."
+      ],
+      "relatedHustle": "provision-store",
+      "relatedSlang": [
+        "wahala",
+        "soft-life"
+      ],
+      "platform": "Everywhere",
+      "source": "Common usage in Nigerian English and pidgin.",
+      "mentions7d": 0
     },
     {
-      "slug": "detty-december", "term": "Detty December", "kind": "trend", "trend": "seasonal", "trendScore": 84, "confidence": "high",
+      "slug": "detty-december",
+      "term": "Detty December",
+      "kind": "trend",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "The December festive season when diaspora Africans come home and spend heavily on parties, travel and fashion.",
       "detail": "Detty December started as a Ghanaian and Nigerian festive phrase. It describes the nightlife and money flow when returning diaspora folk spend in Lagos, Accra and other cities. For traders, it is the busiest season of the year: food, fashion and events see huge spikes.",
-      "examples": ["Detty December don start, every bar full.", "Ankara sellers dey eat during detty season."],
-      "relatedHustle": "suya-spot", "relatedSlang": ["oblee", "owanbe"], "platform": "Instagram, TikTok",
-      "source": "Seasonal usage, 2024-2026."
+      "examples": [
+        "Detty December don start, every bar full.",
+        "Ankara sellers dey eat during detty season."
+      ],
+      "relatedHustle": "suya-spot",
+      "relatedSlang": [
+        "oblee",
+        "owanbe"
+      ],
+      "platform": "Instagram, TikTok",
+      "source": "Seasonal usage, 2024-2026.",
+      "mentions7d": 0
     },
     {
-      "slug": "sabi", "term": "Sabi", "kind": "slang", "trend": "steady", "trendScore": 62, "confidence": "high",
+      "slug": "sabi",
+      "term": "Sabi",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "To know or to have skill in something. 'E sabi' means he knows his stuff.",
       "detail": "Sabi is pidgin for knowing. It is used for skills and street knowledge: 'she sabi cook', 'he sabi phones'. In the hustle world, sabi is your real competitive advantage, which is why we ask about your skills in the hustle generator.",
-      "examples": ["E sabi phone repair well well.", "Who sabi where to buy stock cheap?"],
-      "relatedHustle": "phone-accessories", "relatedSlang": ["gist", "abeg"], "platform": "Everywhere",
-      "source": "Common usage in Nigerian pidgin."
+      "examples": [
+        "E sabi phone repair well well.",
+        "Who sabi where to buy stock cheap?"
+      ],
+      "relatedHustle": "phone-accessories",
+      "relatedSlang": [
+        "gist",
+        "abeg"
+      ],
+      "platform": "Everywhere",
+      "source": "Common usage in Nigerian pidgin.",
+      "mentions7d": 0
     },
     {
-      "slug": "gist", "term": "Gist", "kind": "slang", "trend": "steady", "trendScore": 60, "confidence": "high",
+      "slug": "gist",
+      "term": "Gist",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "News, gossip or a story. 'Give me the gist' means tell me what's happening.",
       "detail": "Gist is a Nigerian English word for information, usually gossip. It moves fast in group chats. Everyone wants the gist, but be careful: gist can mean facts or rumours, so check before you share.",
-      "examples": ["Wetin be the gist about the price hike?", "Gist dey for my DM, no dey on TL."],
-      "relatedHustle": "home-baking", "relatedSlang": ["sabi", "sharp-sharp"], "platform": "WhatsApp, X",
-      "source": "Common usage in Nigerian English."
+      "examples": [
+        "Wetin be the gist about the price hike?",
+        "Gist dey for my DM, no dey on TL."
+      ],
+      "relatedHustle": "home-baking",
+      "relatedSlang": [
+        "sabi",
+        "sharp-sharp"
+      ],
+      "platform": "WhatsApp, X",
+      "source": "Common usage in Nigerian English.",
+      "mentions7d": 0
     },
     {
-      "slug": "jara", "term": "Jara", "kind": "slang", "trend": "steady", "trendScore": 58, "confidence": "medium-high",
+      "slug": "jara",
+      "term": "Jara",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 20,
+      "confidence": "medium-high",
       "meaning": "Extra or bonus, especially a small extra you add to a purchase for goodwill.",
       "detail": "Jara is a Yoruba word that means extra. Market traders often add jara to a bag or a bunch to keep customers happy. It is a small thing that builds loyalty, and it is a smart tactic for any small business.",
-      "examples": ["Add small jara for the pepper, madam.", "Your jara dey always make me come back."],
-      "relatedHustle": "provision-store", "relatedSlang": ["sabi", "gist"], "platform": "Markets, WhatsApp",
-      "source": "Common usage in Yoruba and Nigerian markets."
+      "examples": [
+        "Add small jara for the pepper, madam.",
+        "Your jara dey always make me come back."
+      ],
+      "relatedHustle": "provision-store",
+      "relatedSlang": [
+        "sabi",
+        "gist"
+      ],
+      "platform": "Markets, WhatsApp",
+      "source": "Common usage in Yoruba and Nigerian markets.",
+      "mentions7d": 1
     },
     {
-      "slug": "shakara", "term": "Shakara", "kind": "slang", "trend": "steady", "trendScore": 66, "confidence": "high",
+      "slug": "shakara",
+      "term": "Shakara",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "Showing off or flexing. Doing too much to impress people.",
       "detail": "Shakara is pidgin for showing off. It is playful, but it can also be a warning. Shakara people often spend money they don't have, and that is where gbese starts.",
-      "examples": ["Stop shakara, the car no yours.", "Her wedding shakara was too much."],
-      "relatedHustle": "generator-service", "relatedSlang": ["gbese", "owanbe"], "platform": "Everywhere",
-      "source": "Common usage in Nigerian pidgin."
+      "examples": [
+        "Stop shakara, the car no yours.",
+        "Her wedding shakara was too much."
+      ],
+      "relatedHustle": "generator-service",
+      "relatedSlang": [
+        "gbese",
+        "owanbe"
+      ],
+      "platform": "Everywhere",
+      "source": "Common usage in Nigerian pidgin.",
+      "mentions7d": 0
     },
     {
-      "slug": "abeg", "term": "Abeg", "kind": "slang", "trend": "steady", "trendScore": 64, "confidence": "high",
+      "slug": "abeg",
+      "term": "Abeg",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "Please, or 'come on'. Softens a request or shows you are fed up.",
       "detail": "Abeg is pidgin for 'please'. It can be polite or impatient depending on tone. It's the most common pidgin word in everyday talk.",
-      "examples": ["Abeg, help me carry this.", "Abeg no vex, I dey come."],
-      "relatedHustle": "laundry-cleaning", "relatedSlang": ["wahala", "sharp-sharp"], "platform": "Everywhere",
-      "source": "Common usage in Nigerian pidgin."
+      "examples": [
+        "Abeg, help me carry this.",
+        "Abeg no vex, I dey come."
+      ],
+      "relatedHustle": "laundry-cleaning",
+      "relatedSlang": [
+        "wahala",
+        "sharp-sharp"
+      ],
+      "platform": "Everywhere",
+      "source": "Common usage in Nigerian pidgin.",
+      "mentions7d": 0
     },
     {
-      "slug": "ehen", "term": "Ehen", "kind": "slang", "trend": "steady", "trendScore": 55, "confidence": "high",
+      "slug": "ehen",
+      "term": "Ehen",
+      "kind": "slang",
+      "trend": "quiet",
+      "trendScore": 0,
+      "confidence": "high",
       "meaning": "An expression of surprise, agreement, or 'is that so?' Yoruba-leaning pidgin.",
       "detail": "Ehen is used like 'really?' or 'you don tell me'. It shows surprise or a light challenge. Used in banter, it keeps conversations moving.",
-      "examples": ["Ehen, the price don change again?", "You won the bet? Ehen!"],
-      "relatedHustle": "suya-spot", "relatedSlang": ["gist", "abeg"], "platform": "Everywhere",
-      "source": "Common usage in Nigerian English and pidgin."
+      "examples": [
+        "Ehen, the price don change again?",
+        "You won the bet? Ehen!"
+      ],
+      "relatedHustle": "suya-spot",
+      "relatedSlang": [
+        "gist",
+        "abeg"
+      ],
+      "platform": "Everywhere",
+      "source": "Common usage in Nigerian English and pidgin.",
+      "mentions7d": 0
     }
   ],
   "psychTerms": [
     {
-      "slug": "gaslighting-in-naija-relationships", "term": "Gaslighting in Naija relationships", "kind": "psych", "trend": "rising", "trendScore": 89, "confidence": "high",
+      "slug": "gaslighting-in-naija-relationships",
+      "term": "Gaslighting in Naija relationships",
+      "kind": "psych",
+      "trend": "rising",
+      "trendScore": 89,
+      "confidence": "high",
       "meaning": "Making someone doubt their memory, feelings or sanity, so they stop trusting themselves.",
-      "signs": ["He says 'you're too sensitive' every time you raise money or time issues.", "Your family tells you 'that's not what happened' when you know it did.", "You keep apologising for things you did not do.", "Your partner tells people you are the problem."],
-      "naijaExamples": ["He collects your salary for 'safekeeping' and then says you never gave him money to keep.", "Your mama-in-law says you are imagining the disrespect, but she is the one who said it in front of everyone.", "Your partner says he didn't send the money, then 'finds' the receipt under your name."],
-      "whatToDo": ["Write things down with dates and amounts.", "Talk to a trusted friend or a counsellor who will not minimise it.", "Protect your money: separate accounts and clear records."],
-      "relatedHustle": "home-baking", "relatedSlang": ["gbese", "soft-life"],
+      "signs": [
+        "He says 'you're too sensitive' every time you raise money or time issues.",
+        "Your family tells you 'that's not what happened' when you know it did.",
+        "You keep apologising for things you did not do.",
+        "Your partner tells people you are the problem."
+      ],
+      "naijaExamples": [
+        "He collects your salary for 'safekeeping' and then says you never gave him money to keep.",
+        "Your mama-in-law says you are imagining the disrespect, but she is the one who said it in front of everyone.",
+        "Your partner says he didn't send the money, then 'finds' the receipt under your name."
+      ],
+      "whatToDo": [
+        "Write things down with dates and amounts.",
+        "Talk to a trusted friend or a counsellor who will not minimise it.",
+        "Protect your money: separate accounts and clear records."
+      ],
+      "relatedHustle": "home-baking",
+      "relatedSlang": [
+        "gbese",
+        "soft-life"
+      ],
       "source": "General psychology guidance. Not medical advice. For abuse, contact local support services."
     },
     {
-      "slug": "love-bombing", "term": "Love bombing", "kind": "psych", "trend": "rising", "trendScore": 80, "confidence": "high",
+      "slug": "love-bombing",
+      "term": "Love bombing",
+      "kind": "psych",
+      "trend": "rising",
+      "trendScore": 80,
+      "confidence": "high",
       "meaning": "Overwhelming someone with attention, gifts and promises very early, so they lower their guard.",
-      "signs": ["They say 'I love you' within weeks.", "They want to take over your plans, gifts, and travel.", "Gifts come with pressure to repay."],
-      "naijaExamples": ["He sends you data bundles, buys your transport, then asks for your BVN 'to help you send money'.", "She says you are her husband in front of her family after two weeks.", "They fly you to Lagos for owanbe, then bill you for the flight after the breakup."],
-      "whatToDo": ["Slow down the pace on purpose.", "Keep your finances separate.", "Notice if gifts come with pressure."],
-      "relatedHustle": "thrift-fashion", "relatedSlang": ["shakara", "gbese"],
+      "signs": [
+        "They say 'I love you' within weeks.",
+        "They want to take over your plans, gifts, and travel.",
+        "Gifts come with pressure to repay."
+      ],
+      "naijaExamples": [
+        "He sends you data bundles, buys your transport, then asks for your BVN 'to help you send money'.",
+        "She says you are her husband in front of her family after two weeks.",
+        "They fly you to Lagos for owanbe, then bill you for the flight after the breakup."
+      ],
+      "whatToDo": [
+        "Slow down the pace on purpose.",
+        "Keep your finances separate.",
+        "Notice if gifts come with pressure."
+      ],
+      "relatedHustle": "thrift-fashion",
+      "relatedSlang": [
+        "shakara",
+        "gbese"
+      ],
       "source": "General psychology guidance. Not medical advice."
     },
     {
-      "slug": "emotional-blackmail", "term": "Emotional blackmail", "kind": "psych", "trend": "steady", "trendScore": 72, "confidence": "high",
+      "slug": "emotional-blackmail",
+      "term": "Emotional blackmail",
+      "kind": "psych",
+      "trend": "steady",
+      "trendScore": 72,
+      "confidence": "high",
       "meaning": "Using guilt, threats or fear to get someone to do what you want.",
-      "signs": ["'If you really loved me, you would send the money.'", "Threats to hurt themselves if you leave.", "Constant reminders of what they did for you."],
-      "naijaExamples": ["Your aunt says your mother will die of shame if you don't pay her school fees this term.", "Your partner threatens to tell your church that you are not a good Christian if you don't move in with him."],
-      "whatToDo": ["Pause before you agree to anything big.", "Get a second opinion from someone outside the family.", "If there is threat of harm, contact emergency services."],
-      "relatedHustle": "provision-store", "relatedSlang": ["gbese", "wahala"],
+      "signs": [
+        "'If you really loved me, you would send the money.'",
+        "Threats to hurt themselves if you leave.",
+        "Constant reminders of what they did for you."
+      ],
+      "naijaExamples": [
+        "Your aunt says your mother will die of shame if you don't pay her school fees this term.",
+        "Your partner threatens to tell your church that you are not a good Christian if you don't move in with him."
+      ],
+      "whatToDo": [
+        "Pause before you agree to anything big.",
+        "Get a second opinion from someone outside the family.",
+        "If there is threat of harm, contact emergency services."
+      ],
+      "relatedHustle": "provision-store",
+      "relatedSlang": [
+        "gbese",
+        "wahala"
+      ],
       "source": "General psychology guidance. Not medical advice."
     },
     {
-      "slug": "situationship", "term": "Situationship", "kind": "psych", "trend": "steady", "trendScore": 76, "confidence": "high",
+      "slug": "situationship",
+      "term": "Situationship",
+      "kind": "psych",
+      "trend": "steady",
+      "trendScore": 76,
+      "confidence": "high",
       "meaning": "A relationship with no clear label, where you're not officially dating but you're definitely involved.",
-      "signs": ["You have no idea where you stand.", "They show up when it suits them.", "No plans for the future."],
-      "naijaExamples": ["He calls you his 'friend' but sleeps over every weekend and takes you to his people's owanbe.", "She says she is not ready for a relationship but she posts you on her story."],
-      "whatToDo": ["Ask directly what the arrangement is.", "Decide what you want and what you accept.", "Protect your time, not just your feelings."],
-      "relatedHustle": "home-baking", "relatedSlang": ["soft-life", "oblee"],
+      "signs": [
+        "You have no idea where you stand.",
+        "They show up when it suits them.",
+        "No plans for the future."
+      ],
+      "naijaExamples": [
+        "He calls you his 'friend' but sleeps over every weekend and takes you to his people's owanbe.",
+        "She says she is not ready for a relationship but she posts you on her story."
+      ],
+      "whatToDo": [
+        "Ask directly what the arrangement is.",
+        "Decide what you want and what you accept.",
+        "Protect your time, not just your feelings."
+      ],
+      "relatedHustle": "home-baking",
+      "relatedSlang": [
+        "soft-life",
+        "oblee"
+      ],
       "source": "General usage in dating culture."
     },
     {
-      "slug": "ghosting", "term": "Ghosting", "kind": "psych", "trend": "steady", "trendScore": 70, "confidence": "high",
+      "slug": "ghosting",
+      "term": "Ghosting",
+      "kind": "psych",
+      "trend": "steady",
+      "trendScore": 70,
+      "confidence": "high",
       "meaning": "Cutting off contact with someone suddenly without explanation.",
-      "signs": ["Messages go unread for days.", "They block you without warning.", "Plans just vanish."],
-      "naijaExamples": ["He collects your deposit for a wedding gift and then vanishes from WhatsApp.", "Your landlord goes silent after you pay the rent."],
-      "whatToDo": ["Send one clear closing message.", "Don't send money to someone you have not met in person.", "Keep receipts for any payment."],
-      "relatedHustle": "laundry-cleaning", "relatedSlang": ["gbese", "abeg"],
+      "signs": [
+        "Messages go unread for days.",
+        "They block you without warning.",
+        "Plans just vanish."
+      ],
+      "naijaExamples": [
+        "He collects your deposit for a wedding gift and then vanishes from WhatsApp.",
+        "Your landlord goes silent after you pay the rent."
+      ],
+      "whatToDo": [
+        "Send one clear closing message.",
+        "Don't send money to someone you have not met in person.",
+        "Keep receipts for any payment."
+      ],
+      "relatedHustle": "laundry-cleaning",
+      "relatedSlang": [
+        "gbese",
+        "abeg"
+      ],
       "source": "General usage in dating culture."
     },
     {
-      "slug": "trauma-bonding", "term": "Trauma bonding", "kind": "psych", "trend": "rising", "trendScore": 74, "confidence": "high",
+      "slug": "trauma-bonding",
+      "term": "Trauma bonding",
+      "kind": "psych",
+      "trend": "rising",
+      "trendScore": 74,
+      "confidence": "high",
       "meaning": "A strong attachment formed in cycles of hurt and making up. Often mistaken for true love.",
-      "signs": ["Good moments feel like a huge relief after bad ones.", "You defend someone who hurts you.", "You feel you can't leave even when you want to."],
-      "naijaExamples": ["He beats you then buys you a phone the next day, and you keep going back.", "She insults you in public and cooks your favourite soup the next morning."],
-      "whatToDo": ["Talk to someone you trust outside the relationship.", "Keep your own bank account and documents safe.", "Seek professional support."],
-      "relatedHustle": "provision-store", "relatedSlang": ["gbese", "wahala"],
+      "signs": [
+        "Good moments feel like a huge relief after bad ones.",
+        "You defend someone who hurts you.",
+        "You feel you can't leave even when you want to."
+      ],
+      "naijaExamples": [
+        "He beats you then buys you a phone the next day, and you keep going back.",
+        "She insults you in public and cooks your favourite soup the next morning."
+      ],
+      "whatToDo": [
+        "Talk to someone you trust outside the relationship.",
+        "Keep your own bank account and documents safe.",
+        "Seek professional support."
+      ],
+      "relatedHustle": "provision-store",
+      "relatedSlang": [
+        "gbese",
+        "wahala"
+      ],
       "source": "General psychology guidance. Not medical advice. For safety concerns, contact local emergency services."
     },
     {
-      "slug": "toxic-positivity", "term": "Toxic positivity", "kind": "psych", "trend": "steady", "trendScore": 63, "confidence": "high",
+      "slug": "toxic-positivity",
+      "term": "Toxic positivity",
+      "kind": "psych",
+      "trend": "steady",
+      "trendScore": 63,
+      "confidence": "high",
       "meaning": "Forcing positive vibes so that real pain is ignored or shamed.",
-      "signs": ["'Just pray, everything go better.'", "'Don't cry, it's not that serious.'", "Shaming you for being sad."],
-      "naijaExamples": ["Your uncle says your job loss is a blessing in disguise before you even finish telling him.", "Your church group tells you that depression is a spiritual attack and to stop taking your medication."],
-      "whatToDo": ["Name the feeling without fixing it.", "Ask people 'do you want advice or just listening?'", "Get professional help for persistent low mood."],
-      "relatedHustle": "home-baking", "relatedSlang": ["soft-life", "abeg"],
+      "signs": [
+        "'Just pray, everything go better.'",
+        "'Don't cry, it's not that serious.'",
+        "Shaming you for being sad."
+      ],
+      "naijaExamples": [
+        "Your uncle says your job loss is a blessing in disguise before you even finish telling him.",
+        "Your church group tells you that depression is a spiritual attack and to stop taking your medication."
+      ],
+      "whatToDo": [
+        "Name the feeling without fixing it.",
+        "Ask people 'do you want advice or just listening?'",
+        "Get professional help for persistent low mood."
+      ],
+      "relatedHustle": "home-baking",
+      "relatedSlang": [
+        "soft-life",
+        "abeg"
+      ],
       "source": "General psychology guidance. Not medical advice."
     },
     {
-      "slug": "emotional-labour", "term": "Emotional labour", "kind": "psych", "trend": "steady", "trendScore": 61, "confidence": "high",
+      "slug": "emotional-labour",
+      "term": "Emotional labour",
+      "kind": "psych",
+      "trend": "steady",
+      "trendScore": 61,
+      "confidence": "high",
       "meaning": "The unpaid work of managing other people's feelings, moods and needs at home or at work.",
-      "signs": ["You always remember birthdays, bills and family drama.", "You smooth things over at every meeting.", "You are the group's default counsellor."],
-      "naijaExamples": ["You are the one who calls the in-laws, arranges the burial contribution and keeps the WhatsApp group calm.", "The only female in the office is asked to take notes and handle the complaints."],
-      "whatToDo": ["Share the load with a clear list.", "Say no to unpaid roles.", "Reward yourself with time for rest."],
-      "relatedHustle": "home-baking", "relatedSlang": ["soft-life", "owanbe"],
+      "signs": [
+        "You always remember birthdays, bills and family drama.",
+        "You smooth things over at every meeting.",
+        "You are the group's default counsellor."
+      ],
+      "naijaExamples": [
+        "You are the one who calls the in-laws, arranges the burial contribution and keeps the WhatsApp group calm.",
+        "The only female in the office is asked to take notes and handle the complaints."
+      ],
+      "whatToDo": [
+        "Share the load with a clear list.",
+        "Say no to unpaid roles.",
+        "Reward yourself with time for rest."
+      ],
+      "relatedHustle": "home-baking",
+      "relatedSlang": [
+        "soft-life",
+        "owanbe"
+      ],
       "source": "General usage in social psychology."
     }
-  ]
+  ],
+  "trendSource": "Google News mentions (7 days) and Wikipedia pageviews. Not X or TikTok."
 }
