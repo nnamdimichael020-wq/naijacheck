@@ -1,11 +1,14 @@
 {
-  "checkedAt": "2026-10-09T21:30:37.656Z",
+  "checkedAt": "2026-10-09T21:34:27.978Z",
   "official": {
     "USD": 1331.186,
     "GBP": 1759.4,
     "EUR": 1491.75
   },
   "seeded": false,
+  "officialStatus": "stale",
+  "blackMarketStatus": "recent",
+  "crossRateStatus": "recent",
   "officialAsOf": "2026-10-09T14:00:00.000Z",
   "officialSource": {
     "label": "Central Bank of Nigeria: NFEM exchange rates",

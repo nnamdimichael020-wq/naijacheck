@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-09T21:30:37.656Z",
+  "checkedAt": "2026-10-09T21:34:27.978Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -30,16 +30,16 @@
           "published": "2026-10-08T19:11:32.000Z"
         },
         {
-          "title": "Food Prices Expected To Drop In Nigeria With Government's New Petrol Price Policy- PETROAN",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVzBYVVRYWmh4TDByODd1Q3RSakstc1gtUk5McUlPYXlMeHF3ZUNWT0lYSzJuaW45d1ZXY3NtWEVQT0tJX3B3NFhNdEEyUHJNYk1oajRSMURGMTZjdXJkQzZOaHFHU09UdEtvOWJheENsb3hrdTl2M05HdjhzR3RSUFdabWNaN0c3MU9aR015bkFyazFQNXdqT2gtQ2pGZ1MyMkR1alJiVF9BQnQ5d1hsZw?oc=5",
-          "source": "LEADERSHIP Newspapers",
-          "published": "2026-10-09T16:45:44.000Z"
-        },
-        {
           "title": "NNPC fuel discount: All you suppose know about Tinubu petrol discount",
           "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9UaUJIY1pKMGhxaFlzc0RTUHhibkxpU1RrWmM3cU5zMV9JbWZGSmQ5ckE2NFk2N3E0WFdjT0xOWTZfUnFpaHNOd1dYR3J0TVAxUGdlR25yaTJnWHAyQ3fSAWNBVV95cUxQVHFMZjJGekVMSENBcUZ5REtmUkJQaTFIT2ZNUEViRURLV3ZDTVNYVXJVQWJLZEdKeEs1bmI5LXJISTZCa000d0JnOE1RNFR0ZG80Rkw2bkZDN0R1WGpnM3FHb0k?oc=5",
           "source": "BBC",
           "published": "2026-10-09T09:34:06.000Z"
+        },
+        {
+          "title": "Food Prices Expected To Drop In Nigeria With Government's New Petrol Price Policy- PETROAN",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVzBYVVRYWmh4TDByODd1Q3RSakstc1gtUk5McUlPYXlMeHF3ZUNWT0lYSzJuaW45d1ZXY3NtWEVQT0tJX3B3NFhNdEEyUHJNYk1oajRSMURGMTZjdXJkQzZOaHFHU09UdEtvOWJheENsb3hrdTl2M05HdjhzR3RSUFdabWNaN0c3MU9aR015bkFyazFQNXdqT2gtQ2pGZ1MyMkR1alJiVF9BQnQ5d1hsZw?oc=5",
+          "source": "LEADERSHIP Newspapers",
+          "published": "2026-10-09T16:45:44.000Z"
         },
         {
           "title": "Nigeria proposes petrol price cap to curb fuel cost volatility",
@@ -244,6 +244,12 @@
           "published": "2026-03-03T08:00:00.000Z"
         },
         {
+          "title": "FG raises Nigerian passport fees by 43% from September 1",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcFNSRjRpWjhrd3I2cU9JU2pFcy1QTTNvUjBtZ2UyUWJrQ0xZVkxlSzFIT0ZWWGdobDNZaGJsemctTWgya0xrdWNyYzYtd0RQdUZqcmd6bWFmY2c3N0tZNmk0MWQyVFp5ZXFxZmFLMGN3aU1NS0lrSGxpcGpGVjNZLUVRRjFLZWZQOHE5Q0lYaEhhek1sd0ZtSGt3?oc=5",
+          "source": "Businessday NG",
+          "published": "2024-08-22T07:00:00.000Z"
+        },
+        {
           "title": "International passport price in Nigeria: Nigerians react to FG passport fee increment",
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XUzRZNE5JMFVDdXZFQUJfUzdZMUtvZVI5RlhLN3UtYWtVTE9zemdnNnFvbU5HRGpxR1pqQTAwMjBNemlGZElXa2VwSXJKM29JVWd2RmNNbXRRaDhj0gFiQVVfeXFMTlgwYndFbHJyMV9lTUp0b1dNNzRxOFpSZ2NJajE3eFctRUJQWkhWS21CSExoUk9LQXhJcHNNdmdxV0lKc2RYckk2T0ZTdWxIVlI0ZUdEc0dyNlc5VWJ5ZnctVWc?oc=5",
           "source": "BBC",
@@ -260,12 +266,6 @@
           "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUnpCTjNOdk1fMXdvS0wySHRKWFNhUGJ6dzRDNTBhV21VeFFyNEZmNUdqT2hMQ0ZVTTdteUZHY3RJWElEZ3hYbGJUMFNoMlpUQlVPZkl0bEVzdUNGQ1lPY0FiRHJ5RmJDakNTVDFPN1ViYVIxeE9OQURYLXR6d3pIbjFpMmhLUldpZnk1bXhYVl81Q0IzUGJEVDVscGFMMzMwc2NxVTBXVWxrcEdLcU0tbXNRa1I5MVQ2SllBaFVEVdIBxAFBVV95cUxOeHhfOXpBOEhfOXE5aG1JNVBaUkk1cUl0NndHWVptb3ZqWWk0ZHhUSk54dS0xdFlXc2o0eV9ISmM0MWJPMkRVTkxVbXM0aFZRbUpjcEREaGJocjRORmd6WGFpQ05GTXF3YV9yT1pudU5rdEFIYWhiYk83QnAzdmhjcmFwMTE0MjJBODA4a0RCblk1bGdhMXltU1ZXOU1RcjZWZFFJWUlWTHZnVTBjSUpWV3BaOFNZcjhhWU1yMVpuUDVTVS0y?oc=5",
           "source": "Vanguard News",
           "published": "2025-12-01T08:00:00.000Z"
-        },
-        {
-          "title": "Ghana slashes passport fee ahead of Detty December",
-          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTGZrYVQ1TWxkaEZPdWloVU4tZm5GMlZBeEZmZ3NIc2JfNUpaSUl5RHZ6NGdodExLZU1DbExZNS1VY1hfaXJiZTJ3YTExVm9icXlnQlJTcEEtVlhsSjVDQWh2cjY4R3RZakVVRFotcUM1cGJFcjNaSzVrNFBzbTFjUk1NRmN1c0ZFV3pVcUxZSnl2M3c?oc=5",
-          "source": "Business News Nigeria",
-          "published": "2025-11-10T08:00:00.000Z"
         },
         {
           "title": "FG increases Passport Application Fees to N100K, N200K Effective Sept 1 -",

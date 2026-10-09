@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-09T21:30:37.656Z",
+  "checkedAt": "2026-10-09T21:34:27.978Z",
   "seeded": false,
   "note": "A changed fingerprint means the official page wording changed. A person should read it before any fee or rule is updated.",
   "pages": {
@@ -7,7 +7,7 @@
       "label": "JAMB",
       "url": "https://www.jamb.gov.ng/",
       "fingerprint": "bfc758e8",
-      "lastChecked": "2026-10-09T21:30:37.656Z",
+      "lastChecked": "2026-10-09T21:34:27.978Z",
       "changedAt": null,
       "changedSincePrevious": false
     },
@@ -15,7 +15,7 @@
       "label": "NIMC (NIN)",
       "url": "https://nimc.gov.ng/",
       "fingerprint": "137c52a3",
-      "lastChecked": "2026-10-09T21:30:37.656Z",
+      "lastChecked": "2026-10-09T21:34:27.978Z",
       "changedAt": null,
       "changedSincePrevious": false
     },
@@ -28,7 +28,7 @@
       "label": "Central Bank of Nigeria",
       "url": "https://www.cbn.gov.ng/",
       "fingerprint": "8aec4d44",
-      "lastChecked": "2026-10-09T21:30:37.656Z",
+      "lastChecked": "2026-10-09T21:34:27.978Z",
       "changedAt": null,
       "changedSincePrevious": false
     }
