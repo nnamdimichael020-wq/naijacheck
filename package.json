@@ -10,6 +10,7 @@
     "generate": "tsx scripts/generate-content.ts",
     "monitor": "tsx scripts/monitor/run.ts",
     "monitor:test": "tsx scripts/monitor/parsers.test.ts",
+    "audit:static": "node scripts/audit-static.mjs",
     "predev": "npm run generate",
     "dev": "next dev -H 0.0.0.0 -p 3000",
     "prebuild": "npm run generate",

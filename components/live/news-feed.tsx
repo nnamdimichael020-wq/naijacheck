@@ -20,7 +20,7 @@ export function LiveNewsFeed({ limit = 8, topic }: { limit?: number; topic?: str
     <section aria-labelledby="live-news" className="space-y-3">
       <div className="flex flex-wrap items-end justify-between gap-2">
         <h2 id="live-news" className="text-xl font-bold tracking-tight">
-          Live headlines
+          Monitored headlines
         </h2>
         <Freshness asOf={LIVE_FEEDS.checkedAt} label="Checked" />
       </div>

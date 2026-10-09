@@ -30,7 +30,7 @@ export function relativeAge(ms: number): string {
  */
 export function Freshness({
   asOf,
-  label = "Live",
+  label = "Source as of",
   source,
   className,
 }: {

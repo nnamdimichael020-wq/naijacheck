@@ -51,9 +51,9 @@ export function TrendMonitor({
         <CardHeader>
           <div className="flex flex-wrap items-center justify-between gap-2">
             <CardTitle className="flex items-center gap-2 text-lg">
-              <BarChart3 className="size-5 text-primary" aria-hidden="true" /> Live trend board
+              <BarChart3 className="size-5 text-primary" aria-hidden="true" /> Public attention signals
             </CardTitle>
-            <Badge variant={live ? "accent" : "muted"}>{live ? "Live" : "Not yet checked"}</Badge>
+            <Badge variant={live ? "accent" : "muted"}>{live ? "Recent source reading" : "Not yet checked"}</Badge>
           </div>
           <CardDescription>
             {live

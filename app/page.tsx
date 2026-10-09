@@ -53,7 +53,7 @@ const TOOL_LINKS = [
 const RICE_CITIES = ["lagos", "onitsha", "kano", "aba", "abuja"];
 
 export default function HomePage() {
-  const trending = TRENDING_SLUGS.map((s) => SLANG_BY_SLUG[s]).filter(Boolean);
+  const trending = TRENDING_SLUGS.map((s) => SLANG_BY_SLUG[s]).filter(Boolean).sort((a, b) => b.trendScore - a.trendScore);
   const sotd = SLANG_BY_SLUG[SLANG_OF_THE_DAY];
   const picks = ["pos-business", "provision-store", "suya-spot"].map((s) => BLUEPRINT_BY_SLUG[s]).filter(Boolean);
   const official = LIVE_FX.official.USD ?? RATES.official.USD;
@@ -120,7 +120,7 @@ export default function HomePage() {
       {/* Where you are + live headlines */}
       <section aria-labelledby="where-h" className="grid gap-6 lg:grid-cols-[1fr_1.1fr]">
         <h2 id="where-h" className="sr-only">
-          Prices for where you are, and live headlines
+          Prices for where you are, and monitored headlines
         </h2>
         <LocationCard
           cityNames={cityNames}

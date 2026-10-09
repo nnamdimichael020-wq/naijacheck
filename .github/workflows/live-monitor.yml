@@ -1,7 +1,8 @@
 name: Live monitor
 
-# Refreshes every live number on the site (FX, fuel depots, news feeds, trend signals, official-page
-# change flags), commits the result, and lets Cloudflare Workers Builds rebuild and deploy.
+# Attempts configured monitored sources (FX, wholesale fuel depots, headline feeds, public attention
+# signals and official-page change flags), commits successful snapshots/history, and lets the Worker build deploy.
+# Manual/indicative food, retail pump, telecom, fee and cut-off datasets are deliberately not refreshed here.
 #
 # Cron runs only from the default branch. Use "Run workflow" to test on another branch.
 
@@ -40,7 +41,7 @@ jobs:
       - name: Commit refreshed data
         run: |
           git config user.name "naijacheck-monitor"
-          git config user.email "monitor@naijacheck.ng"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
           if git diff --cached --quiet; then
             echo "No data changes this run."

@@ -38,7 +38,7 @@ export type LiveFuel = {
   depots: { petrol: { depot: string; state: string; price: number }[]; diesel: { depot: string; state: string; price: number }[]; lpg: { depot: string; state: string; price: number }[] };
 };
 
-export type HealthRow = { ok: boolean; checkedAt: string; asOf?: string | null; error?: string };
+export type HealthRow = { ok: boolean; checkedAt: string; asOf?: string | null; error?: string; lastSuccessfulAt?: string | null };
 export type WatchPage = { label: string; url: string; fingerprint?: string; lastChecked?: string; changedAt?: string | null; changedSincePrevious?: boolean; error?: string };
 
 export const LIVE_FX = fxLive as unknown as LiveFx;
@@ -52,7 +52,7 @@ export const LIVE_TRENDS = trendsLive as unknown as {
   terms: LiveTrendTerm[];
   wiki: LiveWiki[];
 };
-export const LIVE_WATCH = watchLive as unknown as { checkedAt: string | null; note?: string; pages: Record<string, WatchPage> };
+export const LIVE_WATCH = watchLive as unknown as { checkedAt: string | null; seeded?: boolean; note?: string; pages: Record<string, WatchPage> };
 export const LIVE_HEALTH = healthLive as unknown as Record<string, HealthRow>;
 
 /** Newest headlines across every topic, de-duplicated by title. */
