@@ -1,0 +1,34 @@
+{
+  "updatedAt": "2026-10-09",
+  "nationalCutOff": {
+    "universities": 150,
+    "polytechnics": 100,
+    "note": "Several 2026 reports list 150 as the national minimum for universities, while some earlier explainers still say 140. Confirm on jamb.gov.ng before you rely on it.",
+    "sources": ["SmartJAMB (May 2026)", "Nairaland announcement thread (April 2026)", "MasterJAMB and universities.ng guides (March-April 2026) list 140"]
+  },
+  "institutions": [
+    { "slug": "unilag", "name": "University of Lagos (UNILAG)", "short": "UNILAG", "state": "Lagos", "general": "About 200 (reported)", "competitive": { "Medicine and Surgery": "280+", "Law": "250+", "Engineering": "230+" }, "postUtme": true, "note": "Figures are reported ranges from 2026 guides. Confirm the current list on UNILAG's admissions portal." },
+    { "slug": "ui", "name": "University of Ibadan (UI)", "short": "UI", "state": "Oyo", "general": "200 (2025/2026 session, per UI release)", "competitive": { "Medicine and Surgery": "around 290+", "Nursing Science": "around 280+", "Law": "around 270+", "Pharmacy": "around 260+", "Engineering": "240 to 260" }, "postUtme": true, "note": "UI says a 200 score only qualifies you for Post-UTME screening, not admission." },
+    { "slug": "oau", "name": "Obafemi Awolowo University (OAU)", "short": "OAU", "state": "Osun", "general": "Varies by department", "competitive": { "Medicine and Surgery": "260+", "Engineering": "220+" }, "postUtme": true, "note": "OAU departmental cut-offs change by session. Use the official list." },
+    { "slug": "unn", "name": "University of Nigeria, Nsukka (UNN)", "short": "UNN", "state": "Enugu", "general": "Varies by department", "competitive": { "Medicine and Surgery": "250+" }, "postUtme": true, "note": "Check the departmental list before applying." },
+    { "slug": "abu", "name": "Ahmadu Bello University (ABU)", "short": "ABU", "state": "Kaduna", "general": "Varies by department", "competitive": { "Law": "230+" }, "postUtme": true, "note": "ABU screens heavily for competitive programmes." }
+  ],
+  "privateUniversitiesReported2026": [
+    { "name": "Covenant University", "state": "Ogun", "cutOff": 200 },
+    { "name": "Babcock University", "state": "Ogun", "cutOff": 180 },
+    { "name": "Pan-Atlantic University", "state": "Lagos", "cutOff": 180 },
+    { "name": "Bowen University", "state": "Osun", "cutOff": 160 },
+    { "name": "Redeemer's University", "state": "Osun", "cutOff": 160 },
+    { "name": "Landmark University", "state": "Kwara", "cutOff": 160 }
+  ],
+  "guides": [
+    { "slug": "waec-2026", "title": "WAEC 2026 Timetable and Preparation", "kind": "waec" },
+    { "slug": "neco-2026", "title": "NECO 2026 Exam Guide", "kind": "neco" },
+    { "slug": "waec-syllabus-2026", "title": "WAEC Syllabus 2026 Study Guide", "kind": "syllabus" },
+    { "slug": "school-resumption-2026", "title": "School Resumption Dates 2026/2027", "kind": "resumption" },
+    { "slug": "federal-university-fees-2026", "title": "Federal University School Fees 2026 Guide", "kind": "fees" },
+    { "slug": "post-utme-guide-2026", "title": "Post-UTME Guide 2026: What to Prepare", "kind": "postutme" },
+    { "slug": "jamb-registration-2026", "title": "JAMB Registration and Profile 2026", "kind": "jamb" },
+    { "slug": "jamb-cutoff-private-universities-2026", "title": "JAMB Cut-Off for Private Universities 2026", "kind": "private" }
+  ]
+}

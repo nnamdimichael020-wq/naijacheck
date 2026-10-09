@@ -1,0 +1,28 @@
+{
+  "updatedAt": "2026-10-09",
+  "sources": [
+    { "label": "NNPC retail pump list (Legit.ng, 9 Oct 2026)", "url": "https://www.legit.ng/business-economy/energy/1735186-nnpc-invites-nigerians-buy-petrol-a-discount-announces-prices/" },
+    { "label": "Dangote gantry diesel cut (Legit.ng, 1 Oct 2026)", "url": "https://www.legit.ng/business-economy/energy/1733751-depots-announce-petrol-prices-dangote-reduces-cost-diesel/" },
+    { "label": "Depot median prices (Awajis, 6 Oct 2026)", "url": "https://awajis.com/fuel-price-in-nigeria-today/" }
+  ],
+  "petrolPump": [
+    { "state": "Lagos", "slug": "lagos", "price": 1355 },
+    { "state": "Rivers", "slug": "rivers", "price": 1355 },
+    { "state": "Osun", "slug": "osun", "price": 1358 },
+    { "state": "Akwa Ibom", "slug": "akwa-ibom", "price": 1360 },
+    { "state": "Ogun", "slug": "ogun", "price": 1367 },
+    { "state": "Oyo", "slug": "oyo", "price": 1367 },
+    { "state": "Abia", "slug": "abia", "price": 1370 },
+    { "state": "FCT (Abuja)", "slug": "fct", "price": 1370 },
+    { "state": "Yobe", "slug": "yobe", "price": 1435 }
+  ],
+  "depots": [
+    { "name": "Dangote Refinery gantry (petrol)", "product": "petrol", "price": 1325, "date": "2026-10-09" },
+    { "name": "Dangote Refinery gantry (diesel, AGO)", "product": "diesel", "price": 1780, "date": "2026-10-01" },
+    { "name": "Lagos depot cluster (diesel)", "product": "diesel", "range": [1795, 1890], "date": "2026-10-01" },
+    { "name": "National median depot (petrol)", "product": "petrol", "price": 1305, "date": "2026-10-06" },
+    { "name": "National median depot (diesel)", "product": "diesel", "price": 1775, "date": "2026-10-06" },
+    { "name": "National median depot (cooking gas, LPG)", "product": "lpg", "price": 1170, "date": "2026-10-06" }
+  ],
+  "dieselNote": "Depot diesel is the wholesale price. Pump and jerrycan diesel usually sits above it, so budget for the gap."
+}

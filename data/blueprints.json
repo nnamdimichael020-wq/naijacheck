@@ -1,0 +1,346 @@
+{
+  "updatedAt": "2026-10-09",
+  "note": "Figures are planning estimates for October 2026. Confirm costs with suppliers and official portals before you commit money. Shares of startup budget must add up to 1.",
+  "blueprints": [
+    {
+      "slug": "pos-business",
+      "name": "POS Agent Business",
+      "category": "Fintech agent",
+      "capitalMin": 150000, "capitalMax": 1000000, "sampleCapital": 200000,
+      "skills": ["sales", "tech", "customer-service", "none"],
+      "cacRequired": true, "nafdacRequired": false,
+      "licences": ["CAC business name (₦10,500 official fees, verify on cac.gov.ng)", "Partnership with a CBN-licensed payment service provider or bank", "Location and signage (no special licence for most states)"],
+      "startupBreakdown": [
+        { "item": "Float (cash for withdrawals and transfers)", "share": 0.5 },
+        { "item": "Shop space deposit and signage", "share": 0.2 },
+        { "item": "Registration and documentation", "share": 0.1 },
+        { "item": "Power backup (inverter or small generator running cost)", "share": 0.1 },
+        { "item": "Emergency buffer", "share": 0.1 }
+      ],
+      "monthlyCosts": [
+        { "item": "Shop rent (in a busy area)", "amount": 60000 },
+        { "item": "Power and data", "amount": 25000 },
+        { "item": "Transport and sundries", "amount": 15000 }
+      ],
+      "grossMarginPct": 0.8,
+      "profitTimeline": [
+        { "month": "Month 1-2", "label": "Setting up, testing float flow, building neighbourhood trust" },
+        { "month": "Month 3-4", "label": "Break-even on fixed costs if you hit about 150 transactions a day" },
+        { "month": "Month 5-8", "label": "Steady profit if you have a second float source and clean records" }
+      ],
+      "steps": [
+        "Pick a busy spot with heavy foot traffic: a bus stop, market entrance, or near a school.",
+        "Register a business name with CAC (sole proprietorship) and open a business bank account.",
+        "Apply through a licensed payment service provider or bank partner as an agent.",
+        "Start with a small float, then grow it after you prove your daily turnover.",
+        "Keep a daily ledger: opening float, transactions, closing float, and cash count.",
+        "Build repeat customers with fast service, clean receipts, and a predictable schedule."
+      ],
+      "failurePoints": ["Float runs out at peak hours", "Fraud and fake transfer alerts", "Location with low foot traffic", "Power outages with no backup", "Price wars with nearby agents"],
+      "suppliers": [
+        { "name": "Licensed PSP or bank partner", "where": "Apply online or at a branch", "note": "Ask for written terms and commission schedule. Never pay a 'joining fee' in cash to a stranger." }
+      ],
+      "spark": "Set up at a school gate or market entrance where people need quick transfers. Your first 50 customers come from people you already know.",
+      "premiumNotes": "Premium: a 90-day float plan, daily ledger template, and the three-question checklist before you sign any agent agreement."
+    },
+    {
+      "slug": "provision-store",
+      "name": "Mini Provision Store",
+      "category": "Retail",
+      "capitalMin": 300000, "capitalMax": 2000000, "sampleCapital": 500000,
+      "skills": ["sales", "customer-service", "none", "logistics"],
+      "cacRequired": true, "nafdacRequired": false,
+      "licences": ["CAC business name", "Tax registration (TIN) for the business", "LGA trading or shop permit (varies by council)"],
+      "startupBreakdown": [
+        { "item": "Opening stock (rice, sugar, drinks, noodles, toiletries)", "share": 0.55 },
+        { "item": "Shelves, fridge and display", "share": 0.2 },
+        { "item": "Shop rent (first month and deposit)", "share": 0.15 },
+        { "item": "Registration and permits", "share": 0.05 },
+        { "item": "Working capital buffer", "share": 0.05 }
+      ],
+      "monthlyCosts": [
+        { "item": "Restocking and wastage", "amount": 90000 },
+        { "item": "Rent", "amount": 70000 },
+        { "item": "Power and fridge running", "amount": 35000 }
+      ],
+      "grossMarginPct": 0.18,
+      "profitTimeline": [
+        { "month": "Month 1-2", "label": "Learning your fast sellers and slow sellers" },
+        { "month": "Month 3-5", "label": "Break-even on rent and power once daily sales are stable" },
+        { "month": "Month 6-12", "label": "Real profit if you cut credit and manage stock turnover" }
+      ],
+      "steps": [
+        "Survey 20 households near the shop and list what they buy every week.",
+        "Register the business and get a TIN for the business.",
+        "Buy opening stock from a wholesale market (Mile 12, Idumota, Ariaria, or Kantin Kwari depending on your city).",
+        "Set up a simple cash book and a 'do not sell on credit' rule for the first 90 days.",
+        "Rotate stock and track expiry dates. Expired goods are pure loss.",
+        "Add jara and loyalty for your best customers."
+      ],
+      "failurePoints": ["Too much credit to neighbours", "Expired stock", "Theft or poor cash control", "Buying what you like instead of what sells", "No power backup for fridge items"],
+      "suppliers": [
+        { "name": "Wholesale clusters", "where": "Mile 12 (Lagos), Idumota (Lagos), Ariaria (Aba), Onitsha Main Market, Kantin Kwari (Kano)", "note": "Go early, bring cash, and buy from registered distributors where possible." }
+      ],
+      "spark": "Sell small packs of sugar, Indomie and pure water at the bus stop before 8am. Early hours can pay the rent.",
+      "premiumNotes": "Premium: a 12-month stock calendar, a sample product list with margin targets, and a credit policy template."
+    },
+    {
+      "slug": "suya-spot",
+      "name": "Suya Spot (Grill Business)",
+      "category": "Food",
+      "capitalMin": 300000, "capitalMax": 2000000, "sampleCapital": 500000,
+      "skills": ["cooking", "sales", "customer-service", "none"],
+      "cacRequired": true, "nafdacRequired": false,
+      "licences": ["CAC business name", "Food vendor permit or LGA approval", "Food handler health checks (state rules vary)"],
+      "startupBreakdown": [
+        { "item": "Grill and equipment (grill, knives, trays)", "share": 0.3 },
+        { "item": "First stock of beef and spices", "share": 0.3 },
+        { "item": "Gas or charcoal and cooking fuel", "share": 0.1 },
+        { "item": "Table, chairs and small shelter", "share": 0.15 },
+        { "item": "Permits and buffer", "share": 0.15 }
+      ],
+      "monthlyCosts": [
+        { "item": "Meat and spices", "amount": 180000 },
+        { "item": "Fuel and power", "amount": 50000 },
+        { "item": "Staff or helper", "amount": 60000 }
+      ],
+      "grossMarginPct": 0.35,
+      "profitTimeline": [
+        { "month": "Month 1-2", "label": "Finding your spice mix and daily meat cost" },
+        { "month": "Month 3-4", "label": "Regular night crowd, break-even on fixed costs" },
+        { "month": "Month 5-8", "label": "December and festive seasons can double sales" }
+      ],
+      "steps": [
+        "Pick a night spot with heavy foot traffic and parking, near a hostel, campus or office block.",
+        "Test your spice mix on 30 friends and track feedback.",
+        "Buy meat fresh each morning and track weight loss on the grill.",
+        "Register the business and get the local permit needed.",
+        "Use a fixed price per stick and per pack so you can plan your cost.",
+        "Build a WhatsApp order list for pre-orders and the festive season."
+      ],
+      "failurePoints": ["Meat price shocks", "Hygiene complaints", "Too many free samples", "Burnt or dry suya killing reviews", "No plan for rainy days"],
+      "suppliers": [
+        { "name": "Cattle and meat sourcing", "where": "Local abattoirs and meat wholesalers. Kantin Kwari or Sabon Gari for spices in Kano; markets in Lagos for pepper and spice", "note": "Buy in bulk when prices dip. Keep your supplier relationship consistent." }
+      ],
+      "spark": "Sell suya packs with a fixed price and a WhatsApp pre-order for weekends. You control the stock and the crowd.",
+      "premiumNotes": "Premium: a spice-mix costing sheet, daily meat ordering plan, and a festive season calendar."
+    },
+    {
+      "slug": "thrift-fashion",
+      "name": "Thrift Fashion Business",
+      "category": "Fashion",
+      "capitalMin": 150000, "capitalMax": 1000000, "sampleCapital": 250000,
+      "skills": ["sales", "social-media", "tailoring", "none"],
+      "cacRequired": false, "nafdacRequired": false,
+      "licences": ["Business name (optional at start, needed for bank and bigger sellers)", "Social media account for sales"],
+      "startupBreakdown": [
+        { "item": "Bales of used clothes", "share": 0.6 },
+        { "item": "Sorting, washing and steaming", "share": 0.1 },
+        { "item": "Photography, mannequins and packaging", "share": 0.15 },
+        { "item": "Delivery and data", "share": 0.1 },
+        { "item": "Buffer", "share": 0.05 }
+      ],
+      "monthlyCosts": [
+        { "item": "New bales every 3-4 weeks", "amount": 80000 },
+        { "item": "Data and ads", "amount": 25000 },
+        { "item": "Delivery", "amount": 30000 }
+      ],
+      "grossMarginPct": 0.5,
+      "profitTimeline": [
+        { "month": "Month 1-2", "label": "Learning which bales sell and which pile up" },
+        { "month": "Month 3-4", "label": "Break-even when your sales are consistent every week" },
+        { "month": "Month 5-10", "label": "Profit if you build repeat buyers and a clear return policy" }
+      ],
+      "steps": [
+        "Buy a small bale first from a trusted seller and grade the content before you sell.",
+        "Sort into categories: denim, jackets, dresses, shoes, and accessories.",
+        "Clean, steam and photograph every piece in good light.",
+        "Post daily on Instagram and TikTok, and sell through WhatsApp Status.",
+        "Set a clear return and refund policy to build trust.",
+        "Reinvest the first profit into the best-selling category."
+      ],
+      "failurePoints": ["Bales with too many damaged pieces", "No clear return policy", "Slow sorting and dead stock", "Poor photography", "Late deliveries"],
+      "suppliers": [
+        { "name": "Bale markets", "where": "Ikeja and Lagos Island bale markets; Aba and Onitsha for local fabrics and factory overruns", "note": "Compare the same bale at two sellers before you pay." }
+      ],
+      "spark": "Post one bale-opening video a week. People buy the story as much as the clothes.",
+      "premiumNotes": "Premium: a bale grading checklist, a WhatsApp catalogue template and a 60-day content calendar."
+    },
+    {
+      "slug": "phone-accessories",
+      "name": "Phone Accessories Shop",
+      "category": "Electronics",
+      "capitalMin": 200000, "capitalMax": 1500000, "sampleCapital": 300000,
+      "skills": ["tech", "sales", "customer-service", "none"],
+      "cacRequired": true, "nafdacRequired": false,
+      "licences": ["CAC business name", "Shop permit (estate or market rules)", "Warranty and returns policy for resold goods"],
+      "startupBreakdown": [
+        { "item": "Stock: chargers, cables, cases, earphones", "share": 0.55 },
+        { "item": "Shop space and display", "share": 0.2 },
+        { "item": "Registration and branding", "share": 0.08 },
+        { "item": "Power backup and testing tools", "share": 0.07 },
+        { "item": "Buffer", "share": 0.1 }
+      ],
+      "monthlyCosts": [
+        { "item": "Restocking", "amount": 120000 },
+        { "item": "Rent or booth", "amount": 60000 },
+        { "item": "Power and data", "amount": 20000 }
+      ],
+      "grossMarginPct": 0.4,
+      "profitTimeline": [
+        { "month": "Month 1-2", "label": "Learning fast-moving accessories and supplier prices" },
+        { "month": "Month 3-4", "label": "Break-even when you sell about 40 small items a day" },
+        { "month": "Month 5-9", "label": "Repair add-on and screen protectors boost margins" }
+      ],
+      "steps": [
+        "Pick a shop in a dense phone area like Computer Village (Ikeja), Idumota or a busy campus.",
+        "Buy from two or three suppliers and test every item before you stock it.",
+        "Register the business and get your display space.",
+        "Sell genuine accessories with a clear warranty.",
+        "Add screen protector fitting or phone repair as a side service.",
+        "Track fast and slow lines each week."
+      ],
+      "failurePoints": ["Fake or sub-standard items", "Too many slow-moving models", "Unpaid credit from customers", "No warranty policy", "Price wars inside the cluster"],
+      "suppliers": [
+        { "name": "Electronics clusters", "where": "Computer Village (Ikeja), Idumota (Lagos Island), Onitsha electronics area, and Ogbete market (Enugu)", "note": "Ask for samples. Never buy a 'bulk offer' without testing." }
+      ],
+      "spark": "Offer free screen-protector fitting when someone buys a case. Your repeat customers come from small service wins.",
+      "premiumNotes": "Premium: a fake-detection checklist for chargers and earphones, and a 6-month product mix plan."
+    },
+    {
+      "slug": "laundry-cleaning",
+      "name": "Laundry and Cleaning Service",
+      "category": "Services",
+      "capitalMin": 300000, "capitalMax": 1500000, "sampleCapital": 500000,
+      "skills": ["customer-service", "logistics", "sales", "none"],
+      "cacRequired": true, "nafdacRequired": false,
+      "licences": ["CAC business name", "Water and power arrangement", "Waste disposal arrangement with the LGA"],
+      "startupBreakdown": [
+        { "item": "Washing machine and dryer (or manual setup)", "share": 0.35 },
+        { "item": "Detergents, softeners and packaging", "share": 0.15 },
+        { "item": "Shop or pickup point", "share": 0.2 },
+        { "item": "Power backup (inverter or small generator)", "share": 0.2 },
+        { "item": "Buffer", "share": 0.1 }
+      ],
+      "monthlyCosts": [
+        { "item": "Detergents and consumables", "amount": 60000 },
+        { "item": "Power and fuel", "amount": 90000 },
+        { "item": "Staff", "amount": 80000 }
+      ],
+      "grossMarginPct": 0.45,
+      "profitTimeline": [
+        { "month": "Month 1-2", "label": "Finding your pickup routes and pricing" },
+        { "month": "Month 3-5", "label": "Break-even once you have regular hostel or office clients" },
+        { "month": "Month 6-12", "label": "Profit once you have contracts with offices or estates" }
+      ],
+      "steps": [
+        "Choose a service area with students, apartments or offices nearby.",
+        "Price per item and per kg, and publish both.",
+        "Set up a pickup and delivery schedule.",
+        "Get the power plan right before you buy machines.",
+        "Register the business and open a business account.",
+        "Ask for monthly contracts from offices and landlords."
+      ],
+      "failurePoints": ["Power costs eat profit", "Lost or damaged clothes", "Late deliveries", "No written pricing", "Staff theft"],
+      "suppliers": [
+        { "name": "Machine and detergent suppliers", "where": "Local dealers in the nearest industrial area or market", "note": "Ask for warranty and after-sales service in writing." }
+      ],
+      "spark": "Offer a monthly subscription for students in one hostel. Predictable money beats one-off jobs.",
+      "premiumNotes": "Premium: a power cost model (inverter vs generator), a price sheet template and a client onboarding script."
+    },
+    {
+      "slug": "generator-service",
+      "name": "Generator Servicing and Sales",
+      "category": "Technical",
+      "capitalMin": 500000, "capitalMax": 2000000, "sampleCapital": 1000000,
+      "skills": ["tech", "electrical", "sales", "logistics"],
+      "cacRequired": true, "nafdacRequired": false,
+      "licences": ["CAC business name", "Electrical or mechanical training certificate (helpful)", "Environmental and safety compliance for fuel storage"],
+      "startupBreakdown": [
+        { "item": "Tools and diagnostic kit", "share": 0.2 },
+        { "item": "Spare parts starter stock (filters, plugs, oil)", "share": 0.35 },
+        { "item": "Van or transport", "share": 0.15 },
+        { "item": "Workshop space and signage", "share": 0.15 },
+        { "item": "Buffer", "share": 0.15 }
+      ],
+      "monthlyCosts": [
+        { "item": "Parts restocking", "amount": 150000 },
+        { "item": "Fuel and transport", "amount": 80000 },
+        { "item": "Workshop rent", "amount": 100000 }
+      ],
+      "grossMarginPct": 0.4,
+      "profitTimeline": [
+        { "month": "Month 1-3", "label": "Building a client list in estates and offices" },
+        { "month": "Month 4-6", "label": "Break-even on van and rent" },
+        { "month": "Month 7-12", "label": "Service contracts keep the cash flowing" }
+      ],
+      "steps": [
+        "Get trained on the most common generator brands in your area.",
+        "Register the business and set up a simple invoice template.",
+        "Build a parts list for the top 10 faults.",
+        "Offer servicing packages to estates, offices and shops.",
+        "Sell pre-owned or new units with a warranty.",
+        "Track every job so you can quote accurately."
+      ],
+      "failurePoints": ["Poor parts sourcing", "Unclear quotes", "Missing service records", "Overpromising on warranties", "Cash-only jobs with no receipts"],
+      "suppliers": [
+        { "name": "Parts and generator markets", "where": "Lagos (Ikeja, Mile 2), Onitsha, Kano, and Port Harcourt generator and spares markets", "note": "Buy genuine parts where possible. Fakes damage your reputation fast." }
+      ],
+      "spark": "Offer a quarterly servicing plan to 10 offices. Recurring work pays better than one-off repairs.",
+      "premiumNotes": "Premium: a fault-diagnosis checklist, a service contract template and a 12-month parts plan."
+    },
+    {
+      "slug": "home-baking",
+      "name": "Home Baking and Chin Chin Business",
+      "category": "Food",
+      "capitalMin": 150000, "capitalMax": 800000, "sampleCapital": 200000,
+      "skills": ["cooking", "social-media", "sales", "none"],
+      "cacRequired": true, "nafdacRequired": true,
+      "licences": ["CAC business name", "NAFDAC registration for packaged food sold to the public (required for commercial sale of processed foods)", "Food handler hygiene standards"],
+      "startupBreakdown": [
+        { "item": "Equipment (oven, mixer, trays, moulds)", "share": 0.35 },
+        { "item": "First ingredient stock", "share": 0.25 },
+        { "item": "Packaging and labels", "share": 0.15 },
+        { "item": "Registration and NAFDAC application costs", "share": 0.15 },
+        { "item": "Buffer", "share": 0.1 }
+      ],
+      "monthlyCosts": [
+        { "item": "Ingredients", "amount": 60000 },
+        { "item": "Packaging", "amount": 25000 },
+        { "item": "Delivery and data", "amount": 20000 }
+      ],
+      "grossMarginPct": 0.5,
+      "profitTimeline": [
+        { "month": "Month 1-2", "label": "Recipe testing and price setting" },
+        { "month": "Month 3-4", "label": "Repeat orders on WhatsApp" },
+        { "month": "Month 5-12", "label": "Festive season and office orders drive the big money" }
+      ],
+      "steps": [
+        "Test recipes on 20 people and keep a feedback log.",
+        "Cost each product per unit, including packaging and delivery.",
+        "Register the business name with CAC.",
+        "For sold packaged food, check NAFDAC requirements before you sell beyond friends and family.",
+        "Build a WhatsApp catalogue with pre-order slots.",
+        "Offer bulk packs for offices, churches and owambe events."
+      ],
+      "failurePoints": ["Selling without NAFDAC requirements met", "Poor costing and thin margins", "Spoilage and short shelf life", "No delivery plan", "Inconsistent quality"],
+      "suppliers": [
+        { "name": "Ingredient and packaging sourcing", "where": "Mile 12 (Lagos), Ariaria (Aba), Kantin Kwari (Kano) for bulk ingredients; packaging from local dealers", "note": "Buy consistent brands so your product tastes the same every batch." }
+      ],
+      "spark": "Sell a chin chin tin for office workers on Friday. Friday pre-orders are where most food side-hustles start.",
+      "premiumNotes": "Premium: a NAFDAC checklist, a per-unit costing sheet and a festive order calendar."
+    }
+  ],
+  "cityFactors": {
+    "lagos": { "label": "Lagos", "multiplier": 1.0, "note": "High rent, fast customers, fierce competition." },
+    "onitsha": { "label": "Onitsha", "multiplier": 0.9, "note": "Strong wholesale, cheaper stock, strong trading culture." },
+    "kano": { "label": "Kano", "multiplier": 0.85, "note": "Lower capital needs, grain and textile strength." },
+    "aba": { "label": "Aba", "multiplier": 0.9, "note": "Factory-direct fashion and shoes, strong local demand." },
+    "abuja": { "label": "Abuja", "multiplier": 1.05, "note": "Higher incomes and rent, good for premium services." },
+    "ibadan": { "label": "Ibadan", "multiplier": 0.9, "note": "Student population and big markets." },
+    "port-harcourt": { "label": "Port Harcourt", "multiplier": 1.0, "note": "Generator and power costs are high. Good for backup services." },
+    "enugu": { "label": "Enugu", "multiplier": 0.9, "note": "Affordable rent and a strong trading base." },
+    "kaduna": { "label": "Kaduna", "multiplier": 0.88, "note": "Lower costs, strong grain and textile trade." },
+    "benin-city": { "label": "Benin City", "multiplier": 0.9, "note": "Good food supply and a growing trading base." }
+  }
+}

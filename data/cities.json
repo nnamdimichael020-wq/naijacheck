@@ -1,0 +1,14 @@
+{
+  "cities": [
+    { "slug": "lagos", "name": "Lagos", "state": "Lagos State", "region": "South-West", "costIndex": 1.0, "markets": ["mile-12", "idumota", "oyingbo"], "vibe": "the most expensive city to rent and eat in, and also the place where money moves fastest" },
+    { "slug": "onitsha", "name": "Onitsha", "state": "Anambra State", "region": "South-East", "costIndex": 0.96, "markets": ["onitsha-main-market"], "vibe": "the biggest wholesale market in the East, where Ogbete and Main Market set the mood" },
+    { "slug": "kano", "name": "Kano", "state": "Kano State", "region": "North-West", "costIndex": 0.93, "markets": ["kantin-kwari", "sabon-gari-kano"], "vibe": "a grain and textile city where prices move with the Sahel harvest and the trucks from the North" },
+    { "slug": "aba", "name": "Aba", "state": "Abia State", "region": "South-East", "costIndex": 0.95, "markets": ["ariaria"], "vibe": "Made-in-Aba shoes, fabrics and small factories that never sleep" },
+    { "slug": "abuja", "name": "Abuja", "state": "Federal Capital Territory", "region": "North-Central", "costIndex": 1.03, "markets": ["wuse-market"], "vibe": "the government city where salaries are higher and rent is too" },
+    { "slug": "ibadan", "name": "Ibadan", "state": "Oyo State", "region": "South-West", "costIndex": 0.94, "markets": ["bodija-market"], "vibe": "a big market town with cheap-ish food and students everywhere" },
+    { "slug": "port-harcourt", "name": "Port Harcourt", "state": "Rivers State", "region": "South-South", "costIndex": 1.02, "markets": ["mile-1"], "vibe": "oil money, high rents and generator bills that make you respect electricity" },
+    { "slug": "enugu", "name": "Enugu", "state": "Enugu State", "region": "South-East", "costIndex": 0.94, "markets": ["ogbete-market"], "vibe": "a calmer, cheaper East city with strong traders at Ogbete" },
+    { "slug": "kaduna", "name": "Kaduna", "state": "Kaduna State", "region": "North-West", "costIndex": 0.95, "markets": ["sabon-gari-kaduna"], "vibe": "a northern commercial hub with strong grain and textile trade" },
+    { "slug": "benin-city", "name": "Benin City", "state": "Edo State", "region": "South-South", "costIndex": 0.96, "markets": ["oba-market"], "vibe": "Oba Market food prices and Edo state traders who know their numbers" }
+  ]
+}

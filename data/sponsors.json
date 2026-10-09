@@ -1,0 +1,8 @@
+{
+  "note": "Sponsored cards are clearly labelled 'Sponsored' as required by Google AdSense policy. Replace placeholder partners with real advertisers.",
+  "cards": [
+    { "title": "Related Hustle Idea: Start a POS Business", "blurb": "Need capital guidance? Read the POS blueprint before you sign any agent agreement.", "href": "/hustle/pos-business", "sponsor": "Partner placeholder", "label": "Sponsored" },
+    { "title": "Related Hustle Idea: Thrift Fashion Starter Kit", "blurb": "Bale grading checklist and a WhatsApp catalogue template for new sellers.", "href": "/hustle/thrift-fashion", "sponsor": "Partner placeholder", "label": "Sponsored" },
+    { "title": "Related Hustle Idea: Generator Service Plan", "blurb": "Quote templates and a parts plan for your first 12 months.", "href": "/hustle/generator-service", "sponsor": "Partner placeholder", "label": "Sponsored" }
+  ]
+}

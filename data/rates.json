@@ -1,0 +1,11 @@
+{
+  "updatedAt": "2026-10-09",
+  "status": "indicative",
+  "sources": [
+    { "label": "Aboki Forex: USD black market ₦1,370 and CBN official ₦1,331.77 (8-9 Oct 2026)", "url": "https://abokiforex.app/" },
+    { "label": "WithinNigeria: official ₦1,329.16 and black market ₦1,384 (1 Oct 2026)", "url": "https://www.withinnigeria.com/2026/10/01/dollar-to-naira-today-october-1-2026-official-and-black-market-exchange-rates/" }
+  ],
+  "official": { "USD": 1331.77, "GBP": 1784, "EUR": 1545 },
+  "blackMarket": { "USD": 1370, "GBP": 1836, "EUR": 1590 },
+  "note": "USD figures are sourced. GBP and EUR are DERIVED from USD cross rates (not a quoted feed). Replace them from a real feed before publishing."
+}

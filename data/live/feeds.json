@@ -1,0 +1,9 @@
+{
+  "checkedAt": null,
+  "seeded": true,
+  "topics": [],
+  "source": {
+    "label": "Google News (public RSS)",
+    "url": "https://news.google.com/"
+  }
+}

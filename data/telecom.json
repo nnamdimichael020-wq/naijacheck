@@ -1,0 +1,20 @@
+{
+  "updatedAt": "2026-10-09",
+  "status": "indicative",
+  "source": "Public 2026 data-plan comparator (wtec.org.ng) and network price pages. Prices change without notice. Always confirm with your network's app or USSD before buying.",
+  "networks": [
+    { "slug": "mtn", "name": "MTN", "plans": [{ "label": "2GB", "price": 1500 }, { "label": "10GB", "price": 4500 }], "bestValuePerGb": 500, "coverage": "Best nationwide coverage", "fiveG": true, "pros": ["Widest coverage", "Reliable for work calls and video"], "cons": ["Not the cheapest per GB"] },
+    { "slug": "airtel", "name": "Airtel", "plans": [{ "label": "2GB", "price": 1500 }, { "label": "10GB", "price": 4500 }], "bestValuePerGb": 390, "coverage": "Good in cities", "fiveG": true, "pros": ["Strong big-bundle value", "Good for streaming in cities"], "cons": ["Coverage can be weaker in rural areas"] },
+    { "slug": "glo", "name": "Glo", "plans": [{ "label": "3.9GB", "price": 1000 }, { "label": "10.8GB", "price": 2500 }], "bestValuePerGb": 256, "coverage": "Variable", "fiveG": false, "pros": ["Cheapest per GB for light users", "Good value on bigger bundles"], "cons": ["Coverage varies by area", "No 5G in most areas"] },
+    { "slug": "9mobile", "name": "9mobile", "plans": [{ "label": "4GB", "price": 1000 }, { "label": "11.4GB", "price": 2500 }], "bestValuePerGb": 250, "coverage": "Limited", "fiveG": false, "pros": ["Cheap per GB where the signal works"], "cons": ["Limited coverage outside major cities"] }
+  ],
+  "nightPlans": {
+    "summary": "Night plans are bundles that are only valid during set hours, usually overnight. Check the time window and the validity period on the bundle details before buying.",
+    "tips": ["Download large files and updates in the night window.", "Check whether the bundle is valid on your device and in your state.", "Buy one day at a time if you are not sure about the rules."]
+  },
+  "airtimeToCash": {
+    "summary": "Airtime-to-cash rates change constantly and vary by network and platform. Many quotes fall between 60% and 80% of face value. Treat any rate as indicative until you confirm it.",
+    "sampleRates": [{ "network": "MTN", "rate": 0.7, "status": "indicative" }, { "network": "Airtel", "rate": 0.68, "status": "indicative" }, { "network": "Glo", "rate": 0.65, "status": "indicative" }, { "network": "9mobile", "rate": 0.62, "status": "indicative" }],
+    "warnings": ["Never send airtime to someone you have not met to 'unlock' a payout.", "Use only platforms that show a clear rate before you send.", "Keep screenshots of transactions."]
+  }
+}

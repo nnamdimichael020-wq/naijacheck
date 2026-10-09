@@ -1,0 +1,45 @@
+{
+  "updatedAt": "2026-10-09",
+  "status": "indicative",
+  "sourceNote": "Rice bag anchor: Lagos MAFA/Lagos.Cool tracker, mid-2026 (about ₦60,000 for 50kg long grain). Other figures are INDICATIVE editor estimates for October 2026. Replace from your own market check before publishing. Update this file daily.",
+  "items": [
+    { "slug": "rice", "name": "Rice (local/foreign, 1kg)", "unit": "per 1kg", "category": "grains", "prices": { "lagos": [1450, 1750], "onitsha": [1400, 1700], "kano": [1350, 1650], "aba": [1380, 1680] }, "bag50kg": { "lagos": 60000, "onitsha": 58000, "kano": 56000, "aba": 57500 }, "note": "50kg bag long grain was about ₦60,000 in Lagos in mid-2026 per the state tracker." },
+    { "slug": "garri", "name": "Garri (white, 1kg)", "unit": "per 1kg", "category": "grains", "prices": { "lagos": [850, 1100], "onitsha": [700, 950], "kano": [800, 1000], "aba": [750, 950] }, "note": "Garri is usually cheapest in the South-East, where it is processed." },
+    { "slug": "beans", "name": "Brown beans / oloyin (1kg)", "unit": "per 1kg", "category": "grains", "prices": { "lagos": [2200, 2800], "onitsha": [2000, 2600], "kano": [1900, 2500], "aba": [2000, 2600] }, "note": "Beans prices rise in the lean season (roughly June to September)." },
+    { "slug": "yam", "name": "Yam (white, 1kg)", "unit": "per 1kg", "category": "tubers", "prices": { "lagos": [1800, 2400], "onitsha": [1500, 2200], "kano": [1700, 2300], "aba": [1400, 2000] }, "note": "Sold by tuber. This is the per-kg equivalent for a medium tuber." },
+    { "slug": "egg", "name": "Eggs (1 piece, medium)", "unit": "per piece", "category": "protein", "prices": { "lagos": [190, 230], "onitsha": [180, 220], "kano": [185, 225], "aba": [175, 215] }, "note": "A crate of 30 is usually cheaper per egg. Check for cracks before buying." },
+    { "slug": "palm-oil", "name": "Palm oil (1 litre)", "unit": "per litre", "category": "oils", "prices": { "lagos": [1300, 1700], "onitsha": [1200, 1600], "kano": [1300, 1650], "aba": [1250, 1600] }, "note": "Gallon-size buys are cheaper per litre." },
+    { "slug": "tomato", "name": "Fresh tomatoes (1kg)", "unit": "per 1kg", "category": "vegetables", "prices": { "lagos": [1200, 2000], "onitsha": [1000, 1800], "kano": [900, 1600], "aba": [1000, 1700] }, "note": "Tomatoes swing hard. A bad rainy week can double them." },
+    { "slug": "pepper", "name": "Fresh pepper mix (1kg)", "unit": "per 1kg", "category": "vegetables", "prices": { "lagos": [1500, 2500], "onitsha": [1300, 2200], "kano": [1200, 2000], "aba": [1300, 2100] }, "note": "Scotch bonnet and atarodo mixed. Price depends on the week." },
+    { "slug": "onion", "name": "Onions (1kg)", "unit": "per 1kg", "category": "vegetables", "prices": { "lagos": [1000, 1600], "onitsha": [900, 1500], "kano": [800, 1300], "aba": [900, 1500] }, "note": "Kano onions usually come in from the North after harvest." },
+    { "slug": "crayfish", "name": "Ground crayfish (1kg)", "unit": "per 1kg", "category": "protein", "prices": { "lagos": [12000, 16000], "onitsha": [11000, 15000], "kano": [11000, 14500], "aba": [11500, 15000] }, "note": "Buy a small pack first to check for salt and sand." },
+    { "slug": "beef", "name": "Beef (1kg, with bone)", "unit": "per 1kg", "category": "protein", "prices": { "lagos": [7000, 8500], "onitsha": [6800, 8000], "kano": [6500, 7800], "aba": [6600, 8000] }, "note": "Beef prices track cattle supply from the North." },
+    { "slug": "chicken", "name": "Chicken (broiler, 1kg)", "unit": "per 1kg", "category": "protein", "prices": { "lagos": [6000, 7500], "onitsha": [5800, 7200], "kano": [5600, 7000], "aba": [5700, 7100] }, "note": "Live birds are cheaper than dressed. Dressing costs extra." },
+    { "slug": "fish", "name": "Mackerel / titus (1kg)", "unit": "per 1kg", "category": "protein", "prices": { "lagos": [3500, 4800], "onitsha": [3300, 4500], "kano": [3600, 5000], "aba": [3300, 4600] }, "note": "Frozen fish is often cheaper per kg than fresh." },
+    { "slug": "sugar", "name": "Sugar (1kg, granulated)", "unit": "per 1kg", "category": "groceries", "prices": { "lagos": [1100, 1400], "onitsha": [1000, 1300], "kano": [1000, 1300], "aba": [1050, 1350] }, "note": "Brand matters more than city here." },
+    { "slug": "egusi", "name": "Egusi / melon seeds (1kg)", "unit": "per 1kg", "category": "soup-ingredients", "prices": { "lagos": [5500, 7500], "onitsha": [5000, 7000], "kano": [4800, 6800], "aba": [5000, 7000] }, "note": "Shelled egusi is pricier. Check for mould before buying." },
+    { "slug": "okra", "name": "Okra (1kg)", "unit": "per 1kg", "category": "vegetables", "prices": { "lagos": [1200, 1900], "onitsha": [1000, 1700], "kano": [900, 1500], "aba": [1000, 1700] }, "note": "Okra is seasonal in some states." },
+    { "slug": "ugu", "name": "Ugu (fluted pumpkin leaves, per bunch)", "unit": "per bunch", "category": "vegetables", "prices": { "lagos": [500, 900], "onitsha": [400, 800], "kano": [300, 600], "aba": [400, 800] }, "note": "Price is per bunch. Bunches vary in size, so weigh if you can." }
+  ],
+  "cityIndexNote": "Cities without explicit prices use the Lagos range scaled by the costIndex in cities.json.",
+  "basket": [
+    { "item": "rice", "qty": 5, "unit": "kg" },
+    { "item": "beans", "qty": 3, "unit": "kg" },
+    { "item": "garri", "qty": 4, "unit": "kg" },
+    { "item": "yam", "qty": 4, "unit": "kg" },
+    { "item": "egg", "qty": 30, "unit": "pieces" },
+    { "item": "palm-oil", "qty": 2, "unit": "litre" },
+    { "item": "tomato", "qty": 4, "unit": "kg" },
+    { "item": "pepper", "qty": 1, "unit": "kg" },
+    { "item": "onion", "qty": 2, "unit": "kg" },
+    { "item": "chicken", "qty": 1, "unit": "kg" },
+    { "item": "fish", "qty": 2, "unit": "kg" },
+    { "item": "sugar", "qty": 1, "unit": "kg" }
+  ],
+  "monthlyNonFoodEstimates": [
+    { "label": "Mobile data (about 5GB)", "amount": 5000 },
+    { "label": "Transport (about 20 short trips)", "amount": 30000 },
+    { "label": "Electricity or generator fuel (basic)", "amount": 15000 },
+    { "label": "Airtime and small emergencies", "amount": 3000 }
+  ]
+}
