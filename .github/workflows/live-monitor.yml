@@ -7,6 +7,11 @@ name: Live monitor
 # Cron runs only from the default branch. Use "Run workflow" to test on another branch.
 
 on:
+  # Temporary branch trigger used to prove the monitor in PR #3 without touching production.
+  # Remove after the first successful branch run; data-only monitor commits are ignored.
+  push:
+    branches: ["arena/c6158e8e-naijacheck"]
+    paths-ignore: ["data/**"]
   schedule:
     - cron: "17 */3 * * *" # every 3 hours, UTC
   workflow_dispatch:
