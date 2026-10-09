@@ -131,7 +131,10 @@ async function main() {
       GBP: openEr ? Math.round((openEr.rates.NGN / openEr.rates.GBP) * 100) / 100 : prevFx.official?.GBP ?? null,
       EUR: openEr ? Math.round((openEr.rates.NGN / openEr.rates.EUR) * 100) / 100 : prevFx.official?.EUR ?? null,
     },
-    seeded: cbnHtml || aboki ? false : prevFx.seeded ?? false,
+    seeded: cbnHtml || aboki || openEr ? false : prevFx.seeded ?? false,
+    officialStatus: cbnHtml ? "recent" : prevFx.officialStatus ?? (prevFx.seeded ? "seeded" : prevFx.official?.USD ? "stale" : "unavailable"),
+    blackMarketStatus: aboki ? "recent" : prevFx.blackMarketStatus ?? (prevFx.seeded ? "seeded" : prevFx.blackMarket ? "stale" : "unavailable"),
+    crossRateStatus: openEr ? "recent" : prevFx.crossRateStatus ?? (prevFx.seeded ? "seeded" : prevFx.crossRateAsOf ? "stale" : "unavailable"),
     officialAsOf: cbnHtml?.asOf ?? (prevFx as { officialAsOf?: string }).officialAsOf ?? null,
     officialSource: cbnHtml ? SOURCES.cbn : (prevFx as { officialSource?: unknown }).officialSource ?? SOURCES.cbn,
     crossRateAsOf: openEr?.asOf ?? prevFx.crossRateAsOf ?? null,
@@ -166,7 +169,10 @@ async function main() {
     rates.blackMarketSell = { USD: fx.blackMarket.USD.sell, GBP: fx.blackMarket.GBP?.sell ?? null, EUR: fx.blackMarket.EUR?.sell ?? null };
   }
   rates.updatedAt = NOW_ISO;
-  rates.status = "live";
+  rates.status = cbnHtml && aboki ? "recent" : "mixed";
+  rates.officialStatus = fx.officialStatus;
+  rates.blackMarketStatus = fx.blackMarketStatus;
+  rates.crossRateStatus = fx.crossRateStatus;
   rates.sources = [
     { label: SOURCES.cbn.label, url: SOURCES.cbn.url, asOf: fx.officialAsOf },
     { label: SOURCES.aboki.label, url: SOURCES.aboki.url, asOf: fx.blackMarketAsOf },

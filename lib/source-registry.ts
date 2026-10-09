@@ -23,7 +23,8 @@ export type DatasetRecord = {
 
 const ageHours = (iso: string | null) => (iso ? (Date.now() - Date.parse(iso)) / 3_600_000 : Infinity);
 
-function monitoredState(seeded: boolean | undefined, sourceTime: string | null, healthKey: string, staleAfterHours: number): VerificationState {
+function monitoredState(seeded: boolean | undefined, sourceTime: string | null, healthKey: string, staleAfterHours: number, recordedState?: VerificationState): VerificationState {
+  if (recordedState === "seeded" || recordedState === "unavailable") return recordedState;
   if (seeded) return "seeded";
   const health = LIVE_HEALTH[healthKey];
   if (!sourceTime) return "unavailable";
@@ -48,7 +49,7 @@ export const DATASET_REGISTRY: DatasetRecord[] = [
     lastSuccessfulAt: LIVE_HEALTH.cbn?.lastSuccessfulAt ?? (LIVE_HEALTH.cbn?.ok ? LIVE_HEALTH.cbn.checkedAt : null),
     cadence: "Attempted every 3 hours; changes depend on CBN publication and deployment.",
     staleAfterHours: 36,
-    state: monitoredState(LIVE_FX.seeded, LIVE_FX.officialAsOf, "cbn", 36),
+    state: monitoredState(LIVE_FX.seeded, LIVE_FX.officialAsOf, "cbn", 36, LIVE_FX.officialStatus),
     limitation: "GBP/EUR reference cross-rates are separate and must not be described as CBN quotes.",
   },
   {
@@ -66,7 +67,7 @@ export const DATASET_REGISTRY: DatasetRecord[] = [
     lastSuccessfulAt: LIVE_HEALTH.aboki?.lastSuccessfulAt ?? (LIVE_HEALTH.aboki?.ok ? LIVE_HEALTH.aboki.checkedAt : null),
     cadence: "Attempted every 3 hours; publication and deployment can delay changes.",
     staleAfterHours: 12,
-    state: monitoredState(LIVE_FX.seeded, LIVE_FX.blackMarketAsOf, "aboki", 12),
+    state: monitoredState(LIVE_FX.seeded, LIVE_FX.blackMarketAsOf, "aboki", 12, LIVE_FX.blackMarketStatus),
     limitation: "Indicative quote, not a CBN rate and not a guaranteed dealer price.",
   },
   {

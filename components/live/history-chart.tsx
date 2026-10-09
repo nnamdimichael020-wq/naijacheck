@@ -12,7 +12,7 @@ export function HistoryChart({ dataset = "cbn-usd-ngn", days = 30 }: { dataset?:
       <Card>
         <CardHeader><CardTitle className="text-base">Observed history</CardTitle><CardDescription>Actual successful observations only; no backfilled values.</CardDescription></CardHeader>
         <CardContent className="text-sm text-muted-foreground">
-          History is unavailable until this repository records at least two successful, changed source readings. Collection has not started; no chart is fabricated.
+          History is unavailable until this repository records at least two successful, changed readings for this dataset. No chart is fabricated.
         </CardContent>
       </Card>
     );

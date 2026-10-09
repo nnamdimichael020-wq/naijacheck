@@ -19,12 +19,13 @@ export function LiveTicker() {
   const trend = LIVE_TRENDS.terms.find((t) => t.score > 0);
 
   const fxState = DATASET_REGISTRY.find((d) => d.id === "cbn-usd")?.state ?? "unavailable";
+  const parallelState = DATASET_REGISTRY.find((d) => d.id === "parallel-fx")?.state ?? "unavailable";
   const fuelState = DATASET_REGISTRY.find((d) => d.id === "fuel-depot")?.state ?? "unavailable";
   const stateShort = (state: keyof typeof stateLabel) => state === "live" || state === "recent" ? "recent" : state;
 
   const items: Item[] = [
     { label: `USD official (CBN · ${stateShort(fxState)})`, value: naira(usdOfficial), href: "/status" },
-    { label: `USD parallel quote (${LIVE_FX.seeded ? "seeded" : "source-read"})`, value: naira(usdBlack), href: "/status" },
+    { label: `USD parallel quote · ${stateShort(parallelState)}`, value: naira(usdBlack), href: "/status" },
     ...(gbpBlack ? [{ label: "GBP black market", value: naira(gbpBlack) }] : []),
     { label: `Petrol depot median /L · ${stateShort(fuelState)}`, value: naira(petrol ?? 0), href: "/status" },
     { label: `Diesel depot median /L · ${stateShort(fuelState)}`, value: naira(diesel ?? 0), href: "/status" },

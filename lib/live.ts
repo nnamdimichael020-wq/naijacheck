@@ -21,6 +21,9 @@ export type LiveWiki = { article: string; views7d: number; prev7d: number; chang
 export type LiveFx = {
   checkedAt: string;
   seeded?: boolean;
+  officialStatus?: "recent" | "stale" | "seeded" | "unavailable";
+  blackMarketStatus?: "recent" | "stale" | "seeded" | "unavailable";
+  crossRateStatus?: "recent" | "stale" | "seeded" | "unavailable";
   official: { USD: number | null; GBP: number | null; EUR: number | null };
   officialAsOf: string | null;
   officialSource: SourceRef;
