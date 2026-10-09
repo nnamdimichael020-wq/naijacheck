@@ -1,6 +1,175 @@
 {
-  "checkedAt": null,
-  "seeded": true,
-  "terms": [],
-  "wiki": []
+  "checkedAt": "2026-10-09T22:37:31.679Z",
+  "method": "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
+  "limitation": "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
+  "terms": [
+    {
+      "slug": "japa",
+      "term": "Japa",
+      "mentions7d": 5,
+      "score": 100
+    },
+    {
+      "slug": "chop-life",
+      "term": "Chop life",
+      "mentions7d": 3,
+      "score": 60
+    },
+    {
+      "slug": "oblee",
+      "term": "Oblee",
+      "mentions7d": 2,
+      "score": 40
+    },
+    {
+      "slug": "achalugo",
+      "term": "Achalugo",
+      "mentions7d": 1,
+      "score": 20
+    },
+    {
+      "slug": "jara",
+      "term": "Jara",
+      "mentions7d": 1,
+      "score": 20
+    },
+    {
+      "slug": "kelebu",
+      "term": "Kelebu",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "sope-purr",
+      "term": "Sope Purr",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "demure-naija",
+      "term": "Demure Naija version",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "labubu-in-nigeria",
+      "term": "Labubu in Nigeria",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "soft-life",
+      "term": "Soft life",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "wahala",
+      "term": "Wahala",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "sharp-sharp",
+      "term": "Sharp sharp",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "owanbe",
+      "term": "Owanbe",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "gbese",
+      "term": "Gbese",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "detty-december",
+      "term": "Detty December",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "sabi",
+      "term": "Sabi",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "gist",
+      "term": "Gist",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "shakara",
+      "term": "Shakara",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "abeg",
+      "term": "Abeg",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "ehen",
+      "term": "Ehen",
+      "mentions7d": 0,
+      "score": 0
+    }
+  ],
+  "wiki": [
+    {
+      "article": "Nigeria",
+      "views7d": 45717,
+      "prev7d": 55323,
+      "changePct": -17.4
+    },
+    {
+      "article": "Nigerian naira",
+      "views7d": 3458,
+      "prev7d": 3667,
+      "changePct": -5.7
+    },
+    {
+      "article": "Dangote Refinery",
+      "views7d": 550,
+      "prev7d": 962,
+      "changePct": -42.8
+    },
+    {
+      "article": "Lagos",
+      "views7d": 15820,
+      "prev7d": 20839,
+      "changePct": -24.1
+    },
+    {
+      "article": "Joint Admissions and Matriculation Board",
+      "views7d": 740,
+      "prev7d": 594,
+      "changePct": 24.6
+    },
+    {
+      "article": "Afrobeats",
+      "views7d": 3232,
+      "prev7d": 2075,
+      "changePct": 55.8
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google News (public RSS)",
+      "url": "https://news.google.com/rss/search?hl=en-NG&gl=NG&ceid=NG:en&q="
+    },
+    {
+      "label": "Wikimedia Pageviews API",
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/"
+    }
+  ]
 }
