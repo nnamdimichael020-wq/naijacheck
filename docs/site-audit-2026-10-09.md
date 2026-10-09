@@ -12,7 +12,7 @@ A DNS lookup for `naijacheck.ng` returned no address in this restricted sandbox 
 
 ### GitHub monitor evidence
 
-At audit start GitHub had no recorded monitor run. Two isolated branch runs were then triggered without touching `main` or production; both completed successfully. The latest run is [GitHub Actions run 37994223339](https://github.com/nnamdimichael020-wq/naijacheck/actions/runs/37994223339), checked sources at `2026-10-09T21:34:27.978Z`, committed its snapshots to this PR branch, and left the normal final workflow triggers as schedule plus manual dispatch.
+At audit start GitHub had no recorded monitor run. Two isolated branch runs were then triggered without touching `main` or production; both completed successfully. The latest run is [GitHub Actions run 37994223339](https://github.com/nnamdimichael020-wq/naijacheck/actions/runs/37994223339), checked sources at `2026-10-09T21:34:27.978Z`, committed its snapshots to this PR branch, and left the normal final workflow triggers as schedule plus manual dispatch. Cloudflare's final PR preview build completed successfully; no production deployment or domain/route change was made.
 
 Latest source-specific evidence:
 
