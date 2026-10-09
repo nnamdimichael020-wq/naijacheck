@@ -12,7 +12,6 @@
     "dev": "next dev -H 0.0.0.0 -p 3000",
     "prebuild": "npm run generate",
     "build": "next build",
-    "start": "next start -H 0.0.0.0 -p 3000",
     "typecheck": "tsc --noEmit",
     "lint": "next lint"
   },
