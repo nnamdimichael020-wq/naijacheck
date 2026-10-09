@@ -49,7 +49,7 @@ export default function StatusPage() {
                 <Badge variant={d.state === "live" || d.state === "recent" ? "accent" : "muted"}>{stateLabel[d.state]}</Badge>
               </div>
               <p className="text-xs text-muted-foreground">{d.geography} · {d.productType}{d.unit ? ` · ${d.unit}` : ""}</p>
-              <Freshness asOf={d.sourceTime} label="Source as of" source={d.sourceName} />
+              <Freshness asOf={d.sourceTime} label="Source as of" source={d.sourceName} state={d.state} />
               <p className="text-xs text-muted-foreground">
                 Checked: {d.checkedAt ? `${new Date(d.checkedAt).toISOString().slice(0, 16).replace("T", " ")} UTC` : "no recorded check"}. {d.cadence}
               </p>

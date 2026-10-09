@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Freshness } from "@/components/live/freshness";
 import { STATES, matchState, type StateEntry } from "@/lib/states";
+import type { VerificationState } from "@/lib/source-registry";
 
 export type LocationProps = {
   cityNames: Record<string, string>;
@@ -15,7 +16,11 @@ export type LocationProps = {
   petrolMedian: number | null;
   dieselLagos: [number, number] | null;
   fxAsOf: string | null;
+  fxState: VerificationState;
+  parallelAsOf: string | null;
+  parallelState: VerificationState;
   fuelAsOf: string | null;
+  fuelState: VerificationState;
 };
 
 type Resolved =
@@ -164,8 +169,9 @@ export function LocationCard(p: LocationProps) {
 
       <CardContent className="space-y-3 border-t pt-4">
         <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
-          <Freshness asOf={p.fxAsOf} label="FX live" />
-          <Freshness asOf={p.fuelAsOf} label="Fuel live" />
+          <Freshness asOf={p.fxAsOf} label="Official FX" state={p.fxState} source="CBN" />
+          <Freshness asOf={p.parallelAsOf} label="Parallel quote" state={p.parallelState} source="Aboki" />
+          <Freshness asOf={p.fuelAsOf} label="Fuel depot" state={p.fuelState} source="Awajis" />
         </div>
         {picking ? (
           <label className="block text-sm">

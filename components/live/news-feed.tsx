@@ -3,6 +3,7 @@ import { latestHeadlines } from "@/lib/live";
 import { Freshness } from "@/components/live/freshness";
 import { Badge } from "@/components/ui/badge";
 import { LIVE_FEEDS } from "@/lib/live";
+import { DATASET_REGISTRY } from "@/lib/source-registry";
 
 const WAT = new Intl.DateTimeFormat("en-NG", {
   timeZone: "Africa/Lagos",
@@ -22,7 +23,7 @@ export function LiveNewsFeed({ limit = 8, topic }: { limit?: number; topic?: str
         <h2 id="live-news" className="text-xl font-bold tracking-tight">
           Monitored headlines
         </h2>
-        <Freshness asOf={LIVE_FEEDS.checkedAt} label="Checked" />
+        <Freshness asOf={LIVE_FEEDS.checkedAt} label="Checked" state={DATASET_REGISTRY.find((d) => d.id === "headlines")?.state} />
       </div>
       {items.length === 0 ? (
         <p className="rounded-lg border border-dashed p-4 text-sm text-muted-foreground">

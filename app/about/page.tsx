@@ -34,7 +34,7 @@ export default function AboutPage() {
         <h2 className="text-xl font-bold">How we handle numbers</h2>
         <ul className="list-disc space-y-2 pl-5 text-foreground/90">
           <li>FX, fuel depot prices, news headlines and trend counts are read from their sources every three hours by an automated monitor, and each figure shows when it was read.</li>
-          <li>A source that fails or changes layout keeps its last confirmed value and is marked stale. We do not guess. Live health for every source is on the status page.</li>
+          <li>A source that fails or changes layout keeps its last confirmed value and is marked stale. We do not guess. Source health for every monitored source is on the status page.</li>
           <li>Trend counts come from Nigerian news and Wikipedia pageviews. We do not read X or TikTok.</li>
           <li>Food prices, pump prices and telecom bundle prices are not auto-read yet. They carry their survey or check date.</li>
           <li>Ranges beat false precision. Confirm before you spend.</li>

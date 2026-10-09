@@ -23,7 +23,7 @@ export default function RecipePage({ params }: { params: { slug: string } }) {
     <ArticleView article={getArticle(`/tools/cookbook/${params.slug}`)}>
       <section aria-labelledby="scale" className="space-y-3">
         <h2 id="scale" className="text-2xl font-bold tracking-tight">
-          Live cost calculator
+          Indicative cost calculator
         </h2>
         <p className="text-sm text-muted-foreground">Change the city or the number of people. The cost updates straight away.</p>
         <CookbookCalc recipes={recipes} cities={COOK_CITIES} fixedSlug={params.slug} />

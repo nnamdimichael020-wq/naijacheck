@@ -43,7 +43,7 @@ export function LiveTicker() {
         @media (prefers-reduced-motion: reduce) { .nc-ticker-track { animation: none; } }
       `}</style>
       <div className="nc-ticker mx-auto flex max-w-7xl items-center gap-3 overflow-hidden px-4 py-2">
-        <span className="shrink-0 rounded bg-primary px-1.5 py-0.5 font-bold uppercase tracking-wide text-primary-foreground">Live</span>
+        <span className="shrink-0 rounded bg-primary px-1.5 py-0.5 font-bold uppercase tracking-wide text-primary-foreground">Source status</span>
         <div className="overflow-hidden whitespace-nowrap">
           <ul className="nc-ticker-track flex w-max items-center gap-6">
             {loop.map((it, i) => (
