@@ -6,7 +6,7 @@
     "EUR": 1491.75
   },
   "seeded": false,
-  "officialStatus": "stale",
+  "officialStatus": "seeded",
   "blackMarketStatus": "recent",
   "crossRateStatus": "recent",
   "officialAsOf": "2026-10-09T14:00:00.000Z",

@@ -132,7 +132,7 @@ async function main() {
       EUR: openEr ? Math.round((openEr.rates.NGN / openEr.rates.EUR) * 100) / 100 : prevFx.official?.EUR ?? null,
     },
     seeded: cbnHtml || aboki || openEr ? false : prevFx.seeded ?? false,
-    officialStatus: cbnHtml ? "recent" : prevFx.officialStatus ?? (prevFx.seeded ? "seeded" : prevFx.official?.USD ? "stale" : "unavailable"),
+    officialStatus: cbnHtml ? "recent" : !health.cbn?.lastSuccessfulAt && prevFx.official?.USD ? "seeded" : prevFx.officialStatus ?? (prevFx.seeded ? "seeded" : prevFx.official?.USD ? "stale" : "unavailable"),
     blackMarketStatus: aboki ? "recent" : prevFx.blackMarketStatus ?? (prevFx.seeded ? "seeded" : prevFx.blackMarket ? "stale" : "unavailable"),
     crossRateStatus: openEr ? "recent" : prevFx.crossRateStatus ?? (prevFx.seeded ? "seeded" : prevFx.crossRateAsOf ? "stale" : "unavailable"),
     officialAsOf: cbnHtml?.asOf ?? (prevFx as { officialAsOf?: string }).officialAsOf ?? null,

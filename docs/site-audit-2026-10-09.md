@@ -12,14 +12,17 @@ A DNS lookup for `naijacheck.ng` returned no address in this restricted sandbox 
 
 ### GitHub monitor evidence
 
-GitHub reports one active workflow (`Live monitor`) on the public repository's default branch `main`, but `gh run list --workflow live-monitor.yml` returned **zero runs**. A workflow file and cron are therefore not evidence of monitoring. Repository snapshots at audit start were:
+At audit start GitHub had no recorded monitor run. Two isolated branch runs were then triggered without touching `main` or production; both completed successfully. The latest run is [GitHub Actions run 37994223339](https://github.com/nnamdimichael020-wq/naijacheck/actions/runs/37994223339), checked sources at `2026-10-09T21:34:27.978Z`, committed its snapshots to this PR branch, and left the normal final workflow triggers as schedule plus manual dispatch.
 
-- FX: seeded capture, source/check date 2026-10-09; awaiting a successful monitor run.
-- Wholesale fuel depot readings: seeded capture, source/check date 2026-10-09; awaiting a successful monitor run.
-- Headlines: seeded state with no reading/items.
-- News/Wikipedia attention signals: seeded state with no reading/items.
-- Official-page watch: seeded state with no reading/pages.
-- Source health: empty; no recorded source run.
+Latest source-specific evidence:
+
+- CBN parser: failed (`layout not recognised`); the original CBN value remains explicitly **seeded**, not live.
+- Awajis fuel parser: failed (`layout not recognised`); wholesale fuel remains explicitly **seeded**, not live.
+- Aboki parallel-market quote and open.er-api cross-rates: successful, with separate source states/times.
+- Headline topics: six successful feeds; not treated as fact verification.
+- Attention signals: 20 news terms and six Wikimedia series; explicitly not X/TikTok activity.
+- Official-page watch: JAMB, NIMC and CBN read successfully; Immigration fetch failed. A fingerprint only creates a review flag.
+- History: one genuine changed parallel-market observation; no chart is shown until a dataset has two observations.
 
 Food/city prices, retail pump prices, telecom bundles, fees, school/admission data and cut-offs are manual or indicative and are not made current by this workflow.
 
@@ -62,12 +65,12 @@ An exhaustive local HTTP pass requested all 212 generated HTML routes from Wrang
 
 | Dataset/page family | Method and time | Current state |
 | --- | --- | --- |
-| CBN USD NFEM | CBN page parser; source effective time separate from fetch | Seeded; no successful Action run |
-| Parallel quote | Third-party Aboki buy/sell parser; separate from CBN | Seeded; indicative; no successful Action run |
-| GBP/EUR reference | `open.er-api.com` cross-rate | Seeded reference; not a CBN quote |
-| Fuel depot | Awajis tables attributed to petroleumprice.ng | Seeded wholesale/depot; not retail pump |
-| Headlines | Google News RSS links | Unavailable; no first run |
-| Attention signals | news mention floor + Wikimedia pageviews | Unavailable; not social-platform activity |
+| CBN USD NFEM | CBN page parser; source effective time separate from fetch | Seeded value retained; latest parser failed; never labelled live |
+| Parallel quote | Third-party Aboki buy/sell parser; separate from CBN | Recent successful source reading; indicative, not official FX |
+| GBP/EUR reference | `open.er-api.com` cross-rate | Recent successful reference reading; not CBN quotes |
+| Fuel depot | Awajis tables attributed to petroleumprice.ng | Seeded wholesale/depot value retained; latest parser failed; not retail pump |
+| Headlines | Google News RSS links | Six feeds read successfully; links/headlines are not fact verification |
+| Attention signals | news mention floor + Wikimedia pageviews | Recent readings; not social-platform activity |
 | Food/city and cookbook | editor estimates dated 2026-10-09; some cities scaled from Lagos | Manual/indicative; no reliable free daily feed established |
 | Retail pump figures | dated editorial/news source file | Manual; not station-level live data |
 | Telecom | dated comparator/sample bundle file | Manual/indicative; confirm in operator channel |

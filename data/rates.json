@@ -34,7 +34,7 @@
     "GBP": 1845,
     "EUR": 1540
   },
-  "officialStatus": "stale",
+  "officialStatus": "seeded",
   "blackMarketStatus": "recent",
   "crossRateStatus": "recent"
 }
