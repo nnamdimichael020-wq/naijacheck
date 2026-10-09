@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absUrl("/privacy"), lastModified: "2026-10-09", changeFrequency: "yearly", priority: 0.3 },
   ];
 
-  const generated: MetadataRoute.Sitemap = ARTICLES.map((a) => {
+  const generated: MetadataRoute.Sitemap = ARTICLES.filter((a) => a.section !== "hustle-combo").map((a) => {
     const isHub = a.section === "hub";
     const isDaily = a.section.startsWith("prices") || a.section === "telecom";
     return {

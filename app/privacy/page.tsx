@@ -40,8 +40,9 @@ export default function PrivacyPage() {
             request time to deliver the site and protect it from abuse. This is needed to run the service.
           </li>
           <li>
-            <strong>Browser storage on your device.</strong> We store your theme choice, a flag that unlocks premium on this device, and any admin draft
-            (editors only). This stays in your browser. You can clear it at any time.
+            <strong>Browser storage on your device.</strong> We store your theme choice, your chosen state, a flag that unlocks the mock premium demo on this
+            device, and any admin draft (editors only). A service worker may cache public pages and static files for offline use. This stays in your browser and
+            can be removed by clearing site data or uninstalling the app.
           </li>
           <li>
             <strong>Calculator and hustle inputs.</strong> Figures you type into calculators, the hustle matcher and the cookbook are processed in your browser.
@@ -60,9 +61,9 @@ export default function PrivacyPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold">3. Advertising</h2>
         <p>
-          The site shows clearly labelled sponsored and advertising placements. When we switch on Google AdSense, Google and its partners may use cookies to show
-          ads, including personalised ads. Before we enable personalised advertising, we will add a consent mechanism that meets NDPA requirements and Google&apos;s
-          policies. We do not use ads that open pop-ups, interstitials or autoplay sound.
+          Advertising is currently disabled because no approved AdSense publisher configuration is present. The cards in ad positions are internal related-guide
+          links, not paid partnerships. If advertising is enabled later, this notice and the consent controls must be updated before non-essential advertising
+          storage is used. We do not use pop-ups, interstitials or autoplay sound.
         </p>
       </section>
 
@@ -77,8 +78,9 @@ export default function PrivacyPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold">5. Who we share data with</h2>
         <p>
-          We use service providers: hosting and content delivery (Cloudflare Workers), and, once enabled, advertising (Google AdSense). They process data on our
-          instructions. Some providers may process data outside Nigeria. Where that happens, we rely on the transfer safeguards the NDPA requires.
+          Cloudflare provides hosting, content delivery and abuse protection and therefore processes request data. No site analytics, newsletter, user-submission
+          service, push-notification provider or advertising network is enabled in the current build. The site does not request browser geolocation; the optional
+          area card uses coarse country/region metadata Cloudflare already attaches to a request and stores only a state choice on the device.
         </p>
       </section>
 

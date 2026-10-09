@@ -55,8 +55,9 @@ const WATCH = [
   { id: "cbn", label: "Central Bank of Nigeria", url: "https://www.cbn.gov.ng/" },
 ];
 
-type Health = Record<string, { ok: boolean; checkedAt: string; asOf?: string | null; error?: string }>;
+type Health = Record<string, { ok: boolean; checkedAt: string; asOf?: string | null; error?: string; lastSuccessfulAt?: string | null }>;
 const health: Health = readJson(path.join(LIVE, "health.json"), {});
+let successfulSources = 0;
 
 function readJson<T>(file: string, fallback: T): T {
   try {
@@ -84,18 +85,31 @@ async function step<T>(key: string, fn: () => Promise<T | null>): Promise<T | nu
   try {
     const value = await fn();
     if (value === null) throw new Error("layout not recognised");
-    health[key] = { ok: true, checkedAt: NOW_ISO, asOf: (value as { asOf?: string | null })?.asOf ?? null };
+    health[key] = { ok: true, checkedAt: NOW_ISO, asOf: (value as { asOf?: string | null })?.asOf ?? null, lastSuccessfulAt: NOW_ISO };
+    successfulSources += 1;
     console.log(`[monitor] ok   ${key}`);
     return value;
   } catch (e) {
     const prev = health[key];
-    health[key] = { ok: false, checkedAt: NOW_ISO, asOf: prev?.asOf ?? null, error: (e as Error).message };
+    health[key] = { ok: false, checkedAt: NOW_ISO, asOf: prev?.asOf ?? null, lastSuccessfulAt: prev?.lastSuccessfulAt ?? null, error: (e as Error).message };
     console.warn(`[monitor] FAIL ${key}: ${(e as Error).message}`);
     return null;
   }
 }
 
 const isoDay = (ms: number) => new Date(ms).toISOString().slice(0, 10).replace(/-/g, "");
+
+type HistoryPoint = { dataset: string; observedAt: string; sourceTime: string; value: number; unit: string; geography: string; sourceUrl: string };
+function appendHistory(point: HistoryPoint) {
+  const file = path.join(DATA, "history.json");
+  const history = readJson<{ collectionStartedAt: string | null; points: HistoryPoint[] }>(file, { collectionStartedAt: null, points: [] });
+  const last = [...history.points].reverse().find((p) => p.dataset === point.dataset);
+  // Store only successful, changed observations. Never backfill or duplicate an unchanged value.
+  if (!last || last.value !== point.value || last.sourceTime !== point.sourceTime) history.points.push(point);
+  history.points = history.points.slice(-400); // bounded repository growth across all datasets
+  history.collectionStartedAt = history.points[0]?.observedAt ?? null;
+  writeJson(file, history);
+}
 
 async function main() {
   /* ---------- FX ---------- */
@@ -110,7 +124,7 @@ async function main() {
   const fxPath = path.join(LIVE, "fx.json");
   const prevFx = readJson<any>(fxPath, {});
   const fx: any = {
-    checkedAt: NOW_ISO,
+    checkedAt: cbnHtml || aboki || openEr ? NOW_ISO : prevFx.checkedAt ?? null,
     // A failed source keeps its last confirmed value, so one bad fetch never blanks the page.
     official: {
       USD: cbnHtml?.rate ?? prevFx.official?.USD ?? null,
@@ -120,8 +134,8 @@ async function main() {
     seeded: cbnHtml || aboki ? false : prevFx.seeded ?? false,
     officialAsOf: cbnHtml?.asOf ?? (prevFx as { officialAsOf?: string }).officialAsOf ?? null,
     officialSource: cbnHtml ? SOURCES.cbn : (prevFx as { officialSource?: unknown }).officialSource ?? SOURCES.cbn,
-    crossRateAsOf: openEr?.asOf ?? null,
-    crossRateSource: openEr ? SOURCES.openEr : null,
+    crossRateAsOf: openEr?.asOf ?? prevFx.crossRateAsOf ?? null,
+    crossRateSource: openEr ? SOURCES.openEr : prevFx.crossRateSource ?? null,
     blackMarket: aboki?.blackMarket
       ? {
           USD: aboki.blackMarket.USD,
@@ -134,6 +148,8 @@ async function main() {
     cbnWidgetOfficial: aboki?.cbnOfficial ?? null,
   };
   writeJson(fxPath, fx);
+  if (cbnHtml?.rate && cbnHtml.asOf) appendHistory({ dataset: "cbn-usd-ngn", observedAt: NOW_ISO, sourceTime: cbnHtml.asOf, value: cbnHtml.rate, unit: "NGN per USD", geography: "Nigeria", sourceUrl: SOURCES.cbn.url });
+  if (aboki?.blackMarket?.USD?.buy && aboki.asOf) appendHistory({ dataset: "parallel-usd-ngn-buy", observedAt: NOW_ISO, sourceTime: aboki.asOf, value: aboki.blackMarket.USD.buy, unit: "NGN per USD", geography: "Nigeria indicative quote", sourceUrl: SOURCES.aboki.url });
 
   // Patch the file the pages read. Black market headline uses the BUY rate, as Aboki does.
   const rates = readJson<Record<string, any>>(path.join(DATA, "rates.json"), {});
@@ -164,8 +180,11 @@ async function main() {
   /* ---------- Fuel ---------- */
   const fuelParse = await step("awajis", async () => P.parseAwajisFuel((await get(SOURCES.awajis.url)) as string));
   if (fuelParse) {
-    const fuelLive = { ...fuelParse, checkedAt: NOW_ISO, source: SOURCES.awajis };
+    const fuelLive = { ...fuelParse, checkedAt: NOW_ISO, seeded: false, source: SOURCES.awajis };
     writeJson(path.join(LIVE, "fuel.json"), fuelLive);
+    for (const [product, value] of Object.entries(fuelParse.medians)) {
+      if (typeof value === "number" && fuelParse.asOf) appendHistory({ dataset: `fuel-depot-${product}`, observedAt: NOW_ISO, sourceTime: fuelParse.asOf, value, unit: product === "lpg" ? "NGN per kg" : "NGN per litre", geography: "Nigeria depot median", sourceUrl: SOURCES.awajis.url });
+    }
 
     const fuel = readJson<Record<string, any>>(path.join(DATA, "fuel.json"), {});
     const lagosDiesel = fuelParse.depots.diesel.filter((d) => d.state === "Lagos").map((d) => d.price);
@@ -188,7 +207,7 @@ async function main() {
   }
 
   /* ---------- News feeds ---------- */
-  const feeds: Record<string, unknown> = { checkedAt: NOW_ISO, source: { label: SOURCES.news.label, url: SOURCES.news.url }, topics: [] };
+  const feeds: Record<string, unknown> = { checkedAt: NOW_ISO, seeded: false, source: { label: SOURCES.news.label, url: SOURCES.news.url }, topics: [] };
   const allItems: Record<string, P.FeedItem[]> = {};
   const feedOk = await step("news", async () => {
     let any = false;
@@ -222,6 +241,7 @@ async function main() {
     }
     await new Promise((r) => setTimeout(r, 400));
   }
+  if (terms.length && !feedOk) successfulSources += 1; // term queries can succeed even if all topic-feed queries failed
   const max = Math.max(0, ...terms.map((t) => t.mentions7d));
   const scored = terms.map((t) => ({ ...t, score: max ? Math.round((t.mentions7d / max) * 100) : 0 }));
 
@@ -244,6 +264,7 @@ async function main() {
 
   if (terms.length || wiki) writeJson(path.join(LIVE, "trends.json"), {
     checkedAt: NOW_ISO,
+    seeded: false,
     method:
       "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
     limitation: "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
@@ -273,11 +294,13 @@ async function main() {
   const watchPath = path.join(LIVE, "watch.json");
   const prevWatch = readJson<{ pages: Record<string, any> }>(watchPath, { pages: {} });
   const pages: Record<string, any> = {};
+  let watchSuccesses = 0;
   for (const w of WATCH) {
     try {
       const fp = P.pageFingerprint((await get(w.url)) as string);
       const prev = prevWatch.pages[w.id];
       const changed = !!prev && prev.fingerprint !== fp;
+      watchSuccesses += 1;
       pages[w.id] = {
         label: w.label,
         url: w.url,
@@ -290,10 +313,12 @@ async function main() {
       pages[w.id] = { ...prevWatch.pages[w.id], label: w.label, url: w.url, error: (e as Error).message };
     }
   }
-  writeJson(watchPath, { checkedAt: NOW_ISO, note: "A changed fingerprint means the official page wording changed. A person should read it before any fee or rule is updated.", pages });
+  successfulSources += watchSuccesses;
+  writeJson(watchPath, { checkedAt: watchSuccesses ? NOW_ISO : (prevWatch as { checkedAt?: string | null }).checkedAt ?? null, seeded: watchSuccesses ? false : (prevWatch as { seeded?: boolean }).seeded ?? true, note: "A changed fingerprint means the official page wording changed. A person should read it before any fee or rule is updated.", pages });
 
   writeJson(path.join(LIVE, "health.json"), health);
-  console.log("[monitor] done", NOW_ISO);
+  if (successfulSources === 0) throw new Error("Every configured source failed; last-good snapshots were preserved");
+  console.log(`[monitor] done ${NOW_ISO}; ${successfulSources} source groups succeeded`);
 }
 
 main().catch((e) => {

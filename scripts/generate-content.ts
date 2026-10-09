@@ -1231,7 +1231,13 @@ const outDir = path.join(root, "content", "generated");
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, "articles.json"), JSON.stringify(articles));
 
-const searchIndex = articles.map((a) => ({ path: a.path, title: a.title, kind: a.section, desc: a.metaDescription, keys: a.keywords.join(" ") }));
+const fixedSearch = [
+  { path: "/", title: "NaijaCheck home", kind: "hub", desc: "Nigerian prices, guides, slang, hustles and practical calculators.", keys: "home naijacheck nigeria utility" },
+  { path: "/about", title: "About NaijaCheck", kind: "learn", desc: "How NaijaCheck sources and labels its information.", keys: "about sourcing corrections trust" },
+  { path: "/status", title: "Data status", kind: "learn", desc: "Source checks, timestamps, limitations and verification states.", keys: "source freshness stale seeded monitor status" },
+  { path: "/privacy", title: "Privacy notice", kind: "learn", desc: "What the site processes and stores on your device.", keys: "privacy NDPA storage data rights" },
+];
+const searchIndex = [...fixedSearch, ...articles.map((a) => ({ path: a.path, title: a.title, kind: a.section, desc: a.metaDescription, keys: a.keywords.join(" ") }))];
 fs.mkdirSync(path.join(root, "public"), { recursive: true });
 fs.writeFileSync(path.join(root, "public", "search-index.json"), JSON.stringify(searchIndex));
 

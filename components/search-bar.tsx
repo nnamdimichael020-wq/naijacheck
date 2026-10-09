@@ -24,15 +24,37 @@ const KIND_LABEL: Record<string, string> = {
   learn: "Learn",
 };
 
+const ALIASES: Record<string, string> = {
+  dollar: "usd", naira: "ngn", gas: "fuel", pms: "petrol", ago: "diesel",
+  jamb: "admission cutoff", "cut-off": "cutoff", data: "telecom bundle",
+  business: "hustle", passport: "immigration",
+};
+const normalize = (value: string) => value.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9₦]+/g, " ").trim();
+const oneEditAway = (a: string, b: string) => {
+  if (Math.abs(a.length - b.length) > 1) return false;
+  let i = 0, j = 0, edits = 0;
+  while (i < a.length && j < b.length) {
+    if (a[i] === b[j]) { i++; j++; continue; }
+    if (++edits > 1) return false;
+    if (a.length > b.length) i++; else if (b.length > a.length) j++; else { i++; j++; }
+  }
+  return edits + Number(i < a.length || j < b.length) <= 1;
+};
+
 function score(e: SearchEntry, terms: string[]) {
-  const title = e.title.toLowerCase();
-  const keys = e.keys.toLowerCase();
-  const desc = e.desc.toLowerCase();
+  const title = normalize(e.title);
+  const keys = normalize(e.keys);
+  const desc = normalize(e.desc);
+  const words = `${title} ${keys}`.split(/\s+/);
   let s = 0;
-  for (const t of terms) {
-    if (title.includes(t)) s += 3;
-    if (keys.includes(t)) s += 2;
-    if (desc.includes(t)) s += 1;
+  for (const raw of terms) {
+    const expanded = `${raw} ${ALIASES[raw] ?? ""}`.trim().split(/\s+/);
+    for (const t of expanded) {
+      if (title.includes(t)) s += 3;
+      if (keys.includes(t)) s += 2;
+      if (desc.includes(t)) s += 1;
+      if (t.length >= 4 && words.some((word) => oneEditAway(t, word))) s += 1;
+    }
   }
   return s;
 }
@@ -60,7 +82,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
   }, [index, failed]);
 
   const results = React.useMemo(() => {
-    const terms = q.toLowerCase().trim().split(/\s+/).filter((t) => t.length > 1);
+    const terms = normalize(q).split(/\s+/).filter((t) => t.length > 1);
     if (!index || terms.length === 0) return [];
     return index
       .map((e) => ({ e, s: score(e, terms) }))
