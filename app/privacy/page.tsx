@@ -77,7 +77,7 @@ export default function PrivacyPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold">5. Who we share data with</h2>
         <p>
-          We use service providers: hosting and content delivery (Cloudflare Pages), and, once enabled, advertising (Google AdSense). They process data on our
+          We use service providers: hosting and content delivery (Cloudflare Workers), and, once enabled, advertising (Google AdSense). They process data on our
           instructions. Some providers may process data outside Nigeria. Where that happens, we rely on the transfer safeguards the NDPA requires.
         </p>
       </section>

@@ -4,7 +4,7 @@
 
 A daily Nigerian utility site: indicative prices across 10 cities, fuel and dollar rates, a slang and relationship decoder, hustle blueprints with real capital
 ranges, GovHowTo guides, exam cut-offs, data-plan comparisons and calculators. Built with Next.js 14 (App Router, TypeScript), Tailwind and shadcn-style
-components. It ships as a fully static site, so it is fast on 2G and 3G and deploys to Cloudflare Pages.
+components. It ships as a fully static site, so it is fast on 2G and 3G. Cloudflare Workers Static Assets serves the export, with a small Worker endpoint for visitor location.
 
 ## Quick start
 
@@ -58,6 +58,8 @@ lib/                     data.ts (pricing maths), articles.ts, seo.ts (metadata 
 scripts/generate-content.ts   Builds every long-form page from /data
 content/generated/       Generated articles.json (committed, so builds never depend on the generator)
 public/                  Static assets, search-index.json, _headers (Cloudflare security headers)
+worker/index.ts          Worker API endpoint for /api/geo
+wrangler.jsonc           Cloudflare Workers Static Assets deployment configuration
 ```
 
 ## Updating data
@@ -70,20 +72,23 @@ Download the JSON, replace the file in `/data`, and commit. The site changes aft
 **Security note:** the admin password check runs in the browser, so it keeps casual visitors out, not determined ones. Put `/admin` behind
 Cloudflare Access before you give anyone real editing rights.
 
-## Deploy to Cloudflare Pages
+## Deploy to Cloudflare Workers
 
-1. Push this repository to GitHub.
-2. In Cloudflare, go to **Workers & Pages → Create → Pages → Connect to Git**, and select the repo.
+This repository is configured as a **Worker with Static Assets**, not as a Cloudflare Pages project. The Workers dashboard deployment must run
+`npx wrangler deploy`; the checked-in `wrangler.jsonc` points the Worker at the exported `out/` directory and routes `/api/*` through `worker/index.ts`.
+
+1. Connect this GitHub repository under **Workers & Pages → Workers Builds** (or use the existing `naijacheck` Worker).
+2. Set the production branch to `main` and the root directory to `/`.
 3. Use these build settings:
-   - **Framework preset:** None (or Next.js (Static HTML Export))
    - **Build command:** `npm run build`
-   - **Build output directory:** `out`
-4. Add an environment variable **`NODE_VERSION`** = `20`.
+   - **Deploy command:** `npx wrangler deploy`
+   - **Node.js version:** `20` (Wrangler is pinned to a Node 20-compatible release).
+4. Cloudflare Workers Builds must provide its normal deployment credentials; do not add API tokens to the repository.
 5. Optional: add **`NEXT_PUBLIC_ADSENSE_CLIENT`** = `ca-pub-XXXXXXXXXXXXXXXX` once your AdSense account is approved. The ad slots switch to Google units
    and the AdSense script loads.
-6. Attach your domain `naijacheck.ng` under **Custom domains**. Set the same value in `config/site.ts` if you change it.
+6. Attach `naijacheck.ng` to the deployed Worker in **Custom domains**. Set the same value in `config/site.ts` if you change it.
 
-`public/_headers` sets the security headers and cache rules. `out/sitemap.xml` and `out/robots.txt` are generated at build time.
+`public/_headers` sets response headers and cache rules for static assets. Next.js generates `out/sitemap.xml` and `out/robots.txt` at build time.
 
 ## Live data
 
@@ -103,22 +108,24 @@ Everything that can be read from a public source is refreshed automatically.
 which the pages already read. `npm run monitor:test` runs the parser tests against captured responses. A source that fails or changes layout keeps its
 last confirmed value and is marked on `/status`. Nothing is guessed.
 
-The workflow `.github/workflows/live-monitor.yml` runs on a 3-hour schedule. It commits changed data, and Cloudflare Pages rebuilds from that commit.
+The workflow `.github/workflows/live-monitor.yml` runs on a 3-hour schedule. It commits changed data, and Cloudflare Workers Builds rebuilds and deploys from that commit.
 Scheduled runs only start from the default branch, so merge to `main` before relying on the schedule.
 
 Still not auto-read: food basket prices by city, state pump prices, telecom bundles, and official fees and cut-offs (the page watch flags changes, but
 a person confirms the figure). `/status` lists these.
 
-**Location:** `functions/api/geo.ts` is a Cloudflare Pages Function that returns the visitor's country, region and timezone from the network edge.
-The homepage uses it to show prices for the visitor's state. Visitors can change their state, and the choice stays on their device.
+**Location:** `worker/index.ts` serves `/api/geo` from the Cloudflare edge and returns the visitor's country, region, city and timezone. The homepage
+uses it to show prices for the visitor's state. Visitors can change their state, and the choice stays on their device. The location response is private
+and not cached.
 
 **Trends:** the trend board reads news and Wikipedia. X and TikTok are not read, because that needs a paid API.
 
-## Cloudflare Pages notes
+## Cloudflare Workers notes
 
-- Set the production branch to `main`.
-- Functions in `functions/` deploy automatically with the static build.
-- `npm run dev` does not run the `/api/geo` function, so the location card falls back to the device timezone in development.
+- `wrangler.jsonc` binds the static export in `out/` as `ASSETS`; `/api/*` requests run through `worker/index.ts`.
+- The Pages-only `functions/` convention is not used by this Worker deployment.
+- `npm run dev` starts the Next.js app, not Wrangler, so the location card falls back to device timezone if `/api/geo` is unavailable during development.
+- To test the deployed asset/Worker combination locally after building, run `npx wrangler dev`.
 
 ## Licence
 

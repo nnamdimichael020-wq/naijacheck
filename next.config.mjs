@@ -5,7 +5,7 @@ const isProductionBuild = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   // Fully static export: the site ships as plain HTML/CSS/JS, which is the fastest option for
-  // 2G/3G networks and deploys straight to Cloudflare Pages from the `out/` folder.
+  // 2G/3G networks and is served by Cloudflare Workers Static Assets from the `out/` folder.
   output: isProductionBuild ? "export" : undefined,
   trailingSlash: false,
   reactStrictMode: true,

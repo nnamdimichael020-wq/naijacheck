@@ -16,7 +16,7 @@ import { Badge } from "@/components/ui/badge";
  * Put /admin behind Cloudflare Access for real protection.
  *
  * Publishing: the site is static. Edits are saved as a draft in this browser. Download the JSON,
- * replace the matching file in /data, commit to GitHub, and Cloudflare Pages rebuilds the site.
+ * replace the matching file in /data, commit to GitHub, and Cloudflare Workers Builds rebuilds the site.
  */
 
 type Cities = { slug: string; name: string }[];
