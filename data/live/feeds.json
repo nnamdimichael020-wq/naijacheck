@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T08:00:42.158Z",
+  "checkedAt": "2026-10-10T08:03:03.822Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -18,16 +18,16 @@
           "published": "2026-10-09T23:57:09.000Z"
         },
         {
-          "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
-          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNXZuQks4c2otRlh3czh4dHpPbmR3NXFKbmpjaExMRnZNR0hMMDd1T0tzZjBvR25wMlRYQm1Ydm5NdVhsQm4wUzJIYjdHNzVmb21Xd2huaWxfai1BaEpHTDdnMTZlZGRlOVpSYlQxaXl6aVhNdzlMcE1NbzVkX09EWmlrMlYtYlFETGtrQ2czY2lRS1R6TjI2ZVRyX05WdDZCX0NSLXNySkpDaFBPel84eWJTSklsUlRyNWY4TG9JYzgwbHVZQzVpVk9ldk10cWNwb3JKbVFCZmxGWkFzTnJrOWJPeG0yckd3YlJR?oc=5",
-          "source": "Premium Times Nigeria",
-          "published": "2026-10-09T04:26:07.000Z"
-        },
-        {
           "title": "FG Announces 30-Day Discount On Petrol Sold By NNPC",
           "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWTQ5NlBjUUR5cEhHLW9Eb2RpdFc0UGRMU28zV193WXBEdEhyZTFwbEoxeUVWUGE4T3J3WnpFTHdqcHZqci1GV3NDVml6NVVRcHExbERwZE11NEZiV2ZpWFNXbGtNdDZuVDRQLVp5czBuSVdQcGdtelpWX2gzZTNhd0NEclJLUzN3UWpCaVM4MFFidHZoVTFfWFVXZUNnUk9F?oc=5",
           "source": "Channels Television",
           "published": "2026-10-08T19:33:04.000Z"
+        },
+        {
+          "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
+          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNXZuQks4c2otRlh3czh4dHpPbmR3NXFKbmpjaExMRnZNR0hMMDd1T0tzZjBvR25wMlRYQm1Ydm5NdVhsQm4wUzJIYjdHNzVmb21Xd2huaWxfai1BaEpHTDdnMTZlZGRlOVpSYlQxaXl6aVhNdzlMcE1NbzVkX09EWmlrMlYtYlFETGtrQ2czY2lRS1R6TjI2ZVRyX05WdDZCX0NSLXNySkpDaFBPel84eWJTSklsUlRyNWY4TG9JYzgwbHVZQzVpVk9ldk10cWNwb3JKbVFCZmxGWkFzTnJrOWJPeG0yckd3YlJR?oc=5",
+          "source": "Premium Times Nigeria",
+          "published": "2026-10-09T04:26:07.000Z"
         },
         {
           "title": "Tinubu Government Announces 30-Day Petrol Discount At NNPC Stations, Prioritises Public Transporters",
@@ -36,16 +36,16 @@
           "published": "2026-10-08T19:11:32.000Z"
         },
         {
-          "title": "NNPC extends N66 petrol discount to October 31, debunks subsidy return",
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd1VKM01rYU9WNEtjb2M5T181UnNOUmVWUW5xY1c4d2QySE5fQVAzMlBlcEVQSDAzVGFqNkZXWGxfUDRaMGVBdDV1MExUcXNXd2ZvSWcwOEhhVHFQRHF6aW0yTy1panJWT0gtRnRTekNxM3N6VHlIUVNuTzVpaGdORDdRTFBBSUszZ3NpSUo4NG5kRWNL?oc=5",
-          "source": "Punch Newspapers",
-          "published": "2026-10-09T11:06:28.000Z"
-        },
-        {
           "title": "Nigeria proposes petrol price cap to curb fuel cost volatility",
           "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOE45NlZtUnFaOXY4Yy1jZi12VTVtYXJzdHIzZUMtYW82N0JIbjhjTW5oWHdtR0lUSXFZaTUtU3doRDRqY0pvb2xiU1VDa3Z5T2Q4OVNpVkxXdnE5cVpuM0J6QzZHX09FNElGTTltdEpwSkpVOTVLTV81b1dKeWxkM0FRN0tIQk40TkYyQ2xDX2RCV0RpenFFc3ZITDczaDNrM25fWVg4aktZOXdLaXhGbA?oc=5",
           "source": "Reuters",
           "published": "2026-10-08T16:43:53.000Z"
+        },
+        {
+          "title": "NNPC extends N66 petrol discount to October 31, debunks subsidy return",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd1VKM01rYU9WNEtjb2M5T181UnNOUmVWUW5xY1c4d2QySE5fQVAzMlBlcEVQSDAzVGFqNkZXWGxfUDRaMGVBdDV1MExUcXNXd2ZvSWcwOEhhVHFQRHF6aW0yTy1panJWT0gtRnRTekNxM3N6VHlIUVNuTzVpaGdORDdRTFBBSUszZ3NpSUo4NG5kRWNL?oc=5",
+          "source": "Punch Newspapers",
+          "published": "2026-10-09T11:06:28.000Z"
         },
         {
           "title": "Food Prices Expected To Drop In Nigeria With Government's New Petrol Price Policy- PETROAN",

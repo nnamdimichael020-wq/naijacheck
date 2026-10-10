@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-10T08:03:03.822Z",
+  "note": "Sanitized parser/fetch diagnostics only; full response bodies are never retained.",
+  "sources": {
+    "cbn": {
+      "source": "cbn",
+      "checkedAt": "2026-10-10T08:03:03.822Z",
+      "reason": "NFEM table/header/newest row not recognised",
+      "requestedUrl": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
+      "finalUrl": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "responseBytes": 14582,
+      "title": "Exchange Rates | Central Bank of Nigeria",
+      "excerpt": "Exchange Rates | Central Bank of Nigeria Exchange Rates ......providing empirical data for sound policy formulation Home Data & Statistics Exchange Rates --> Exchange Rates NIGERIAN FOREIGN EXCHANGE MARKET (NFEM) RATES (₦/US$) | Date | NFEM Rate (₦/US$) | Highest Rate (₦/US$) | Lowest Rate (₦/US$) | Closing Rate (₦/US$) | Simple Aver. Rate (Mean) (₦/US$) | NFEM Interbank Turnover (US$) | No. of Deals at Interbank | NFEM Total Turnover (US$) | No. of Deals at NFEM | *NFEM rate is derived at Volume Weighted Average and stands as the official exchange rate for the day. Export to Excel"
+    }
+  }
+}
