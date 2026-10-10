@@ -97,7 +97,8 @@ export function parseCbnNfem(html: string): { date: string; rate: number } | nul
     for (let i = 0; i < rows.length; i++) {
       const normalized = rows[i].map((cell) => cell.replace(/[\s:*]+/g, " ").trim().toLowerCase());
       const d = normalized.findIndex((cell) => cell === "date");
-      const r = normalized.findIndex((cell) => cell === "nfem rate");
+      // The official header currently appends its unit; do not accept broader "official"/"exchange" columns.
+      const r = normalized.findIndex((cell) => /^nfem rate(?:\s*\(₦\/us\$\))?$/.test(cell));
       if (d >= 0 && r >= 0) {
         dateColumn = d;
         rateColumn = r;

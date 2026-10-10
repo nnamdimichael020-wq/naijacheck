@@ -23,7 +23,7 @@ const test = (name: string, fn: () => void) => {
 };
 
 test("CBN uses the exact NFEM Rate column and newest dated row", () => {
-  const html = `<table><tr><th>Date</th><th>Opening Rate</th><th>NFEM Rate</th><th>Closing Rate</th></tr>
+  const html = `<table><tr><th>Date</th><th>Opening Rate</th><th>NFEM Rate (₦/US$)</th><th>Closing Rate</th></tr>
     <tr><td>October-08-2026</td><td>1,100.00</td><td>1,332.1021</td><td>1,999.00</td></tr>
     <tr><td>October-09-2026</td><td>1,200.00</td><td>1,331.1860</td><td>1,888.00</td></tr></table>`;
   assert.deepEqual(parseCbnNfem(html), { date: "2026-10-09", rate: 1331.186 });

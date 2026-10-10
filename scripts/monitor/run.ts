@@ -111,6 +111,15 @@ function safeExcerpt(html: string): string {
 function writeDiagnostic(key: string, response: FetchResult, reason: string) {
   fs.mkdirSync(DIAGNOSTICS, { recursive: true });
   const title = response.text.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() ?? null;
+  const tableShapes = [...response.text.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)].slice(0, 10).map((match) => ({
+    rows: [...match[1].matchAll(/<tr\b/gi)].length,
+    headers: [...match[1].matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map((cell) => safeExcerpt(cell[1])).slice(0, 15),
+  }));
+  const resourceHints = [...new Set(
+    [...response.text.matchAll(/["']([^"']*(?:rate|exchange)[^"']*)["']/gi)]
+      .map((match) => match[1].trim())
+      .filter((value) => value.length > 1 && value.length < 300),
+  )].slice(0, 20);
   const record = {
     source: key,
     checkedAt: NOW_ISO,
@@ -121,6 +130,8 @@ function writeDiagnostic(key: string, response: FetchResult, reason: string) {
     contentType: response.contentType,
     responseBytes: response.size,
     title,
+    tableShapes,
+    resourceHints,
     excerpt: safeExcerpt(response.text),
   };
   diagnostics[key] = record;
