@@ -28,7 +28,8 @@ Evidence: `docs/evidence/local-static-crawl-2026-10-10.json` and `docs/evidence/
 - Only duplicate title/description pair is the expected directly addressable `/404` and `/_not-found` export.
 - Actual Wrangler HTTP crawl requested **171 generated HTML routes plus required non-HTML routes**: all expected routes returned 200; an unknown route returned 404.
 - Worker smoke: `/api/geo` 200 with `Cache-Control: private, no-store`; `POST /api/geo` 405; unknown API/page 404. Static security headers include `nosniff`, `SAMEORIGIN`, restrictive permissions policy, and strict-origin referrer policy.
-- `npx wrangler deploy --dry-run` on Wrangler 4.149.0 read 1,524 assets and completed without changing production.
+- Final release-compatible `npx wrangler deploy --dry-run` completed on Wrangler 4.85.0 without changing production.
+- Cloudflare branch-preview build `27bd5fd4-3b68-42b7-9dd3-7231ffc27d13` passed at 08:38 UTC. Its URL is under `production/previews/arena-c6158e8e-naijacheck`; production routing was not changed.
 
 ## Monitoring and provenance completed
 
