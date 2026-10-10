@@ -3,7 +3,8 @@ import { SITE_CONFIG } from "@/config/site";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Freshness } from "@/components/live/freshness";
-import { LIVE_WATCH, sourceHealth } from "@/lib/live";
+import { LIVE_FX, LIVE_FUEL, LIVE_WATCH, sourceHealth } from "@/lib/live";
+import { LocalWatchlist, type WatchReading } from "@/components/live/local-watchlist";
 import { DATASET_REGISTRY, stateLabel } from "@/lib/source-registry";
 import { pageMetadata } from "@/lib/seo";
 import { HistoryChart } from "@/components/live/history-chart";
@@ -27,6 +28,12 @@ const NOT_AUTO = [
 export default function StatusPage() {
   const health = sourceHealth();
   const watch = Object.entries(LIVE_WATCH.pages ?? {});
+  const localReadings: WatchReading[] = [
+    LIVE_FX.official.USD ? { id: "cbn-usd", label: "CBN NFEM USD/NGN", value: LIVE_FX.official.USD, unit: "₦/US$", sourceTime: LIVE_FX.officialAsOf } : null,
+    LIVE_FX.blackMarket?.USD.buy ? { id: "parallel-usd-buy", label: "Parallel USD buy", value: LIVE_FX.blackMarket.USD.buy, unit: "₦/US$", sourceTime: LIVE_FX.blackMarketAsOf } : null,
+    LIVE_FUEL.medians.petrol ? { id: "depot-petrol", label: "Wholesale petrol depot median", value: LIVE_FUEL.medians.petrol, unit: "₦/L", sourceTime: LIVE_FUEL.asOf } : null,
+    LIVE_FUEL.medians.diesel ? { id: "depot-diesel", label: "Wholesale diesel depot median", value: LIVE_FUEL.medians.diesel, unit: "₦/L", sourceTime: LIVE_FUEL.asOf } : null,
+  ].filter((value): value is WatchReading => value !== null);
   return (
     <div className="mx-auto max-w-4xl space-y-8">
       <header className="space-y-3">
@@ -63,6 +70,11 @@ export default function StatusPage() {
       <section aria-labelledby="history" className="space-y-3">
         <h2 id="history" className="text-xl font-bold">Price history</h2>
         <HistoryChart />
+      </section>
+
+      <section aria-labelledby="local-watch" className="space-y-3">
+        <h2 id="local-watch" className="text-xl font-bold">Local watch rules</h2>
+        <LocalWatchlist readings={localReadings} />
       </section>
 
       <section aria-labelledby="src" className="space-y-3">

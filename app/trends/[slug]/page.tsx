@@ -10,14 +10,16 @@ export function generateStaticParams() {
   return staticSlugs("/trends");
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  return articleMetadata(getArticle(`/trends/${params.slug}`));
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  return articleMetadata(getArticle(`/trends/${resolved.slug}`));
 }
 
-export default function TrendPage({ params }: { params: { slug: string } }) {
-  const path = `/trends/${params.slug}`;
-  if (!staticSlugs("/trends").some((s) => s.slug === params.slug)) notFound();
-  const term = SLANG_BY_SLUG[params.slug];
+export default async function TrendPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  const path = `/trends/${resolved.slug}`;
+  if (!staticSlugs("/trends").some((s) => s.slug === resolved.slug)) notFound();
+  const term = SLANG_BY_SLUG[resolved.slug];
   return (
     <ArticleView article={getArticle(path)}>
       {term ? (

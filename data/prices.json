@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-10-09",
-  "status": "indicative",
-  "sourceNote": "Rice bag anchor: Lagos MAFA/Lagos.Cool tracker, mid-2026 (about ₦60,000 for 50kg long grain). Other figures are INDICATIVE editor estimates for October 2026. Replace from your own market check before publishing. Update this file daily.",
+  "status": "unverified-dated-estimate",
+  "sourceNote": "Legacy editor planning estimates dated 9 October 2026. They are not live quotes, receipts, NBS survey values, or independently verified city observations. Confirm locally before use; update only through the documented manual/NBS import process.",
   "items": [
     { "slug": "rice", "name": "Rice (local/foreign, 1kg)", "unit": "per 1kg", "category": "grains", "prices": { "lagos": [1450, 1750], "onitsha": [1400, 1700], "kano": [1350, 1650], "aba": [1380, 1680] }, "bag50kg": { "lagos": 60000, "onitsha": 58000, "kano": 56000, "aba": 57500 }, "note": "50kg bag long grain was about ₦60,000 in Lagos in mid-2026 per the state tracker." },
     { "slug": "garri", "name": "Garri (white, 1kg)", "unit": "per 1kg", "category": "grains", "prices": { "lagos": [850, 1100], "onitsha": [700, 950], "kano": [800, 1000], "aba": [750, 950] }, "note": "Garri is usually cheapest in the South-East, where it is processed." },
@@ -21,7 +21,7 @@
     { "slug": "okra", "name": "Okra (1kg)", "unit": "per 1kg", "category": "vegetables", "prices": { "lagos": [1200, 1900], "onitsha": [1000, 1700], "kano": [900, 1500], "aba": [1000, 1700] }, "note": "Okra is seasonal in some states." },
     { "slug": "ugu", "name": "Ugu (fluted pumpkin leaves, per bunch)", "unit": "per bunch", "category": "vegetables", "prices": { "lagos": [500, 900], "onitsha": [400, 800], "kano": [300, 600], "aba": [400, 800] }, "note": "Price is per bunch. Bunches vary in size, so weigh if you can." }
   ],
-  "cityIndexNote": "Cities without explicit prices use the Lagos range scaled by the costIndex in cities.json.",
+  "cityIndexNote": "No city scaling is permitted. Cities without explicit observations stay unavailable.",
   "basket": [
     { "item": "rice", "qty": 5, "unit": "kg" },
     { "item": "beans", "qty": 3, "unit": "kg" },

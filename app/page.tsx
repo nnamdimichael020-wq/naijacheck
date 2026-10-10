@@ -51,7 +51,7 @@ const TOOL_LINKS = [
   { href: "/tools/solar", label: "Solar payback calculator", icon: Sparkles, blurb: "How many years to pay off the inverter." },
 ];
 
-const RICE_CITIES = ["lagos", "onitsha", "kano", "aba", "abuja"];
+const RICE_CITIES = ["lagos", "onitsha", "kano", "aba"];
 
 export default function HomePage() {
   const trending = TRENDING_SLUGS.map((s) => SLANG_BY_SLUG[s]).filter(Boolean).sort((a, b) => b.trendScore - a.trendScore);

@@ -13,14 +13,16 @@ export function generateStaticParams() {
   return staticSlugs("/hustle");
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  return articleMetadata(getArticle(`/hustle/${params.slug}`));
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  return articleMetadata(getArticle(`/hustle/${resolved.slug}`));
 }
 
-export default function HustleArticlePage({ params }: { params: { slug: string } }) {
-  if (!staticSlugs("/hustle").some((s) => s.slug === params.slug)) notFound();
-  const article = getArticle(`/hustle/${params.slug}`);
-  const blueprint = BLUEPRINT_BY_SLUG[params.slug];
+export default async function HustleArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  if (!staticSlugs("/hustle").some((s) => s.slug === resolved.slug)) notFound();
+  const article = getArticle(`/hustle/${resolved.slug}`);
+  const blueprint = BLUEPRINT_BY_SLUG[resolved.slug];
   return (
     <ArticleView article={article}>
       <Card className="border-accent/50">

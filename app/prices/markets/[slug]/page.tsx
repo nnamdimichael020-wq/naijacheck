@@ -10,11 +10,13 @@ export function generateStaticParams() {
   return staticSlugs("/prices/markets");
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  return articleMetadata(getArticle(`/prices/markets/${params.slug}`));
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  return articleMetadata(getArticle(`/prices/markets/${resolved.slug}`));
 }
 
-export default function MarketPage({ params }: { params: { slug: string } }) {
-  if (!MARKET_BY_SLUG[params.slug] || !MARKETS.some((m) => m.slug === params.slug)) notFound();
-  return <ArticleView article={getArticle(`/prices/markets/${params.slug}`)} />;
+export default async function MarketPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  if (!MARKET_BY_SLUG[resolved.slug] || !MARKETS.some((m) => m.slug === resolved.slug)) notFound();
+  return <ArticleView article={getArticle(`/prices/markets/${resolved.slug}`)} />;
 }

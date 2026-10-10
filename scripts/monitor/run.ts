@@ -357,7 +357,6 @@ async function main() {
   /* ---------- Trend signals ---------- */
   const slang = readJson<Record<string, any>>(path.join(DATA, "slang.json"), {});
   const terms: { slug: string; term: string; mentions7d: number }[] = [];
-  const news = Object.values(allItems).flat();
   // One query per term, same source as feeds. Counts only items the RSS returned, so this is a floor.
   for (const t of (slang.terms ?? []) as { slug: string; term: string }[]) {
     try {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  CITIES,
+  DIRECT_PRICE_CITIES,
   CITY_BY_SLUG,
   DATA_DATE,
   FUEL,
@@ -36,7 +36,7 @@ function Wrap({ caption, children }: { caption: string; children: React.ReactNod
 export function CityPriceTable() {
   const cols = ["rice", "beans", "garri", "egg"] as const;
   return (
-    <Wrap caption={`Indicative prices, ${DATA_DATE}. Ranges, not receipts.`}>
+    <Wrap caption={`Dated, unverified planning estimates for cities with explicit rows only (${DATA_DATE}); not live quotes.`}>
       <thead>
         <tr>
           <th scope="col" className={HEAD}>
@@ -53,7 +53,7 @@ export function CityPriceTable() {
         </tr>
       </thead>
       <tbody>
-        {CITIES.map((c) => (
+        {DIRECT_PRICE_CITIES.map((c) => (
           <tr key={c.slug} className="border-t">
             <th scope="row" className={`${CELL} font-semibold`}>
               <Link href={`/prices/${c.slug}`} className="hover:text-primary hover:underline">
@@ -109,7 +109,7 @@ export function CityItemsTable({ citySlug }: { citySlug: string }) {
             <td className={CELL}>{i.unit}</td>
             <td className={CELL}>{nairaRange(priceBand(i.slug, citySlug))}</td>
             <td className={CELL}>
-              {cityRank(i.slug, citySlug)} of {CITIES.length}
+              {cityRank(i.slug, citySlug)} of {DIRECT_PRICE_CITIES.length}
             </td>
           </tr>
         ))}
@@ -121,7 +121,7 @@ export function CityItemsTable({ citySlug }: { citySlug: string }) {
 /** One item across all cities, sorted cheapest first. Used on /prices/[city]/[item]. */
 export function ItemCitiesTable({ itemSlug }: { itemSlug: string }) {
   const item = ITEM_BY_SLUG[itemSlug];
-  const rows = [...CITIES]
+  const rows = [...DIRECT_PRICE_CITIES]
     .map((c) => ({ c, band: priceBand(itemSlug, c.slug) }))
     .sort((a, b) => bandMid(a.band) - bandMid(b.band));
   return (
@@ -212,4 +212,4 @@ export function FuelTables() {
 }
 
 /** Mean rank helper used by the city hub copy. */
-export const cityCount = CITIES.length;
+export const cityCount = DIRECT_PRICE_CITIES.length;

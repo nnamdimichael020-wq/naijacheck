@@ -27,6 +27,8 @@ export type LiveFx = {
   official: { USD: number | null; GBP: number | null; EUR: number | null };
   officialAsOf: string | null;
   officialSource: SourceRef;
+  crossRateAsOf?: string | null;
+  crossRateSource?: SourceRef;
   blackMarket: { USD: { buy: number; sell: number }; GBP: { buy: number; sell: number } | null; EUR: { buy: number; sell: number } | null } | null;
   blackMarketAsOf: string | null;
   blackMarketSource: SourceRef;

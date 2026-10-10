@@ -37,6 +37,9 @@ for (const [route, file] of routes) {
   const h1 = text(html, /<h1[^>]*>([\s\S]*?)<\/h1>/i);
   const noindex = /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html) || /<meta[^>]+content=["'][^"']*noindex[^"']*["'][^>]+name=["']robots["']/i.test(html);
   const hrefs = [...html.matchAll(/<a\b[^>]*\bhref=["']([^"'#]+)(?:#[^"']*)?["']/gi)].map((m) => m[1]);
+  const visible = text(html, /<body[^>]*>([\s\S]*?)<\/body>/i);
+  const externalSourceLinks = hrefs.filter((href) => /^https?:\/\//i.test(href) && !href.startsWith(expectedOrigin));
+  const freshnessMarkers = [...visible.matchAll(/.{0,55}(?:source as of|checked:|updated|dated|unverified|stale|seeded|unavailable).{0,90}/gi)].map((match) => match[0].trim()).slice(0, 8);
   for (const href of hrefs) {
     const p = normalPath(href);
     if (p === null || p.startsWith("/api/")) continue;
@@ -45,7 +48,21 @@ for (const [route, file] of routes) {
   }
   const ldScripts = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
   for (const [, raw] of ldScripts) try { JSON.parse(raw); } catch (e) { badJsonLd.push({ route, error: e.message }); }
-  rows.push({ route, title, description, canonical, h1, noindex, jsonLdBlocks: ldScripts.length, internalLinks: hrefs.filter((h) => normalPath(h) !== null).length });
+  rows.push({
+    environment: "local-static-export",
+    route,
+    httpStatus: 200,
+    canonicalHost: canonical ? new URL(canonical, expectedOrigin).host : null,
+    title,
+    description,
+    canonical,
+    h1,
+    noindex,
+    jsonLdBlocks: ldScripts.length,
+    internalLinks: hrefs.filter((h) => normalPath(h) !== null).length,
+    externalSourceLinks: [...new Set(externalSourceLinks)],
+    freshnessMarkers,
+  });
 }
 const sitemapXml = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
 const sitemap = [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);

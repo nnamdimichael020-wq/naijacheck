@@ -10,14 +10,16 @@ export function generateStaticParams() {
   return staticSlugs("/exam");
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  return articleMetadata(getArticle(`/exam/${params.slug}`));
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  return articleMetadata(getArticle(`/exam/${resolved.slug}`));
 }
 
-export default function ExamPage({ params }: { params: { slug: string } }) {
-  if (!staticSlugs("/exam").some((s) => s.slug === params.slug)) notFound();
-  const path = `/exam/${params.slug}`;
-  const isNational = params.slug === "jamb-cutoff-2026";
+export default async function ExamPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  if (!staticSlugs("/exam").some((s) => s.slug === resolved.slug)) notFound();
+  const path = `/exam/${resolved.slug}`;
+  const isNational = resolved.slug === "jamb-cutoff-2026";
   return (
     <ArticleView article={getArticle(path)}>
       {isNational ? (
