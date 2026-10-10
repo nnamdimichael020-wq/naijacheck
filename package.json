@@ -4,7 +4,7 @@
   "private": true,
   "description": "NaijaCheck.ng - Real Prices. Real Slang. Real Hustle.",
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=22.0.0"
   },
   "scripts": {
     "generate": "tsx scripts/generate-content.ts",

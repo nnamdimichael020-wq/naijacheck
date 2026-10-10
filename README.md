@@ -78,7 +78,7 @@ This repository is configured as a **Worker with Static Assets**, not as a Cloud
 3. Use these build settings:
    - **Build command:** `npm run build`
    - **Deploy command:** `npx wrangler deploy`
-   - **Node.js version:** `20` (Wrangler is pinned to a Node 20-compatible release).
+   - **Node.js version:** `22` (required by the pinned Wrangler release).
 4. Cloudflare Workers Builds must provide its normal deployment credentials; do not add API tokens to the repository.
 5. Optional: add **`NEXT_PUBLIC_ADSENSE_CLIENT`** = `ca-pub-XXXXXXXXXXXXXXXX` once your AdSense account is approved. The ad slots switch to Google units
    and the AdSense script loads.
