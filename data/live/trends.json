@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T08:03:03.822Z",
+  "checkedAt": "2026-10-10T08:04:39.853Z",
   "seeded": false,
   "method": "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
   "limitation": "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
