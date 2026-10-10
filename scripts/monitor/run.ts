@@ -52,12 +52,13 @@ const WIKI_ARTICLES = ["Nigeria", "Nigerian_naira", "Dangote_Refinery", "Lagos",
 const WATCH = [
   { id: "jamb", label: "JAMB", url: "https://www.jamb.gov.ng/" },
   { id: "nimc", label: "NIMC (NIN)", url: "https://nimc.gov.ng/" },
-  { id: "immigration", label: "Nigeria Immigration Service", url: "https://portal.immigration.gov.ng/" },
+  { id: "immigration", label: "Nigeria Immigration Service passport information", url: "https://immigration.gov.ng/passports/" },
   { id: "cbn", label: "Central Bank of Nigeria", url: "https://www.cbn.gov.ng/" },
 ];
 
 type Health = Record<string, { ok: boolean; checkedAt: string; asOf?: string | null; error?: string; lastSuccessfulAt?: string | null }>;
 const health: Health = readJson(path.join(LIVE, "health.json"), {});
+const diagnostics: Record<string, unknown> = {};
 let successfulSources = 0;
 
 function readJson<T>(file: string, fallback: T): T {
@@ -110,7 +111,7 @@ function safeExcerpt(html: string): string {
 function writeDiagnostic(key: string, response: FetchResult, reason: string) {
   fs.mkdirSync(DIAGNOSTICS, { recursive: true });
   const title = response.text.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() ?? null;
-  writeJson(path.join(DIAGNOSTICS, `${key}.json`), {
+  const record = {
     source: key,
     checkedAt: NOW_ISO,
     reason,
@@ -121,7 +122,9 @@ function writeDiagnostic(key: string, response: FetchResult, reason: string) {
     responseBytes: response.size,
     title,
     excerpt: safeExcerpt(response.text),
-  });
+  };
+  diagnostics[key] = record;
+  writeJson(path.join(DIAGNOSTICS, `${key}.json`), record);
 }
 
 async function get(url: string, as: "text" | "json" = "text"): Promise<string | unknown> {
@@ -403,6 +406,10 @@ async function main() {
         lastChecked: NOW_ISO,
         changedAt: changed ? NOW_ISO : prev?.changedAt ?? null,
         changedSincePrevious: changed,
+        reviewRequired: changed || prev?.reviewRequired === true,
+        reviewReason: changed
+          ? "Official public page fingerprint changed; inspect manually. Do not auto-update fees or rules."
+          : prev?.reviewReason ?? null,
       };
     } catch (e) {
       pages[w.id] = { ...prevWatch.pages[w.id], label: w.label, url: w.url, error: (e as Error).message };
@@ -412,8 +419,13 @@ async function main() {
   writeJson(watchPath, { checkedAt: watchSuccesses ? NOW_ISO : (prevWatch as { checkedAt?: string | null }).checkedAt ?? null, seeded: watchSuccesses ? false : (prevWatch as { seeded?: boolean }).seeded ?? true, note: "A changed fingerprint means the official page wording changed. A person should read it before any fee or rule is updated.", pages });
 
   writeJson(path.join(LIVE, "health.json"), health);
+  writeJson(path.join(LIVE, "diagnostics.json"), {
+    checkedAt: NOW_ISO,
+    note: "Sanitized parser/fetch diagnostics only; full response bodies are never retained.",
+    sources: diagnostics,
+  });
   writeActionSummary();
-  const critical = ["cbn", "aboki", "erapi", "awajis"];
+  const critical = ["cbn", "aboki", "openEr", "awajis"];
   if (critical.every((key) => !health[key]?.ok)) {
     throw new Error("All critical FX and fuel sources failed; last-good snapshots were preserved");
   }
