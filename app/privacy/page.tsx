@@ -8,7 +8,7 @@ export const metadata: Metadata = pageMetadata({
   description: "How NaijaCheck handles personal data under the Nigeria Data Protection Act 2023: what we collect, why, your rights and how to complain.",
 });
 
-const LAST_UPDATED = "9 October 2026";
+const LAST_UPDATED = "10 October 2026";
 
 export default function PrivacyPage() {
   return (
@@ -40,9 +40,16 @@ export default function PrivacyPage() {
             request time to deliver the site and protect it from abuse. This is needed to run the service.
           </li>
           <li>
-            <strong>Browser storage on your device.</strong> We store your theme choice, your chosen state, a flag that unlocks the mock premium demo on this
-            device, and any admin draft (editors only). A service worker may cache public pages and static files for offline use. This stays in your browser and
-            can be removed by clearing site data or uninstalling the app.
+            <strong>Browser storage on your device.</strong> We store your theme choice, your chosen state, local page-open watch rules, a seven-day
+            “Not now” time for the alert invitation, a visit count, a flag that unlocks the mock premium demo on this device, and any admin draft (editors only).
+            A service worker may cache public pages and static files for offline use. This stays in your browser and can be removed by clearing site data or
+            uninstalling the app.
+          </li>
+          <li>
+            <strong>Optional Web Push.</strong> If you explicitly select “Enable alerts”, Cloudflare KV stores exactly the browser-provided push endpoint and
+            the required <code>p256dh</code> public encryption key and <code>auth</code> secret. We attach no name, phone number, precise location, watch rule or
+            advertising identifier. The endpoint is used only for a verified parallel-dollar movement of at least ₦5, a changed depot petrol median, or an
+            owner-authorised setup test. A global six-hour cooldown prevents more than one real change alert per subscriber in that period.
           </li>
           <li>
             <strong>Calculator and hustle inputs.</strong> Figures you type into calculators, the hustle matcher and the cookbook are processed in your browser.
@@ -78,17 +85,19 @@ export default function PrivacyPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold">5. Who we share data with</h2>
         <p>
-          Cloudflare provides hosting, content delivery and abuse protection and therefore processes request data. No site analytics, newsletter, user-submission
-          service, push-notification provider or advertising network is enabled in the current build. The site does not request browser geolocation; the optional
-          area card uses coarse country/region metadata Cloudflare already attaches to a request and stores only a state choice on the device.
+          Cloudflare provides hosting, content delivery, abuse protection and—only after the owner completes setup—KV storage for push subscriptions. The
+          browser vendor&apos;s push service (for example Apple, Google or Mozilla) receives the encrypted Web Push request and necessarily processes the endpoint
+          and delivery request. No site analytics, newsletter, user-submission service or advertising network is enabled. The site does not request browser
+          geolocation; the optional area card uses coarse country/region metadata Cloudflare already attaches to a request and stores only a state choice on the device.
         </p>
       </section>
 
       <section className="space-y-3">
         <h2 className="text-xl font-bold">6. How long we keep data</h2>
         <p>
-          Hosting request logs are kept only as long as our provider&apos;s policy allows. Browser storage stays on your device until you clear it. We do not
-          keep user accounts.
+          Hosting request logs are kept only as long as our provider&apos;s policy allows. Browser storage stays on your device until you clear it. A push
+          subscription remains until you use “Unsubscribe and clear”; the Worker also deletes it when its push service reports that it has expired (HTTP 404 or
+          410). Browser vendors may rotate or expire subscriptions independently. We do not keep user accounts.
         </p>
       </section>
 

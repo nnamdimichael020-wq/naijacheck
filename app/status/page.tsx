@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Freshness } from "@/components/live/freshness";
 import { LIVE_FX, LIVE_FUEL, LIVE_WATCH, sourceHealth } from "@/lib/live";
 import { LocalWatchlist, type WatchReading } from "@/components/live/local-watchlist";
+import { PushSettings } from "@/components/push-notifications";
 import { DATASET_REGISTRY, stateLabel } from "@/lib/source-registry";
 import { pageMetadata } from "@/lib/seo";
 import { HistoryChart } from "@/components/live/history-chart";
@@ -71,6 +72,8 @@ export default function StatusPage() {
         <h2 id="history" className="text-xl font-bold">Price history</h2>
         <HistoryChart />
       </section>
+
+      <PushSettings />
 
       <section aria-labelledby="local-watch" className="space-y-3">
         <h2 id="local-watch" className="text-xl font-bold">Local watch rules</h2>

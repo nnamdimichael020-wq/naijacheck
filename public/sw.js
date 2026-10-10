@@ -12,6 +12,40 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
+self.addEventListener("push", (event) => {
+  let data = {};
+  try { data = event.data ? event.data.json() : {}; } catch { data = {}; }
+  const target = (() => {
+    try {
+      const url = new URL(typeof data.url === "string" ? data.url : "/status", self.location.origin);
+      return url.origin === self.location.origin ? `${url.pathname}${url.search}${url.hash}` : "/status";
+    } catch { return "/status"; }
+  })();
+  const title = typeof data.title === "string" ? data.title.slice(0, 120) : "NaijaCheck update";
+  const body = typeof data.body === "string" ? data.body.slice(0, 500) : "A monitored dollar or petrol reading changed.";
+  event.waitUntil(self.registration.showNotification(title, {
+    body,
+    icon: "/icon-192.png",
+    badge: "/icon-192.png",
+    tag: "naijacheck-critical-rates",
+    renotify: true,
+    data: { url: target },
+  }));
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  const target = new URL(event.notification.data?.url || "/status", self.location.origin).href;
+  event.waitUntil(self.clients.matchAll({ type: "window", includeUncontrolled: true }).then(async (clients) => {
+    const existing = clients.find((client) => new URL(client.url).origin === self.location.origin);
+    if (existing) {
+      await existing.navigate(target);
+      return existing.focus();
+    }
+    return self.clients.openWindow(target);
+  }));
+});
+
 self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = new URL(request.url);
