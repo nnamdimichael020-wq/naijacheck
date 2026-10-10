@@ -8,7 +8,7 @@ export const metadata: Metadata = pageMetadata({
   description: "How NaijaCheck handles personal data under the Nigeria Data Protection Act 2023: what we collect, why, your rights and how to complain.",
 });
 
-const LAST_UPDATED = "9 October 2026";
+const LAST_UPDATED = "10 October 2026";
 
 export default function PrivacyPage() {
   return (
@@ -40,8 +40,16 @@ export default function PrivacyPage() {
             request time to deliver the site and protect it from abuse. This is needed to run the service.
           </li>
           <li>
-            <strong>Browser storage on your device.</strong> We store your theme choice, a flag that unlocks premium on this device, and any admin draft
-            (editors only). This stays in your browser. You can clear it at any time.
+            <strong>Browser storage on your device.</strong> We store your theme choice, your chosen state, local page-open watch rules, a seven-day
+            “Not now” time for the alert invitation, a visit count, a flag that unlocks the mock premium demo on this device, and any admin draft (editors only).
+            A service worker may cache public pages and static files for offline use. This stays in your browser and can be removed by clearing site data or
+            uninstalling the app.
+          </li>
+          <li>
+            <strong>Optional Web Push.</strong> If you explicitly select “Enable alerts”, Cloudflare KV stores exactly the browser-provided push endpoint and
+            the required <code>p256dh</code> public encryption key and <code>auth</code> secret. We attach no name, phone number, precise location, watch rule or
+            advertising identifier. The endpoint is used only for a verified parallel-dollar movement of at least ₦5, a changed depot petrol median, or an
+            owner-authorised setup test. A global six-hour cooldown prevents more than one real change alert per subscriber in that period.
           </li>
           <li>
             <strong>Calculator and hustle inputs.</strong> Figures you type into calculators, the hustle matcher and the cookbook are processed in your browser.
@@ -60,9 +68,9 @@ export default function PrivacyPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold">3. Advertising</h2>
         <p>
-          The site shows clearly labelled sponsored and advertising placements. When we switch on Google AdSense, Google and its partners may use cookies to show
-          ads, including personalised ads. Before we enable personalised advertising, we will add a consent mechanism that meets NDPA requirements and Google&apos;s
-          policies. We do not use ads that open pop-ups, interstitials or autoplay sound.
+          Advertising is currently disabled because no approved AdSense publisher configuration is present. The cards in ad positions are internal related-guide
+          links, not paid partnerships. If advertising is enabled later, this notice and the consent controls must be updated before non-essential advertising
+          storage is used. We do not use pop-ups, interstitials or autoplay sound.
         </p>
       </section>
 
@@ -77,16 +85,19 @@ export default function PrivacyPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold">5. Who we share data with</h2>
         <p>
-          We use service providers: hosting and content delivery (Cloudflare Workers), and, once enabled, advertising (Google AdSense). They process data on our
-          instructions. Some providers may process data outside Nigeria. Where that happens, we rely on the transfer safeguards the NDPA requires.
+          Cloudflare provides hosting, content delivery, abuse protection and—only after the owner completes setup—KV storage for push subscriptions. The
+          browser vendor&apos;s push service (for example Apple, Google or Mozilla) receives the encrypted Web Push request and necessarily processes the endpoint
+          and delivery request. No site analytics, newsletter, user-submission service or advertising network is enabled. The site does not request browser
+          geolocation; the optional area card uses coarse country/region metadata Cloudflare already attaches to a request and stores only a state choice on the device.
         </p>
       </section>
 
       <section className="space-y-3">
         <h2 className="text-xl font-bold">6. How long we keep data</h2>
         <p>
-          Hosting request logs are kept only as long as our provider&apos;s policy allows. Browser storage stays on your device until you clear it. We do not
-          keep user accounts.
+          Hosting request logs are kept only as long as our provider&apos;s policy allows. Browser storage stays on your device until you clear it. A push
+          subscription remains until you use “Unsubscribe and clear”; the Worker also deletes it when its push service reports that it has expired (HTTP 404 or
+          410). Browser vendors may rotate or expire subscriptions independently. We do not keep user accounts.
         </p>
       </section>
 

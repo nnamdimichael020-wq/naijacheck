@@ -3,6 +3,7 @@
 import * as React from "react";
 import { RefreshCw } from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { VerificationState } from "@/lib/source-registry";
 
 const WAT = new Intl.DateTimeFormat("en-NG", {
   timeZone: "Africa/Lagos",
@@ -30,13 +31,15 @@ export function relativeAge(ms: number): string {
  */
 export function Freshness({
   asOf,
-  label = "Live",
+  label = "Source as of",
   source,
+  state,
   className,
 }: {
   asOf?: string | null;
   label?: string;
   source?: string;
+  state?: VerificationState;
   className?: string;
 }) {
   const [now, setNow] = React.useState<number | null>(null);
@@ -49,21 +52,31 @@ export function Freshness({
   if (!asOf) {
     return (
       <span className={cn("inline-flex items-center gap-1.5 text-xs text-muted-foreground", className)}>
-        <RefreshCw className="size-3" aria-hidden="true" /> Waiting for first live reading
+        <RefreshCw className="size-3" aria-hidden="true" /> No source reading available
       </span>
     );
   }
   const ms = Date.parse(asOf);
   const age = now === null ? null : now - ms;
-  const stale = age !== null && age > 9 * 3600_000; // more than three missed 3-hourly runs
+  const staleByAge = age !== null && age > 9 * 3600_000; // more than three missed 3-hourly runs
+  const effectiveState: VerificationState = state ?? (staleByAge ? "stale" : "recent");
+  const stateText = effectiveState === "seeded"
+    ? "Seeded — not monitor-verified"
+    : effectiveState === "stale"
+      ? "Stale last reading"
+      : effectiveState === "unavailable"
+        ? "Unavailable"
+        : effectiveState === "manual"
+          ? "Manual reading"
+          : label;
   return (
     <span className={cn("inline-flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground", className)}>
       <span
         aria-hidden="true"
-        className={cn("size-1.5 rounded-full", stale ? "bg-amber-500" : "animate-pulse bg-emerald-500")}
+        className={cn("size-1.5 rounded-full", effectiveState === "seeded" || effectiveState === "stale" ? "bg-amber-500" : effectiveState === "unavailable" ? "bg-slate-400" : "bg-emerald-500")}
       />
       <span className="font-medium text-foreground/80">
-        {stale ? "Last reading" : label}
+        {stateText}
       </span>
       <span>
         {WAT.format(new Date(ms))} WAT{age !== null ? ` · ${relativeAge(age)}` : ""}

@@ -1,4 +1,4 @@
-import { CITIES, ITEM_BY_SLUG, RECIPES, recipeCostPerPerson } from "@/lib/data";
+import { DIRECT_PRICE_CITIES, ITEM_BY_SLUG, RECIPES, recipeCostPerPerson } from "@/lib/data";
 import type { CookRecipe } from "@/components/calc/cookbook-calc";
 
 /**
@@ -10,7 +10,7 @@ export function cookRecipes(only?: string): CookRecipe[] {
     slug: r.slug,
     name: r.name,
     servesNote: r.servesNote,
-    perPerson: Object.fromEntries(CITIES.map((c) => [c.slug, recipeCostPerPerson(r.slug, c.slug)])),
+    perPerson: Object.fromEntries(DIRECT_PRICE_CITIES.map((c) => [c.slug, recipeCostPerPerson(r.slug, c.slug)])),
     ingredients: r.ingredients.map((ing) => ({
       name: (ITEM_BY_SLUG[ing.item]?.name ?? ing.item).split(" (")[0],
       qty: ing.qty,
@@ -19,4 +19,4 @@ export function cookRecipes(only?: string): CookRecipe[] {
   }));
 }
 
-export const COOK_CITIES = CITIES.map((c) => ({ slug: c.slug, name: c.name }));
+export const COOK_CITIES = DIRECT_PRICE_CITIES.map((c) => ({ slug: c.slug, name: c.name }));

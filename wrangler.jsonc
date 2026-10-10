@@ -8,5 +8,10 @@
     "binding": "ASSETS",
     "run_worker_first": ["/api/*"],
     "not_found_handling": "404-page"
+  },
+  "triggers": {
+    "crons": ["47 */3 * * *"]
   }
+  // The owner adds the PUSH_SUBSCRIPTIONS KV binding in Cloudflare's dashboard.
+  // Its account-specific namespace ID and all VAPID/admin secrets stay out of Git.
 }

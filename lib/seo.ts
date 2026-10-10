@@ -45,6 +45,9 @@ export const articleMetadata = (a: Article): Metadata =>
     description: a.metaDescription,
     keywords: a.keywords,
     type: "article",
+    // City/capital permutations substantially repeat their parent blueprint. Keep them usable
+    // for visitors while withholding them from indexing until each has distinct sourced value.
+    noindex: a.section === "hustle-combo",
   });
 
 /** JSON-LD for an article: Article or HowTo, plus FAQPage and BreadcrumbList. */

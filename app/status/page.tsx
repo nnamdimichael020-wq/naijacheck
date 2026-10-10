@@ -3,23 +3,19 @@ import { SITE_CONFIG } from "@/config/site";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Freshness } from "@/components/live/freshness";
-import { LIVE_FEEDS, LIVE_FUEL, LIVE_FX, LIVE_TRENDS, LIVE_WATCH, sourceHealth } from "@/lib/live";
+import { LIVE_FX, LIVE_FUEL, LIVE_WATCH, sourceHealth } from "@/lib/live";
+import { LocalWatchlist, type WatchReading } from "@/components/live/local-watchlist";
+import { PushSettings } from "@/components/push-notifications";
+import { DATASET_REGISTRY, stateLabel } from "@/lib/source-registry";
 import { pageMetadata } from "@/lib/seo";
+import { HistoryChart } from "@/components/live/history-chart";
 
 export const metadata: Metadata = pageMetadata({
   path: "/status",
-  title: `Data status | ${SITE_CONFIG.name}`,
-  description: "Where every live number on NaijaCheck comes from, when it was last read, and what is not auto-monitored yet.",
+  title: "Data status",
+  description: "Where monitored NaijaCheck readings come from, when sources were read, and which datasets are seeded, manual, stale or unavailable.",
   keywords: ["naijacheck data status", "live naira rate source", "fuel depot price source"],
 });
-
-const DATASETS = [
-  { label: "Exchange rates (CBN NFEM, Aboki black market)", asOf: LIVE_FX.officialAsOf, seeded: LIVE_FX.seeded, checkedAt: LIVE_FX.checkedAt },
-  { label: "Fuel depot prices (petroleumprice.ng via Awajis)", asOf: LIVE_FUEL.asOf, seeded: LIVE_FUEL.seeded, checkedAt: LIVE_FUEL.checkedAt },
-  { label: "Live headlines (Google News)", asOf: LIVE_FEEDS.checkedAt, seeded: LIVE_FEEDS.seeded, checkedAt: LIVE_FEEDS.checkedAt },
-  { label: "Trend counts (news and Wikipedia)", asOf: LIVE_TRENDS.checkedAt, seeded: LIVE_TRENDS.seeded, checkedAt: LIVE_TRENDS.checkedAt },
-  { label: "Official page change watch", asOf: LIVE_WATCH.checkedAt, seeded: false, checkedAt: LIVE_WATCH.checkedAt },
-];
 
 const NOT_AUTO = [
   "Food basket prices by city (rice, garri, beans, yam, eggs). No free, reliable daily feed exists. Figures carry their survey date.",
@@ -33,13 +29,19 @@ const NOT_AUTO = [
 export default function StatusPage() {
   const health = sourceHealth();
   const watch = Object.entries(LIVE_WATCH.pages ?? {});
+  const localReadings: WatchReading[] = [
+    LIVE_FX.official.USD ? { id: "cbn-usd", label: "CBN NFEM USD/NGN", value: LIVE_FX.official.USD, unit: "₦/US$", sourceTime: LIVE_FX.officialAsOf } : null,
+    LIVE_FX.blackMarket?.USD.buy ? { id: "parallel-usd-buy", label: "Parallel USD buy", value: LIVE_FX.blackMarket.USD.buy, unit: "₦/US$", sourceTime: LIVE_FX.blackMarketAsOf } : null,
+    LIVE_FUEL.medians.petrol ? { id: "depot-petrol", label: "Wholesale petrol depot median", value: LIVE_FUEL.medians.petrol, unit: "₦/L", sourceTime: LIVE_FUEL.asOf } : null,
+    LIVE_FUEL.medians.diesel ? { id: "depot-diesel", label: "Wholesale diesel depot median", value: LIVE_FUEL.medians.diesel, unit: "₦/L", sourceTime: LIVE_FUEL.asOf } : null,
+  ].filter((value): value is WatchReading => value !== null);
   return (
     <div className="mx-auto max-w-4xl space-y-8">
       <header className="space-y-3">
         <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">Data status</h1>
         <p className="text-muted-foreground">
-          Every live number on {SITE_CONFIG.name} comes from a named source, and each one shows when it was last read. This page is the
-          full list, including the sources that failed and the things we do not automate yet.
+          Monitored readings on {SITE_CONFIG.name} have a named source and separate source and check times. This page distinguishes seeded,
+          recent, stale, manual and unavailable data; a scheduled check does not guarantee that an upstream publisher changed its value.
         </p>
       </header>
 
@@ -48,16 +50,34 @@ export default function StatusPage() {
           Datasets
         </h2>
         <ul className="divide-y rounded-xl border">
-          {DATASETS.map((d) => (
-            <li key={d.label} className="space-y-1 p-4">
+          {DATASET_REGISTRY.map((d) => (
+            <li key={d.id} className="space-y-2 p-4">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <span className="font-semibold">{d.label}</span>
-                {d.seeded ? <Badge variant="muted">Seeded, awaiting first run</Badge> : <Badge variant="accent">Monitored</Badge>}
+                <Badge variant={d.state === "live" || d.state === "recent" ? "accent" : "muted"}>{stateLabel[d.state]}</Badge>
               </div>
-              <Freshness asOf={d.asOf} label="Last reading" />
+              <p className="text-xs text-muted-foreground">{d.geography} · {d.productType}{d.unit ? ` · ${d.unit}` : ""}</p>
+              <Freshness asOf={d.sourceTime} label="Source as of" source={d.sourceName} state={d.state} />
+              <p className="text-xs text-muted-foreground">
+                Checked: {d.checkedAt ? `${new Date(d.checkedAt).toISOString().slice(0, 16).replace("T", " ")} UTC` : "no recorded check"}. {d.cadence}
+              </p>
+              <p className="text-xs text-muted-foreground">Method: {d.method} Limitation: {d.limitation}</p>
+              {d.sourceUrl ? <a className="break-all text-xs font-medium text-primary hover:underline" href={d.sourceUrl} rel="nofollow noopener" target="_blank">Open source</a> : null}
             </li>
           ))}
         </ul>
+      </section>
+
+      <section aria-labelledby="history" className="space-y-3">
+        <h2 id="history" className="text-xl font-bold">Price history</h2>
+        <HistoryChart />
+      </section>
+
+      <PushSettings />
+
+      <section aria-labelledby="local-watch" className="space-y-3">
+        <h2 id="local-watch" className="text-xl font-bold">Local watch rules</h2>
+        <LocalWatchlist readings={localReadings} />
       </section>
 
       <section aria-labelledby="src" className="space-y-3">

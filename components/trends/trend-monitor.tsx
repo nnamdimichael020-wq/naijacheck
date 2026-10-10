@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Freshness } from "@/components/live/freshness";
 import { cn } from "@/lib/utils";
+import { stateLabel, type VerificationState } from "@/lib/source-registry";
 
 export type MonitorTerm = {
   slug: string;
@@ -29,6 +30,7 @@ export function TrendMonitor({
   wiki,
   checkedAt,
   live,
+  state,
   method,
 }: {
   terms: MonitorTerm[];
@@ -36,6 +38,7 @@ export function TrendMonitor({
   wiki: WikiSignal[];
   checkedAt: string | null;
   live: boolean;
+  state: VerificationState;
   method?: string;
 }) {
   const [query, setQuery] = React.useState("");
@@ -51,16 +54,16 @@ export function TrendMonitor({
         <CardHeader>
           <div className="flex flex-wrap items-center justify-between gap-2">
             <CardTitle className="flex items-center gap-2 text-lg">
-              <BarChart3 className="size-5 text-primary" aria-hidden="true" /> Live trend board
+              <BarChart3 className="size-5 text-primary" aria-hidden="true" /> Public attention signals
             </CardTitle>
-            <Badge variant={live ? "accent" : "muted"}>{live ? "Live" : "Not yet checked"}</Badge>
+            <Badge variant={state === "live" || state === "recent" ? "accent" : "muted"}>{stateLabel[state]}</Badge>
           </div>
           <CardDescription>
             {live
               ? "Ranked by how often each term appears in Nigerian news in the last 7 days, and checked against Wikipedia pageviews."
-              : "The first live check has not run yet. Scores below are editorial and are marked as such."}
+              : "The first source check has not run yet. Scores below are editorial and are marked as such."}
           </CardDescription>
-          <Freshness asOf={checkedAt} label="Checked" source="Google News, Wikipedia" />
+          <Freshness asOf={checkedAt} label="Checked" source="Google News, Wikipedia" state={state} />
         </CardHeader>
         <CardContent className="space-y-5">
           <ul className="space-y-3">

@@ -1,35 +1,47 @@
 {
-  "checkedAt": "2026-10-10T05:50:22.203Z",
+  "checkedAt": "2026-10-10T09:19:49.286Z",
+  "seeded": false,
   "note": "A changed fingerprint means the official page wording changed. A person should read it before any fee or rule is updated.",
   "pages": {
     "jamb": {
       "label": "JAMB",
       "url": "https://www.jamb.gov.ng/",
       "fingerprint": "bfc758e8",
-      "lastChecked": "2026-10-10T05:50:22.203Z",
+      "lastChecked": "2026-10-10T09:19:49.286Z",
       "changedAt": null,
-      "changedSincePrevious": false
+      "changedSincePrevious": false,
+      "reviewRequired": false,
+      "reviewReason": null
     },
     "nimc": {
       "label": "NIMC (NIN)",
       "url": "https://nimc.gov.ng/",
       "fingerprint": "137c52a3",
-      "lastChecked": "2026-10-10T05:50:22.203Z",
+      "lastChecked": "2026-10-10T09:19:49.286Z",
       "changedAt": null,
-      "changedSincePrevious": false
+      "changedSincePrevious": false,
+      "reviewRequired": false,
+      "reviewReason": null
     },
     "immigration": {
-      "label": "Nigeria Immigration Service",
-      "url": "https://portal.immigration.gov.ng/",
-      "error": "fetch failed"
+      "label": "Nigeria Immigration Service passport information",
+      "url": "https://immigration.gov.ng/passports/",
+      "fingerprint": "e4a8a230",
+      "lastChecked": "2026-10-10T09:19:49.286Z",
+      "changedAt": "2026-10-10T08:03:03.822Z",
+      "changedSincePrevious": false,
+      "reviewRequired": true,
+      "reviewReason": "Official public page fingerprint changed; inspect manually. Do not auto-update fees or rules."
     },
     "cbn": {
       "label": "Central Bank of Nigeria",
       "url": "https://www.cbn.gov.ng/",
       "fingerprint": "8aec4d44",
-      "lastChecked": "2026-10-10T05:50:22.203Z",
+      "lastChecked": "2026-10-10T09:19:49.286Z",
       "changedAt": null,
-      "changedSincePrevious": false
+      "changedSincePrevious": false,
+      "reviewRequired": false,
+      "reviewReason": null
     }
   }
 }

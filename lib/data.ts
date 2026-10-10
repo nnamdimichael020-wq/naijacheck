@@ -26,6 +26,10 @@ export const CITY_BY_SLUG: Record<string, City> = Object.fromEntries(CITIES.map(
 export const PRICE_ITEMS = pricesFile.items;
 export type PriceItem = (typeof PRICE_ITEMS)[number];
 export const ITEM_BY_SLUG: Record<string, PriceItem> = Object.fromEntries(PRICE_ITEMS.map((i) => [i.slug, i]));
+/** Cities with explicit rows for every tracked food item. No cost-index interpolation is allowed. */
+export const DIRECT_PRICE_CITIES = CITIES.filter((city) =>
+  PRICE_ITEMS.every((item) => Boolean((item.prices as Record<string, number[]>)[city.slug])),
+);
 
 export const PRICES_META = {
   updatedAt: pricesFile.updatedAt,
@@ -71,21 +75,19 @@ export const DATA_DATE = "9 October 2026";
 
 export const bandMid = (b: Band) => (b[0] + b[1]) / 2;
 
-/** Explicit band where we have one, otherwise the Lagos band scaled by the city cost index (rounded to ₦10). */
+/** Explicit dated band only. Missing city observations must stay unavailable rather than be interpolated. */
 export function priceBand(itemSlug: string, citySlug: string): Band {
   const item = ITEM_BY_SLUG[itemSlug];
-  const explicit = (item.prices as Record<string, number[]>)[citySlug];
-  if (explicit) return [explicit[0], explicit[1]];
-  const base = (item.prices as Record<string, number[]>).lagos;
-  const f = CITY_BY_SLUG[citySlug]?.costIndex ?? 1;
-  return [Math.round((base[0] * f) / 10) * 10, Math.round((base[1] * f) / 10) * 10];
+  const explicit = item && (item.prices as Record<string, number[]>)[citySlug];
+  if (!explicit) throw new Error(`No explicit food-price observation for ${itemSlug}/${citySlug}`);
+  return [explicit[0], explicit[1]];
 }
 
-/** 50kg bag price. Explicit where we have it, otherwise scaled from Lagos. */
+/** Explicit dated 50kg bag observation only. */
 export function bagPrice(citySlug: string): number {
-  const bag = (ITEM_BY_SLUG.rice.bag50kg as Record<string, number>);
-  if (bag[citySlug]) return bag[citySlug];
-  return Math.round((bag.lagos * (CITY_BY_SLUG[citySlug]?.costIndex ?? 1)) / 100) * 100;
+  const bag = ITEM_BY_SLUG.rice.bag50kg as Record<string, number>;
+  if (!bag[citySlug]) throw new Error(`No explicit rice-bag observation for ${citySlug}`);
+  return bag[citySlug];
 }
 
 /** Monthly food basket for ONE adult at band midpoints. */
@@ -125,6 +127,6 @@ export const capWords = (n: number) => (n >= 1000000 ? `₦${n / 1000000} millio
 export const capLabel = (n: number) => (n >= 1000000 ? `${n / 1000000}m` : `${n / 1000}k`);
 
 export function cityRank(itemSlug: string, citySlug: string): number {
-  const sorted = CITIES.map((c) => ({ slug: c.slug, mid: bandMid(priceBand(itemSlug, c.slug)) })).sort((a, b) => a.mid - b.mid);
+  const sorted = DIRECT_PRICE_CITIES.map((c) => ({ slug: c.slug, mid: bandMid(priceBand(itemSlug, c.slug)) })).sort((a, b) => a.mid - b.mid);
   return sorted.findIndex((c) => c.slug === citySlug) + 1;
 }

@@ -5,6 +5,8 @@
 import assert from "node:assert/strict";
 import {
   parseCbnNfem,
+  hasCbnNfemTable,
+  parseCbnNfemApi,
   parseAboki,
   parseOpenEr,
   parseAwajisFuel,
@@ -22,16 +24,33 @@ const test = (name: string, fn: () => void) => {
   console.log(`ok - ${name}`);
 };
 
-test("CBN NFEM table row parses to ISO date and rate", () => {
-  const html = `<table><tr><td>October-09-2026</td><td>1,331.1860</td><td>1,333.5000</td></tr>
-    <tr><td>October-08-2026</td><td>1,332.1021</td></tr></table>`;
-  const r = parseCbnNfem(html);
-  assert.deepEqual(r, { date: "2026-10-09", rate: 1331.186 });
+test("CBN uses the exact NFEM Rate column and newest dated row", () => {
+  const html = `<table><tr><th>Date</th><th>Opening Rate</th><th>NFEM Rate (₦/US$)</th><th>Closing Rate</th></tr>
+    <tr><td>October-08-2026</td><td>1,100.00</td><td>1,332.1021</td><td>1,999.00</td></tr>
+    <tr><td>October-09-2026</td><td>1,200.00</td><td>1,331.1860</td><td>1,888.00</td></tr></table>`;
+  assert.deepEqual(parseCbnNfem(html), { date: "2026-10-09", rate: 1331.186 });
 });
 
-test("CBN ignores header dates glued to numbers and rejects implausible rates", () => {
-  const junk = `<p>October-09-202613181320</p><table><tr><td>October-09-2026</td><td>13.5000</td></tr></table>`;
-  assert.equal(parseCbnNfem(junk), null);
+test("CBN rejects nearby numbers unless Date and exact NFEM Rate headers exist", () => {
+  const noHeader = `<p>October-09-202613181320</p><table><tr><td>October-09-2026</td><td>1,331.1860</td></tr></table>`;
+  const wrongHeader = `<table><tr><th>Date</th><th>Official Rate</th></tr><tr><td>October-09-2026</td><td>1,331.1860</td></tr></table>`;
+  const implausible = `<table><tr><th>Date</th><th>NFEM Rate</th></tr><tr><td>October-09-2026</td><td>13.5000</td></tr></table>`;
+  assert.equal(parseCbnNfem(noHeader), null);
+  assert.equal(parseCbnNfem(wrongHeader), null);
+  assert.equal(hasCbnNfemTable(wrongHeader), false);
+  assert.equal(parseCbnNfem(implausible), null);
+});
+
+test("CBN captured page schema gates its JSON endpoint and newest row", () => {
+  const capturedPage = `<table><tr><td colspan="10">NIGERIAN FOREIGN EXCHANGE MARKET (NFEM) RATES (₦/US$)</td></tr>
+    <tr><td>Date</td><td>NFEM Rate (₦/US$)</td><td>Highest Rate (₦/US$)</td></tr></table>`;
+  const capturedApi = [
+    { ratedate: "2026-10-08T00:00:00", weightedAvgRate: "1,332.1021", highestrate: 1400 },
+    { ratedate: "2026-10-09T00:00:00", weightedAvgRate: 1331.186, highestrate: 1500 },
+  ];
+  assert.equal(hasCbnNfemTable(capturedPage), true);
+  assert.deepEqual(parseCbnNfemApi(capturedApi), { date: "2026-10-09", rate: 1331.186 });
+  assert.equal(parseCbnNfemApi([{ ratedate: "2026-10-09", highestrate: 1331.186 }]), null);
 });
 
 test("Aboki black market and CBN widget parse from captured text", () => {
@@ -90,7 +109,23 @@ test("Awajis depot medians, depot rows and 30-day trend parse", () => {
   assert.equal(r!.trend30d[0].petrol, 1352.38);
 });
 
-test("Awajis: a page without fuel medians returns null", () => {
+test("Awajis accepts decimals, optional naira signs, changed heading order and month-first source time", () => {
+  const html = `<p>Last updated: October 9, 2026 at 5:21 pm WAT</p>
+    <p>Diesel (AGO) median: 1,855.75</p>
+    <h3>Latest LPG depot prices</h3><table>
+    <tr><th>Depot</th><th>State</th><th>Price</th></tr>
+    <tr><td>Coastal Energy</td><td>Rivers</td><td>₦1,010</td></tr></table>`;
+  const r = parseAwajisFuel(html);
+  assert.ok(r);
+  assert.equal(r!.medians.diesel, 1855.75);
+  assert.equal(r!.medians.petrol, null);
+  assert.deepEqual(r!.depots.lpg[0], { depot: "Coastal Energy", state: "Rivers", price: 1010 });
+  assert.equal(r!.asOf, "2026-10-09T16:21:00.000Z");
+});
+
+test("Awajis succeeds when an independent diesel/LPG median is the only value", () => {
+  assert.equal(parseAwajisFuel("<p>₦1,855.50 Diesel (AGO)</p>")!.medians.diesel, 1855.5);
+  assert.equal(parseAwajisFuel("<p>Cooking Gas (LPG): ₦1,160.25</p>")!.medians.lpg, 1160.25);
   assert.equal(parseAwajisFuel("<html><body>Maintenance</body></html>"), null);
 });
 

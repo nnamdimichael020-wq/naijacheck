@@ -4,6 +4,7 @@ import { PSYCH_TERMS, SLANG_TERMS } from "@/lib/data";
 import { LIVE_TRENDS } from "@/lib/live";
 import { getArticle } from "@/lib/articles";
 import { articleMetadata } from "@/lib/seo";
+import { DATASET_REGISTRY } from "@/lib/source-registry";
 
 const article = getArticle("/trends");
 export const metadata = articleMetadata(article);
@@ -31,6 +32,7 @@ export default function TrendsPage() {
         wiki={LIVE_TRENDS.wiki}
         checkedAt={LIVE_TRENDS.checkedAt}
         live={live}
+        state={DATASET_REGISTRY.find((d) => d.id === "trend-signals")?.state ?? "unavailable"}
         method={LIVE_TRENDS.method}
       />
     </ArticleView>

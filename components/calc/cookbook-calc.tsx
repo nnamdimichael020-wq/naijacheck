@@ -38,7 +38,7 @@ export function CookbookCalc({ recipes, cities, fixedSlug, defaultCity = "lagos"
         </CardHeader>
         <CardContent className="grid gap-4 sm:grid-cols-2">
           <div>
-            <Label htmlFor="cook-city">City (live prices)</Label>
+            <Label htmlFor="cook-city">City (dated indicative prices)</Label>
             <Select id="cook-city" value={city} onChange={(e) => setCity(e.target.value)}>
               {cities.map((c) => (
                 <option key={c.slug} value={c.slug}>

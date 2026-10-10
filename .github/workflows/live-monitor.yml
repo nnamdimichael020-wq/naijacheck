@@ -1,7 +1,8 @@
 name: Live monitor
 
-# Refreshes every live number on the site (FX, fuel depots, news feeds, trend signals, official-page
-# change flags), commits the result, and lets Cloudflare Workers Builds rebuild and deploy.
+# Attempts configured monitored sources (FX, wholesale fuel depots, headline feeds, public attention
+# signals and official-page change flags), commits successful snapshots/history, and lets the Worker build deploy.
+# Manual/indicative food, retail pump, telecom, fee and cut-off datasets are deliberately not refreshed here.
 #
 # Cron runs only from the default branch. Use "Run workflow" to test on another branch.
 
@@ -22,9 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: npm
@@ -37,10 +38,19 @@ jobs:
       - name: Fetch live sources
         run: npm run monitor
 
+      - name: Upload sanitized parser diagnostics
+        if: ${{ always() && hashFiles('.monitor-diagnostics/**') != '' }}
+        uses: actions/upload-artifact@v5
+        with:
+          name: monitor-diagnostics
+          path: .monitor-diagnostics/
+          include-hidden-files: true
+          retention-days: 7
+
       - name: Commit refreshed data
         run: |
           git config user.name "naijacheck-monitor"
-          git config user.email "monitor@naijacheck.ng"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
           if git diff --cached --quiet; then
             echo "No data changes this run."

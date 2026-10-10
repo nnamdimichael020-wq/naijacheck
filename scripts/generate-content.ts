@@ -87,23 +87,23 @@ const RECIPE: Record<string, Recipe> = Object.fromEntries(recipesData.recipes.ma
 const SLANG: Record<string, Slang> = Object.fromEntries(slangData.terms.map((t) => [t.slug, t]));
 const DOC: Record<string, Doc> = Object.fromEntries(govhowto.docs.map((d) => [d.slug, d]));
 const CORE_ITEMS = ["rice", "garri", "beans", "yam", "egg"];
-const CITY_SLUGS = cities.cities.map((c) => c.slug);
+const PRICE_CITIES = cities.cities.filter((city) =>
+  prices.items.every((item) => Boolean((item.prices as Record<string, number[]>)[city.slug])),
+);
+const CITY_SLUGS = PRICE_CITIES.map((c) => c.slug);
 const CITY_FACTORS = blueprintsData.cityFactors as Record<string, { label: string; multiplier: number; note: string }>;
 const bizSlugs = blueprintsData.blueprints.map((b) => b.slug);
 
-/** Price band for an item in a city. Explicit values where we have them, else Lagos scaled by costIndex. */
+/** Explicit dated values only; never create a city value from Lagos or a cost index. */
 function priceFor(itemSlug: string, citySlug: string): [number, number] {
-  const item = ITEM[itemSlug];
-  const explicit = (item.prices as Record<string, number[]>)[citySlug];
-  if (explicit) return [explicit[0], explicit[1]];
-  const base = (item.prices as Record<string, number[]>).lagos;
-  const f = CITY[citySlug].costIndex;
-  return [Math.round((base[0] * f) / 10) * 10, Math.round((base[1] * f) / 10) * 10];
+  const explicit = (ITEM[itemSlug].prices as Record<string, number[]>)[citySlug];
+  if (!explicit) throw new Error(`No explicit food-price observation for ${itemSlug}/${citySlug}`);
+  return [explicit[0], explicit[1]];
 }
 function bagFor(citySlug: string): number {
   const bag = (ITEM.rice as unknown as { bag50kg: Record<string, number> }).bag50kg;
-  if (bag[citySlug]) return bag[citySlug];
-  return Math.round((bag.lagos * CITY[citySlug].costIndex) / 100) * 100;
+  if (!bag[citySlug]) throw new Error(`No explicit rice-bag observation for ${citySlug}`);
+  return bag[citySlug];
 }
 function basketCost(citySlug: string): number {
   return prices.basket.reduce((sum, b) => sum + mid(priceFor(b.item, citySlug)) * b.qty, 0);
@@ -166,7 +166,7 @@ function buildPriceCity(c: City) {
     : `${c.state} is not in our latest NNPC pump list, so check the nearest NNPC or private station before you plan your fuel budget.`;
   const sections: Section[] = [
     {
-      h2: `Rice, garri, beans, yam and eggs in ${name} today`,
+      h2: `Dated rice, garri, beans, yam and egg estimates for ${name}`,
       paras: [
         `These are the five staples most ${name} households buy every week. The ranges below are indicative for ${DATE_LABEL}. They are planning numbers, not a receipt, and they should be checked against your own market visit before you commit a big budget.`,
         `Across the core five, the spread is wide. Rice is the biggest single cost, while eggs and garri are where small savings add up fastest over a month.`,
@@ -235,14 +235,14 @@ function buildPriceCity(c: City) {
   ];
   add({
     path: `/prices/${c.slug}`, section: "prices-city", navLabel: `Food prices in ${name}`, kicker: `Prices · ${name}`,
-    title: `Food Prices in ${name} Today: Rice, Garri, Beans, Yam & Eggs (2026)`,
-    metaTitle: `${name} Food Prices Today 2026: Rice, Garri, Beans & Eggs`,
-    metaDescription: `Rice, garri, beans, yam and egg prices in ${name} today, with the 50kg bag price, best markets, and tips to stretch your naira. Updated ${DATE_LABEL}.`,
+    title: `Dated ${name} Food Estimates: Rice, Garri, Beans, Yam & Eggs`,
+    metaTitle: `${name} Dated Food Estimates: Rice, Garri, Beans & Eggs`,
+    metaDescription: `Dated, unverified planning estimates for rice, garri, beans, yam and eggs in ${name}; not live quotes or NBS city data. ${DATE_LABEL}.`,
     keywords: [`${name.toLowerCase()} food prices today`, `rice price in ${name.toLowerCase()} today`, `garri price ${name.toLowerCase()}`, `beans price ${name.toLowerCase()} 2026`],
     params: { city: c.slug },
     intro: [
-      `If you are asking what food costs in ${name} today, the honest answer is: it depends on the market, the week, and whether you buy in bulk or by the kilo. ${name} is ${c.vibe}. This page gives you the price bands we are tracking for ${DATE_LABEL}, with the sources and caveats clearly marked.`,
-      `Treat the numbers as a planning guide. Prices in ${name} move with the harvest, transport cost and dollar pressure. We update this page from our daily price file, and every range is labelled indicative until a market check confirms it.`,
+      `This page preserves dated planning estimates for ${name} from ${DATE_LABEL}. They are unverified editor estimates, not live quotes or NBS city survey values; confirm with the market before using them.`,
+      `Treat the numbers as an unverified, dated planning guide. They do not update daily and remain unavailable for cities without explicit rows until a documented check or correctly labelled official import exists.`, 
     ],
     sections, faqs,
     takeaways: [`Rice in ${name}: ${range(priceFor("rice", c.slug))} per kg (indicative).`, `Eggs in ${name}: ${range(priceFor("egg", c.slug))} each.`, `Plan your week around the markets listed above, and compare two sellers before any bulk buy.`],
@@ -269,7 +269,7 @@ function buildPriceItem(c: City, itemSlug: string) {
   const ranking = cityRanking(itemSlug);
   const sections: Section[] = [
     {
-      h2: `${item.name} price in ${name} today`,
+      h2: `Dated ${item.name} estimate for ${name}`,
       paras: [
         `The indicative band for ${item.name.toLowerCase()} in ${name} is ${range(r)} ${item.unit}, with a midpoint of about ${fmt(m)}. This is a planning figure for ${DATE_LABEL}. ${item.note}`,
         `${name} ranks ${rankOf(itemSlug, c.slug)} out of ${CITY_SLUGS.length} cities in our tracker for this item. That ranking matters if you can shop across cities or buy in bulk.`,
@@ -310,14 +310,14 @@ function buildPriceItem(c: City, itemSlug: string) {
   ];
   add({
     path: `/prices/${c.slug}/${itemSlug}`, section: "prices-item", navLabel: `${shortName(item.name)} price in ${name}`, kicker: `Prices · ${name} · ${shortName(item.name)}`,
-    title: `${shortName(item.name)} Price in ${name} Today (2026 Guide)`,
-    metaTitle: `${shortName(item.name)} Price in ${name} Today 2026`,
-    metaDescription: `${shortName(item.name)} price in ${name} today: ${range(r)} ${item.unit}. Where to buy, why it moves, and how to save. Updated ${DATE_LABEL}.`,
+    title: `Dated ${shortName(item.name)} Estimate for ${name}`,
+    metaTitle: `${shortName(item.name)} Dated Estimate for ${name}`,
+    metaDescription: `Dated, unverified ${shortName(item.name)} planning estimate for ${name}: ${range(r)} ${item.unit}; not a live quote. ${DATE_LABEL}.`,
     keywords: [`${itemSlug} price in ${name.toLowerCase()} today`, `${itemSlug} price ${name.toLowerCase()} 2026`],
     params: { city: c.slug, item: itemSlug },
     intro: [
-      `Looking for the ${sn} price in ${name} today? Our indicative band is ${range(r)} ${item.unit}. This page explains why that number moves, where to buy, and how to avoid overpaying.`,
-      `Prices are updated from our daily file. Where we have not yet verified a number with a market check, we say so. Use this page with the city overview and the cost-of-living calculator to plan your month.`,
+      `The legacy ${sn} planning band for ${name} is ${range(r)} ${item.unit}, dated ${DATE_LABEL}. It is unverified and not a live quote; this page explains the caveat and how to check locally.`,
+      `This estimate changes only after a documented update. Confirm locally before budgeting and do not treat it as an official state or city average.`,
     ],
     sections, faqs,
     takeaways: [`${shortName(item.name)} in ${name}: ${range(r)} ${item.unit} (indicative).`, `Buy from the markets listed and compare two sellers.`, `Check quality before you pay for a bulk buy.`],
@@ -365,18 +365,18 @@ function buildPricesHubs() {
     path: "/prices", section: "hub", navLabel: "Prices hub", kicker: "Prices",
     title: "Daily Prices: Food, Fuel, Dollar Rate and Cost of Living",
     metaTitle: "Daily Naija Prices 2026: Food, Fuel & Dollar Rate | NaijaCheck",
-    metaDescription: "Daily Naija prices in one place: food in 10 cities, petrol and diesel, black market dollar, and a cost-of-living calculator. Updated daily.",
+    metaDescription: "Source-labelled Nigeria reference data: dated food estimates with explicit city rows, monitored fuel depots, FX and planning tools.",
     keywords: ["naija prices today", "food prices nigeria 2026", "current black market dollar rate", "petrol price today nigeria"],
     params: {},
     intro: [
-      `Prices in Nigeria change fast. Rice can move in a week, petrol can move in a day, and the dollar can shift before your lunch break. NaijaCheck's prices section is built to answer the question you actually ask: what will this cost me today, in my city?`,
-      `Every number on this site is labelled with its date and status. Where a figure comes from a published source, we cite it. Where it is an editor's indicative estimate, we say so. Nothing here is a guarantee, so always check the market before you commit a big budget.`,
+      `Prices in Nigeria change fast. This section separates monitored FX and wholesale fuel from dated food planning estimates rather than pretending every dataset updates at the same speed.`,
+      `Every number is labelled with its date and status. Food rows are unverified planning estimates until a permitted official or documented manual import replaces them; they are not live quotes or NBS city prices.`, 
     ],
     sections: [
-      { h2: "What we track every day", paras: ["We track 17 everyday items in 10 cities: the staples (rice, garri, beans, yam, eggs), protein, vegetables, oils, soup ingredients and groceries. We also track petrol, diesel, depot prices and the naira's official and black market rates."], bullets: ["Food: 17 items across 10 cities", "Fuel: petrol pump prices by state and depot diesel", "FX: official and black market USD, GBP and EUR", "Cost of living: a calculator for your monthly budget"] },
+      { h2: "What each dataset means", paras: ["FX and wholesale depot fuel are monitored independently. Food has 17 dated, unverified estimate rows only for Lagos, Onitsha, Kano and Aba; missing cities stay unavailable instead of being scaled from Lagos."], bullets: ["Food: explicit dated estimate rows, not live quotes", "Fuel: wholesale depot monitoring kept separate from dated pump references", "FX: official NFEM, parallel-market and reference cross-rates kept separate", "Planning tools: calculations inherit the status of their inputs"] },
       { h2: "Fuel and diesel right now", paras: [`Pump petrol in Lagos was listed at ₦1,355 per litre on the NNPC list of 9 October 2026, and Abuja at ₦1,370. Dangote's gantry petrol price was ₦1,325. Diesel is the bigger story for generator owners: Dangote cut its gantry diesel to ₦1,780 on 1 October 2026, while several Lagos depots were selling between ₦1,795 and ₦1,890.`] },
       { h2: "The dollar and the naira", paras: [`The CBN official rate was about ₦1,331.77 to the dollar in early October 2026, while the black market rate was about ₦1,370. The gap is a key signal for importers, students paying school fees abroad, and anyone with dollar-linked costs.`, `We publish both because the gap matters. A bigger gap usually means more pressure on imported goods, phones and fuel inputs.`] },
-      { h2: "Cities we cover", paras: ["Our food tracker covers Lagos, Onitsha, Kano, Aba, Abuja, Ibadan, Port Harcourt, Enugu, Kaduna and Benin City. Each city page has the core five staples, the best markets, and tips for stretching your money."] },
+      { h2: "Food geography", paras: ["Only Lagos, Onitsha, Kano and Aba currently have explicit rows in the legacy estimate file. Abuja, Ibadan, Port Harcourt, Enugu, Kaduna and Benin City remain unavailable until a documented observation or correctly labelled NBS state/month import exists."] },
       { h2: "How to use this section", paras: ["Start with your city page for the broad picture. Then open the item page for the staple you buy most. Use the cost-of-living calculator to test your monthly budget, and the cookbook to see what your favourite dish will cost for your family."] },
     ],
     faqs: [
@@ -388,14 +388,14 @@ function buildPricesHubs() {
     linkPaths: ["/prices/lagos", "/prices/onitsha", "/prices/kano", "/prices/aba", "/prices/fuel", "/prices/cost-of-living", "/prices/markets", "/tools/cookbook", "/tools/generator", "/hustle"],
   });
   add({
-    path: "/prices/fuel", section: "prices-static", navLabel: "Fuel prices today", kicker: "Prices · Fuel",
-    title: "Petrol and Diesel Prices Today in Nigeria (October 2026)",
-    metaTitle: "Petrol & Diesel Price Today Nigeria (Oct 2026) | NaijaCheck",
+    path: "/prices/fuel", section: "prices-static", navLabel: "Dated fuel references", kicker: "Prices · Fuel",
+    title: "Dated Petrol Pump References and Monitored Depot Fuel",
+    metaTitle: "Nigeria Fuel References: Pump Lists & Depot Monitoring",
     metaDescription: "Petrol pump prices by state (NNPC list), Dangote gantry prices, depot diesel and LPG, with sources and dates. Updated 9 October 2026.",
     keywords: ["petrol price today nigeria", "diesel price today nigeria", "NNPC petrol price lagos", "dangote petrol price"],
     params: {},
     intro: [
-      `Fuel is the most-searched price in Nigeria, and for good reason. Every trip, every generator and every delivery depends on it. This page brings together the latest NNPC pump list, Dangote's gantry prices and depot medians, with the date and source for each number.`,
+      `Fuel affects every trip, generator and delivery. This page keeps a dated retail pump reference separate from independently monitored wholesale depot medians, with the date and source for each.`,
       `Pump prices vary by state and by station. Depot prices are wholesale and do not include the margin you pay at the pump. Read the table with that in mind.`,
     ],
     sections: [
@@ -423,7 +423,7 @@ function buildPricesHubs() {
       `Figures are from 1 to 9 October 2026. Diesel is volatile, so check the depot price on your planning day, not last month's number.`,
     ],
     sections: [
-      { h2: "Current diesel benchmarks", paras: [`Dangote Refinery cut its gantry diesel price to ₦1,780 per litre effective 1 October 2026, from ₦1,850. Several Lagos depots were quoting between ₦1,795 and ₦1,890. The national median depot price was ₦1,775 per litre on 6 October.`], bullets: fuel.depots.filter((d) => d.product === "diesel").map((d) => d.name) },
+      { h2: "Dated diesel benchmarks", paras: [`Dangote Refinery cut its gantry diesel price to ₦1,780 per litre effective 1 October 2026, from ₦1,850. Several Lagos depots were quoting between ₦1,795 and ₦1,890. The national median depot price was ₦1,775 per litre on 6 October.`], bullets: fuel.depots.filter((d) => d.product === "diesel").map((d) => d.name) },
       { h2: "Why pump diesel costs more", paras: ["Wholesale depot prices are not what you pay at the pump. Retail margins, transport and station costs add to the number. The gap changes by station and by week."] },
       { h2: "How much diesel does a generator use?", paras: ["Consumption depends on the generator's size, the load and how well it is serviced. As a rough rule for planning, a generator at half load burns a few litres an hour. Use the generator calculator to get a number for your own load, and always test with your own machine's manual."] },
       { h2: "Ways to cut generator diesel costs", paras: ["Shift heavy appliances to the times when power is available. Service your generator on schedule so it burns fuel efficiently. Consider a solar and inverter system if your daily run-time is high and the payback works for you."], bullets: ["Run a load audit: list every appliance and its wattage.", "Switch off standby devices and use LED lighting.", "Service filters and oil on schedule.", "Calculate payback on solar before you buy."] },
@@ -1005,14 +1005,14 @@ function buildTelecomHub() {
 function buildCookbookHub() {
   add({
     path: "/tools/cookbook", section: "hub", navLabel: "Market cookbook", kicker: "Tools · Cookbook",
-    title: "Recipe and Market Price Cookbook: How Much to Cook Today?",
+    title: "Recipe Planning Calculator Using Dated Food Estimates",
     metaTitle: "Nigerian Recipe Cost Calculator 2026: Cook for Your Family",
-    metaDescription: "Work out how much Afang, Jollof, Egusi, Ofada, Banga and more will cost for your family today, using our market price file.",
+    metaDescription: "Plan recipe quantities with dated, unverified food estimates for explicit cities only; confirm ingredients locally before shopping.",
     keywords: ["how much to cook afang for family of 6", "cost of jollof rice for party 2026", "nigerian food cost per plate"],
     params: {},
     intro: [
       `Food costs drive the family budget. This cookbook connects recipes to prices, so you can see the cost of a pot before you go to the market.`,
-      `The calculator uses our indicative price file and the per-person quantities for each recipe. Pick your city and family size to see the total.`,
+      `The calculator uses dated, unverified estimate rows and per-person recipe quantities. It offers only cities with explicit rows and never scales Lagos values.`,
     ],
     sections: [
       { h2: "How the cookbook works", paras: ["Each recipe lists the ingredients per person. The calculator multiplies those quantities by your family size and by the midpoint of the price band in your city."] },
@@ -1034,9 +1034,9 @@ function buildRecipe(r: Recipe) {
   const priciest = sorted[sorted.length - 1];
   const lagos6 = recipeCost(r.slug, "lagos", 6);
   const sections: Section[] = [
-    { h2: `What ${r.name} costs for a family of 6 today`, paras: [`Using the midpoint of our indicative Lagos prices, a family of six needs about ${fmt(lagos6)} for ${r.name.toLowerCase()}. That is roughly ${fmt(lagos6 / 6)} per person.`, `The cheapest city in our tracker for this recipe is ${cheapest.city} at about ${fmt(cheapest.cost6)}. The most expensive is ${priciest.city} at about ${fmt(priciest.cost6)}.`] },
+    { h2: `Dated ${r.name} planning estimate for a family of 6`, paras: [`Using the midpoint of our indicative Lagos prices, a family of six needs about ${fmt(lagos6)} for ${r.name.toLowerCase()}. That is roughly ${fmt(lagos6 / 6)} per person.`, `The cheapest city in our tracker for this recipe is ${cheapest.city} at about ${fmt(cheapest.cost6)}. The most expensive is ${priciest.city} at about ${fmt(priciest.cost6)}.`] },
     { h2: "Ingredients per person", paras: ["These are the per-person quantities used by the calculator. Adjust them for big appetites and heavy soups."], bullets: r.ingredients.map((i) => `${ITEM[i.item]?.name ?? i.item}: ${i.qty} ${i.unit}${i.note ? ` (${i.note})` : ""}`) },
-    { h2: "Cost by city for a family of 6", paras: ["Here is the cost for the same family size across our ten cities, using indicative prices."], bullets: costs.map((c) => `${c.city}: ${fmt(c.cost6)}`) },
+    { h2: "Cost by city for a family of 6", paras: ["Here is the estimate for the same family size across the four cities with explicit rows; no other cities are inferred."], bullets: costs.map((c) => `${c.city}: ${fmt(c.cost6)}`) },
     { h2: "How to cut the cost", paras: ["Buy the big items in bulk, use seasonal vegetables, and cook once for two meals. The smartest saving is planning the shopping list around what is cheapest that week."], bullets: ["Buy protein on market days when it is cheaper.", "Use frozen fish where it is cheaper per kg.", "Freeze leftover stock in portions.", "Track the weekly cost in your notes app."] },
     { h2: `Why ${r.name.toLowerCase()} is a budget dish`, paras: [`${r.servesNote} It stretches well for a family, and the cost per person stays manageable when you buy in the right markets.`] },
   ];
@@ -1047,14 +1047,14 @@ function buildRecipe(r: Recipe) {
   ];
   add({
     path: `/tools/cookbook/${r.slug}`, section: "cookbook", navLabel: `${r.name} cost`, kicker: "Tools · Cookbook",
-    title: `How Much to Cook ${r.name} for a Family of 6 Today (2026 Cost Guide)`,
-    metaTitle: `${r.name} Cost for Family of 6 Today (2026)`,
-    metaDescription: `How much to cook ${r.name.toLowerCase()} for a family of 6 today: ingredient costs, per-person cost, city comparison and ways to save.`,
+    title: `Dated ${r.name} Planning Estimate for a Family of 6`,
+    metaTitle: `${r.name} Dated Family-of-6 Planning Estimate`,
+    metaDescription: `Dated, unverified ${r.name.toLowerCase()} planning estimate for a family of 6, using explicit city rows only.`,
     keywords: [`how much to cook ${r.slug.replace(/-/g, " ")} for family of 6`, `${r.slug.replace(/-/g, " ")} cost 2026`],
     params: { slug: r.slug },
     intro: [
-      `${r.servesNote} If you are asking how much to cook ${r.name.toLowerCase()} for a family of six today, here is the number based on our price file, with a city comparison and ingredient breakdown.`,
-      `Prices are indicative for ${DATE_LABEL}. Use the calculator on the cookbook page to change family size and city.`,
+      `${r.servesNote} This dated planning estimate uses the legacy price file, with an ingredient breakdown and only explicit city rows.`,
+      `Values are unverified planning estimates dated ${DATE_LABEL}, not live quotes. Confirm locally before shopping.`,
     ],
     sections, faqs,
     takeaways: [`Lagos family of 6: about ${fmt(lagos6)}.`, `Per person in Lagos: about ${fmt(lagos6 / 6)}.`, `Cheapest city in our tracker: ${cheapest.city}.`],
@@ -1166,9 +1166,9 @@ function buildLearnHub() {
 }
 
 // ---------- run ----------
-for (const c of cities.cities) buildPriceCity(c);
-for (const c of cities.cities) for (const s of CORE_ITEMS) buildPriceItem(c, s);
-for (const m of marketsData.markets) buildPriceMarket(m);
+for (const c of PRICE_CITIES) buildPriceCity(c);
+for (const c of PRICE_CITIES) for (const s of CORE_ITEMS) buildPriceItem(c, s);
+for (const m of marketsData.markets.filter((market) => CITY_SLUGS.includes(market.city))) buildPriceMarket(m);
 buildPricesHubs();
 for (const t of slangData.terms) buildTrendsSlang(t);
 for (const t of slangData.psychTerms) buildTrendsPsych(t);
@@ -1231,7 +1231,13 @@ const outDir = path.join(root, "content", "generated");
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, "articles.json"), JSON.stringify(articles));
 
-const searchIndex = articles.map((a) => ({ path: a.path, title: a.title, kind: a.section, desc: a.metaDescription, keys: a.keywords.join(" ") }));
+const fixedSearch = [
+  { path: "/", title: "NaijaCheck home", kind: "hub", desc: "Nigerian prices, guides, slang, hustles and practical calculators.", keys: "home naijacheck nigeria utility" },
+  { path: "/about", title: "About NaijaCheck", kind: "learn", desc: "How NaijaCheck sources and labels its information.", keys: "about sourcing corrections trust" },
+  { path: "/status", title: "Data status", kind: "learn", desc: "Source checks, timestamps, limitations and verification states.", keys: "source freshness stale seeded monitor status" },
+  { path: "/privacy", title: "Privacy notice", kind: "learn", desc: "What the site processes and stores on your device.", keys: "privacy NDPA storage data rights" },
+];
+const searchIndex = [...fixedSearch, ...articles.map((a) => ({ path: a.path, title: a.title, kind: a.section, desc: a.metaDescription, keys: a.keywords.join(" ") }))];
 fs.mkdirSync(path.join(root, "public"), { recursive: true });
 fs.writeFileSync(path.join(root, "public", "search-index.json"), JSON.stringify(searchIndex));
 

@@ -1,23 +1,25 @@
 import { notFound } from "next/navigation";
 import { ArticleView } from "@/components/article-view";
 import { CityItemsTable } from "@/components/prices/price-tables";
-import { CITIES, CITY_BY_SLUG } from "@/lib/data";
+import { DIRECT_PRICE_CITIES, CITY_BY_SLUG } from "@/lib/data";
 import { getArticle } from "@/lib/articles";
 import { articleMetadata } from "@/lib/seo";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return CITIES.map((c) => ({ city: c.slug }));
+  return DIRECT_PRICE_CITIES.map((c) => ({ city: c.slug }));
 }
 
-export function generateMetadata({ params }: { params: { city: string } }) {
-  return articleMetadata(getArticle(`/prices/${params.city}`));
+export async function generateMetadata({ params }: { params: Promise<{ city: string }> }) {
+  const resolved = await params;
+  return articleMetadata(getArticle(`/prices/${resolved.city}`));
 }
 
-export default function CityPricesPage({ params }: { params: { city: string } }) {
-  const city = CITY_BY_SLUG[params.city];
-  if (!city) notFound();
+export default async function CityPricesPage({ params }: { params: Promise<{ city: string }> }) {
+  const resolved = await params;
+  const city = CITY_BY_SLUG[resolved.city];
+  if (!city || !DIRECT_PRICE_CITIES.some((candidate) => candidate.slug === city.slug)) notFound();
   const article = getArticle(`/prices/${city.slug}`);
   return (
     <ArticleView article={article}>

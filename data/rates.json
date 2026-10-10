@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-10T05:50:22.203Z",
-  "status": "live",
+  "updatedAt": "2026-10-10T09:19:49.286Z",
+  "status": "recent",
   "sources": [
     {
       "label": "Central Bank of Nigeria: NFEM exchange rates",
@@ -10,7 +10,7 @@
     {
       "label": "Aboki Forex: black market and CBN widget",
       "url": "https://abokiforex.app/",
-      "asOf": "2026-10-10T05:06:00.000Z"
+      "asOf": "2026-10-10T09:07:00.000Z"
     },
     {
       "label": "open.er-api.com: daily reference rates",
@@ -33,5 +33,8 @@
     "USD": 1380,
     "GBP": 1845,
     "EUR": 1540
-  }
+  },
+  "officialStatus": "recent",
+  "blackMarketStatus": "recent",
+  "crossRateStatus": "recent"
 }

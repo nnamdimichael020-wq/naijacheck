@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Article } from "@/lib/types";
 import { articleSchema } from "@/lib/seo";
 import { DATA_DATE } from "@/lib/data";
+import { ShareControls } from "@/components/share-controls";
 
 const SECTION_HUB: Record<string, { label: string; href: string }> = {
   prices: { label: "Prices", href: "/prices" },
@@ -36,6 +37,19 @@ export function ArticleView({ article, children, showSchema = true }: { article:
   const hub = SECTION_HUB[article.section] ?? { label: "Guides", href: "/" };
   const midpoint = Math.floor(article.sections.length / 2);
   const readMins = Math.max(2, Math.round(article.wordCount / 220));
+  const disclosure = article.section.startsWith("prices") || article.section === "cookbook"
+    ? `Manual/indicative planning data dated ${article.updatedAt}; not an automatically verified city-market feed. Confirm locally before paying.`
+    : article.section === "telecom"
+      ? `Manual/indicative bundle comparison dated ${article.updatedAt}; confirm price, validity and coverage in the operator's official app or USSD menu.`
+      : article.section === "exam"
+        ? `Manual guidance dated ${article.updatedAt}. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB or the institution's official portal.`
+        : article.section.startsWith("hustle")
+          ? `Editorial planning model dated ${article.updatedAt}. Costs and timelines are estimates, not measured profit or a business guarantee.`
+          : article.section.startsWith("trends")
+            ? `Editorial meaning dated ${article.updatedAt}. Any editorial score is not a measurement of X or TikTok activity.`
+            : article.section === "howto"
+              ? `Manually reviewed guidance dated ${article.updatedAt}; official requirements can change and the linked agency must be checked before payment.`
+              : null;
 
   return (
     <article className="max-w-3xl">
@@ -60,6 +74,12 @@ export function ArticleView({ article, children, showSchema = true }: { article:
           <span>Updated {DATA_DATE}</span>
         </p>
       </header>
+
+      {disclosure ? (
+        <p className="mt-5 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-100">
+          <strong>Verification status:</strong> {disclosure}
+        </p>
+      ) : null}
 
       <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-foreground/90">
         {article.intro.map((p, i) => (
@@ -167,6 +187,7 @@ export function ArticleView({ article, children, showSchema = true }: { article:
         Figures on this page are indicative for {DATA_DATE} unless a source is named. This is general information, not financial, legal or medical
         advice. Check the official source before you pay or decide.
       </p>
+      <ShareControls title={article.title} updatedAt={article.updatedAt} />
       <AdSlot variant="inline" index={2} />
     </article>
   );

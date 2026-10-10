@@ -19,8 +19,8 @@ const SIZE: Record<AdVariant, string> = {
  * One ad placement. Rules we follow:
  * - No pop-ups, interstitials, autoplay or sticky overlays. Ever.
  * - Every placement is labelled "Advertisement" or "Sponsored".
- * - With an AdSense client id set, Google serves the unit. Until then, a labelled
- *   "Sponsored / Related Hustle Idea" card keeps the layout honest and useful.
+ * - With an AdSense client id set, Google serves the unit. Until then, an internal
+ *   related-guide card is shown and is never described as a sponsorship.
  */
 export function AdSlot({ variant, index = 0, className }: { variant: AdVariant; index?: number; className?: string }) {
   if (ADSENSE_CLIENT_ID) {
@@ -37,7 +37,7 @@ export function AdSlot({ variant, index = 0, className }: { variant: AdVariant; 
   const card = SPONSOR_CARDS[index % SPONSOR_CARDS.length];
   return (
     <aside
-      aria-label="Sponsored"
+      aria-label="Related guide"
       className={cn(
         "my-6 rounded-lg border border-dashed bg-card/60 p-4",
         variant === "sidebar" && "p-5",
@@ -48,11 +48,11 @@ export function AdSlot({ variant, index = 0, className }: { variant: AdVariant; 
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
-            {card.label} · Related Hustle Idea
+            Related guide · Hustle idea
           </p>
           <p className="mt-1 font-semibold leading-snug">{card.title.replace("Related Hustle Idea: ", "")}</p>
           <p className="mt-1 text-sm text-muted-foreground">{card.blurb}</p>
-          <p className="mt-2 text-[11px] text-muted-foreground">{card.sponsor}</p>
+
         </div>
       </div>
       <Link href={card.href} className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">

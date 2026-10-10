@@ -10,15 +10,17 @@ export function generateStaticParams() {
   return staticSlugs("/telecom");
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  return articleMetadata(getArticle(`/telecom/${params.slug}`));
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  return articleMetadata(getArticle(`/telecom/${resolved.slug}`));
 }
 
-export default function TelecomPage({ params }: { params: { slug: string } }) {
-  if (!staticSlugs("/telecom").some((s) => s.slug === params.slug)) notFound();
-  const network = TELECOM.networks.find((n) => n.slug === params.slug);
+export default async function TelecomPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  if (!staticSlugs("/telecom").some((s) => s.slug === resolved.slug)) notFound();
+  const network = TELECOM.networks.find((n) => n.slug === resolved.slug);
   return (
-    <ArticleView article={getArticle(`/telecom/${params.slug}`)}>
+    <ArticleView article={getArticle(`/telecom/${resolved.slug}`)}>
       {network ? (
         <section aria-labelledby="plans" className="space-y-3">
           <h2 id="plans" className="text-2xl font-bold tracking-tight">

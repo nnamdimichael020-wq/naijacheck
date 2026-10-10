@@ -12,21 +12,23 @@ export function generateStaticParams() {
   return RECIPES.map((r) => ({ slug: r.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  return articleMetadata(getArticle(`/tools/cookbook/${params.slug}`));
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  return articleMetadata(getArticle(`/tools/cookbook/${resolved.slug}`));
 }
 
-export default function RecipePage({ params }: { params: { slug: string } }) {
-  if (!staticSlugs("/tools/cookbook").some((s) => s.slug === params.slug)) notFound();
-  const recipes = cookRecipes(params.slug);
+export default async function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolved = await params;
+  if (!staticSlugs("/tools/cookbook").some((s) => s.slug === resolved.slug)) notFound();
+  const recipes = cookRecipes(resolved.slug);
   return (
-    <ArticleView article={getArticle(`/tools/cookbook/${params.slug}`)}>
+    <ArticleView article={getArticle(`/tools/cookbook/${resolved.slug}`)}>
       <section aria-labelledby="scale" className="space-y-3">
         <h2 id="scale" className="text-2xl font-bold tracking-tight">
-          Live cost calculator
+          Indicative cost calculator
         </h2>
         <p className="text-sm text-muted-foreground">Change the city or the number of people. The cost updates straight away.</p>
-        <CookbookCalc recipes={recipes} cities={COOK_CITIES} fixedSlug={params.slug} />
+        <CookbookCalc recipes={recipes} cities={COOK_CITIES} fixedSlug={resolved.slug} />
       </section>
     </ArticleView>
   );

@@ -1,9 +1,11 @@
 /**
  * Cloudflare Worker entry point for the static Next.js export.
- * Static files are served from ./out by Workers Static Assets. Only /api/* is
- * routed through this Worker; /api/geo uses Cloudflare's request.cf location
- * metadata and is deliberately not cached because the response is visitor-specific.
+ * Static files are served from ./out by Workers Static Assets. Dynamic API
+ * responses are deliberately no-store. Web Push remains unavailable until the
+ * owner binds KV and adds VAPID secrets; see the owner runbook.
  */
+import { handlePushRequest, runPushMonitor, type PushEnv } from "./push";
+
 type CloudflareLocation = {
   country?: string;
   region?: string;
@@ -13,7 +15,7 @@ type CloudflareLocation = {
 
 type RequestWithCloudflare = Request & { cf?: CloudflareLocation };
 
-type Env = {
+type Env = PushEnv & {
   ASSETS: {
     fetch(request: Request): Promise<Response>;
   };
@@ -48,9 +50,11 @@ const worker = {
           headers: { allow: "GET, HEAD", "cache-control": "no-store" },
         });
       }
-
       return locationResponse(request as RequestWithCloudflare);
     }
+
+    const pushResponse = await handlePushRequest(request, env);
+    if (pushResponse) return pushResponse;
 
     if (pathname.startsWith("/api/")) {
       return new Response("Not found", {
@@ -60,6 +64,10 @@ const worker = {
     }
 
     return env.ASSETS.fetch(request);
+  },
+
+  async scheduled(_controller: unknown, env: Env): Promise<void> {
+    await runPushMonitor(env);
   },
 };
 

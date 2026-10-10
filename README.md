@@ -13,7 +13,7 @@ npm install
 npm run dev        # http://localhost:3000 (generates content first)
 ```
 
-Node 18.18 or later is required. `.nvmrc` pins Node 20.
+Node 20.9 or later is required. `.nvmrc` pins Node 20 to match the configured Cloudflare build runtime.
 
 ## Scripts
 
@@ -33,19 +33,19 @@ Node 18.18 or later is required. `.nvmrc` pins Node 20.
 app/                     Routes (App Router). Dynamic routes use generateStaticParams.
   page.tsx               Homepage dashboard
   prices/                Hub, [city], [city]/[item], markets/[slug], fuel, generator-diesel, cost-of-living
-  trends/                Hub with simulated X/TikTok monitor, [slug] slang and relationship pages
+  trends/                Public news/Wikipedia attention signals (not X/TikTok), [slug] slang and relationship pages
   hustle/                Hub with blueprint matcher and mock premium checkout, [slug] blueprints and combos
   howto/  exam/  telecom/  learn/
   tools/                 Hub, generator, solar, cookbook, cookbook/[slug]
-  admin/                 Editor console (password gate, noindex)
+  admin/                 Disabled public admin notice (noindex; no client-side security claim)
   about/  privacy/       Static pages (privacy under NDPA 2023)
   not-found.tsx          404 page
   sitemap.ts  robots.ts  Generated from the article list
 config/
   site.ts                SITE_CONFIG (name, domain, url, description) and constants
-  admin.ts               Admin password (client-side gate)
+  admin.ts               Retired client-side gate (empty; do not use for authentication)
 components/
-  ads/                   AdSlot (labelled sponsor cards, or AdSense when configured)
+  ads/                   AdSlot (internal related links; AdSense only after approved configuration)
   calc/                  Cost of living, generator, solar, cookbook calculators
   hustle/  trends/  admin/  prices/
   site-header.tsx  bottom-nav.tsx  site-footer.tsx  site-sidebar.tsx  search-bar.tsx
@@ -66,11 +66,7 @@ wrangler.jsonc           Cloudflare Workers Static Assets deployment configurati
 
 Edit the JSON in `data/`, then run `npm run generate` (or just `npm run build`). Every generated page, table and calculator reads from those files.
 
-The `/admin` console (password in `config/admin.ts`) lets an editor change prices, fuel and slang trend scores. Edits are saved as a draft in the browser.
-Download the JSON, replace the file in `/data`, and commit. The site changes after the next build.
-
-**Security note:** the admin password check runs in the browser, so it keeps casual visitors out, not determined ones. Put `/admin` behind
-Cloudflare Access before you give anyone real editing rights.
+The public `/admin` route is disabled. A client-side password is not authentication because its value and all browser-delivered data are readable. Edit JSON through a reviewed Git branch until a server-side editor is protected by Cloudflare Access or equivalent authentication. No submission queue exists, and community reports must not be collected through `/admin`.
 
 ## Deploy to Cloudflare Workers
 
@@ -82,27 +78,27 @@ This repository is configured as a **Worker with Static Assets**, not as a Cloud
 3. Use these build settings:
    - **Build command:** `npm run build`
    - **Deploy command:** `npx wrangler deploy`
-   - **Node.js version:** `20` (Wrangler is pinned to a Node 20-compatible release).
+   - **Node.js version:** `20` (the deployment-compatible Wrangler release is pinned until the owner upgrades the Cloudflare build runtime).
 4. Cloudflare Workers Builds must provide its normal deployment credentials; do not add API tokens to the repository.
 5. Optional: add **`NEXT_PUBLIC_ADSENSE_CLIENT`** = `ca-pub-XXXXXXXXXXXXXXXX` once your AdSense account is approved. The ad slots switch to Google units
    and the AdSense script loads.
-6. Attach `naijacheck.ng` to the deployed Worker in **Custom domains**. Set the same value in `config/site.ts` if you change it.
+6. Production currently remains on the existing Workers deployment. Do not change DNS, Worker routes/attachment, or `SITE_CONFIG` as part of non-domain maintenance. Domain and canonical decisions require a separate owner-approved change.
 
 `public/_headers` sets response headers and cache rules for static assets. Next.js generates `out/sitemap.xml` and `out/robots.txt` at build time.
 
 ## Live data
 
-Everything that can be read from a public source is refreshed automatically.
+The monitor attempts only configured public sources. A three-hour schedule is an attempt cadence, not a freshness guarantee: upstream publication and Worker build/deployment can add delay. Every snapshot has a source/effective time and a separate check state on `/status`.
 
 | Data | Source | Refresh |
 | --- | --- | --- |
-| Official USD (NFEM) | CBN exchange-rate table | every 3 hours |
-| Black market USD, GBP, EUR | Aboki Forex (buy and sell) | every 3 hours |
-| Reference GBP and EUR | open.er-api.com | every 3 hours |
-| Fuel depot medians and depot tables | Awajis, sourced from petroleumprice.ng | every 3 hours |
-| Headlines per topic | Google News RSS | every 3 hours |
-| Trend counts | Google News mentions (7 days) and Wikipedia pageviews | every 3 hours |
-| Official page changes (JAMB, NIMC, Immigration, CBN) | fingerprint of visible text | every 3 hours, flagged for review |
+| Official USD (NFEM) | CBN exchange-rate table | attempted every 3 hours; stale after 36h in registry |
+| Indicative parallel-market buy/sell quote | Aboki Forex | attempted every 3 hours; separate from CBN |
+| Reference GBP and EUR cross-rates | open.er-api.com | attempted every 3 hours; not CBN quotes |
+| Wholesale fuel depot medians/tables | Awajis, attributed to petroleumprice.ng | attempted every 3 hours; never retail pump prices |
+| Headlines per topic | Google News RSS | attempted every 3 hours; headline links are not fact verification |
+| Attention signals | Google News mentions (7 days) and Wikimedia pageviews | attempted every 3 hours; not X/TikTok trends |
+| Official page changes (JAMB, NIMC, Immigration, CBN) | fingerprint of visible text | attempted every 3 hours; human review required |
 
 `npm run monitor` runs all sources and writes `data/live/*.json`. It also updates `data/rates.json`, `data/fuel.json` and `data/slang.json`,
 which the pages already read. `npm run monitor:test` runs the parser tests against captured responses. A source that fails or changes layout keeps its
@@ -126,6 +122,29 @@ and not cached.
 - The Pages-only `functions/` convention is not used by this Worker deployment.
 - `npm run dev` starts the Next.js app, not Wrangler, so the location card falls back to device timezone if `/api/geo` is unavailable during development.
 - To test the deployed asset/Worker combination locally after building, run `npx wrangler dev`.
+
+## Trust, history, offline and privacy runbook
+
+- `lib/source-registry.ts` is the typed registry for monitored datasets. Add geography, product type/unit, source and method, source time, check time, cadence, stale threshold and limitation before displaying a new changing reading.
+- UTC ISO strings are stored in data. Visitor-facing source times are formatted in WAT; never substitute build time for source/effective time.
+- The monitor preserves last-good snapshots. It exits non-zero if every configured source group fails, while individual failures remain visible in `data/live/health.json`.
+- `data/history.json` starts empty. Only successful observations are appended; unchanged values are deduplicated and the file is capped at 400 points. Do not backfill without a cited historical source.
+- Food/city estimates, retail pump prices, telecom bundles, fees and cut-offs are manual/indicative. A page fingerprint is only a review flag.
+- The service worker caches the offline shell and previously visited same-origin pages/assets. `/api/*` is never cached. Offline UI explicitly labels saved changing figures as potentially stale.
+- Current browser storage: theme, chosen state, mock-premium flag, editor draft from legacy code if one already exists, and service-worker caches. Calculators/search run locally. No analytics, newsletter, web push, submissions or advertising network is enabled.
+- Web push and community submissions remain deferred: there is no authenticated moderator, consent/subscriber store, VAPID secret deployment or abuse-control path. Never call an in-page poll “push.”
+- `/admin` is intentionally unavailable. Do not restore a client-side password. Use server-side authentication/Cloudflare Access before handling moderation data.
+
+## Search Console setup (owner action)
+
+1. Do not change `config/site.ts`, DNS, Worker routes/attachment, canonicals, Open Graph URLs, robots or sitemap without separate owner approval. This non-domain work deliberately preserves the main-branch domain configuration and existing production host.
+2. Once the owner separately confirms the intended canonical host, add the matching **URL-prefix property** in Google Search Console. Complete one of Google's offered verification methods; do not commit a private verification credential.
+3. Submit the sitemap on that same confirmed host, then inspect a sample of hubs and detail pages. Search Console discovery/indexing is not guaranteed and has no promised timeline.
+4. If a host migration is approved later, verify ownership, DNS, HTTPS, Worker attachment and redirects before changing `SITE_CONFIG`; avoid serving two indexable canonical hosts.
+
+## Release checks
+
+Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/api/geo`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
 
 ## Licence
 

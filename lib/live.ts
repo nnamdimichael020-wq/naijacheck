@@ -21,9 +21,14 @@ export type LiveWiki = { article: string; views7d: number; prev7d: number; chang
 export type LiveFx = {
   checkedAt: string;
   seeded?: boolean;
+  officialStatus?: "recent" | "stale" | "seeded" | "unavailable";
+  blackMarketStatus?: "recent" | "stale" | "seeded" | "unavailable";
+  crossRateStatus?: "recent" | "stale" | "seeded" | "unavailable";
   official: { USD: number | null; GBP: number | null; EUR: number | null };
   officialAsOf: string | null;
   officialSource: SourceRef;
+  crossRateAsOf?: string | null;
+  crossRateSource?: SourceRef;
   blackMarket: { USD: { buy: number; sell: number }; GBP: { buy: number; sell: number } | null; EUR: { buy: number; sell: number } | null } | null;
   blackMarketAsOf: string | null;
   blackMarketSource: SourceRef;
@@ -38,7 +43,7 @@ export type LiveFuel = {
   depots: { petrol: { depot: string; state: string; price: number }[]; diesel: { depot: string; state: string; price: number }[]; lpg: { depot: string; state: string; price: number }[] };
 };
 
-export type HealthRow = { ok: boolean; checkedAt: string; asOf?: string | null; error?: string };
+export type HealthRow = { ok: boolean; checkedAt: string; asOf?: string | null; error?: string; lastSuccessfulAt?: string | null };
 export type WatchPage = { label: string; url: string; fingerprint?: string; lastChecked?: string; changedAt?: string | null; changedSincePrevious?: boolean; error?: string };
 
 export const LIVE_FX = fxLive as unknown as LiveFx;
@@ -52,7 +57,7 @@ export const LIVE_TRENDS = trendsLive as unknown as {
   terms: LiveTrendTerm[];
   wiki: LiveWiki[];
 };
-export const LIVE_WATCH = watchLive as unknown as { checkedAt: string | null; note?: string; pages: Record<string, WatchPage> };
+export const LIVE_WATCH = watchLive as unknown as { checkedAt: string | null; seeded?: boolean; note?: string; pages: Record<string, WatchPage> };
 export const LIVE_HEALTH = healthLive as unknown as Record<string, HealthRow>;
 
 /** Newest headlines across every topic, de-duplicated by title. */

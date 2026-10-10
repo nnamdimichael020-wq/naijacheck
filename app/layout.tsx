@@ -9,6 +9,8 @@ import { SiteSidebar } from "@/components/site-sidebar";
 import { BottomNav } from "@/components/bottom-nav";
 import { LiveTicker } from "@/components/live/ticker";
 import { JsonLd } from "@/components/json-ld";
+import { PwaClient } from "@/components/pwa-client";
+import { PushPrompt } from "@/components/push-notifications";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -65,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           >
             Skip to content
           </a>
+          <PwaClient />
           <SiteHeader />
           <LiveTicker />
           <div className="mx-auto flex w-full max-w-7xl flex-1 gap-8 px-4 lg:px-6">
@@ -77,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <SiteFooter />
           <BottomNav />
+          <PushPrompt />
         </ThemeProvider>
         <JsonLd data={[organizationSchema, websiteSchema]} />
         {ADSENSE_CLIENT_ID ? (

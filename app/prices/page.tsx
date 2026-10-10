@@ -11,9 +11,9 @@ export default function PricesPage() {
     <ArticleView article={article}>
       <section aria-labelledby="city-table" className="space-y-3">
         <h2 id="city-table" className="text-2xl font-bold tracking-tight">
-          Staples in all 10 cities
+          Dated staple estimates with explicit city rows
         </h2>
-        <p className="text-sm text-muted-foreground">Pick a city for all 17 items, or open a staple for a city-by-city ranking.</p>
+        <p className="text-sm text-muted-foreground">These are unverified planning estimates, not live quotes or NBS survey values. Cities without explicit observations are not inferred.</p>
         <CityPriceTable />
       </section>
     </ArticleView>

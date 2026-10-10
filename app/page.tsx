@@ -12,6 +12,7 @@ import { LIVE_FX, LIVE_FUEL } from "@/lib/live";
 import { Freshness } from "@/components/live/freshness";
 import { LocationCard } from "@/components/live/location-card";
 import { LiveNewsFeed } from "@/components/live/news-feed";
+import { DATASET_REGISTRY } from "@/lib/source-registry";
 import {
   BLUEPRINT_BY_SLUG,
   CITIES,
@@ -46,14 +47,14 @@ export const metadata: Metadata = {
 const TOOL_LINKS = [
   { href: "/prices/cost-of-living", label: "How far will ₦80k go?", icon: Banknote, blurb: "Monthly budget across every city." },
   { href: "/tools/generator", label: "Generator fuel calculator", icon: Calculator, blurb: "Diesel or petrol per day and per month." },
-  { href: "/tools/cookbook", label: "Recipe cost by family size", icon: Wrench, blurb: "Live prices for jollof, afang and more." },
+  { href: "/tools/cookbook", label: "Recipe cost by family size", icon: Wrench, blurb: "Indicative dated prices for jollof, afang and more." },
   { href: "/tools/solar", label: "Solar payback calculator", icon: Sparkles, blurb: "How many years to pay off the inverter." },
 ];
 
-const RICE_CITIES = ["lagos", "onitsha", "kano", "aba", "abuja"];
+const RICE_CITIES = ["lagos", "onitsha", "kano", "aba"];
 
 export default function HomePage() {
-  const trending = TRENDING_SLUGS.map((s) => SLANG_BY_SLUG[s]).filter(Boolean);
+  const trending = TRENDING_SLUGS.map((s) => SLANG_BY_SLUG[s]).filter(Boolean).sort((a, b) => b.trendScore - a.trendScore);
   const sotd = SLANG_BY_SLUG[SLANG_OF_THE_DAY];
   const picks = ["pos-business", "provision-store", "suya-spot"].map((s) => BLUEPRINT_BY_SLUG[s]).filter(Boolean);
   const official = LIVE_FX.official.USD ?? RATES.official.USD;
@@ -65,6 +66,9 @@ export default function HomePage() {
   const cityNames = Object.fromEntries(CITIES.map((c) => [c.slug, c.name]));
   const jamb = EXAM.nationalCutOff;
   const unilag = EXAM.institutions.find((i) => i.slug === "unilag");
+  const officialFxRecord = DATASET_REGISTRY.find((d) => d.id === "cbn-usd")!;
+  const parallelFxRecord = DATASET_REGISTRY.find((d) => d.id === "parallel-fx")!;
+  const fuelRecord = DATASET_REGISTRY.find((d) => d.id === "fuel-depot")!;
 
   return (
     <div className="space-y-10">
@@ -120,7 +124,7 @@ export default function HomePage() {
       {/* Where you are + live headlines */}
       <section aria-labelledby="where-h" className="grid gap-6 lg:grid-cols-[1fr_1.1fr]">
         <h2 id="where-h" className="sr-only">
-          Prices for where you are, and live headlines
+          Prices for where you are, and monitored headlines
         </h2>
         <LocationCard
           cityNames={cityNames}
@@ -129,7 +133,11 @@ export default function HomePage() {
           petrolMedian={petrolMedian}
           dieselLagos={dieselLagos}
           fxAsOf={LIVE_FX.officialAsOf}
+          fxState={officialFxRecord.state}
+          parallelAsOf={LIVE_FX.blackMarketAsOf}
+          parallelState={parallelFxRecord.state}
           fuelAsOf={LIVE_FUEL.asOf}
+          fuelState={fuelRecord.state}
         />
         <LiveNewsFeed limit={6} />
       </section>
@@ -151,27 +159,29 @@ export default function HomePage() {
               <CardTitle className="flex items-center gap-2 text-base">
                 <Droplet className="size-4 text-accent" aria-hidden="true" /> Dollar and fuel
               </CardTitle>
-              <CardDescription>
-                <Freshness asOf={LIVE_FX.officialAsOf} label="FX" />
-              </CardDescription>
+              <CardDescription>Each reading has its own source state.</CardDescription>
             </CardHeader>
             <CardContent>
               <dl className="grid grid-cols-2 gap-3 text-sm">
                 <div>
                   <dt className="text-muted-foreground">USD official</dt>
                   <dd className="text-xl font-extrabold tabular-nums">₦{official.toLocaleString("en-NG", { minimumFractionDigits: 2 })}</dd>
+                  <Freshness asOf={officialFxRecord.sourceTime} state={officialFxRecord.state} source="CBN" />
                 </div>
                 <div>
-                  <dt className="text-muted-foreground">USD black market</dt>
+                  <dt className="text-muted-foreground">USD parallel quote</dt>
                   <dd className="text-xl font-extrabold tabular-nums">₦{black.toLocaleString("en-NG")}</dd>
+                  <Freshness asOf={parallelFxRecord.sourceTime} state={parallelFxRecord.state} source="Aboki" />
                 </div>
                 <div>
                   <dt className="text-muted-foreground">Petrol, depot median</dt>
                   <dd className="text-xl font-extrabold tabular-nums">{petrolMedian ? naira(petrolMedian) : "n/a"}/L</dd>
+                  <Freshness asOf={fuelRecord.sourceTime} state={fuelRecord.state} source="Awajis" />
                 </div>
                 <div>
                   <dt className="text-muted-foreground">Diesel, depot median</dt>
                   <dd className="text-xl font-extrabold tabular-nums">{dieselMedian ? naira(dieselMedian) : "n/a"}/L</dd>
+                  <Freshness asOf={fuelRecord.sourceTime} state={fuelRecord.state} source="Awajis" />
                 </div>
               </dl>
               <div className="mt-4 flex gap-3 text-sm font-semibold text-primary">
