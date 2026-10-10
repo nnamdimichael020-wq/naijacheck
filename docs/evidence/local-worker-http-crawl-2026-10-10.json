@@ -1,0 +1,1242 @@
+{
+  "observedAt": "2026-10-10T08:24:17.930Z",
+  "environment": "local-wrangler-worker",
+  "origin": "http://127.0.0.1:8787",
+  "routesRequested": 175,
+  "expectedGeneratedRoutes": 171,
+  "non200": [],
+  "unknownRoute": {
+    "path": "/definitely-missing",
+    "httpStatus": 404,
+    "contentType": "text/html; charset=utf-8",
+    "cacheControl": "public, max-age=0, must-revalidate",
+    "bytes": 67395
+  },
+  "rows": [
+    {
+      "path": "/",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 153693
+    },
+    {
+      "path": "/_not-found",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 67395
+    },
+    {
+      "path": "/404",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 67395
+    },
+    {
+      "path": "/about",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 70508
+    },
+    {
+      "path": "/admin",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 65038
+    },
+    {
+      "path": "/api/geo",
+      "httpStatus": 200,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": "private, no-store",
+      "bytes": 78
+    },
+    {
+      "path": "/definitely-missing",
+      "httpStatus": 404,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 67395
+    },
+    {
+      "path": "/exam",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106575
+    },
+    {
+      "path": "/exam/federal-university-fees-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 97371
+    },
+    {
+      "path": "/exam/jamb-cutoff-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 109870
+    },
+    {
+      "path": "/exam/jamb-cutoff-abu-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 102770
+    },
+    {
+      "path": "/exam/jamb-cutoff-oau-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 103047
+    },
+    {
+      "path": "/exam/jamb-cutoff-private-universities-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 97492
+    },
+    {
+      "path": "/exam/jamb-cutoff-ui-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 103414
+    },
+    {
+      "path": "/exam/jamb-cutoff-unilag-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 103333
+    },
+    {
+      "path": "/exam/jamb-cutoff-unn-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 102916
+    },
+    {
+      "path": "/exam/jamb-registration-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 95811
+    },
+    {
+      "path": "/exam/neco-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 96004
+    },
+    {
+      "path": "/exam/post-utme-guide-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 96322
+    },
+    {
+      "path": "/exam/school-resumption-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 96982
+    },
+    {
+      "path": "/exam/waec-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 96510
+    },
+    {
+      "path": "/exam/waec-syllabus-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 96261
+    },
+    {
+      "path": "/howto",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 111138
+    },
+    {
+      "path": "/howto/birth-certificate-replacement",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 111122
+    },
+    {
+      "path": "/howto/bvn-correction",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 111103
+    },
+    {
+      "path": "/howto/cac-business-name",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 113436
+    },
+    {
+      "path": "/howto/drivers-licence-frsc",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112260
+    },
+    {
+      "path": "/howto/freelancer-tax-tin",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112774
+    },
+    {
+      "path": "/howto/nin-correction",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112623
+    },
+    {
+      "path": "/howto/passport-renewal-2026",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 114884
+    },
+    {
+      "path": "/howto/police-character-certificate",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 113866
+    },
+    {
+      "path": "/howto/tax-clearance-certificate",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 111069
+    },
+    {
+      "path": "/hustle",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 144951
+    },
+    {
+      "path": "/hustle/generator-service",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117264
+    },
+    {
+      "path": "/hustle/generator-service-with-1m-in-aba",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112284
+    },
+    {
+      "path": "/hustle/generator-service-with-1m-in-kano",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112406
+    },
+    {
+      "path": "/hustle/generator-service-with-1m-in-lagos",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112458
+    },
+    {
+      "path": "/hustle/generator-service-with-1m-in-onitsha",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112665
+    },
+    {
+      "path": "/hustle/home-baking",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117725
+    },
+    {
+      "path": "/hustle/home-baking-with-200k-in-aba",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112591
+    },
+    {
+      "path": "/hustle/home-baking-with-200k-in-kano",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112726
+    },
+    {
+      "path": "/hustle/home-baking-with-200k-in-lagos",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112778
+    },
+    {
+      "path": "/hustle/home-baking-with-200k-in-onitsha",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112972
+    },
+    {
+      "path": "/hustle/laundry-cleaning",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117252
+    },
+    {
+      "path": "/hustle/laundry-cleaning-with-500k-in-aba",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112009
+    },
+    {
+      "path": "/hustle/laundry-cleaning-with-500k-in-kano",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112131
+    },
+    {
+      "path": "/hustle/laundry-cleaning-with-500k-in-lagos",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112183
+    },
+    {
+      "path": "/hustle/laundry-cleaning-with-500k-in-onitsha",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112377
+    },
+    {
+      "path": "/hustle/phone-accessories",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117376
+    },
+    {
+      "path": "/hustle/phone-accessories-with-300k-in-aba",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 111982
+    },
+    {
+      "path": "/hustle/phone-accessories-with-300k-in-kano",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112117
+    },
+    {
+      "path": "/hustle/phone-accessories-with-300k-in-lagos",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112169
+    },
+    {
+      "path": "/hustle/phone-accessories-with-300k-in-onitsha",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112376
+    },
+    {
+      "path": "/hustle/pos-business",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 118155
+    },
+    {
+      "path": "/hustle/pos-business-with-200k-in-aba",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112514
+    },
+    {
+      "path": "/hustle/pos-business-with-200k-in-kano",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112636
+    },
+    {
+      "path": "/hustle/pos-business-with-200k-in-lagos",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112688
+    },
+    {
+      "path": "/hustle/pos-business-with-200k-in-onitsha",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112882
+    },
+    {
+      "path": "/hustle/provision-store",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117621
+    },
+    {
+      "path": "/hustle/provision-store-with-500k-in-aba",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112242
+    },
+    {
+      "path": "/hustle/provision-store-with-500k-in-kano",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112364
+    },
+    {
+      "path": "/hustle/provision-store-with-500k-in-lagos",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112416
+    },
+    {
+      "path": "/hustle/provision-store-with-500k-in-onitsha",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112610
+    },
+    {
+      "path": "/hustle/suya-spot",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117495
+    },
+    {
+      "path": "/hustle/suya-spot-with-500k-in-aba",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112110
+    },
+    {
+      "path": "/hustle/suya-spot-with-500k-in-kano",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112258
+    },
+    {
+      "path": "/hustle/suya-spot-with-500k-in-lagos",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112310
+    },
+    {
+      "path": "/hustle/suya-spot-with-500k-in-onitsha",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112504
+    },
+    {
+      "path": "/hustle/thrift-fashion",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117349
+    },
+    {
+      "path": "/hustle/thrift-fashion-with-250k-in-aba",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 111988
+    },
+    {
+      "path": "/hustle/thrift-fashion-with-250k-in-kano",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112123
+    },
+    {
+      "path": "/hustle/thrift-fashion-with-250k-in-lagos",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112175
+    },
+    {
+      "path": "/hustle/thrift-fashion-with-250k-in-onitsha",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 112382
+    },
+    {
+      "path": "/learn",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 101234
+    },
+    {
+      "path": "/learn/budget-80k",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 101962
+    },
+    {
+      "path": "/learn/data-saving-tips",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 101200
+    },
+    {
+      "path": "/learn/electricity-bill-explained",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 101961
+    },
+    {
+      "path": "/learn/freelancer-paid-from-abroad",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 101898
+    },
+    {
+      "path": "/learn/naira-vs-dollar-explained",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 102006
+    },
+    {
+      "path": "/learn/read-your-payslip",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 101544
+    },
+    {
+      "path": "/learn/small-money-side-hustles",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 101751
+    },
+    {
+      "path": "/learn/spot-fake-job-offers",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 101969
+    },
+    {
+      "path": "/offline",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 890
+    },
+    {
+      "path": "/prices",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 113633
+    },
+    {
+      "path": "/prices/aba",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 135480
+    },
+    {
+      "path": "/prices/aba/beans",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 118148
+    },
+    {
+      "path": "/prices/aba/egg",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117223
+    },
+    {
+      "path": "/prices/aba/garri",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 116318
+    },
+    {
+      "path": "/prices/aba/rice",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117636
+    },
+    {
+      "path": "/prices/aba/yam",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117206
+    },
+    {
+      "path": "/prices/cost-of-living",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 113132
+    },
+    {
+      "path": "/prices/fuel",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117003
+    },
+    {
+      "path": "/prices/generator-diesel",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 104989
+    },
+    {
+      "path": "/prices/kano",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 136062
+    },
+    {
+      "path": "/prices/kano/beans",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 118640
+    },
+    {
+      "path": "/prices/kano/egg",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117562
+    },
+    {
+      "path": "/prices/kano/garri",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 116846
+    },
+    {
+      "path": "/prices/kano/rice",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 118128
+    },
+    {
+      "path": "/prices/kano/yam",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117700
+    },
+    {
+      "path": "/prices/lagos",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 136596
+    },
+    {
+      "path": "/prices/lagos/beans",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 119249
+    },
+    {
+      "path": "/prices/lagos/egg",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 118184
+    },
+    {
+      "path": "/prices/lagos/garri",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117315
+    },
+    {
+      "path": "/prices/lagos/rice",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 118597
+    },
+    {
+      "path": "/prices/lagos/yam",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 118322
+    },
+    {
+      "path": "/prices/markets",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108199
+    },
+    {
+      "path": "/prices/markets/ariaria",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106353
+    },
+    {
+      "path": "/prices/markets/idumota",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106272
+    },
+    {
+      "path": "/prices/markets/kantin-kwari",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106104
+    },
+    {
+      "path": "/prices/markets/mile-12",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106940
+    },
+    {
+      "path": "/prices/markets/onitsha-main-market",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106314
+    },
+    {
+      "path": "/prices/markets/oyingbo",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106304
+    },
+    {
+      "path": "/prices/markets/sabon-gari-kano",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106340
+    },
+    {
+      "path": "/prices/onitsha",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 136248
+    },
+    {
+      "path": "/prices/onitsha/beans",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 118578
+    },
+    {
+      "path": "/prices/onitsha/egg",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117653
+    },
+    {
+      "path": "/prices/onitsha/garri",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 116748
+    },
+    {
+      "path": "/prices/onitsha/rice",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 118066
+    },
+    {
+      "path": "/prices/onitsha/yam",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 117636
+    },
+    {
+      "path": "/privacy",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 76473
+    },
+    {
+      "path": "/robots.txt",
+      "httpStatus": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 84
+    },
+    {
+      "path": "/sitemap.xml",
+      "httpStatus": 200,
+      "contentType": "application/xml",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 20744
+    },
+    {
+      "path": "/status",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 119751
+    },
+    {
+      "path": "/telecom",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 101251
+    },
+    {
+      "path": "/telecom/9mobile",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 105018
+    },
+    {
+      "path": "/telecom/airtel",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 105035
+    },
+    {
+      "path": "/telecom/airtime-to-cash",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 97230
+    },
+    {
+      "path": "/telecom/cheapest-data-this-week",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 96985
+    },
+    {
+      "path": "/telecom/compare-networks",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 97039
+    },
+    {
+      "path": "/telecom/glo",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 104911
+    },
+    {
+      "path": "/telecom/mtn",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 104821
+    },
+    {
+      "path": "/telecom/night-plans",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 96580
+    },
+    {
+      "path": "/tools",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 98535
+    },
+    {
+      "path": "/tools/cookbook",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 114225
+    },
+    {
+      "path": "/tools/cookbook/afang-soup",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 110172
+    },
+    {
+      "path": "/tools/cookbook/banga-soup",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 109830
+    },
+    {
+      "path": "/tools/cookbook/efo-riro",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 110346
+    },
+    {
+      "path": "/tools/cookbook/egusi-soup",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 110151
+    },
+    {
+      "path": "/tools/cookbook/jollof-rice",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 110507
+    },
+    {
+      "path": "/tools/cookbook/moi-moi",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 110939
+    },
+    {
+      "path": "/tools/cookbook/ofada-rice-and-ayamase",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 111093
+    },
+    {
+      "path": "/tools/cookbook/okra-soup",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 109691
+    },
+    {
+      "path": "/tools/cookbook/pepper-soup",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 110171
+    },
+    {
+      "path": "/tools/cookbook/yam-porridge",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 111221
+    },
+    {
+      "path": "/tools/generator",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 102092
+    },
+    {
+      "path": "/tools/solar",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 100829
+    },
+    {
+      "path": "/trends",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 136712
+    },
+    {
+      "path": "/trends/abeg",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108027
+    },
+    {
+      "path": "/trends/achalugo",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 110272
+    },
+    {
+      "path": "/trends/chop-life",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108838
+    },
+    {
+      "path": "/trends/demure-naija",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 111394
+    },
+    {
+      "path": "/trends/detty-december",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 109877
+    },
+    {
+      "path": "/trends/ehen",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108308
+    },
+    {
+      "path": "/trends/emotional-blackmail",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106785
+    },
+    {
+      "path": "/trends/emotional-labour",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106612
+    },
+    {
+      "path": "/trends/gaslighting-in-naija-relationships",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108333
+    },
+    {
+      "path": "/trends/gbese",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108981
+    },
+    {
+      "path": "/trends/ghosting",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 105824
+    },
+    {
+      "path": "/trends/gist",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108521
+    },
+    {
+      "path": "/trends/japa",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108832
+    },
+    {
+      "path": "/trends/jara",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108436
+    },
+    {
+      "path": "/trends/kelebu",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 110668
+    },
+    {
+      "path": "/trends/labubu-in-nigeria",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 111153
+    },
+    {
+      "path": "/trends/love-bombing",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106589
+    },
+    {
+      "path": "/trends/oblee",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 109885
+    },
+    {
+      "path": "/trends/owanbe",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 109309
+    },
+    {
+      "path": "/trends/sabi",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108376
+    },
+    {
+      "path": "/trends/shakara",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108167
+    },
+    {
+      "path": "/trends/sharp-sharp",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108241
+    },
+    {
+      "path": "/trends/situationship",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106592
+    },
+    {
+      "path": "/trends/soft-life",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 109766
+    },
+    {
+      "path": "/trends/sope-purr",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 109548
+    },
+    {
+      "path": "/trends/toxic-positivity",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106532
+    },
+    {
+      "path": "/trends/trauma-bonding",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 106515
+    },
+    {
+      "path": "/trends/wahala",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "bytes": 108451
+    }
+  ]
+}
