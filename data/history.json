@@ -54,6 +54,15 @@
       "unit": "NGN per USD",
       "geography": "Nigeria",
       "sourceUrl": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html"
+    },
+    {
+      "dataset": "parallel-usd-ngn-buy",
+      "observedAt": "2026-10-10T09:19:49.286Z",
+      "sourceTime": "2026-10-10T09:07:00.000Z",
+      "value": 1370,
+      "unit": "NGN per USD",
+      "geography": "Nigeria indicative quote",
+      "sourceUrl": "https://abokiforex.app/"
     }
   ]
 }
