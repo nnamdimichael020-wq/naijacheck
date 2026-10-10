@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-10T09:19:49.286Z",
+  "updatedAt": "2026-10-10T12:30:04.396Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
-    "japa",
     "chop-life",
     "oblee",
-    "achalugo",
-    "detty-december"
+    "japa",
+    "detty-december",
+    "achalugo"
   ],
   "terms": [
     {
@@ -150,7 +150,7 @@
       "term": "Japa",
       "kind": "slang",
       "trend": "rising",
-      "trendScore": 100,
+      "trendScore": 67,
       "confidence": "high",
       "meaning": "To migrate or leave Nigeria, usually for work, study or a better life abroad.",
       "detail": "Japa is Yoruba street slang for escaping or running away. Since the mid-2020s it has meant migrating abroad. It shows up in family WhatsApp groups, church prayers and job chats. It is also a big money topic: passports, visas, IELTS and exam fees are all tied to japa.",
@@ -165,7 +165,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage. See our passport and visa guides for the costs.",
-      "mentions7d": 3
+      "mentions7d": 2
     },
     {
       "slug": "soft-life",
@@ -305,8 +305,8 @@
       "slug": "detty-december",
       "term": "Detty December",
       "kind": "trend",
-      "trend": "steady",
-      "trendScore": 33,
+      "trend": "rising",
+      "trendScore": 67,
       "confidence": "high",
       "meaning": "The December festive season when diaspora Africans come home and spend heavily on parties, travel and fashion.",
       "detail": "Detty December started as a Ghanaian and Nigerian festive phrase. It describes the nightlife and money flow when returning diaspora folk spend in Lagos, Accra and other cities. For traders, it is the busiest season of the year: food, fashion and events see huge spikes.",
@@ -321,7 +321,7 @@
       ],
       "platform": "Instagram, TikTok",
       "source": "Seasonal usage, 2024-2026.",
-      "mentions7d": 1
+      "mentions7d": 2
     },
     {
       "slug": "sabi",
