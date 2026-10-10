@@ -1,46 +1,5 @@
 {
-  "checkedAt": "2026-10-10T08:04:39.853Z",
+  "checkedAt": "2026-10-10T08:06:47.174Z",
   "note": "Sanitized parser/fetch diagnostics only; full response bodies are never retained.",
-  "sources": {
-    "cbn": {
-      "source": "cbn",
-      "checkedAt": "2026-10-10T08:04:39.853Z",
-      "reason": "NFEM table/header/newest row not recognised",
-      "requestedUrl": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
-      "finalUrl": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
-      "httpStatus": 200,
-      "contentType": "text/html",
-      "responseBytes": 14582,
-      "title": "Exchange Rates | Central Bank of Nigeria",
-      "tableShapes": [
-        {
-          "rows": 2,
-          "headers": []
-        }
-      ],
-      "resourceHints": [
-        "Exchange Rates",
-        "cbn, central bank of nigeria, exchange rates, exchange rate, conversion rate, FX, foreign exchange rate, Nigerian Foreign Exchange Market, FOREX, Nigerian Foreign Exchange Market, NFEM",
-        ">Exchange Rates</h1>\r\n\t\t\t\t<span style=",
-        "/rates/",
-        ">Exchange Rates</li>\r\n\t\t\t\t</ol>\r\n\t\t\t</div>\r\n\r\n\t\t</section><!-- #page-title end -->\r\n\r\n<!--\t\t<div w3-include-html=",
-        ">\r\n\t\t\t<h2>Exchange Rates</h2>\r\n\t\t\t<div id=",
-        "NFEM Rates",
-        "/api/GetAllNFEM_RatesGRAPH",
-        "NFEM Rate",
-        "weightedAvgRate",
-        "Highest Rate",
-        "highestrate",
-        "Lowest Rate",
-        "lowestrate",
-        "Closing Rate",
-        "closingrate",
-        "Simple Average Rate",
-        "simpleAvgRate",
-        "ratedate",
-        "><b>NIGERIAN FOREIGN EXCHANGE MARKET (NFEM) RATES (₦/US$)</b></td>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td width="
-      ],
-      "excerpt": "Exchange Rates | Central Bank of Nigeria Exchange Rates ......providing empirical data for sound policy formulation Home Data & Statistics Exchange Rates --> Exchange Rates NIGERIAN FOREIGN EXCHANGE MARKET (NFEM) RATES (₦/US$) | Date | NFEM Rate (₦/US$) | Highest Rate (₦/US$) | Lowest Rate (₦/US$) | Closing Rate (₦/US$) | Simple Aver. Rate (Mean) (₦/US$) | NFEM Interbank Turnover (US$) | No. of Deals at Interbank | NFEM Total Turnover (US$) | No. of Deals at NFEM | *NFEM rate is derived at Volume Weighted Average and stands as the official exchange rate for the day. Export to Excel"
-    }
-  }
+  "sources": {}
 }

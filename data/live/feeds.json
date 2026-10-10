@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T08:04:39.853Z",
+  "checkedAt": "2026-10-10T08:06:47.174Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -16,12 +16,6 @@
           "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZVlQVU9hUG5VS3BPTTQzTnhwaFlVVUNqXzJDOUVaMHRUSW9OYi14WWJGV20zR0pXeW9CblNyR0xPZVdPT1RNalRoRnI5eDBfTTduSHJHX1JVSUtYUXRUYm1oSnFUc0lOMXBOTEdEUjN6TTc4WWVOYlZ3QlowNEFXbFdVVnRlMWg0TmlsXy1UYllueW05X1F5RFVocXZJNnVW0gGmAUFVX3lxTE9OLVRuRHdvNERlLVBWbm5oSGNWTndlU2Ezell2NFIwSVlwbFA1M2dkZXJQUnRvdGN5TmtUWHo0YjVTVkx0NVhWSnVxYjBFd3E4NTJuZnhBVHhtLWhtU01PN2dvOUV1UnVTUXUzaDZ3dXNTc2JUZ0FnZU1BV1VDOXdVSXB4LUd5MDd5dXNpMlBOellMMkVTbXc4WmdHOEZtWmwyMWVHMkE?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-09T23:57:09.000Z"
-        },
-        {
-          "title": "NNPC petrol price discount: Ihe di n'ime 'onyinye' mmanụ ụgbọala gọọmenti Nigeria na-enye ụmụafọ ya",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0tRy1Ld0FBM2R6WmNMeG55VUZaeEVzbG5qZHVNNUhyc1JGdmFCVVhOTEx5NnZFeVJvLU03ZUtpSzNIM3NHQlA1TzFIM1o4cktSVEsxUUlja3BJSnPSAWBBVV95cUxQUUJYN2hJaUxBRk1kM0V4WFpHb2oxQTdJSzhHSG5KZ1ByaVhPSXdGMHZUZXJjSElpMlFPV0lzVDVseWdleTRvazEzYUlLTmdINzY4LW1YUlNHZkk5VXZGbmg?oc=5",
-          "source": "BBC",
-          "published": "2026-10-09T20:07:56.000Z"
         },
         {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
@@ -42,22 +36,28 @@
           "published": "2026-10-08T19:11:32.000Z"
         },
         {
-          "title": "Nigeria: NNPC’s fuel revenue plunges 78% amid Dangote-led price war",
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNzEzT0E0V2V4b3F5eUFQMWdlNTVSOXZpZFp3M0hGM0pXTGpZeUs3TkRNaGtkenhqRTBxeVZydmRFSVQ2VHMyUzZrY2tpQzZObEo2eldJVUtxNnVtZGd3XzNmajJvNG1pUzNsS0VwRk5WOGtvS0QyejQ0WGF2amdVMVVmUzNPcHZMOXlSUjN5ejV3djYyWlZfMzg0T3d3eU1lRTZFalVHVQ?oc=5",
-          "source": "The Africa Report",
-          "published": "2026-10-07T07:00:00.000Z"
-        },
-        {
-          "title": "Nigeria’s N1,350 Petrol Price Plan Shifts Fuel Cost Burden to Dangote Refinery, Importers",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOQlhGMHVxd3dpTjlZXzNCelRaUkJXNF9FR3U5Z0lDMzZHWWpYZnJfQXZQeExIMUFiTnpJczJ2LTBUR3VhLTRMZU0tTnFoUnZUOGh2b1VDbm56MkF1X2ZOdDluNTVNMHJjU1VEdDMyNXhJdzhxLWwxTS03eURMOXZSZDlqM191VTFNWFVCQjNkeVN3dDdiZmotek5SVG1KV3h2YXZfbXpQdmJKYmI1SmtBSkQ0ajIxTEJsZHUwMEpFeXp0enFCeWdv0gHHAUFVX3lxTE5CWEYwdXF3d2lOOVlfM0J6VFpSQlc0X0VHdTlnSUMzNkdZalhmcl9BdlB4TEgxQWJOeklzMnYtMFRHdWEtNExlTS1OcWhSdlQ4aHZvVUNubnoyQXVfZk50OW41NU0wcmNTVUR0MzI1eEl3OHEtbDFNLTd5REw5dlJkOWozX3VVMU1YVUJCM2R5U3d0N2Jmai16TlJUbUpXeHZhdl9telB2YkpiYjVKa0FKRDRqMjFMQmxkdTAwSkV5enR6cUJ5Z28?oc=5",
-          "source": "Investors King",
-          "published": "2026-10-09T13:01:51.000Z"
-        },
-        {
           "title": "NNPC extends N66 petrol discount to October 31, debunks subsidy return",
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd1VKM01rYU9WNEtjb2M5T181UnNOUmVWUW5xY1c4d2QySE5fQVAzMlBlcEVQSDAzVGFqNkZXWGxfUDRaMGVBdDV1MExUcXNXd2ZvSWcwOEhhVHFQRHF6aW0yTy1panJWT0gtRnRTekNxM3N6VHlIUVNuTzVpaGdORDdRTFBBSUszZ3NpSUo4NG5kRWNL?oc=5",
           "source": "Punch Newspapers",
           "published": "2026-10-09T11:06:28.000Z"
+        },
+        {
+          "title": "Nigeria proposes petrol price cap to curb fuel cost volatility",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOE45NlZtUnFaOXY4Yy1jZi12VTVtYXJzdHIzZUMtYW82N0JIbjhjTW5oWHdtR0lUSXFZaTUtU3doRDRqY0pvb2xiU1VDa3Z5T2Q4OVNpVkxXdnE5cVpuM0J6QzZHX09FNElGTTltdEpwSkpVOTVLTV81b1dKeWxkM0FRN0tIQk40TkYyQ2xDX2RCV0RpenFFc3ZITDczaDNrM25fWVg4aktZOXdLaXhGbA?oc=5",
+          "source": "Reuters",
+          "published": "2026-10-08T16:43:53.000Z"
+        },
+        {
+          "title": "Food Prices Expected To Drop In Nigeria With Government's New Petrol Price Policy- PETROAN",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVzBYVVRYWmh4TDByODd1Q3RSakstc1gtUk5McUlPYXlMeHF3ZUNWT0lYSzJuaW45d1ZXY3NtWEVQT0tJX3B3NFhNdEEyUHJNYk1oajRSMURGMTZjdXJkQzZOaHFHU09UdEtvOWJheENsb3hrdTl2M05HdjhzR3RSUFdabWNaN0c3MU9aR015bkFyazFQNXdqT2gtQ2pGZ1MyMkR1alJiVF9BQnQ5d1hsZw?oc=5",
+          "source": "LEADERSHIP Newspapers",
+          "published": "2026-10-09T16:45:44.000Z"
+        },
+        {
+          "title": "Fuel Price Discount: Atiku Asks FG, ‘What Happens on Day 31?’",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSUVFOGJVamNic29GTFEyQ3JvTUdVdzVkTTc3X2VuNVZ6Q0dtNXNqVUdrTVhzeWg0ZXpGa20wa2RYNkwxcHZKSjBrNWw5TC1xZnU4SFp1YWw0ZEU2VkV0bGx0LVVKNkduY0dyVlNXaTh1SzBGWUdSWEZ4SHdrRGVaUGtjUzdWWmtXdWRoSkJjdVN3c21oRjltdGRBZzk?oc=5",
+          "source": "THISDAYLIVE",
+          "published": "2026-10-10T04:13:10.000Z"
         }
       ]
     },
@@ -146,16 +146,16 @@
           "published": "2026-05-15T07:00:00.000Z"
         },
         {
-          "title": "UTME: JAMB Retains 150 As University Admission Cut-Off Mark",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcWZjOTBYdWU5UHhtc2ZMdVdNWGY5R2llVUxvM1N3bXZ5RW54SHFqY28yU003RERuNW55MlpIakdoYmJJZjdOQ2UwMG5RdnF5Vzhud3VYSUk1d1dkVXRqeHdfb2RsRXY2OWRRNWVCVFBuZWtzQzJTbk1qUTdzZW5DMFpiYTl3Zno3Skpab2lOVlZRaUNSbGI2WElacFpJQQ?oc=5",
-          "source": "Channels Television",
-          "published": "2026-05-11T07:00:00.000Z"
-        },
-        {
           "title": "UNIOSUN announces 2026/2027 cut-off marks, warns candidates against admission fraud",
           "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNQmFPMF84X2xORHQ4WTNwVTFLdGo2MmhMRDQ2WVJNeGxJS3BLc2FVM2ktMUVwcGJPek16b2t2cEp2Q3FLam9kcW1JUkRvVGZVeHIySThlVndoWjRMM19WWVFyZTJKRU1FNnVTU2d2Rkp2VnMyaHE4b2pGWmVyaE1qQXA3d1lNNUttQUxTZUNqNllVTEhMRVU5dWxVVTZVWGlyeWtTU2930gGuAUFVX3lxTE1EdUlvUFZpTWRwQTFtemx5N3ZyVFFqM3FyR3d2TGFqcW9rOFlLaUVtNTVKMlNhdHp0dE5mUk9sMHhOYUJLSFNPTWJjZTVFTHdmaVhNMXVIWGF4NHViXzdyaHhkLUx1aG5uTWNIR2hjMVBFcUZGQzlURHRNTXFhVnRobkFOX2prSHIxc2JocngydVZpUEtJYTVOTTJmRENEOXItbXdObVdkdE5QZXUxQQ?oc=5",
           "source": "Edugist",
           "published": "2026-10-07T16:39:48.000Z"
+        },
+        {
+          "title": "UTME: JAMB Retains 150 As University Admission Cut-Off Mark",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcWZjOTBYdWU5UHhtc2ZMdVdNWGY5R2llVUxvM1N3bXZ5RW54SHFqY28yU003RERuNW55MlpIakdoYmJJZjdOQ2UwMG5RdnF5Vzhud3VYSUk1d1dkVXRqeHdfb2RsRXY2OWRRNWVCVFBuZWtzQzJTbk1qUTdzZW5DMFpiYTl3Zno3Skpab2lOVlZRaUNSbGI2WElacFpJQQ?oc=5",
+          "source": "Channels Television",
+          "published": "2026-05-11T07:00:00.000Z"
         },
         {
           "title": "JAMB: 29 less competitive courses in Nigeria in 2026 and their cut-off marks",
@@ -250,6 +250,12 @@
           "published": "2025-09-02T07:00:00.000Z"
         },
         {
+          "title": "Passport to poverty, ticket to nowhere",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9MLXNNRmxjZExHRktiblpRbzB6eHlXTVcxbWF4QmtPWWNkZ0FGV2RFMm4zTmlZeDZPTl85NFZubVl2ZUR6V2JKWmg3alRDYVlOVm5od0JCbHpOaU9jLXdBaS1PZ2hMbEhtWWc?oc=5",
+          "source": "Punch Newspapers",
+          "published": "2025-09-18T07:00:00.000Z"
+        },
+        {
           "title": "International passport price in Nigeria: Nigerians react to FG passport fee increment",
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XUzRZNE5JMFVDdXZFQUJfUzdZMUtvZVI5RlhLN3UtYWtVTE9zemdnNnFvbU5HRGpxR1pqQTAwMjBNemlGZElXa2VwSXJKM29JVWd2RmNNbXRRaDhj0gFiQVVfeXFMTlgwYndFbHJyMV9lTUp0b1dNNzRxOFpSZ2NJajE3eFctRUJQWkhWS21CSExoUk9LQXhJcHNNdmdxV0lKc2RYckk2T0ZTdWxIVlI0ZUdEc0dyNlc5VWJ5ZnctVWc?oc=5",
           "source": "BBC",
@@ -272,12 +278,6 @@
           "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQRmFhUFVPMERzMnVlYnRIVDMwM2R2R0ZxcmdqT1dwZ20ydF9sS21pVmp4azE3cTZQU0JpYk1qbWQwVjEtajFlVi1UNFVMeHpUVTVwUzNyUWtZVG5SNkxJcVBiOGpYdG9rdmdUWkFJQ0dqbE1DSG9feWRlN21Pb2IweG1jZkJJQm1HZG52WXladjlzSFVobFYycUNB?oc=5",
           "source": "TVC News",
           "published": "2025-08-28T07:00:00.000Z"
-        },
-        {
-          "title": "FG hikes passport fees by 100% - Tribune Online",
-          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE05SVFkZzlZOTFlVERxa2RkUnFKMlBiVEFWS3lUbnd6S2gwTGpEQnhzMXQwOVBwZnludjNrYXFSYnR3NHQ5ZGFlYlE1TGJiTERlS05zXzNvQ3BHWk9tbHFwdVNnYjhnY29IOVhGeDlyQ2t6VGI2aFHSAXtBVV95cUxOWFFXbTdsOXBhcVZBZkd4U1MyUkxuVVllZVJjZ0dDVmdUa0lvOGl4bDg3QUdWTnhsLThJc3RqYl9GWGlPRmRDejYwS3EzVUczUmM1NTNBVHRhcG1wMi1SLVpIUV9uc2FMVm9RcjRraHNRMzM1V3lSMGw3dnc?oc=5",
-          "source": "Tribune Online",
-          "published": "2025-08-29T07:00:00.000Z"
         }
       ]
     },

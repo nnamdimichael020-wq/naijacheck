@@ -1,39 +1,38 @@
 {
   "cbn": {
-    "ok": false,
-    "checkedAt": "2026-10-10T08:04:39.853Z",
-    "asOf": null,
-    "lastSuccessfulAt": null,
-    "error": "layout not recognised"
+    "ok": true,
+    "checkedAt": "2026-10-10T08:06:47.174Z",
+    "asOf": "2026-10-09T14:00:00.000Z",
+    "lastSuccessfulAt": "2026-10-10T08:06:47.174Z"
   },
   "aboki": {
     "ok": true,
-    "checkedAt": "2026-10-10T08:04:39.853Z",
+    "checkedAt": "2026-10-10T08:06:47.174Z",
     "asOf": "2026-10-10T07:06:00.000Z",
-    "lastSuccessfulAt": "2026-10-10T08:04:39.853Z"
+    "lastSuccessfulAt": "2026-10-10T08:06:47.174Z"
   },
   "openEr": {
     "ok": true,
-    "checkedAt": "2026-10-10T08:04:39.853Z",
+    "checkedAt": "2026-10-10T08:06:47.174Z",
     "asOf": "2026-10-10T00:02:31.000Z",
-    "lastSuccessfulAt": "2026-10-10T08:04:39.853Z"
+    "lastSuccessfulAt": "2026-10-10T08:06:47.174Z"
   },
   "awajis": {
     "ok": true,
-    "checkedAt": "2026-10-10T08:04:39.853Z",
+    "checkedAt": "2026-10-10T08:06:47.174Z",
     "asOf": "2026-10-09T23:21:00.000Z",
-    "lastSuccessfulAt": "2026-10-10T08:04:39.853Z"
+    "lastSuccessfulAt": "2026-10-10T08:06:47.174Z"
   },
   "news": {
     "ok": true,
-    "checkedAt": "2026-10-10T08:04:39.853Z",
-    "asOf": "2026-10-10T08:04:39.853Z",
-    "lastSuccessfulAt": "2026-10-10T08:04:39.853Z"
+    "checkedAt": "2026-10-10T08:06:47.174Z",
+    "asOf": "2026-10-10T08:06:47.174Z",
+    "lastSuccessfulAt": "2026-10-10T08:06:47.174Z"
   },
   "wiki": {
     "ok": true,
-    "checkedAt": "2026-10-10T08:04:39.853Z",
-    "asOf": "2026-10-10T08:04:39.853Z",
-    "lastSuccessfulAt": "2026-10-10T08:04:39.853Z"
+    "checkedAt": "2026-10-10T08:06:47.174Z",
+    "asOf": "2026-10-10T08:06:47.174Z",
+    "lastSuccessfulAt": "2026-10-10T08:06:47.174Z"
   }
 }

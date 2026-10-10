@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-10T08:04:39.853Z",
-  "status": "mixed",
+  "updatedAt": "2026-10-10T08:06:47.174Z",
+  "status": "recent",
   "sources": [
     {
       "label": "Central Bank of Nigeria: NFEM exchange rates",
@@ -34,7 +34,7 @@
     "GBP": 1845,
     "EUR": 1540
   },
-  "officialStatus": "seeded",
+  "officialStatus": "recent",
   "blackMarketStatus": "recent",
   "crossRateStatus": "recent"
 }
