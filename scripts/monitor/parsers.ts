@@ -40,33 +40,82 @@ export function htmlToText(html: string): string {
 
 const num = (s: string): number => Number(s.replace(/[,₦\s]/g, ""));
 
-/** "9 October 2026, 5:21 pm WAT" or "9 October 2026 17:07 WAT" -> ISO string (UTC). */
+/** WAT source stamps in either "9 October 2026, 5:21 pm" or "October 9, 2026 at 17:07" order. */
 export function watToIso(s: string): string | null {
-  const m = s.match(/(\d{1,2}) (\w+) (\d{4}),?\s+(\d{1,2}):(\d{2})\s*(am|pm)?/i);
+  const dmy = s.match(/(\d{1,2})\s+(\w+)\s+(\d{4}),?\s+(?:at\s+)?(\d{1,2}):(\d{2})\s*(am|pm)?/i);
+  const mdy = s.match(/(\w+)\s+(\d{1,2}),?\s+(\d{4}),?\s+(?:at\s+)?(\d{1,2}):(\d{2})\s*(am|pm)?/i);
+  const m = dmy
+    ? { day: dmy[1], month: dmy[2], year: dmy[3], hour: dmy[4], minute: dmy[5], meridiem: dmy[6] }
+    : mdy
+      ? { day: mdy[2], month: mdy[1], year: mdy[3], hour: mdy[4], minute: mdy[5], meridiem: mdy[6] }
+      : null;
   if (!m) return null;
-  const month = MONTHS.findIndex((x) => x.toLowerCase().startsWith(m[2].slice(0, 3).toLowerCase()));
+  const month = MONTHS.findIndex((x) => x.toLowerCase().startsWith(m.month.slice(0, 3).toLowerCase()));
   if (month < 0) return null;
-  let hour = Number(m[4]);
-  if (m[6]) {
-    const pm = m[6].toLowerCase() === "pm";
+  let hour = Number(m.hour);
+  if (m.meridiem) {
+    const pm = m.meridiem.toLowerCase() === "pm";
     if (hour === 12) hour = pm ? 12 : 0;
     else if (pm) hour += 12;
   }
-  // WAT is UTC+1
-  return new Date(Date.UTC(Number(m[3]), month, Number(m[1]), hour - 1, Number(m[5]))).toISOString();
+  if (hour > 23) return null;
+  // WAT is UTC+1.
+  return new Date(Date.UTC(Number(m.year), month, Number(m.day), hour - 1, Number(m.minute))).toISOString();
 }
 
 /* ---------- CBN: Nigerian Foreign Exchange Market (official NFEM rate) ---------- */
 
+function cellText(html: string): string {
+  return htmlToText(html).replace(/\|/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function parseCbnDate(value: string): string | null {
+  let m = value.match(new RegExp(`\\b(${MONTH_RE})[- /](\\d{1,2})[- /](\\d{4})\\b`, "i"));
+  if (m) {
+    const month = MONTHS.findIndex((x) => x.toLowerCase() === m![1].toLowerCase()) + 1;
+    return `${m[3]}-${String(month).padStart(2, "0")}-${m[2].padStart(2, "0")}`;
+  }
+  m = value.match(new RegExp(`\\b(\\d{1,2})[- /](${MONTH_RE})[- /](\\d{4})\\b`, "i"));
+  if (m) {
+    const month = MONTHS.findIndex((x) => x.toLowerCase() === m![2].toLowerCase()) + 1;
+    return `${m[3]}-${String(month).padStart(2, "0")}-${m[1].padStart(2, "0")}`;
+  }
+  m = value.match(/\b(\d{4})-(\d{2})-(\d{2})\b/);
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
+}
+
+/** Parse only a table that explicitly identifies both Date and the exact NFEM Rate column. */
 export function parseCbnNfem(html: string): { date: string; rate: number } | null {
-  const text = htmlToText(html).replace(/\s+/g, " ");
-  const re = new RegExp(`(${MONTH_RE})-(\\d{2})-(\\d{4})\\s*\\|\\s*([\\d,]+\\.\\d{2,4})`);
-  const m = text.match(re);
-  if (!m) return null;
-  const rate = num(m[4]);
-  if (!(rate > 500 && rate < 5000)) return null;
-  const mon = MONTHS.indexOf(m[1]) + 1;
-  return { date: `${m[3]}-${String(mon).padStart(2, "0")}-${m[2]}`, rate };
+  const candidates: { date: string; rate: number }[] = [];
+  for (const table of html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)) {
+    const rows = [...table[1].matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map((row) =>
+      [...row[1].matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)].map((cell) => cellText(cell[1])),
+    );
+    let dateColumn = -1;
+    let rateColumn = -1;
+    let headerRow = -1;
+    for (let i = 0; i < rows.length; i++) {
+      const normalized = rows[i].map((cell) => cell.replace(/[\s:*]+/g, " ").trim().toLowerCase());
+      const d = normalized.findIndex((cell) => cell === "date");
+      const r = normalized.findIndex((cell) => cell === "nfem rate");
+      if (d >= 0 && r >= 0) {
+        dateColumn = d;
+        rateColumn = r;
+        headerRow = i;
+        break;
+      }
+    }
+    if (headerRow < 0) continue;
+    for (const cells of rows.slice(headerRow + 1)) {
+      if (cells.length <= Math.max(dateColumn, rateColumn)) continue;
+      const date = parseCbnDate(cells[dateColumn]);
+      const rawRate = cells[rateColumn].match(/(?:₦\s*)?([\d,]+(?:\.\d{1,4})?)/)?.[1];
+      const rate = rawRate ? num(rawRate) : NaN;
+      if (date && rate > 500 && rate < 5000) candidates.push({ date, rate });
+    }
+  }
+  candidates.sort((a, b) => b.date.localeCompare(a.date));
+  return candidates[0] ?? null;
 }
 
 /* ---------- Aboki Forex: black market buy/sell + CBN widget ---------- */
@@ -136,28 +185,31 @@ export function parseAwajisFuel(html: string): FuelParse | null {
   const text = htmlToText(html);
   const flat = text.replace(/\s+/g, " ");
   const med = (label: string) => {
-    const m = flat.match(new RegExp(`₦([\\d,]+) ${label}`));
-    return m ? num(m[1]) : null;
+    const before = flat.match(new RegExp(`₦?\\s*([\\d,]+(?:\\.\\d+)?)\\s+${label}`, "i"));
+    const after = flat.match(new RegExp(`${label}[^|\\n]{0,40}?₦?\\s*([\\d,]+(?:\\.\\d+)?)`, "i"));
+    const value = before?.[1] ?? after?.[1];
+    return value ? num(value) : null;
   };
   const medians = {
     petrol: med("Petrol \\(PMS\\)"),
     diesel: med("Diesel \\(AGO\\)"),
     lpg: med("Cooking Gas \\(LPG\\)"),
   };
-  const stamp = text.match(/(?:Updated|Last checked:?)\s*(\d{1,2} \w+ \d{4},?\s*\d{1,2}:\d{2}\s*[ap]m WAT)/i);
+  const stamp = text.match(/(?:Updated|Last (?:checked|updated)|Published)(?:\s+(?:on|at))?:?\s*((?:\d{1,2}\s+\w+|\w+\s+\d{1,2},?)\s+\d{4},?\s+(?:at\s+)?\d{1,2}:\d{2}\s*(?:am|pm)?\s*WAT)/i);
   const asOf = stamp ? watToIso(stamp[1]) : null;
 
   // Walk the text line by line, switching product when a section heading appears.
   const depots: FuelParse["depots"] = { petrol: [], diesel: [], lpg: [] };
   let current: keyof FuelParse["depots"] | null = null;
-  const rowRe = /^\|?\s*([^|\n]+?)\s*\|\s*([^|\n]+?)\s*\|\s*([\d,]+\.\d{2})\s*\|/;
-  const trendRe = /^\|?\s*(\d{1,2} \w{3})\s*\|\s*([\d,]+\.\d{2})\s*\|\s*([\d,]+\.\d{2})/;
+  const amount = "₦?\\s*([\\d,]+(?:\\.\\d+)?)";
+  const rowRe = new RegExp(`^\\|?\\s*([^|\\n]+?)\\s*\\|\\s*([^|\\n]+?)\\s*\\|\\s*${amount}\\s*(?:\\||$)`, "i");
+  const trendRe = new RegExp(`^\\|?\\s*(\\d{1,2} \\w{3})\\s*\\|\\s*${amount}\\s*\\|\\s*${amount}`, "i");
   const trend30d: FuelParse["trend30d"] = [];
   for (const raw of text.split("\n")) {
     const line = raw.trim();
-    if (/Petrol \(PMS\) depot prices/i.test(line)) current = "petrol";
-    else if (/Diesel \(AGO\) depot prices/i.test(line)) current = "diesel";
-    else if (/Cooking Gas \(LPG\) depot prices/i.test(line)) current = "lpg";
+    if (/(?:Petrol|PMS).*depot prices|depot prices.*(?:Petrol|PMS)/i.test(line)) current = "petrol";
+    else if (/(?:Diesel|AGO).*depot prices|depot prices.*(?:Diesel|AGO)/i.test(line)) current = "diesel";
+    else if (/(?:Cooking Gas|LPG).*depot prices|depot prices.*(?:Cooking Gas|LPG)/i.test(line)) current = "lpg";
     else if (/trend|Pump prices this week|Official pump prices|pump price/i.test(line)) current = null;
 
     // Trend rows have two numeric columns after the date, so check them before depot rows.
@@ -172,7 +224,7 @@ export function parseAwajisFuel(html: string): FuelParse | null {
     }
   }
 
-  const hasAny = medians.petrol || depots.petrol.length || depots.diesel.length;
+  const hasAny = medians.petrol || medians.diesel || medians.lpg || depots.petrol.length || depots.diesel.length || depots.lpg.length;
   if (!hasAny) return null;
   return { asOf, medians, depots, trend30d };
 }

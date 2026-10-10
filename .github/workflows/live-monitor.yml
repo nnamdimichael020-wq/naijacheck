@@ -10,6 +10,12 @@ on:
   schedule:
     - cron: "17 */3 * * *" # every 3 hours, UTC
   workflow_dispatch:
+  # TEMPORARY branch diagnostic trigger; remove after the isolated runner response is captured.
+  push:
+    branches: [arena/c6158e8e-naijacheck]
+    paths:
+      - ".github/workflows/live-monitor.yml"
+      - "scripts/monitor/**"
 
 permissions:
   contents: write
@@ -37,6 +43,15 @@ jobs:
 
       - name: Fetch live sources
         run: npm run monitor
+
+      - name: Upload sanitized parser diagnostics
+        if: ${{ always() && hashFiles('.monitor-diagnostics/**') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitor-diagnostics
+          path: .monitor-diagnostics/
+          include-hidden-files: true
+          retention-days: 7
 
       - name: Commit refreshed data
         run: |

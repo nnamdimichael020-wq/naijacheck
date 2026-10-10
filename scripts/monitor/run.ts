@@ -21,7 +21,8 @@ import * as P from "./parsers";
 const ROOT = path.resolve(__dirname, "../..");
 const DATA = path.join(ROOT, "data");
 const LIVE = path.join(DATA, "live");
-const UA = "NaijaCheckMonitor/1.0 (+https://naijacheck.ng; daily price monitor)";
+const DIAGNOSTICS = path.join(ROOT, ".monitor-diagnostics");
+const UA = "NaijaCheckMonitor/1.0 (+https://naijacheck.ng; source monitor)";
 const NOW = Date.now();
 const NOW_ISO = new Date(NOW).toISOString();
 
@@ -71,13 +72,67 @@ function writeJson(file: string, value: unknown) {
   fs.writeFileSync(file, JSON.stringify(value, null, 2) + "\n");
 }
 
-async function get(url: string, as: "text" | "json" = "text"): Promise<string | unknown> {
+type FetchResult = {
+  requestedUrl: string;
+  finalUrl: string;
+  status: number;
+  contentType: string;
+  size: number;
+  text: string;
+};
+
+async function getDetailed(url: string): Promise<FetchResult> {
   const res = await fetch(url, {
-    headers: { "user-agent": UA, accept: as === "json" ? "application/json" : "text/html,application/xml;q=0.9,*/*;q=0.8" },
+    headers: { "user-agent": UA, accept: "text/html,application/xml;q=0.9,*/*;q=0.8" },
+    redirect: "follow",
     signal: AbortSignal.timeout(25_000),
   });
-  if (!res.ok) throw new Error(`HTTP ${res.status} from ${url}`);
-  return as === "json" ? res.json() : res.text();
+  const text = await res.text();
+  return {
+    requestedUrl: url,
+    finalUrl: res.url,
+    status: res.status,
+    contentType: res.headers.get("content-type") ?? "",
+    size: Buffer.byteLength(text),
+    text,
+  };
+}
+
+function safeExcerpt(html: string): string {
+  return P.htmlToText(html)
+    .replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, "[email redacted]")
+    .replace(/\b[A-Za-z0-9_-]{40,}\b/g, "[long token redacted]")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 1400);
+}
+
+function writeDiagnostic(key: string, response: FetchResult, reason: string) {
+  fs.mkdirSync(DIAGNOSTICS, { recursive: true });
+  const title = response.text.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() ?? null;
+  writeJson(path.join(DIAGNOSTICS, `${key}.json`), {
+    source: key,
+    checkedAt: NOW_ISO,
+    reason,
+    requestedUrl: response.requestedUrl,
+    finalUrl: response.finalUrl,
+    httpStatus: response.status,
+    contentType: response.contentType,
+    responseBytes: response.size,
+    title,
+    excerpt: safeExcerpt(response.text),
+  });
+}
+
+async function get(url: string, as: "text" | "json" = "text"): Promise<string | unknown> {
+  if (as === "json") {
+    const res = await fetch(url, { headers: { "user-agent": UA, accept: "application/json" }, signal: AbortSignal.timeout(25_000) });
+    if (!res.ok) throw new Error(`HTTP ${res.status} from ${url}`);
+    return res.json();
+  }
+  const result = await getDetailed(url);
+  if (result.status < 200 || result.status >= 300) throw new Error(`HTTP ${result.status} from ${result.finalUrl}`);
+  return result.text;
 }
 
 /** Run one source; record health; return null on failure so callers keep the last value. */
@@ -111,11 +166,36 @@ function appendHistory(point: HistoryPoint) {
   writeJson(file, history);
 }
 
+function writeActionSummary() {
+  const target = process.env.GITHUB_STEP_SUMMARY;
+  if (!target) return;
+  const rows = Object.entries(health).map(([key, row]) =>
+    `| ${key} | ${row.ok ? "success" : "failed"} | ${row.asOf ?? "—"} | ${row.lastSuccessfulAt ?? "—"} | ${row.error?.replace(/\|/g, "\\|") ?? "—"} |`,
+  );
+  fs.appendFileSync(target, [
+    "## NaijaCheck source monitor",
+    "",
+    `Checked: ${NOW_ISO}`,
+    "",
+    "| Source | Result | Source time | Last success | Error |",
+    "|---|---|---|---|---|",
+    ...rows,
+    "",
+    fs.existsSync(DIAGNOSTICS) ? "Sanitized parser diagnostics were uploaded as the `monitor-diagnostics` artifact." : "No parser diagnostics were generated.",
+    "",
+  ].join("\n"));
+}
+
 async function main() {
   /* ---------- FX ---------- */
   const cbnHtml = await step("cbn", async () => {
-    const html = (await get(SOURCES.cbn.url)) as string;
-    const r = P.parseCbnNfem(html);
+    const response = await getDetailed(SOURCES.cbn.url);
+    if (response.status < 200 || response.status >= 300) {
+      writeDiagnostic("cbn", response, `HTTP ${response.status}`);
+      throw new Error(`HTTP ${response.status} from ${response.finalUrl}`);
+    }
+    const r = P.parseCbnNfem(response.text);
+    if (!r) writeDiagnostic("cbn", response, "NFEM table/header/newest row not recognised");
     return r ? { ...r, asOf: new Date(`${r.date}T15:00:00+01:00`).toISOString() } : null;
   });
   const aboki = await step("aboki", async () => P.parseAboki((await get(SOURCES.aboki.url)) as string));
@@ -184,7 +264,16 @@ async function main() {
   }
 
   /* ---------- Fuel ---------- */
-  const fuelParse = await step("awajis", async () => P.parseAwajisFuel((await get(SOURCES.awajis.url)) as string));
+  const fuelParse = await step("awajis", async () => {
+    const response = await getDetailed(SOURCES.awajis.url);
+    if (response.status < 200 || response.status >= 300) {
+      writeDiagnostic("awajis", response, `HTTP ${response.status}`);
+      throw new Error(`HTTP ${response.status} from ${response.finalUrl}`);
+    }
+    const parsed = P.parseAwajisFuel(response.text);
+    if (!parsed) writeDiagnostic("awajis", response, "fuel medians/tables not recognised");
+    return parsed;
+  });
   if (fuelParse) {
     const fuelLive = { ...fuelParse, checkedAt: NOW_ISO, seeded: false, source: SOURCES.awajis };
     writeJson(path.join(LIVE, "fuel.json"), fuelLive);
@@ -323,7 +412,11 @@ async function main() {
   writeJson(watchPath, { checkedAt: watchSuccesses ? NOW_ISO : (prevWatch as { checkedAt?: string | null }).checkedAt ?? null, seeded: watchSuccesses ? false : (prevWatch as { seeded?: boolean }).seeded ?? true, note: "A changed fingerprint means the official page wording changed. A person should read it before any fee or rule is updated.", pages });
 
   writeJson(path.join(LIVE, "health.json"), health);
-  if (successfulSources === 0) throw new Error("Every configured source failed; last-good snapshots were preserved");
+  writeActionSummary();
+  const critical = ["cbn", "aboki", "erapi", "awajis"];
+  if (critical.every((key) => !health[key]?.ok)) {
+    throw new Error("All critical FX and fuel sources failed; last-good snapshots were preserved");
+  }
   console.log(`[monitor] done ${NOW_ISO}; ${successfulSources} source groups succeeded`);
 }
 
