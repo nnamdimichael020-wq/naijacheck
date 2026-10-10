@@ -84,29 +84,32 @@ function parseCbnDate(value: string): string | null {
   return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
 }
 
-/** Parse only a table that explicitly identifies both Date and the exact NFEM Rate column. */
-export function parseCbnNfem(html: string): { date: string; rate: number } | null {
-  const candidates: { date: string; rate: number }[] = [];
+function cbnTables(html: string): { rows: string[][]; dateColumn: number; rateColumn: number; headerRow: number }[] {
+  const matches = [];
   for (const table of html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)) {
     const rows = [...table[1].matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map((row) =>
       [...row[1].matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)].map((cell) => cellText(cell[1])),
     );
-    let dateColumn = -1;
-    let rateColumn = -1;
-    let headerRow = -1;
     for (let i = 0; i < rows.length; i++) {
       const normalized = rows[i].map((cell) => cell.replace(/[\s:*]+/g, " ").trim().toLowerCase());
-      const d = normalized.findIndex((cell) => cell === "date");
+      const dateColumn = normalized.findIndex((cell) => cell === "date");
       // The official header currently appends its unit; do not accept broader "official"/"exchange" columns.
-      const r = normalized.findIndex((cell) => /^nfem rate(?:\s*\(₦\/us\$\))?$/.test(cell));
-      if (d >= 0 && r >= 0) {
-        dateColumn = d;
-        rateColumn = r;
-        headerRow = i;
-        break;
-      }
+      const rateColumn = normalized.findIndex((cell) => /^nfem rate(?:\s*\(₦\/us\$\))?$/.test(cell));
+      if (dateColumn >= 0 && rateColumn >= 0) matches.push({ rows, dateColumn, rateColumn, headerRow: i });
     }
-    if (headerRow < 0) continue;
+  }
+  return matches;
+}
+
+/** True only when the official page exposes Date and the exact NFEM Rate schema. */
+export function hasCbnNfemTable(html: string): boolean {
+  return cbnTables(html).length > 0;
+}
+
+/** Parse inline rows only from a table gated by the exact official schema. */
+export function parseCbnNfem(html: string): { date: string; rate: number } | null {
+  const candidates: { date: string; rate: number }[] = [];
+  for (const { rows, dateColumn, rateColumn, headerRow } of cbnTables(html)) {
     for (const cells of rows.slice(headerRow + 1)) {
       if (cells.length <= Math.max(dateColumn, rateColumn)) continue;
       const date = parseCbnDate(cells[dateColumn]);
@@ -114,6 +117,29 @@ export function parseCbnNfem(html: string): { date: string; rate: number } | nul
       const rate = rawRate ? num(rawRate) : NaN;
       if (date && rate > 500 && rate < 5000) candidates.push({ date, rate });
     }
+  }
+  candidates.sort((a, b) => b.date.localeCompare(a.date));
+  return candidates[0] ?? null;
+}
+
+/** Parse the official page's own JSON endpoint after hasCbnNfemTable has gated the schema. */
+export function parseCbnNfemApi(json: unknown): { date: string; rate: number } | null {
+  const object = json as Record<string, unknown> | unknown[];
+  const rows = Array.isArray(object)
+    ? object
+    : Object.values(object ?? {}).find((value): value is unknown[] => Array.isArray(value)) ?? [];
+  const candidates: { date: string; rate: number }[] = [];
+  for (const value of rows) {
+    if (!value || typeof value !== "object") continue;
+    const row = value as Record<string, unknown>;
+    const rawDate = row.ratedate ?? row.rateDate ?? row.RateDate;
+    const rawRate = row.weightedAvgRate ?? row.WeightedAvgRate ?? row.nfemRate ?? row.NFEMRate;
+    const date = typeof rawDate === "string" ? (parseCbnDate(rawDate) ?? (() => {
+      const parsed = Date.parse(rawDate);
+      return Number.isNaN(parsed) ? null : new Date(parsed).toISOString().slice(0, 10);
+    })()) : null;
+    const rate = typeof rawRate === "number" ? rawRate : typeof rawRate === "string" ? num(rawRate) : NaN;
+    if (date && rate > 500 && rate < 5000) candidates.push({ date, rate });
   }
   candidates.sort((a, b) => b.date.localeCompare(a.date));
   return candidates[0] ?? null;

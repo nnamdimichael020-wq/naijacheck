@@ -5,6 +5,8 @@
 import assert from "node:assert/strict";
 import {
   parseCbnNfem,
+  hasCbnNfemTable,
+  parseCbnNfemApi,
   parseAboki,
   parseOpenEr,
   parseAwajisFuel,
@@ -35,7 +37,20 @@ test("CBN rejects nearby numbers unless Date and exact NFEM Rate headers exist",
   const implausible = `<table><tr><th>Date</th><th>NFEM Rate</th></tr><tr><td>October-09-2026</td><td>13.5000</td></tr></table>`;
   assert.equal(parseCbnNfem(noHeader), null);
   assert.equal(parseCbnNfem(wrongHeader), null);
+  assert.equal(hasCbnNfemTable(wrongHeader), false);
   assert.equal(parseCbnNfem(implausible), null);
+});
+
+test("CBN captured page schema gates its JSON endpoint and newest row", () => {
+  const capturedPage = `<table><tr><td colspan="10">NIGERIAN FOREIGN EXCHANGE MARKET (NFEM) RATES (₦/US$)</td></tr>
+    <tr><td>Date</td><td>NFEM Rate (₦/US$)</td><td>Highest Rate (₦/US$)</td></tr></table>`;
+  const capturedApi = [
+    { ratedate: "2026-10-08T00:00:00", weightedAvgRate: "1,332.1021", highestrate: 1400 },
+    { ratedate: "2026-10-09T00:00:00", weightedAvgRate: 1331.186, highestrate: 1500 },
+  ];
+  assert.equal(hasCbnNfemTable(capturedPage), true);
+  assert.deepEqual(parseCbnNfemApi(capturedApi), { date: "2026-10-09", rate: 1331.186 });
+  assert.equal(parseCbnNfemApi([{ ratedate: "2026-10-09", highestrate: 1331.186 }]), null);
 });
 
 test("Aboki black market and CBN widget parse from captured text", () => {

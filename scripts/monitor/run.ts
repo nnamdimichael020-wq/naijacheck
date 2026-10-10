@@ -27,7 +27,11 @@ const NOW = Date.now();
 const NOW_ISO = new Date(NOW).toISOString();
 
 const SOURCES = {
-  cbn: { label: "Central Bank of Nigeria: NFEM exchange rates", url: "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html" },
+  cbn: {
+    label: "Central Bank of Nigeria: NFEM exchange rates",
+    url: "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
+    apiUrl: "https://www.cbn.gov.ng/api/GetAllNFEM_RatesGRAPH",
+  },
   aboki: { label: "Aboki Forex: black market and CBN widget", url: "https://abokiforex.app/" },
   openEr: { label: "open.er-api.com: daily reference rates", url: "https://open.er-api.com/v6/latest/USD" },
   awajis: { label: "Awajis fuel tables (petroleumprice.ng depot data)", url: "https://awajis.com/fuel-price-in-nigeria-today/" },
@@ -208,8 +212,22 @@ async function main() {
       writeDiagnostic("cbn", response, `HTTP ${response.status}`);
       throw new Error(`HTTP ${response.status} from ${response.finalUrl}`);
     }
-    const r = P.parseCbnNfem(response.text);
-    if (!r) writeDiagnostic("cbn", response, "NFEM table/header/newest row not recognised");
+    if (!P.hasCbnNfemTable(response.text)) {
+      writeDiagnostic("cbn", response, "exact Date and NFEM Rate table headers not recognised");
+      return null;
+    }
+    let r = P.parseCbnNfem(response.text);
+    if (!r) {
+      const apiResponse = await getDetailed(SOURCES.cbn.apiUrl);
+      if (apiResponse.status >= 200 && apiResponse.status < 300) {
+        try {
+          r = P.parseCbnNfemApi(JSON.parse(apiResponse.text));
+        } catch {
+          // The sanitized diagnostic below records the response shape without retaining the body.
+        }
+      }
+      if (!r) writeDiagnostic("cbn-api", apiResponse, "official NFEM JSON endpoint had no valid weightedAvgRate row");
+    }
     return r ? { ...r, asOf: new Date(`${r.date}T15:00:00+01:00`).toISOString() } : null;
   });
   const aboki = await step("aboki", async () => P.parseAboki((await get(SOURCES.aboki.url)) as string));
