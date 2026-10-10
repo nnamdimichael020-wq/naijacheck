@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { SITE_CONFIG, SITE_TAGLINE, SOCIAL_HANDLE } from "@/config/site";
 import { DATA_DATE } from "@/lib/data";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, absUrl } from "@/lib/seo";
+import { ShareControls } from "@/components/share-controls";
 
 export const metadata: Metadata = pageMetadata({
   path: "/about",
@@ -17,6 +18,7 @@ export default function AboutPage() {
         <h1 className="mt-1 text-3xl font-extrabold tracking-tight md:text-4xl">
           {SITE_CONFIG.name}: {SITE_TAGLINE}
         </h1>
+        <ShareControls placement="inline" title={`About ${SITE_CONFIG.name}`} url={absUrl("/about")} />
       </header>
       <div className="space-y-4 text-[17px] leading-relaxed text-foreground/90">
         <p>

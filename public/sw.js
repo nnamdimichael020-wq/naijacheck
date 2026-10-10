@@ -49,18 +49,19 @@ self.addEventListener("notificationclick", (event) => {
 self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = new URL(request.url);
+  // Never intercept or cache /api/* (push config/subscribe/unsubscribe, geo, …).
   if (request.method !== "GET" || url.origin !== self.location.origin || url.pathname.startsWith("/api/")) return;
 
   if (request.mode === "navigate") {
     event.respondWith(fetch(request).then((response) => {
-      if (response.ok) caches.open(CACHE).then((cache) => cache.put(request, response.clone()));
+      if (response.ok && !url.pathname.startsWith("/api/")) caches.open(CACHE).then((cache) => cache.put(request, response.clone()));
       return response;
     }).catch(async () => (await caches.match(request)) || (await caches.match("/offline.html"))));
     return;
   }
 
   event.respondWith(caches.match(request).then((cached) => cached || fetch(request).then((response) => {
-    if (response.ok && ["style", "script", "font", "image"].includes(request.destination)) caches.open(CACHE).then((cache) => cache.put(request, response.clone()));
+    if (response.ok && !url.pathname.startsWith("/api/") && ["style", "script", "font", "image"].includes(request.destination)) caches.open(CACHE).then((cache) => cache.put(request, response.clone()));
     return response;
   })));
 });
