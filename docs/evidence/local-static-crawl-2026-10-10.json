@@ -1,5 +1,5 @@
 {
-  "generatedHtmlRoutes": 171,
+  "generatedHtmlRoutes": 170,
   "sitemapUrls": 135,
   "sitemapMissing": [],
   "indexedNotInSitemap": [],
@@ -11,38 +11,13 @@
     "canonical": [],
     "h1": []
   },
-  "duplicateTitles": [
-    [
-      "/404",
-      "/_not-found"
-    ]
-  ],
-  "duplicateDescriptions": [
-    [
-      "/404",
-      "/_not-found"
-    ]
-  ],
+  "duplicateTitles": [],
+  "duplicateDescriptions": [],
   "invalidJsonLd": [],
   "pages": [
     {
       "environment": "local-static-export",
       "route": "/404",
-      "httpStatus": 200,
-      "canonicalHost": null,
-      "title": "Page not found | NaijaCheck",
-      "description": "This page don japa. Find your way back to prices, slang, hustles and more.",
-      "canonical": "",
-      "h1": "This page don japa.",
-      "noindex": true,
-      "jsonLdBlocks": 2,
-      "internalLinks": 53,
-      "externalSourceLinks": [],
-      "freshnessMarkers": []
-    },
-    {
-      "environment": "local-static-export",
-      "route": "/_not-found",
       "httpStatus": 200,
       "canonicalHost": null,
       "title": "Page not found | NaijaCheck",
@@ -89,7 +64,7 @@
       "freshnessMarkers": [
         "5 Cooking gas depot /kg ₦1,160 Trending now Japa Admin unavailable This static route is not a secure moderation surface. The former browser-only password co",
         "l font-extrabold tracking-tight\\\",\\\"children\\\":\\\"Admin unavailable\\\"}],[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"text-muted-foreground\\\",\\\"children\\\":\\\"This static",
-        "null\\n31:[[\\\"$\\\",\\\"title\\\",\\\"0\\\",{\\\"children\\\":\\\"Admin unavailable | NaijaCheck\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"name\\\":\\\"description\\\",\\\"content\\\":\\\"The modera",
+        "tadata\\\":[[\\\"$\\\",\\\"title\\\",\\\"0\\\",{\\\"children\\\":\\\"Admin unavailable | NaijaCheck\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"name\\\":\\\"description\\\",\\\"content\\\":\\\"The modera",
         ",\\\"11\\\",{\\\"property\\\":\\\"og:title\\\",\\\"content\\\":\\\"Admin unavailable\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"12\\\",{\\\"property\\\":\\\"og:description\\\",\\\"content\\\":\\\"The moderation",
         "\\\"22\\\",{\\\"name\\\":\\\"twitter:title\\\",\\\"content\\\":\\\"Admin unavailable\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"23\\\",{\\\"name\\\":\\\"twitter:description\\\",\\\"content\\\":\\\"The moderation"
       ]
@@ -110,9 +85,9 @@
       "freshnessMarkers": [
         "ral University School Fees 2026 Guide About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. Federal university fe",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n38:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "itle\\\":\\\"Federal University School Fees 2026 Guide\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "itle\\\":\\\"Federal University School Fees 2026 Guide\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -131,9 +106,9 @@
       "freshnessMarkers": [
         "iversities, Polytechnics and Colleges About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. The JAMB cut-off mark",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "Mark 2026: Universities, Polytechnics and Colleges\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Mark 2026: Universities, Polytechnics and Colleges\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -152,9 +127,9 @@
       "freshnessMarkers": [
         "or Ahmadu Bello University (ABU) 2026 About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. If you want to study",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "AMB Cut-Off for Ahmadu Bello University (ABU) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "AMB Cut-Off for Ahmadu Bello University (ABU) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -173,9 +148,9 @@
       "freshnessMarkers": [
         "Obafemi Awolowo University (OAU) 2026 About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. If you want to study",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "Cut-Off for Obafemi Awolowo University (OAU) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Cut-Off for Obafemi Awolowo University (OAU) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -194,9 +169,9 @@
       "freshnessMarkers": [
         "Cut-Off for Private Universities 2026 About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. Private universities",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n38:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "tle\\\":\\\"JAMB Cut-Off for Private Universities 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "tle\\\":\\\"JAMB Cut-Off for Private Universities 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -215,9 +190,9 @@
       "freshnessMarkers": [
         "ff for University of Ibadan (UI) 2026 About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. If you want to study",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        ":\\\"JAMB Cut-Off for University of Ibadan (UI) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        ":\\\"JAMB Cut-Off for University of Ibadan (UI) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -236,9 +211,9 @@
       "freshnessMarkers": [
         "for University of Lagos (UNILAG) 2026 About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. If you want to study",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "JAMB Cut-Off for University of Lagos (UNILAG) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "JAMB Cut-Off for University of Lagos (UNILAG) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -257,9 +232,9 @@
       "freshnessMarkers": [
         "versity of Nigeria, Nsukka (UNN) 2026 About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. If you want to study",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "t-Off for University of Nigeria, Nsukka (UNN) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "t-Off for University of Nigeria, Nsukka (UNN) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -278,9 +253,9 @@
       "freshnessMarkers": [
         "on JAMB Registration and Profile 2026 About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. Your JAMB profile hol",
-        "in read\\\"]}]\\n38:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
+        "in read\\\"]}]\\n2f:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n30:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "ll,{\\\"title\\\":\\\"JAMB Registration and Profile 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ll,{\\\"title\\\":\\\"JAMB Registration and Profile 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -299,9 +274,9 @@
       "freshnessMarkers": [
         "O Exam Education NECO 2026 Exam Guide About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. NECO runs the Nationa",
-        "12 16 14\\\"}]\\n39:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
+        "12 16 14\\\"}]\\n30:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n31:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "\\\",\\\"$L44\\\",null,{\\\"title\\\":\\\"NECO 2026 Exam Guide\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\",\\\"$L3b\\\",null,{\\\"title\\\":\\\"NECO 2026 Exam Guide\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -320,9 +295,9 @@
       "freshnessMarkers": [
         "Post-UTME Guide 2026: What to Prepare About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. Post-UTME is the scre",
-        "in read\\\"]}]\\n38:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
+        "in read\\\"]}]\\n2f:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n30:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "{\\\"title\\\":\\\"Post-UTME Guide 2026: What to Prepare\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "{\\\"title\\\":\\\"Post-UTME Guide 2026: What to Prepare\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -341,9 +316,9 @@
       "freshnessMarkers": [
         "ion School Resumption Dates 2026/2027 About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. School resumption dat",
-        "in read\\\"]}]\\n38:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
+        "in read\\\"]}]\\n2f:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n30:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "ull,{\\\"title\\\":\\\"School Resumption Dates 2026/2027\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ull,{\\\"title\\\":\\\"School Resumption Dates 2026/2027\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -362,9 +337,9 @@
       "freshnessMarkers": [
         "n WAEC 2026 Timetable and Preparation About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. WAEC is the West Afri",
-        "in read\\\"]}]\\n38:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
+        "in read\\\"]}]\\n2f:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n30:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "l,{\\\"title\\\":\\\"WAEC 2026 Timetable and Preparation\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "l,{\\\"title\\\":\\\"WAEC 2026 Timetable and Preparation\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -383,9 +358,9 @@
       "freshnessMarkers": [
         "cation WAEC Syllabus 2026 Study Guide About 2 min read Updated 9 October 2026 Verification status: Manual guidance dated 2026-10-09. Fees, dates and cut",
         "-offs are not auto-updated and must be confirmed on JAMB or the institution s official portal. A syllabus is the lis",
-        "in read\\\"]}]\\n38:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
+        "in read\\\"]}]\\n2f:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n30:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
         "n\\\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Manual guidance dated 2026-10-09. Fees, dates and cut-offs are not auto-updated and must be confirmed on JAMB o",
-        "\",null,{\\\"title\\\":\\\"WAEC Syllabus 2026 Study Guide\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\",null,{\\\"title\\\":\\\"WAEC Syllabus 2026 Study Guide\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -405,9 +380,9 @@
         "WAEC, NECO, Post-UTME and School Fees About 2 min read Updated 9 October 2026 Students in Nigeria plan their lives around exam dates, cut-offs and schoo",
         "ut-offs final? + No. They change by session and can be updated after results. Confirm on the official site. Keep reading JAMB cut-off 2026 UNILAG cut-of",
         "\\\\\\\"text\\\\\\\":\\\\\\\"No. They change by session and can be updated after results. Confirm on the official site.\\\\\\\"}}]}\\\"}}]],[\\\"$\\\",\\\"nav\\\",null,{\\\"aria-la",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n2b:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "\",\\\"children\\\":\\\"No. They change by session and can be updated after results. Confirm on the official site.\\\"}]]}]]}]]}]\\n31:[\\\"$\\\",\\\"section\\\",null,{\\\"",
-        "n Hub: JAMB, WAEC, NECO, Post-UTME and School Fees\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n34:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"24:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "\",\\\"children\\\":\\\"No. They change by session and can be updated after results. Confirm on the official site.\\\"}]]}]]}]]}]\\n\"]) self.__next_f.push([1,\"2a:",
+        "n Hub: JAMB, WAEC, NECO, Post-UTME and School Fees\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"2d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -425,9 +400,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ds Replacement Birth Certificate 2026 About 2 min read Updated 9 October 2026 Verification status: Manually reviewed guidance dated 2026-10-09; official",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3b:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ication status:\\\"}],\\\" \\\",\\\"Manually reviewed guidance dated 2026-10-09; official requirements can change and the linked agency must be checked before",
-        "ll,{\\\"title\\\":\\\"Replacement Birth Certificate 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ll,{\\\"title\\\":\\\"Replacement Birth Certificate 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -445,9 +420,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ction 2026 (Bank Verification Number) About 2 min read Updated 9 October 2026 Verification status: Manually reviewed guidance dated 2026-10-09; official",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"33:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ication status:\\\"}],\\\" \\\",\\\"Manually reviewed guidance dated 2026-10-09; official requirements can change and the linked agency must be checked before",
-        "\":\\\"BVN Correction 2026 (Bank Verification Number)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\":\\\"BVN Correction 2026 (Bank Verification Number)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -465,9 +440,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "n CAC Business Name Registration 2026 About 3 min read Updated 9 October 2026 Verification status: Manually reviewed guidance dated 2026-10-09; official",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"33:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ication status:\\\"}],\\\" \\\",\\\"Manually reviewed guidance dated 2026-10-09; official requirements can change and the linked agency must be checked before",
-        "l,{\\\"title\\\":\\\"CAC Business Name Registration 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "l,{\\\"title\\\":\\\"CAC Business Name Registration 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -485,9 +460,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "e Renewal and New Licence (FRSC) 2026 About 2 min read Updated 9 October 2026 Verification status: Manually reviewed guidance dated 2026-10-09; official",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"33:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ication status:\\\"}],\\\" \\\",\\\"Manually reviewed guidance dated 2026-10-09; official requirements can change and the linked agency must be checked before",
-        "iver's Licence Renewal and New Licence (FRSC) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "iver's Licence Renewal and New Licence (FRSC) 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -505,9 +480,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "cers in Nigeria 2026 (TIN and Filing) About 3 min read Updated 9 October 2026 Verification status: Manually reviewed guidance dated 2026-10-09; official",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3b:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ication status:\\\"}],\\\" \\\",\\\"Manually reviewed guidance dated 2026-10-09; official requirements can change and the linked agency must be checked before",
-        "x for Freelancers in Nigeria 2026 (TIN and Filing)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "x for Freelancers in Nigeria 2026 (TIN and Filing)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -525,9 +500,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "NIN Correction and Modification 2026 About 3 min read Updated 9 October 2026 Verification status: Manually reviewed guidance dated 2026-10-09; official",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"33:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ication status:\\\"}],\\\" \\\",\\\"Manually reviewed guidance dated 2026-10-09; official requirements can change and the linked agency must be checked before",
-        ",{\\\"title\\\":\\\"NIN Correction and Modification 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        ",{\\\"title\\\":\\\"NIN Correction and Modification 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -545,9 +520,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "n International Passport Renewal 2026 About 3 min read Updated 9 October 2026 Verification status: Manually reviewed guidance dated 2026-10-09; official",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ication status:\\\"}],\\\" \\\",\\\"Manually reviewed guidance dated 2026-10-09; official requirements can change and the linked agency must be checked before",
-        "e\\\":\\\"Nigerian International Passport Renewal 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n44:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "e\\\":\\\"Nigerian International Passport Renewal 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -565,9 +540,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "r Certificate 2026 (Police Clearance) About 3 min read Updated 9 October 2026 Verification status: Manually reviewed guidance dated 2026-10-09; official",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"33:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ication status:\\\"}],\\\" \\\",\\\"Manually reviewed guidance dated 2026-10-09; official requirements can change and the linked agency must be checked before",
-        "lice Character Certificate 2026 (Police Clearance)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "lice Character Certificate 2026 (Police Clearance)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -585,9 +560,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ificate (TCC) for Small Business 2026 About 2 min read Updated 9 October 2026 Verification status: Manually reviewed guidance dated 2026-10-09; official",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ication status:\\\"}],\\\" \\\",\\\"Manually reviewed guidance dated 2026-10-09; official requirements can change and the linked agency must be checked before",
-        "learance Certificate (TCC) for Small Business 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n44:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "learance Certificate (TCC) for Small Business 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -605,8 +580,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "t, NIN, CAC, Tax and Police Documents About 2 min read Updated 9 October 2026 Government paperwork in Nigeria is confusing, slow and full of touts. This",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n2c:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "2026: Passport, NIN, CAC, Tax and Police Documents\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n35:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"25:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "2026: Passport, NIN, CAC, Tax and Police Documents\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"2e:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -624,9 +599,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "es With ₦1 million in Aba (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "icing and Sales With ₦1 million in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "icing and Sales With ₦1 million in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -644,9 +619,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "s With ₦1 million in Kano (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "cing and Sales With ₦1 million in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "cing and Sales With ₦1 million in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -664,9 +639,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "With ₦1 million in Lagos (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "ing and Sales With ₦1 million in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ing and Sales With ₦1 million in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -684,9 +659,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ith ₦1 million in Onitsha (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "g and Sales With ₦1 million in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "g and Sales With ₦1 million in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -704,9 +679,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "26: Capital, Steps and Failure Points About 3 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3b:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -724,9 +699,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "usiness With ₦200k in Aba (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "d Chin Chin Business With ₦200k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "d Chin Chin Business With ₦200k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -744,9 +719,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "siness With ₦200k in Kano (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "Chin Chin Business With ₦200k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Chin Chin Business With ₦200k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -764,9 +739,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "iness With ₦200k in Lagos (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "Chin Chin Business With ₦200k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Chin Chin Business With ₦200k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -784,9 +759,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ess With ₦200k in Onitsha (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "in Chin Business With ₦200k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "in Chin Business With ₦200k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -804,9 +779,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "26: Capital, Steps and Failure Points About 3 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3b:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -824,9 +799,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Service With ₦500k in Aba (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "and Cleaning Service With ₦500k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "and Cleaning Service With ₦500k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -844,9 +819,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ervice With ₦500k in Kano (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "nd Cleaning Service With ₦500k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "nd Cleaning Service With ₦500k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -864,9 +839,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "rvice With ₦500k in Lagos (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "d Cleaning Service With ₦500k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "d Cleaning Service With ₦500k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -884,9 +859,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ice With ₦500k in Onitsha (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "Cleaning Service With ₦500k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Cleaning Service With ₦500k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -904,9 +879,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "26: Capital, Steps and Failure Points About 3 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3b:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -924,9 +899,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "es Shop With ₦300k in Aba (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "one Accessories Shop With ₦300k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "one Accessories Shop With ₦300k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -944,9 +919,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "s Shop With ₦300k in Kano (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "ne Accessories Shop With ₦300k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ne Accessories Shop With ₦300k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -964,9 +939,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Shop With ₦300k in Lagos (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "e Accessories Shop With ₦300k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "e Accessories Shop With ₦300k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -984,9 +959,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "hop With ₦300k in Onitsha (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "Accessories Shop With ₦300k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Accessories Shop With ₦300k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1004,9 +979,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "26: Capital, Steps and Failure Points About 3 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3b:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1024,9 +999,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "usiness With ₦200k in Aba (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "a POS Agent Business With ₦200k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "a POS Agent Business With ₦200k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1044,9 +1019,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "siness With ₦200k in Kano (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "POS Agent Business With ₦200k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "POS Agent Business With ₦200k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1064,9 +1039,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "iness With ₦200k in Lagos (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "POS Agent Business With ₦200k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "POS Agent Business With ₦200k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1084,9 +1059,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ess With ₦200k in Onitsha (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "S Agent Business With ₦200k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "S Agent Business With ₦200k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1104,9 +1079,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "26: Capital, Steps and Failure Points About 3 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3b:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1124,9 +1099,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "n Store With ₦500k in Aba (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "Mini Provision Store With ₦500k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Mini Provision Store With ₦500k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1144,9 +1119,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Store With ₦500k in Kano (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "ini Provision Store With ₦500k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ini Provision Store With ₦500k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1164,9 +1139,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Store With ₦500k in Lagos (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "ni Provision Store With ₦500k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ni Provision Store With ₦500k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1184,9 +1159,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ore With ₦500k in Onitsha (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "Provision Store With ₦500k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Provision Store With ₦500k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1204,9 +1179,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "26: Capital, Steps and Failure Points About 3 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3b:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1224,9 +1199,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "siness) With ₦500k in Aba (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "pot (Grill Business) With ₦500k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "pot (Grill Business) With ₦500k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1244,9 +1219,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "iness) With ₦500k in Kano (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "ot (Grill Business) With ₦500k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ot (Grill Business) With ₦500k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1264,9 +1239,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ness) With ₦500k in Lagos (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "t (Grill Business) With ₦500k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "t (Grill Business) With ₦500k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1284,9 +1259,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ss) With ₦500k in Onitsha (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "(Grill Business) With ₦500k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "(Grill Business) With ₦500k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1304,9 +1279,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "26: Capital, Steps and Failure Points About 3 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3b:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1324,9 +1299,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "usiness With ₦250k in Aba (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "ift Fashion Business With ₦250k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ift Fashion Business With ₦250k in Aba (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1344,9 +1319,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "siness With ₦250k in Kano (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "ft Fashion Business With ₦250k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ft Fashion Business With ₦250k in Kano (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1364,9 +1339,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "iness With ₦250k in Lagos (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "t Fashion Business With ₦250k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "t Fashion Business With ₦250k in Lagos (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1384,9 +1359,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ess With ₦250k in Onitsha (2026 Plan) About 2 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "Fashion Business With ₦250k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Fashion Business With ₦250k in Onitsha (2026 Plan)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3c:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1404,9 +1379,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "26: Capital, Steps and Failure Points About 3 min read Updated 9 October 2026 Verification status: Editorial planning model dated 2026-10-09. Costs and",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3b:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "ification status:\\\"}],\\\" \\\",\\\"Editorial planning model dated 2026-10-09. Costs and timelines are estimates, not measured profit or a business guarante",
-        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n46:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "nt Nigeria 2026: Capital, Steps and Failure Points\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1424,8 +1399,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "to Start a Business With Real Numbers About 2 min read Updated 9 October 2026 Most Nigerian hustle advice is either too vague or too expensive. This sec",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n2d:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "Nigeria: How to Start a Business With Real Numbers\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n36:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"25:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "Nigeria: How to Start a Business With Real Numbers\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"2e:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1441,20 +1416,20 @@
       "jsonLdBlocks": 2,
       "internalLinks": 92,
       "externalSourceLinks": [
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxNMzF3ckozYmhRdmxNbzh0OTlhYjFGR2txRWpnTWhBUHoxSDZmdDJwdzgtYmpMekg5SVppUWI5cktKUEx0YldBU1lpal9hbUpLbU9qN3Nqc2x3ZXJGcGdUN0ZtRmVyTU9Tb1NWU2N5djc1aEhRNks3WUdRWVhwZW9CdHhQYk1WbHhZcDhqTzRtbWtSVWlk?oc=5",
         "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSUVFOGJVamNic29GTFEyQ3JvTUdVdzVkTTc3X2VuNVZ6Q0dtNXNqVUdrTVhzeWg0ZXpGa20wa2RYNkwxcHZKSjBrNWw5TC1xZnU4SFp1YWw0ZEU2VkV0bGx0LVVKNkduY0dyVlNXaTh1SzBGWUdSWEZ4SHdrRGVaUGtjUzdWWmtXdWRoSkJjdVN3c21oRjltdGRBZzk?oc=5",
         "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZVlQVU9hUG5VS3BPTTQzTnhwaFlVVUNqXzJDOUVaMHRUSW9OYi14WWJGV20zR0pXeW9CblNyR0xPZVdPT1RNalRoRnI5eDBfTTduSHJHX1JVSUtYUXRUYm1oSnFUc0lOMXBOTEdEUjN6TTc4WWVOYlZ3QlowNEFXbFdVVnRlMWg0TmlsXy1UYllueW05X1F5RFVocXZJNnVW0gGmAUFVX3lxTE9OLVRuRHdvNERlLVBWbm5oSGNWTndlU2Ezell2NFIwSVlwbFA1M2dkZXJQUnRvdGN5TmtUWHo0YjVTVkx0NVhWSnVxYjBFd3E4NTJuZnhBVHhtLWhtU01PN2dvOUV1UnVTUXUzaDZ3dXNTc2JUZ0FnZU1BV1VDOXdVSXB4LUd5MDd5dXNpMlBOellMMkVTbXc4WmdHOEZtWmwyMWVHMkE?oc=5",
         "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZmZlS2twOThwZ2xFNFA3LUxIVm1tbDQtRWhGaG9UUEQzVWdqakpnbXI1Z3c4M1NTamo4aVllVzdNQmJQRDZsVGpFMUxlVDU1S1JPVE1kYjF4dzF6Z29Gc3BwY2JFLWdOU3dqdV9MalVEWEhXeThwVGxuZW5iZS1kbFFPakZqZlFwZjgtTTVRam1XckdNQzFIb0xGeGZXaHBLbExZb3NHajJZby1TaWtWSTNOUTVqUEFMbVk0OU1vbm04YXB6MWpBbURSTmVZTWp3QVF5bkdFa0cydw?oc=5",
         "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVzBYVVRYWmh4TDByODd1Q3RSakstc1gtUk5McUlPYXlMeHF3ZUNWT0lYSzJuaW45d1ZXY3NtWEVQT0tJX3B3NFhNdEEyUHJNYk1oajRSMURGMTZjdXJkQzZOaHFHU09UdEtvOWJheENsb3hrdTl2M05HdjhzR3RSUFdabWNaN0c3MU9aR015bkFyazFQNXdqT2gtQ2pGZ1MyMkR1alJiVF9BQnQ5d1hsZw?oc=5",
-        "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd1VKM01rYU9WNEtjb2M5T181UnNOUmVWUW5xY1c4d2QySE5fQVAzMlBlcEVQSDAzVGFqNkZXWGxfUDRaMGVBdDV1MExUcXNXd2ZvSWcwOEhhVHFQRHF6aW0yTy1panJWT0gtRnRTekNxM3N6VHlIUVNuTzVpaGdORDdRTFBBSUszZ3NpSUo4NG5kRWNL?oc=5",
-        "https://news.google.com/rss/articles/CBMiugFBVV95cUxNeFBXU0pQYzNyR2VaM1I4MzlOQzlUNnRKdG1vWGxObk1VOTZjU2Z2UjNzMmhpTVNuTGNzY19Pc2tNc1B6RzlCWnZzU3J6NGFCUHhDWmkzWEt6Y3FLRmNMT1lmM0lXajRXU2FlVUlWMHB1UXcwMHJvMFNzcDJjT2szYk5lc3JCM0VjZFBtU1M0YkowSktINmQtMHdaS3hkZEx5ZGIzRnRLNmF4WTdLc1Ywd25rMzFDU1JUM1HSAb8BQVVfeXFMTkpXc18yNlRDOGthTUJLdGg4M0tDTG14bWdhdVhhcDVQd2xLRkhTU2RZRUZ0bmVHRWpNTW1TbnZGekVDeTRJUWE0dVVfRXBwUEZldzRtemhwYllOMXV3UjV2YnZaelAxZGR1TXRMVnhycVpZMVZVM1ZYa3hZN2pZNmtHWlFYZnNoVjg1T3Zua214MmwzcEItMXI1RkUtX1lvUkNFck1TbmI3dERIbUFUZERPckl1THNna1VCR09tRW8?oc=5"
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd1VKM01rYU9WNEtjb2M5T181UnNOUmVWUW5xY1c4d2QySE5fQVAzMlBlcEVQSDAzVGFqNkZXWGxfUDRaMGVBdDV1MExUcXNXd2ZvSWcwOEhhVHFQRHF6aW0yTy1panJWT0gtRnRTekNxM3N6VHlIUVNuTzVpaGdORDdRTFBBSUszZ3NpSUo4NG5kRWNL?oc=5"
       ],
       "freshnessMarkers": [
         "₦1,805 Cooking gas depot /kg ₦1,160 Trending now Japa Updated 9 October 2026 · prices marked indicative Real Prices. Real Slang. Real Hustle. Today s N",
-        "ing has its own source state. USD official ₦ 1,331.186 Source as of 9 Oct 2026, 3:00 pm WAT · CBN USD parallel quote ₦ 1,370 Source as of 10 Oct 2026, 8:06 a",
-        "m WAT · Aboki Petrol, depot median ₦1,343 /L Source as of 10 Oct 2026, 12:21 am WAT · Awajis Diesel, depot median ₦1,805 /L Source as of 10 Oct 202",
+        "ing has its own source state. USD official ₦ 1,331.186 Source as of 9 Oct 2026, 3:00 pm WAT · CBN USD parallel quote ₦ 1,370 Source as of 10 Oct 2026, 10:07",
+        "am WAT · Aboki Petrol, depot median ₦1,343 /L Source as of 10 Oct 2026, 12:21 am WAT · Awajis Diesel, depot median ₦1,805 /L Source as of 10 Oct 202",
         "y and per month. Recipe cost by family size Indicative dated prices for jollof, afang and more. Solar payback calculator How many years to pay off the",
         "ent-foreground dark:text-accent mb-3\\\",\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\",\\\" · prices marked indicative\\\"]}],[\\\"$\\\",\\\"h1\\\",null,{\\\"className\\",
-        "t-sm text-muted-foreground\\\",\\\"children\\\":\\\"Indicative dated prices for jollof, afang and more.\\\"}]]}],[\\\"$\\\",\\\"$L9\\\",\\\"/tools/solar\\\",{\\\"href\\\":\\\"/to"
+        "t-sm text-muted-foreground\\\",\\\"children\\\":\\\"Indicative dated prices for jollof, afang and more.\\\"}]]}],[\\\"$\\\",\\\"$L4\\\",\\\"/tools/solar\\\",{\\\"href\\\":\\\"/to"
       ]
     },
     {
@@ -1472,8 +1447,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "to Make ₦80,000 Last a Month in Lagos About 2 min read Updated 9 October 2026 Real numbers, real trade-offs, and where most people lose money. We wrote",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "itle\\\":\\\"How to Make ₦80,000 Last a Month in Lagos\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "itle\\\":\\\"How to Make ₦80,000 Last a Month in Lagos\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1491,8 +1466,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ng Tips That Actually Work in Nigeria About 2 min read Updated 9 October 2026 Stop the data leak: phone settings, app habits and smarter bundles. We wro",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "\":\\\"Data Saving Tips That Actually Work in Nigeria\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "\":\\\"Data Saving Tips That Actually Work in Nigeria\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1510,8 +1485,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ectricity Bill (Metered vs Estimated) About 2 min read Updated 9 October 2026 Why your bill jumps, and how to check what you are actually paying for. We",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n38:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 te",
-        "Read Your Electricity Bill (Metered vs Estimated)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n40:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"div\\\",null,{\\\"clas",
+        "Read Your Electricity Bill (Metered vs Estimated)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"37:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1529,8 +1504,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Paid From Abroad Without Losing Money About 2 min read Updated 9 October 2026 Payment channels, fees, and the paperwork that keeps you out of trouble. W",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "elancers Get Paid From Abroad Without Losing Money\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "elancers Get Paid From Abroad Without Losing Money\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1548,8 +1523,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "lar: Why the Black Market Rate Exists About 2 min read Updated 9 October 2026 The official rate, the parallel rate, and what they mean for your money. W",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "\"Naira vs Dollar: Why the Black Market Rate Exists\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "\"Naira vs Dollar: Why the Black Market Rate Exists\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1567,8 +1542,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "slip: PAYE, Pension and NHF Explained About 2 min read Updated 9 October 2026 What each deduction means and how to check if your employer got it right.",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "Read Your Payslip: PAYE, Pension and NHF Explained\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "Read Your Payslip: PAYE, Pension and NHF Explained\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1586,8 +1561,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Side Hustles That Start Under ₦50,000 About 2 min read Updated 9 October 2026 Low-capital ideas that let you test demand before you spend big. We wrote",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "\"Small Money Side Hustles That Start Under ₦50,000\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "\"Small Money Side Hustles That Start Under ₦50,000\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1608,9 +1583,9 @@
         "Fake Job Offers and Recruitment Scams About 2 min read Updated 9 October 2026 The red flags that show up in Nigerian WhatsApp and Instagram job posts. W",
         "N, OTP, full BVN and a clear selfie with your ID on an unverified chat. Where can I check a company? + Use CAC s public search and the company s official w",
         "N, OTP, full BVN and a clear selfie with your ID on an unverified chat.\\\\\\\"}},{\\\\\\\"@type\\\\\\\":\\\\\\\"Question\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Where can I check a company?",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
         "N, OTP, full BVN and a clear selfie with your ID on an unverified chat.\\\"}]]}],[\\\"$\\\",\\\"details\\\",\\\"2\\\",{\\\"className\\\":\\\"group p-4\\\",\\\"open\\\":false,\\\"child",
-        "\"How to Spot Fake Job Offers and Recruitment Scams\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\"How to Spot Fake Job Offers and Recruitment Scams\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1628,8 +1603,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "k and Daily Life Guides for Nigerians About 2 min read Updated 9 October 2026 These guides are for the everyday questions that cost money: budgeting, jo",
-        "12 16 14\\\"}]\\n2c:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n2d:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-[17",
-        "n: Money, Work and Daily Life Guides for Nigerians\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n36:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "12 16 14\\\"}]\\n25:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n26:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-[17",
+        "n: Money, Work and Daily Life Guides for Nigerians\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1807,10 +1782,10 @@
       "freshnessMarkers": [
         "This Month? Cost-of-Living Calculator About 2 min read Updated 9 October 2026 Verification status: Manual/indicative planning data dated 2026-10-09; not",
         "rket cookbook Food prices in Lagos Food prices in Kano Dated fuel references Mini Provision Store Small Money Side Hustles That Start Under ₦50,000 Pr",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n31:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"27:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "on status:\\\"}],\\\" \\\",\\\"Manual/indicative planning data dated 2026-10-09; not an automatically verified city-market feed. Confirm locally before paying",
         "ver:border-primary hover:bg-secondary\\\",\\\"children\\\":\\\"Dated fuel references\\\"}]}],[\\\"$\\\",\\\"li\\\",\\\"/hustle/provision-store\\\",{\\\"children\\\":[\\\"$\\\",\\\"$L",
-        "Go in Lagos This Month? Cost-of-Living Calculator\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Go in Lagos This Month? Cost-of-Living Calculator\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -1854,11 +1829,11 @@
         "26: Depot, Pump and What It Costs You About 2 min read Updated 9 October 2026 Verification status: Manual/indicative planning data dated 2026-10-09; not",
         "efore you sign any agent agreement. Read the blueprint Dated diesel benchmarks Dangote Refinery cut its gantry diesel price to ₦1,780 per litre effect",
         "ing Generator fuel calculator Solar payback calculator Dated fuel references Cost-of-living calculator Generator Servicing and Sales How to Read Your",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n30:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"27:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "on status:\\\"}],\\\" \\\",\\\"Manual/indicative planning data dated 2026-10-09; not an automatically verified city-market feed. Confirm locally before paying",
         "ssName\\\":\\\"prose-naija\\\",\\\"children\\\":[[\\\"$\\\",\\\"$1\\\",\\\"Dated diesel benchmarks\\\",{\\\"children\\\":[[\\\"$\\\",\\\"section\\\",null,{\\\"aria-labelledby\\\":\\\"h-0\\\",\\",
         "n\\\":[[\\\"$\\\",\\\"h2\\\",null,{\\\"id\\\":\\\"h-0\\\",\\\"children\\\":\\\"Dated diesel benchmarks\\\"}],[[\\\"$\\\",\\\"p\\\",\\\"0\\\",{\\\"className\\\":\\\"mt-4 leading-relaxed text-fore",
-        "ver:border-primary hover:bg-secondary\\\",\\\"children\\\":\\\"Dated fuel references\\\"}]}],[\\\"$\\\",\\\"li\\\",\\\"/prices/cost-of-living\\\",{\\\"children\\\":[\\\"$\\\",\\\"$L9"
+        "ver:border-primary hover:bg-secondary\\\",\\\"children\\\":\\\"Dated fuel references\\\"}]}],[\\\"$\\\",\\\"li\\\",\\\"/prices/cost-of-living\\\",{\\\"children\\\":[\\\"$\\\",\\\"$L4"
       ]
     },
     {
@@ -2164,9 +2139,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "ces, Tips and What to Buy (Aba, 2026) About 2 min read Updated 9 October 2026 Verification status: Manual/indicative planning data dated 2026-10-09; not",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "on status:\\\"}],\\\" \\\",\\\"Manual/indicative planning data dated 2026-10-09; not an automatically verified city-market feed. Confirm locally before paying",
-        "l Market: Prices, Tips and What to Buy (Aba, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "l Market: Prices, Tips and What to Buy (Aba, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2184,9 +2159,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "s, Tips and What to Buy (Lagos, 2026) About 2 min read Updated 9 October 2026 Verification status: Manual/indicative planning data dated 2026-10-09; not",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "on status:\\\"}],\\\" \\\",\\\"Manual/indicative planning data dated 2026-10-09; not an automatically verified city-market feed. Confirm locally before paying",
-        "Market: Prices, Tips and What to Buy (Lagos, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Market: Prices, Tips and What to Buy (Lagos, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2204,9 +2179,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "es, Tips and What to Buy (Kano, 2026) About 2 min read Updated 9 October 2026 Verification status: Manual/indicative planning data dated 2026-10-09; not",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "on status:\\\"}],\\\" \\\",\\\"Manual/indicative planning data dated 2026-10-09; not an automatically verified city-market feed. Confirm locally before paying",
-        "Market: Prices, Tips and What to Buy (Kano, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Market: Prices, Tips and What to Buy (Kano, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2224,9 +2199,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "s, Tips and What to Buy (Lagos, 2026) About 2 min read Updated 9 October 2026 Verification status: Manual/indicative planning data dated 2026-10-09; not",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "on status:\\\"}],\\\" \\\",\\\"Manual/indicative planning data dated 2026-10-09; not an automatically verified city-market feed. Confirm locally before paying",
-        "Market: Prices, Tips and What to Buy (Lagos, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Market: Prices, Tips and What to Buy (Lagos, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2244,9 +2219,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Tips and What to Buy (Onitsha, 2026) About 2 min read Updated 9 October 2026 Verification status: Manual/indicative planning data dated 2026-10-09; not",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "on status:\\\"}],\\\" \\\",\\\"Manual/indicative planning data dated 2026-10-09; not an automatically verified city-market feed. Confirm locally before paying",
-        "rket: Prices, Tips and What to Buy (Onitsha, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "rket: Prices, Tips and What to Buy (Onitsha, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2264,9 +2239,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "s, Tips and What to Buy (Lagos, 2026) About 2 min read Updated 9 October 2026 Verification status: Manual/indicative planning data dated 2026-10-09; not",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "on status:\\\"}],\\\" \\\",\\\"Manual/indicative planning data dated 2026-10-09; not an automatically verified city-market feed. Confirm locally before paying",
-        "Market: Prices, Tips and What to Buy (Lagos, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Market: Prices, Tips and What to Buy (Lagos, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2284,9 +2259,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "es, Tips and What to Buy (Kano, 2026) About 2 min read Updated 9 October 2026 Verification status: Manual/indicative planning data dated 2026-10-09; not",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3c:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"32:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
         "on status:\\\"}],\\\" \\\",\\\"Manual/indicative planning data dated 2026-10-09; not an automatically verified city-market feed. Confirm locally before paying",
-        "(Kano): Prices, Tips and What to Buy (Kano, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n45:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "(Kano): Prices, Tips and What to Buy (Kano, 2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2304,8 +2279,8 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "re to Buy, What Things Cost, and Tips About 2 min read Updated 9 October 2026 Markets set the real prices in Nigeria. Supermarkets have their place, but",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n2f:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "Markets: Where to Buy, What Things Cost, and Tips\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"26:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "Markets: Where to Buy, What Things Cost, and Tips\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2490,9 +2465,9 @@
       "internalLinks": 48,
       "externalSourceLinks": [],
       "freshnessMarkers": [
-        "/kg ₦1,160 Trending now Japa Legal Privacy notice Last updated 9 October 2026 . Prepared under the Nigeria Data Protection Act 2023 (NDPA). Launch note:",
+        "/kg ₦1,160 Trending now Japa Legal Privacy notice Last updated 10 October 2026 . Prepared under the Nigeria Data Protection Act 2023 (NDPA). Launch note",
         "ed later, this notice and the consent controls must be updated before non-essential advertising storage is used. We do not use pop-ups, interstitials or",
-        "2 text-sm text-muted-foreground\\\",\\\"children\\\":[\\\"Last updated \\\",\\\"9 October 2026\\\",\\\". Prepared under the Nigeria Data Protection Act 2023 (NDPA).\\\"]}",
+        "2 text-sm text-muted-foreground\\\",\\\"children\\\":[\\\"Last updated \\\",\\\"10 October 2026\\\",\\\". Prepared under the Nigeria Data Protection Act 2023 (NDPA).\\\"]",
         "ed later, this notice and the consent controls must be updated before non-essential advertising storage is used. We do not use pop-ups, interstitials or"
       ]
     },
@@ -2519,8 +2494,8 @@
       "freshnessMarkers": [
         "parate source and check times. This page distinguishes seeded, recent, stale, manual and unavailable data; a scheduled check does not guarantee that an",
         "· official foreign-exchange closing rate · NGN per USD Source as of 9 Oct 2026, 3:00 pm WAT · Central Bank of Nigeria: NFEM exchange rates Checked: 2026-10-1",
-        "CBN or parallel-market quote · currency units per USD Source as of 10 Oct 2026, 1:02 am WAT · open.er-api.com: daily reference rates Checked: 2026-10-10 08:",
-        "-market buy/sell quote · NGN per foreign-currency unit Source as of 10 Oct 2026, 8:06 am WAT · Aboki Forex: black market and CBN widget Checked: 2026-10-10 0",
+        "CBN or parallel-market quote · currency units per USD Source as of 10 Oct 2026, 1:02 am WAT · open.er-api.com: daily reference rates Checked: 2026-10-10 09:",
+        "-market buy/sell quote · NGN per foreign-currency unit Source as of 10 Oct 2026, 10:07 am WAT · Aboki Forex: black market and CBN widget Checked: 2026-10-10",
         "ce, not retail pump price · NGN per litre (LPG per kg) Source as of 10 Oct 2026, 12:21 am WAT · Awajis fuel tables (petroleumprice.ng depot data) Checked: 20",
         "pump price. Open source Retail petrol pump references Stale — last known value Selected Nigerian states · dated manual retail reference, separate fro",
         "m depot wholesale · NGN per litre Stale last reading 9 Oct 2026, 12:00 pm WAT · Awajis fuel tables (petroleumprice.ng depot data)",
@@ -2542,9 +2517,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         ": Prices, Value and Who Should Use It About 2 min read Updated 9 October 2026 Verification status: Manual/indicative bundle comparison dated 2026-10-09;",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "tatus:\\\"}],\\\" \\\",\\\"Manual/indicative bundle comparison dated 2026-10-09; confirm price, validity and coverage in the operator's official app or USSD m",
-        "ta Plans 2026: Prices, Value and Who Should Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ta Plans 2026: Prices, Value and Who Should Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2562,9 +2537,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         ": Prices, Value and Who Should Use It About 2 min read Updated 9 October 2026 Verification status: Manual/indicative bundle comparison dated 2026-10-09;",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "tatus:\\\"}],\\\" \\\",\\\"Manual/indicative bundle comparison dated 2026-10-09; confirm price, validity and coverage in the operator's official app or USSD m",
-        "ta Plans 2026: Prices, Value and Who Should Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ta Plans 2026: Prices, Value and Who Should Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2582,9 +2557,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         ": How It Works and How to Avoid Scams About 2 min read Updated 9 October 2026 Verification status: Manual/indicative bundle comparison dated 2026-10-09;",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n38:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "tatus:\\\"}],\\\" \\\",\\\"Manual/indicative bundle comparison dated 2026-10-09; confirm price, validity and coverage in the operator's official app or USSD m",
-        "sh Rates 2026: How It Works and How to Avoid Scams\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "sh Rates 2026: How It Works and How to Avoid Scams\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2605,10 +2580,10 @@
         "in Nigeria (October 2026 Comparator) About 2 min read Updated 9 October 2026 Verification status: Manual/indicative bundle comparison dated 2026-10-09;",
         "t value per GB. Confirm live prices. How often is this updated? + Our telecom data is reviewed when the editor updates the file. Each page shows the dat",
         "\\\":\\\\\\\"Question\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"How often is this updated?\\\\\\\",\\\\\\\"acceptedAnswer\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"Answer\\\\\\\",\\\\\\\"text\\\\\\\":\\\\\\\"Our telecom da",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "tatus:\\\"}],\\\" \\\",\\\"Manual/indicative bundle comparison dated 2026-10-09; confirm price, validity and coverage in the operator's official app or USSD m",
         "tify-between gap-4\\\",\\\"children\\\":[\\\"How often is this updated?\\\",[\\\"$\\\",\\\"span\\\",null,{\\\"aria-hidden\\\":\\\"true\\\",\\\"className\\\":\\\"text-primary transition",
-        "ata This Week in Nigeria (October 2026 Comparator)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ata This Week in Nigeria (October 2026 Comparator)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2626,9 +2601,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Which Network Should You Use in 2026? About 2 min read Updated 9 October 2026 Verification status: Manual/indicative bundle comparison dated 2026-10-09;",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n38:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "tatus:\\\"}],\\\" \\\",\\\"Manual/indicative bundle comparison dated 2026-10-09; confirm price, validity and coverage in the operator's official app or USSD m",
-        "vs 9mobile: Which Network Should You Use in 2026?\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n41:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "vs 9mobile: Which Network Should You Use in 2026?\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2646,9 +2621,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         ": Prices, Value and Who Should Use It About 2 min read Updated 9 October 2026 Verification status: Manual/indicative bundle comparison dated 2026-10-09;",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n38:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "tatus:\\\"}],\\\" \\\",\\\"Manual/indicative bundle comparison dated 2026-10-09; confirm price, validity and coverage in the operator's official app or USSD m",
-        "ta Plans 2026: Prices, Value and Who Should Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ta Plans 2026: Prices, Value and Who Should Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2666,9 +2641,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         ": Prices, Value and Who Should Use It About 2 min read Updated 9 October 2026 Verification status: Manual/indicative bundle comparison dated 2026-10-09;",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n38:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
         "tatus:\\\"}],\\\" \\\",\\\"Manual/indicative bundle comparison dated 2026-10-09; confirm price, validity and coverage in the operator's official app or USSD m",
-        "ta Plans 2026: Prices, Value and Who Should Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "ta Plans 2026: Prices, Value and Who Should Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2686,9 +2661,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "6: How They Work and When to Use Them About 2 min read Updated 9 October 2026 Verification status: Manual/indicative bundle comparison dated 2026-10-09;",
-        "in read\\\"]}]\\n38:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
+        "in read\\\"]}]\\n2f:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n30:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border bo",
         "tatus:\\\"}],\\\" \\\",\\\"Manual/indicative bundle comparison dated 2026-10-09; confirm price, validity and coverage in the operator's official app or USSD m",
-        "s Nigeria 2026: How They Work and When to Use Them\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "s Nigeria 2026: How They Work and When to Use Them\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -2708,8 +2683,8 @@
         "d airtime to cash rates in Nigeria. Indicative prices, dated.\",\"inLanguage\":\"en-NG\",\"url\":\"https://naijacheck.ng/telecom\",\"mainEntityOfPage\":\"https://",
         "Plans, Night Data and Airtime to Cash About 2 min read Updated 9 October 2026 Data is one of the biggest monthly costs for Nigerians who work online, st",
         "d airtime to cash rates in Nigeria. Indicative prices, dated.\\\\\\\",\\\\\\\"inLanguage\\\\\\\":\\\\\\\"en-NG\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://naijacheck.ng/telecom\\\\\\\",\\",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n2c:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "26: Cheapest Plans, Night Data and Airtime to Cash\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n35:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"24:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "26: Cheapest Plans, Night Data and Airtime to Cash\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"2d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\"",
         "d airtime to cash rates in Nigeria. Indicative prices, dated.\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"2\\\",{\\\"name\\\":\\\"application-name\\\",\\\"content\\\":\\\"NaijaCheck\\\"}],[\\",
         "d airtime to cash rates in Nigeria. Indicative prices, dated.\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"14\\\",{\\\"property\\\":\\\"og:url\\\",\\\"content\\\":\\\"https://naijacheck.ng/",
         "d airtime to cash rates in Nigeria. Indicative prices, dated.\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"25\\\",{\\\"name\\\":\\\"twitter:image\\\",\\\"content\\\":\\\"https://naijacheck."
@@ -2975,7 +2950,7 @@
         "greement. Read the blueprint Scale to your table City (dated indicative prices) Lagos Onitsha Kano Aba People to feed Afang Soup Heavy soup with a ric",
         ",\\\\\\\"headline\\\\\\\":\\\\\\\"Recipe Planning Calculator Using Dated Food Estimates\\\\\\\",\\\\\\\"description\\\\\\\":\\\\\\\"Plan recipe quantities with dated, unverified",
         "-4xl\\\",\\\"children\\\":\\\"Recipe Planning Calculator Using Dated Food Estimates\\\"}],[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-3 flex flex-wrap items-center ga",
-        "in read\\\"]}]\\n2f:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n30:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-[17",
+        "in read\\\"]}]\\n25:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n26:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-[17",
         "[\\\"$\\\",\\\"p\\\",\\\"1\\\",{\\\"children\\\":\\\"The calculator uses dated, unverified estimate rows and per-person recipe quantities. It offers only cities with ex"
       ]
     },
@@ -2995,9 +2970,9 @@
       "freshnessMarkers": [
         "esel and Petrol Per Day and Per Month About 2 min read Updated 9 October 2026 Generator fuel is one of the biggest bills for Nigerian homes and small bu",
         "ading Solar payback calculator Generator diesel prices Dated fuel references Cost-of-living calculator How to Read Your Electricity Bill (Metered vs E",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n2f:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
-        "ver:border-primary hover:bg-secondary\\\",\\\"children\\\":\\\"Dated fuel references\\\"}]}],[\\\"$\\\",\\\"li\\\",\\\"/prices/cost-of-living\\\",{\\\"children\\\":[\\\"$\\\",\\\"$La",
-        "r Nigeria: Diesel and Petrol Per Day and Per Month\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n38:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"25:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
+        "ver:border-primary hover:bg-secondary\\\",\\\"children\\\":\\\"Dated fuel references\\\"}]}],[\\\"$\\\",\\\"li\\\",\\\"/prices/cost-of-living\\\",{\\\"children\\\":[\\\"$\\\",\\\"$L4",
+        "r Nigeria: Diesel and Petrol Per Day and Per Month\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"2e:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3016,9 +2991,9 @@
       "freshnessMarkers": [
         "Solar Payback Calculator Nigeria 2026 About 2 min read Updated 9 October 2026 Solar and inverter systems are expensive upfront, but they can cut your ge",
         "ding Generator fuel calculator Generator diesel prices Dated fuel references How to Read Your Electricity Bill (Metered vs Estimated) Generator Servic",
-        "in read\\\"]}]\\n2f:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n30:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-[17",
+        "in read\\\"]}]\\n25:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n26:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-[17",
         "ver:border-primary hover:bg-secondary\\\",\\\"children\\\":\\\"Dated fuel references\\\"}]}],[\\\"$\\\",\\\"li\\\",\\\"/learn/electricity-bill-explained\\\",{\\\"children\\\":[",
-        "Inverter and Solar Payback Calculator Nigeria 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Inverter and Solar Payback Calculator Nigeria 2026\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3037,9 +3012,9 @@
       "freshnessMarkers": [
         "usinesses: Generator, Solar, Cookbook About 2 min read Updated 9 October 2026 Power, food and money are the three things Nigerian households calculate m",
         "k calculator Market cookbook Cost-of-living calculator Dated fuel references Generator diesel prices How to Read Your Electricity Bill (Metered vs Est",
-        "defined\\\"]}]\\n2b:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n2c:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-[17",
+        "defined\\\"]}]\\n24:[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]\\n25:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-[17",
         "ver:border-primary hover:bg-secondary\\\",\\\"children\\\":\\\"Dated fuel references\\\"}]}],[\\\"$\\\",\\\"li\\\",\\\"/prices/generator-diesel\\\",{\\\"children\\\":[\\\"$\\\",\\\"$",
-        "s and Small Businesses: Generator, Solar, Cookbook\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n35:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "s and Small Businesses: Generator, Solar, Cookbook\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"2e:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3058,10 +3033,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "Abeg Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Abeg Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3080,10 +3055,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 3 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "lugo Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "lugo Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3102,10 +3077,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "life Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "life Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3124,10 +3099,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 3 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3b:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n32:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "sion Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n44:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "sion Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3146,10 +3121,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "mber Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "mber Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3168,10 +3143,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "Ehen Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Ehen Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3189,9 +3164,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Signs, Naija Examples and What to Do About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
-        "al blackmail: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
+        "al blackmail: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3209,9 +3184,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Signs, Naija Examples and What to Do About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
-        "ional labour: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
+        "ional labour: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3229,9 +3204,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Signs, Naija Examples and What to Do About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3b:[\\",
-        "elationships: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n32:[\\",
+        "elationships: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3250,10 +3225,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "bese Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "bese Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3271,9 +3246,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Signs, Naija Examples and What to Do About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
-        "\":\\\"Ghosting: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
+        "\":\\\"Ghosting: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3292,10 +3267,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "Gist Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Gist Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3314,10 +3289,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "Japa Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Japa Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3336,10 +3311,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "Jara Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Jara Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3358,10 +3333,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 3 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "lebu Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "lebu Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3380,10 +3355,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 3 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3b:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n32:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "eria Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n44:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "eria Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3401,9 +3376,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Signs, Naija Examples and What to Do About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
-        "Love bombing: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
+        "Love bombing: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3422,10 +3397,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 3 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n38:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n39:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n30:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "blee Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "blee Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3444,10 +3419,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "anbe Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "anbe Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3466,10 +3441,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "Sabi Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Sabi Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3488,10 +3463,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "kara Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "kara Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3510,10 +3485,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "harp Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "harp Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3531,9 +3506,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Signs, Naija Examples and What to Do About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
-        "ituationship: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
+        "ituationship: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3552,10 +3527,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 3 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n38:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg bor",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n39:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]]}]\\n\"]) self.__next_f.push([1,\"2f:[\\\"$\\\",\\\"p\\\",null,{\\\"classN",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n30:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "life Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "life Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3574,10 +3549,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 3 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n3a:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3b:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"31:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n32:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "Purr Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n44:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "Purr Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3b:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3595,9 +3570,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Signs, Naija Examples and What to Do About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
-        "c positivity: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
+        "c positivity: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3615,9 +3590,9 @@
       "externalSourceLinks": [],
       "freshnessMarkers": [
         "Signs, Naija Examples and What to Do About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
-        "auma bonding: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n42:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
+        "auma bonding: Signs, Naija Examples and What to Do\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"39:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3636,10 +3611,10 @@
       "freshnessMarkers": [
         "2026: What It Means and How to Use It About 2 min read Updated 9 October 2026 Verification status: Editorial meaning dated 2026-10-09. Any editorial sco",
         "or your money. Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n39:[\\\"$\\\",\\\"p\\\",null,{\\\"className\\\":\\\"mt-5 rounded-lg border",
-        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n3a:[\\",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"30:[\\\"$\\\",\\\"p\\\",null,{\\\"className",
+        "\":\\\"Verification status:\\\"}],\\\" \\\",\\\"Editorial meaning dated 2026-10-09. Any editorial score is not a measurement of X or TikTok activity.\\\"]}]\\n31:[\\",
         "\\\"children\\\":\\\"Slang moves fast, so we keep each entry updated and label our confidence level. Use this as a practical guide, not a dictionary of final",
-        "hala Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n43:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "hala Meaning 2026: What It Means and How to Use It\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"3a:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     },
     {
@@ -3660,9 +3635,9 @@
         "lang Decoder and Trend Monitor (2026) About 2 min read Updated 9 October 2026 Nigerian slang moves faster than dictionaries. One song or one video can m",
         "ation. Read the entry for detail. Is the slang decoder updated daily? + The slang list is reviewed weekly, and the trend-of-the-day is refreshed when th",
         "\\\\\\\"Question\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Is the slang decoder updated daily?\\\\\\\",\\\\\\\"acceptedAnswer\\\\\\\":{\\\\\\\"@type\\\\\\\":\\\\\\\"Answer\\\\\\\",\\\\\\\"text\\\\\\\":\\\\\\\"The slan",
-        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n2c:[\\\"$\\\",\\\"div\\\",null,{\\\"className\\\":\\\"mt-6 space-y-4 text-",
+        "\\\" min read\\\"]}],[\\\"$\\\",\\\"span\\\",null,{\\\"children\\\":[\\\"Updated \\\",\\\"9 October 2026\\\"]}]]}]\\n\"]) self.__next_f.push([1,\"24:[\\\"$\\\",\\\"div\\\",null,{\\\"classNa",
         "y-between gap-4\\\",\\\"children\\\":[\\\"Is the slang decoder updated daily?\\\",[\\\"$\\\",\\\"span\\\",null,{\\\"aria-hidden\\\":\\\"true\\\",\\\"className\\\":\\\"text-primary tran",
-        "e\\\":\\\"Naija Slang Decoder and Trend Monitor (2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n35:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\":\\\"Related guide\\\",\\\"classN"
+        "e\\\":\\\"Naija Slang Decoder and Trend Monitor (2026)\\\",\\\"updatedAt\\\":\\\"2026-10-09\\\"}]\\n\"]) self.__next_f.push([1,\"2d:[\\\"$\\\",\\\"aside\\\",null,{\\\"aria-label\\\""
       ]
     }
   ]
