@@ -1,15 +1,17 @@
 import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTypeScript from "eslint-config-next/typescript";
+import { FlatCompat } from "@eslint/eslintrc";
+import { fileURLToPath } from "node:url";
+import path from "node:path";
+
+const here = path.dirname(fileURLToPath(import.meta.url));
+const compat = new FlatCompat({ baseDirectory: here });
 
 export default defineConfig([
-  ...nextVitals,
-  ...nextTypeScript,
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     linterOptions: { reportUnusedDisableDirectives: false },
     rules: {
       "react/no-unescaped-entities": "off",
-      // Keep the previous lint baseline while migrating from Next 14's legacy `next lint`.
       "react-hooks/set-state-in-effect": "off",
       "react-hooks/purity": "off",
       "@typescript-eslint/no-explicit-any": "off",

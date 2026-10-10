@@ -53,11 +53,11 @@ Evidence: `docs/evidence/local-static-crawl-2026-10-10.json` and `docs/evidence/
 
 Before: production audit **10** (1 critical, 6 high, 3 moderate); full audit **19** (1 critical, 14 high, 3 moderate, 1 low).
 
-Applied without `--force`: Next 14.2.35 → **16.4.0**, React/React DOM → **19.3.0**, ESLint/config → **9.39.5/16.4.0**, PostCSS → **8.5.29**, Tailwind 3.4.19, Wrangler → **4.149.0**. Dynamic route params and flat ESLint config were migrated.
+Applied without `--force`: Next 14.2.35 → maintained **15.5.27**, React/React DOM → **19.3.0**, ESLint/config → **9.39.5/15.5.27**, PostCSS → **8.5.29**, Tailwind 3.4.19, Wrangler → **4.149.0**. Dynamic route params and flat ESLint compatibility config were migrated. Next 16.4.0 passed locally but repeatedly failed the configured Cloudflare branch build, so it was not left as a release candidate.
 
-After: production audit **8** (5 high, 3 moderate); full audit **10** (7 high, 3 moderate), with **0 critical** and no Next runtime advisory. Remaining paths are build/lint tooling: Tailwind 3 → chokidar/fast-glob/micromatch/braces and postcss-nested/postcss-selector-parser; eslint-config-next → fast-glob. npm offers no patched Tailwind 3 fix and misleadingly suggests downgrading eslint-config-next to vulnerable old Next tooling. Tailwind 4 migration/removal remains required; no forced fix was used.
+After: production audit **10** (6 high, 4 moderate); full audit **12** (8 high, 4 moderate), with **0 critical**. Remaining paths are primarily build/lint tooling: Tailwind 3 → chokidar/fast-glob/micromatch/braces and postcss-nested/postcss-selector-parser; eslint-config-next → fast-glob. The remaining Next moderate report is through its bundled PostCSS and npm offers only the Cloudflare-incompatible semver-major Next 16 path. npm offers no patched Tailwind 3 fix and misleadingly suggests downgrading eslint-config-next to older tooling. Next 16/Cloudflare diagnosis and Tailwind 4 migration/removal remain required; no forced fix was used.
 
-Compatibility passed: `npm ci`, typecheck, lint, 12 monitor parser tests, NBS importer tests, Next 16 production build, static audit, Wrangler dry-run, exhaustive local HTTP crawl, Worker security/API smoke, and source-by-source monitor run.
+Compatibility passed: `npm ci`, typecheck, lint, 12 monitor parser tests, NBS importer tests, Next 15 production build, static audit, Wrangler dry-run, exhaustive local HTTP crawl, Worker security/API smoke, and source-by-source monitor run.
 
 ## Remaining actions by responsibility
 
