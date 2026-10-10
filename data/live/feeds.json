@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-10T12:30:04.396Z",
+  "checkedAt": "2026-10-10T19:16:58.742Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -12,28 +12,28 @@
       "query": "petrol price Nigeria",
       "items": [
         {
-          "title": "Petrol hits N1,900/litre as depot prices surge despite NNPC cut",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZVlQVU9hUG5VS3BPTTQzTnhwaFlVVUNqXzJDOUVaMHRUSW9OYi14WWJGV20zR0pXeW9CblNyR0xPZVdPT1RNalRoRnI5eDBfTTduSHJHX1JVSUtYUXRUYm1oSnFUc0lOMXBOTEdEUjN6TTc4WWVOYlZ3QlowNEFXbFdVVnRlMWg0TmlsXy1UYllueW05X1F5RFVocXZJNnVW0gGmAUFVX3lxTE9OLVRuRHdvNERlLVBWbm5oSGNWTndlU2Ezell2NFIwSVlwbFA1M2dkZXJQUnRvdGN5TmtUWHo0YjVTVkx0NVhWSnVxYjBFd3E4NTJuZnhBVHhtLWhtU01PN2dvOUV1UnVTUXUzaDZ3dXNTc2JUZ0FnZU1BV1VDOXdVSXB4LUd5MDd5dXNpMlBOellMMkVTbXc4WmdHOEZtWmwyMWVHMkE?oc=5",
-          "source": "Vanguard News",
-          "published": "2026-10-09T23:57:09.000Z"
-        },
-        {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
           "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNXZuQks4c2otRlh3czh4dHpPbmR3NXFKbmpjaExMRnZNR0hMMDd1T0tzZjBvR25wMlRYQm1Ydm5NdVhsQm4wUzJIYjdHNzVmb21Xd2huaWxfai1BaEpHTDdnMTZlZGRlOVpSYlQxaXl6aVhNdzlMcE1NbzVkX09EWmlrMlYtYlFETGtrQ2czY2lRS1R6TjI2ZVRyX05WdDZCX0NSLXNySkpDaFBPel84eWJTSklsUlRyNWY4TG9JYzgwbHVZQzVpVk9ldk10cWNwb3JKbVFCZmxGWkFzTnJrOWJPeG0yckd3YlJR?oc=5",
           "source": "Premium Times Nigeria",
           "published": "2026-10-09T04:26:07.000Z"
         },
         {
-          "title": "FG Announces 30-Day Discount On Petrol Sold By NNPC",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWTQ5NlBjUUR5cEhHLW9Eb2RpdFc0UGRMU28zV193WXBEdEhyZTFwbEoxeUVWUGE4T3J3WnpFTHdqcHZqci1GV3NDVml6NVVRcHExbERwZE11NEZiV2ZpWFNXbGtNdDZuVDRQLVp5czBuSVdQcGdtelpWX2gzZTNhd0NEclJLUzN3UWpCaVM4MFFidHZoVTFfWFVXZUNnUk9F?oc=5",
-          "source": "Channels Television",
-          "published": "2026-10-08T19:33:04.000Z"
+          "title": "NNPC extends N66 petrol discount to October 31, debunks subsidy return",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd1VKM01rYU9WNEtjb2M5T181UnNOUmVWUW5xY1c4d2QySE5fQVAzMlBlcEVQSDAzVGFqNkZXWGxfUDRaMGVBdDV1MExUcXNXd2ZvSWcwOEhhVHFQRHF6aW0yTy1panJWT0gtRnRTekNxM3N6VHlIUVNuTzVpaGdORDdRTFBBSUszZ3NpSUo4NG5kRWNL?oc=5",
+          "source": "Punch Newspapers",
+          "published": "2026-10-10T05:25:56.000Z"
         },
         {
           "title": "Tinubu Government Announces 30-Day Petrol Discount At NNPC Stations, Prioritises Public Transporters",
           "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRUt3VkpYcTdnSjdmVWVRQ0M4aWg1M2Z0My1IaEEwQ1pSV2FEbEpQWGM0bEVnRU1RUmYyMERXQlZXLVFLZU1wSXhOX21SODRxbTlYc1Ftb29NNEJWRmhJbV9RRW1nOWlaLURTejB2V3dFZTJ5ZTNvQTJYNTVYNUkxRUc5b0Z5dWJvSjFhLTVyUkxUbWNKaTVLYzFKbnJzVDZydE9sY1dwUWFSS1BleFM5aU9tMkhicTJkaEZIb2VJTQ?oc=5",
           "source": "Sahara Reporters",
           "published": "2026-10-08T19:11:32.000Z"
+        },
+        {
+          "title": "When The Price Of Petrol Becomes The Price Of Power",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNMzF3ckozYmhRdmxNbzh0OTlhYjFGR2txRWpnTWhBUHoxSDZmdDJwdzgtYmpMekg5SVppUWI5cktKUEx0YldBU1lpal9hbUpLbU9qN3Nqc2x3ZXJGcGdUN0ZtRmVyTU9Tb1NWU2N5djc1aEhRNks3WUdRWVhwZW9CdHhQYk1WbHhZcDhqTzRtbWtSVWlk?oc=5",
+          "source": "Channels Television",
+          "published": "2026-10-10T08:17:36.000Z"
         },
         {
           "title": "Nigeria proposes petrol price cap to curb fuel cost volatility",
@@ -54,10 +54,10 @@
           "published": "2026-10-08T17:38:00.000Z"
         },
         {
-          "title": "Fuel Price Discount: Atiku Asks FG, ‘What Happens on Day 31?’",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSUVFOGJVamNic29GTFEyQ3JvTUdVdzVkTTc3X2VuNVZ6Q0dtNXNqVUdrTVhzeWg0ZXpGa20wa2RYNkwxcHZKSjBrNWw5TC1xZnU4SFp1YWw0ZEU2VkV0bGx0LVVKNkduY0dyVlNXaTh1SzBGWUdSWEZ4SHdrRGVaUGtjUzdWWmtXdWRoSkJjdVN3c21oRjltdGRBZzk?oc=5",
-          "source": "THISDAYLIVE",
-          "published": "2026-10-10T04:15:37.000Z"
+          "title": "Day 31: The question Nigeria’s fuel discount cannot answer",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNbVUtMTdfTGNCcDJ4RzdlMVUzTWtVdk9xUmctT3JNdDdUUlVib0gtVVloOUZPYnBmVFdsYTFiRzRySXpqX0NITlluZW9IQ1ZMZlRwQnZsRUlwTTM0UnI2cG4yTDNYRzF3U20wRjZudEFhWVJhVDRpQmxhNHVOVnkwbXVvLW5CYlhl?oc=5",
+          "source": "TheCable",
+          "published": "2026-10-10T12:48:00.000Z"
         }
       ]
     },
@@ -85,16 +85,16 @@
           "published": "2026-10-06T02:15:57.000Z"
         },
         {
-          "title": "Naira Firms Against Dollar, Trades N1,331/$1 at NAFEX",
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQ1o3LS0zX25JcHkzYmdWLVA2M1RXXzdMUHA4VWZxMGtwQUhEZXQ1NGJIQnY0bUs1elEzSURtWmI4WERHbGVpNVd3em1oX251RGNPRlFvZkx2T0o4cVUwWXBaVW9zUndWYnFwemI1ODdndlJXc3h3eDBMbGhFaERkWlRwRDUxbEp4UnFv?oc=5",
-          "source": "Business Post Nigeria",
-          "published": "2026-10-10T12:12:06.000Z"
-        },
-        {
           "title": "Return Of Subsidy Could Lead To ₦2,000/Litre Petrol, ₦3,000/$ Exchange Rate — FG",
           "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNay1hUHdNMms0ZmRwWWtOSklEblRvUlVrT2lFOU5xaUJMR0Y2WHpBM1VhMm53RnhISU9sSlNKVWg1a0lMQlZlTWVYcmRWbU4tVEgtcU5ET3N1all0TjlwOEdoLTVwNjdGYWhCcFQydHhrbm9sc0ppVm9yMmdPbEJWMjIwU0xoblFKUTA3UC1zNEVWUlc1bkNjSG5tYm5GLTF5Z19LWlRxTmJqcTgzOHMwRl9Mc1VLWElKZk1rcVdWTzR4UXdhYjNF?oc=5",
           "source": "Channels Television",
           "published": "2026-10-08T23:15:21.000Z"
+        },
+        {
+          "title": "Naira Firms Against Dollar, Trades N1,331/$1 at NAFEX",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQ1o3LS0zX25JcHkzYmdWLVA2M1RXXzdMUHA4VWZxMGtwQUhEZXQ1NGJIQnY0bUs1elEzSURtWmI4WERHbGVpNVd3em1oX251RGNPRlFvZkx2T0o4cVUwWXBaVW9zUndWYnFwemI1ODdndlJXc3h3eDBMbGhFaERkWlRwRDUxbEp4UnFv?oc=5",
+          "source": "Business Post Nigeria",
+          "published": "2026-10-10T12:22:32.000Z"
         },
         {
           "title": "Black Market Dollar Rate Today: How Much Is Dollar to Naira? — Friday, October 9, 2026",
@@ -103,16 +103,16 @@
           "published": "2026-10-09T07:47:26.000Z"
         },
         {
+          "title": "Naira targets N1,250/$ as dollar inflows improve",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOeTNiOWlrdVpmWE9jS1U4MW8wS0xMU3hXNVFsNkoyM0luTC1ITFg2cmgwSHNRTVhaZS0xaUFsMmlQSURzMF9vVkprdjFUMElVZFZhaUtZT0Q3akR2bzh2TUhyTE1UejlSSVVac2FGZTJqT3Npelk1YnBUV0VJVlhZam9rN0h3ZHdacjlB?oc=5",
+          "source": "PM News Nigeria",
+          "published": "2026-10-10T15:30:33.000Z"
+        },
+        {
           "title": "Naira Hits Two-Year High Amid Increased Dollar Inflows",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNblhZLWpfcVNCc1BuVjU2QlRWUThBSVZjQV9Nclc1Y1pmN1Q5bVk3WUY4OEhlclNId3I2MHExMXc3OW83ZlE0TF9MM2ZBbEh3ZHdKMVgxNEQyb2g5LXlrSHgtR0VqYTFjSm1PNWdUWklsQkIwdDJYc1hWakU4ZG5GLU5teUU5NEpTZkRtaEFXc080NHc1NTFSRGVVRmZYZw?oc=5",
           "source": "Dabafinance",
           "published": "2026-10-07T19:50:00.000Z"
-        },
-        {
-          "title": "Dollar to Naira exchange rate today, October 5, 2026",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOTWRNY2d1YWFCdFhrODRlU3k4ZkNtUGJuaEhKcXJ5T2dZNzEwR2RkVy1LYXR2OVRfN0lfTUdTVGdzSlF3Y0RyRDdCdFZpM1FmRTR0TkZzX0pvWXoweThob09FZl9nU3pVN3pONFZTa3VpRWMxWWlURFlUV0hOd3dTTWtNSnVXelE2SDk1d0NzT27SAZYBQVVfeXFMUFVuTlVVMVZMeFdQbHd1NENfTG8ySm44dHlfeFZZY0UzczBibnRJVVJhZ25GcV9SMnpjdU0xUXZqX2ZCSk1pRE4wd3pTZlZNdk5NUmtpa0dlWUZaYUxmODBNMzdaRjF4OThxM0tJUjhYSkhBcWFHNVBPck9FbG5lU3NTVC1CbFFYbnJQa3hyTV90V29CV2tn?oc=5",
-          "source": "Vanguard News",
-          "published": "2026-10-05T13:30:56.000Z"
         }
       ]
     },
@@ -189,16 +189,16 @@
           "published": "2026-04-24T07:00:00.000Z"
         },
         {
-          "title": "6 Best Apps to Buy Data Bundles Online in Nigeria (2026)",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcEtFTjRtNFU4MFVlTGhHUnNjckh0UmZvajRJTkZMMGF1VGhvS1EzdXZYR3UzdmowWnVpOHNkVU9CZXBDM0JaeUVSSThPV3cweGx0MjFVUE1fSVI3MTZEbFRQZ0dUSTBTdk5HU2hWcmhpUkxUZW5NaGxxMWJrQk5LanN4X215NGVFdmphT1RvbEVGaXp5WkZxT2l4OW0tc2tURDZDLXFZMGtrR2VlUkhDMkVB?oc=5",
-          "source": "IT News Africa",
-          "published": "2026-07-22T07:00:00.000Z"
-        },
-        {
           "title": "Simple tricks to make your MTN, Airtel, Glo and 9mobile data last longer",
           "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1NRDMxaDRTaXdIM2lnQThBQ1U1aFJRZHo2RHI4eDR4bkg2WE9sdE9QYjVtWE5pUkRoRm9rMHZCNEl1ZWlHdnF0RHg0bDJTS2lmcVk5RU96M01mejRxeVBONXFjSkt0MVpG?oc=5",
           "source": "TechCabal",
           "published": "2025-12-04T08:00:00.000Z"
+        },
+        {
+          "title": "6 Best Apps to Buy Data Bundles Online in Nigeria (2026)",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcEtFTjRtNFU4MFVlTGhHUnNjckh0UmZvajRJTkZMMGF1VGhvS1EzdXZYR3UzdmowWnVpOHNkVU9CZXBDM0JaeUVSSThPV3cweGx0MjFVUE1fSVI3MTZEbFRQZ0dUSTBTdk5HU2hWcmhpUkxUZW5NaGxxMWJrQk5LanN4X215NGVFdmphT1RvbEVGaXp5WkZxT2l4OW0tc2tURDZDLXFZMGtrR2VlUkhDMkVB?oc=5",
+          "source": "IT News Africa",
+          "published": "2026-07-22T07:00:00.000Z"
         },
         {
           "title": "Top 10 Telecom Brands in Nigeria 2026: Definitive Ranking",
