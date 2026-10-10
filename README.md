@@ -13,7 +13,7 @@ npm install
 npm run dev        # http://localhost:3000 (generates content first)
 ```
 
-Node 18.18 or later is required. `.nvmrc` pins Node 20.
+Node 20.9 or later is required. `.nvmrc` pins Node 20 to match the configured Cloudflare build runtime.
 
 ## Scripts
 
@@ -78,7 +78,7 @@ This repository is configured as a **Worker with Static Assets**, not as a Cloud
 3. Use these build settings:
    - **Build command:** `npm run build`
    - **Deploy command:** `npx wrangler deploy`
-   - **Node.js version:** `22` (required by the pinned Wrangler release).
+   - **Node.js version:** `20` (the deployment-compatible Wrangler release is pinned until the owner upgrades the Cloudflare build runtime).
 4. Cloudflare Workers Builds must provide its normal deployment credentials; do not add API tokens to the repository.
 5. Optional: add **`NEXT_PUBLIC_ADSENSE_CLIENT`** = `ca-pub-XXXXXXXXXXXXXXXX` once your AdSense account is approved. The ad slots switch to Google units
    and the AdSense script loads.
