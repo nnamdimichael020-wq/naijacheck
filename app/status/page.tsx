@@ -7,7 +7,8 @@ import { LIVE_FX, LIVE_FUEL, LIVE_WATCH, sourceHealth } from "@/lib/live";
 import { LocalWatchlist, type WatchReading } from "@/components/live/local-watchlist";
 import { PushSettings } from "@/components/push-notifications";
 import { DATASET_REGISTRY, stateLabel } from "@/lib/source-registry";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, absUrl } from "@/lib/seo";
+import { ShareControls } from "@/components/share-controls";
 import { HistoryChart } from "@/components/live/history-chart";
 
 export const metadata: Metadata = pageMetadata({
@@ -43,6 +44,7 @@ export default function StatusPage() {
           Monitored readings on {SITE_CONFIG.name} have a named source and separate source and check times. This page distinguishes seeded,
           recent, stale, manual and unavailable data; a scheduled check does not guarantee that an upstream publisher changed its value.
         </p>
+        <ShareControls placement="inline" title="Data status" url={absUrl("/status")} />
       </header>
 
       <section aria-labelledby="ds" className="space-y-3">

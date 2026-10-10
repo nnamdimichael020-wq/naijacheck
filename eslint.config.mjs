@@ -17,5 +17,5 @@ export default defineConfig([
       "@typescript-eslint/no-explicit-any": "off",
     },
   },
-  globalIgnores([".next/**", "out/**", "node_modules/**", "next-env.d.ts"]),
+  globalIgnores([".next/**", ".wrangler/**", "out/**", "node_modules/**", "next-env.d.ts"]),
 ]);

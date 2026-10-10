@@ -7,11 +7,12 @@ import { AdSlot } from "@/components/ads/ad-slot";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, absUrl } from "@/lib/seo";
 import { LIVE_FX, LIVE_FUEL } from "@/lib/live";
 import { Freshness } from "@/components/live/freshness";
 import { LocationCard } from "@/components/live/location-card";
 import { LiveNewsFeed } from "@/components/live/news-feed";
+import { ShareControls } from "@/components/share-controls";
 import { DATASET_REGISTRY } from "@/lib/source-registry";
 import {
   BLUEPRINT_BY_SLUG,
@@ -83,6 +84,12 @@ export default function HomePage() {
             Today&apos;s Naija prices, the slang your group chat is using, hustle blueprints with real numbers, GovHowTo steps and calculators. For traders,
             Gen Z, side-hustlers, professionals and students.
           </p>
+          <ShareControls
+            placement="inline"
+            title={`${SITE_CONFIG.name}: ${SITE_TAGLINE}`}
+            url={absUrl("/")}
+            summary={`prices as of ${DATA_DATE}`}
+          />
           <div className="mt-6 flex flex-wrap gap-2">
             <Button asChild size="lg">
               <Link href="/prices">See today&apos;s prices</Link>

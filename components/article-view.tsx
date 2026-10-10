@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/json-ld";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Article } from "@/lib/types";
-import { articleSchema } from "@/lib/seo";
+import { articleSchema, absUrl } from "@/lib/seo";
 import { DATA_DATE } from "@/lib/data";
 import { ShareControls } from "@/components/share-controls";
 
@@ -73,6 +73,12 @@ export function ArticleView({ article, children, showSchema = true }: { article:
           </span>
           <span>Updated {DATA_DATE}</span>
         </p>
+        <ShareControls
+          placement="inline"
+          title={article.title}
+          url={absUrl(article.path)}
+          summary={`as of ${article.updatedAt}`}
+        />
       </header>
 
       {disclosure ? (
@@ -187,7 +193,7 @@ export function ArticleView({ article, children, showSchema = true }: { article:
         Figures on this page are indicative for {DATA_DATE} unless a source is named. This is general information, not financial, legal or medical
         advice. Check the official source before you pay or decide.
       </p>
-      <ShareControls title={article.title} updatedAt={article.updatedAt} />
+      <ShareControls title={article.title} url={absUrl(article.path)} summary={`as of ${article.updatedAt}`} />
       <AdSlot variant="inline" index={2} />
     </article>
   );
