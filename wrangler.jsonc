@@ -11,7 +11,17 @@
   },
   "triggers": {
     "crons": ["47 */3 * * *"]
-  }
-  // The owner adds the PUSH_SUBSCRIPTIONS KV binding in Cloudflare's dashboard.
-  // Its account-specific namespace ID and all VAPID/admin secrets stay out of Git.
+  },
+  // Plain (non-secret) config must live here so Workers deploys do not wipe it.
+  // Encrypted secrets (VAPID_PRIVATE_JWK, PUSH_ADMIN_TOKEN) stay in the Cloudflare dashboard and never in Git.
+  "vars": {
+    "VAPID_PUBLIC_KEY": "BIfKFcDYHAZVL768k5Wmm8gb0_MRbUvOCtvDIY0k0FlQ5yL25ntKf10Yar6pqBgWFtG6-1MJRnHtoNzAc6AxCEY",
+    "VAPID_SUBJECT": "mailto:nnamdimichael020@gmail.com"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "PUSH_SUBSCRIPTIONS",
+      "id": "c45a5081e90f423db585b9a4e9e59a02"
+    }
+  ]
 }
