@@ -7,9 +7,6 @@ name: Live monitor
 # Cron runs only from the default branch. Use "Run workflow" to test on another branch.
 
 on:
-  push:
-    branches:
-      - arena/c6158e8e-naijacheck
   schedule:
     - cron: "17 */3 * * *" # every 3 hours, UTC
   workflow_dispatch:
