@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-10T19:16:58.742Z",
+  "updatedAt": "2026-10-11T00:14:30.000Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "japa",
     "chop-life",
+    "detty-december",
     "oblee",
-    "achalugo",
-    "detty-december"
+    "achalugo"
   ],
   "terms": [
     {
@@ -306,7 +306,7 @@
       "term": "Detty December",
       "kind": "trend",
       "trend": "rising",
-      "trendScore": 67,
+      "trendScore": 100,
       "confidence": "high",
       "meaning": "The December festive season when diaspora Africans come home and spend heavily on parties, travel and fashion.",
       "detail": "Detty December started as a Ghanaian and Nigerian festive phrase. It describes the nightlife and money flow when returning diaspora folk spend in Lagos, Accra and other cities. For traders, it is the busiest season of the year: food, fashion and events see huge spikes.",
@@ -321,7 +321,7 @@
       ],
       "platform": "Instagram, TikTok",
       "source": "Seasonal usage, 2024-2026.",
-      "mentions7d": 2
+      "mentions7d": 3
     },
     {
       "slug": "sabi",
