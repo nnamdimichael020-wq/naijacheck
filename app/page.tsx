@@ -8,8 +8,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { pageMetadata, absUrl } from "@/lib/seo";
-import { LIVE_FX, LIVE_FUEL } from "@/lib/live";
+import { LIVE_FX, LIVE_FUEL, latestDatasetDelta } from "@/lib/live";
+import { ChangeBadge } from "@/components/live/change-badge";
+import { DailyBriefing } from "@/components/live/daily-briefing";
 import { Freshness } from "@/components/live/freshness";
+import { InstallTip } from "@/components/install-tip";
 import { LocationCard } from "@/components/live/location-card";
 import { LiveNewsFeed } from "@/components/live/news-feed";
 import { ShareControls } from "@/components/share-controls";
@@ -70,27 +73,49 @@ export default function HomePage() {
   const officialFxRecord = DATASET_REGISTRY.find((d) => d.id === "cbn-usd")!;
   const parallelFxRecord = DATASET_REGISTRY.find((d) => d.id === "parallel-fx")!;
   const fuelRecord = DATASET_REGISTRY.find((d) => d.id === "fuel-depot")!;
+  const cbnDelta = latestDatasetDelta("cbn-usd-ngn");
+  const parallelDelta = latestDatasetDelta("parallel-usd-ngn-buy");
+  const petrolDelta = latestDatasetDelta("fuel-depot-petrol");
+  const dieselDelta = latestDatasetDelta("fuel-depot-diesel");
 
   return (
-    <div className="space-y-10">
-      {/* Hero */}
-      <section className="grid gap-6 md:grid-cols-[1.05fr_1fr] md:items-center">
-        <div>
-          <Badge variant="accent" className="mb-3">
-            Updated {DATA_DATE} · prices marked indicative
+    <div className="space-y-8">
+      {/* Above-the-fold Daily Briefing */}
+      <header className="space-y-2">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <Badge variant="accent">
+            Updated {DATA_DATE} · every figure shows source &amp; status
           </Badge>
-          <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">{SITE_TAGLINE}</h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Today&apos;s Naija prices, the slang your group chat is using, hustle blueprints with real numbers, GovHowTo steps and calculators. For traders,
-            Gen Z, side-hustlers, professionals and students.
-          </p>
           <ShareControls
             placement="inline"
             title={`${SITE_CONFIG.name}: ${SITE_TAGLINE}`}
             url={absUrl("/")}
             summary={`prices as of ${DATA_DATE}`}
           />
-          <div className="mt-6 flex flex-wrap gap-2">
+        </div>
+        <h1 className="text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl md:text-4xl">
+          {SITE_TAGLINE}
+        </h1>
+        <p className="text-sm text-muted-foreground sm:text-base">
+          Structured Nigerian daily utility: monitored FX &amp; wholesale fuel readings, dated market guides, GovHowTo steps, exam cut-offs and calculators.
+        </p>
+      </header>
+
+      <DailyBriefing />
+
+      <InstallTip />
+
+      {/* Quick actions + editorial feature */}
+      <section className="grid gap-6 md:grid-cols-[1.05fr_1fr] md:items-center">
+        <div>
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">
+            Practical answers without forum noise
+          </h2>
+          <p className="mt-2 text-base text-muted-foreground">
+            Today&apos;s Naija prices, the slang your group chat is using, hustle blueprints with real numbers, GovHowTo steps and calculators. For traders,
+            Gen Z, side-hustlers, professionals and students.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
             <Button asChild size="lg">
               <Link href="/prices">See today&apos;s prices</Link>
             </Button>
@@ -170,24 +195,28 @@ export default function HomePage() {
             </CardHeader>
             <CardContent>
               <dl className="grid grid-cols-2 gap-3 text-sm">
-                <div>
+                <div className="space-y-1">
                   <dt className="text-muted-foreground">USD official</dt>
                   <dd className="text-xl font-extrabold tabular-nums">₦{official.toLocaleString("en-NG", { minimumFractionDigits: 2 })}</dd>
+                  <ChangeBadge delta={cbnDelta} fractionDigits={2} />
                   <Freshness asOf={officialFxRecord.sourceTime} state={officialFxRecord.state} source="CBN" />
                 </div>
-                <div>
+                <div className="space-y-1">
                   <dt className="text-muted-foreground">USD parallel quote</dt>
                   <dd className="text-xl font-extrabold tabular-nums">₦{black.toLocaleString("en-NG")}</dd>
+                  <ChangeBadge delta={parallelDelta} fractionDigits={0} />
                   <Freshness asOf={parallelFxRecord.sourceTime} state={parallelFxRecord.state} source="Aboki" />
                 </div>
-                <div>
+                <div className="space-y-1">
                   <dt className="text-muted-foreground">Petrol, depot median</dt>
                   <dd className="text-xl font-extrabold tabular-nums">{petrolMedian ? naira(petrolMedian) : "n/a"}/L</dd>
+                  <ChangeBadge delta={petrolDelta} unitSuffix="/L" />
                   <Freshness asOf={fuelRecord.sourceTime} state={fuelRecord.state} source="Awajis" />
                 </div>
-                <div>
+                <div className="space-y-1">
                   <dt className="text-muted-foreground">Diesel, depot median</dt>
                   <dd className="text-xl font-extrabold tabular-nums">{dieselMedian ? naira(dieselMedian) : "n/a"}/L</dd>
+                  <ChangeBadge delta={dieselDelta} unitSuffix="/L" />
                   <Freshness asOf={fuelRecord.sourceTime} state={fuelRecord.state} source="Awajis" />
                 </div>
               </dl>

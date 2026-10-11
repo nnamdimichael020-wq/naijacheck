@@ -295,6 +295,18 @@ export function sumPageviews(json: unknown): { total: number; days: number } | n
 
 /* ---------- Official page change detection ---------- */
 
+export {
+  MAX_HISTORY_POINTS_PER_DATASET,
+  appendBoundedHistory,
+  computeDatasetDelta,
+  getDatasetHistory,
+  isValidHistoryPoint,
+  type HistoryDatasetId,
+  type HistoryDelta,
+  type HistoryPoint,
+  type HistoryStore,
+} from "../../lib/history";
+
 /** Stable 32-bit FNV-1a hash of the visible text, so layout noise is ignored. */
 export function pageFingerprint(html: string): string {
   const text = htmlToText(html).replace(/\s+/g, " ").toLowerCase();

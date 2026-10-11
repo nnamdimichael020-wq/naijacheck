@@ -1,0 +1,67 @@
+name: Content audit (advisory)
+
+# Bot Type 4 foundation: scans generated/built pages for outdated years, stale verification dates,
+# unguarded "live" labels on manual pages, and changed official-page watch flags.
+#
+# Safety guarantees:
+# - Permissions are strictly contents: read (NEVER auto-edits article bodies or commits to Git).
+# - Non-blocking (continue-on-error: true and exit code 0) so production builds/deploys never fail.
+
+on:
+  workflow_dispatch:
+    inputs:
+      open_issue:
+        description: "Open or update a deduplicated GitHub Issue when review findings exist"
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: "23 6 * * 1" # Mondays at 06:23 UTC (07:23 WAT)
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: content-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Generate articles and run read-only content audit
+        run: |
+          npm run generate
+          npm run audit:content -- --output .content-audit-report.json --markdown .content-audit-report.md
+
+      - name: Open deduplicated review issue (optional, never fails workflow)
+        if: ${{ github.event.inputs.open_issue == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COUNT=$(node -e "const r=require('./.content-audit-report.json'); console.log(r.findingsCount || 0);")
+          if [ "$COUNT" -eq 0 ]; then
+            echo "Zero content audit findings; no issue needed."
+            exit 0
+          fi
+          EXISTING=$(gh issue list --state open --search "[content-audit] in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            echo "Open content-audit issue #$EXISTING already exists; updating comment instead of creating duplicate."
+            gh issue comment "$EXISTING" --body-file .content-audit-report.md
+          else
+            gh issue create \
+              --title "[content-audit] Advisory review: ${COUNT} content freshness/label item(s)" \
+              --body-file .content-audit-report.md
+          fi

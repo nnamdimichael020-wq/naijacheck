@@ -8,6 +8,25 @@ import feedsLive from "@/data/live/feeds.json";
 import trendsLive from "@/data/live/trends.json";
 import watchLive from "@/data/live/watch.json";
 import healthLive from "@/data/live/health.json";
+import historyFile from "@/data/history.json";
+import {
+  MAX_HISTORY_POINTS_PER_DATASET,
+  computeDatasetDelta,
+  getDatasetHistory,
+  type HistoryDatasetId,
+  type HistoryDelta,
+  type HistoryPoint,
+  type HistoryStore,
+} from "@/lib/history";
+export {
+  MAX_HISTORY_POINTS_PER_DATASET,
+  computeDatasetDelta,
+  getDatasetHistory,
+  type HistoryDatasetId,
+  type HistoryDelta,
+  type HistoryPoint,
+  type HistoryStore,
+};
 export { STATES, matchState } from "@/lib/states";
 
 export type SourceRef = { label: string; url: string };
@@ -59,6 +78,17 @@ export const LIVE_TRENDS = trendsLive as unknown as {
 };
 export const LIVE_WATCH = watchLive as unknown as { checkedAt: string | null; seeded?: boolean; note?: string; pages: Record<string, WatchPage> };
 export const LIVE_HEALTH = healthLive as unknown as Record<string, HealthRow>;
+export const LIVE_HISTORY = historyFile as unknown as HistoryStore;
+
+/** Bounded real history points for a given dataset (up to 56 observations). */
+export function datasetHistoryPoints(dataset: HistoryDatasetId, limit: number = MAX_HISTORY_POINTS_PER_DATASET): HistoryPoint[] {
+  return getDatasetHistory(LIVE_HISTORY, dataset, limit);
+}
+
+/** Change vs previous real point for a dataset, or null when fewer than two real observations exist. */
+export function latestDatasetDelta(dataset: HistoryDatasetId): HistoryDelta | null {
+  return computeDatasetDelta(LIVE_HISTORY, dataset);
+}
 
 /** Newest headlines across every topic, de-duplicated by title. */
 export function latestHeadlines(limit: number, topicSlug?: string): (FeedItem & { topic: string })[] {

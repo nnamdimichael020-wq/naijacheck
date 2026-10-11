@@ -15,7 +15,14 @@ import {
   sumPageviews,
   watToIso,
   pageFingerprint,
+  MAX_HISTORY_POINTS_PER_DATASET,
+  appendBoundedHistory,
+  computeDatasetDelta,
+  getDatasetHistory,
+  type HistoryPoint,
+  type HistoryStore,
 } from "./parsers";
+import { scanArticleRecord, scanOfficialWatchState } from "../../lib/content-audit";
 
 let passed = 0;
 const test = (name: string, fn: () => void) => {
@@ -167,6 +174,126 @@ test("Page fingerprint ignores whitespace and markup changes but not wording", (
   const c = pageFingerprint("<p>Fee is ₦30,000</p>");
   assert.equal(a, b);
   assert.notEqual(a, c);
+});
+
+test("Bounded history appends only real observations, deduplicates, and caps per dataset at 56", () => {
+  let store: HistoryStore = { collectionStartedAt: null, points: [] };
+  const basePoint: HistoryPoint = {
+    dataset: "cbn-usd-ngn",
+    observedAt: "2026-10-09T15:00:00.000Z",
+    sourceTime: "2026-10-09T14:00:00.000Z",
+    value: 1331.186,
+    unit: "NGN per USD",
+    geography: "Nigeria",
+    sourceUrl: "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
+  };
+  store = appendBoundedHistory(store, basePoint);
+  assert.equal(store.points.length, 1);
+  // Fewer than two real points: delta must be null
+  assert.equal(computeDatasetDelta(store, "cbn-usd-ngn"), null);
+
+  // Duplicate reading with identical sourceTime and value is ignored
+  store = appendBoundedHistory(store, { ...basePoint, observedAt: "2026-10-09T18:00:00.000Z" });
+  assert.equal(store.points.length, 1);
+
+  // Invalid / non-positive / missing-timestamp readings are rejected (never invent points)
+  store = appendBoundedHistory(store, { ...basePoint, value: 0, sourceTime: "2026-10-10T14:00:00.000Z" });
+  store = appendBoundedHistory(store, { ...basePoint, value: Number.NaN, sourceTime: "2026-10-10T14:00:00.000Z" });
+  store = appendBoundedHistory(store, { ...basePoint, sourceTime: "not-a-date" });
+  assert.equal(store.points.length, 1);
+
+  // Append 60 valid parallel USD points and 2 valid depot petrol points
+  for (let i = 0; i < 60; i++) {
+    const ts = new Date(Date.UTC(2026, 9, 1, 0, 0, 0) + i * 3 * 3600_000).toISOString();
+    store = appendBoundedHistory(store, {
+      dataset: "parallel-usd-ngn-buy",
+      observedAt: ts,
+      sourceTime: ts,
+      value: 1350 + i,
+      unit: "NGN per USD",
+      geography: "Nigeria indicative quote",
+      sourceUrl: "https://abokiforex.app/",
+    });
+  }
+  store = appendBoundedHistory(store, {
+    dataset: "fuel-depot-petrol",
+    observedAt: "2026-10-10T12:30:00.000Z",
+    sourceTime: "2026-10-10T12:21:00.000Z",
+    value: 1342.5,
+    unit: "NGN per litre",
+    geography: "Nigeria depot median",
+    sourceUrl: "https://awajis.com/fuel-price-in-nigeria-today/",
+  });
+  store = appendBoundedHistory(store, {
+    dataset: "fuel-depot-petrol",
+    observedAt: "2026-10-11T19:33:00.000Z",
+    sourceTime: "2026-10-11T18:21:00.000Z",
+    value: 1341,
+    unit: "NGN per litre",
+    geography: "Nigeria depot median",
+    sourceUrl: "https://awajis.com/fuel-price-in-nigeria-today/",
+  });
+
+  const parallelPoints = getDatasetHistory(store, "parallel-usd-ngn-buy");
+  assert.equal(parallelPoints.length, MAX_HISTORY_POINTS_PER_DATASET);
+  assert.equal(parallelPoints[0].value, 1354); // oldest 4 of 60 were trimmed
+  assert.equal(parallelPoints.at(-1)?.value, 1409);
+
+  // High-frequency parallel updates must not evict CBN or depot petrol observations
+  assert.equal(getDatasetHistory(store, "cbn-usd-ngn").length, 1);
+  const fuelDelta = computeDatasetDelta(store, "fuel-depot-petrol");
+  assert.ok(fuelDelta);
+  assert.equal(fuelDelta!.delta, -1.5);
+  assert.equal(fuelDelta!.direction, "down");
+  assert.equal(fuelDelta!.previous.value, 1342.5);
+  assert.equal(fuelDelta!.latest.value, 1341);
+});
+
+test("Content audit scanner flags outdated years, stale verification dates, unnegated live claims, and watch changes", () => {
+  const nowMs = Date.parse("2026-10-11T12:00:00Z");
+
+  // Clean 2026 article with negated live disclaimer passes with 0 findings
+  const cleanFindings = scanArticleRecord({
+    route: "/prices/lagos/rice",
+    title: "Rice Price in Lagos (2026): 50kg Bag & 1kg Guide",
+    h1: "Rice Price in Lagos (2026)",
+    bodyText: "This is a dated planning estimate for October 2026, not a live market price. Confirm at Mile 12.",
+    section: "prices-item",
+    updatedAt: "2026-10-09",
+    currentYear: 2026,
+    nowMs,
+  });
+  assert.equal(cleanFindings.length, 0);
+
+  // Outdated year in headline + stale updatedAt + unnegated live claim on manual page
+  const flaggedFindings = scanArticleRecord({
+    route: "/howto/passport-renewal",
+    title: "Nigerian Passport Renewal Fee 2024 Guide",
+    h1: "Nigerian Passport Renewal Fee 2024",
+    bodyText: "Check our live fee table below before visiting Ikoyi.",
+    section: "howto",
+    updatedAt: "2026-07-01",
+    currentYear: 2026,
+    nowMs,
+  });
+  const categories = flaggedFindings.map((f: { category: string }) => f.category);
+  assert.ok(categories.includes("outdated-year-headline"));
+  assert.ok(categories.includes("stale-verification-date"));
+  assert.ok(categories.includes("live-label-risk"));
+
+  // Official page watch change flag
+  const watchFindings = scanOfficialWatchState({
+    pages: {
+      immigration: {
+        label: "Nigeria Immigration Service",
+        url: "https://immigration.gov.ng/passports/",
+        changedSincePrevious: true,
+        reviewRequired: true,
+      },
+    },
+  });
+  assert.equal(watchFindings.length, 1);
+  assert.equal(watchFindings[0].category, "official-watch-changed");
 });
 
 console.log(`\n${passed} parser tests passed`);

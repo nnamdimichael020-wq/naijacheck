@@ -172,16 +172,12 @@ async function step<T>(key: string, fn: () => Promise<T | null>): Promise<T | nu
 
 const isoDay = (ms: number) => new Date(ms).toISOString().slice(0, 10).replace(/-/g, "");
 
-type HistoryPoint = { dataset: string; observedAt: string; sourceTime: string; value: number; unit: string; geography: string; sourceUrl: string };
+type HistoryPoint = P.HistoryPoint;
 function appendHistory(point: HistoryPoint) {
   const file = path.join(DATA, "history.json");
-  const history = readJson<{ collectionStartedAt: string | null; points: HistoryPoint[] }>(file, { collectionStartedAt: null, points: [] });
-  const last = [...history.points].reverse().find((p) => p.dataset === point.dataset);
-  // Store only successful, changed observations. Never backfill or duplicate an unchanged value.
-  if (!last || last.value !== point.value || last.sourceTime !== point.sourceTime) history.points.push(point);
-  history.points = history.points.slice(-400); // bounded repository growth across all datasets
-  history.collectionStartedAt = history.points[0]?.observedAt ?? null;
-  writeJson(file, history);
+  const history = readJson<P.HistoryStore>(file, { collectionStartedAt: null, points: [] });
+  const updated = P.appendBoundedHistory(history, point, P.MAX_HISTORY_POINTS_PER_DATASET);
+  writeJson(file, updated);
 }
 
 function writeActionSummary() {

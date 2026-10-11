@@ -1,0 +1,43 @@
+# Content Gap Queue
+
+NaijaCheck is a structured Nigerian daily utility — **not** an open forum, aggregator, or mass AI blog. Every new or refreshed guide moves through this human-reviewed queue before any prose or structured data is updated.
+
+## Workflow & Status Rules
+
+- **`queued`**: A real user need has been identified (manually or via local gap research), with named primary/official sources to verify before writing. No article page is published yet.
+- **`writing`**: A human editor is actively verifying official portals, fee schedules, or NBS/market observations and drafting answer-first prose under [`docs/article-writing-guide.md`](./article-writing-guide.md).
+- **`published`**: Verified by a human editor, linked to internal calculators/hubs, carrying explicit `updatedAt` / `lastVerified` timestamps and honest verification states (`live` | `recent` | `stale` | `seeded` | `manual` | `unavailable`), and passing static + content audits.
+
+**Hard guardrails:**
+1. Bots or local scripts may only propose rows for this table (see [`docs/runbooks/research-bot-safe-use.md`](./runbooks/research-bot-safe-use.md)).
+2. Never auto-publish pages or paste forum/Nairaland text into `data/` or `content/`.
+3. Never label seeded, stale, manual, or survey figures as `live`.
+
+---
+
+## Copy-Paste Row Template
+
+Use this exact schema when adding a candidate topic to the queue:
+
+```markdown
+| <Topic> | <User intent (the exact question a Nigerian is trying to solve)> | <Why forums are weak (what is outdated, noisy, or unsafe on forum threads)> | <Sources to verify (official portals, agency circulars, or primary data)> | <Priority (P1|P2|P3)> | <Status (queued|writing|published)> |
+```
+
+Allowed `Status` values: `queued` | `writing` | `published`.
+
+---
+
+## Active Content Gap Queue
+
+| Topic | User Intent | Why Forums Are Weak | Sources to Verify | Priority | Status |
+|---|---|---|---|---|---|
+| Nigerian e-Passport renewal & fresh application fees (32-page vs 64-page, 5-year vs 10-year) | Know the exact official NIS portal fee by booklet type and age group, biometric capture steps, and how to avoid paying touts at Ikoyi, Alausa, Festac, or Gwagwalada. | Forum threads mix 2021–2023 old fees with unofficial "express" agent charges, bury official portal links under 50 pages of middlemen advertising phone numbers, and lack last-verified dates. | Nigeria Immigration Service (`https://immigration.gov.ng/passports/`), official NIS application portal (`https://passport.immigration.gov.ng/`), Federal Ministry of Interior circulars. | P1 | published |
+| NIN registration, modification (date of birth / name correction) & NIMC self-service fees | Find out which NIN services are free vs paid, official NIMC self-service modification charges, required supporting documents (court affidavit, newspaper publication, birth certificate), and enrolment centre rules. | Forum posts routinely quote arbitrary cybercafé or tout markups as "official NIMC fees" and share unsafe third-party WhatsApp contacts offering illegal database edits. | National Identity Management Commission (`https://nimc.gov.ng/`), official NIMC fee schedule & self-service portal notices. | P1 | published |
+| CAC Business Name vs Limited Liability Company (LTD) registration cost & annual returns | Decide between a Business Name and a Private Limited Company, verify official CAC CRP filing fees, stamp duty (FIRS), and annual return penalties before starting a side hustle. | Forum threads quote outdated pre-CRP fees, confuse lawyer/agent service charges with statutory CAC fees, and omit mandatory annual returns that later mark businesses "Inactive". | Corporate Affairs Commission (`https://www.cac.gov.ng/`), CAC Company Registration Portal (`https://pre.cac.gov.ng/`), FIRS stamp duty portal. | P1 | published |
+| JAMB UTME national minimum policy marks vs competitive departmental cut-off marks (UNILAG, UI, UNN, OAU, ABU) | Understand the difference between JAMB's national minimum benchmark and real Post-UTME / departmental merit aggregates for Medicine, Law, Nursing, Computer Science, and Engineering. | Forum megathreads mix rumours, self-reported scores without aggregate formulas, and prior-session cut-offs presented as current-session guarantees. | JAMB official portal (`https://www.jamb.gov.ng/`), JAMB Policy Meeting communiqués, and each university's official admissions portal (e.g. `https://unilag.edu.ng/`). | P1 | published |
+| Wholesale depot petrol (PMS) & diesel (AGO) gantry prices vs retail filling station pump prices | Understand why Lagos/Rivers depot gantry medians differ from local NNPC and independent marketer pump prices across states, and estimate monthly generator fuel spend. | Social and forum posts conflate ex-depot wholesale prices per litre with retail pump prices, triggering panic without naming the depot, state, or timestamp. | Awajis / petroleumprice.ng depot tables (`https://awajis.com/fuel-price-in-nigeria-today/`), NMDPRA / NNPC Ltd public notices, and NaijaCheck `/tools/generator` + `/status`. | P1 | published |
+| Prepaid electricity meter bands (Band A–E), NERC tariff lookup & token unit calculation | Check how NERC service-band classifications (Band A vs Band B–E) affect kWh unit costs across DisCos (IKEDC, EKEDC, AEDC, IBEDC, PHED) and compare grid cost against generator/solar payback. | Forum complaints rarely state the user's tariff band, DisCo, or kWh rate, making it impossible to calculate how many units ₦10,000 actually buys. | Nigerian Electricity Regulatory Commission (`https://nerc.gov.ng/`), DisCo published tariff orders, and internal links to `/tools/generator` and `/tools/solar`. | P1 | writing |
+| Driver's licence fresh application & renewal (3-year vs 5-year) via FRSC / VIO /MVAA | Follow the exact accredited driving school, CBT test, VIO inspection, FRSC biometric capture, and Remita payment steps without falling for fake plastic cards. | Forum threads are full of intermediaries offering "no-capture" licences that fail FRSC verification checks on the road. | Federal Road Safety Corps (`https://frsc.gov.ng/`), official Nigeria Driver's Licence portal (`https://www.nigeriadriverslicence.org/`), state MVAA notices. | P2 | queued |
+| Lagos State residency registration (LASRRA / LAG-ID) requirements & neighbourhood offices | Know what documents (proof of address, utility bill, NIN) are required for LASRRA registration and where to pick up the card for Lagos schools, hospitals, and state services. | Forum discussions confuse old temporary slips with the smart LAG-ID card and list relocated local government collection points. | Lagos State Residents Registration Agency (`https://www.lasrra.lagosstate.gov.ng/`), Lagos State official government portal. | P2 | queued |
+| NBS monthly Food Price Watch vs major physical market realities (Mile 12, Bodija, Oyingbo, Dawanau, Ariaria) | Compare official state-level monthly NBS averages with dated wholesale/retail market planning ranges for rice (50kg & 1kg), garri, beans, yam, and palm oil. | Forum food-price threads contain unverified one-off anecdotes ("I bought paint bucket for ₦X") without specifying measure weight (mudu, derica, congo, paint rubber, kg), market, or date. | National Bureau of Statistics Microdata (`https://microdata.nigerianstat.gov.ng/index.php/catalog/162`), documented physical market checks, and `/prices/cost-of-living`. | P2 | queued |
+| Customs duty & VIN valuation check for clearing used cars at Tin Can / Apapa ports | Understand how Nigeria Customs Service VIN valuation, exchange rate for customs duty, and terminal/shipping demurrage work before importing a vehicle. | Clearing agents on forums post conflicting "flat rate" clearing quotes that hide CBN customs FX rate changes and terminal storage fees. | Nigeria Customs Service (`https://customs.gov.ng/`), NCS B'Odogwu / trade portal public notices, CBN customs exchange rate schedule. | P3 | queued |
