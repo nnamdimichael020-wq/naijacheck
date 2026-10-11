@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T05:48:22.655Z",
+  "checkedAt": "2026-10-11T12:47:30.240Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -12,22 +12,10 @@
       "query": "petrol price Nigeria",
       "items": [
         {
-          "title": "Fuel discount: Nigerians seek lasting relief beyond 30-day price cut",
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOakJERTB3SERlVF8yX3RpdE94c3dOOGxmQVFVUEstR0I4OXdHcXl5OGxqRVRVVVFFamVrWFoxTzZPQWNuRWdEb3padHlwcmtERTYtVVBkR0JwaHl6SHhZU1JDeTFqcFNMVzMtUFNWY3UzYm0yczI4MzZhMS15ZHR5MDZrTTlBRGJ2TEYtcmdzbWZ2dlFvWFhkY0JBWXc5RDlzTFN3Rzg0Z9IBrAFBVV95cUxQWDc4azBRLWw5Z0hWa0VKODNiaFpHaENuQlp4TTVKeUJ5bzFsLUNsa0VkZjNPbC1yVWNXanZzRmVfMld4cGViRm1NRVdRTUJaOWxoZWYyWlJEVk9BNW5DWklpVkd5V2NBNDZGQjdOeU84YmdJVzhqUlprT3ltM0Y0cVo0MUh4Z09JMWxPUS1uVjk2ZFo5dkxvY0o5cDBkSWVEWWVzUC03Y01lVkU0?oc=5",
-          "source": "Businessday NG",
-          "published": "2026-10-11T02:35:45.000Z"
-        },
-        {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
           "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNXZuQks4c2otRlh3czh4dHpPbmR3NXFKbmpjaExMRnZNR0hMMDd1T0tzZjBvR25wMlRYQm1Ydm5NdVhsQm4wUzJIYjdHNzVmb21Xd2huaWxfai1BaEpHTDdnMTZlZGRlOVpSYlQxaXl6aVhNdzlMcE1NbzVkX09EWmlrMlYtYlFETGtrQ2czY2lRS1R6TjI2ZVRyX05WdDZCX0NSLXNySkpDaFBPel84eWJTSklsUlRyNWY4TG9JYzgwbHVZQzVpVk9ldk10cWNwb3JKbVFCZmxGWkFzTnJrOWJPeG0yckd3YlJR?oc=5",
           "source": "Premium Times Nigeria",
           "published": "2026-10-09T04:26:07.000Z"
-        },
-        {
-          "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uncertain Relief",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOOHFQdkRhU2JkU0NPMldRMW5VM2JfUXF3UjNDeUlsNzFjZ0poVzlubzdOSFdnUzBxYzRES19yVHVuUEVpSGdlY01XYTRDSG5YajFiYzRBWWVtTElGSGFwbjNaZndRbmlHeWNOU2hNTEtGdl9UeEQ3bFZqTnZyWktqSmhEUVgwaW9uZ0psQWdkUUwxODZTYk5XRk9LM0JQaFk?oc=5",
-          "source": "THISDAYLIVE",
-          "published": "2026-10-11T02:32:55.000Z"
         },
         {
           "title": "Tinubu Government Announces 30-Day Petrol Discount At NNPC Stations, Prioritises Public Transporters",
@@ -38,7 +26,7 @@
         {
           "title": "PRESS RELEASE: NNPC Discount Offers Relief, Does Not Restore Subsidy",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQckktV25ETThzNkRwQjVXOXlub0Y4ZHg3dTRYV0VjN1pxT3daMGJSZHdJZk9VLVV1OFhfQm9aZTVnTVA5aXl3THJzWEdqdVJ0Z2hyM3RSMUg3RVBRNUdxbGp2WDhMZDdJYjNjYmNackZucURfdF9ZNnNkZ2N4dF8zajQ5QUJQVEowYmZ5TG14aDl6dGRjRm1HV005QmRqQQ?oc=5",
-          "source": "NNPC LTD",
+          "source": "NNPC Ltd",
           "published": "2026-10-09T09:36:50.000Z"
         },
         {
@@ -48,16 +36,28 @@
           "published": "2026-10-08T16:43:53.000Z"
         },
         {
+          "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uncertain Relief",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOOHFQdkRhU2JkU0NPMldRMW5VM2JfUXF3UjNDeUlsNzFjZ0poVzlubzdOSFdnUzBxYzRES19yVHVuUEVpSGdlY01XYTRDSG5YajFiYzRBWWVtTElGSGFwbjNaZndRbmlHeWNOU2hNTEtGdl9UeEQ3bFZqTnZyWktqSmhEUVgwaW9uZ0psQWdkUUwxODZTYk5XRk9LM0JQaFk?oc=5",
+          "source": "THISDAYLIVE",
+          "published": "2026-10-11T02:32:55.000Z"
+        },
+        {
+          "title": "Fuel discount: Nigerians seek lasting relief beyond 30-day price cut",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWDc4azBRLWw5Z0hWa0VKODNiaFpHaENuQlp4TTVKeUJ5bzFsLUNsa0VkZjNPbC1yVWNXanZzRmVfMld4cGViRm1NRVdRTUJaOWxoZWYyWlJEVk9BNW5DWklpVkd5V2NBNDZGQjdOeU84YmdJVzhqUlprT3ltM0Y0cVo0MUh4Z09JMWxPUS1uVjk2ZFo5dkxvY0o5cDBkSWVEWWVzUC03Y01lVkU00gGsAUFVX3lxTFBYNzhrMFEtbDlnSFZrRUo4M2JoWkdoQ25CWnhNNUp5QnlvMWwtQ2xrRWRmM09sLXJVY1dqdnNGZV8yV3hwZWJGbU1FV1FNQlo5bGhlZjJaUkRWT0E1bkNaSWlWR3lXY0E0NkZCN055TzhiZ0lXOGpSWmtPeW0zRjRxWjQxSHhnT0kxbE9RLW5WOTZkWjl2TG9jSjlwMGRJZURZZXNQLTdjTWVWRTQ?oc=5",
+          "source": "Businessday NG",
+          "published": "2026-10-11T02:30:06.000Z"
+        },
+        {
+          "title": "What the New Fuel Relief Measures Really Mean for Nigerians",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOMHJOMExxMUJGa25paF9xa0FBdGg4NTFZbHpSQlRvdGJRM2FlY0hDRXpNY2hvODJFS3MzQjBlSDAwWTlFMFlHZlZVNVRMbEEzMEFURHo3RTBfbDNCeDF1ZVR6cWYyM2RlYjNBMWM4blRJSFc3UHlZZmhYWHgzZHlxS3dfd1h0UEM1cVBnaVQ4MEMxZElRWFVSNHpWdW5ZRFl6TGhR?oc=5",
+          "source": "The News",
+          "published": "2026-10-11T11:08:52.000Z"
+        },
+        {
           "title": "NNPC extends N66 petrol discount to October 31, debunks subsidy return",
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd1VKM01rYU9WNEtjb2M5T181UnNOUmVWUW5xY1c4d2QySE5fQVAzMlBlcEVQSDAzVGFqNkZXWGxfUDRaMGVBdDV1MExUcXNXd2ZvSWcwOEhhVHFQRHF6aW0yTy1panJWT0gtRnRTekNxM3N6VHlIUVNuTzVpaGdORDdRTFBBSUszZ3NpSUo4NG5kRWNL?oc=5",
           "source": "Punch Newspapers",
           "published": "2026-10-10T05:25:56.000Z"
-        },
-        {
-          "title": "Economists fault FG’s 30-day petrol discount plan",
-          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1mY0FwbDVNOEtFNzZHYWZxbnlxWUhYUV83blNuT0UzVWhQSTRLSjZ0cUU0dE1ZYnBTZ21GSlAzT25rVm0yZExDU3lhNXFPSWN3d0pianQ5RkgzbWphNFVORnp6Z093QTVsOWxvVTIzdUZHNDhlSEE?oc=5",
-          "source": "The Sun Nigeria",
-          "published": "2026-10-11T04:08:49.000Z"
         }
       ]
     },
@@ -195,6 +195,12 @@
           "published": "2025-12-04T08:00:00.000Z"
         },
         {
+          "title": "Nigerians Question Telcos’ Advertising ‘Unlimited’ Data Plan ‘If It Does Not Exist’",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPb2ljOGtUVXdpX3g1LW4yaGxoemhVLUcwUkdvX1ZSNjFoTW9xdnhUd2xGV01tQXVORnpTYVJSUGRYZHVzbU1PUW9fN2dPdERhcTZETWhtaE4zcU1mVFZnaEJHZU5iM3lOaVoycFBobnVaUS1NcmRJQkxLRkgwR3M0TFZTc3NiX0hJYlZZU3M2RmpwQVVrVV9obVl6eHR5VHJqTGNr?oc=5",
+          "source": "Techeconomy",
+          "published": "2026-06-08T07:00:00.000Z"
+        },
+        {
           "title": "6 Best Apps to Buy Data Bundles Online in Nigeria (2026)",
           "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcEtFTjRtNFU4MFVlTGhHUnNjckh0UmZvajRJTkZMMGF1VGhvS1EzdXZYR3UzdmowWnVpOHNkVU9CZXBDM0JaeUVSSThPV3cweGx0MjFVUE1fSVI3MTZEbFRQZ0dUSTBTdk5HU2hWcmhpUkxUZW5NaGxxMWJrQk5LanN4X215NGVFdmphT1RvbEVGaXp5WkZxT2l4OW0tc2tURDZDLXFZMGtrR2VlUkhDMkVB?oc=5",
           "source": "IT News Africa",
@@ -207,22 +213,16 @@
           "published": "2026-09-08T08:58:12.000Z"
         },
         {
-          "title": "Goodbye airtime? Lebara launches in Nigeria with a cloud-first model and cheaper data promises",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ibGRVTEo0OUNzSFg2S0E3cE1URFM1VUUxZWtUcjZkR2pRcDRUdVdWaEF5c2piTUVlcldEamFXekxWSHBUaEFhVXItd3dLbVRQU0tWQVp5OXNBX1pENlpnbWdvQkdLbGZ6bmdKbjhB?oc=5",
-          "source": "Condia",
-          "published": "2026-03-03T08:00:00.000Z"
-        },
-        {
-          "title": "Best Data Plans in Nigeria 2025: MTN, Airtel, Glo & 9mobile Compared",
-          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA5WDkwNUtuOGFuTEZYSXZtR01jSFFwN19ObDJVbTAtUXJhbDNLc0pMVHMwX3pLZVRHRUlSQnB0aXdnNDQ4Z0pqTDZoM3N6WFk0V0dlOTdsV3E2c1Qwc2I2NQ?oc=5",
-          "source": "Techeconomy",
-          "published": "2025-08-07T07:00:00.000Z"
-        },
-        {
           "title": "2026 Complete list of voice tariff plans on MTN, Airtel, Globacom and T2mobile",
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yS1ZKUDdWRFJzQmEwb24xX3hhaU9Qd3FTZ3RUeVNsRnNkV2VuaDFuUHFOcl85OG5XR0ljZ3haNnc0RkZEVnZ2ZUlMaHhTVnZGRjFPVzNGb3B0U0lFWDN1bzR3V0J3eU5qbHRkRFJCekNyVjlNVmJDSGticVc?oc=5",
           "source": "Technext24.com",
           "published": "2026-07-05T22:22:32.000Z"
+        },
+        {
+          "title": "Goodbye airtime? Lebara launches in Nigeria with a cloud-first model and cheaper data promises",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ibGRVTEo0OUNzSFg2S0E3cE1URFM1VUUxZWtUcjZkR2pRcDRUdVdWaEF5c2piTUVlcldEamFXekxWSHBUaEFhVXItd3dLbVRQU0tWQVp5OXNBX1pENlpnbWdvQkdLbGZ6bmdKbjhB?oc=5",
+          "source": "Condia",
+          "published": "2026-03-03T08:00:00.000Z"
         }
       ]
     },
