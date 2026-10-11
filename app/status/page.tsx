@@ -3,7 +3,16 @@ import { SITE_CONFIG } from "@/config/site";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Freshness } from "@/components/live/freshness";
-import { LIVE_FX, LIVE_FUEL, LIVE_WATCH, sourceHealth } from "@/lib/live";
+import { ChangeBadge } from "@/components/live/change-badge";
+import {
+  LIVE_FX,
+  LIVE_FUEL,
+  LIVE_WATCH,
+  MAX_HISTORY_POINTS_PER_DATASET,
+  datasetHistoryPoints,
+  latestDatasetDelta,
+  sourceHealth,
+} from "@/lib/live";
 import { LocalWatchlist, type WatchReading } from "@/components/live/local-watchlist";
 import { PushSettings } from "@/components/push-notifications";
 import { DATASET_REGISTRY, stateLabel } from "@/lib/source-registry";
@@ -72,6 +81,58 @@ export default function StatusPage() {
 
       <section aria-labelledby="history" className="space-y-3">
         <h2 id="history" className="text-xl font-bold">Price history</h2>
+        <p className="text-sm text-muted-foreground">
+          Each monitored dataset retains up to its last {MAX_HISTORY_POINTS_PER_DATASET} verified observations. Deltas compare the latest reading against the immediately preceding real observation.
+        </p>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {[
+            {
+              dataset: "parallel-usd-ngn-buy" as const,
+              label: "Parallel USD buy",
+              unitSuffix: "",
+              fractionDigits: 0,
+            },
+            {
+              dataset: "fuel-depot-petrol" as const,
+              label: "Depot petrol median",
+              unitSuffix: "/L",
+              fractionDigits: undefined,
+            },
+            {
+              dataset: "cbn-usd-ngn" as const,
+              label: "CBN NFEM USD",
+              unitSuffix: "",
+              fractionDigits: 2,
+            },
+          ].map((item) => {
+            const pts = datasetHistoryPoints(item.dataset);
+            const delta = latestDatasetDelta(item.dataset);
+            const latest = pts.at(-1);
+            return (
+              <Card key={item.dataset}>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-sm font-bold">{item.label}</CardTitle>
+                  <CardDescription className="text-xs">
+                    {pts.length} / {MAX_HISTORY_POINTS_PER_DATASET} real points stored
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-2 text-xs">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-base font-extrabold tabular-nums">
+                      {latest ? `₦${latest.value.toLocaleString("en-NG")}${item.unitSuffix}` : "Unavailable"}
+                    </span>
+                    <ChangeBadge
+                      delta={delta}
+                      unitSuffix={item.unitSuffix}
+                      fractionDigits={item.fractionDigits}
+                      showNoPrior={true}
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
         <HistoryChart />
       </section>
 

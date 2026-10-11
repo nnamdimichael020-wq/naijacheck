@@ -149,3 +149,6 @@ vite.config.ts.timestamp-*
 .turbo
 
 .wrangler/
+.monitor-diagnostics/
+.content-audit-report.*
+
