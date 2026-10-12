@@ -1,11 +1,12 @@
 {
-  "updatedAt": "2026-10-12T10:46:34.594Z",
+  "updatedAt": "2026-10-12T21:16:17.984Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "detty-december",
     "oblee",
     "japa",
-    "chop-life"
+    "chop-life",
+    "achalugo"
   ],
   "terms": [
     {
@@ -58,8 +59,8 @@
       "slug": "achalugo",
       "term": "Achalugo",
       "kind": "slang",
-      "trend": "quiet",
-      "trendScore": 0,
+      "trend": "steady",
+      "trendScore": 25,
       "confidence": "medium",
       "meaning": "An Igbo expression for a beautiful, graceful woman. Some people also use it for a carefree, go-with-the-flow vibe.",
       "detail": "Achalugo is Igbo. Most usage is a compliment meaning a woman of beauty, grace and character, with some online sources translating it as 'God's treasure' or 'the abode of an eagle'. Gen Z also picked it up for its chill energy, so you will see it used for someone who is calm and unbothered. Check the context before you use it on someone.",
@@ -74,7 +75,7 @@
       ],
       "platform": "TikTok, WhatsApp status",
       "source": "Premium Times year-in-review (Dec 2025), public TikTok explainers (Mar-Aug 2026), Awajis dictionary (Aug 2026). Translations vary.",
-      "mentions7d": 0
+      "mentions7d": 1
     },
     {
       "slug": "sope-purr",
@@ -348,8 +349,8 @@
       "slug": "gist",
       "term": "Gist",
       "kind": "slang",
-      "trend": "quiet",
-      "trendScore": 0,
+      "trend": "steady",
+      "trendScore": 25,
       "confidence": "high",
       "meaning": "News, gossip or a story. 'Give me the gist' means tell me what's happening.",
       "detail": "Gist is a Nigerian English word for information, usually gossip. It moves fast in group chats. Everyone wants the gist, but be careful: gist can mean facts or rumours, so check before you share.",
@@ -364,14 +365,14 @@
       ],
       "platform": "WhatsApp, X",
       "source": "Common usage in Nigerian English.",
-      "mentions7d": 0
+      "mentions7d": 1
     },
     {
       "slug": "jara",
       "term": "Jara",
       "kind": "slang",
-      "trend": "quiet",
-      "trendScore": 0,
+      "trend": "steady",
+      "trendScore": 25,
       "confidence": "medium-high",
       "meaning": "Extra or bonus, especially a small extra you add to a purchase for goodwill.",
       "detail": "Jara is a Yoruba word that means extra. Market traders often add jara to a bag or a bunch to keep customers happy. It is a small thing that builds loyalty, and it is a smart tactic for any small business.",
@@ -386,7 +387,7 @@
       ],
       "platform": "Markets, WhatsApp",
       "source": "Common usage in Yoruba and Nigerian markets.",
-      "mentions7d": 0
+      "mentions7d": 1
     },
     {
       "slug": "shakara",

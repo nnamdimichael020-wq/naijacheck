@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-12T10:46:34.594Z",
+  "updatedAt": "2026-10-12T21:16:17.984Z",
   "sources": [
     {
       "label": "Awajis fuel tables (petroleumprice.ng depot data)",
       "url": "https://awajis.com/fuel-price-in-nigeria-today/",
-      "asOf": "2026-10-12T10:21:00.000Z"
+      "asOf": "2026-10-12T19:21:00.000Z"
     },
     {
       "label": "NNPC and Dangote pump and gantry prices: see news feed. Not auto-parsed.",
@@ -83,20 +83,20 @@
     {
       "name": "National median depot (petrol)",
       "product": "petrol",
-      "price": 1350,
+      "price": 1349,
       "date": "2026-10-12"
     },
     {
       "name": "National median depot (diesel)",
       "product": "diesel",
-      "price": 1805,
+      "price": 1800,
       "date": "2026-10-12"
     },
     {
       "name": "National median depot (cooking gas, LPG)",
       "product": "lpg",
-      "price": 1160,
-      "date": "2026-10-11"
+      "price": 1155,
+      "date": "2026-10-12"
     }
   ],
   "dieselNote": "Depot diesel is the wholesale price. Pump and jerrycan diesel usually sits above it, so budget for the gap.",
