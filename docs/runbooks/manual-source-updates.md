@@ -54,6 +54,29 @@ Use `https://frsc.gov.ng/` (Service Level Agreements and the ARC Compendium) and
 
 If the current statutory fee cannot be confirmed on an FRSC page, leave the row's status at `writing` in [`docs/content-gap-queue.md`](../content-gap-queue.md), keep the fee in `unverifiedItems`, and say plainly on the page that the figure is unverified.
 
+## Lagos State residency registration (LASRRA / LAG-ID)
+
+Use the LASRRA registration portal at `https://registration.lagosresidents.gov.ng` — never the agency's social posts, an agent's page or a "concierge" listing — for:
+
+- `/help/requirements` — the documents the centre asks for (adult proof of residence + one photo ID from the list; children's birth certificate and photographs).
+- `/help/howto` — the online form, the printed confirmation page and the Online Registration Id.
+- `/help/enrollment` — the LG/LCDA centre locator. Read the count of listed LG/LCDAs from the live page; never copy addresses into `data/`, because centres move and a stale address is worse than none.
+- `/help/faq` and `/help/answers?f=N` — the agency's own rules: free card and registration, biometrics captured, temporary card validity, printing window, collection by SMS, replacement cards, corrections and error holds.
+- `/validation/` — the validation exercise wording.
+
+Supporting official sources: Lagos State Identity Management services (`https://lagosstate.gov.ng/services/identitymanagement`), Lagos State Citizens Gate (`https://citizensgate.lagosstate.gov.ng/`) for the LASRRA ID + NIN + Citizen ID requirement, the Office of Education Quality Assurance school-enrolment press release (`https://oeqalagos.com/lasg-makes-lasrra-number-mandatory-for-school-enrolment/`) and the Lagos State Ministry of Health note on the LASHMA card readers.
+
+Rules that stop this going wrong:
+
+1. **Publish ₦0, or publish nothing.** The registration and the first card are free by the agency's own FAQ. Never repeat an agent's or a blog's figure for "fast" registration. A replacement-card charge is mentioned by the FAQ without an amount: keep it `unavailable` until a LASRRA desk confirms the current figure.
+2. **No office addresses.** Point readers to the portal's locator and say why: LASRRA relocates centres and the locator is the only live list.
+3. **Do not state a NIN requirement that the portal does not state.** The identity list names the National ID card, not the NIN slip. NIN appears in downstream state services (Citizens Gate financial assistance), so attribute it there.
+4. **Flag the agency's own inconsistencies instead of picking a side** — the three-month versus six-month residency wording, and the 18 versus over-21 age for the adult registering a child.
+5. **The informational site can be down.** `www.lagosresidents.gov.ng` was returning a WordPress critical error on 12 October 2026. If it comes back, re-read the FAQ and Mandate pages and reconcile them against the portal; if it stays down, keep quoting the portal.
+6. **Never collect or store personal data.** Do not ask readers for NINs, registration numbers or documents, and do not scrape the registration or validation flows (login and payment paths are off-limits).
+
+Update `data/govhowto.json` under the `lasrra-lagos-residency` doc, refresh `lastVerified`, add anything you could not confirm to `unverifiedItems`, and keep the `docs/content-gap-queue.md` verification log in step. The monitor fingerprints `/help/requirements` and `/help/faq`; a changed fingerprint opens human review and never edits the page by itself.
+
 ## Food, fuel and editorial observations
 
 A manual observation needs exact item/product, unit, market/station, city/state, observed value/range, observation time, permitted evidence, collector and reviewer. Keep retail pump separate from wholesale depot. Do not describe seeded/manual/old data as live. Slang requires dated usage/editorial evidence; Google News and Wikimedia are only mention/pageview signals.

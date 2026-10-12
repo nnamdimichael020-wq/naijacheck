@@ -9,7 +9,7 @@
  * Run with: npm run generate  (also runs automatically before dev and build)
  *
  * Every article gets: unique meta title/description, H1, H2 sections, FAQs (for FAQPage schema),
- * takeaways, and 5-8 internal links to related pages.
+ * takeaways, and 6-9 internal links to related pages.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -790,7 +790,7 @@ function buildHowToHub() {
     path: "/howto", section: "hub", navLabel: "GovHowTo hub", kicker: "GovHowTo",
     title: "GovHowTo 2026: Passport, NIN, CAC, Tax and Police Documents",
     metaTitle: "GovHowTo Nigeria 2026: Passport, NIN, CAC & Tax Guides",
-    metaDescription: "Step-by-step Nigerian government and utility guides for 2026: passport renewal, NIN correction, police character certificate, CAC business name, freelancer tax, driver's licence and prepaid electricity bands.",
+    metaDescription: "Step-by-step Nigerian government and utility guides for 2026: passport renewal, NIN correction, police character certificate, CAC business name, freelancer tax, driver's licence, prepaid electricity bands and Lagos State residency registration (LASRRA / LAG-ID).",
     keywords: ["passport renewal 2026 nigeria", "nin correction 2026", "police character certificate 2026", "cac business name registration 2026"],
     params: {},
     intro: [
@@ -801,6 +801,7 @@ function buildHowToHub() {
       { h2: "Our most-read guides", paras: ["These are the guides people search for most, based on the requests we see most often. Each one names the official source it was checked against and the date we checked it."], bullets: govhowto.docs.map((d) => `${d.title}: ${d.fee.split(".")[0]}`) },
       { h2: "How to avoid touts and scams", paras: ["Use only official portals. Never pay cash to someone who promises to skip the line. Keep receipts. If a site asks for your bank PIN or OTP, it is a scam."] },
       { h2: "Power and utility guides", paras: ["NERC sets the service bands and approves the rate each distribution company charges, and it revises those rates monthly. Our prepaid electricity bands guide names the two orders we read and the date we read them, so you can check them yourself before you compare your bill with anybody else's."] },
+      { h2: "Identity and residency guides", paras: ["Your NIN, your passport and your Lagos residency number do different jobs, and each agency asks for the one it needs. The LASRRA / LAG-ID guide covers what a Lagos registration centre actually asks you to bring, which local government your card is sent to, and why the registration and the first card cost nothing. The NIN guide covers what NIMC charges for a correction, so you know the difference between a statutory fee and an agent's mark-up."] },
     ],
     faqs: [
       { q: "How much is an international passport in 2026?", a: "Reported fees for applications in Nigeria are ₦100,000 for the 32-page 5-year booklet and ₦200,000 for the 64-page 10-year booklet. Confirm on immigration.gov.ng." },
@@ -808,7 +809,7 @@ function buildHowToHub() {
       { q: "Do I need CAC for a small business?", a: "It depends on the business. A business name is useful for bank accounts and bigger customers." },
     ],
     takeaways: ["Use official portals only.", "Confirm the fee on the day you pay.", "Keep receipts for every step."],
-    linkPaths: ["/howto/passport-renewal-2026", "/howto/nin-correction", "/howto/police-character-certificate", "/howto/cac-business-name", "/howto/freelancer-tax-tin", "/howto/drivers-licence-frsc", "/howto/prepaid-electricity-bands", "/status"],
+    linkPaths: ["/howto/passport-renewal-2026", "/howto/nin-correction", "/howto/lasrra-lagos-residency", "/howto/police-character-certificate", "/howto/cac-business-name", "/howto/freelancer-tax-tin", "/howto/drivers-licence-frsc", "/howto/prepaid-electricity-bands", "/status"],
   });
 }
 
@@ -1287,7 +1288,7 @@ const articles: Article[] = drafts.map((d) => {
     if (!label) continue;
     seen.add(p);
     links.push({ href: p, label });
-    if (links.length === 8) break;
+    if (links.length === 9) break;
   }
   for (const pad of PADDING) {
     if (links.length >= 6) break;
