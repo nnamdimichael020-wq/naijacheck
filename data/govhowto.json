@@ -19,7 +19,7 @@
       "steps": ["Go to NIMC's official self-service modification portal (nimc.gov.ng).", "Create an account with your NIN and a phone number you can access.", "Select the field to correct, such as name or DOB.", "Upload the supporting document in clear PDF or JPEG under 2MB.", "Pay the fee through the portal's Remita payment flow.", "Save your reference number and check the status regularly."],
       "documents": ["Valid NIN", "Birth certificate or court affidavit (for name or DOB changes)", "Clear scan of supporting documents", "Debit card or mobile banking app for payment"],
       "pitfalls": ["Cash 'processing' from touts at NIMC gates", "Fake NIMC websites that collect your details", "Uploading blurry or cropped documents", "Paying twice because the portal shows a timeout"],
-      "officialSite": "https://nimc.gov.ng", "related": ["passport-renewal-2026", "bvn-correction", "freelancer-tax-tin"], "hustleLink": "/hustle/phone-accessories"
+      "officialSite": "https://nimc.gov.ng", "related": ["passport-renewal-2026", "bvn-correction", "freelancer-tax-tin", "lasrra-lagos-residency"], "hustleLink": "/hustle/phone-accessories"
     },
     {
       "slug": "police-character-certificate", "title": "Police Character Certificate 2026 (Police Clearance)", "short": "How to get a police character certificate in 2026: official fees, steps, and the scam signs to avoid.",
@@ -124,6 +124,297 @@
       "extraFaqs": [{"q": "Is there one Band A tariff for the whole of Nigeria?", "a": "No. NERC approves end-user rates for each DisCo separately, and the orders it issues each month carry their own tables. The two September 2026 orders we read both put Band A at ₦209.50 per kWh, but their Bands B to E rows differ. States that have moved to their own electricity regulator approve their own rates."}, {"q": "How do I find out which band my feeder is on?", "a": "Your tariff class is printed on your bill or your vending receipt. For the band itself, check your DisCo's published feeder list and its daily rolling seven-day average supply hours, which NERC requires it to publish for every Band A feeder."}, {"q": "Why did my ₦10,000 finish faster this month?", "a": "Compare units, not naira. Count the days the credit lasted and the units per day. A rate change, a new appliance, a longer month, a meter fault and a fixed monthly charge all show up differently, and only the units tell you which one it was."}, {"q": "Can I pay to be moved to Band A?", "a": "No. Migration between bands follows NERC's review of measured feeder performance, and NERC issues the order. Anyone who asks you for money to upgrade your meter or your band is selling you nothing."}, {"q": "What is a lifeline customer?", "a": "NERC's R1 lifeline class covers customers whose consumption is not more than 50 kWh a month. In the two orders we read, the lifeline rate is ₦4.00 per kWh."}, {"q": "Does VAT come out of my vending?", "a": "Yes. NERC's own tariff FAQ tells customers to deduct VAT before working out the rate implied by a vending receipt."}, {"q": "Is Band A supply cheaper than running my generator?", "a": "Often, but it depends entirely on your load and your hours. Put your real numbers into the generator fuel calculator, then compare the monthly figure with what you spend on units."}, {"q": "Do these rates apply to me if I live in Lagos or another state with its own electricity regulator?", "a": "The NERC orders quoted here approve rates for the yet-to-be-transitioned states inside each DisCo's franchise. If your state has transferred regulatory oversight to a state electricity regulator, that regulator approves your rate. Check with your DisCo and with your state regulator."}],
       "extraTakeaways": ["Band A promises a minimum of 20 hours of supply a day; Band B 16, Band C 12, Band D 8 and Band E 4. That is NERC's own definition.", "Your rate is per DisCo, not national. The two September 2026 orders we read agree on Band A at ₦209.50 per kWh and disagree on Bands B to E.", "At that Band A rate, ₦10,000 is roughly 48 units before VAT and fixed charges. On Band B it is roughly 164 units.", "Work out your own rate from a receipt: amount divided by units, less VAT. NERC says so itself.", "Nobody can sell you a band upgrade, and nobody should sell you a meter outside the DisCo or approved-vendor process."],
       "extraLinkPaths": ["/tools/generator", "/tools/solar", "/status", "/learn/electricity-bill-explained"]
+    },
+    {
+      "slug": "lasrra-lagos-residency",
+      "title": "Lagos State Residency Registration (LASRRA / LAG-ID): Documents, Centres and Card Collection",
+      "short": "Registering with LASRRA is free — ₦0 for the registration and for your first residency card, according to the agency's own registration FAQ, which we read on 12 October 2026. You take one proof of the Lagos address where you actually live and one photo ID from the agency's list, get a temporary registration card on the spot, and collect the permanent LAG-ID card from your LG or LCDA when LASRRA tells you it is ready.",
+      "category": "Identity and residency",
+      "fee": "₦0 — nothing. LASRRA's registration FAQ says the residency card is produced and issued free of charge to all residents and that there is no cost to register. There is no fee table for LASRRA because there is no fee.",
+      "feeSource": "LASRRA registration FAQ, “How much does the Residency Card Cost?”, on the official portal at registration.lagosresidents.gov.ng/help/faq, read on 12 October 2026. The agency's 2026 sensitisation messages repeat that registration is free and warn against anyone collecting money for it.",
+      "timeline": "A temporary registration card is issued at the centre once your fingerprints, signature and face image are captured, and LASRRA's FAQ says it is valid for 12 months. The same FAQ says the permanent residency card is printed within 12 months of registration and delivered to the LG or LCDA of the address you registered, where you collect it after an SMS notification. Records with errors go on hold, and the agency says that can take over five weeks to resolve.",
+      "steps": [
+        "Check that you qualify. LASRRA's FAQ says anyone who currently resides in the state is required to register, and so is anyone taking up residence who intends to stay more than six months.",
+        "Make sure you can prove the Lagos address where you actually live. The FAQ is direct about this: to be eligible, you must be able to provide a valid and verifiable address. No address document, no registration.",
+        "Assemble the two-part document set: one proof of residence (rent receipt or tenancy agreement, or a utility bill for the address such as electricity, water or refuse disposal) and one proof of identity from the agency's list (international passport, national ID card, driver's licence, employee ID card carrying the employer's address or logo, student ID card, tax card or receipt, association ID, or a letter of identification from a parent, CDA, household head or registered association).",
+        "Bring originals and clean photocopies of everything. The portal says the registration officer scans the documents and hands them back, but keeps a copy.",
+        "Pre-register online at registration.lagosresidents.gov.ng/register and print the confirmation page. The portal says filling the online form is only step one, and that you must still attend an enrolment station for your biometrics.",
+        "If you would rather start at a centre, you can. The FAQ lists two modes of registration: online, or attending a registration point near you.",
+        "Find the centre inside your own local government or LCDA on the portal's locator at registration.lagosresidents.gov.ng/help/enrollment. Choose the LG or LCDA where you live, because that is where your permanent card is sent.",
+        "Attend with your documents and your printed online confirmation page. The officer captures ten fingerprints, your signature and your face image, and issues your temporary registration card.",
+        "Register your children on the same trip if you can. Children aged 15 and under are registered without biometrics; you need the child's birth certificate, two passport-sized photographs of the child, and a copy of the registration card of an adult who has already registered.",
+        "Wait for the SMS, then collect the permanent card from the LG or LCDA office named in the message. Keep the temporary card safe in the meantime — it is your evidence of registration until the permanent one arrives.",
+        "Validate your record when LASRRA asks you to, or if your name or address has changed. The portal's validation page exists to confirm that the information that will be printed on your card is accurate and reflects your current status."
+      ],
+      "documents": [
+        "Proof of residence in Lagos: rent receipt or tenancy agreement, or a utility bill for the address you live at (electricity, water or refuse disposal bill)",
+        "One proof of identity: international passport, national ID card, driver's licence, employee ID card showing the employer's address or logo, student ID card, tax card or receipt, association ID, or a letter of identification from a parent, CDA, household head or registered association",
+        "Originals plus clean photocopies of each document, because the officer keeps a copy",
+        "The printed online confirmation page with your Online Registration Id, if you pre-registered",
+        "A phone number you will still be using months later, because that is how the collection SMS reaches you",
+        "For a child: the child's birth certificate, two passport photographs of the child, and a photocopy of the registration card of the adult registering the child",
+        "For domestic staff: a notarised copy of the employer's utility bill or rent receipt",
+        "Evidence of the new address if you are updating a record after moving house"
+      ],
+      "pitfalls": [
+        "Paying anybody for registration. The card and the registration are free, and the agency has warned residents about agents collecting money for it.",
+        "Carrying a utility bill for a different address from the one you are registering. The proof has to match where you actually live.",
+        "Assuming a NIN slip is on the identity list. The published list names the National ID card, not the NIN slip. If that is all you hold, ask the centre before you travel.",
+        "Treating the temporary registration card as if it were the LAG-ID smart card. The temporary card is paper proof of registration; the chip-based card is the permanent one.",
+        "Registering in the LG or LCDA where you work instead of where you live. The permanent card is sent to the address you registered.",
+        "Letting a spelling error pass on the officer's screen. Fixing it after the card is printed means handing the card back and waiting 10 to 15 working days.",
+        "Losing the card and assuming the replacement is free. The FAQ says the first card is free and later cards may be replaced at a charge; no amount is published, so ask the helpdesk rather than an agent.",
+        "Believing a 'concierge' who says he can speed up printing. The delays LASRRA itself describes come from record checks, not from who submits the form."
+      ],
+      "officialSite": "https://registration.lagosresidents.gov.ng",
+      "related": [
+        "nin-correction",
+        "passport-renewal-2026",
+        "drivers-licence-frsc"
+      ],
+      "hustleLink": "/hustle/pos-business",
+      "lastVerified": "2026-10-12",
+      "verification": "manual",
+      "metaTitle": "LASRRA / LAG-ID Registration 2026: Documents, Centres & Card Collection",
+      "metaDescription": "LASRRA registration in Lagos is free. The documents the centre asks for, how to find the centre for your LG or LCDA, temporary card vs the permanent LAG-ID, and the delays LASRRA itself admits to.",
+      "keywords": [
+        "lasrra registration",
+        "lag id card lagos",
+        "lagos state residents card requirements",
+        "lasrra registration centres",
+        "lasrra card collection",
+        "lag id card status"
+      ],
+      "headings": {
+        "cost": "What it costs: nothing",
+        "steps": "Step by step: eligibility, documents, capture and collection",
+        "documents": "The documents the centre actually asks for",
+        "pitfalls": "Mistakes that send people home",
+        "timeline": "How long the card takes, and why it stalls"
+      },
+      "sourceNote": "The requirements, the two-step registration process, the free-of-charge rule, the 12-month temporary card, the 12-month printing window, the SMS notification, the collection points, the children's rules, the domestic-staff rule, the replacement-card rule and the 10–15 working day corrections come from the LASRRA online registration portal at registration.lagosresidents.gov.ng — the documents page, the form guide, the centre locator, the FAQ and its answers, and the validation page — all read on 12 October 2026. The school-enrolment requirement is from the Office of Education Quality Assurance press release of 3 September 2026. Health access is from the Lagos State Ministry of Health's May 2025 note on the LASHMA biometric card readers integrated with the LASRRA database. The state-services list is from Lagos State Citizens Gate. The agency's informational site, www.lagosresidents.gov.ng, was returning a server error on 12 October 2026, so nothing here is quoted from it. This page is checked by hand and is not an automatically updated feed.",
+      "officialLinks": [
+        {
+          "label": "LASRRA online registration portal — start a registration",
+          "href": "https://registration.lagosresidents.gov.ng/register/"
+        },
+        {
+          "label": "LASRRA — documents required at the registration centre",
+          "href": "https://registration.lagosresidents.gov.ng/help/requirements"
+        },
+        {
+          "label": "LASRRA — locate an enrolment centre in your LG or LCDA",
+          "href": "https://registration.lagosresidents.gov.ng/help/enrollment"
+        },
+        {
+          "label": "LASRRA — registration FAQ and answers",
+          "href": "https://registration.lagosresidents.gov.ng/help/faq"
+        },
+        {
+          "label": "LASRRA — validate your registration record",
+          "href": "https://registration.lagosresidents.gov.ng/validation/"
+        },
+        {
+          "label": "Lagos State — Identity Management services (LASRRA registration, LAG-ID status)",
+          "href": "https://lagosstate.gov.ng/services/identitymanagement"
+        },
+        {
+          "label": "Lagos State Citizens Gate — LASRRA pre-registration and state services",
+          "href": "https://citizensgate.lagosstate.gov.ng/"
+        },
+        {
+          "label": "Office of Education Quality Assurance — LASRRA number mandatory for school enrolment (3 September 2026)",
+          "href": "https://oeqalagos.com/lasg-makes-lasrra-number-mandatory-for-school-enrolment/"
+        },
+        {
+          "label": "Lagos State Ministry of Health — LASHMA card readers integrated with the LASRRA database (May 2025)",
+          "href": "https://lagosministryofhealth.org/lashma-deploys-ilera-eko-biometric-card-readers-in-public-and-private-hospitals/"
+        }
+      ],
+      "unverifiedItems": [
+        "The charge for replacing a lost or stolen card. LASRRA's FAQ says the first card is free and later cards may be replaced at a charge, but no amount is published. Ask the LASRRA helpdesk or your LG office before paying anyone.",
+        "The USSD short code for checking card status, quoted in different forms as *347*641# and *347641#. It could not be found on a live agency page on 12 October 2026, so confirm it with the LASRRA desk. Never send money or your bank details after dialling any code.",
+        "The five-year validity period attached to the LAG-ID card. The wording comes from LASRRA's 2022 launch statements, and we could not re-read it on a live agency page in October 2026.",
+        "Whether a NIN slip alone is accepted as the proof of identity. The published list names the National ID card and does not mention the NIN slip — ask at the centre if that is your only paper.",
+        "The minimum age of the adult who may register a child. LASRRA's FAQ says 18 years in one answer and over 21 years in another. If the adult registering a child is between 18 and 21, confirm at the centre.",
+        "The exact residency qualifying period. The portal FAQ says someone taking up residence who intends to stay more than six months must register; LASRRA's older informational material and press coverage repeat 'three months or more'. The informational site was down when we checked.",
+        "Whether any appointment is required before attending a centre, and the current printing backlog in your LG or LCDA. The SMS you receive is the reliable signal on collection."
+      ],
+      "extraIntro": [
+        "Two things send people home from a LASRRA centre before they even sit down. The first is the wrong paper: the agency wants proof of where you live in Lagos, and an electricity bill in a landlord's name that you cannot connect to yourself is a problem. The second is paying for something that is free — the registration and the first card cost nothing, and the agency has publicly warned residents about agents collecting money for it.",
+        "What changed for many families in 2026 is who needs the number. On 3 September 2026 the Office of Education Quality Assurance announced that schools would obtain and record the valid LASRRA registration number of every learner as part of admission and enrolment from 14 September 2026, for the 2026/2027 session, in both public and private schools.",
+        "One warning about sources. The agency's own informational website, www.lagosresidents.gov.ng, was returning a WordPress critical error when we checked on 12 October 2026. The registration portal at registration.lagosresidents.gov.ng was up and working, and every rule on this page comes from there, from Lagos State's own service pages, or from the two agency press items named below. Where something could not be confirmed, we say so instead of filling the gap."
+      ],
+      "extraSections": [
+        {
+          "h2": "Where to register: the centre for your own local government",
+          "paras": [
+            "LASRRA registers through local governments and local council development areas. The portal's centre locator lists 57 LG and LCDA options — from Agbado Oke Odo, Agege and Alimosho through Mushin and Shomolu to Yaba — and shows the centres inside whichever one you choose.",
+            "We are not printing a list of street addresses here, and that is deliberate. Centres move, and the agency's own locator is the only list that stays current; a copied address list is exactly the thing that goes stale on old forum threads. Open the locator, pick the LG or LCDA where you live, and go to the centre nearest you.",
+            "The FAQ also notes that LASRRA has mobile teams that move from area to area, and the agency's 2026 sensitisation drive is taking registration to schools, markets and other public points. If a team is announced in your area, confirm it with the LASRRA desk in your LG or LCDA before you hand over documents — or money."
+          ],
+          "bullets": [
+            "Pre-register online, then attend a centre: the portal describes the online form as step one only, with biometrics still to be captured at an enrolment station.",
+            "Walk in and register at a centre instead: the FAQ lists both online and walk-in registration.",
+            "Either way, if you started online, print the confirmation page and carry it with your documents.",
+            "Register where you live, not where you work. The permanent card is sent to the LG or LCDA of your registered address."
+          ]
+        },
+        {
+          "h2": "What the LAG-ID card is for",
+          "paras": [
+            "The residency number is the state's reference for you, and several Lagos services now hang off it. These are the ones with an official source behind them:"
+          ],
+          "table": {
+            "caption": "Official Lagos State sources, read on 12 October 2026.",
+            "columns": [
+              "Where it is asked for",
+              "What the official source says"
+            ],
+            "rows": [
+              [
+                "School admission and enrolment",
+                "Schools are to obtain and record the valid LASRRA registration number of every learner from 14 September 2026, for the 2026/2027 session, in public and private schools — Office of Education Quality Assurance press release, 3 September 2026."
+              ],
+              [
+                "Health cover and hospital visits",
+                "LASHMA deployed biometric card readers integrated with the LASRRA database so that ILERA EKO enrollees are authenticated with their LASRRA ID, starting with a pilot across 100 facilities — Lagos State Ministry of Health, May 2025."
+              ],
+              [
+                "State financial assistance",
+                "Citizens Gate lists the requirements to apply as LASRRA ID, NIN and a Citizen ID."
+              ],
+              [
+                "Transport and other state services",
+                "Citizens Gate describes LASRRA card holders as having access to BRT, loans and other financial benefits."
+              ]
+            ]
+          },
+          "bullets": [
+            "It is not a travel document. The portal's FAQ leaves the answer to that question blank, so treat the card as domestic proof of residency.",
+            "It does not make you an indigene of Lagos State. The FAQ is clear that registration confers no status other than that you resided in the state when you registered.",
+            "It is not a replacement for your NIN or your voter's card. Different agencies collect different records, and the FAQ says the national identity database is a separate entity from the Lagos State residents register."
+          ]
+        },
+        {
+          "h2": "Temporary registration card vs the permanent LAG-ID card",
+          "paras": [
+            "Half the confusion at the counter is that two different things are called 'the card'. Only one of them is the LAG-ID."
+          ],
+          "table": {
+            "caption": "LASRRA registration FAQ and validation page, Lagos State Ministry of Health (May 2025) and LASRRA's 2022 launch statements, read on 12 October 2026.",
+            "columns": [
+              "",
+              "Temporary registration card",
+              "Permanent LAG-ID card"
+            ],
+            "rows": [
+              [
+                "When you get it",
+                "At the centre, after your fingerprints, signature and face image are captured",
+                "After LASRRA finishes its quality checks and prints the card"
+              ],
+              [
+                "Validity",
+                "12 months, per the agency's FAQ",
+                "Five years, per LASRRA's 2022 launch statements — wording we could not re-confirm on a live agency page"
+              ],
+              [
+                "What it proves",
+                "That you have registered and your record is in the system",
+                "Your proof of residency, with your residency number printed on it"
+              ],
+              [
+                "How you receive it",
+                "Handed to you at the centre",
+                "An SMS tells you it is ready; you collect it at the LG or LCDA of your registered address"
+              ],
+              [
+                "Extra functions",
+                "None published",
+                "Chip-based and multifunction: the Ministry of Health describes it as enabling access to healthcare, payments and identity verification"
+              ]
+            ]
+          }
+        },
+        {
+          "h2": "How to check where your card is",
+          "paras": [
+            "Start with the portal's validation page. Its stated purpose is to confirm that the information that will be printed on your card is accurate and reflects your current status, and it lets you start a validation or retrieve one you saved earlier.",
+            "Lagos State's own website lists a 'Check LAG-ID Status' service under Identity Management, next to LASRRA registration, at lagosstate.gov.ng/services/identitymanagement.",
+            "The short code that LASRRA officers and the agency's social posts have handed out for checking card status is *347*641#, sometimes written *347641#. We could not find it written on a live agency page on 12 October 2026, so treat it as something to confirm with the LASRRA desk. Send it from the phone number you registered with, and never send money afterwards to anybody who claims to be following it up."
+          ]
+        },
+        {
+          "h2": "Delays, and what LASRRA itself says about them",
+          "paras": [
+            "LASRRA's FAQ is unusually blunt about the gap between capture and collection. After registration comes a quality check, then corrections where needed, then screening, validation and de-duplication — only after that is your residency number generated. If an error is found, the record is put on hold for enquiry, the applicant is contacted using the contact details given, and the agency says resolution can take over five weeks.",
+            "That is the honest timeline. Nothing you pay an agent changes it, and the printing order is not something a 'fast track' fee controls."
+          ],
+          "bullets": [
+            "Details that do not match your documents are the commonest cause of a hold. Watch the officer's screen and correct spellings on the spot.",
+            "An error found after printing: the card is taken back for amendment and LASRRA says replacement cards are ready in 10 to 15 working days.",
+            "A move within Lagos: you do not re-register. The FAQ says you inform the nearest registration station with evidence of the new address and your record is updated.",
+            "Hospital admission: if you are on admission when your turn comes, the FAQ exempts you until discharge and says the team will not visit the hospital to register people.",
+            "Lost or stolen card: report it promptly to the nearest registration office or the LASRRA headquarters helpdesk. The first card is free; the FAQ says subsequent cards may be replaced at a charge, and no amount is published — ask the desk first."
+          ]
+        }
+      ],
+      "extraFaqs": [
+        {
+          "q": "Is LASRRA registration really free?",
+          "a": "Yes. LASRRA's registration FAQ says the residency card is produced and issued free of charge to all residents and that there is no cost to register. That is why there is no fee table on this page — there is no fee to publish. The agency has repeatedly warned residents about agents collecting money for registration, so if anybody asks you for a capture charge or a payment to speed up your card, note who it was and report it to the LASRRA desk or through Lagos State Citizens Gate."
+        },
+        {
+          "q": "Do I need a NIN to register?",
+          "a": "The published document list asks for proof of your Lagos address plus one photo ID, and the National ID card is one of the accepted IDs. A NIN slip is not named on that list, so if the NIN slip is the only identity paper you hold, ask the centre before you travel. Where a NIN is definitely required is downstream: Lagos State Citizens Gate lists LASRRA ID, NIN and a Citizen ID as the requirements for state financial assistance. Never pay an agent to 'link' your NIN to anything."
+        },
+        {
+          "q": "Can non-indigenes and foreign nationals register?",
+          "a": "Yes. The FAQ says registration is open to everyone irrespective of age, race, ethnic origin, religious affiliation or nationality, so long as the person currently resides in Lagos State. Domestic staff living in your household are covered whatever their nationality: a notarised rent receipt or utility bill of the employer serves as the address evidence, and the employer can register them at the same time as their own registration. What the card does not do is confer indigene status."
+        },
+        {
+          "q": "What is the difference between the temporary slip and the LAG-ID card?",
+          "a": "The temporary registration card is issued at the centre and is valid for 12 months. The permanent LAG-ID is the chip-based card, printed after LASRRA's checks and collected from the LG or LCDA where you registered once the SMS arrives. It is the permanent card and the residency number behind it that are used for things like ILERA EKO authentication at the hospital."
+        },
+        {
+          "q": "How long before my card is ready?",
+          "a": "LASRRA's FAQ gives 12 months as the outer limit for printing the permanent card, with delivery to the LG or LCDA of your registered address, and the temporary card covers you for that period. Records with errors go on hold and the agency says that can take over five weeks to resolve. Keep the temporary card safe — it is your evidence of registration while you wait."
+        },
+        {
+          "q": "I lost my card. What do I do?",
+          "a": "Report the loss to the nearest registration office or the LASRRA headquarters helpdesk; the FAQ says lost and stolen cards must be reported promptly, while the first residency card is free and subsequent cards may be replaced at a charge. No amount is published, so ask the desk for the current charge and pay it at the office — not to somebody who meets you at the gate."
+        },
+        {
+          "q": "Do I need a LASRRA number for my child's school admission?",
+          "a": "From the 2026/2027 session, yes. The Office of Education Quality Assurance announced on 3 September 2026 that schools would obtain and record the valid LASRRA registration number of every learner as part of admission and enrolment from 14 September 2026, in both public and private schools. Children aged 15 and under are registered without biometrics, using the child's birth certificate, two passport photographs of the child, and the registration card of an adult who has already registered."
+        },
+        {
+          "q": "Can somebody else register a child or a house help?",
+          "a": "Yes, with the right papers. An adult can register a child aged 15 or under, though the adult must have completed their own registration first, and the FAQ gives the minimum age of that adult as 18 in one answer and over 21 in another, so confirm at the centre if it matters. An employer can help domestic staff who live in the household by providing a notarised copy of the household utility bill or rent receipt, or by bringing them along during the employer's own registration."
+        },
+        {
+          "q": "What if my card carries a spelling mistake?",
+          "a": "Point it out while you are at the centre and can still see the data entry on screen. If you only notice after the permanent card is printed, take it back to the registration officer at the point of collection; the card is collected for amendment and the agency says replacement cards are ready in 10 to 15 working days."
+        },
+        {
+          "q": "Do I have to validate after registering?",
+          "a": "The portal runs a validation exercise, and its own wording is that validation confirms the information that will be printed on your card is accurate and reflects your current status. If you have changed your name or moved house, that is the moment to fix it. The agency is reported to expect revalidation about every five years, but we could not confirm that wording on a live agency page on 12 October 2026, so confirm the timing with your LG or LCDA office."
+        }
+      ],
+      "extraTakeaways": [
+        "Registration is free: ₦0 for the registration and ₦0 for the first card. Anybody charging you for a LASRRA form, a 'capture fee' or a 'fast card' is charging you for nothing.",
+        "Two documents at the centre: proof of the Lagos address where you live (rent receipt, tenancy agreement, electricity, water or refuse bill) plus one photo ID from LASRRA's list, originals and photocopies.",
+        "Temporary registration card: printed at the centre, valid 12 months. Permanent LAG-ID card: printed within 12 months, collected from your LG or LCDA after the SMS.",
+        "The school angle is now real: from 14 September 2026, Lagos schools record learners' LASRRA numbers for the 2026/2027 session.",
+        "Register in the LG or LCDA where you live, not where you work — that is where the card is sent to."
+      ],
+      "extraLinkPaths": [
+        "/howto",
+        "/status",
+        "/prices/cost-of-living",
+        "/learn/budget-80k"
+      ]
     }
   ]
 }

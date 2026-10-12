@@ -58,6 +58,8 @@ const WATCH = [
   { id: "nimc", label: "NIMC (NIN)", url: "https://nimc.gov.ng/" },
   { id: "immigration", label: "Nigeria Immigration Service passport information", url: "https://immigration.gov.ng/passports/" },
   { id: "cbn", label: "Central Bank of Nigeria", url: "https://www.cbn.gov.ng/" },
+  { id: "lasrra-requirements", label: "LASRRA registration portal \u2014 documents required at the centre", url: "https://registration.lagosresidents.gov.ng/help/requirements" },
+  { id: "lasrra-faq", label: "LASRRA registration portal \u2014 registration FAQ", url: "https://registration.lagosresidents.gov.ng/help/faq" },
 ];
 
 type Health = Record<string, { ok: boolean; checkedAt: string; asOf?: string | null; error?: string; lastSuccessfulAt?: string | null }>;
