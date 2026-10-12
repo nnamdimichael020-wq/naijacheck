@@ -10,22 +10,46 @@ import watchLive from "@/data/live/watch.json";
 import healthLive from "@/data/live/health.json";
 import historyFile from "@/data/history.json";
 import {
+  CHART_MIN_POINTS,
   MAX_HISTORY_POINTS_PER_DATASET,
+  availableHistoryWindows,
   computeDatasetDelta,
+  describeHistorySeries,
+  filterHistoryWindow,
   getDatasetHistory,
+  historyMarkerStride,
+  historyPointTimeMs,
+  historyPolylinePoints,
+  historySeriesDomain,
+  projectHistorySeries,
+  summarizeHistorySeries,
   type HistoryDatasetId,
   type HistoryDelta,
   type HistoryPoint,
+  type HistorySeriesStats,
   type HistoryStore,
+  type HistoryWindow,
 } from "@/lib/history";
 export {
+  CHART_MIN_POINTS,
   MAX_HISTORY_POINTS_PER_DATASET,
+  availableHistoryWindows,
   computeDatasetDelta,
+  describeHistorySeries,
+  filterHistoryWindow,
   getDatasetHistory,
+  historyMarkerStride,
+  historyPointTimeMs,
+  historyPolylinePoints,
+  historySeriesDomain,
+  projectHistorySeries,
+  summarizeHistorySeries,
   type HistoryDatasetId,
   type HistoryDelta,
   type HistoryPoint,
+  type HistorySeriesStats,
   type HistoryStore,
+  type HistoryWindow,
 };
 export { STATES, matchState } from "@/lib/states";
 

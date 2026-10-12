@@ -296,15 +296,32 @@ export function sumPageviews(json: unknown): { total: number; days: number } | n
 /* ---------- Official page change detection ---------- */
 
 export {
+  CHART_MIN_POINTS,
+  HISTORY_WINDOW_DAYS,
+  HISTORY_WINDOWS,
   MAX_HISTORY_POINTS_PER_DATASET,
   appendBoundedHistory,
+  availableHistoryWindows,
   computeDatasetDelta,
+  describeHistorySeries,
+  filterHistoryWindow,
   getDatasetHistory,
+  historyMarkerStride,
+  historyPointTimeMs,
+  historyPolylinePoints,
+  historySeriesDomain,
   isValidHistoryPoint,
+  projectHistorySeries,
+  summarizeHistorySeries,
+  type HistoryChartGeometry,
   type HistoryDatasetId,
   type HistoryDelta,
   type HistoryPoint,
+  type HistorySeriesDomain,
+  type HistorySeriesStats,
   type HistoryStore,
+  type HistoryWindow,
+  type ProjectedHistoryPoint,
 } from "../../lib/history";
 
 /** Stable 32-bit FNV-1a hash of the visible text, so layout noise is ignored. */

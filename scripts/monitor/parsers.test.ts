@@ -15,14 +15,26 @@ import {
   sumPageviews,
   watToIso,
   pageFingerprint,
+  CHART_MIN_POINTS,
+  HISTORY_WINDOWS,
   MAX_HISTORY_POINTS_PER_DATASET,
   appendBoundedHistory,
+  availableHistoryWindows,
   computeDatasetDelta,
+  describeHistorySeries,
+  filterHistoryWindow,
   getDatasetHistory,
+  historyMarkerStride,
+  historyPointTimeMs,
+  historyPolylinePoints,
+  historySeriesDomain,
+  projectHistorySeries,
+  summarizeHistorySeries,
   type HistoryPoint,
   type HistoryStore,
 } from "./parsers";
 import { scanArticleRecord, scanOfficialWatchState } from "../../lib/content-audit";
+import { formatWatDay, formatWatDayShort, formatWatDayTime, formatWatFull } from "../../lib/utils";
 
 let passed = 0;
 const test = (name: string, fn: () => void) => {
@@ -247,6 +259,265 @@ test("Bounded history appends only real observations, deduplicates, and caps per
   assert.equal(fuelDelta!.direction, "down");
   assert.equal(fuelDelta!.previous.value, 1342.5);
   assert.equal(fuelDelta!.latest.value, 1341);
+});
+
+/* ---------- Phase B: charts may only draw real stored observations ---------- */
+
+const DAY = 86_400_000;
+const CHART_NOW = Date.parse("2026-10-11T21:00:00.000Z");
+
+/** Builds real-shaped points at a fixed offset before CHART_NOW. No point is ever synthesised by the chart code. */
+function pointAt(dataset: string, daysAgo: number, value: number, hourUtc = 12): HistoryPoint {
+  const ms = CHART_NOW - daysAgo * DAY;
+  const iso = new Date(ms).toISOString().slice(0, 11) + `${String(hourUtc).padStart(2, "0")}:00:00.000Z`;
+  return {
+    dataset,
+    observedAt: iso,
+    sourceTime: iso,
+    value,
+    unit: "NGN per USD",
+    geography: "Nigeria indicative quote",
+    sourceUrl: "https://abokiforex.app/",
+  };
+}
+
+test("Chart windows keep only stored real points and never add, reorder or invent readings", () => {
+  const unsorted = [pointAt("parallel-usd-ngn-buy", 1, 1372), pointAt("parallel-usd-ngn-buy", 40, 1360), pointAt("parallel-usd-ngn-buy", 10, 1365)];
+
+  // "all" returns every stored point, oldest first, with no additions
+  const all = filterHistoryWindow(unsorted, "all", CHART_NOW);
+  assert.equal(all.length, 3);
+  assert.deepEqual(all.map((p) => p.value), [1360, 1365, 1372]);
+  assert.ok(historyPointTimeMs(all[0]) < historyPointTimeMs(all[1]));
+
+  // Rolling windows are strict subsets of the stored points
+  const last7 = filterHistoryWindow(unsorted, "7d", CHART_NOW);
+  const last30 = filterHistoryWindow(unsorted, "30d", CHART_NOW);
+  assert.deepEqual(last7.map((p) => p.value), [1372]);
+  assert.deepEqual(last30.map((p) => p.value), [1365, 1372]);
+  assert.ok(last7.every((p) => all.includes(p)));
+  assert.ok(last30.every((p) => all.includes(p)));
+
+  // Invalid readings are dropped by the same helpers the store uses, so a chart can never plot one
+  const withJunk = [...all, { ...all[0], value: Number.NaN }, { ...all[0], sourceTime: "not-a-date" }] as HistoryPoint[];
+  assert.equal(filterHistoryWindow(withJunk, "all", CHART_NOW).length, 3);
+});
+
+test("7d/30d filters are offered only when at least two real points exist inside them", () => {
+  assert.equal(CHART_MIN_POINTS, 2);
+  assert.deepEqual(HISTORY_WINDOWS, ["7d", "30d", "all"]);
+
+  // Single stored observation: no window can support a chart
+  assert.deepEqual(availableHistoryWindows([pointAt("cbn-usd-ngn", 0, 1331.186)], CHART_NOW), []);
+
+  // Two old readings: only "all" has enough points, so 7d/30d must not be offered
+  assert.deepEqual(
+    availableHistoryWindows([pointAt("parallel-usd-ngn-buy", 40, 1360), pointAt("parallel-usd-ngn-buy", 39, 1361)], CHART_NOW),
+    ["all"],
+  );
+
+  // Three readings spread over 20 days: 7d holds only one point, so it stays hidden
+  assert.deepEqual(
+    availableHistoryWindows([pointAt("parallel-usd-ngn-buy", 20, 1360), pointAt("parallel-usd-ngn-buy", 10, 1365), pointAt("parallel-usd-ngn-buy", 1, 1372)], CHART_NOW),
+    ["30d", "all"],
+  );
+
+  // Recent readings: every window is honest
+  assert.deepEqual(
+    availableHistoryWindows([pointAt("parallel-usd-ngn-buy", 2, 1370), pointAt("parallel-usd-ngn-buy", 1, 1372)], CHART_NOW),
+    ["7d", "30d", "all"],
+  );
+  assert.equal(availableHistoryWindows([], CHART_NOW).length, 0);
+});
+
+test("Series summaries refuse to describe fewer than two real points and report the real range", () => {
+  assert.equal(summarizeHistorySeries([]), null);
+  assert.equal(summarizeHistorySeries([pointAt("fuel-depot-petrol", 1, 1342.5)]), null);
+
+  const stats = summarizeHistorySeries([
+    pointAt("fuel-depot-petrol", 3, 1340),
+    pointAt("fuel-depot-petrol", 2, 1342.5),
+    pointAt("fuel-depot-petrol", 1, 1341),
+  ]);
+  assert.ok(stats);
+  assert.equal(stats!.count, 3);
+  assert.equal(stats!.maxPoints, MAX_HISTORY_POINTS_PER_DATASET);
+  assert.equal(stats!.min, 1340);
+  assert.equal(stats!.max, 1342.5);
+  assert.equal(stats!.range, 2.5);
+  assert.equal(stats!.change, 1);
+  assert.equal(stats!.direction, "up");
+  assert.equal(stats!.flat, false);
+  assert.equal(stats!.first.value, 1340);
+  assert.equal(stats!.last.value, 1341);
+  assert.equal(stats!.spanMs, 2 * DAY);
+
+  // Identical readings are reported as flat rather than being nudged into a fake trend
+  const flat = summarizeHistorySeries([pointAt("parallel-usd-ngn-buy", 2, 1370), pointAt("parallel-usd-ngn-buy", 1, 1370)]);
+  assert.ok(flat);
+  assert.equal(flat!.flat, true);
+  assert.equal(flat!.direction, "flat");
+  assert.equal(flat!.range, 0);
+  assert.equal(flat!.pctChange, 0);
+});
+
+test("Multi-series domain shares one axis across same-unit datasets and needs two real points", () => {
+  const parallel = [pointAt("parallel-usd-ngn-buy", 2, 1370), pointAt("parallel-usd-ngn-buy", 1, 1372)];
+  const cbn = [pointAt("cbn-usd-ngn", 2, 1331), pointAt("cbn-usd-ngn", 1, 1332.5)];
+  const domain = historySeriesDomain([parallel, cbn]);
+  assert.ok(domain);
+  assert.equal(domain!.minValue, 1331);
+  assert.equal(domain!.maxValue, 1372);
+  assert.equal(domain!.flat, false);
+  assert.equal(domain!.singleInstant, false);
+
+  // One real point across every dataset: no drawable domain, so no chart
+  assert.equal(historySeriesDomain([[pointAt("cbn-usd-ngn", 0, 1331)], []]), null);
+  assert.equal(historySeriesDomain([]), null);
+
+  const flatDomain = historySeriesDomain([[pointAt("fuel-depot-diesel", 2, 1805), pointAt("fuel-depot-diesel", 1, 1805)]]);
+  assert.equal(flatDomain!.flat, true);
+});
+
+test("Projection maps stored readings into the plot box one-to-one, with real time gaps preserved", () => {
+  const geometry = { width: 300, height: 140, paddingTop: 7, paddingBottom: 7, paddingLeft: 3, paddingRight: 3 };
+  const points = [pointAt("parallel-usd-ngn-buy", 3, 1360), pointAt("parallel-usd-ngn-buy", 2, 1380), pointAt("parallel-usd-ngn-buy", 1, 1370)];
+  const domain = historySeriesDomain([points])!;
+  const projected = projectHistorySeries(points, domain, geometry);
+
+  // Exactly one plotted coordinate per stored observation: nothing interpolated between readings
+  assert.equal(projected.length, points.length);
+  assert.equal(historyPolylinePoints(projected).split(" ").length, points.length);
+
+  // Horizontal extent fills the plot box; higher values sit higher (smaller y)
+  assert.equal(projected[0].x, 3);
+  assert.equal(projected.at(-1)!.x, 297);
+  assert.equal(projected[1].y, 7); // 1380 is the maximum
+  assert.equal(projected[0].y, 133); // 1360 is the minimum
+  assert.ok(projected[2].y > projected[1].y && projected[2].y < projected[0].y);
+
+  // Equal daily spacing because the source times are evenly spaced
+  const gapA = projected[1].x - projected[0].x;
+  const gapB = projected[2].x - projected[1].x;
+  assert.equal(Math.round(gapA), Math.round(gapB));
+
+  // A flat series is drawn on the centre line instead of being scaled into a fake slope
+  const flatPoints = [pointAt("fuel-depot-lpg", 2, 1160), pointAt("fuel-depot-lpg", 1, 1160)];
+  const flatProjected = projectHistorySeries(flatPoints, historySeriesDomain([flatPoints])!, geometry);
+  assert.equal(flatProjected[0].y, 70);
+  assert.equal(flatProjected[1].y, 70);
+
+  // Readings that share one source time are spaced by order so they stay visible
+  const sameInstant = [
+    { ...pointAt("fuel-depot-petrol", 1, 1342.5), sourceTime: "2026-10-10T12:00:00.000Z" },
+    { ...pointAt("fuel-depot-petrol", 1, 1341), sourceTime: "2026-10-10T12:00:00.000Z" },
+  ];
+  const instantDomain = historySeriesDomain([sameInstant])!;
+  assert.equal(instantDomain.singleInstant, true);
+  const instantProjected = projectHistorySeries(sameInstant, instantDomain, geometry);
+  assert.equal(instantProjected[0].x, 3);
+  assert.equal(instantProjected[1].x, 297);
+  assert.notEqual(instantProjected[0].y, instantProjected[1].y);
+
+  // Empty and single-point input never fabricates a second coordinate
+  assert.deepEqual(projectHistorySeries([], domain, geometry), []);
+  assert.equal(projectHistorySeries([points[0]], domain, geometry).length, 1);
+});
+
+test("Marker stride keeps dense series readable and always marks both ends", () => {
+  assert.equal(historyMarkerStride(9, 12), 1);
+  assert.equal(historyMarkerStride(12, 12), 1);
+  assert.equal(historyMarkerStride(56, 12), 5);
+  const indices = Array.from({ length: 56 }, (_, i) => i).filter((i) => i % historyMarkerStride(56, 12) === 0 || i === 55);
+  assert.ok(indices.includes(0));
+  assert.ok(indices.includes(55));
+  assert.ok(indices.length <= 13);
+});
+
+test("Chart accessible names state the real count, range and that nothing is estimated", () => {
+  const points = [pointAt("parallel-usd-ngn-buy", 2, 1370), pointAt("parallel-usd-ngn-buy", 1, 1372)];
+  const stats = summarizeHistorySeries(points)!;
+  const label = describeHistorySeries({
+    label: "Parallel USD buy",
+    stats,
+    formatValue: (v) => `NGN${v}`,
+    formatDate: formatWatDay,
+    windowLabel: "all stored readings",
+  });
+  assert.ok(label.includes("Parallel USD buy"));
+  assert.ok(label.includes("2 real readings"));
+  assert.ok(label.includes("NGN1370"));
+  assert.ok(label.includes("NGN1372"));
+  assert.ok(label.includes("up from"));
+  assert.ok(label.includes("No value is estimated between readings."));
+
+  const flatLabel = describeHistorySeries({
+    label: "Depot diesel median",
+    stats: summarizeHistorySeries([pointAt("fuel-depot-diesel", 2, 1805), pointAt("fuel-depot-diesel", 1, 1805)])!,
+    formatValue: (v) => `NGN${v}`,
+    formatDate: formatWatDay,
+  });
+  assert.ok(flatLabel.includes("2 real readings"));
+  assert.ok(!flatLabel.includes("1 real reading,"));
+  assert.ok(flatLabel.includes("unchanged at NGN1805"));
+
+  // A single stored point cannot be described as a series, so the empty state is used instead
+  assert.equal(summarizeHistorySeries([pointAt("cbn-usd-ngn", 0, 1331.186)]), null);
+});
+
+test("Chart history helpers agree with the bounded store the monitor writes", () => {
+  let store: HistoryStore = { collectionStartedAt: null, points: [] };
+  // The monitor's real append path stays the only writer; charts read what it accepted
+  for (let i = 0; i < 5; i++) {
+    store = appendBoundedHistory(store, {
+      dataset: "fuel-depot-petrol",
+      observedAt: new Date(CHART_NOW - (4 - i) * DAY).toISOString(),
+      sourceTime: new Date(CHART_NOW - (4 - i) * DAY).toISOString(),
+      value: 1342.5 - i * 0.5,
+      unit: "NGN per litre",
+      geography: "Nigeria depot median",
+      sourceUrl: "https://awajis.com/fuel-price-in-nigeria-today/",
+    });
+  }
+  // A duplicate reading (same sourceTime and value) is ignored, so the chart cannot show a fake extra point
+  store = appendBoundedHistory(store, {
+    dataset: "fuel-depot-petrol",
+    observedAt: new Date(CHART_NOW + DAY).toISOString(),
+    sourceTime: new Date(CHART_NOW).toISOString(),
+    value: 1340.5,
+    unit: "NGN per litre",
+    geography: "Nigeria depot median",
+    sourceUrl: "https://awajis.com/fuel-price-in-nigeria-today/",
+  });
+
+  const stored = getDatasetHistory(store, "fuel-depot-petrol");
+  assert.equal(stored.length, 5);
+  assert.equal(filterHistoryWindow(stored, "all", CHART_NOW + DAY).length, 5);
+  const stats = summarizeHistorySeries(stored)!;
+  assert.equal(stats.count, 5);
+  assert.equal(stats.min, 1340.5);
+  assert.equal(stats.max, 1342.5);
+  assert.equal(stats.direction, "down");
+  // The chart delta matches the badge delta because both read the same bounded store
+  const delta = computeDatasetDelta(store, "fuel-depot-petrol")!;
+  assert.equal(delta.delta, -0.5);
+  assert.equal(delta.latest.value, stats.last.value);
+  assert.equal(delta.previous.value, stored[stored.length - 2].value);
+});
+
+test("WAT chart labels are deterministic between the Node build and the browser", () => {
+  const ms = Date.parse("2026-10-11T19:06:00.000Z");
+  assert.equal(formatWatFull(ms), "11 Oct 2026, 8:06 pm WAT");
+  assert.equal(formatWatDay(ms), "11 Oct 2026");
+  assert.equal(formatWatDayShort(ms), "11 Oct");
+  assert.equal(formatWatDayTime(ms), "11 Oct, 8:06 pm");
+
+  // Midnight rollover and noon edge cases (Nigeria is UTC+1 with no daylight saving)
+  assert.equal(formatWatFull(Date.parse("2026-10-11T23:30:00.000Z")), "12 Oct 2026, 12:30 am WAT");
+  assert.equal(formatWatFull(Date.parse("2026-10-11T11:00:00.000Z")), "11 Oct 2026, 12:00 pm WAT");
+  assert.equal(formatWatFull(Date.parse("2026-12-31T23:59:00.000Z")), "1 Jan 2027, 12:59 am WAT");
+  assert.equal(formatWatFull(Number.NaN), "timestamp unavailable");
+  assert.equal(formatWatDay(Number.NaN), "date unavailable");
 });
 
 test("Content audit scanner flags outdated years, stale verification dates, unnegated live claims, and watch changes", () => {

@@ -18,7 +18,9 @@ import { PushSettings } from "@/components/push-notifications";
 import { DATASET_REGISTRY, stateLabel } from "@/lib/source-registry";
 import { pageMetadata, absUrl } from "@/lib/seo";
 import { ShareControls } from "@/components/share-controls";
-import { HistoryChart } from "@/components/live/history-chart";
+import { FxHistorySection, FuelHistorySection, LpgHistorySection } from "@/components/live/history-section";
+import { MiniSparkline } from "@/components/live/sparkline";
+import { formatWatFull } from "@/lib/utils";
 
 export const metadata: Metadata = pageMetadata({
   path: "/status",
@@ -83,26 +85,44 @@ export default function StatusPage() {
         <h2 id="history" className="text-xl font-bold">Price history</h2>
         <p className="text-sm text-muted-foreground">
           Each monitored dataset retains up to its last {MAX_HISTORY_POINTS_PER_DATASET} verified observations. Deltas compare the latest reading against the immediately preceding real observation.
+          Charts below are drawn only from those stored readings: a dataset with fewer than two shows an empty state instead of a fabricated line.
         </p>
-        <div className="grid gap-3 sm:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
               dataset: "parallel-usd-ngn-buy" as const,
               label: "Parallel USD buy",
               unitSuffix: "",
               fractionDigits: 0,
-            },
-            {
-              dataset: "fuel-depot-petrol" as const,
-              label: "Depot petrol median",
-              unitSuffix: "/L",
-              fractionDigits: undefined,
+              tone: "primary" as const,
             },
             {
               dataset: "cbn-usd-ngn" as const,
               label: "CBN NFEM USD",
               unitSuffix: "",
               fractionDigits: 2,
+              tone: "sky" as const,
+            },
+            {
+              dataset: "fuel-depot-petrol" as const,
+              label: "Depot petrol median",
+              unitSuffix: "/L",
+              fractionDigits: undefined,
+              tone: "primary" as const,
+            },
+            {
+              dataset: "fuel-depot-diesel" as const,
+              label: "Depot diesel median",
+              unitSuffix: "/L",
+              fractionDigits: undefined,
+              tone: "amber" as const,
+            },
+            {
+              dataset: "fuel-depot-lpg" as const,
+              label: "Depot LPG median",
+              unitSuffix: "/kg",
+              fractionDigits: undefined,
+              tone: "violet" as const,
             },
           ].map((item) => {
             const pts = datasetHistoryPoints(item.dataset);
@@ -128,12 +148,35 @@ export default function StatusPage() {
                       showNoPrior={true}
                     />
                   </div>
+                  <MiniSparkline
+                    dataset={item.dataset}
+                    label={item.label}
+                    tone={item.tone}
+                    unitSuffix={item.unitSuffix || undefined}
+                    fractionDigits={item.fractionDigits}
+                  />
+                  {latest ? (
+                    <p className="text-[11px] text-muted-foreground">
+                      Latest reading {formatWatFull(Date.parse(latest.sourceTime))} · recorded{" "}
+                      {latest.observedAt.slice(0, 16).replace("T", " ")} UTC
+                    </p>
+                  ) : (
+                    <p className="text-[11px] text-muted-foreground">No successful reading recorded for this dataset yet.</p>
+                  )}
                 </CardContent>
               </Card>
             );
           })}
         </div>
-        <HistoryChart />
+        <div className="grid gap-3 lg:grid-cols-2">
+          <FxHistorySection />
+          <FuelHistorySection />
+        </div>
+        <LpgHistorySection />
+        <p className="text-xs text-muted-foreground">
+          Series are distinguished by dash pattern, marker shape and the text legend, not by colour alone. Open “Show the real
+          readings plotted” under a chart to read every stored observation, its source time and when the monitor recorded it.
+        </p>
       </section>
 
       <PushSettings />
