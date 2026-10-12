@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-12T00:31:50.187Z",
+  "checkedAt": "2026-10-12T10:46:34.594Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -24,9 +24,21 @@
           "published": "2026-10-09T04:26:07.000Z"
         },
         {
+          "title": "‘Discounted’ fuel price: Nigerians decry NNPCL’s sale of fuel at N1,405",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYmxROWd1alZVOVJtR2pYVklCb1NEVmdyNW0xcUYwcXlPeGZuUGRrNmZQOTRRNGk3QUJXSjRlTHJWdlg1SjdJQTIxMkUtVklvZkRWRk14LWZOMzJrSGUxcGxSeEZINkI5MVFoNjU3aWEyQ2hHc0UwQlAtM1NZOFJTQ0xjdmxKSjhkNmpTc1lvbGdpOERkSjZmVmJzWQ?oc=5",
+          "source": "Tribune Online",
+          "published": "2026-10-12T07:40:00.000Z"
+        },
+        {
+          "title": "Petrol discount: Obi, Falana fault FG’s approach as motorists lament access hurdles",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeVRLRjlhblA0U29MZXcwcVBIc1hRbkpxNnlGZ2pRYVlCQXdCTXBUTm1kOXBGdC02Z2piUG1QcHpJQk1TTFp2X2xWOElqWnFsMlMweHhHSF90U1p4N0FJdEZLZzN6TjY2aFl6NDFFVzZieHpUa1RPbUxxTXo0WnZZdG1SbmYtUHl6eUppOUo3YXRQcThiekt5MTNyaE1tejFIZ0J0aU5Pek9Cdw?oc=5",
+          "source": "The Guardian Nigeria News",
+          "published": "2026-10-12T05:00:00.000Z"
+        },
+        {
           "title": "PRESS RELEASE: NNPC Discount Offers Relief, Does Not Restore Subsidy",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQckktV25ETThzNkRwQjVXOXlub0Y4ZHg3dTRYV0VjN1pxT3daMGJSZHdJZk9VLVV1OFhfQm9aZTVnTVA5aXl3THJzWEdqdVJ0Z2hyM3RSMUg3RVBRNUdxbGp2WDhMZDdJYjNjYmNackZucURfdF9ZNnNkZ2N4dF8zajQ5QUJQVEowYmZ5TG14aDl6dGRjRm1HV005QmRqQQ?oc=5",
-          "source": "NNPC Ltd",
+          "source": "NNPC LTD",
           "published": "2026-10-09T09:36:50.000Z"
         },
         {
@@ -42,22 +54,10 @@
           "published": "2026-10-11T14:09:57.000Z"
         },
         {
-          "title": "Nigeria proposes petrol price cap to curb fuel cost volatility",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOE45NlZtUnFaOXY4Yy1jZi12VTVtYXJzdHIzZUMtYW82N0JIbjhjTW5oWHdtR0lUSXFZaTUtU3doRDRqY0pvb2xiU1VDa3Z5T2Q4OVNpVkxXdnE5cVpuM0J6QzZHX09FNElGTTltdEpwSkpVOTVLTV81b1dKeWxkM0FRN0tIQk40TkYyQ2xDX2RCV0RpenFFc3ZITDczaDNrM25fWVg4aktZOXdLaXhGbA?oc=5",
-          "source": "Reuters",
-          "published": "2026-10-08T16:43:53.000Z"
-        },
-        {
-          "title": "Falana urges FG to end petrol imports, adopt domestic production pricing",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTElvWG55R2s4OUdyOGZfVV9tWUpwT2NGaUFOUllHVWRCQWgxbkJmaG1YWnNxTm5rbXRXVHBzdkZkaC1lckF2UW5Xb0JBRlpKR19jbE9nNHBfOVVSXzdJMzZvcFUxM0tGdFU0aUQycVlUb3RfT083dV83MXM1UmxVMVQ1OXJ2QjVGU2l3MEJLVzZkR0VwNnpoaXBNYXB2QQ?oc=5",
-          "source": "The Guardian Nigeria News",
-          "published": "2026-10-11T19:13:53.000Z"
-        },
-        {
-          "title": "NNPC extends N66 petrol discount to October 31, debunks subsidy return",
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd1VKM01rYU9WNEtjb2M5T181UnNOUmVWUW5xY1c4d2QySE5fQVAzMlBlcEVQSDAzVGFqNkZXWGxfUDRaMGVBdDV1MExUcXNXd2ZvSWcwOEhhVHFQRHF6aW0yTy1panJWT0gtRnRTekNxM3N6VHlIUVNuTzVpaGdORDdRTFBBSUszZ3NpSUo4NG5kRWNL?oc=5",
-          "source": "Punch Newspapers",
-          "published": "2026-10-10T05:25:56.000Z"
+          "title": "LCCI Calls for Six-month Plan to Reduce Petrol Prices, Ease Costs",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSmtwRlMteEhaXzhYQmxweVVxaUdveXRDaHd3aFZpLUVOQ3RzTW42SmFRSGlHd2VnZ2MtREtPdHJiZ2Fjekw1SjFjc0taS2tORlpySGxFNURIMW5FWXlSdWF5dU95LS12cWlkR3FQSFA4aXQtT3ZVTHBITFo3Nzl0eWotUkhvZ0VEdlNIZG9qS0JhM2NmN2ZIU1NNbGItY0VCNW1pbm8zZw?oc=5",
+          "source": "THISDAYLIVE",
+          "published": "2026-10-12T06:52:24.000Z"
         }
       ]
     },
@@ -67,10 +67,16 @@
       "query": "naira dollar exchange rate Nigeria",
       "items": [
         {
-          "title": "Dollar to Naira exchange rate today, October 9, 2026",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWlFGeS0wcUJqc2xiSGc4R2hUM2JFTzFEaVdPU2VVazZHMGNjMFVaUldZM3ZtWHNMNFhMSjFyQVRMTVZPQUhOZWJFUmVlWndzM0hFUUdMM3l4LXJjQTNQVlNaVHNGQU5ldkpnNC0zRVo1RnMtSi12RVdSN24wRHFSRV9EU09ydlEya19JSkdreDnSAZYBQVVfeXFMTWxGRFZJQ2VlUk5rOVdJNHB5T2dBVWJ3UlZBalNQcmN6U1VVdHUxT3J0ZUhPSUExOGx5cUZLNUx2T0I4UUNmSTFHampiNE5MaUxoLWE1TU8ta3hDenlsS00ycDFVSThjbmxIWmswRURURVpRSmhsdVVhTWFoS0c1aUdYdm5tVTU1QnhIMW5Wb2lrVGpsdU9R?oc=5",
+          "title": "Dollar to Naira exchange rate today, October 12, 2026",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOVlzbmVmckx6M1I2OTJiTl8tTjN6SkxxN0lqaDFDQmRJZGtndHpnUVBRUFA4X1QyanIwTzZCS1otclhXVTB6TldhY3JiYlp6YnFFZFNwSUNhSVlsX3d4T2lpcTFveXJTY1dRSHhhS1AwVHI3MFBNZ3FMeTU2N0huU2c5NjYzNTZhbjRDS2swSlhiUdIBlwFBVV95cUxObkRRRGlhQzRaTW5tWFpsbTBFMFBnY08xb1lqYnQ4MGRvVnR0dThvT29aYjB6engzeTBHaU1LeGNaVmpVeWNCdFlqanFaelR0TGgzaGNSWnRqelhUakoxbFg5aDI4aUtZZnYySHdsNEZ0bzVwVU4tRXo3eGRrX3ZHX2Z1OTZfcF8zTnJ1cnlrcEtkMHhMTG9J?oc=5",
           "source": "Vanguard News",
-          "published": "2026-10-09T05:59:06.000Z"
+          "published": "2026-10-12T05:54:23.000Z"
+        },
+        {
+          "title": "Dollar to Naira: Exchange Rate Today, October 12, 2026",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ISjRuOHdwM1ZOUEtRX2YzcThfSnF2RWRoRUVrS05PZFRrQUxCb1BMZFhoXzRGY0JrMWF4RDlmWFVGRmVBUnhxa0NDTFNRVUQ1bFBpRnFXdDVCcWZmQVhGd3NDdVZsOFZJVFBpLVBTN2pWQmhGTGl5REozMmhaWjg?oc=5",
+          "source": "Techeconomy",
+          "published": "2026-10-12T06:24:09.000Z"
         },
         {
           "title": "Nigerian Naira Softens Against US Dollar, Euro, British Pound",
@@ -79,22 +85,16 @@
           "published": "2026-10-11T19:54:05.000Z"
         },
         {
-          "title": "Dollar to Naira Exchange Rate Today, October 9, 2026",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5GVUlxN3FzODdwaVVDQ1NRbVJwSDFxeHNvVkdiX1U2aUdoYlNtd19Fc2JxQy1rS3AyQ3J4YzRUWk5aVmhmNlBRdWRsLV9PSmp3ZVZlejNtN1VSUE1VOWpDZXNPS0o2eVdyRmplb0RNT0RTYUp1Uk5uZEVYNlJZdw?oc=5",
-          "source": "Techeconomy",
-          "published": "2026-10-09T07:25:59.000Z"
+          "title": "Return Of Subsidy Could Lead To ₦2,000/Litre Petrol, ₦3,000/$ Exchange Rate — FG",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNay1hUHdNMms0ZmRwWWtOSklEblRvUlVrT2lFOU5xaUJMR0Y2WHpBM1VhMm53RnhISU9sSlNKVWg1a0lMQlZlTWVYcmRWbU4tVEgtcU5ET3N1all0TjlwOEdoLTVwNjdGYWhCcFQydHhrbm9sc0ppVm9yMmdPbEJWMjIwU0xoblFKUTA3UC1zNEVWUlc1bkNjSG5tYm5GLTF5Z19LWlRxTmJqcTgzOHMwRl9Mc1VLWElKZk1rcVdWTzR4UXdhYjNF?oc=5",
+          "source": "Channels Television",
+          "published": "2026-10-08T23:15:21.000Z"
         },
         {
           "title": "Dollar to Naira exchange rate today, October 5, 2026: Naira extends depreciation against USD",
           "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPdGJ0bUwtSi1iZElmdXRCd3p1RTYtOS1sTi1zUmpsaEVqUUhuY3gweVBwTElSMUlIZnFNOXZYaWMtTlJvdTh1SVRsS0tCNWlSRTA4SjJIeTgtRmhtWWJjbHNpQ3FTdmJSX1lkcklBelJrV21IZzRXNXN1eXQwU0FFVUR6dk5xQzFjbjhrcnllYkpIM09hNDR1MklGZTdsemU1Smp6MkNwN243dXNDc2ltNTRGOVd0R0tXNGhkNUcwUQ?oc=5",
           "source": "Daily Post Nigeria",
           "published": "2026-10-06T02:15:57.000Z"
-        },
-        {
-          "title": "Return Of Subsidy Could Lead To ₦2,000/Litre Petrol, ₦3,000/$ Exchange Rate — FG",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNay1hUHdNMms0ZmRwWWtOSklEblRvUlVrT2lFOU5xaUJMR0Y2WHpBM1VhMm53RnhISU9sSlNKVWg1a0lMQlZlTWVYcmRWbU4tVEgtcU5ET3N1all0TjlwOEdoLTVwNjdGYWhCcFQydHhrbm9sc0ppVm9yMmdPbEJWMjIwU0xoblFKUTA3UC1zNEVWUlc1bkNjSG5tYm5GLTF5Z19LWlRxTmJqcTgzOHMwRl9Mc1VLWElKZk1rcVdWTzR4UXdhYjNF?oc=5",
-          "source": "Channels Television",
-          "published": "2026-10-08T23:15:21.000Z"
         },
         {
           "title": "Black Market Dollar Rate Today: How Much Is Dollar to Naira? — Friday, October 9, 2026",
@@ -109,10 +109,10 @@
           "published": "2026-10-07T07:41:21.000Z"
         },
         {
-          "title": "Naira Hits Two-Year High Amid Increased Dollar Inflows",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNblhZLWpfcVNCc1BuVjU2QlRWUThBSVZjQV9Nclc1Y1pmN1Q5bVk3WUY4OEhlclNId3I2MHExMXc3OW83ZlE0TF9MM2ZBbEh3ZHdKMVgxNEQyb2g5LXlrSHgtR0VqYTFjSm1PNWdUWklsQkIwdDJYc1hWakU4ZG5GLU5teUU5NEpTZkRtaEFXc080NHc1NTFSRGVVRmZYZw?oc=5",
-          "source": "Dabafinance",
-          "published": "2026-10-07T19:50:00.000Z"
+          "title": "Dollar to Naira exchange rate today, October 9, 2026",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWlFGeS0wcUJqc2xiSGc4R2hUM2JFTzFEaVdPU2VVazZHMGNjMFVaUldZM3ZtWHNMNFhMSjFyQVRMTVZPQUhOZWJFUmVlWndzM0hFUUdMM3l4LXJjQTNQVlNaVHNGQU5ldkpnNC0zRVo1RnMtSi12RVdSN24wRHFSRV9EU09ydlEya19JSkdreDnSAZYBQVVfeXFMTWxGRFZJQ2VlUk5rOVdJNHB5T2dBVWJ3UlZBalNQcmN6U1VVdHUxT3J0ZUhPSUExOGx5cUZLNUx2T0I4UUNmSTFHampiNE5MaUxoLWE1TU8ta3hDenlsS00ycDFVSThjbmxIWmswRURURVpRSmhsdVVhTWFoS0c1aUdYdm5tVTU1QnhIMW5Wb2lrVGpsdU9R?oc=5",
+          "source": "Vanguard News",
+          "published": "2026-10-09T05:59:06.000Z"
         }
       ]
     },
@@ -120,111 +120,13 @@
       "slug": "jamb",
       "label": "JAMB and admissions",
       "query": "JAMB cut-off mark 2026",
-      "items": [
-        {
-          "title": "UNILAG Releases 2026/2027 UTME Merit Cut-Off Marks",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBlRUxHSmNRcnA4NFptVkNYcVV3YmU5Q3hYbXNLUEQ2S0NnenI1SmpVR0dmdjRaOTNsXzVHb0EwVVU4R2p4MnRuMDVPT2RSaVRubDZDY0I4SzNYdFhPVmhVamtzOGxRRkNmeERsTWw3MC1tNFBiZDdhS1JILUdNdw?oc=5",
-          "source": "University Of Lagos",
-          "published": "2026-09-16T07:00:00.000Z"
-        },
-        {
-          "title": "UNIOSUN announces 2026/2027 cut-off marks, warns candidates against admission fraud",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNQmFPMF84X2xORHQ4WTNwVTFLdGo2MmhMRDQ2WVJNeGxJS3BLc2FVM2ktMUVwcGJPek16b2t2cEp2Q3FLam9kcW1JUkRvVGZVeHIySThlVndoWjRMM19WWVFyZTJKRU1FNnVTU2d2Rkp2VnMyaHE4b2pGWmVyaE1qQXA3d1lNNUttQUxTZUNqNllVTEhMRVU5dWxVVTZVWGlyeWtTU2930gGuAUFVX3lxTE1EdUlvUFZpTWRwQTFtemx5N3ZyVFFqM3FyR3d2TGFqcW9rOFlLaUVtNTVKMlNhdHp0dE5mUk9sMHhOYUJLSFNPTWJjZTVFTHdmaVhNMXVIWGF4NHViXzdyaHhkLUx1aG5uTWNIR2hjMVBFcUZGQzlURHRNTXFhVnRobkFOX2prSHIxc2JocngydVZpUEtJYTVOTTJmRENEOXItbXdObVdkdE5QZXUxQQ?oc=5",
-          "source": "Edugist",
-          "published": "2026-10-07T16:39:48.000Z"
-        },
-        {
-          "title": "Full list: Nigerian universities and cut-off marks for 2026 admission",
-          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZzRaS19CZkREX0dLRGM2cUVucVZuMm0zdTBRS0drY3k3c0g5eGhuYlZwaE1wWkpoOVNrSW5ja3VCa0hSaUkxbHJXVW9YT1NzVGFPcmJUb1VuMVdzVlNXTlpjenQtZm8tekVrT2N2cWZxbkRWQ19mbW1nbWVNUlJMd0oyMElTZ0lTYmpkaDM0WmdkckRqd0poTWNFUEdVenZtMjZPV2liN2vSAa4BQVVfeXFMTWI3UHUyN29TVUlJcWVjV2dkMF9qbEJrMU9mQzBMV1JoLTBaR1VaSnhiZzRWVVRJY2w2MkdSc0tXZ29ObUMxdnNOUXpYTG4xZFBMVURta25zNWxJTnp6d3NkMWt3bWVoWEdzbXIySk15a2RWMVRBMVJPNk9jX2txWDgtV3I3MWFOVTh4Y2lWZmt0bzZESHBiN0ZYUGtDQjNZekhHN0hzOHU5YkxrU3N3?oc=5",
-          "source": "Vanguard News",
-          "published": "2026-05-11T07:00:00.000Z"
-        },
-        {
-          "title": "Jamb cut off-mark 2026: Jamb release new policy for UTME candidates seeking admission for education and agriculture course",
-          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE93OFNVbkwtZEwtYmFuV3VFNzc3OWJhUFE0bjM3d1FVQWsxRno0S3AwdmpTM21fX0JaTHU2eUVuQnF6Rzd4SDlEbTRPR0cyWVdydE55SkpYak9XMmkz0gFiQVVfeXFMUE9zb2lzajRyVENaVFM5OGVST0JwdE5tNmg4eXRzS3pMOHNwN1MyQm1fUnJ4X19zSG9td1kxaUVjd1dxYjRvblh1RU9VRmNVRVpyTEh1d2lueGcxdjJueWlOeFE?oc=5",
-          "source": "BBC",
-          "published": "2026-05-11T07:00:00.000Z"
-        },
-        {
-          "title": "2026 JAMB cut-off mark: Nigeria sacrificing standard for access",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWTY0QUY5Y2c2dXp2WWtBWlRydW9GUVI3ZHpQSkpNdkVPQ1l4ZFZlVDUzay1VQnV0RERoR3I5QW5fZlhKa1pRMElhc2I0S09YcmR6ZF82WXI5NDRfYnFCZkNuR0RnLThnVWVBcnpxblRLTXViTU5lTVdIdVNDWHMyem83ZXB3eDgwM1FoZ1JXejU?oc=5",
-          "source": "TheCable",
-          "published": "2026-05-15T07:00:00.000Z"
-        },
-        {
-          "title": "JAMB: 29 less competitive courses in Nigeria in 2026 and their cut-off marks",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUFctVlBISFY4UU9wWVVuMjFsbUc4Yk9sc2hxODh6RXdtSmdmN1JHVnhPUDdWYXNVdHFPSUNqMVRUQWRuMkNQZlNOZFRXZDl5d1lLTWlOQW96SjdSbFllMmxMUF8yYlBzZWVXb3RoQmlqLTgzMW16bVNYdW5qa214NkMtVjBiUFVNdkpncW0yNjJFOFVFbEtKWEJsMkZLdHpzcDZjNWZVODBmQdIBrwFBVV95cUxOMXZKSVotZVlvWGh2dkpLVEZBeFJtdUxaNk02QzlhMnlHZW41LVVibnpGcU5hNHlIY2xIa1FmQll0d0ZjR1lMMzhONnFhZHVoSWxwczB5ZVdXck94MVIyMTJFcmdTLVhSZ3RMVmh5c0pwdWZNalRFb2trT1VpVkhtQ1pLTE5tYk1zelNlalVNeWVlY29HQXR0bGZDRGViQ2xXZFFZM1FkTndzem1PY3hj?oc=5",
-          "source": "The Nation Newspaper",
-          "published": "2026-05-12T07:00:00.000Z"
-        },
-        {
-          "title": "UTME: JAMB Retains 150 As University Admission Cut-Off Mark",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcWZjOTBYdWU5UHhtc2ZMdVdNWGY5R2llVUxvM1N3bXZ5RW54SHFqY28yU003RERuNW55MlpIakdoYmJJZjdOQ2UwMG5RdnF5Vzhud3VYSUk1d1dkVXRqeHdfb2RsRXY2OWRRNWVCVFBuZWtzQzJTbk1qUTdzZW5DMFpiYTl3Zno3Skpab2lOVlZRaUNSbGI2WElacFpJQQ?oc=5",
-          "source": "Channels Television",
-          "published": "2026-05-11T07:00:00.000Z"
-        },
-        {
-          "title": "JAMB retains 150 cut-off mark for varsities, exempts NCE candidates from UTME",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSXVoUi0tc3NPcmJIT0FaTldoLXlOMWZfa1pDWVZjZ1RXcXFSSHlNYndUNUYxbm9FVWdFYUlueHhQWjVOV0syQXhOZFhONXRRV2tTQ1VHZkhfc050OFFWcmRYZEVvM1ZYSTFvSjJxTjNzSUsxcWVxUGVoamFGUlBmMlNNOV9jZjJabXhYWml5WmFDYU8xVTVoWDFuaGhUaGN0aFl3Qw?oc=5",
-          "source": "The Guardian Nigeria News",
-          "published": "2026-05-12T07:00:00.000Z"
-        }
-      ]
+      "items": []
     },
     {
       "slug": "telecom",
       "label": "Data and telecom",
       "query": "MTN Airtel Glo data price Nigeria",
-      "items": [
-        {
-          "title": "2026 data plans and prices for MTN, Airtel, Glo and T2mobile",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBkS2R1UXZfbmI5dmMyX0ZYLWVKVXc4NFhzZlJUc0dudDg5YUw2YmNwekRhRmhKVVY3bndrd09MUDNyUDc0OVhfZXBEMDJNUFl1YmpuUVdhVGJvcXNSM2FxdW95RFV2ZWtEUFQ0OGFvdEZ4MWZWZUFUXzkwS3pGQQ?oc=5",
-          "source": "Technext24.com",
-          "published": "2026-07-07T23:41:10.000Z"
-        },
-        {
-          "title": "Nigerians Question Telcos’ Advertising ‘Unlimited’ Data Plan ‘If It Does Not Exist’",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPb2ljOGtUVXdpX3g1LW4yaGxoemhVLUcwUkdvX1ZSNjFoTW9xdnhUd2xGV01tQXVORnpTYVJSUGRYZHVzbU1PUW9fN2dPdERhcTZETWhtaE4zcU1mVFZnaEJHZU5iM3lOaVoycFBobnVaUS1NcmRJQkxLRkgwR3M0TFZTc3NiX0hJYlZZU3M2RmpwQVVrVV9obVl6eHR5VHJqTGNr?oc=5",
-          "source": "Techeconomy",
-          "published": "2026-06-08T07:00:00.000Z"
-        },
-        {
-          "title": "Implications As MTN, Airtel, Glo, Others Face ₦300bn Revenue Hit As FCCPC Hands Airtime Lending Market To Five New Operators",
-          "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQaGtwMFNqaHBKdmNMUFRuSWJwT2Y0UUhtVkUxSWJwUVVwWmJwQndOMTc3c2d1M2w0UldORXl2eEpWRDhmaXlrMFNEang2TjhKZlJjQXluY0dzNXZ3eDZGQkl3TVhOdUFKbm1GNmpPYnZNcjZRZnBBbUYtdjZpVWVkYlNOaEVneC12Q3JmaHNfSkpjZXpfM0phWjdfbmtqblo0azdqS3VGWjQtOUZwMUFSa2VjYnhhRXFXNlN4blh6ZEJSNV9Wem9JZ0tUTGFqM0EwS0FFVGEwaExFT2wwbnFOZWJxV3dINDdldUg3UjM1QjIwSEE?oc=5",
-          "source": "Brand Communicator",
-          "published": "2026-04-24T07:00:00.000Z"
-        },
-        {
-          "title": "Simple tricks to make your MTN, Airtel, Glo and 9mobile data last longer",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1NRDMxaDRTaXdIM2lnQThBQ1U1aFJRZHo2RHI4eDR4bkg2WE9sdE9QYjVtWE5pUkRoRm9rMHZCNEl1ZWlHdnF0RHg0bDJTS2lmcVk5RU96M01mejRxeVBONXFjSkt0MVpG?oc=5",
-          "source": "TechCabal",
-          "published": "2025-12-04T08:00:00.000Z"
-        },
-        {
-          "title": "6 Best Apps to Buy Data Bundles Online in Nigeria (2026)",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcEtFTjRtNFU4MFVlTGhHUnNjckh0UmZvajRJTkZMMGF1VGhvS1EzdXZYR3UzdmowWnVpOHNkVU9CZXBDM0JaeUVSSThPV3cweGx0MjFVUE1fSVI3MTZEbFRQZ0dUSTBTdk5HU2hWcmhpUkxUZW5NaGxxMWJrQk5LanN4X215NGVFdmphT1RvbEVGaXp5WkZxT2l4OW0tc2tURDZDLXFZMGtrR2VlUkhDMkVB?oc=5",
-          "source": "IT News Africa",
-          "published": "2026-07-22T07:00:00.000Z"
-        },
-        {
-          "title": "Goodbye airtime? Lebara launches in Nigeria with a cloud-first model and cheaper data promises",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ibGRVTEo0OUNzSFg2S0E3cE1URFM1VUUxZWtUcjZkR2pRcDRUdVdWaEF5c2piTUVlcldEamFXekxWSHBUaEFhVXItd3dLbVRQU0tWQVp5OXNBX1pENlpnbWdvQkdLbGZ6bmdKbjhB?oc=5",
-          "source": "Condia",
-          "published": "2026-03-03T08:00:00.000Z"
-        },
-        {
-          "title": "2026 Complete list of voice tariff plans on MTN, Airtel, Globacom and T2mobile",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yS1ZKUDdWRFJzQmEwb24xX3hhaU9Qd3FTZ3RUeVNsRnNkV2VuaDFuUHFOcl85OG5XR0ljZ3haNnc0RkZEVnZ2ZUlMaHhTVnZGRjFPVzNGb3B0U0lFWDN1bzR3V0J3eU5qbHRkRFJCekNyVjlNVmJDSGticVc?oc=5",
-          "source": "Technext24.com",
-          "published": "2026-07-05T22:22:32.000Z"
-        },
-        {
-          "title": "MTN, Airtel, glo data bundles: NCC approve 50% increase in price of airtime and data bundles",
-          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5wUkp0TWhBaTFRUEYzeUdkYW1oWi1GTmlYTVNDVVQ5NzBxOEZXNUlpRmJKc3RwS1dLZVBRLUpNdWFVUGp2X3dBR2kxU3k4NU54dG9GTENBc1owcEg20gFiQVVfeXFMTUc1bmZZTnZYa3lscTl6aDdmUEoxdHlqZVo3c0ZCbzZMRDlXZ2lsTFUxVWNBSUFwSlF6RzZId05tOUV0dTcwTl85dGtqdmtRXzV0bFhVRGtYMThZVWdxcFZsUGc?oc=5",
-          "source": "BBC",
-          "published": "2025-01-20T08:00:00.000Z"
-        }
-      ]
+      "items": []
     },
     {
       "slug": "identity",
@@ -285,56 +187,7 @@
       "slug": "food",
       "label": "Food prices",
       "query": "rice garri beans price Nigeria market",
-      "items": [
-        {
-          "title": "Consumers Pay More As Prices Of Eggs, Beans, Local Rice, Others Rise In March",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRUZuREVCdHdjY1V5Vmx3akY1bWtwclBqWGpXT0pianJmRHVrZlBBMFhBQkduV0ttSXRVdEtKdXVscTVFajBkZVpfREtJMmVOT3dyWFRjN1I0VGtzMnVEOVlWM0pRRDR0Y1BQc09tMFpsS2cyRXU4QWlEVURhRkhMQTZvNXBMUE11dERYWVdSQ2VZVG1HZVlNYldvQlRMbGZicEdEUkpCOEh4eTgtOWl2b20tTQ?oc=5",
-          "source": "Channels Television",
-          "published": "2026-05-07T07:00:00.000Z"
-        },
-        {
-          "title": "Prices of beans, eggs, garri, others rise monthly despite annual decline — NBS",
-          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWmwzNVE0VmhaUm85bDIzYTZXbTFRQi1MbHduOVdFdDc4ODMxc2EwOWlhYkQtRjhLM0M5bm8wdGNGQVBNbTRFeGZSc056MXhpUUV3WC0zQ1BtR2ExRU10NjVIRVNoT1ZJQ296V01oLXJBVktmMHVuX1pxWXhLcTJPY3Y2eWRLOGZ4d05iNWt0LTFReUFraVNWNDMwWERUbTZGX2Q4VnBuNndIaEhTSnJN0gG0AUFVX3lxTE5YZEpVbFlzd1FmSHlZLW5JY0dXekMtSHFCTUZIb2U2WGkyUmxsXzAyUmd2alVJbGtqNU50Q2t0bFJsWS1FRUxMN01VTnQzaDQzNzJLXzRLWVd6M09sbko2VWJfWjlRTU1DLUV0TTBlNmlTVmJNejRza0NBdVBEb1dOOGtkUVc3OFB0VTAxSlptbWFlTE5qOXFYN2dRNmRjeFFYUUxOX0JGVU9RczF2T0xBdUF0dw?oc=5",
-          "source": "Vanguard News",
-          "published": "2026-05-06T07:00:00.000Z"
-        },
-        {
-          "title": "Food Prices Show Mixed Trend Across Lagos Markets",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9yeHM2WEZsd2g3WFZzWmNETHdIR2NXaTl3Y0ltcG44SW9xMDJQSXJqMnJyUUp3S2lfRlRhRUxLTUw3eGFhbDhxQlk3ZXZCRTdzcG9zdDZwbWIxaDNkOGk4YkxxeF9tQjVzRXdQSkRpUVdrZWpIanFiUHZId1I0UQ?oc=5",
-          "source": "Independent Newspaper Nigeria",
-          "published": "2026-08-31T07:00:00.000Z"
-        },
-        {
-          "title": "Market survey reveals fall in food prices",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNFRWTV9GWUstSGJNOXRBZVNxeGt1b2FVaWhoY2VWRU10QmV3MzBYa05sd2pFVG5lSlpnWlFqUHBOQ0w4em14NGJsOFdnOTdUSWZiYTg1MHY2VndEdVhLM0lnNjh2VGdoZk5mMTNJRDhvWFhOSzAwV3RwYWNPazVTZFh4T21YUQ?oc=5",
-          "source": "PM News Nigeria",
-          "published": "2026-07-12T07:00:00.000Z"
-        },
-        {
-          "title": "Food Prices Crash Further In Abuja",
-          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBMRWo4cUh5bEFJcFVOMWFIVUxZdjA1eDhUYk1JWjBpQVlYYWpFMlVaWEM3WWVmdmVESTZXOWJ6dmdHcFA0M1lQNVJLRkpiUjc4RlBocXdzaVZSd0xlaHQ5MnBEUVBOS1Z0U3c?oc=5",
-          "source": "The Whistler Newspaper",
-          "published": "2026-01-18T08:00:00.000Z"
-        },
-        {
-          "title": "Imo, Abia traders speak on drop in price of food items",
-          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZ3lKV25kVVRIcTR5ekJJQ3NKSHdKbGpKSlR2MUFGc3IzMjB6dnlCN3JOTDZUM0xFRUljNTd5akdKTUNuMnBtTHJmQlFzY3FJSGp3NlFVU2tJWFBnaGIzV01rNkdGVEV6VEZIRXhmWTd4VTRqX0hMQlB1QkhNUjcxTFh1TjQtVmEtYXItamJnZVVmMlRIREdDc3VhNjdJcE84NlVkZ2ItY0ZRNThWTnVV?oc=5",
-          "source": "Premium Times Nigeria",
-          "published": "2025-11-17T08:00:00.000Z"
-        },
-        {
-          "title": "Food Prices Drop As Festive Season Approaches",
-          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE41NmJpZVp5M2p3cDRMWm5CSE1lMEE3SlNMUHRhMFVZaHFJN0cyNVJZbTM2VmtaN2FLMTJZNmJtZDdhak1kaDJxcl9VZXQ3di1kZzZtM18wSUVoYnVadkVWeUJzS29IS0NMdlJ6dGZKdTNwQzVLVFhj?oc=5",
-          "source": "LEADERSHIP Newspapers",
-          "published": "2025-12-06T01:26:36.000Z"
-        },
-        {
-          "title": "Sellers, buyers joyous as food prices drop in Benue, Abia, Imo, Borno, others",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQT3lPb0JVUDlCRnZiSkRNRks4c3ZCek85V2NBNXhfLWxybExjbDBPODd3X05BZjBCWEViQ0l2TzZNa3BJVkl4YldqaWxEd1M4X05uV0ZrbTFHOUxJT1hfTl80Zm5CbkZMOUhKaWRIanlaLU95aWREcDZGa1kzN0tMWnZGWUlBbW15THcxaTRnZmE2UFpLeWQ5RHg5N00?oc=5",
-          "source": "Peoples Gazette Nigeria",
-          "published": "2025-11-16T08:00:00.000Z"
-        }
-      ]
+      "items": []
     }
   ]
 }
