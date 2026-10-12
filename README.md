@@ -20,7 +20,9 @@ Node 20.9 or later is required. `.nvmrc` pins Node 20 to match the configured Cl
 | Script | What it does |
 | --- | --- |
 | `npm run monitor` | Fetches every live source and writes `data/live/*.json` (see Live data). |
-| `npm run monitor:test` | Parser tests against captured source responses. |
+| `npm run monitor:test` | Parser tests against captured source responses, plus the bounded-history and chart-series rules. |
+| `npm run chart:test` | Renders the history charts with `react-dom/server` and asserts the honest empty state, real-point-only polylines and non-colour series cues. |
+| `npm test` | Runs `monitor:test`, `chart:test`, `push:test` and `nbs:test`. |
 | `npm run generate` | Runs `scripts/generate-content.ts`. Builds 205 long-form article pages into `content/generated/articles.json` and `public/search-index.json`. |
 | `npm run dev` | Regenerates content, then starts the dev server on 0.0.0.0:3000. |
 | `npm run build` | Regenerates content, then exports the static site to `out/`. |
@@ -104,6 +106,25 @@ The monitor attempts only configured public sources. A three-hour schedule is an
 which the pages already read. `npm run monitor:test` runs the parser tests against captured responses. A source that fails or changes layout keeps its
 last confirmed value and is marked on `/status`. Nothing is guessed.
 
+### History charts (real points only)
+
+`data/history.json` is the only history store, written by `appendBoundedHistory()` in `lib/history.ts` from the monitor and read by `lib/live.ts`.
+`lib/history.ts` also holds the pure chart helpers (`filterHistoryWindow`, `availableHistoryWindows`, `summarizeHistorySeries`, `historySeriesDomain`,
+`projectHistorySeries`, `describeHistorySeries`). They re-shape stored observations only: they never interpolate, smooth, backfill or synthesise a point.
+
+- `components/live/history-chart.tsx` (client) draws multi-series SVG charts: shared value axis for same-unit datasets, dash pattern + marker shape +
+  text legend so series are not distinguished by colour alone, `role="img"` with a `<title>`/`<desc>` accessible name, and a `<details>` table listing
+  every plotted reading with its source time (WAT) and the UTC time the monitor recorded it.
+- `components/live/history-section.tsx` (server) wires the datasets to those charts and fixes `nowMs` at render time so the exported HTML and the
+  hydrated client agree on which window each reading falls into.
+- `components/live/sparkline.tsx` (server) renders the compact card sparkline used by the daily briefing and the `/status` summary cards with no client JavaScript.
+- Charts appear on `/status` (USD group, depot petrol/diesel group, LPG), `/prices/fuel`, `/prices/generator-diesel` (diesel only) and as sparklines on `/`.
+- Fewer than two stored readings for a dataset means no line: the dataset is listed with its `stored / 56` count and the words "not enough readings yet".
+  If no dataset in a group has two readings, the whole card shows that empty state.
+- The 7d and 30d filters are offered only when at least one dataset holds two real readings inside them; otherwise every stored reading is plotted.
+- Change badges and the daily briefing read the same store through `latestDatasetDelta()`, so a chart and a badge can never disagree.
+- No chart library or CDN is used; the whole chart surface costs a few kilobytes of page JavaScript.
+
 The workflow `.github/workflows/live-monitor.yml` runs on a 3-hour schedule. It commits changed data, and Cloudflare Workers Builds rebuilds and deploys from that commit.
 Scheduled runs only start from the default branch, so merge to `main` before relying on the schedule.
 
@@ -128,7 +149,8 @@ and not cached.
 - `lib/source-registry.ts` is the typed registry for monitored datasets. Add geography, product type/unit, source and method, source time, check time, cadence, stale threshold and limitation before displaying a new changing reading.
 - UTC ISO strings are stored in data. Visitor-facing source times are formatted in WAT; never substitute build time for source/effective time.
 - The monitor preserves last-good snapshots. It exits non-zero if every configured source group fails, while individual failures remain visible in `data/live/health.json`.
-- `data/history.json` starts empty. Only successful observations are appended; unchanged values are deduplicated and the file is capped at 400 points. Do not backfill without a cited historical source.
+- `data/history.json` starts empty. Only successful observations are appended; readings with an identical source time and value are deduplicated and each dataset is independently capped at its last `MAX_HISTORY_POINTS_PER_DATASET` (56) points. Do not backfill without a cited historical source.
+- History charts plot those stored readings and nothing else. A dataset with fewer than two observations shows "Not enough readings yet" with its `stored / 56` count; a series whose readings are all identical is labelled flat instead of being scaled into a slope. See [History charts](#history-charts-real-points-only).
 - Food/city estimates, retail pump prices, telecom bundles, fees and cut-offs are manual/indicative. A page fingerprint is only a review flag.
 - The service worker caches the offline shell and previously visited same-origin pages/assets. `/api/*` is never cached. Offline UI explicitly labels saved changing figures as potentially stale.
 - Current browser storage: theme, chosen state, mock-premium flag, editor draft from legacy code if one already exists, and service-worker caches. Calculators/search run locally. No analytics, newsletter, web push, submissions or advertising network is enabled.
@@ -144,7 +166,7 @@ and not cached.
 
 ## Release checks
 
-Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/api/geo`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
+Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run chart:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/prices/fuel`, `/api/geo`, `/api/push/config`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
 
 ## Licence
 

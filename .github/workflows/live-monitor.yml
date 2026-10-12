@@ -35,6 +35,9 @@ jobs:
       - name: Parser tests (fails the run if a source layout changes in a way the parsers can't read)
         run: npm run monitor:test
 
+      - name: History chart tests (fails the run if a chart could draw a fabricated or unreadable series)
+        run: npm run chart:test
+
       - name: Fetch live sources
         run: npm run monitor
 

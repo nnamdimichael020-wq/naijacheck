@@ -3,6 +3,7 @@ import { Activity, ArrowRight, ExternalLink, Newspaper } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChangeBadge } from "@/components/live/change-badge";
+import { MiniSparkline } from "@/components/live/sparkline";
 import { Freshness } from "@/components/live/freshness";
 import { LIVE_FEEDS, LIVE_FUEL, LIVE_FX, latestDatasetDelta, latestHeadlines } from "@/lib/live";
 import { DATASET_REGISTRY, stateLabel, type VerificationState } from "@/lib/source-registry";
@@ -85,6 +86,8 @@ export function DailyBriefing() {
       delta: parallelDelta,
       unitSuffix: "",
       fractionDigits: 0,
+      dataset: "parallel-usd-ngn-buy",
+      tone: "primary" as const,
       href: "/prices",
     },
     {
@@ -100,6 +103,8 @@ export function DailyBriefing() {
       delta: petrolDelta,
       unitSuffix: "/L",
       fractionDigits: undefined,
+      dataset: "fuel-depot-petrol",
+      tone: "primary" as const,
       href: "/prices/fuel",
     },
     {
@@ -115,6 +120,8 @@ export function DailyBriefing() {
       delta: cbnDelta,
       unitSuffix: "",
       fractionDigits: 2,
+      dataset: "cbn-usd-ngn",
+      tone: "sky" as const,
       href: "/status",
     },
   ];
@@ -182,6 +189,14 @@ export function DailyBriefing() {
 
                 <p className="text-[11px] text-muted-foreground">{m.subtitle}</p>
               </div>
+
+              <MiniSparkline
+                dataset={m.dataset}
+                label={m.title}
+                tone={m.tone}
+                unitSuffix={m.unitSuffix || undefined}
+                fractionDigits={m.fractionDigits}
+              />
 
               <div className="space-y-1 border-t pt-2 text-[11px] text-muted-foreground">
                 <p className="font-medium text-foreground/85">

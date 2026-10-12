@@ -9,6 +9,24 @@ Record browser/version, OS/device, viewport, preview/live URL, network profile, 
 - Open representative generated routes. Verify title, description, canonical, one H1, JSON-LD, source/state/freshness copy and no console errors.
 - Emulate slow 3G and verify the push invitation does not delay content or fight the bottom navigation.
 
+## History charts (`/status`, `/prices/fuel`, `/prices/generator-diesel`, `/` sparklines)
+
+Charts are drawn only from observations stored in `data/history.json` (max 56 per dataset). Confirm on a real phone, in both themes, before signing off.
+
+- Open `/status` on a 360×640 and a 390×844 phone. Verify no page-level horizontal scroll and that no chart, axis label, legend row or readings table is clipped.
+- Verify each chart states its as-of time in WAT and a real point count. The per-series legend must read `stored/56` (for example `9/56 points`) and the summary cards `9 / 56 real points stored`.
+- Verify a dataset with fewer than two stored readings shows **"Not enough readings yet"** (or the inline "not enough readings yet (n/56 stored)" note) and draws **no line at all**. Never accept a flat zero line, a single dot joined to nothing, or a value that is not in `data/history.json`.
+- Cross-check every plotted value against `data/history.json`: same count, same numbers, same order. Open "Show the … real readings plotted" and confirm the table lists exactly the plotted points with their source time and recorded UTC time.
+- Verify a series whose stored readings are all identical is labelled flat ("Flat: every stored reading is identical…") rather than being scaled into a slope.
+- Verify the 7d / 30d buttons appear **only** when at least two real readings exist inside that window, that the selected button shows a pressed state, and that switching windows never invents points (the plotted count can only fall or stay the same).
+- Confirm series are distinguishable **without colour**: different dash patterns, different marker shapes and a text legend with the latest value and direction word (up/down/no change).
+- Test dark mode and 200% zoom: axis labels, gridlines, series and legend must stay readable and no series may disappear into the background.
+- Keyboard and screen reader: tab to the window toggle (visible focus, `aria-pressed` announced), confirm the chart SVG is announced as one image with a description naming each series, its count, range and direction, and that the legend and readings table are reachable as real text.
+- On `/`, confirm the daily briefing sparklines match the `/status` charts for the same dataset, and that a dataset with one reading shows the compact "Chart: not enough readings yet — 1/56 stored" note.
+- Confirm change badges and charts agree: the badge's previous value must be the second-to-last point in the chart's readings table.
+- Offline: load `/status` online, cache it, go offline and reload. The charts are static SVG in the cached HTML, so they must still render with the offline/stale warning.
+- Verify no chart dependency was added: `package.json` must contain no chart library, and the browser network tab must request no third-party chart CDN on these routes.
+
 ## Search and sharing
 
 - Search exact/partial terms for a price, city, slang, tool and absent term; test keyboard choice, URLs, empty state and Escape.
