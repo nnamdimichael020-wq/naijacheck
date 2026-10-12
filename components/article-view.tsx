@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import { CheckCircle2, Clock, Link as LinkIcon } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Clock, ExternalLink, Link as LinkIcon, ShieldCheck } from "lucide-react";
 import { AdSlot } from "@/components/ads/ad-slot";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
@@ -10,6 +10,22 @@ import type { Article } from "@/lib/types";
 import { articleSchema, absUrl } from "@/lib/seo";
 import { DATA_DATE } from "@/lib/data";
 import { ShareControls } from "@/components/share-controls";
+
+/** Human label for an honest verification state. Never says "live" for statutory or manual figures. */
+const VERIFICATION_LABEL: Record<string, string> = {
+  live: "Monitored source",
+  recent: "Monitored source (recent)",
+  stale: "Monitored source (stale — treat as dated)",
+  seeded: "Seeded estimate — not verified",
+  manual: "Manually verified against the official source",
+  unavailable: "Unavailable — not verified",
+};
+
+const dateLabel = (iso: string) => {
+  const d = new Date(`${iso}T00:00:00Z`);
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+};
 
 const SECTION_HUB: Record<string, { label: string; href: string }> = {
   prices: { label: "Prices", href: "/prices" },
@@ -48,7 +64,7 @@ export function ArticleView({ article, children, showSchema = true }: { article:
           : article.section.startsWith("trends")
             ? `Editorial meaning dated ${article.updatedAt}. Any editorial score is not a measurement of X or TikTok activity.`
             : article.section === "howto"
-              ? `Manually reviewed guidance dated ${article.updatedAt}; official requirements can change and the linked agency must be checked before payment.`
+              ? `Manually reviewed guidance. Figures were last verified against the named official source on ${dateLabel(article.lastVerified ?? article.updatedAt)}; official requirements and fees can change, so check the linked agency before payment.`
               : null;
 
   return (
@@ -71,7 +87,7 @@ export function ArticleView({ article, children, showSchema = true }: { article:
           <span className="inline-flex items-center gap-1">
             <Clock className="size-4" aria-hidden="true" /> About {readMins} min read
           </span>
-          <span>Updated {DATA_DATE}</span>
+          <span>Updated {dateLabel(article.lastVerified ?? article.updatedAt)}</span>
         </p>
         <ShareControls
           placement="inline"
@@ -109,6 +125,61 @@ export function ArticleView({ article, children, showSchema = true }: { article:
         </CardContent>
       </Card>
 
+      {article.sourceNote || article.officialLinks?.length || article.unverifiedItems?.length ? (
+        <Card className="mt-6">
+          <CardHeader className="pb-2">
+            <CardTitle className="flex items-center gap-2 text-base">
+              <ShieldCheck className="size-4 shrink-0 text-primary" aria-hidden="true" />
+              Where these figures come from
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm">
+            <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-muted-foreground">
+              <span>
+                Last verified: <strong className="text-foreground">{dateLabel(article.lastVerified ?? article.updatedAt)}</strong>
+              </span>
+              {article.verification ? (
+                <Badge variant="outline">{VERIFICATION_LABEL[article.verification] ?? article.verification}</Badge>
+              ) : null}
+            </p>
+            {article.sourceNote ? <p className="leading-relaxed text-foreground/90">{article.sourceNote}</p> : null}
+            {article.officialLinks?.length ? (
+              <div>
+                <p className="font-semibold">Official portals to check before you pay</p>
+                <ul className="mt-1 space-y-1">
+                  {article.officialLinks.map((l) => (
+                    <li key={l.href}>
+                      <a
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="inline-flex items-center gap-1.5 text-primary hover:underline"
+                      >
+                        <ExternalLink className="size-3.5 shrink-0" aria-hidden="true" />
+                        {l.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+            {article.unverifiedItems?.length ? (
+              <div className="rounded-md border border-amber-300 bg-amber-50 p-3 text-amber-950 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-100">
+                <p className="flex items-center gap-2 font-semibold">
+                  <AlertTriangle className="size-4 shrink-0" aria-hidden="true" />
+                  Not verified — confirm before you pay
+                </p>
+                <ul className="mt-1 list-disc space-y-1 pl-5">
+                  {article.unverifiedItems.map((u, i) => (
+                    <li key={i}>{u}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+          </CardContent>
+        </Card>
+      ) : null}
+
       <AdSlot variant="in-content" index={0} />
 
       {children ? <div className="my-8">{children}</div> : null}
@@ -129,6 +200,39 @@ export function ArticleView({ article, children, showSchema = true }: { article:
                     <li key={j}>{b}</li>
                   ))}
                 </ul>
+              ) : null}
+              {s.table ? (
+                <figure className="mt-5">
+                  <div className="overflow-x-auto rounded-lg border">
+                    <table className="w-full border-collapse text-left text-sm">
+                      {s.table.caption ? (
+                        <caption className="border-b bg-secondary px-3 py-2 text-left text-xs font-semibold text-muted-foreground">
+                          {s.table.caption}
+                        </caption>
+                      ) : null}
+                      <thead>
+                        <tr className="bg-secondary/60">
+                          {s.table.columns.map((c, j) => (
+                            <th key={j} scope="col" className="border-b px-3 py-2 font-semibold">
+                              {c}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {s.table.rows.map((row, j) => (
+                          <tr key={j} className={j % 2 ? "bg-secondary/20" : undefined}>
+                            {row.map((cell, k) => (
+                              <td key={k} className="border-b px-3 py-2 align-top last:border-b-0">
+                                {k === 0 ? <span className="font-medium">{cell}</span> : cell}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </figure>
               ) : null}
             </section>
             {i === midpoint && article.sections.length > 2 ? <AdSlot variant="in-content" index={1} /> : null}

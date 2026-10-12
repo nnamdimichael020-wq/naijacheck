@@ -17,7 +17,7 @@
       "slug": "electricity-bill-explained", "title": "How to Read Your Electricity Bill (Metered vs Estimated)", "angle": "Why your bill jumps, and how to check what you are actually paying for.",
       "keyPoints": ["Check whether your bill is metered or estimated. Estimated bills can be far off from real use.", "Look at the kWh units consumed and compare with last month.", "Ask for a meter reading if you suspect estimate errors.", "Generator fuel is often the bigger cost for businesses in cities with weak supply.", "Solar and inverter systems can cut costs if the payback period works for you."],
       "faqs": [["Why is my bill suddenly high?", "Common causes: an estimated bill, a faulty meter, or a new appliance running longer than you think."], ["Can I dispute my bill?", "Yes. Contact your distribution company with your meter number and account details."], ["Is solar worth it?", "It depends on your usage and how long you plan to stay. Use the solar payback calculator to test it."]],
-      "relatedHustle": "generator-service", "relatedHowTo": "bvn-correction"
+      "relatedHustle": "generator-service", "relatedHowTo": "prepaid-electricity-bands"
     },
     {
       "slug": "data-saving-tips", "title": "Data Saving Tips That Actually Work in Nigeria", "angle": "Stop the data leak: phone settings, app habits and smarter bundles.",

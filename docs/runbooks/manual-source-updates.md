@@ -35,6 +35,25 @@ Use `https://www.jamb.gov.ng/` for national policy and the institution's officia
 
 Use the responsible agency's stable public information page. Immigration uses `https://immigration.gov.ng/passports/`; never scrape application, login or payment flows. Store service, components, category, effective date, exact timeline wording, URL, check date and reviewer. A watcher change only opens human review; it cannot auto-edit a fee.
 
+## Prepaid electricity bands and NERC tariffs
+
+Use `https://nerc.gov.ng/faq/electricity-tariffs/` for the Service-Based Tariff band definitions (A 20h, B 16h, C 12h, D 8h, E 4h) and for NERC's own method of working out an effective rate from a vending receipt.
+
+Use the monthly supplementary orders in the NERC resources library (`https://nerc.gov.ng/resources/`) for ₦/kWh rows. Read the "Approved Allowed Tariffs" table in the order for the DisCo you are quoting, and record the order number, the DisCo, the states the order covers, the effective date and the check date.
+
+Two rules that stop this going wrong:
+
+1. **Never present one DisCo's rate as national.** Band A happened to match across the two September 2026 orders we read, but Bands B–E did not.
+2. **Check whether the order covers "yet to be transitioned states" only.** Where a state has moved to its own electricity regulator, that regulator sets the rate, not NERC.
+
+Store the rows in `data/govhowto.json` under the `prepaid-electricity-bands` doc, update `lastVerified`, and list anything you could not verify under `unverifiedItems`. Units-per-naira figures are our own division of a verified rate and must always be labelled as before VAT and fixed charges.
+
+## FRSC driver's licence
+
+Use `https://frsc.gov.ng/` (Service Level Agreements and the ARC Compendium) and `https://www.nigeriadriverslicence.org/` for process steps, the 60-day service standard and the one-month renewal window. Never scrape the application, login or payment flow: the portal generates the amount the applicant actually pays, and that generated amount is the only fee figure worth publishing.
+
+If the current statutory fee cannot be confirmed on an FRSC page, leave the row's status at `writing` in [`docs/content-gap-queue.md`](../content-gap-queue.md), keep the fee in `unverifiedItems`, and say plainly on the page that the figure is unverified.
+
 ## Food, fuel and editorial observations
 
 A manual observation needs exact item/product, unit, market/station, city/state, observed value/range, observation time, permitted evidence, collector and reviewer. Keep retail pump separate from wholesale depot. Do not describe seeded/manual/old data as live. Slang requires dated usage/editorial evidence; Google News and Wikimedia are only mention/pageview signals.
