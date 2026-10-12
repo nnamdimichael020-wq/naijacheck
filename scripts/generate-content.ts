@@ -25,9 +25,11 @@ import telecom from "../data/telecom.json";
 import recipesData from "../data/recipes.json";
 import learnData from "../data/learn.json";
 
-type Section = { h2: string; paras: string[]; bullets?: string[] };
+type Table = { caption?: string; columns: string[]; rows: string[][] };
+type Section = { h2: string; paras: string[]; bullets?: string[]; table?: Table };
 type Faq = { q: string; a: string };
 type Link = { href: string; label: string };
+type Verification = "live" | "recent" | "stale" | "seeded" | "manual" | "unavailable";
 export interface Article {
   path: string;
   section: string;
@@ -47,11 +49,17 @@ export interface Article {
   wordCount: number;
   updatedAt: string;
   schemaType: "Article" | "HowTo";
+  lastVerified?: string;
+  verification?: Verification;
+  sourceNote?: string;
+  officialLinks?: Link[];
+  unverifiedItems?: string[];
 }
 
 type Draft = Omit<Article, "links" | "wordCount" | "updatedAt" | "schemaType"> & {
   linkPaths: string[];
   schemaType?: "Article" | "HowTo";
+  updatedAt?: string;
 };
 
 type City = (typeof cities.cities)[number];
@@ -61,7 +69,42 @@ type Biz = (typeof blueprintsData.blueprints)[number];
 type Recipe = (typeof recipesData.recipes)[number];
 type Slang = (typeof slangData.terms)[number];
 type Psych = (typeof slangData.psychTerms)[number];
-type Doc = (typeof govhowto.docs)[number];
+/**
+ * Explicit shape for data/govhowto.json. The base fields drive every GovHowTo page; the optional
+ * `extra*`, `official*` and `verification*` fields let a flagship guide carry deeper sourced
+ * sections, comparison tables and an honest last-verified block without forking the content
+ * pipeline into a second CMS.
+ */
+type GovDoc = {
+  slug: string;
+  title: string;
+  short: string;
+  category: string;
+  fee: string;
+  feeSource: string;
+  timeline: string;
+  steps: string[];
+  documents: string[];
+  pitfalls: string[];
+  officialSite: string;
+  related: string[];
+  hustleLink: string;
+  lastVerified?: string;
+  verification?: Verification;
+  sourceNote?: string;
+  officialLinks?: Link[];
+  unverifiedItems?: string[];
+  extraIntro?: string[];
+  extraSections?: Section[];
+  extraFaqs?: Faq[];
+  extraTakeaways?: string[];
+  extraLinkPaths?: string[];
+  metaTitle?: string;
+  metaDescription?: string;
+  keywords?: string[];
+  headings?: { cost?: string; steps?: string; documents?: string; pitfalls?: string; timeline?: string };
+};
+type Doc = GovDoc;
 type Topic = (typeof learnData.topics)[number];
 type Guide = (typeof exam.guides)[number];
 type Institution = (typeof exam.institutions)[number];
@@ -69,6 +112,13 @@ type Network = (typeof telecom.networks)[number];
 
 const UPDATED = prices.updatedAt;
 const DATE_LABEL = "9 October 2026";
+/** ISO date -> "12 October 2026". Used for per-article last-verified labels. */
+const longDate = (iso: string) => {
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const [y, m, day] = iso.split("-").map(Number);
+  if (!y || !m || !day) return iso;
+  return `${day} ${months[m - 1]} ${y}`;
+};
 
 // ---------- helpers ----------
 const fmt = (n: number) => "₦" + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -85,7 +135,7 @@ const MARKET: Record<string, Market> = Object.fromEntries(marketsData.markets.ma
 const BP: Record<string, Biz> = Object.fromEntries(blueprintsData.blueprints.map((b) => [b.slug, b]));
 const RECIPE: Record<string, Recipe> = Object.fromEntries(recipesData.recipes.map((r) => [r.slug, r]));
 const SLANG: Record<string, Slang> = Object.fromEntries(slangData.terms.map((t) => [t.slug, t]));
-const DOC: Record<string, Doc> = Object.fromEntries(govhowto.docs.map((d) => [d.slug, d]));
+const DOC: Record<string, Doc> = Object.fromEntries((govhowto.docs as unknown as GovDoc[]).map((d) => [d.slug, d]));
 const CORE_ITEMS = ["rice", "garri", "beans", "yam", "egg"];
 const PRICE_CITIES = cities.cities.filter((city) =>
   prices.items.every((item) => Boolean((item.prices as Record<string, number[]>)[city.slug])),
@@ -689,16 +739,22 @@ function resolveRel(r: string): string {
 function buildHowTo(d: Doc) {
   const sections: Section[] = [
     { h2: "Quick answer", paras: [`${d.short} Fees: ${d.fee} Timeline: ${d.timeline}`] },
-    { h2: "What it costs in 2026", paras: [d.fee, `Source note: ${d.feeSource}`, "Fees change without much notice. Check the official site before you pay, and never pay a 'processing' fee to an unofficial person."] },
-    { h2: "Step-by-step", paras: [`Follow these steps in order. Keep a copy of every receipt and screenshot, because you will need them if something goes wrong.`], bullets: d.steps },
-    { h2: "Documents you need", paras: ["Have these ready before you start. Missing documents are the number one reason applications stall."], bullets: d.documents },
-    { h2: "Mistakes that cost you money", paras: ["These are the errors we see most often. Each one can cost you time, money or both."], bullets: d.pitfalls },
+    ...(d.extraSections ?? []),
+    {
+      h2: d.headings?.cost ?? "What it costs in 2026",
+      paras: [d.fee, `Source note: ${d.feeSource}`, "Fees change without much notice. Check the official site before you pay, and never pay a 'processing' fee to an unofficial person."],
+    },
+    { h2: d.headings?.steps ?? "Step-by-step", paras: [`Follow these steps in order. Keep a copy of every receipt and screenshot, because you will need them if something goes wrong.`], bullets: d.steps },
+    { h2: d.headings?.documents ?? "Documents you need", paras: ["Have these ready before you start. Missing documents are the number one reason applications stall."], bullets: d.documents },
+    { h2: d.headings?.pitfalls ?? "Mistakes that cost you money", paras: ["These are the errors we see most often. Each one can cost you time, money or both."], bullets: d.pitfalls },
     { h2: "Scam warning", paras: ["Government services in Nigeria are often targeted by touts and fake portals. Only use the official site listed below. If someone asks for cash to 'fast track' your file, walk away and report it."] },
-    { h2: "Timeline and what to expect", paras: [d.timeline, "Plan your application early. If you have a travel date, a school deadline or a contract, start at least a month before you need the document."] },
+    { h2: d.headings?.timeline ?? "Timeline and what to expect", paras: [d.timeline, "Plan your application early. If you have a travel date, a school deadline or a contract, start at least a month before you need the document."] },
     { h2: "Official site", paras: [`The official site for this service is ${d.officialSite}. Bookmark it and check the URL before you enter any personal details.`] },
   ];
   const shortTitle = d.title.replace(/ 20\d\d.*$/, "");
+  const verifiedLabel = longDate(d.lastVerified ?? UPDATED);
   const faqs: Faq[] = [
+    ...(d.extraFaqs ?? []),
     { q: `How much is ${shortTitle.toLowerCase()} in 2026?`, a: d.fee },
     { q: "How long does this take?", a: d.timeline },
     { q: "Can I do this online?", a: `Where the official portal supports it, yes. Start at ${d.officialSite}. Avoid third-party sites that ask for cash.` },
@@ -706,14 +762,26 @@ function buildHowTo(d: Doc) {
   add({
     path: `/howto/${d.slug}`, section: "howto", navLabel: shortTitle, kicker: `GovHowTo · ${d.category}`,
     title: d.title,
-    metaTitle: `${shortTitle} 2026: Fees, Steps & Timeline`,
-    metaDescription: `${d.short} Current fees, timelines and official steps for 2026. Verify on the official site before you pay.`,
-    keywords: [d.slug.replace(/-/g, " "), `${d.slug.replace(/-2026/, "").replace(/-/g, " ")} fee 2026`],
+    metaTitle: d.metaTitle ?? `${shortTitle} 2026: Fees, Steps & Timeline`,
+    metaDescription: d.metaDescription ?? `${d.short} Current fees, timelines and official steps for 2026. Verify on the official site before you pay.`,
+    keywords: d.keywords ?? [d.slug.replace(/-/g, " "), `${d.slug.replace(/-2026/, "").replace(/-/g, " ")} fee 2026`],
     params: { slug: d.slug }, schemaType: "HowTo",
-    intro: [d.short, `This guide gives you the 2026 fee, the timeline, the official steps and the mistakes to avoid. Fee information was last checked on ${DATE_LABEL}. Always confirm on the official site before you pay.`],
+    intro: [
+      d.short,
+      ...(d.extraIntro ?? []),
+      d.lastVerified
+        ? `This guide gives you the official steps, the documents, the cost picture and the mistakes to avoid. Figures were last verified against the named official sources on ${verifiedLabel}. Always confirm on the official site before you pay.`
+        : `This guide gives you the 2026 fee, the timeline, the official steps and the mistakes to avoid. Fee information was last checked on ${DATE_LABEL}. Always confirm on the official site before you pay.`,
+    ],
     sections, faqs, steps: d.steps,
-    takeaways: [`Fee: ${d.fee}`, `Timeline: ${d.timeline}`, `Official site: ${d.officialSite}`],
-    linkPaths: [...d.related.map(resolveRel), d.hustleLink, "/howto"],
+    takeaways: [...(d.extraTakeaways ?? []), `Fee: ${d.fee}`, `Timeline: ${d.timeline}`, `Official site: ${d.officialSite}`],
+    linkPaths: [...(d.extraLinkPaths ?? []), ...d.related.map(resolveRel), d.hustleLink, "/howto"],
+    lastVerified: d.lastVerified,
+    verification: d.verification,
+    sourceNote: d.sourceNote,
+    officialLinks: d.officialLinks,
+    unverifiedItems: d.unverifiedItems,
+    updatedAt: d.lastVerified,
   });
 }
 
@@ -722,16 +790,17 @@ function buildHowToHub() {
     path: "/howto", section: "hub", navLabel: "GovHowTo hub", kicker: "GovHowTo",
     title: "GovHowTo 2026: Passport, NIN, CAC, Tax and Police Documents",
     metaTitle: "GovHowTo Nigeria 2026: Passport, NIN, CAC & Tax Guides",
-    metaDescription: "Step-by-step Nigerian government guides for 2026: passport renewal, NIN correction, police character certificate, CAC business name, freelancer tax and more.",
+    metaDescription: "Step-by-step Nigerian government and utility guides for 2026: passport renewal, NIN correction, police character certificate, CAC business name, freelancer tax, driver's licence and prepaid electricity bands.",
     keywords: ["passport renewal 2026 nigeria", "nin correction 2026", "police character certificate 2026", "cac business name registration 2026"],
     params: {},
     intro: [
-      `Government paperwork in Nigeria is confusing, slow and full of touts. This section gives you the official steps, current fees as reported in 2026, the timelines to expect, and the traps that cost people money.`,
+      `Government paperwork and regulated utility bills in Nigeria are confusing, slow and full of touts. This section gives you the official steps, the fees we could verify, the timelines to expect, and the traps that cost people money.`,
       `Every guide has a last-checked date and a link to the official site. Fees change, so confirm before you pay.`,
     ],
     sections: [
-      { h2: "Our most-read guides", paras: ["These are the guides people search for most, based on the requests we see most often."], bullets: govhowto.docs.map((d) => `${d.title}: ${d.fee.split(".")[0]}`) },
+      { h2: "Our most-read guides", paras: ["These are the guides people search for most, based on the requests we see most often. Each one names the official source it was checked against and the date we checked it."], bullets: govhowto.docs.map((d) => `${d.title}: ${d.fee.split(".")[0]}`) },
       { h2: "How to avoid touts and scams", paras: ["Use only official portals. Never pay cash to someone who promises to skip the line. Keep receipts. If a site asks for your bank PIN or OTP, it is a scam."] },
+      { h2: "Power and utility guides", paras: ["NERC sets the service bands and approves the rate each distribution company charges, and it revises those rates monthly. Our prepaid electricity bands guide names the two orders we read and the date we read them, so you can check them yourself before you compare your bill with anybody else's."] },
     ],
     faqs: [
       { q: "How much is an international passport in 2026?", a: "Reported fees for applications in Nigeria are ₦100,000 for the 32-page 5-year booklet and ₦200,000 for the 64-page 10-year booklet. Confirm on immigration.gov.ng." },
@@ -739,7 +808,7 @@ function buildHowToHub() {
       { q: "Do I need CAC for a small business?", a: "It depends on the business. A business name is useful for bank accounts and bigger customers." },
     ],
     takeaways: ["Use official portals only.", "Confirm the fee on the day you pay.", "Keep receipts for every step."],
-    linkPaths: ["/howto/passport-renewal-2026", "/howto/nin-correction", "/howto/police-character-certificate", "/howto/cac-business-name", "/howto/freelancer-tax-tin", "/howto/drivers-licence-frsc", "/hustle", "/learn/spot-fake-job-offers"],
+    linkPaths: ["/howto/passport-renewal-2026", "/howto/nin-correction", "/howto/police-character-certificate", "/howto/cac-business-name", "/howto/freelancer-tax-tin", "/howto/drivers-licence-frsc", "/howto/prepaid-electricity-bands", "/status"],
   });
 }
 
@@ -1080,7 +1149,7 @@ function buildTools() {
       { q: "Is my data saved?", a: "No. The calculators run in your browser and do not send data to a server." },
     ],
     takeaways: ["Use real numbers from your bills.", "Test more than one scenario.", "Check assumptions before you buy equipment."],
-    linkPaths: ["/tools/generator", "/tools/solar", "/tools/cookbook", "/prices/cost-of-living", "/prices/fuel", "/prices/generator-diesel", "/learn/electricity-bill-explained", "/hustle/generator-service"],
+    linkPaths: ["/tools/generator", "/tools/solar", "/howto/prepaid-electricity-bands", "/tools/cookbook", "/prices/cost-of-living", "/prices/fuel", "/prices/generator-diesel", "/learn/electricity-bill-explained"],
   });
   add({
     path: "/tools/generator", section: "tools", navLabel: "Generator fuel calculator", kicker: "Tools · Power",
@@ -1102,7 +1171,7 @@ function buildTools() {
       { q: "Is petrol cheaper than diesel per hour?", a: "Often petrol is cheaper per litre, but the fuel use can differ. Compare the cost per hour, not per litre." },
     ],
     takeaways: ["Load and hours drive the cost.", "Check the diesel price weekly.", "Compare with solar payback."],
-    linkPaths: ["/tools/solar", "/prices/generator-diesel", "/prices/fuel", "/prices/cost-of-living", "/learn/electricity-bill-explained", "/hustle/generator-service", "/tools"],
+    linkPaths: ["/tools/solar", "/howto/prepaid-electricity-bands", "/prices/generator-diesel", "/prices/fuel", "/prices/cost-of-living", "/learn/electricity-bill-explained", "/hustle/generator-service", "/tools"],
   });
   add({
     path: "/tools/solar", section: "tools", navLabel: "Solar payback calculator", kicker: "Tools · Solar",
@@ -1124,7 +1193,7 @@ function buildTools() {
       { q: "Do solar systems need maintenance?", a: "Yes. Clean panels, check batteries and keep records of the warranty." },
     ],
     takeaways: ["Payback = system cost / annual savings.", "Use your real fuel bill.", "Check battery warranties."],
-    linkPaths: ["/tools/generator", "/prices/generator-diesel", "/prices/fuel", "/learn/electricity-bill-explained", "/hustle/generator-service", "/tools", "/prices/cost-of-living"],
+    linkPaths: ["/tools/generator", "/howto/prepaid-electricity-bands", "/prices/generator-diesel", "/prices/fuel", "/learn/electricity-bill-explained", "/hustle/generator-service", "/tools", "/prices/cost-of-living"],
   });
 }
 
@@ -1176,7 +1245,7 @@ buildTrendsHub();
 buildHustleHub();
 for (const b of blueprintsData.blueprints) buildBlueprint(b);
 for (const c of COMBOS) buildCombo(c);
-for (const d of govhowto.docs) buildHowTo(d);
+for (const d of govhowto.docs as unknown as GovDoc[]) buildHowTo(d);
 buildHowToHub();
 buildExamNational();
 for (const i of exam.institutions) buildExamInstitution(i);
@@ -1193,6 +1262,13 @@ buildLearnHub();
 
 // ---------- link resolution ----------
 const labelByPath = new Map(drafts.map((d) => [d.path, d.navLabel]));
+/** Hand-written app routes that articles may link to but that are not generated articles. */
+const STATIC_LABELS: Record<string, string> = {
+  "/status": "Data status and source health",
+  "/about": "About NaijaCheck",
+  "/privacy": "Privacy notice",
+};
+for (const [p, label] of Object.entries(STATIC_LABELS)) labelByPath.set(p, label);
 const PADDING: Link[] = [
   { href: "/prices", label: "Daily prices" },
   { href: "/trends", label: "Slang decoder" },
@@ -1221,8 +1297,20 @@ const articles: Article[] = drafts.map((d) => {
   }
   const { linkPaths: _unused, ...rest } = d;
   void _unused;
-  const texts = [rest.title, ...rest.intro, ...rest.sections.flatMap((s) => [s.h2, ...s.paras, ...(s.bullets ?? [])]), ...rest.faqs.flatMap((f) => [f.q, f.a]), ...rest.takeaways];
-  return { ...rest, links, wordCount: wordCount(texts), updatedAt: UPDATED, schemaType: d.schemaType ?? "Article" };
+  const texts = [
+    rest.title,
+    ...rest.intro,
+    ...rest.sections.flatMap((s) => [s.h2, ...s.paras, ...(s.bullets ?? []), ...(s.table ? [s.table.caption ?? "", ...s.table.columns, ...s.table.rows.flat()] : [])]),
+    ...rest.faqs.flatMap((f) => [f.q, f.a]),
+    ...rest.takeaways,
+  ];
+  return {
+    ...rest,
+    links,
+    wordCount: wordCount(texts),
+    updatedAt: d.updatedAt ?? UPDATED,
+    schemaType: d.schemaType ?? "Article",
+  };
 });
 
 // ---------- write outputs ----------
