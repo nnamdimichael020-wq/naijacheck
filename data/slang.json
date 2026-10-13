@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-13T10:33:25.204Z",
+  "updatedAt": "2026-10-13T19:16:03.765Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "detty-december",
-    "oblee",
     "japa",
     "chop-life",
+    "oblee",
     "achalugo"
   ],
   "terms": [
@@ -36,8 +36,8 @@
       "slug": "oblee",
       "term": "Oblee",
       "kind": "slang",
-      "trend": "rising",
-      "trendScore": 75,
+      "trend": "steady",
+      "trendScore": 40,
       "confidence": "medium-high",
       "meaning": "Going out to enjoy yourself: vibes, party, outside life, whether you have money or not.",
       "detail": "Oblee became the clarion call of the festive nightlife season. Giftgram and other explainers define it as enjoying life, being outside, partying and living lavishly, even on a small budget. Some outlets give it a looser meaning, so context matters, but the common use is 'we dey oblee' meaning we are out here having fun.",
@@ -53,14 +53,14 @@
       ],
       "platform": "Twitter/X, TikTok, nightlife",
       "source": "Tribune Online (Dec 2025), Giftgram (Dec 2025), The Net (Dec 2024). Some outlets use different meanings.",
-      "mentions7d": 3
+      "mentions7d": 2
     },
     {
       "slug": "achalugo",
       "term": "Achalugo",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 20,
       "confidence": "medium",
       "meaning": "An Igbo expression for a beautiful, graceful woman. Some people also use it for a carefree, go-with-the-flow vibe.",
       "detail": "Achalugo is Igbo. Most usage is a compliment meaning a woman of beauty, grace and character, with some online sources translating it as 'God's treasure' or 'the abode of an eagle'. Gen Z also picked it up for its chill energy, so you will see it used for someone who is calm and unbothered. Check the context before you use it on someone.",
@@ -150,7 +150,7 @@
       "term": "Japa",
       "kind": "slang",
       "trend": "rising",
-      "trendScore": 75,
+      "trendScore": 80,
       "confidence": "high",
       "meaning": "To migrate or leave Nigeria, usually for work, study or a better life abroad.",
       "detail": "Japa is Yoruba street slang for escaping or running away. Since the mid-2020s it has meant migrating abroad. It shows up in family WhatsApp groups, church prayers and job chats. It is also a big money topic: passports, visas, IELTS and exam fees are all tied to japa.",
@@ -165,7 +165,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage. See our passport and visa guides for the costs.",
-      "mentions7d": 3
+      "mentions7d": 4
     },
     {
       "slug": "soft-life",
@@ -217,7 +217,7 @@
       "term": "Chop life",
       "kind": "slang",
       "trend": "rising",
-      "trendScore": 75,
+      "trendScore": 60,
       "confidence": "high",
       "meaning": "Eating well, enjoying good food, and living the good life through meals.",
       "detail": "Chop is pidgin for eat. Chop life is about enjoying food, sometimes for less money, like buying a plate of jollof and sharing it with friends. It is also a way to talk about the food economy and how far a naira goes at the market.",
@@ -239,7 +239,7 @@
       "term": "Sharp sharp",
       "kind": "slang",
       "trend": "quiet",
-      "trendScore": 0,
+      "trendScore": 20,
       "confidence": "high",
       "meaning": "Quickly, right now, as soon as possible.",
       "detail": "Sharp sharp is pidgin for fast. You will hear it in offices, markets and families. 'Sharp sharp' can be a polite demand or a light joke. Use it to ask for speed, but remember that in some Nigerian settings it can sound pushy.",
@@ -254,7 +254,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage in Nigerian pidgin.",
-      "mentions7d": 0
+      "mentions7d": 1
     },
     {
       "slug": "owanbe",
@@ -321,7 +321,7 @@
       ],
       "platform": "Instagram, TikTok",
       "source": "Seasonal usage, 2024-2026.",
-      "mentions7d": 4
+      "mentions7d": 5
     },
     {
       "slug": "sabi",
@@ -371,8 +371,8 @@
       "slug": "jara",
       "term": "Jara",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 20,
       "confidence": "medium-high",
       "meaning": "Extra or bonus, especially a small extra you add to a purchase for goodwill.",
       "detail": "Jara is a Yoruba word that means extra. Market traders often add jara to a bag or a bunch to keep customers happy. It is a small thing that builds loyalty, and it is a smart tactic for any small business.",
