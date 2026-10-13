@@ -70,6 +70,15 @@ const sitemapPaths = sitemap.map(normalPath).filter(Boolean);
 const sitemapMissing = sitemapPaths.filter((p) => !routes.has(p));
 const indexedNotInSitemap = rows.filter((r) => !r.noindex && r.route !== "/404" && !sitemapPaths.includes(r.route)).map((r) => r.route);
 const groupedDuplicates = (key) => Object.values(rows.reduce((o, row) => { const v = row[key]; if (v) (o[v] ||= []).push(row.route); return o; }, {})).filter((x) => x.length > 1);
+
+// Public config is committed (config/site.ts, wrangler.jsonc), never dashboard-only, because dashboard values
+// were dropped by builds before: the "Get alerts on Telegram" link silently disappeared. This guard fails the
+// audit if a build does not render the committed Telegram channel URL on the two pages that show it.
+const siteSource = fs.readFileSync(path.join(process.cwd(), "config", "site.ts"), "utf8");
+const committedTelegramChannelUrl = siteSource.match(/TELEGRAM_CHANNEL_URL_DEFAULT\s*=\s*"([^"]*)"/)?.[1] ?? null;
+const missingTelegramLink = committedTelegramChannelUrl
+  ? ["/", "/status"].filter((route) => !routes.has(route) || !fs.readFileSync(routes.get(route), "utf8").includes(`href="${committedTelegramChannelUrl}"`))
+  : [];
 const findings = {
   generatedHtmlRoutes: rows.length,
   sitemapUrls: sitemap.length,
@@ -86,9 +95,11 @@ const findings = {
   duplicateTitles: groupedDuplicates("title"),
   duplicateDescriptions: groupedDuplicates("description"),
   invalidJsonLd: badJsonLd,
+  committedTelegramChannelUrl,
+  pagesMissingCommittedTelegramLink: missingTelegramLink,
   pages: rows,
 };
 const output = process.argv[2];
 if (output) fs.writeFileSync(output, JSON.stringify(findings, null, 2) + "\n");
 console.log(JSON.stringify({ ...findings, pages: undefined }, null, 2));
-if (broken.length || sitemapMissing.length || findings.wrongCanonicalHost.length || badJsonLd.length) process.exitCode = 1;
+if (broken.length || sitemapMissing.length || findings.wrongCanonicalHost.length || badJsonLd.length || missingTelegramLink.length) process.exitCode = 1;

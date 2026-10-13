@@ -20,7 +20,11 @@ export const CRITICAL_USD_THRESHOLD_NGN = 5;
 export const ALERT_COOLDOWN_MS = 6 * 60 * 60 * 1000;
 export const ALERT_PATH = "/status";
 
-/** Canonical production path used by alerts unless the owner overrides `ALERT_SITE_URL`. */
+/**
+ * Fallback used only when `ALERT_SITE_URL` is unset or invalid. `wrangler.jsonc` ships
+ * `ALERT_SITE_URL = https://naijacheck.nnamdimichael020.workers.dev/status` as public,
+ * committed config so a deploy cannot drop the alert link host.
+ */
 export const DEFAULT_ALERT_SITE_URL = `https://naijacheck.ng${ALERT_PATH}`;
 
 export type AlertChannelEnv = {

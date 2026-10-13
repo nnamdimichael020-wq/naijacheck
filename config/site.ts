@@ -1,24 +1,36 @@
 /**
  * Public Telegram channel that mirrors the same verified change alerts as Web Push.
- * Not a secret: it is rendered in the footer and on /status.
- * Leave empty until the owner has created the channel — the UI hides every Telegram link when empty.
- * Can also be set at build time with `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL` (e.g. https://t.me/naijacheck).
+ *
+ * This is committed here **on purpose**. It is a public fact about the site, not a
+ * secret, and dashboard/build variables are not durable: `NEXT_PUBLIC_*` plain
+ * variables are re-entered by hand and disappear on some build/deploy paths, which
+ * silently removed the "Get alerts on Telegram" link (same class of failure as the
+ * VAPID public vars before `wrangler.jsonc`). Committing the URL means it survives
+ * every build and every deploy without any dashboard step.
  */
-function publicTelegramChannelUrl(): string {
-  const raw = (process.env.NEXT_PUBLIC_TELEGRAM_CHANNEL_URL ?? "").trim();
-  if (!raw) return "";
+export const TELEGRAM_CHANNEL_URL_DEFAULT = "https://t.me/naijacheck_alerts";
+
+/**
+ * `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL` stays available as an optional override for a
+ * renamed or replacement channel, but it can never blank or hijack the link: an empty,
+ * malformed or non-Telegram value falls back to the committed URL above. Every
+ * Telegram link stays hidden only if the committed default is cleared in code.
+ */
+export function parseTelegramChannelUrl(raw: string | undefined): string {
+  const value = (raw ?? "").trim();
+  if (!value) return TELEGRAM_CHANNEL_URL_DEFAULT;
   try {
-    const url = new URL(raw);
+    const url = new URL(value);
     const host = url.hostname.toLowerCase().replace(/^www\./, "");
-    if (url.protocol !== "https:") return "";
-    if (host !== "t.me" && host !== "telegram.me" && host !== "telegram.dog") return "";
+    if (url.protocol !== "https:") return TELEGRAM_CHANNEL_URL_DEFAULT;
+    if (host !== "t.me" && host !== "telegram.me" && host !== "telegram.dog") return TELEGRAM_CHANNEL_URL_DEFAULT;
     return url.toString();
   } catch {
-    return "";
+    return TELEGRAM_CHANNEL_URL_DEFAULT;
   }
 }
 
-export const TELEGRAM_CHANNEL_URL = publicTelegramChannelUrl();
+export const TELEGRAM_CHANNEL_URL = parseTelegramChannelUrl(process.env.NEXT_PUBLIC_TELEGRAM_CHANNEL_URL);
 
 /**
  * Single source of truth for brand + domain.
@@ -30,7 +42,10 @@ export const SITE_CONFIG = {
   url: "https://naijacheck.ng",
   description:
     "Daily Naija prices, trending slang decoder, hustle blueprints, how-to guides and calculators.",
-  /** Public alert channel. Empty = no channel created yet, so every Telegram link is hidden. */
+  /**
+   * Public alert channel, rendered in the footer and on /status.
+   * Committed (see `TELEGRAM_CHANNEL_URL_DEFAULT`); only clear it in code to hide every Telegram link.
+   */
   telegramChannelUrl: TELEGRAM_CHANNEL_URL,
 } as const;
 

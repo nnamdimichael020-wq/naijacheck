@@ -61,6 +61,8 @@ The Worker can create an alert only when:
 
 It includes source, source as-of time and `/status`; a global six-hour cooldown means no subscriber can receive more than one real change alert in six hours. A protected owner test is the only non-change message. The Worker removes endpoints when a push service returns HTTP 404 or 410.
 
+The tap-through host is public committed config, not a dashboard value: `ALERT_SITE_URL` in `wrangler.jsonc` ships with the code (`https://naijacheck.nnamdimichael020.workers.dev/status`), so alert links open a host readers can reach and survive every deploy. Do not re-enter it in the dashboard; if alerts should later open a different host, change that committed line in a reviewed PR.
+
 ## 6. Phone test—do not skip
 
 1. Use the production HTTPS site on a physical phone. On iPhone/iPad, add the site to the Home Screen first and launch that installed web app; test current supported Safari/iOS behavior rather than assuming desktop behavior.
@@ -81,7 +83,7 @@ It includes source, source as-of time and `/status`; a global six-hour cooldown 
      --data "$(node -e 'console.log(JSON.stringify({endpoint:process.env.PUSH_ENDPOINT}))')"
    ```
 
-6. A JSON result with `deliveredToPushService: true` means the browser vendor accepted the encrypted push; it does **not** prove the phone displayed it. Lock/background the app and visually confirm the notification, text, icon and tap-through to `/status`.
+6. A JSON result with `deliveredToPushService: true` means the browser vendor accepted the encrypted push; it does **not** prove the phone displayed it. Lock/background the app and visually confirm the notification, text, icon and tap-through to the committed `ALERT_SITE_URL` host (`https://naijacheck.nnamdimichael020.workers.dev/status`).
 7. Tap **Unsubscribe and clear**, confirm the KV key disappears, and confirm no further test can target it.
 8. Repeat denial, seven-day “Not now”, Android Chromium, desktop Chromium/Firefox, and installed iOS PWA cases in `browser-qa-checklist.md`.
 

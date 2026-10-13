@@ -17,6 +17,7 @@ npm ci
 npm run typecheck
 npm run lint
 npm run monitor:test
+npm run site:test
 npm run push:test
 npm run telegram:test
 npm run nbs:test
@@ -41,7 +42,8 @@ Run local Wrangler with local KV binding/config only. Verify:
 - unauthenticated `POST /api/telegram/test` returns 401, and with the admin token but no Telegram secrets it returns `503 telegram_not_configured` while sending nothing;
 - `npm run telegram:test` proves one shared decision: baseline/flat/below-threshold/failed-monitor runs send nothing, a genuine change sends exactly one Telegram message, and a second event inside six hours is coalesced;
 - unknown API and page routes return 404;
-- all generated/sitemap routes crawl with zero broken internal links.
+- all generated/sitemap routes crawl with zero broken internal links;
+- `npm run site:test` passes with no environment variables set, and `npm run audit:static` reports `pagesMissingCommittedTelegramLink: []` — public config (the Telegram channel link, `ALERT_SITE_URL`, the VAPID public key) comes from committed files, never from a dashboard-only variable.
 
 Keep local build/crawl, GitHub runner monitor, branch preview, live production and real-browser evidence clearly separate.
 
@@ -49,7 +51,7 @@ Keep local build/crawl, GitHub runner monitor, branch preview, live production a
 
 Deploy to the branch preview first. Crawl homepage, `/status`, key hubs, robots, sitemap, `/api/geo`, push config and all reachable routes. Complete `browser-qa-checklist.md`; if graphical browsers or phones are unavailable, mark those items unverified rather than passed.
 
-Before production push enablement, verify KV binding, encrypted secrets and cron in Cloudflare. For Telegram, verify the two encrypted secrets, that the bot is a channel admin with post permission, and that `ALERT_SITE_URL` (optional public variable) points at a host readers can actually open — leave it unset to keep the canonical `https://naijacheck.ng/status`. After the approved release, test on a physical backgrounded phone. A successful build, config response or push-service acceptance is not proof the device displayed a notification, and a Telegram `200` is not proof the channel showed the post.
+Before production push enablement, verify KV binding, encrypted secrets and cron in Cloudflare. For Telegram, verify the two encrypted secrets and that the bot is a channel admin with post permission. The public, non-secret variables are committed in `wrangler.jsonc` and ship with the code, so nothing has to be re-entered in the dashboard after a deploy: confirm the deployed Worker still lists `ALERT_SITE_URL` (the host alert links open — `https://naijacheck.nnamdimichael020.workers.dev/status`), `VAPID_PUBLIC_KEY` and `VAPID_SUBJECT`, and that the Telegram channel link in `config/site.ts` is present on the deployed pages. After the approved release, test on a physical backgrounded phone. A successful build, config response or push-service acceptance is not proof the device displayed a notification, and a Telegram `200` is not proof the channel showed the post.
 
 ## Merge/deploy/rollback
 
@@ -66,5 +68,5 @@ Before production push enablement, verify KV binding, encrypted secrets and cron
 1. Confirm the Worker cron still runs eight times a day (`47 */3 * * *`) and that one scheduled run logs either a real change or `no change` — never a crash because Telegram is unset.
 2. Confirm only one Telegram message per genuine burst: compare the channel against `push:critical-state.lastEventSentAt` in KV; the channels share that cooldown.
 3. Confirm the message text: what changed, new value, delta, source name, as-of time in WAT and UTC, and the `/status` link on the approved host.
-4. Confirm the site link matches the approved channel URL (footer and `/status`), and that it is absent when `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL` is unset.
+4. Confirm the site link matches the approved channel URL (footer and `/status`). It comes from the committed `config/site.ts` value, so it must be present on every deployment with **no** dashboard variable set; if it is missing, the build dropped committed config rather than a dashboard value.
 5. If Telegram delivery fails, record the status code only. Never paste the token, chat id or the failing request URL into an issue.

@@ -53,5 +53,5 @@ The single Telegram attempt in the third phase logged `telegram send failed (net
 1. Create the bot and public channel, add the bot as admin (`telegram-owner-setup.md` steps 1–2).
 2. Set the encrypted Worker secrets `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` (step 4). Nothing is sent before this.
 3. Send one message with `curl -X POST "$WORKER_URL/api/telegram/test" -H "Authorization: Bearer $PUSH_ADMIN_TOKEN"` and confirm the single channel post on a phone (step 5).
-4. Optionally set `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL` (public build variable) so the footer and `/status` show "Get alerts on Telegram"; the link stays hidden while it is empty.
+4. Nothing to set for the site link: the public channel URL is committed in `config/site.ts`, so the footer and `/status` show "Get alerts on Telegram" on every build without a dashboard variable (see `config-durability-2026-10-13.md`). `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL` remains an optional override for a replacement channel.
 5. Re-run the Web Push phone test to confirm push is unchanged.

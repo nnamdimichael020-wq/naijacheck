@@ -88,8 +88,8 @@ This repository is configured as a **Worker with Static Assets**, not as a Cloud
 4. Cloudflare Workers Builds must provide its normal deployment credentials; do not add API tokens to the repository.
 5. Optional: add **`NEXT_PUBLIC_ADSENSE_CLIENT`** = `ca-pub-XXXXXXXXXXXXXXXX` once your AdSense account is approved. The ad slots switch to Google units
    and the AdSense script loads.
-6. Optional: add **`NEXT_PUBLIC_TELEGRAM_CHANNEL_URL`** = your public `https://t.me/…` channel to show the "Get alerts on Telegram" link. While it is unset, every Telegram link stays hidden. Telegram sending itself needs the encrypted Worker secrets in `docs/runbooks/telegram-owner-setup.md` and is a no-op without them.
-7. Production currently remains on the existing Workers deployment. Do not change DNS, Worker routes/attachment, or `SITE_CONFIG` as part of non-domain maintenance. Domain and canonical decisions require a separate owner-approved change.
+6. The public Telegram channel URL is **committed** in `config/site.ts` (`https://t.me/naijacheck_alerts`), so the "Get alerts on Telegram" link in the footer and on `/status` survives every build with no dashboard variable. `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL` is only an optional override for a replacement channel. `ALERT_SITE_URL` (the public, non-secret host that alert links open) is committed in `wrangler.jsonc` next to the VAPID public vars. Telegram sending itself needs the encrypted Worker secrets in `docs/runbooks/telegram-owner-setup.md` and is a no-op without them.
+7. Production currently remains on the existing Workers deployment. Do not change DNS, Worker routes/attachment, or the canonical `SITE_CONFIG.url`/`domain` as part of non-domain maintenance. Domain and canonical decisions require a separate owner-approved change. (The public Telegram channel URL and `ALERT_SITE_URL` are committed public config, not domain/canonical decisions.)
 
 `public/_headers` sets response headers and cache rules for static assets. Next.js generates `out/sitemap.xml` and `out/robots.txt` at build time.
 
@@ -172,7 +172,7 @@ and not cached.
 
 ## Release checks
 
-Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run chart:test`, `npm run push:test`, `npm run telegram:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/prices/fuel`, `/api/geo`, `/api/push/config`, an unauthenticated `/api/telegram/test`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
+Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run chart:test`, `npm run site:test`, `npm run push:test`, `npm run telegram:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/prices/fuel`, `/api/geo`, `/api/push/config`, an unauthenticated `/api/telegram/test`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
 
 ## Licence
 
