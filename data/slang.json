@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T02:36:11.073Z",
+  "updatedAt": "2026-10-13T10:33:25.204Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "detty-december",
@@ -238,8 +238,8 @@
       "slug": "sharp-sharp",
       "term": "Sharp sharp",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 0,
       "confidence": "high",
       "meaning": "Quickly, right now, as soon as possible.",
       "detail": "Sharp sharp is pidgin for fast. You will hear it in offices, markets and families. 'Sharp sharp' can be a polite demand or a light joke. Use it to ask for speed, but remember that in some Nigerian settings it can sound pushy.",
@@ -254,7 +254,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage in Nigerian pidgin.",
-      "mentions7d": 1
+      "mentions7d": 0
     },
     {
       "slug": "owanbe",
@@ -349,8 +349,8 @@
       "slug": "gist",
       "term": "Gist",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 0,
       "confidence": "high",
       "meaning": "News, gossip or a story. 'Give me the gist' means tell me what's happening.",
       "detail": "Gist is a Nigerian English word for information, usually gossip. It moves fast in group chats. Everyone wants the gist, but be careful: gist can mean facts or rumours, so check before you share.",
@@ -365,7 +365,7 @@
       ],
       "platform": "WhatsApp, X",
       "source": "Common usage in Nigerian English.",
-      "mentions7d": 1
+      "mentions7d": 0
     },
     {
       "slug": "jara",

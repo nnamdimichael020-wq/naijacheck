@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-13T02:36:11.073Z",
+  "checkedAt": "2026-10-13T10:33:25.204Z",
   "seeded": false,
   "method": "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
   "limitation": "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
@@ -31,18 +31,6 @@
     {
       "slug": "achalugo",
       "term": "Achalugo",
-      "mentions7d": 1,
-      "score": 25
-    },
-    {
-      "slug": "sharp-sharp",
-      "term": "Sharp sharp",
-      "mentions7d": 1,
-      "score": 25
-    },
-    {
-      "slug": "gist",
-      "term": "Gist",
       "mentions7d": 1,
       "score": 25
     },
@@ -89,6 +77,12 @@
       "score": 0
     },
     {
+      "slug": "sharp-sharp",
+      "term": "Sharp sharp",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
       "slug": "owanbe",
       "term": "Owanbe",
       "mentions7d": 0,
@@ -103,6 +97,12 @@
     {
       "slug": "sabi",
       "term": "Sabi",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "gist",
+      "term": "Gist",
       "mentions7d": 0,
       "score": 0
     },
@@ -128,39 +128,39 @@
   "wiki": [
     {
       "article": "Nigeria",
-      "views7d": 37921,
+      "views7d": 44800,
       "prev7d": 54500,
-      "changePct": -30.4
+      "changePct": -17.8
     },
     {
       "article": "Nigerian naira",
-      "views7d": 3021,
+      "views7d": 3554,
       "prev7d": 3466,
-      "changePct": -12.8
+      "changePct": 2.5
     },
     {
       "article": "Dangote Refinery",
-      "views7d": 394,
+      "views7d": 463,
       "prev7d": 827,
-      "changePct": -52.4
+      "changePct": -44
     },
     {
       "article": "Lagos",
-      "views7d": 13163,
+      "views7d": 15454,
       "prev7d": 20900,
-      "changePct": -37
+      "changePct": -26.1
     },
     {
       "article": "Joint Admissions and Matriculation Board",
-      "views7d": 589,
+      "views7d": 733,
       "prev7d": 637,
-      "changePct": -7.5
+      "changePct": 15.1
     },
     {
       "article": "Afrobeats",
-      "views7d": 3043,
+      "views7d": 3399,
       "prev7d": 2088,
-      "changePct": 45.7
+      "changePct": 62.8
     }
   ],
   "sources": [
