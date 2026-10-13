@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SITE_CONFIG, SITE_TAGLINE, SOCIAL_HANDLE } from "@/config/site";
 import { AdSlot } from "@/components/ads/ad-slot";
+import { TelegramAlertsLink } from "@/components/live/telegram-alerts";
 import { TOP_NAV } from "@/lib/nav";
 
 export function SiteFooter() {
@@ -15,6 +16,8 @@ export function SiteFooter() {
             <p className="mt-3 text-sm text-muted-foreground">
               Prices are indicative unless a source is cited. Always confirm before you spend. {SOCIAL_HANDLE}
             </p>
+            {/* Hidden until the owner configures a public channel URL. */}
+            <TelegramAlertsLink className="mt-3 text-sm" />
           </div>
           <nav aria-label="Footer">
             <p className="mb-2 text-sm font-semibold">Sections</p>

@@ -13,7 +13,10 @@
     "crons": ["47 */3 * * *"]
   },
   // Plain (non-secret) config must live here so Workers deploys do not wipe it.
-  // Encrypted secrets (VAPID_PRIVATE_JWK, PUSH_ADMIN_TOKEN) stay in the Cloudflare dashboard and never in Git.
+  // Encrypted secrets (VAPID_PRIVATE_JWK, PUSH_ADMIN_TOKEN, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID) stay in the
+  // Cloudflare dashboard and never in Git. Telegram is an optional second channel for the same alert decision and
+  // is a logged no-op when those two secrets are absent; see docs/runbooks/telegram-owner-setup.md.
+  // Optional plain-text variable ALERT_SITE_URL (not set here) can point alert links at the host readers can open.
   "vars": {
     "VAPID_PUBLIC_KEY": "BIfKFcDYHAZVL768k5Wmm8gb0_MRbUvOCtvDIY0k0FlQ5yL25ntKf10Yar6pqBgWFtG6-1MJRnHtoNzAc6AxCEY",
     "VAPID_SUBJECT": "mailto:nnamdimichael020@gmail.com"
