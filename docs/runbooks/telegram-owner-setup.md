@@ -60,20 +60,28 @@ In the Cloudflare dashboard: **Workers & Pages → naijacheck → Settings → V
 | `TELEGRAM_BOT_TOKEN` | **encrypted secret** | the BotFather token from step 1 |
 | `TELEGRAM_CHAT_ID` | **encrypted secret** | `@naijacheck_alerts` or the numeric `-100…` id |
 | `PUSH_ADMIN_TOKEN` | encrypted secret | already required by Web Push; also protects the Telegram test endpoint. If you are not enabling Web Push, create one random value with `node -e "console.log(require('node:crypto').randomBytes(32).toString('base64url'))"` |
-| `ALERT_SITE_URL` | plain text variable (optional) | the host your readers can actually open today, e.g. `https://naijacheck.nnamdimichael020.workers.dev/status`. Leave it unset to keep the default canonical `https://naijacheck.ng/status` |
+| `ALERT_SITE_URL` | plain text variable — **committed in `wrangler.jsonc`** | already `https://naijacheck.nnamdimichael020.workers.dev/status`, shipped with the code, so alert links open a host readers can reach and no dashboard step is needed after a deploy. Public, not a secret. Edit it only if alerts should later open a different host |
 
 Save and deploy. No KV change is required here — Telegram reuses the existing `PUSH_SUBSCRIPTIONS` binding for the alert state and cooldown. **Do not** rename that binding, the VAPID variables or the cron trigger.
 
 Optional (only if you ever run the monitor from GitHub Actions instead of the Worker cron): add repository secrets named exactly `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` under **Settings → Secrets and variables → Actions**. The shipped workflows do not read them; only add them if a future change wires them in. Never put either value in `wrangler.jsonc`, `.env` or any committed file.
 
-### 4b. Show the "Get alerts on Telegram" link on the site (public, not a secret)
+### 4b. The "Get alerts on Telegram" link (public, not a secret)
 
-The site hides every Telegram link until it knows the channel URL. Choose one:
+**Nothing to do.** The channel URL is committed in `config/site.ts`
+(`TELEGRAM_CHANNEL_URL_DEFAULT = "https://t.me/naijacheck_alerts"`), next to every other public site fact, so the
+footer link and the `/status` "Alerts on Telegram" section appear on every build and every deploy.
 
-- **Cloudflare build variable (no commit needed):** **Workers & Pages → naijacheck → Settings → Build → Variables and secrets** → add `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL = https://t.me/naijacheck_alerts`, then redeploy.
-- **Or ask for a one-line code change** to `config/site.ts` (`TELEGRAM_CHANNEL_URL`) in a separately approved PR.
+- **Do not re-enter it as a Cloudflare build variable.** Dashboard-only plain variables are not durable — they are
+  re-typed by hand and were silently dropped on a build/deploy, which is exactly why this link disappeared before
+  (same class of failure as the VAPID public vars before they moved into `wrangler.jsonc`).
+- **Renaming or replacing the channel?** Change the committed value in a reviewed PR. `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL`
+  still works as an optional override for a trial, but it can only point at a real `https://t.me/…` URL: any empty,
+  malformed or non-Telegram value falls back to the committed URL, so the link can never silently break or be hijacked.
+- **Hiding the link on purpose** means clearing the committed value in code (a reviewed PR). A missing dashboard
+  variable can no longer hide it by accident.
 
-Only `https://t.me/…`, `https://telegram.me/…` or `https://telegram.dog/…` URLs are accepted; anything else (or an empty value) hides the link. This value is public and safe to show — it is not a second secret.
+The value is public and safe to show — it is not a second secret, and no bot token or chat id belongs in this file.
 
 ## 5. Test exactly one message (never spam the channel)
 
@@ -109,7 +117,7 @@ Only `https://t.me/…`, `https://telegram.me/…` or `https://telegram.dog/…`
 ## 7. Disable Telegram (instant, no code change)
 
 1. Cloudflare → **Workers & Pages → naijacheck → Settings → Variables and Secrets**.
-2. Delete `TELEGRAM_BOT_TOKEN` (or set it to an empty value) and, if you also want the links gone, remove `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL` from the build variables.
+2. Delete `TELEGRAM_BOT_TOKEN` (or set it to an empty value). That stops all sending. To also remove the site links, clear the committed channel URL in `config/site.ts` in a reviewed PR — the link deliberately no longer depends on a dashboard variable, so removing one there will not hide it.
 3. Deploy. The Worker logs `telegram not configured (…)` and no-ops; every other feature, Web Push included, keeps working.
 4. If the token may have leaked, use BotFather `/revoke` to invalidate it, then create/set a new token. Revoking must be reported without ever reprinting the token.
 
