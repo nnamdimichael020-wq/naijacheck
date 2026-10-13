@@ -1,10 +1,15 @@
 /**
  * Cloudflare Worker entry point for the static Next.js export.
  * Static files are served from ./out by Workers Static Assets. Dynamic API
- * responses are deliberately no-store. Web Push remains unavailable until the
- * owner binds KV and adds VAPID secrets; see the owner runbook.
+ * responses are deliberately no-store.
+ *
+ * Alerts (Web Push and Telegram) run from the same scheduled handler and the
+ * same genuine-change decision. Both remain unavailable until the owner binds
+ * KV and adds the relevant secrets; unconfigured channels are a silent no-op.
+ * See `docs/runbooks/web-push-owner-setup.md` and `docs/runbooks/telegram-owner-setup.md`.
  */
-import { handlePushRequest, runPushMonitor, type PushEnv } from "./push";
+import { handlePushRequest, runAlertMonitor, type PushEnv } from "./push";
+import { handleTelegramRequest } from "./telegram";
 
 type CloudflareLocation = {
   country?: string;
@@ -56,6 +61,9 @@ const worker = {
     const pushResponse = await handlePushRequest(request, env);
     if (pushResponse) return pushResponse;
 
+    const telegramResponse = await handleTelegramRequest(request, env);
+    if (telegramResponse) return telegramResponse;
+
     if (pathname.startsWith("/api/")) {
       return new Response("Not found", {
         status: 404,
@@ -67,7 +75,9 @@ const worker = {
   },
 
   async scheduled(_controller: unknown, env: Env): Promise<void> {
-    await runPushMonitor(env);
+    // One run, one decision, both channels. Missing secrets or a missing KV
+    // binding log and return; they never fail the scheduled invocation.
+    await runAlertMonitor(env);
   },
 };
 

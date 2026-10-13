@@ -22,7 +22,8 @@ Node 20.9 or later is required. `.nvmrc` pins Node 20 to match the configured Cl
 | `npm run monitor` | Fetches every live source and writes `data/live/*.json` (see Live data). |
 | `npm run monitor:test` | Parser tests against captured source responses, plus the bounded-history and chart-series rules. |
 | `npm run chart:test` | Renders the history charts with `react-dom/server` and asserts the honest empty state, real-point-only polylines and non-colour series cues. |
-| `npm test` | Runs `monitor:test`, `chart:test`, `push:test` and `nbs:test`. |
+| `npm test` | Runs `monitor:test`, `chart:test`, `push:test`, `telegram:test` and `nbs:test`. |
+| `npm run telegram:test` | Proves Telegram and Web Push share one genuine-change gate: no send on baseline, flat, below-threshold or failed-monitor runs, one send per genuine change, six-hour coalescing, silent no-op when unconfigured. |
 | `npm run generate` | Runs `scripts/generate-content.ts`. Builds 205 long-form article pages into `content/generated/articles.json` and `public/search-index.json`. |
 | `npm run dev` | Regenerates content, then starts the dev server on 0.0.0.0:3000. |
 | `npm run build` | Regenerates content, then exports the static site to `out/`. |
@@ -60,7 +61,10 @@ lib/                     data.ts (pricing maths), articles.ts, seo.ts (metadata 
 scripts/generate-content.ts   Builds every long-form page from /data
 content/generated/       Generated articles.json (committed, so builds never depend on the generator)
 public/                  Static assets, search-index.json, _headers (Cloudflare security headers)
-worker/index.ts          Worker API endpoint for /api/geo
+worker/index.ts          Worker entry: /api/geo, /api/push/*, /api/telegram/test, scheduled alert monitor
+worker/alerts.ts         Shared genuine-change gate, thresholds and alert payload for every channel
+worker/push.ts           Web Push subscribe/unsubscribe/test, delivery and the shared six-hour cooldown
+worker/telegram.ts       Optional Telegram channel delivery and the owner-only test send
 wrangler.jsonc           Cloudflare Workers Static Assets deployment configuration
 ```
 
@@ -84,7 +88,8 @@ This repository is configured as a **Worker with Static Assets**, not as a Cloud
 4. Cloudflare Workers Builds must provide its normal deployment credentials; do not add API tokens to the repository.
 5. Optional: add **`NEXT_PUBLIC_ADSENSE_CLIENT`** = `ca-pub-XXXXXXXXXXXXXXXX` once your AdSense account is approved. The ad slots switch to Google units
    and the AdSense script loads.
-6. Production currently remains on the existing Workers deployment. Do not change DNS, Worker routes/attachment, or `SITE_CONFIG` as part of non-domain maintenance. Domain and canonical decisions require a separate owner-approved change.
+6. Optional: add **`NEXT_PUBLIC_TELEGRAM_CHANNEL_URL`** = your public `https://t.me/…` channel to show the "Get alerts on Telegram" link. While it is unset, every Telegram link stays hidden. Telegram sending itself needs the encrypted Worker secrets in `docs/runbooks/telegram-owner-setup.md` and is a no-op without them.
+7. Production currently remains on the existing Workers deployment. Do not change DNS, Worker routes/attachment, or `SITE_CONFIG` as part of non-domain maintenance. Domain and canonical decisions require a separate owner-approved change.
 
 `public/_headers` sets response headers and cache rules for static assets. Next.js generates `out/sitemap.xml` and `out/robots.txt` at build time.
 
@@ -155,6 +160,7 @@ and not cached.
 - The service worker caches the offline shell and previously visited same-origin pages/assets. `/api/*` is never cached. Offline UI explicitly labels saved changing figures as potentially stale.
 - Current browser storage: theme, chosen state, mock-premium flag, editor draft from legacy code if one already exists, and service-worker caches. Calculators/search run locally. No analytics, newsletter, web push, submissions or advertising network is enabled.
 - Web push and community submissions remain deferred: there is no authenticated moderator, consent/subscriber store, VAPID secret deployment or abuse-control path. Never call an in-page poll “push.”
+- Telegram alerts reuse the same `criticalChange` gate and six-hour cooldown as Web Push; they activate only after the owner adds `TELEGRAM_BOT_TOKEN`/`TELEGRAM_CHAT_ID` and are otherwise a logged no-op. See `docs/runbooks/telegram-owner-setup.md`. Never paste a bot token or chat id into Git, an issue or chat.
 - `/admin` is intentionally unavailable. Do not restore a client-side password. Use server-side authentication/Cloudflare Access before handling moderation data.
 
 ## Search Console setup (owner action)
@@ -166,7 +172,7 @@ and not cached.
 
 ## Release checks
 
-Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run chart:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/prices/fuel`, `/api/geo`, `/api/push/config`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
+Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run chart:test`, `npm run push:test`, `npm run telegram:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/prices/fuel`, `/api/geo`, `/api/push/config`, an unauthenticated `/api/telegram/test`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
 
 ## Licence
 

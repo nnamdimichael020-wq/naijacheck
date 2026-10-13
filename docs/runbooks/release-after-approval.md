@@ -8,7 +8,7 @@ Do not merge or alter production until the owner explicitly approves. Work from 
 2. Confirm the PR is mergeable and required checks are attached to its latest head.
 3. Read source health row by row. CBN, Aboki, open.er-api, Awajis, news, Wikimedia and Immigration watcher evidence must be reported separately. A CBN/fuel/Immigration failure makes the run partial.
 4. Review `config/site.ts`, `wrangler.jsonc`, `worker/index.ts`, canonical/robots settings and routes for unapproved changes.
-5. For Web Push, complete `web-push-owner-setup.md` steps 1–4 only after approval and before production testing. Never put secrets in Git or chat.
+5. For Web Push, complete `web-push-owner-setup.md` steps 1–4 only after approval and before production testing. For Telegram, complete `telegram-owner-setup.md` steps 1–4 the same way. Both are optional and independent: unconfigured channels stay silent no-ops and must never fail the monitor or the deploy. Never put secrets in Git or chat.
 
 ## Required branch commands
 
@@ -18,6 +18,7 @@ npm run typecheck
 npm run lint
 npm run monitor:test
 npm run push:test
+npm run telegram:test
 npm run nbs:test
 npm run build
 npx wrangler deploy --dry-run
@@ -37,6 +38,8 @@ Run local Wrangler with local KV binding/config only. Verify:
 - `GET /api/push/config` returns no-store JSON and honestly reports unavailable without bindings;
 - same-origin `POST /api/push/subscribe` returns 503 when unconfigured and validates/stores only endpoint plus keys when configured locally;
 - unauthenticated `POST /api/push/test` returns 401;
+- unauthenticated `POST /api/telegram/test` returns 401, and with the admin token but no Telegram secrets it returns `503 telegram_not_configured` while sending nothing;
+- `npm run telegram:test` proves one shared decision: baseline/flat/below-threshold/failed-monitor runs send nothing, a genuine change sends exactly one Telegram message, and a second event inside six hours is coalesced;
 - unknown API and page routes return 404;
 - all generated/sitemap routes crawl with zero broken internal links.
 
@@ -46,7 +49,7 @@ Keep local build/crawl, GitHub runner monitor, branch preview, live production a
 
 Deploy to the branch preview first. Crawl homepage, `/status`, key hubs, robots, sitemap, `/api/geo`, push config and all reachable routes. Complete `browser-qa-checklist.md`; if graphical browsers or phones are unavailable, mark those items unverified rather than passed.
 
-Before production push enablement, verify KV binding, encrypted secrets and cron in Cloudflare. After the approved release, test on a physical backgrounded phone. A successful build, config response or push-service acceptance is not proof the device displayed a notification.
+Before production push enablement, verify KV binding, encrypted secrets and cron in Cloudflare. For Telegram, verify the two encrypted secrets, that the bot is a channel admin with post permission, and that `ALERT_SITE_URL` (optional public variable) points at a host readers can actually open — leave it unset to keep the canonical `https://naijacheck.ng/status`. After the approved release, test on a physical backgrounded phone. A successful build, config response or push-service acceptance is not proof the device displayed a notification, and a Telegram `200` is not proof the channel showed the post.
 
 ## Merge/deploy/rollback
 
@@ -56,3 +59,12 @@ Before production push enablement, verify KV binding, encrypted secrets and cron
 4. Watch the deployment and scheduled monitor. Confirm production routing/canonical/domain remain as approved.
 5. Perform production HTTP smoke, crawl and owner phone push test. Keep the page-open watchlist available.
 6. On regression, roll back the Worker deployment/code. Do not overwrite newer genuine observations or fabricate history. If push quotas/secrets/bindings fail, disable push/cron without buying capacity and follow the owner runbook.
+7. Telegram rollback is configuration-only: delete `TELEGRAM_BOT_TOKEN` (and `TELEGRAM_CHAT_ID`) in the Cloudflare dashboard and deploy. The Worker logs `telegram not configured (…)` and no-ops. Web Push, charts, briefing, share, install tip, history, content guides and the `wrangler.jsonc` public variables/KV binding stay untouched.
+
+## Post-merge Telegram checks
+
+1. Confirm the Worker cron still runs eight times a day (`47 */3 * * *`) and that one scheduled run logs either a real change or `no change` — never a crash because Telegram is unset.
+2. Confirm only one Telegram message per genuine burst: compare the channel against `push:critical-state.lastEventSentAt` in KV; the channels share that cooldown.
+3. Confirm the message text: what changed, new value, delta, source name, as-of time in WAT and UTC, and the `/status` link on the approved host.
+4. Confirm the site link matches the approved channel URL (footer and `/status`), and that it is absent when `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL` is unset.
+5. If Telegram delivery fails, record the status code only. Never paste the token, chat id or the failing request URL into an issue.

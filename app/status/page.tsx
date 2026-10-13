@@ -15,6 +15,7 @@ import {
 } from "@/lib/live";
 import { LocalWatchlist, type WatchReading } from "@/components/live/local-watchlist";
 import { PushSettings } from "@/components/push-notifications";
+import { TelegramAlerts } from "@/components/live/telegram-alerts";
 import { DATASET_REGISTRY, stateLabel } from "@/lib/source-registry";
 import { pageMetadata, absUrl } from "@/lib/seo";
 import { ShareControls } from "@/components/share-controls";
@@ -180,6 +181,8 @@ export default function StatusPage() {
       </section>
 
       <PushSettings />
+
+      <TelegramAlerts />
 
       <section aria-labelledby="local-watch" className="space-y-3">
         <h2 id="local-watch" className="text-xl font-bold">Local watch rules</h2>

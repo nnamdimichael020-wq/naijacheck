@@ -59,6 +59,15 @@ Charts are drawn only from observations stored in `data/history.json` (max 56 pe
 - Select **Unsubscribe and clear**; confirm browser subscription and matching KV key are gone. Test an expired endpoint cleanup (404/410) without exposing endpoint data.
 - Confirm genuine-change logic: first observation no send; USD change below ₦5 no send; unhealthy source no send; qualifying USD/fuel change sends; second event inside six hours is delayed/coalesced, never an extra alert.
 
+## Telegram alerts link and channel (owner-configured only)
+
+- With `NEXT_PUBLIC_TELEGRAM_CHANNEL_URL` unset (the default), confirm **no** Telegram link, section or placeholder appears in the footer or on `/status`, and that no Telegram script/iframe is requested.
+- With a real channel URL configured, confirm the footer link and the `/status` "Alerts on Telegram" section render, open the correct `https://t.me/…` channel in a new tab, carry `rel="noopener noreferrer"`, and never ask for a Telegram login, phone number or code.
+- Confirm the copy still states the shared rule (healthy source, newer source time, parallel USD ≥ ₦5 or depot petrol median change, at most one burst every six hours). No copy may promise alerts on unchanged or failed readings.
+- Confirm `/status` reports Web Push and Telegram together: Web Push copy must be unchanged from the previous release.
+- On a phone in a second browser/profile, open the channel from the site link and verify the previous owner test message is visible with its `/status` link working.
+- Confirm the channel posted at most one message per genuine change, and never a message for a baseline, an unchanged reading or a failed monitor.
+
 ## Location, data and local fallback
 
 - Allow, deny and block `/api/geo`; verify fallback, no crash and no caching/sharing of location.
