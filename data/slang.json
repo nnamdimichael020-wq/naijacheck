@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T21:16:17.984Z",
+  "updatedAt": "2026-10-13T02:36:11.073Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "detty-december",
@@ -238,8 +238,8 @@
       "slug": "sharp-sharp",
       "term": "Sharp sharp",
       "kind": "slang",
-      "trend": "quiet",
-      "trendScore": 0,
+      "trend": "steady",
+      "trendScore": 25,
       "confidence": "high",
       "meaning": "Quickly, right now, as soon as possible.",
       "detail": "Sharp sharp is pidgin for fast. You will hear it in offices, markets and families. 'Sharp sharp' can be a polite demand or a light joke. Use it to ask for speed, but remember that in some Nigerian settings it can sound pushy.",
@@ -254,7 +254,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage in Nigerian pidgin.",
-      "mentions7d": 0
+      "mentions7d": 1
     },
     {
       "slug": "owanbe",
