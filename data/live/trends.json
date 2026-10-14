@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-14T00:17:32.516Z",
+  "checkedAt": "2026-10-14T05:00:27.735Z",
   "seeded": false,
   "method": "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
   "limitation": "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
@@ -23,16 +23,16 @@
       "score": 40
     },
     {
-      "slug": "chop-life",
-      "term": "Chop life",
+      "slug": "achalugo",
+      "term": "Achalugo",
       "mentions7d": 2,
       "score": 40
     },
     {
-      "slug": "achalugo",
-      "term": "Achalugo",
-      "mentions7d": 1,
-      "score": 20
+      "slug": "chop-life",
+      "term": "Chop life",
+      "mentions7d": 2,
+      "score": 40
     },
     {
       "slug": "gist",
@@ -128,39 +128,39 @@
   "wiki": [
     {
       "article": "Nigeria",
-      "views7d": 37990,
+      "views7d": 44631,
       "prev7d": 54138,
-      "changePct": -29.8
+      "changePct": -17.6
     },
     {
       "article": "Nigerian naira",
-      "views7d": 3044,
+      "views7d": 3652,
       "prev7d": 3452,
-      "changePct": -11.8
+      "changePct": 5.8
     },
     {
       "article": "Dangote Refinery",
-      "views7d": 387,
+      "views7d": 459,
       "prev7d": 772,
-      "changePct": -49.9
+      "changePct": -40.5
     },
     {
       "article": "Lagos",
-      "views7d": 12975,
+      "views7d": 15210,
       "prev7d": 21200,
-      "changePct": -38.8
+      "changePct": -28.3
     },
     {
       "article": "Joint Admissions and Matriculation Board",
-      "views7d": 606,
+      "views7d": 679,
       "prev7d": 674,
-      "changePct": -10.1
+      "changePct": 0.7
     },
     {
       "article": "Afrobeats",
-      "views7d": 2272,
+      "views7d": 2610,
       "prev7d": 2937,
-      "changePct": -22.6
+      "changePct": -11.1
     }
   ],
   "sources": [

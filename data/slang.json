@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-14T00:17:32.516Z",
+  "updatedAt": "2026-10-14T05:00:27.735Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "detty-december",
     "japa",
     "oblee",
-    "chop-life",
-    "achalugo"
+    "achalugo",
+    "chop-life"
   ],
   "terms": [
     {
@@ -59,8 +59,8 @@
       "slug": "achalugo",
       "term": "Achalugo",
       "kind": "slang",
-      "trend": "quiet",
-      "trendScore": 20,
+      "trend": "steady",
+      "trendScore": 40,
       "confidence": "medium",
       "meaning": "An Igbo expression for a beautiful, graceful woman. Some people also use it for a carefree, go-with-the-flow vibe.",
       "detail": "Achalugo is Igbo. Most usage is a compliment meaning a woman of beauty, grace and character, with some online sources translating it as 'God's treasure' or 'the abode of an eagle'. Gen Z also picked it up for its chill energy, so you will see it used for someone who is calm and unbothered. Check the context before you use it on someone.",
@@ -75,7 +75,7 @@
       ],
       "platform": "TikTok, WhatsApp status",
       "source": "Premium Times year-in-review (Dec 2025), public TikTok explainers (Mar-Aug 2026), Awajis dictionary (Aug 2026). Translations vary.",
-      "mentions7d": 1
+      "mentions7d": 2
     },
     {
       "slug": "sope-purr",
