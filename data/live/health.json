@@ -1,38 +1,38 @@
 {
   "cbn": {
     "ok": true,
-    "checkedAt": "2026-10-14T17:09:10.468Z",
+    "checkedAt": "2026-10-14T21:40:09.150Z",
     "asOf": "2026-10-14T14:00:00.000Z",
-    "lastSuccessfulAt": "2026-10-14T17:09:10.468Z"
+    "lastSuccessfulAt": "2026-10-14T21:40:09.150Z"
   },
   "aboki": {
     "ok": true,
-    "checkedAt": "2026-10-14T17:09:10.468Z",
-    "asOf": "2026-10-14T17:07:00.000Z",
-    "lastSuccessfulAt": "2026-10-14T17:09:10.468Z"
+    "checkedAt": "2026-10-14T21:40:09.150Z",
+    "asOf": "2026-10-14T21:06:00.000Z",
+    "lastSuccessfulAt": "2026-10-14T21:40:09.150Z"
   },
   "openEr": {
     "ok": true,
-    "checkedAt": "2026-10-14T17:09:10.468Z",
+    "checkedAt": "2026-10-14T21:40:09.150Z",
     "asOf": "2026-10-14T00:02:32.000Z",
-    "lastSuccessfulAt": "2026-10-14T17:09:10.468Z"
+    "lastSuccessfulAt": "2026-10-14T21:40:09.150Z"
   },
   "awajis": {
     "ok": true,
-    "checkedAt": "2026-10-14T17:09:10.468Z",
-    "asOf": "2026-10-14T16:21:00.000Z",
-    "lastSuccessfulAt": "2026-10-14T17:09:10.468Z"
+    "checkedAt": "2026-10-14T21:40:09.150Z",
+    "asOf": "2026-10-14T18:21:00.000Z",
+    "lastSuccessfulAt": "2026-10-14T21:40:09.150Z"
   },
   "news": {
     "ok": true,
-    "checkedAt": "2026-10-14T17:09:10.468Z",
-    "asOf": "2026-10-14T17:09:10.468Z",
-    "lastSuccessfulAt": "2026-10-14T17:09:10.468Z"
+    "checkedAt": "2026-10-14T21:40:09.150Z",
+    "asOf": "2026-10-14T21:40:09.150Z",
+    "lastSuccessfulAt": "2026-10-14T21:40:09.150Z"
   },
   "wiki": {
     "ok": true,
-    "checkedAt": "2026-10-14T17:09:10.468Z",
-    "asOf": "2026-10-14T17:09:10.468Z",
-    "lastSuccessfulAt": "2026-10-14T17:09:10.468Z"
+    "checkedAt": "2026-10-14T21:40:09.150Z",
+    "asOf": "2026-10-14T21:40:09.150Z",
+    "lastSuccessfulAt": "2026-10-14T21:40:09.150Z"
   }
 }
