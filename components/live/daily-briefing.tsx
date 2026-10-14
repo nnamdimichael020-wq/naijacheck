@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Activity, ArrowRight, ExternalLink, Newspaper } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Activity, ArrowRight, Newspaper } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChangeBadge } from "@/components/live/change-badge";
 import { MiniSparkline } from "@/components/live/sparkline";
 import { Freshness } from "@/components/live/freshness";
+import { HeadlineList, HeadlineSourceNote } from "@/components/live/headline-card";
 import { LIVE_FEEDS, LIVE_FUEL, LIVE_FX, latestDatasetDelta, latestHeadlines } from "@/lib/live";
 import { DATASET_REGISTRY, stateLabel, type VerificationState } from "@/lib/source-registry";
 import { RATES, naira } from "@/lib/data";
@@ -255,35 +255,10 @@ export function DailyBriefing() {
             No monitored headlines available right now. Check <Link href="/status" className="font-semibold text-primary underline">/status</Link> for feed health.
           </p>
         ) : (
-          <ol className="divide-y text-sm">
-            {headlines.map((item) => (
-              <li key={item.link + item.title} className="py-2 first:pt-1 last:pb-0.5">
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-3">
-                  <div className="min-w-0">
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="font-medium leading-snug text-foreground hover:text-primary hover:underline"
-                    >
-                      {item.title}
-                      <ExternalLink className="ml-1 inline size-3 align-[-1px] opacity-60" aria-hidden="true" />
-                    </a>
-                    <p className="mt-0.5 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px] text-muted-foreground">
-                      <span className="font-medium text-foreground/80">Source: {item.source || "Publisher"}</span>
-                      <span>·</span>
-                      <span>Status: {headlinesRecord.state}</span>
-                      <span>·</span>
-                      <span>As of {formatWatTimestamp(item.published)}</span>
-                    </p>
-                  </div>
-                  <Badge variant="outline" className="w-fit shrink-0 text-[10px]">
-                    {item.topic}
-                  </Badge>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <>
+            <HeadlineList items={headlines} idPrefix="briefing" className="lg:grid-cols-3" />
+            <HeadlineSourceNote className="pt-2" />
+          </>
         )}
       </div>
 
