@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T11:50:04.391Z",
+  "updatedAt": "2026-10-14T17:09:10.468Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "detty-december",
@@ -416,7 +416,7 @@
       "term": "Abeg",
       "kind": "slang",
       "trend": "quiet",
-      "trendScore": 0,
+      "trendScore": 20,
       "confidence": "high",
       "meaning": "Please, or 'come on'. Softens a request or shows you are fed up.",
       "detail": "Abeg is pidgin for 'please'. It can be polite or impatient depending on tone. It's the most common pidgin word in everyday talk.",
@@ -431,7 +431,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage in Nigerian pidgin.",
-      "mentions7d": 0
+      "mentions7d": 1
     },
     {
       "slug": "ehen",
