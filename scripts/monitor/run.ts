@@ -60,6 +60,9 @@ const WATCH = [
   { id: "cbn", label: "Central Bank of Nigeria", url: "https://www.cbn.gov.ng/" },
   { id: "lasrra-requirements", label: "LASRRA registration portal \u2014 documents required at the centre", url: "https://registration.lagosresidents.gov.ng/help/requirements" },
   { id: "lasrra-faq", label: "LASRRA registration portal \u2014 registration FAQ", url: "https://registration.lagosresidents.gov.ng/help/faq" },
+  { id: "frsc-licence-portal", label: "Nigeria Driver's Licence portal (FRSC) \u2014 fee and process pages", url: "https://www.nigeriadriverslicence.org/" },
+  { id: "frsc-dssp", label: "FRSC Driving School Standardisation Programme (certified schools, grades)", url: "https://dssp.frsc.gov.ng/" },
+  { id: "frsc-sla", label: "FRSC Service Level Agreements (fee lines and licence procedures)", url: "https://frsc.gov.ng/wp-content/uploads/2024/05/SLAs-TO-PEBEC.pdf" },
 ];
 
 type Health = Record<string, { ok: boolean; checkedAt: string; asOf?: string | null; error?: string; lastSuccessfulAt?: string | null }>;

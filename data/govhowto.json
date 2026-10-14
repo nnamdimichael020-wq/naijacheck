@@ -52,25 +52,399 @@
       "officialSite": "https://www.nrs.gov.ng", "related": ["cac-business-name", "nin-correction", "learn-budget-80k"], "hustleLink": "/hustle/thrift-fashion"
     },
     {
-      "slug": "drivers-licence-frsc", "title": "Nigerian Driver's Licence: Fresh Application and Renewal (3-Year vs 5-Year)", "short": "A fresh Nigerian driver's licence runs through a certified driving school, a VIO driving test, payment on the official portal, confirmation at your State BIR or MVAA, and biometric capture at an FRSC Drivers Licence Centre. A renewal drops the school and the test but keeps the payment and the capture.",
-      "category": "Transport", "fee": "₦10,350 for three years or ₦15,450 for five years, the last FRSC-published figure we could verify — confirm the current amount in the portal before you pay.", "feeSource": "FRSC Service Level Agreements, Second Edition, April 2024, on frsc.gov.ng. The higher figures widely quoted for 2026 could not be confirmed on any FRSC page, so the amount the portal generates is the one to pay.", "timeline": "FRSC's published standard is a temporary licence issued on the spot at capture, valid for 60 days, with the permanent card collected from the State BIR or MVAA after 60 days. Renewal opens one calendar month before your licence expires.",
-      "steps": ["Sort out your NIN first. It is the identity record the FRSC process runs on, so a mismatch between your NIN and your other documents will stall the application.", "Get a learner's permit from your State Board of Internal Revenue, Motor Licensing Authority or Motor Vehicle Administration Agency.", "Choose a certified driving school from the FRSC Driving School Standardisation Programme list at dssp.frsc.gov.ng. FRSC's service agreement puts the training at 26 sessions, followed by the school's exam and capture.", "Collect your certificate of completion. The certificate number is what calls up your pre-populated record on the official portal.", "Sit the VIO driving test. Pass and you get a Driver's Test Certificate. Fail and you may apply again, but not earlier than one calendar month after the failed test.", "Complete the application online at the official Nigeria Driver's Licence portal and choose three years or five years.", "Pay the licence fee through the portal or at a designated bank, and keep the payment evidence.", "Take the payment to the State BIR or MVAA for confirmation. Applications regularly stall at this step.", "Go to the FRSC Drivers Licence Centre for the vision acuity test, then biometric and bio-data capture.", "Collect the temporary licence, which FRSC issues on the spot with 60 days of validity.", "Collect the permanent card from the State BIR or MVAA after 60 days."],
-      "documents": ["Your NIN", "Learner's permit (fresh applications)", "Driving school certificate of completion (fresh applications)", "VIO Driver's Test Certificate (fresh applications)", "Your expiring licence (renewals)", "Evidence of payment", "Medical certificate of fitness from a designated government hospital (commercial or professional licences)", "Police extract and a sworn affidavit (reissue after loss, theft or damage)", "For a foreign licence exchange: passport data page, the foreign licence, proof of residence, and a letter of authentication or driving history"],
-      "pitfalls": ["Paying for a licence that skips capture. If nobody took your fingerprints and photo at an FRSC centre, the card will not pass FRSC verification at a checkpoint.", "Starting from a link in a WhatsApp group instead of typing the portal address yourself.", "Handing cash to someone at the gate instead of paying against the reference the portal generates.", "Waiting until the licence has already expired. The renewal window opens one calendar month before the expiry date.", "Skipping the payment confirmation at the State BIR or MVAA.", "Assuming the licence fee differs by state. FRSC's own harmonisation documents say the fee is the same across the country; what differs is what a driving school charges and what state agencies charge for the permit and the test.", "Letting more than six months pass after expiry. FRSC requires a fresh driving test before renewal once that much time has elapsed."],
-      "officialSite": "https://frsc.gov.ng", "related": ["nin-correction", "police-character-certificate"], "hustleLink": "/hustle/provision-store",
-      "lastVerified": "2026-10-12",
+      "slug": "drivers-licence-frsc",
+      "title": "Nigerian Driver's Licence: Fresh Application and Renewal (3-Year vs 5-Year)",
+      "short": "A fresh Nigerian driver's licence runs through a certified driving school, a VIO driving test, payment on the official portal, confirmation at your State BIR or MVAA, and biometric capture at an FRSC Drivers Licence Centre. A renewal drops the school and the test but keeps the payment and the capture.",
+      "category": "Transport",
+      "fee": "₦10,350 for three years or ₦15,450 for five years, the last FRSC-published figure we could verify. We re-read FRSC's service agreement and both official portals on 14 October 2026 and no newer published amount was there, so confirm the amount your portal payment page generates before you pay.",
+      "feeSource": "FRSC Service Level Agreements, Second Edition, April 2024, on frsc.gov.ng (re-read 14 October 2026). Neither frsc.gov.ng nor the licence portal's public pages published any payable licence amount on 14 October 2026, so the amount the portal itself generates is the one to pay.",
+      "timeline": "FRSC's published standard is a temporary licence issued on the spot at capture, valid for 60 days, with the permanent card collected from the State BIR or MVAA after 60 days. Renewal opens one calendar month before your licence expires. A licence verification extract through FRSC's own NDL portal is stated to be ready within 10 working days.",
+      "steps":   [
+    "Sort out your NIN first. It is the identity record the FRSC process runs on, so a mismatch between your NIN and your other documents will stall the application.",
+    "Get a learner's permit from your State Board of Internal Revenue, Motor Licensing Authority or Motor Vehicle Administration Agency.",
+    "Choose a certified driving school from the FRSC Driving School Standardisation Programme list at dssp.frsc.gov.ng, and check the grade the school holds before you pay. FRSC's service agreement puts the training at 26 sessions, followed by the school's exam and capture.",
+    "Collect your certificate of completion. The certificate number is what calls up your pre-populated record on the official portal.",
+    "Sit the VIO driving test. Pass and you get a Driver's Test Certificate. Fail and you may apply again, but not earlier than one calendar month after the failed test.",
+    "Complete the application online at the official Nigeria Driver's Licence portal and choose three years or five years.",
+    "Pay the licence fee through the portal or at a designated bank. FRSC's service agreement names FCMB, FBN, Access, UBA, Union and Sky Bank, using the PAYARENA / E-PAYMENT platform, and says to keep the teller. Pay only against a reference the system generates for you.",
+    "Take the payment to the State BIR or MVAA for confirmation. Applications regularly stall at this step.",
+    "Go to the FRSC Drivers Licence Centre for the vision acuity test, then biometric and bio-data capture.",
+    "Expect a biometric investigation on your record at the FRSC Data Centre before the permanent card is produced. FRSC's service agreement runs that check after capture at the DLC.",
+    "Collect the temporary licence, which FRSC issues on the spot with 60 days of validity.",
+    "Collect the permanent card from the State BIR or MVAA after 60 days.",
+    "Activate the eNDL digital licence in the FRSC app once your record is complete. The portal is explicit that fresh applicants must finish the full process including biometric enrolment first, and the app is Android-only at present."
+  ],
+      "documents":   [
+    "Your NIN",
+    "Learner's permit (fresh applications)",
+    "Driving school certificate of completion (fresh applications)",
+    "VIO Driver's Test Certificate (fresh applications)",
+    "Your expiring licence (renewals)",
+    "Evidence of payment",
+    "Medical certificate of fitness from a designated government hospital (commercial or professional licences)",
+    "Police extract and a sworn affidavit (reissue after loss, theft or damage)",
+    "For a foreign licence exchange: passport data page, the foreign licence, proof of residence, and a letter of authentication or driving history",
+    "Bank teller or e-payment receipt from the designated bank, kept for the BIR or MVAA confirmation",
+    "Acknowledgement slip printed from the portal after payment"
+  ],
+      "pitfalls":   [
+    "Paying for a licence that skips capture. If nobody took your fingerprints and photo at an FRSC centre, the card will not pass FRSC verification at a checkpoint.",
+    "Starting from a link in a WhatsApp group instead of typing the portal address yourself.",
+    "Handing cash to someone at the gate instead of paying against the reference the portal generates.",
+    "Waiting until the licence has already expired. The renewal window opens one calendar month before the expiry date.",
+    "Skipping the payment confirmation at the State BIR or MVAA.",
+    "Assuming the licence fee differs by state. FRSC's own harmonisation documents say the fee is the same across the country; what differs is what a driving school charges and what state agencies charge for the permit and the test.",
+    "Letting more than six months pass after expiry. FRSC requires a fresh driving test before renewal once that much time has elapsed.",
+    "Choosing a driving school you have not checked on dssp.frsc.gov.ng. FRSC grades schools, and a school that drops below its minimum standards can have its certification suspended or withdrawn.",
+    "Trusting a 'fast track' that skips the 26 sessions. The only documented bypass we could verify is the foreign-licence reciprocity route, and that is for people who already hold a foreign licence.",
+    "Not printing the application form and the acknowledgement slip after you pay. Both are free on the portal, and you will want them at the centre.",
+    "Paying a fee that is not displayed on the portal's own payment page. A figure that only exists in somebody's message is a quote from a person, not from FRSC."
+  ],
+      "officialSite": "https://frsc.gov.ng",
+      "related": ["nin-correction", "police-character-certificate"],
+      "hustleLink": "/hustle/provision-store",
+      "lastVerified": "2026-10-14",
       "verification": "manual",
       "metaTitle": "Nigerian Driver's Licence: Fresh Application & Renewal (FRSC)",
-      "metaDescription": "The official FRSC route to a Nigerian driver's licence: certified driving school, VIO test, payment, BIR or MVAA confirmation and biometric capture — plus the 3-year vs 5-year choice and how to avoid a fake no-capture card.",
+      "metaDescription": "The official FRSC route to a Nigerian driver's licence: certified driving school and its FRSC grade, VIO test, payment, BIR or MVAA confirmation and biometric capture — plus the 3-year vs 5-year choice, do-it-yourself licence verification, and how to avoid a fake no-capture card.",
       "keywords": ["nigeria drivers licence renewal", "frsc drivers licence requirements", "3 year vs 5 year drivers licence nigeria", "how to renew drivers licence nigeria", "accredited driving school nigeria"],
       "headings": {"cost": "What it costs, and how to confirm the fee before you pay"},
-      "sourceNote": "The steps, the 60-day service standard, the one-month renewal window, the 26-session training requirement, the bypass-capture rule and the fee figures come from FRSC's Service Level Agreements (Second Edition, April 2024) published on frsc.gov.ng, the FRSC ARC Compendium 2024, and the official Nigeria Driver's Licence portal, all read on 12 October 2026. The fee is the weakest figure on this page: it is the most recent FRSC-published amount we could verify, not a confirmed current charge.",
-      "officialLinks": [{"label": "Nigeria Driver's Licence portal — apply, renew, reissue and track", "href": "https://www.nigeriadriverslicence.org/"}, {"label": "FRSC — Driving School Standardisation Programme (certified schools)", "href": "https://dssp.frsc.gov.ng/"}, {"label": "FRSC — driver's licence verification", "href": "https://ndlverification.frsc.gov.ng/verify"}, {"label": "FRSC Service Level Agreements, Second Edition, April 2024 (PDF)", "href": "https://frsc.gov.ng/wp-content/uploads/2024/05/SLAs-TO-PEBEC.pdf"}, {"label": "FRSC — official site", "href": "https://frsc.gov.ng"}],
-      "unverifiedItems": ["The current statutory licence fee. The newest FRSC-published figure we could verify is ₦10,350 for three years and ₦15,450 for five years, dated April 2024. Start the application and pay the amount the portal generates.", "Driving school fees. These are set by each school and are not published nationally, so get the full cost in writing before you enrol.", "Learner's permit and VIO test charges. These are set by state agencies (BIR, MLA or MVAA) and differ by state.", "Card collection time in your state. FRSC's standard is 60 days, but individual centres vary.", "Any figure an agent or a blog quotes that is higher than the amount the portal itself generates."],
-      "extraIntro": ["The last licence fee FRSC has published that we could verify is ₦10,350 for a three-year licence and ₦15,450 for a five-year licence, from FRSC's Service Level Agreements, Second Edition, April 2024. Higher amounts are quoted all over the internet for 2026, but we could not confirm any of them on an FRSC page, so we have left the fee marked as unverified rather than repeat a number we cannot stand behind. The portal generates the amount you actually pay — use that.", "Everything else on this page is firmer. The steps, the 60-day standard, the one-month renewal window and the driving school requirement all come from FRSC documents and the official licence portal, and we read each of them on 12 October 2026."],
-      "extraSections": [{"h2": "Fresh application and renewal, side by side", "paras": ["The two routes share the same spine: online application, payment, payment confirmation, capture, collection. What differs is everything that proves you can actually drive."], "table": {"caption": "FRSC Service Level Agreements (Second Edition, April 2024) and the official Nigeria Driver's Licence portal, read on 12 October 2026.", "columns": ["Step", "Fresh application", "Renewal"], "rows": [["Minimum age", "18 years", "Not applicable — you already hold a licence"], ["Learner's permit", "Required, from State BIR, MLA or MVAA", "Not required"], ["Driving school", "Required. Certified school from dssp.frsc.gov.ng; FRSC sets the training at 26 sessions", "Not required"], ["VIO driving test", "Required", "Only if six months have elapsed since you last held a valid licence"], ["Online application", "Yes", "Yes"], ["Licence fee", "Yes", "Yes"], ["Payment confirmation at State BIR or MVAA", "Yes", "Yes"], ["Vision acuity test and biometric capture at the DLC", "Yes", "Yes"], ["Temporary licence", "Issued on the spot, valid 60 days", "Issued on the spot, valid 60 days"], ["Permanent card", "Collected from State BIR or MVAA after 60 days", "Collected from State BIR or MVAA after 60 days"], ["When you may apply", "Any time, once you are 18 and have finished the steps above", "Within one calendar month before the expiry date"]]}}, {"h2": "Three years or five years: how to choose", "paras": ["FRSC's service charter sets the validity of a Nigerian driver's licence at three or five years, and both options are open to first-time applicants as well as to renewals. The fee lines for both durations appear in FRSC's new-issue procedure and in its renewal procedure.", "Using the last FRSC figures we could verify, five years costs ₦5,100 more than three. In return you skip one renewal cycle: one less payment, one less trip to a capture centre, and one less chance of letting the card lapse and having to sit a driving test again.", "Take the five-year option if your details are settled and you expect to keep driving. Take the three-year option if cash flow is tight right now, or if you expect to change your name or address soon."]}, {"h2": "The driving school step, and why the certificate number matters", "paras": ["FRSC's service agreement is specific here. Pick your school from the certified list on the Driving School Standardisation Programme portal at dssp.frsc.gov.ng, complete the training, and sit the school's exam and capture.", "The school then issues a certificate of completion, and that certificate number is what calls up your pre-populated record on the official portal. If a school cannot show you its certification, or offers to skip the sessions, walk away — the rest of the process will not run without that certificate.", "Driving school charges are not published nationally and vary by school and by state. Ask for the full cost in writing before you enrol, and ask whether it covers the school's exam and capture."]}, {"h2": "How to avoid a fake 'no-capture' licence", "paras": ["This is the single biggest risk on this page, and it is the reason forum threads about licences are unsafe to follow. A card printed without your biometrics ever touching an FRSC machine is not a licence. It is a piece of plastic that fails verification at a checkpoint and leaves you exposed to a fine."], "bullets": ["Fresh applicants must complete the full process including biometric enrolment. There is no legitimate shortcut, and the official portal says so in its own digital licence notice.", "Bypass capture is real, but it is a renewal-only feature. FRSC's service agreement says it is offered only on the 1st, 3rd, 5th, 7th renewal and so on. If you answer NO, your original biometrics are reused on the renewed card.", "Anyone advertising a licence 'without capture' to a first-time applicant is selling a fake.", "Verify a card before you trust it. FRSC runs its own licence verification service at ndlverification.frsc.gov.ng.", "Pay only against the payment reference the portal generates. Never hand cash to somebody who promises to fast-track the file."]}, {"h2": "Commercial and professional licences", "paras": ["A commercial or professional licence has a higher bar. FRSC's service agreement requires the applicant to be 26 or older, to already hold a private licence, and to show evidence of membership of a professional association such as NURTW or NARTO, or a letter of employment from a registered transport company.", "It also requires a medical certificate of fitness from a designated government hospital covering blood pressure, visual acuity and colour blindness, blood sugar for diabetes, chronic arthritis, an EEG screening for epilepsy, and ear defects. The applicant then sits a VIO driving test."]}, {"h2": "If your licence is lost, stolen or damaged", "paras": ["That is a reissue, not a renewal, and the official portal sets out the conditions: obtain a police extract stating the particulars of the loss, damage or defacement, swear an affidavit stating the same facts, and pay the prescribed fee.", "Start from the reissue option on the portal itself. Do not hand the extract and the affidavit to a third party to process on your behalf."]}, {"h2": "Exchanging a foreign licence", "paras": ["FRSC runs a foreign driver's licence reciprocity process through its MVA department. The documents listed are the data page of your international passport, the foreign licence, proof of residence in Nigeria, and a letter of authentication or driving history from the country that issued it.", "You will be referred to the State VIO for a retest, and a Driver's Test Certificate is issued if you pass."]}],
-      "extraFaqs": [{"q": "How much is a Nigerian driver's licence right now?", "a": "The most recent fee FRSC has published that we could verify is ₦10,350 for a three-year licence and ₦15,450 for a five-year licence, from FRSC's Service Level Agreements, Second Edition, April 2024. We could not confirm the higher figures quoted for 2026 on any FRSC page, so start the application in the portal and pay the amount it generates."}, {"q": "When can I renew my licence?", "a": "FRSC's service agreement says the holder of a valid licence may apply for renewal at any time within one calendar month before the expiry date. The official portal words it as from 30 days before expiry. Do not wait until after the card expires."}, {"q": "Do I have to redo driving school when I renew?", "a": "No. Renewal drops the learner's permit, the driving school and the VIO test. The one exception is a driving test, which FRSC requires if six months have elapsed since you last held a valid licence."}, {"q": "What is bypass capture, and can I use it?", "a": "It is a renewal-only feature that lets you reuse your existing biometrics instead of being captured again. FRSC's service agreement says it is available only on the 1st, 3rd, 5th, 7th renewal and so on, not on every renewal. Fresh applicants cannot use it."}, {"q": "How do I check whether a licence is genuine?", "a": "Use FRSC's own licence verification service at ndlverification.frsc.gov.ng. A card produced without biometric capture at an FRSC centre will not verify."}, {"q": "Can a first-time applicant get the five-year licence?", "a": "Yes. The fee lines for both the three-year and the five-year validity appear in FRSC's new-issue procedure as well as in its renewal procedure. You choose the validity during the application."}, {"q": "How long does it take to get the card?", "a": "FRSC's published standard is a temporary licence issued on the spot at capture with 60 days of validity, and the permanent card collected from the State BIR or MVAA after 60 days. FRSC's service agreement also says the reason must be communicated back to the applicant if the permanent card will not be ready inside that standard."}, {"q": "My licence expired more than six months ago. Can I still renew?", "a": "FRSC requires a driving test if six months have elapsed since you last held a valid licence. Everything else about the renewal stays the same."}, {"q": "How much is driving school in Nigeria?", "a": "We could not verify a national figure, so we are not going to quote one. Driving school charges are set by each school and are not published on a national FRSC page. Get the full cost in writing from a certified school before you enrol."}, {"q": "Is the licence fee different in different states?", "a": "FRSC's harmonisation documents state that the licence fee is the same across the country. What differs is what you pay a driving school, and what state agencies charge for the learner's permit and the driving test."}],
-      "extraTakeaways": ["Fresh licence: 18 or older, learner's permit, certified driving school, VIO test, online application, payment, BIR or MVAA confirmation, biometric capture at the DLC.", "Renewal: apply within one calendar month before expiry. No driving school and no VIO test, unless six months have passed since your licence lapsed.", "Temporary licence is issued on the spot and is valid for 60 days. The permanent card comes from the State BIR or MVAA after 60 days.", "The only fee we could verify on an FRSC page is ₦10,350 for three years or ₦15,450 for five years. Confirm the current amount in the portal.", "If nobody captured your biometrics at an FRSC centre, the card is not real."],
+      "sourceNote": "Everything except the fee comes from FRSC documents and FRSC-run portals, all re-read on 14 October 2026: FRSC's Service Level Agreements, Second Edition, April 2024 (fee lines, designated banks, the 26-session standard, bypass capture, the biometric investigation at the FRSC Data Centre and the NDL verification procedure); the Driving School Standardisation Programme portal at dssp.frsc.gov.ng (certification grades, curriculum, instructor certification and sanctions); the NDL verification portal at ndlverification.frsc.gov.ng (the six-step verification request and shipping flow); and the official Nigeria Driver's Licence portal at nigeriadriverslicence.org (application options, the six-step process, reissue conditions and the eNDL digital licence notice). The fee is the weakest figure on this page: ₦10,350 for three years and ₦15,450 for five years is the most recent FRSC-published amount we can read, dated April 2024, and the higher figures quoted in 2026 write-ups could not be confirmed on any FRSC page.",
+      "officialLinks":   [
+    {
+      "label": "Nigeria Driver's Licence portal — apply, renew, reissue and track",
+      "href": "https://www.nigeriadriverslicence.org/"
+    },
+    {
+      "label": "Nigeria Driver's Licence portal — track an application status (application id or licence number)",
+      "href": "https://www.nigeriadriverslicence.org/license/trackStatus"
+    },
+    {
+      "label": "FRSC — Driving School Standardisation Programme: certified schools by state, certification grades and curriculum",
+      "href": "https://dssp.frsc.gov.ng/"
+    },
+    {
+      "label": "FRSC — driver's licence verification portal: submit a request, pay, track and confirm delivery",
+      "href": "https://ndlverification.frsc.gov.ng/"
+    },
+    {
+      "label": "FRSC Service Level Agreements, Second Edition, April 2024 (PDF) — the fee lines, designated banks and licence procedures",
+      "href": "https://frsc.gov.ng/wp-content/uploads/2024/05/SLAs-TO-PEBEC.pdf"
+    },
+    {
+      "label": "FRSC — official site",
+      "href": "https://frsc.gov.ng"
+    }
+  ],
+      "unverifiedItems":   [
+    "The current statutory licence fee. The newest FRSC-published figure we could verify is ₦10,350 for three years and ₦15,450 for five years, from FRSC's Service Level Agreements, Second Edition, April 2024. On 14 October 2026 we re-read that document and both FRSC-run portals and found no newer published amount. Start the application and pay the amount the portal generates.",
+    "The ₦15,000 (three years) and ₦21,000 (five years) figures that circulate in 2026 write-ups and are credited to the FRSC portal. We could not find either amount published anywhere on frsc.gov.ng or on the licence portal's public pages on 14 October 2026, so we are not printing them as the fee.",
+    "Driving school fees, including any charge for the school's own exam and capture. These are set by each school and are not published nationally, so get the full cost in writing before you enrol.",
+    "Learner's permit and VIO test charges. These are set by state agencies (BIR, MLA or MVAA) and differ by state.",
+    "Card collection time in your state. FRSC's standard is 60 days, but individual centres vary.",
+    "Any figure an agent or a blog quotes that is higher than the amount the portal itself generates."
+  ],
+      "extraIntro":   [
+    "The last licence fee FRSC has published that we could verify is ₦10,350 for a three-year licence and ₦15,450 for a five-year licence, from FRSC's Service Level Agreements, Second Edition, April 2024. Higher amounts are quoted all over the internet for 2026, but we could not confirm any of them on an FRSC page, so we have left the fee marked as unverified rather than repeat a number we cannot stand behind. The portal generates the amount you actually pay — use that.",
+    "Everything else on this page is firmer. The steps, the 60-day standard, the one-month renewal window and the driving school requirement all come from FRSC documents and the official licence portal, and we read each of them on 12 October 2026.",
+    "We went back through FRSC's service agreement and the two FRSC-run portals on 14 October 2026 to see whether anything on the fee had moved. Nothing had: no payable amount is published on the public pages we can read, so the fee stays labelled as unverified rather than replaced with a guess.",
+    "What we did find is depth. The grades a driving school is certified in, the bank-and-reference route FRSC's own service agreement describes for payment, the biometric investigation that runs at FRSC's data centre before your card is produced, and the six-step process for verifying a licence yourself are all on this page now, each traceable to an FRSC document or an FRSC-run portal."
+  ],
+      "extraSections":   [
+    {
+      "h2": "Fresh application and renewal, side by side",
+      "paras": [
+        "The two routes share the same spine: online application, payment, payment confirmation, capture, collection. What differs is everything that proves you can actually drive."
+      ],
+      "table": {
+        "caption": "FRSC Service Level Agreements (Second Edition, April 2024) and the official Nigeria Driver's Licence portal, read on 12 October 2026.",
+        "columns": [
+          "Step",
+          "Fresh application",
+          "Renewal"
+        ],
+        "rows": [
+          [
+            "Minimum age",
+            "18 years",
+            "Not applicable — you already hold a licence"
+          ],
+          [
+            "Learner's permit",
+            "Required, from State BIR, MLA or MVAA",
+            "Not required"
+          ],
+          [
+            "Driving school",
+            "Required. Certified school from dssp.frsc.gov.ng; FRSC sets the training at 26 sessions",
+            "Not required"
+          ],
+          [
+            "VIO driving test",
+            "Required",
+            "Only if six months have elapsed since you last held a valid licence"
+          ],
+          [
+            "Online application",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "Licence fee",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "Payment confirmation at State BIR or MVAA",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "Vision acuity test and biometric capture at the DLC",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "Temporary licence",
+            "Issued on the spot, valid 60 days",
+            "Issued on the spot, valid 60 days"
+          ],
+          [
+            "Permanent card",
+            "Collected from State BIR or MVAA after 60 days",
+            "Collected from State BIR or MVAA after 60 days"
+          ],
+          [
+            "When you may apply",
+            "Any time, once you are 18 and have finished the steps above",
+            "Within one calendar month before the expiry date"
+          ]
+        ]
+      }
+    },
+    {
+      "h2": "Three years or five years: how to choose",
+      "paras": [
+        "FRSC's service charter sets the validity of a Nigerian driver's licence at three or five years, and both options are open to first-time applicants as well as to renewals. The fee lines for both durations appear in FRSC's new-issue procedure and in its renewal procedure.",
+        "Using the last FRSC figures we could verify, five years costs ₦5,100 more than three. In return you skip one renewal cycle: one less payment, one less trip to a capture centre, and one less chance of letting the card lapse and having to sit a driving test again.",
+        "Take the five-year option if your details are settled and you expect to keep driving. Take the three-year option if cash flow is tight right now, or if you expect to change your name or address soon."
+      ]
+    },
+    {
+      "h2": "The driving school step, and why the certificate number matters",
+      "paras": [
+        "FRSC's service agreement is specific here. Pick your school from the certified list on the Driving School Standardisation Programme portal at dssp.frsc.gov.ng, complete the training, and sit the school's exam and capture.",
+        "The school then issues a certificate of completion, and that certificate number is what calls up your pre-populated record on the official portal. If a school cannot show you its certification, or offers to skip the sessions, walk away — the rest of the process will not run without that certificate.",
+        "Driving school charges are not published nationally and vary by school and by state. Ask for the full cost in writing before you enrol, and ask whether it covers the school's exam and capture."
+      ]
+    },
+    {
+      "h2": "How to avoid a fake 'no-capture' licence",
+      "paras": [
+        "This is the single biggest risk on this page, and it is the reason forum threads about licences are unsafe to follow. A card printed without your biometrics ever touching an FRSC machine is not a licence. It is a piece of plastic that fails verification at a checkpoint and leaves you exposed to a fine."
+      ],
+      "bullets": [
+        "Fresh applicants must complete the full process including biometric enrolment. There is no legitimate shortcut, and the official portal says so in its own digital licence notice.",
+        "Bypass capture is real, but it is a renewal-only feature. FRSC's service agreement says it is offered only on the 1st, 3rd, 5th, 7th renewal and so on. If you answer NO, your original biometrics are reused on the renewed card.",
+        "Anyone advertising a licence 'without capture' to a first-time applicant is selling a fake.",
+        "Verify a card before you trust it. FRSC runs its own licence verification service at ndlverification.frsc.gov.ng.",
+        "Pay only against the payment reference the portal generates. Never hand cash to somebody who promises to fast-track the file."
+      ]
+    },
+    {
+      "h2": "Commercial and professional licences",
+      "paras": [
+        "A commercial or professional licence has a higher bar. FRSC's service agreement requires the applicant to be 26 or older, to already hold a private licence, and to show evidence of membership of a professional association such as NURTW or NARTO, or a letter of employment from a registered transport company.",
+        "It also requires a medical certificate of fitness from a designated government hospital covering blood pressure, visual acuity and colour blindness, blood sugar for diabetes, chronic arthritis, an EEG screening for epilepsy, and ear defects. The applicant then sits a VIO driving test."
+      ]
+    },
+    {
+      "h2": "If your licence is lost, stolen or damaged",
+      "paras": [
+        "That is a reissue, not a renewal, and the official portal sets out the conditions: obtain a police extract stating the particulars of the loss, damage or defacement, swear an affidavit stating the same facts, and pay the prescribed fee.",
+        "Start from the reissue option on the portal itself. Do not hand the extract and the affidavit to a third party to process on your behalf."
+      ]
+    },
+    {
+      "h2": "Exchanging a foreign licence",
+      "paras": [
+        "FRSC runs a foreign driver's licence reciprocity process through its MVA department. The documents listed are the data page of your international passport, the foreign licence, proof of residence in Nigeria, and a letter of authentication or driving history from the country that issued it.",
+        "You will be referred to the State VIO for a retest, and a Driver's Test Certificate is issued if you pass."
+      ]
+    },
+    {
+      "h2": "Choosing a driving school you can actually check (and what its grade means)",
+      "paras": [
+        "FRSC does more than keep a list of schools: it scores and grades them. The Driving School Standardisation Programme portal at dssp.frsc.gov.ng lets you search certified schools by state, and it publishes the grading table a school is measured against.",
+        "That matters because the certificate of completion is your entry ticket to the rest of the process. If the school is not certified, or is holding a certificate from a school whose certification was suspended, the file stops moving."
+      ],
+      "table": {
+        "caption": "FRSC Driving School Standardisation Programme — assessment and grading of driving schools, dssp.frsc.gov.ng, read 14 October 2026.",
+        "columns": [
+          "Certification level",
+          "Grade",
+          "Score range"
+        ],
+        "rows": [
+          [
+            "Full certification",
+            "A",
+            "90% – 100%"
+          ],
+          [
+            "Certification",
+            "B",
+            "80% – 89%"
+          ],
+          [
+            "Certification",
+            "C",
+            "70% – 79%"
+          ],
+          [
+            "Provisional certification",
+            "D",
+            "60% – 69%"
+          ],
+          [
+            "Provisional certification",
+            "E",
+            "50% – 59%"
+          ],
+          [
+            "Not certified",
+            "F",
+            "Below 50%"
+          ]
+        ]
+      },
+      "bullets": [
+        "Instructors are trained and certified by FRSC as well, and their registration is renewed annually.",
+        "The uniform driver-education curriculum runs to 21 modules. The published course lengths are three months for the Basic Learner Driver Course, two months for the Proficiency course, and one month each for the Executive and Specialised courses.",
+        "FRSC says a proprietor who does not register is prosecuted under the FRSC Act 2007 and the National Road Traffic Regulations 2004, and that certification is suspended or withdrawn when a school drops below the standard.",
+        "Ask your school for its certification grade and its FRSC instructor details before you pay. A school that cannot answer is the wrong school."
+      ]
+    },
+    {
+      "h2": "Where the money goes: the payment route FRSC's own service agreement describes",
+      "paras": [
+        "This is the step where people lose money, so it is worth being precise. FRSC's service agreement says the prescribed licence fee is paid at a designated bank — it names FCMB, FBN, Access, UBA, Union and Sky Bank — using the PAYARENA / E-PAYMENT platform, and is then confirmed at the State BIR or the Motor Vehicle Administration Agency.",
+        "The portal also takes online payment when the application is filed online, and the portal's own six-step summary places payment after the VIO test and before the BIR confirmation. Either way, the shape is the same: a reference is generated for you, the money moves against that reference, and somebody at BIR or MVAA confirms it before biometric capture.",
+        "The bank list is from FRSC's April 2024 service agreement, so read it as the documented route rather than a promise about today's counter list. The principle behind it still holds: no reference, no payment."
+      ],
+      "bullets": [
+        "Never hand cash to a person who cannot show you the payment reference on the portal or on a bank teller.",
+        "Keep the teller or the e-payment receipt. The BIR or MVAA confirmation step runs on it.",
+        "If somebody quotes you a 'current' fee that the portal's payment page does not show, ask them to show you the amount on the portal. If they cannot, treat the figure as unverified."
+      ]
+    },
+    {
+      "h2": "Verifying a licence — do it yourself, from anywhere",
+      "paras": [
+        "FRSC runs its own verification service at ndlverification.frsc.gov.ng. It is the same system an employer, a car-hire company or a foreign licensing authority uses, and you do not need an agent to stand in front of you while you use it.",
+        "The portal describes six steps, and FRSC's service agreement adds the document list and the turnaround."
+      ],
+      "bullets": [
+        "1. Sign up — create an account with a few details.",
+        "2. Fill the verification form — upload an application letter, the front page of the licence, the back page, and any means of ID such as a voter's card, international passport or NIN.",
+        "3. Add shipping details if you want the extract sent to you.",
+        "4. Pay — the verification fee, the shipping fee, or both, with a debit card.",
+        "5. Wait for verification — FRSC's service agreement states the extract should be ready within 10 working days, and the portal mails you progress updates through the review levels. Download the extract from the portal when it is ready.",
+        "6. Confirm delivery — if documents are shipped you get a tracking number, and you mark the request settled on the portal once it arrives."
+      ]
+    },
+    {
+      "h2": "The temporary licence, the permanent card and the eNDL digital licence",
+      "paras": [
+        "After capture at the Drivers Licence Centre, FRSC runs a biometric investigation on your record at its data centre. That check sits between your temporary licence and the permanent card, and it is why a 'captured on paper only' card never survives it.",
+        "The temporary licence is printed and issued on the spot with 60 days of validity, and the permanent card is collected from the State BIR or MVAA after 60 days. FRSC's service agreement also says the reason must be communicated to you if the permanent card will not be produced inside that standard, so ask for it in writing if you are kept waiting.",
+        "The portal also carries a digital licence, the eNDL, activated through an app. Its notice on the portal is blunt: fresh applicants are required to complete the full application process including biometric enrolment before activation, and an expired licence must be renewed first. The app is Android-only at present."
+      ]
+    },
+    {
+      "h2": "The fee we still cannot confirm — and why we will not print a guess",
+      "paras": [
+        "Every other rule on this page comes from a document or portal we can point at. The current statutory fee does not. The newest FRSC-published amount we can read is ₦10,350 for three years and ₦15,450 for five years, in FRSC's Service Level Agreements, Second Edition, April 2024. We re-read that document, this portal and the FRSC site on 14 October 2026 and found no newer published amount.",
+        "In the same round of checking, 2026 write-ups said the fee is now ₦15,000 for three years and ₦21,000 for five years, and credited those figures to the FRSC portal. We could not find either amount published anywhere on frsc.gov.ng or on the licence portal's public pages that day, so we are not printing them as the fee. That is not us being difficult: a figure we cannot trace is exactly the figure an agent will use against you at the gate.",
+        "What you can rely on is the process, not the rumour. Start the application in the portal, look at the amount the payment page generates, pay it against the reference it gives you, and keep the receipt. If a number does not appear on the portal's own payment page, it came from a person."
+      ]
+    }
+  ],
+      "extraFaqs":   [
+    {
+      "q": "How much is a Nigerian driver's licence right now?",
+      "a": "The most recent fee FRSC has published that we could verify is ₦10,350 for a three-year licence and ₦15,450 for a five-year licence, from FRSC's Service Level Agreements, Second Edition, April 2024. We could not confirm the higher figures quoted for 2026 on any FRSC page, so start the application in the portal and pay the amount it generates."
+    },
+    {
+      "q": "When can I renew my licence?",
+      "a": "FRSC's service agreement says the holder of a valid licence may apply for renewal at any time within one calendar month before the expiry date. The official portal words it as from 30 days before expiry. Do not wait until after the card expires."
+    },
+    {
+      "q": "Do I have to redo driving school when I renew?",
+      "a": "No. Renewal drops the learner's permit, the driving school and the VIO test. The one exception is a driving test, which FRSC requires if six months have elapsed since you last held a valid licence."
+    },
+    {
+      "q": "What is bypass capture, and can I use it?",
+      "a": "It is a renewal-only feature that lets you reuse your existing biometrics instead of being captured again. FRSC's service agreement says it is available only on the 1st, 3rd, 5th, 7th renewal and so on, not on every renewal. Fresh applicants cannot use it."
+    },
+    {
+      "q": "How do I check whether a licence is genuine?",
+      "a": "Use FRSC's own licence verification service at ndlverification.frsc.gov.ng. A card produced without biometric capture at an FRSC centre will not verify."
+    },
+    {
+      "q": "Can a first-time applicant get the five-year licence?",
+      "a": "Yes. The fee lines for both the three-year and the five-year validity appear in FRSC's new-issue procedure as well as in its renewal procedure. You choose the validity during the application."
+    },
+    {
+      "q": "How long does it take to get the card?",
+      "a": "FRSC's published standard is a temporary licence issued on the spot at capture with 60 days of validity, and the permanent card collected from the State BIR or MVAA after 60 days. FRSC's service agreement also says the reason must be communicated back to the applicant if the permanent card will not be ready inside that standard."
+    },
+    {
+      "q": "My licence expired more than six months ago. Can I still renew?",
+      "a": "FRSC requires a driving test if six months have elapsed since you last held a valid licence. Everything else about the renewal stays the same."
+    },
+    {
+      "q": "How much is driving school in Nigeria?",
+      "a": "We could not verify a national figure, so we are not going to quote one. Driving school charges are set by each school and are not published on a national FRSC page. Get the full cost in writing from a certified school before you enrol."
+    },
+    {
+      "q": "Is the licence fee different in different states?",
+      "a": "FRSC's harmonisation documents state that the licence fee is the same across the country. What differs is what you pay a driving school, and what state agencies charge for the learner's permit and the driving test."
+    },
+    {
+      "q": "How do I check that a driving school is properly certified?",
+      "a": "Search the school by state on the FRSC Driving School Standardisation Programme portal at dssp.frsc.gov.ng. FRSC grades certified schools from A (90–100% in the assessment) to E (50–59%), and a school scoring below 50% is not certified at all. Instructors are certified by FRSC too and renew annually. Ask for the school's grade and its instructors' details before you pay."
+    },
+    {
+      "q": "Can I verify a driver's licence myself, including from abroad?",
+      "a": "Yes. FRSC runs the verification at ndlverification.frsc.gov.ng: sign up, upload an application letter plus the front and back of the licence and any means of ID, add shipping details if you want the extract posted, and pay the verification and shipping fees by debit card. FRSC's service agreement states the extract should be ready within 10 working days, and shipped documents carry a tracking number you confirm on the portal."
+    },
+    {
+      "q": "Is there a digital driver's licence (eNDL)?",
+      "a": "Yes, and the portal's notice sets the rules. Fresh applicants are required to complete the full application process including biometric enrolment before activating it, and an expired licence has to be renewed first. The eNDL app is currently Android-only. Someone offering to 'activate your eNDL' without the biometric steps is describing a card that will not verify."
+    },
+    {
+      "q": "The portal shows a licence fee that is not the ₦10,350 or ₦15,450 on this page. Which is right?",
+      "a": "Pay the amount the portal's own payment page generates against its reference. We could not verify any newer published fee on an FRSC page when we last checked on 14 October 2026, so we will not print a guess. What we can tell you is what not to do: never pay cash to a person who cannot show you the reference on the portal."
+    },
+    {
+      "q": "How do I track my application without paying an agent?",
+      "a": "Use the portal's own tools: track application status with your application id or licence number and date of birth, print the application form, print the acknowledgement slip, and edit the application if you spot a mistake before capture. Keep every reference. An agent adds nothing at this stage except a fee."
+    },
+    {
+      "q": "Do I really have to complete 26 sessions at a driving school?",
+      "a": "For a fresh private licence, yes — FRSC's service agreement puts the training at 26 sessions with the school's exam and capture, and the certificate number is what calls up your record on the portal. The only documented bypass we could verify is the foreign-licence reciprocity route, where the DSSP portal approves the record and generates a unique identity number for holders of a foreign licence. Renewals skip driving school entirely."
+    }
+  ],
+      "extraTakeaways":   [
+    "Fresh licence: 18 or older, learner's permit, certified driving school, VIO test, online application, payment, BIR or MVAA confirmation, biometric capture at the DLC.",
+    "Renewal: apply within one calendar month before expiry. No driving school and no VIO test, unless six months have passed since your licence lapsed.",
+    "Temporary licence is issued on the spot and is valid for 60 days. The permanent card comes from the State BIR or MVAA after 60 days.",
+    "The only fee we could verify on an FRSC page is ₦10,350 for three years or ₦15,450 for five years. Confirm the current amount in the portal.",
+    "If nobody captured your biometrics at an FRSC centre, the card is not real.",
+    "FRSC grades driving schools from A (90–100% in the assessment) down to E (50–59%); a school scoring below 50% is not certified at all, and its certificate should not be carrying your application.",
+    "You can verify a licence yourself at ndlverification.frsc.gov.ng — sign up, upload an application letter plus both sides of the licence and any means of ID, pay by debit card, and FRSC's service agreement says the extract should be ready within 10 working days."
+  ],
       "extraLinkPaths": ["/howto/nin-correction", "/status", "/learn/spot-fake-job-offers", "/prices/cost-of-living"]
     },
     {
