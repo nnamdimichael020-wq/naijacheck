@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-13T19:16:03.765Z",
+  "updatedAt": "2026-10-14T00:17:32.516Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "detty-december",
     "japa",
-    "chop-life",
     "oblee",
+    "chop-life",
     "achalugo"
   ],
   "terms": [
@@ -150,7 +150,7 @@
       "term": "Japa",
       "kind": "slang",
       "trend": "rising",
-      "trendScore": 80,
+      "trendScore": 60,
       "confidence": "high",
       "meaning": "To migrate or leave Nigeria, usually for work, study or a better life abroad.",
       "detail": "Japa is Yoruba street slang for escaping or running away. Since the mid-2020s it has meant migrating abroad. It shows up in family WhatsApp groups, church prayers and job chats. It is also a big money topic: passports, visas, IELTS and exam fees are all tied to japa.",
@@ -165,7 +165,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage. See our passport and visa guides for the costs.",
-      "mentions7d": 4
+      "mentions7d": 3
     },
     {
       "slug": "soft-life",
@@ -216,8 +216,8 @@
       "slug": "chop-life",
       "term": "Chop life",
       "kind": "slang",
-      "trend": "rising",
-      "trendScore": 60,
+      "trend": "steady",
+      "trendScore": 40,
       "confidence": "high",
       "meaning": "Eating well, enjoying good food, and living the good life through meals.",
       "detail": "Chop is pidgin for eat. Chop life is about enjoying food, sometimes for less money, like buying a plate of jollof and sharing it with friends. It is also a way to talk about the food economy and how far a naira goes at the market.",
@@ -232,14 +232,14 @@
       ],
       "platform": "Instagram, WhatsApp",
       "source": "Common usage in Nigerian pidgin.",
-      "mentions7d": 3
+      "mentions7d": 2
     },
     {
       "slug": "sharp-sharp",
       "term": "Sharp sharp",
       "kind": "slang",
       "trend": "quiet",
-      "trendScore": 20,
+      "trendScore": 0,
       "confidence": "high",
       "meaning": "Quickly, right now, as soon as possible.",
       "detail": "Sharp sharp is pidgin for fast. You will hear it in offices, markets and families. 'Sharp sharp' can be a polite demand or a light joke. Use it to ask for speed, but remember that in some Nigerian settings it can sound pushy.",
@@ -254,7 +254,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage in Nigerian pidgin.",
-      "mentions7d": 1
+      "mentions7d": 0
     },
     {
       "slug": "owanbe",
@@ -350,7 +350,7 @@
       "term": "Gist",
       "kind": "slang",
       "trend": "quiet",
-      "trendScore": 0,
+      "trendScore": 20,
       "confidence": "high",
       "meaning": "News, gossip or a story. 'Give me the gist' means tell me what's happening.",
       "detail": "Gist is a Nigerian English word for information, usually gossip. It moves fast in group chats. Everyone wants the gist, but be careful: gist can mean facts or rumours, so check before you share.",
@@ -365,7 +365,7 @@
       ],
       "platform": "WhatsApp, X",
       "source": "Common usage in Nigerian English.",
-      "mentions7d": 0
+      "mentions7d": 1
     },
     {
       "slug": "jara",

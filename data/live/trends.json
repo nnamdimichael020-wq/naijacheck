@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-13T19:16:03.765Z",
+  "checkedAt": "2026-10-14T00:17:32.516Z",
   "seeded": false,
   "method": "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
   "limitation": "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
@@ -13,12 +13,6 @@
     {
       "slug": "japa",
       "term": "Japa",
-      "mentions7d": 4,
-      "score": 80
-    },
-    {
-      "slug": "chop-life",
-      "term": "Chop life",
       "mentions7d": 3,
       "score": 60
     },
@@ -29,14 +23,20 @@
       "score": 40
     },
     {
+      "slug": "chop-life",
+      "term": "Chop life",
+      "mentions7d": 2,
+      "score": 40
+    },
+    {
       "slug": "achalugo",
       "term": "Achalugo",
       "mentions7d": 1,
       "score": 20
     },
     {
-      "slug": "sharp-sharp",
-      "term": "Sharp sharp",
+      "slug": "gist",
+      "term": "Gist",
       "mentions7d": 1,
       "score": 20
     },
@@ -83,6 +83,12 @@
       "score": 0
     },
     {
+      "slug": "sharp-sharp",
+      "term": "Sharp sharp",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
       "slug": "owanbe",
       "term": "Owanbe",
       "mentions7d": 0,
@@ -97,12 +103,6 @@
     {
       "slug": "sabi",
       "term": "Sabi",
-      "mentions7d": 0,
-      "score": 0
-    },
-    {
-      "slug": "gist",
-      "term": "Gist",
       "mentions7d": 0,
       "score": 0
     },
@@ -128,39 +128,39 @@
   "wiki": [
     {
       "article": "Nigeria",
-      "views7d": 44800,
-      "prev7d": 54500,
-      "changePct": -17.8
+      "views7d": 37990,
+      "prev7d": 54138,
+      "changePct": -29.8
     },
     {
       "article": "Nigerian naira",
-      "views7d": 3554,
-      "prev7d": 3466,
-      "changePct": 2.5
+      "views7d": 3044,
+      "prev7d": 3452,
+      "changePct": -11.8
     },
     {
       "article": "Dangote Refinery",
-      "views7d": 463,
-      "prev7d": 827,
-      "changePct": -44
+      "views7d": 387,
+      "prev7d": 772,
+      "changePct": -49.9
     },
     {
       "article": "Lagos",
-      "views7d": 15454,
-      "prev7d": 20900,
-      "changePct": -26.1
+      "views7d": 12975,
+      "prev7d": 21200,
+      "changePct": -38.8
     },
     {
       "article": "Joint Admissions and Matriculation Board",
-      "views7d": 733,
-      "prev7d": 637,
-      "changePct": 15.1
+      "views7d": 606,
+      "prev7d": 674,
+      "changePct": -10.1
     },
     {
       "article": "Afrobeats",
-      "views7d": 3399,
-      "prev7d": 2088,
-      "changePct": 62.8
+      "views7d": 2272,
+      "prev7d": 2937,
+      "changePct": -22.6
     }
   ],
   "sources": [

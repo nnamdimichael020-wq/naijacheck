@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T19:16:03.765Z",
+  "updatedAt": "2026-10-14T00:17:32.516Z",
   "status": "recent",
   "sources": [
     {
@@ -10,18 +10,18 @@
     {
       "label": "Aboki Forex: black market and CBN widget",
       "url": "https://abokiforex.app/",
-      "asOf": "2026-10-13T19:07:00.000Z"
+      "asOf": "2026-10-13T21:06:00.000Z"
     },
     {
       "label": "open.er-api.com: daily reference rates",
       "url": "https://open.er-api.com/v6/latest/USD",
-      "asOf": "2026-10-12T23:57:31.000Z"
+      "asOf": "2026-10-14T00:02:32.000Z"
     }
   ],
   "official": {
     "USD": 1332.9728,
-    "GBP": 1759.74,
-    "EUR": 1487.39
+    "GBP": 1763.93,
+    "EUR": 1490.09
   },
   "blackMarket": {
     "USD": 1370,
