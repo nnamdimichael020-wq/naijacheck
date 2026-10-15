@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-15T16:59:19.362Z",
+  "checkedAt": "2026-10-15T21:22:12.479Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -12,22 +12,28 @@
       "query": "petrol price Nigeria",
       "items": [
         {
+          "title": "We’ll Consider Fuel Subsidy To Bring Down Petrol Price – Kwankwaso",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVjBJaWVPcjA0TXpqcHFSU3V5aEJYV285cHB1eVFBZWdGek9GY2RoOTc5bGpYN1U0VmVza1dVOEV4ek1ZNURsOVA5X1pCbG0tOVRlOTVxLWM3QnVPWU5BQU1OWmFuZ2Z1ckNhdTdtVGk3YmJkRENVUGRCZjM1bWZtZjg5Mk40NUIzdGRVUUhZajFqR1BSMU9Qc2lHY0U4VjFUSVlLUQ?oc=5",
+          "source": "Channels Television",
+          "published": "2026-10-15T19:50:19.000Z"
+        },
+        {
           "title": "Petrol price cut: Filling stations shut in Kebbi, motorists stranded",
           "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMC0zTFhuRGFELXdNdUYtRUJvZkwxdUptQW5vS20xT3dtbTg4d0dlVS12OS1nWjVzSXJVYXVDMUx2Tmwxdm5Id05meU9DS3hJVllEMjhhbElQeFJILU1GbER4WlpBakVsZUl2ajVJbG5TTU1SZHJ3NHdZRkFiellNU3FBQVc1ckJ6ZXFNV3hWZ1lrZGZCeGVpcTRNTktSM3ZU?oc=5",
           "source": "Daily Post Nigeria",
           "published": "2026-10-15T16:15:57.000Z"
         },
         {
-          "title": "Nigeria’s new petrol discount: Who pays for the ‘no subsidy’ cost margin?",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSThkTVkwaUp5ZTRCNUFMTVF2ekN5djdRYmxFNnlBSlZzMVZVNFpvMFpLSE9nNlYzVnJIOEtyMktIWHMxZmYyQTFmN0g0cWI4QUJuOTFlSG16cTd4akJiYWFtWWluNndhaDMwNldjWElLeEtmemY3dnBBeE5sUHp3Y3hzNUZObE0?oc=5",
-          "source": "Businessfront",
-          "published": "2026-10-15T12:24:23.000Z"
+          "title": "Petrol price cut: Filling stations shut in Kebbi",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORkpCZXlDTExTYTE4NGlaNktyTFNqUUlKV2g5MzJpbGtsT0FRV3pGUGFlb2IxelRFUC1QYkR5b09ESjFBdDJFMWY3Vl8zelpNUEp5NHpYcFE4SnNhbjFIWTFacmJybUx4QzdiSmRVUHFUZjNWNTdGLVdiZS13UVF3ZE41R3FURG1aTm8tVNIBkgFBVV95cUxPZGExMk1TRmFxMjFOSElCRFlQLVZFUlhCNW1PSFpJdUVHbGxlcmpRUWMwWGFsMV9nYm9zdURuTGlBODUzbHVqSTBJMEpISVFxdE16eVpuRXB2cm9ZZDR2aUFOeHhaZjRkb3FOOEJWUzZnZVJIY3V1YWV0bkR1WnJJY1F3Zy1HY2x5b29XWENjNEg3QQ?oc=5",
+          "source": "Vanguard News",
+          "published": "2026-10-15T14:04:35.000Z"
         },
         {
-          "title": "IMF warns Nigeria against subsidy return",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5QYUxYak1rOFFZMVRLVE1sbmFTM0JPOXdkN1BESWpHSVpTUG9obTJ6MmxLT3JGTXZKcXFCbDAtTUlCeFVzdHNWMzVDTElRZ0w4ZjQxQ19PZFkwQjJNbldyTm4zY0QwMWk3Vng1SGh3?oc=5",
-          "source": "Punch Newspapers",
-          "published": "2026-10-14T23:47:25.000Z"
+          "title": "Nigeria’s inflation eases to 14.63% in September, living costs remain high",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOckpGM0FsOE84MFh3Y0RzbEVSdHJ6ZzE3Zjh6V1R3MnFXR1pWVWlfeXZFUzhiNHhEamRtR1dZQWY2YTNwUWJPMWlzbVNhOGxLaWtPbFc3VS1CSkNtcWVlNVlSUlpVcWptSWtRWTkyaGRRWG56b0hadVBMd2tNMnBnRjlvaTBzQUVNbHhBSkJQUWgtVTB4VThHYlFkLWJtTllMb0E?oc=5",
+          "source": "The ICIR",
+          "published": "2026-10-15T16:48:59.000Z"
         },
         {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
@@ -36,16 +42,10 @@
           "published": "2026-10-09T04:26:07.000Z"
         },
         {
-          "title": "Duke: Nigeria Is Paying More To Secure Its Crude Than To Produce It",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRy1ORGdCTm9rWU9lUzBfbXgxSDV1aVh4T2VTNWZEay1RVVZCUUFaMkt6Sk1YX01lOGcxSF9Tal9ZcmJUdGhzYzloOXlSSnVWelFfeVdDckFCckZja29uY1BHY3U0SnZxTWEwalk0WTFYaU9MY0JONUFSdFZGcnVxdk1GVU42TENuV19Ienhqb3pDZw?oc=5",
-          "source": "Arise News",
-          "published": "2026-10-15T10:19:17.000Z"
-        },
-        {
-          "title": "IMF Warns Nigeria Against Restoring Petrol Subsidy",
-          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcGRsbGVPRzQ4NWpIeUxsRkNFaThpRmM5Y29WMGV0VVFLbGJxMFVUSS1SWHJCRFlHVkd4dVBQa21iUHgzTkxRR3F1RF9wS0oyZUdCRnQ2N0dsN3hnZGZ5MFVGWC1MWWQ0S3lHRGpVVlN3NkRMS3NYUnRkWTJKa253Q2lyVHJxVnMtMWE5ZWstS0wtQjQ?oc=5",
-          "source": "Channels Television",
-          "published": "2026-10-14T22:26:29.000Z"
+          "title": "Nigeria’s new petrol discount: Who pays for the ‘no subsidy’ cost margin?",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSThkTVkwaUp5ZTRCNUFMTVF2ekN5djdRYmxFNnlBSlZzMVZVNFpvMFpLSE9nNlYzVnJIOEtyMktIWHMxZmYyQTFmN0g0cWI4QUJuOTFlSG16cTd4akJiYWFtWWluNndhaDMwNldjWElLeEtmemY3dnBBeE5sUHp3Y3hzNUZObE0?oc=5",
+          "source": "Businessfront",
+          "published": "2026-10-15T12:24:23.000Z"
         },
         {
           "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
@@ -54,10 +54,10 @@
           "published": "2026-10-12T13:42:37.000Z"
         },
         {
-          "title": "From steering wheels to bus stops: How rising petrol costs are redefining Nigerians daily life",
-          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUW1VOG1JY09ULTczSDV1eGFONzdXUUl3NVBjOGhVdTN6YkpqVjNuSFFEWXgyTUljR3lhcmxQQWExcEZHSm5OV1BmZnppNF9nWFF4Rm9BVWZaRU1Ma0VYTHVqNF9BcDZsWUxHSWNLNUl0U3RwWmlHZmdkcHJyQ1lRRXUzN0FzOVk3NjhZdEd3UHhfVmduY3NxZmZWdDN4c3NKaHdLRFU0MXQ0c2JiRVIyaWZoQkF5ejB6N3lzcVhEYXZVMkdFUGJSUC04VGRmWl9VTE1qQXNpZHRnZ9IB3wFBVV95cUxQSE54ekZyWWtIUjlvbWJXeDVlTmQ3RXNTM2hOVXZfc0U1WURudE9hVzNBOWdlVHRNbXVSUFRmY1hoaTBUSElwWHNiX2g0RDdFVUxjSWtMcDVnOUpXUDhtZVg2RmF2NkZsRFpqbkdMazVNZXk2RHdmdHFBZVlvRDdvQWtSV1hxNnY2WVZDLVhJNDRGc1hhcXpZcDZYWm5yNGdWMkZMTHIzbXpva2hjYXRjTzNCVERBTHo0c2RST3BBU0o5a010YWdNTF95M1FFelZzY01YOVI2ckZJa0xINDhR?oc=5",
-          "source": "Businessday NG",
-          "published": "2026-10-15T10:08:55.000Z"
+          "title": "Duke: Nigeria Is Paying More To Secure Its Crude Than To Produce It",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRy1ORGdCTm9rWU9lUzBfbXgxSDV1aVh4T2VTNWZEay1RVVZCUUFaMkt6Sk1YX01lOGcxSF9Tal9ZcmJUdGhzYzloOXlSSnVWelFfeVdDckFCckZja29uY1BHY3U0SnZxTWEwalk0WTFYaU9MY0JONUFSdFZGcnVxdk1GVU42TENuV19Ienhqb3pDZw?oc=5",
+          "source": "Arise News",
+          "published": "2026-10-15T10:19:17.000Z"
         }
       ]
     },
@@ -103,10 +103,10 @@
           "published": "2026-10-13T06:16:33.000Z"
         },
         {
-          "title": "Nigerian Naira Softens Against US Dollar, Euro, British Pound",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPa0R0QzA0QXhiLXQwdUlHOUVhYVNDWllyNU01dFNHMnFzNmxGSWNFSzQzMG5nMHVFWTJRZjBqVS1xRE1reXRqMlVnZjZuM0dSSnZsa09iN0dJUjE3STZ5SnBEbVNlZWFTSjhPLWVlbnNOb09QS3plVDVVZU9hbzVENkFkNFpFdzFXU08tdGc2SQ?oc=5",
-          "source": "MarketForces Africa",
-          "published": "2026-10-11T19:54:05.000Z"
+          "title": "Naira To Dollar Exchange Rate Today, July 6, 2026",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNWhZby02cDFyV29BeGg2T1d5NEwyaUo0dlFiM0F0S2VqUzFxb2ZvMDY1cnRYQk5YTW0yVDVKdDNwUWtLQ2tpN1lvSTR0bUVQbldlZ1ladlplaTRidVpWaTJaYmRpd0dOcGVtYkstT1hZcWF5QUgyQmk2bzFOTFV2azZOVUpTakZVTzgtT01Fdw?oc=5",
+          "source": "Channels Television",
+          "published": "2026-07-06T07:00:00.000Z"
         },
         {
           "title": "Dollar to Naira: Exchange Rate Today, October 12, 2026",
@@ -219,10 +219,10 @@
           "published": "2026-07-05T22:22:32.000Z"
         },
         {
-          "title": "MTN, Airtel, glo data bundles: NCC approve 50% increase in price of airtime and data bundles",
-          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5wUkp0TWhBaTFRUEYzeUdkYW1oWi1GTmlYTVNDVVQ5NzBxOEZXNUlpRmJKc3RwS1dLZVBRLUpNdWFVUGp2X3dBR2kxU3k4NU54dG9GTENBc1owcEg20gFiQVVfeXFMTUc1bmZZTnZYa3lscTl6aDdmUEoxdHlqZVo3c0ZCbzZMRDlXZ2lsTFUxVWNBSUFwSlF6RzZId05tOUV0dTcwTl85dGtqdmtRXzV0bFhVRGtYMThZVWdxcFZsUGc?oc=5",
-          "source": "BBC",
-          "published": "2025-01-20T08:00:00.000Z"
+          "title": "Best eSIM for Nigeria - 2026 Review",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5wQ240eks5VkFaZnllaXBXLTFHRnVvVEZCUlM0WjNHQjNQZE5Ydy1yYXFod3lUMy1iaWxZUDBrZ3ZXc3RRVVJZV0ZJSnRTZXFhU2J2UzlfdEdBWF82cnZrUW93?oc=5",
+          "source": "WeeTracker",
+          "published": "2025-12-05T08:00:00.000Z"
         }
       ]
     },
