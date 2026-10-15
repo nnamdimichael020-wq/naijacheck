@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T11:26:43.858Z",
+  "updatedAt": "2026-10-15T16:59:19.362Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "detty-december",
@@ -350,7 +350,7 @@
       "term": "Gist",
       "kind": "slang",
       "trend": "quiet",
-      "trendScore": 17,
+      "trendScore": 0,
       "confidence": "high",
       "meaning": "News, gossip or a story. 'Give me the gist' means tell me what's happening.",
       "detail": "Gist is a Nigerian English word for information, usually gossip. It moves fast in group chats. Everyone wants the gist, but be careful: gist can mean facts or rumours, so check before you share.",
@@ -365,7 +365,7 @@
       ],
       "platform": "WhatsApp, X",
       "source": "Common usage in Nigerian English.",
-      "mentions7d": 1
+      "mentions7d": 0
     },
     {
       "slug": "jara",

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-15T11:26:43.858Z",
+  "checkedAt": "2026-10-15T16:59:19.362Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -12,10 +12,22 @@
       "query": "petrol price Nigeria",
       "items": [
         {
-          "title": "Duke: Nigeria Is Paying More To Secure Its Crude Than To Produce It",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRy1ORGdCTm9rWU9lUzBfbXgxSDV1aVh4T2VTNWZEay1RVVZCUUFaMkt6Sk1YX01lOGcxSF9Tal9ZcmJUdGhzYzloOXlSSnVWelFfeVdDckFCckZja29uY1BHY3U0SnZxTWEwalk0WTFYaU9MY0JONUFSdFZGcnVxdk1GVU42TENuV19Ienhqb3pDZw?oc=5",
-          "source": "Arise News",
-          "published": "2026-10-15T10:20:26.000Z"
+          "title": "Petrol price cut: Filling stations shut in Kebbi, motorists stranded",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMC0zTFhuRGFELXdNdUYtRUJvZkwxdUptQW5vS20xT3dtbTg4d0dlVS12OS1nWjVzSXJVYXVDMUx2Tmwxdm5Id05meU9DS3hJVllEMjhhbElQeFJILU1GbER4WlpBakVsZUl2ajVJbG5TTU1SZHJ3NHdZRkFiellNU3FBQVc1ckJ6ZXFNV3hWZ1lrZGZCeGVpcTRNTktSM3ZU?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-15T16:15:57.000Z"
+        },
+        {
+          "title": "Nigeria’s new petrol discount: Who pays for the ‘no subsidy’ cost margin?",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSThkTVkwaUp5ZTRCNUFMTVF2ekN5djdRYmxFNnlBSlZzMVZVNFpvMFpLSE9nNlYzVnJIOEtyMktIWHMxZmYyQTFmN0g0cWI4QUJuOTFlSG16cTd4akJiYWFtWWluNndhaDMwNldjWElLeEtmemY3dnBBeE5sUHp3Y3hzNUZObE0?oc=5",
+          "source": "Businessfront",
+          "published": "2026-10-15T12:24:23.000Z"
+        },
+        {
+          "title": "IMF warns Nigeria against subsidy return",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5QYUxYak1rOFFZMVRLVE1sbmFTM0JPOXdkN1BESWpHSVpTUG9obTJ6MmxLT3JGTXZKcXFCbDAtTUlCeFVzdHNWMzVDTElRZ0w4ZjQxQ19PZFkwQjJNbldyTm4zY0QwMWk3Vng1SGh3?oc=5",
+          "source": "Punch Newspapers",
+          "published": "2026-10-14T23:47:25.000Z"
         },
         {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
@@ -24,16 +36,16 @@
           "published": "2026-10-09T04:26:07.000Z"
         },
         {
+          "title": "Duke: Nigeria Is Paying More To Secure Its Crude Than To Produce It",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRy1ORGdCTm9rWU9lUzBfbXgxSDV1aVh4T2VTNWZEay1RVVZCUUFaMkt6Sk1YX01lOGcxSF9Tal9ZcmJUdGhzYzloOXlSSnVWelFfeVdDckFCckZja29uY1BHY3U0SnZxTWEwalk0WTFYaU9MY0JONUFSdFZGcnVxdk1GVU42TENuV19Ienhqb3pDZw?oc=5",
+          "source": "Arise News",
+          "published": "2026-10-15T10:19:17.000Z"
+        },
+        {
           "title": "IMF Warns Nigeria Against Restoring Petrol Subsidy",
           "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNcGRsbGVPRzQ4NWpIeUxsRkNFaThpRmM5Y29WMGV0VVFLbGJxMFVUSS1SWHJCRFlHVkd4dVBQa21iUHgzTkxRR3F1RF9wS0oyZUdCRnQ2N0dsN3hnZGZ5MFVGWC1MWWQ0S3lHRGpVVlN3NkRMS3NYUnRkWTJKa253Q2lyVHJxVnMtMWE5ZWstS0wtQjQ?oc=5",
           "source": "Channels Television",
           "published": "2026-10-14T22:26:29.000Z"
-        },
-        {
-          "title": "From steering wheels to bus stops: How rising petrol costs are redefining Nigerians daily life",
-          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUW1VOG1JY09ULTczSDV1eGFONzdXUUl3NVBjOGhVdTN6YkpqVjNuSFFEWXgyTUljR3lhcmxQQWExcEZHSm5OV1BmZnppNF9nWFF4Rm9BVWZaRU1Ma0VYTHVqNF9BcDZsWUxHSWNLNUl0U3RwWmlHZmdkcHJyQ1lRRXUzN0FzOVk3NjhZdEd3UHhfVmduY3NxZmZWdDN4c3NKaHdLRFU0MXQ0c2JiRVIyaWZoQkF5ejB6N3lzcVhEYXZVMkdFUGJSUC04VGRmWl9VTE1qQXNpZHRnZ9IB3wFBVV95cUxQSE54ekZyWWtIUjlvbWJXeDVlTmQ3RXNTM2hOVXZfc0U1WURudE9hVzNBOWdlVHRNbXVSUFRmY1hoaTBUSElwWHNiX2g0RDdFVUxjSWtMcDVnOUpXUDhtZVg2RmF2NkZsRFpqbkdMazVNZXk2RHdmdHFBZVlvRDdvQWtSV1hxNnY2WVZDLVhJNDRGc1hhcXpZcDZYWm5yNGdWMkZMTHIzbXpva2hjYXRjTzNCVERBTHo0c2RST3BBU0o5a010YWdNTF95M1FFelZzY01YOVI2ckZJa0xINDhR?oc=5",
-          "source": "Businessday NG",
-          "published": "2026-10-15T10:08:55.000Z"
         },
         {
           "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
@@ -42,22 +54,10 @@
           "published": "2026-10-12T13:42:37.000Z"
         },
         {
-          "title": "Global crude oil drop raises hopes of petrol reduction in Nigeria",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQjNrMnA1ZGo4UFlJeDFRVHZ5bzRSZ1BGYzJXSlFoMEVLdXZKS1kxMkI3bEVTMWRINU1GVXJEYXZleWVBX3o3RWphNE5UYkpnRnlVbzBEZEJvZnI4V2hXV2UzN1VDWExWZUJzRWhzU1hKRGltR0U3MXYwYmVpMUp2VGpsRTBObURpWGdhU1VxREViQ1dPazlVTkN3NjF2OE0?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-15T08:48:26.000Z"
-        },
-        {
-          "title": "CSJ cautions on FG’s proposal to peg fuel price at N1,350/litre",
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWnFJcHpUU0xMQ1ExcHlXNmZDbzVQWUw0SVBBZWZRUERXLUFOdlJUc3lBbkNiUTdOUHRMMWNjWGJoTHlSZW1hbUZhOGhrYXVkTjNIY1ktRzl2Q2VxMmlrYVNVV0kwMk1HTkNpMENyQUFJQUwyaF9Idk9PSS04SktkYlhVNEZSc2U5UVVz?oc=5",
-          "source": "Blueprint Newspapers",
-          "published": "2026-10-15T05:53:35.000Z"
-        },
-        {
-          "title": "IMF warns Nigeria against subsidy return",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5QYUxYak1rOFFZMVRLVE1sbmFTM0JPOXdkN1BESWpHSVpTUG9obTJ6MmxLT3JGTXZKcXFCbDAtTUlCeFVzdHNWMzVDTElRZ0w4ZjQxQ19PZFkwQjJNbldyTm4zY0QwMWk3Vng1SGh3?oc=5",
-          "source": "Punch Newspapers",
-          "published": "2026-10-14T23:47:25.000Z"
+          "title": "From steering wheels to bus stops: How rising petrol costs are redefining Nigerians daily life",
+          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUW1VOG1JY09ULTczSDV1eGFONzdXUUl3NVBjOGhVdTN6YkpqVjNuSFFEWXgyTUljR3lhcmxQQWExcEZHSm5OV1BmZnppNF9nWFF4Rm9BVWZaRU1Ma0VYTHVqNF9BcDZsWUxHSWNLNUl0U3RwWmlHZmdkcHJyQ1lRRXUzN0FzOVk3NjhZdEd3UHhfVmduY3NxZmZWdDN4c3NKaHdLRFU0MXQ0c2JiRVIyaWZoQkF5ejB6N3lzcVhEYXZVMkdFUGJSUC04VGRmWl9VTE1qQXNpZHRnZ9IB3wFBVV95cUxQSE54ekZyWWtIUjlvbWJXeDVlTmQ3RXNTM2hOVXZfc0U1WURudE9hVzNBOWdlVHRNbXVSUFRmY1hoaTBUSElwWHNiX2g0RDdFVUxjSWtMcDVnOUpXUDhtZVg2RmF2NkZsRFpqbkdMazVNZXk2RHdmdHFBZVlvRDdvQWtSV1hxNnY2WVZDLVhJNDRGc1hhcXpZcDZYWm5yNGdWMkZMTHIzbXpva2hjYXRjTzNCVERBTHo0c2RST3BBU0o5a010YWdNTF95M1FFelZzY01YOVI2ckZJa0xINDhR?oc=5",
+          "source": "Businessday NG",
+          "published": "2026-10-15T10:08:55.000Z"
         }
       ]
     },
@@ -76,7 +76,7 @@
           "title": "Naira Trades N1,332/$1 at Official Market, N1,358/$1 at Black Market |",
           "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOYm5SMjFsNzA0SUpzdEx0b0VlYnFURWxfTjRCZElYcldJbXFSRDJJWkhaUVkzcGJjSkZ3UmEtMHdMMFUzR05oUHBGZVIxNlBxZkwyMnpINHgwVk5Lenh2MnU1bnR3OUswdldZeE94N2JHWDV3Uk9GTHdMcDctS1hDaHQ4X19BeW1mN0Y3ai1pWEwxMm45YUVDdWF3OWU?oc=5",
           "source": "Business Post Nigeria",
-          "published": "2026-10-15T07:52:19.000Z"
+          "published": "2026-10-15T08:07:09.000Z"
         },
         {
           "title": "Current Black Market Dollar to Naira Exchange Rate Today, Thursday, October 15, 2026",
@@ -85,16 +85,16 @@
           "published": "2026-10-15T04:49:59.000Z"
         },
         {
-          "title": "Dollar to Naira exchange rate Today, October 14, 2026: Naira records first appreciation against USD",
-          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNbjZkRkNJN1JtV3hrYXlqa2c4RGlYVDU0VWh0bFNLcDVqMXpRb1lLMmQ3T3FaQ1B5MEl3a3cwQ0xDSTM4VGppMDBLZGw0cEZHeEd2S1FWUV9tTWV6QXNSZkFDWDMyempHVV8yOXl5Wk1EdDFLN1pHM245QnlwbXRPUk9kNW52YkhrTDBMQWxVcGRlSWdROXN3Q2xZX29mVEszNjRYOExMVUVvaWk3bkFYcjdZeGxLeWdnUXpqeDBnX1AxUkFPNksyeg?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-14T20:05:26.000Z"
-        },
-        {
           "title": "Dollar to Naira Exchange Rate Today, October 14, 2026",
           "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGTGQtS1FUN0ZDdGd2aVZDTEEtX2JFWWZwN1YxQXgtYmNuM2FmdzhoSFpjczBsQTFicHJyS3BFTWxrTVBZa1FlMVJyZmdDb19YOG10N1dxMVFod01WZy04eERDcmczd2k4WTdGLUY1em5MQ211SWV1ampjbmxsVGc?oc=5",
           "source": "Techeconomy",
           "published": "2026-10-14T07:32:02.000Z"
+        },
+        {
+          "title": "Dollar to Naira exchange rate Today, October 14, 2026: Naira records first appreciation against USD",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNbjZkRkNJN1JtV3hrYXlqa2c4RGlYVDU0VWh0bFNLcDVqMXpRb1lLMmQ3T3FaQ1B5MEl3a3cwQ0xDSTM4VGppMDBLZGw0cEZHeEd2S1FWUV9tTWV6QXNSZkFDWDMyempHVV8yOXl5Wk1EdDFLN1pHM245QnlwbXRPUk9kNW52YkhrTDBMQWxVcGRlSWdROXN3Q2xZX29mVEszNjRYOExMVUVvaWk3bkFYcjdZeGxLeWdnUXpqeDBnX1AxUkFPNksyeg?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-14T20:05:26.000Z"
         },
         {
           "title": "Dollar to Naira exchange rate today, October 13, 2026",
@@ -103,10 +103,10 @@
           "published": "2026-10-13T06:16:33.000Z"
         },
         {
-          "title": "Return Of Subsidy Could Lead To ₦2,000/Litre Petrol, ₦3,000/$ Exchange Rate — FG",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNay1hUHdNMms0ZmRwWWtOSklEblRvUlVrT2lFOU5xaUJMR0Y2WHpBM1VhMm53RnhISU9sSlNKVWg1a0lMQlZlTWVYcmRWbU4tVEgtcU5ET3N1all0TjlwOEdoLTVwNjdGYWhCcFQydHhrbm9sc0ppVm9yMmdPbEJWMjIwU0xoblFKUTA3UC1zNEVWUlc1bkNjSG5tYm5GLTF5Z19LWlRxTmJqcTgzOHMwRl9Mc1VLWElKZk1rcVdWTzR4UXdhYjNF?oc=5",
-          "source": "Channels Television",
-          "published": "2026-10-08T23:15:21.000Z"
+          "title": "Nigerian Naira Softens Against US Dollar, Euro, British Pound",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPa0R0QzA0QXhiLXQwdUlHOUVhYVNDWllyNU01dFNHMnFzNmxGSWNFSzQzMG5nMHVFWTJRZjBqVS1xRE1reXRqMlVnZjZuM0dSSnZsa09iN0dJUjE3STZ5SnBEbVNlZWFTSjhPLWVlbnNOb09QS3plVDVVZU9hbzVENkFkNFpFdzFXU08tdGc2SQ?oc=5",
+          "source": "MarketForces Africa",
+          "published": "2026-10-11T19:54:05.000Z"
         },
         {
           "title": "Dollar to Naira: Exchange Rate Today, October 12, 2026",
@@ -140,16 +140,16 @@
           "published": "2026-05-15T07:00:00.000Z"
         },
         {
-          "title": "UNILAG Releases 2026/2027 UTME Merit Cut-Off Marks",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBlRUxHSmNRcnA4NFptVkNYcVV3YmU5Q3hYbXNLUEQ2S0NnenI1SmpVR0dmdjRaOTNsXzVHb0EwVVU4R2p4MnRuMDVPT2RSaVRubDZDY0I4SzNYdFhPVmhVamtzOGxRRkNmeERsTWw3MC1tNFBiZDdhS1JILUdNdw?oc=5",
-          "source": "University Of Lagos",
-          "published": "2026-09-16T07:00:00.000Z"
-        },
-        {
           "title": "JAMB: 29 less competitive courses in Nigeria in 2026 and their cut-off marks",
           "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUFctVlBISFY4UU9wWVVuMjFsbUc4Yk9sc2hxODh6RXdtSmdmN1JHVnhPUDdWYXNVdHFPSUNqMVRUQWRuMkNQZlNOZFRXZDl5d1lLTWlOQW96SjdSbFllMmxMUF8yYlBzZWVXb3RoQmlqLTgzMW16bVNYdW5qa214NkMtVjBiUFVNdkpncW0yNjJFOFVFbEtKWEJsMkZLdHpzcDZjNWZVODBmQdIBrwFBVV95cUxOMXZKSVotZVlvWGh2dkpLVEZBeFJtdUxaNk02QzlhMnlHZW41LVVibnpGcU5hNHlIY2xIa1FmQll0d0ZjR1lMMzhONnFhZHVoSWxwczB5ZVdXck94MVIyMTJFcmdTLVhSZ3RMVmh5c0pwdWZNalRFb2trT1VpVkhtQ1pLTE5tYk1zelNlalVNeWVlY29HQXR0bGZDRGViQ2xXZFFZM1FkTndzem1PY3hj?oc=5",
           "source": "The Nation Newspaper",
           "published": "2026-05-12T07:00:00.000Z"
+        },
+        {
+          "title": "UNILAG Releases 2026/2027 UTME Merit Cut-Off Marks",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBlRUxHSmNRcnA4NFptVkNYcVV3YmU5Q3hYbXNLUEQ2S0NnenI1SmpVR0dmdjRaOTNsXzVHb0EwVVU4R2p4MnRuMDVPT2RSaVRubDZDY0I4SzNYdFhPVmhVamtzOGxRRkNmeERsTWw3MC1tNFBiZDdhS1JILUdNdw?oc=5",
+          "source": "University Of Lagos",
+          "published": "2026-09-16T07:00:00.000Z"
         },
         {
           "title": "UTME: JAMB Retains 150 As University Admission Cut-Off Mark",
@@ -256,6 +256,12 @@
           "published": "2025-12-01T08:00:00.000Z"
         },
         {
+          "title": "Now that the Nigeria Immigration Service has doubled passport fees",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOeW5aTGxka1VUdEFSXzF1eUFEUFpnWlpkblZFMkNkMGxYMnU3d011VUxTbVJWalR5ZThWZ1ZtQzRvNU54OU1ic1Y1amNEaEtCSnc5X3hYRDhuZ0V1cHZORE5Va1B6aXpWbFZqakRySm5GZWpnYzdMVENtMVhfWXhhSmphTS1LaW56QmUwVEwydjBrM1BVbC1IMmd4THl6bjBERWcxYVNB0gGrAUFVX3lxTE1mQ3RuZzcyRml6a3poNFNYb3F3NzRhcjVlWng4Rlh2MjJpSWJUNWE2TXFuYV9PQ1lrMkk3Y3hscHd3ZWxqc3BRRGlGWjJCNURrSzI5eGtKN2RxT0Y4WHA4dVg1OF9aSUtDenlfUWkxeUFpdk9MdkR4NFpteE9VNUlNbktVcVZvV1M0Vk5VUkJlTFlMQzV3M1pGT0Z6WTkzMFRtVFFEVzAtRF9oQQ?oc=5",
+          "source": "Vanguard News",
+          "published": "2025-09-04T07:00:00.000Z"
+        },
+        {
           "title": "Nigerian govt approves NIN verification fees for passport services",
           "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNVRmX3FKZmlUVmduakRFenBqVXl1UDhNY1k1WkhKTi0xQkNodUJTSEd4MkJFb21RWTFVRzRaV2IybGFNZ19fYnhSWnZHbVdMRFJrcHBpUXl4djZKODdrZ3I4R3VpS2FLUmd2cG42d0VHN0JzYy1XY18zSHZaRWdUSEdLeUdRM1ZWQnFROHAtU2pTVTJBakEzSFE4WkpGczBBQ3RtaXl4N3V0VHVwWlZXZnpGQVdaUUFKZm5GM0g1VHg?oc=5",
           "source": "Premium Times Nigeria",
@@ -266,12 +272,6 @@
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XUzRZNE5JMFVDdXZFQUJfUzdZMUtvZVI5RlhLN3UtYWtVTE9zemdnNnFvbU5HRGpxR1pqQTAwMjBNemlGZElXa2VwSXJKM29JVWd2RmNNbXRRaDhj0gFiQVVfeXFMTlgwYndFbHJyMV9lTUp0b1dNNzRxOFpSZ2NJajE3eFctRUJQWkhWS21CSExoUk9LQXhJcHNNdmdxV0lKc2RYckk2T0ZTdWxIVlI0ZUdEc0dyNlc5VWJ5ZnctVWc?oc=5",
           "source": "BBC",
           "published": "2025-08-29T07:00:00.000Z"
-        },
-        {
-          "title": "Diaspora groups urge FG to address NIN and passport delays affecting Nigerians abroad",
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUnpCTjNOdk1fMXdvS0wySHRKWFNhUGJ6dzRDNTBhV21VeFFyNEZmNUdqT2hMQ0ZVTTdteUZHY3RJWElEZ3hYbGJUMFNoMlpUQlVPZkl0bEVzdUNGQ1lPY0FiRHJ5RmJDakNTVDFPN1ViYVIxeE9OQURYLXR6d3pIbjFpMmhLUldpZnk1bXhYVl81Q0IzUGJEVDVscGFMMzMwc2NxVTBXVWxrcEdLcU0tbXNRa1I5MVQ2SllBaFVEVdIBxAFBVV95cUxOeHhfOXpBOEhfOXE5aG1JNVBaUkk1cUl0NndHWVptb3ZqWWk0ZHhUSk54dS0xdFlXc2o0eV9ISmM0MWJPMkRVTkxVbXM0aFZRbUpjcEREaGJocjRORmd6WGFpQ05GTXF3YV9yT1pudU5rdEFIYWhiYk83QnAzdmhjcmFwMTE0MjJBODA4a0RCblk1bGdhMXltU1ZXOU1RcjZWZFFJWUlWTHZnVTBjSUpWV3BaOFNZcjhhWU1yMVpuUDVTVS0y?oc=5",
-          "source": "Vanguard News",
-          "published": "2025-12-01T08:00:00.000Z"
         },
         {
           "title": "FG hikes passport fees by 100% - Tribune Online",
