@@ -69,7 +69,33 @@ const sitemap = [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]
 const sitemapPaths = sitemap.map(normalPath).filter(Boolean);
 const sitemapMissing = sitemapPaths.filter((p) => !routes.has(p));
 const indexedNotInSitemap = rows.filter((r) => !r.noindex && r.route !== "/404" && !sitemapPaths.includes(r.route)).map((r) => r.route);
+// A sitemap entry is wrong when it points at a page Google is told not to index or that is excluded from public serving.
+const noindexInSitemap = rows.filter((r) => (r.noindex || r.route === "/404") && sitemapPaths.includes(r.route)).map((r) => r.route);
 const groupedDuplicates = (key) => Object.values(rows.reduce((o, row) => { const v = row[key]; if (v) (o[v] ||= []).push(row.route); return o; }, {})).filter((x) => x.length > 1);
+
+// robots.txt is the third leg of Google-readiness: prove it keeps public pages crawlable,
+// keeps the Worker API and the admin stub out, and advertises exactly the committed canonical sitemap URL.
+const robotsTxt = fs.readFileSync(path.join(root, "robots.txt"), "utf8");
+const disallowRules = robotsTxt
+  .split(/\r?\n/)
+  .map((line) => line.trim())
+  .filter((line) => /^Disallow:/i.test(line))
+  .map((line) => line.replace(/^Disallow:\s*/i, ""))
+  .filter(Boolean);
+const robotsBlocksPath = (p) => disallowRules.some((d) => p.startsWith(d));
+const robots = {
+  allowsAll: /^Allow:\s*\/\s*$/im.test(robotsTxt),
+  publicPagesReachable: !robotsBlocksPath("/prices") && !robotsBlocksPath("/sitemap.xml"),
+  apiBlocked: robotsBlocksPath("/api/geo"),
+  adminBlocked: robotsBlocksPath("/admin"),
+  sitemapUrl: robotsTxt.match(/^Sitemap:\s*(\S+)\s*$/im)?.[1] ?? null,
+};
+const robotsOk =
+  robots.allowsAll &&
+  robots.publicPagesReachable &&
+  robots.apiBlocked &&
+  robots.adminBlocked &&
+  robots.sitemapUrl === `${expectedOrigin}/sitemap.xml`;
 
 // Public config is committed (config/site.ts, wrangler.jsonc), never dashboard-only, because dashboard values
 // were dropped by builds before: the "Get alerts on Telegram" link silently disappeared. This guard fails the
@@ -84,6 +110,8 @@ const findings = {
   sitemapUrls: sitemap.length,
   sitemapMissing,
   indexedNotInSitemap,
+  noindexInSitemap,
+  robots: { ...robots, ok: robotsOk },
   brokenInternalLinks: broken,
   wrongCanonicalHost: rows.filter((r) => r.canonical && !r.canonical.startsWith(expectedOrigin)).map((r) => ({ route: r.route, canonical: r.canonical })),
   missing: {
@@ -102,4 +130,14 @@ const findings = {
 const output = process.argv[2];
 if (output) fs.writeFileSync(output, JSON.stringify(findings, null, 2) + "\n");
 console.log(JSON.stringify({ ...findings, pages: undefined }, null, 2));
-if (broken.length || sitemapMissing.length || findings.wrongCanonicalHost.length || badJsonLd.length || missingTelegramLink.length) process.exitCode = 1;
+if (
+  broken.length ||
+  sitemapMissing.length ||
+  indexedNotInSitemap.length ||
+  noindexInSitemap.length ||
+  !robotsOk ||
+  findings.wrongCanonicalHost.length ||
+  badJsonLd.length ||
+  missingTelegramLink.length
+)
+  process.exitCode = 1;
