@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-16T16:37:52.194Z",
+  "checkedAt": "2026-10-16T21:06:08.441Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -18,16 +18,22 @@
           "published": "2026-10-16T00:56:03.000Z"
         },
         {
+          "title": "BREAKING: NNPCL increases petrol price amid disputed fuel discount",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQeWJLM3FoUlRZMUx0M2FNa3ZtSE9ZR0ZvRWZuZ0RRZHVnZGR0eHdzaXhaRlJtUTJYbkQ0dTQ4M0VWcnNLc3ZJZ3BFTzJfYkpqclVBTWdwNW9uZFBpM05ib2UxLXlEQmE2XzhBRkZMVmxrTzJ3aENNeU5mWENlenMtcEhlM3NzRTBSdHd5NVEtOTVJQkE?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-16T20:00:42.000Z"
+        },
+        {
           "title": "Marketers Reject Government’s Plan to Cap Petrol Price at ₦1,350",
           "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRnRmMk9DSXJGdmZZaUw3bTZhOGlpZk9lUXBFR3F5ZnhRTWx0OURDcGRDTjdtYWdQMHpRTE05WmVBRmFjZnYtR0lFTXBYWnhTd2VDdktaMGZEdzBPTDQ5b2hOWjFCUm1ndHI4Tm0zNmV6NEpvUkJBb2l1SDVoWVlJYjdxdDN0YkRvdkJBZ3p1Y2hGSE05QXBEaGQ5Ml9xZllpX09XYldZTElJSU9sSjVTVXJR?oc=5",
           "source": "Nigeria Info FM",
           "published": "2026-10-16T05:11:35.000Z"
         },
         {
-          "title": "We’ll Consider Fuel Subsidy To Bring Down Petrol Price – Kwankwaso",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVjBJaWVPcjA0TXpqcHFSU3V5aEJYV285cHB1eVFBZWdGek9GY2RoOTc5bGpYN1U0VmVza1dVOEV4ek1ZNURsOVA5X1pCbG0tOVRlOTVxLWM3QnVPWU5BQU1OWmFuZ2Z1ckNhdTdtVGk3YmJkRENVUGRCZjM1bWZtZjg5Mk40NUIzdGRVUUhZajFqR1BSMU9Qc2lHY0U4VjFUSVlLUQ?oc=5",
+          "title": "2027: YPP Candidate Agada Rules Out Fuel Subsidy Return",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMlpocDJvMjhwMjhKSzY4ekNUUlJZYkdWbzRQN1YwOHBIZFRSSlR1ckhqS0hfLTh1TEVXN2EzTkkyb1Q3VzFfckxCN3BIT1pZMTRnU0lVbDlaY2djVUY2LVlJUHhxdlo0Q3VnQ3o5TUI1YzE4Z1ljRWJjOWNBWWJXa3h5bGwtRlJ3MkM1WVQ3UUpUSklYaDdtbw?oc=5",
           "source": "Channels Television",
-          "published": "2026-10-15T19:50:19.000Z"
+          "published": "2026-10-16T20:31:46.000Z"
         },
         {
           "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
@@ -42,22 +48,16 @@
           "published": "2026-10-09T04:26:07.000Z"
         },
         {
-          "title": "Petrol Price: Kwankwaso promises bold move if NDC wins in 2027",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQa1RvTDdvSnVCRGhCNFk4Z0liUVV3LXVUcHdlazVVZFU2UWJZd0JmMXNjUnVIdFp2S0JuRGlVbTRZLU16Ymx3d0ZZM0R2VTRpZUM1R3NrOXJNWGVlQ0FRd1V2V3duUFNnVWJ6N0JXYjR5TWRwUnpfdXlwckVWYTJyajhjS3YyQ3JEOTVxbDVlUjBvdkpPUVNLRE1UZHF0ekJu?oc=5",
-          "source": "PM News Nigeria",
-          "published": "2026-10-16T09:01:16.000Z"
-        },
-        {
           "title": "Subsidy: Kwankwaso says NDC will do ‘whatever necessary’ to reduce petrol prices",
           "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMl91cS0zTGlkcWpudl80RDRpYW1wQjlDVXhKSHFLN29qSHc4WkRsMkMxWXk1VTYzRTRwT3RBRzZOb3BJQ2xjdFFsTUVnYmluNWhaM0NtU2JsRlpIQnlKaE16RVFKaU5ETWZXRGZLTHdGN3VEb251M0dPc3ZvLU1hNDNhWXdUa3NxT3FSOV9sTXVwZ1BKX2RiZVgxaWdOMkRNbDFjSC1jSUxJcHptb0RkX1ZVUFPSAboBQVVfeXFMTm1VU1ZqQmtGZkhfMHZ6TXgwM05sbGdvaVdnSGJ4SlI2R2U3clBrNTFUbTNzcmFKVjlIVDAtOGxGNEJIUWFGcU1CbDZIZUdudUNlWjhXLVJheGpGQjVGNWhIUm1sMEdUajZOTFBWYkQwNUt1RFNVaVRqcDhqZ0ZadjhRSklYdV9qdHozeXcwY09FR1YzUk1SVXQtV19wS0o4NFQ0c25BSVlPRXBraU5Uekh5dTg2bXRmT1Rn?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-16T07:44:54.000Z"
         },
         {
-          "title": "FACT-CHECK: Graphic Misleads on Buhari and Tinubu’s Petrol Prices, Debt Figures and Time in Office",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPWHpybjlXbWZ0MXdMYmV5Nm1KcDUwVXZmTlhWWkVTdmNrTlZEWkQxcmRmT0VlUW1yMGxtVUhQVWpfb2NFZ1h4Y0JJY2Rqa3FPUHlLekJsYzhIUjh1RVhPUjl2SnFwZkhCMndsOHNaNHlWaW9MdWpoUVFBenhsRlBRT3JSbGFocjZ2bWJYbGVRUVRGU0N4S1JHVmk3amwweFd5SmJZTTM4TUNGUHJyVDQtYmlMcWRnQ183ZGd4UTNlUHFwZw?oc=5",
-          "source": "https://factcheckafrica.net/",
-          "published": "2026-10-16T09:58:41.000Z"
+          "title": "Petrol Price: Kwankwaso promises bold move if NDC wins in 2027",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQa1RvTDdvSnVCRGhCNFk4Z0liUVV3LXVUcHdlazVVZFU2UWJZd0JmMXNjUnVIdFp2S0JuRGlVbTRZLU16Ymx3d0ZZM0R2VTRpZUM1R3NrOXJNWGVlQ0FRd1V2V3duUFNnVWJ6N0JXYjR5TWRwUnpfdXlwckVWYTJyajhjS3YyQ3JEOTVxbDVlUjBvdkpPUVNLRE1UZHF0ekJu?oc=5",
+          "source": "PM News Nigeria",
+          "published": "2026-10-16T09:01:16.000Z"
         }
       ]
     },
@@ -73,22 +73,16 @@
           "published": "2026-10-16T05:38:42.000Z"
         },
         {
+          "title": "Dollar-to-Naira exchange rate Today, October 16, 2026: Naira depreciates against USD to end week on negative note",
+          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaUZuX2JpeUlQM2VaTUQ1VnJSUlVVcHV4NkRoeVhnZUx6cTZBN3hPX2RLdjhfUHFEN3lWSERjQ1pqTVRWbkpiVWFDS25kUm1WY0sybmo2eURGT0FpZFdNVjBXbFJ5VVdrdG95enZyYTg5dTVCekZtUW11Y3pPQzVEWkJ5SnR4eUdQLXRvSElXMjVKa3QzRlRwTFhfUnBBMEVWbkh2aU5tZEZGc2F3cEtrVTNIalhpSmZqZ2lTUDlMdnJFQkxZOGxHelYwVDNkbFd1NTlRY2x1LVNvT2s?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-16T20:03:40.000Z"
+        },
+        {
           "title": "Dollar to Naira Exchange Rate Today, October 14, 2026",
           "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGTGQtS1FUN0ZDdGd2aVZDTEEtX2JFWWZwN1YxQXgtYmNuM2FmdzhoSFpjczBsQTFicHJyS3BFTWxrTVBZa1FlMVJyZmdDb19YOG10N1dxMVFod01WZy04eERDcmczd2k4WTdGLUY1em5MQ211SWV1ampjbmxsVGc?oc=5",
           "source": "Techeconomy",
           "published": "2026-10-14T07:32:02.000Z"
-        },
-        {
-          "title": "Naira Appreciates to N1,331/$1 at NAFEM",
-          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5Cek1oSGlqWXlxMmNmeVBqYmYzdUVFa01LQ05yTTNDU0ppdC1TNDZuckxTMkFWODdJUUV6S1k0cExHOGM3TFlFWW5nU1R6bHVyTnByV0k2WkM3U3h6ZDVpaFZYalEtc2h3Qm14anNxbS1SVVg5MGlLVjVR?oc=5",
-          "source": "Business Post Nigeria",
-          "published": "2026-10-16T08:17:26.000Z"
-        },
-        {
-          "title": "Dollar-to-Naira exchange rate Today, October 15, 2026: Naira extends appreciation against USD",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORURyMTlYQjBxaW5JNmM2YWV0OFN4Zk1jVVFINE5oN2k4cWlxV0VUWk9jakhxRHZnN3RVa19ZQ2xiSENJTkZuZ3hrbHZHcTlneHNMcmhxVVo4RVVoeXRqQ0cxX3k0N0xJaDRKTkJKS0ZuQ3R0SkRBN0pOYzJVTFdQV3ZDNlQxLUpzeHhMRHR2blhXa0ZWUkw1aEhMWTRuTUwtT2JrU21VbGczNTdKeXZOTC1pMjAtS3I3WnhJQnRoNko?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-15T21:20:00.000Z"
         },
         {
           "title": "Dollar to Naira Today: Black Market Exchange Rate for Wednesday, October 14, 2026",
@@ -97,22 +91,28 @@
           "published": "2026-10-14T08:34:42.000Z"
         },
         {
+          "title": "Naira Appreciates to N1,331/$1 at NAFEM",
+          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5Cek1oSGlqWXlxMmNmeVBqYmYzdUVFa01LQ05yTTNDU0ppdC1TNDZuckxTMkFWODdJUUV6S1k0cExHOGM3TFlFWW5nU1R6bHVyTnByV0k2WkM3U3h6ZDVpaFZYalEtc2h3Qm14anNxbS1SVVg5MGlLVjVR?oc=5",
+          "source": "Business Post Nigeria",
+          "published": "2026-10-16T08:17:26.000Z"
+        },
+        {
           "title": "Dollar to Naira exchange rate today, October 13, 2026",
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPOEw4NXZUbmdVUXJtN1QyWmVNckpJYmdla1dpa1dXczV0SlJPMFdjeFpuaW1JYnJDbnFvakJhUnlJcUFGSW1md2YyM0VERUhyZklBTGstUkpiQ295WnBfTWRXNW00bkpBX2IzTFp2MUpNRlY5WmFERXk0T0NGT2VrTERtNTBaaUFsY2hUbHZQQ2NYQdIBlwFBVV95cUxQM05fTGhKV2JienhJRENhUnkzVUNISnd6bjVWZ2NEWmlSaVFLM2pvSDBxOXljY0J1M2thblBPbVlhSFVERVlXOUh0M3dGck5HdDMzT2RxVDcxMDU4dm5QeWVaU1kxT0trOUh6UF9fT2JpdEV4cllNYlN0OE85ZWdDRTdpTDlEV0Z3OFNBZy1yZjRsSEd4S1h3?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-13T06:16:33.000Z"
         },
         {
-          "title": "Dollar to Naira: Exchange Rate Today, October 12, 2026",
-          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ISjRuOHdwM1ZOUEtRX2YzcThfSnF2RWRoRUVrS05PZFRrQUxCb1BMZFhoXzRGY0JrMWF4RDlmWFVGRmVBUnhxa0NDTFNRVUQ1bFBpRnFXdDVCcWZmQVhGd3NDdVZsOFZJVFBpLVBTN2pWQmhGTGl5REozMmhaWjg?oc=5",
-          "source": "Techeconomy",
-          "published": "2026-10-12T06:24:09.000Z"
-        },
-        {
           "title": "Current Black Market Dollar to Naira Exchange Rate Today, Thursday, October 15, 2026",
           "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQalJmbHdIc09ZMEJQZnN2YUlsQUc2encxcU0yZEE4X1J1WV8ySTdwSjgtMUVCel9ENUZMS29VVUtJSG9Iam5ucjRjTTNGbkZTVmNZQ3d3bTlycjhRcmhXMDNJT0RHYmtaMVZZSWNNdUVGeDJMbFpLWERyd0kzUnFZZWlFS1JVQTZWSkUyd2c1RUM1MEJfR0F0WUk2cXZlYnBEZWVtTFdidkE1Y0RFcVg4Z0ZYUV93bzQ3V0dn0gHAAUFVX3lxTE1qeVZmSGVKaE1KRktNci1aWGp2S0pEQ08wMEMtSlFpWUlSN29lMWwyb0dIZHlZcTB1c20weDBnbTlzcGQ0czdWb0lndjBYLVliMUR4TjlmcXMzb2VZb0xGMGtCNkhTNWdoaXh2Q0hPbjlrcjRleGVUZGxZb3I4RnJmVUxtSUZIRFIxR1NMTnRCSURhcU02VXZWTVE0dWpaSi1yZ1VHQ0hMaC1JMDNXa2E5YjVHSmVIbXNIVDV2T2NXVw?oc=5",
           "source": "Investors King",
           "published": "2026-10-15T04:49:59.000Z"
+        },
+        {
+          "title": "Dollar to Naira: Exchange Rate Today, October 12, 2026",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ISjRuOHdwM1ZOUEtRX2YzcThfSnF2RWRoRUVrS05PZFRrQUxCb1BMZFhoXzRGY0JrMWF4RDlmWFVGRmVBUnhxa0NDTFNRVUQ1bFBpRnFXdDVCcWZmQVhGd3NDdVZsOFZJVFBpLVBTN2pWQmhGTGl5REozMmhaWjg?oc=5",
+          "source": "Techeconomy",
+          "published": "2026-10-12T06:24:09.000Z"
         }
       ]
     },
