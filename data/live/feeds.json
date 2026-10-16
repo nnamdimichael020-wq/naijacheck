@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-16T11:21:34.857Z",
+  "checkedAt": "2026-10-16T16:37:52.194Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -30,10 +30,16 @@
           "published": "2026-10-15T19:50:19.000Z"
         },
         {
-          "title": "Subsidy: Kwankwaso says NDC will do ‘whatever necessary’ to reduce petrol prices",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMl91cS0zTGlkcWpudl80RDRpYW1wQjlDVXhKSHFLN29qSHc4WkRsMkMxWXk1VTYzRTRwT3RBRzZOb3BJQ2xjdFFsTUVnYmluNWhaM0NtU2JsRlpIQnlKaE16RVFKaU5ETWZXRGZLTHdGN3VEb251M0dPc3ZvLU1hNDNhWXdUa3NxT3FSOV9sTXVwZ1BKX2RiZVgxaWdOMkRNbDFjSC1jSUxJcHptb0RkX1ZVUFPSAboBQVVfeXFMTm1VU1ZqQmtGZkhfMHZ6TXgwM05sbGdvaVdnSGJ4SlI2R2U3clBrNTFUbTNzcmFKVjlIVDAtOGxGNEJIUWFGcU1CbDZIZUdudUNlWjhXLVJheGpGQjVGNWhIUm1sMEdUajZOTFBWYkQwNUt1RFNVaVRqcDhqZ0ZadjhRSklYdV9qdHozeXcwY09FR1YzUk1SVXQtV19wS0o4NFQ0c25BSVlPRXBraU5Uekh5dTg2bXRmT1Rn?oc=5",
-          "source": "Vanguard News",
-          "published": "2026-10-16T07:44:54.000Z"
+          "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SZW45N1ozOVQwY1YxTkU5dENJNVdfV2I4X3ZBeHVSN1hQN2hCUlVBQV9jcWdTdEI1X3FiWXprWHptRTdXMXowSnFvbE5oR1ExU2tET1ZBSXRITUlCelHSAWNBVV95cUxPX0kxWFNtZ0lyWmxPUlRQMGJCel9oTDFsUl9qcTRQcEF4el9WTEJIc3NqY3paZ0FzWFctX2VKTm15Q1J6UTZyWldOQW1Fam9zWnlhYkhlWFpxUTBQOWlOZ3o0U0k?oc=5",
+          "source": "BBC",
+          "published": "2026-10-12T13:42:37.000Z"
+        },
+        {
+          "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
+          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNXZuQks4c2otRlh3czh4dHpPbmR3NXFKbmpjaExMRnZNR0hMMDd1T0tzZjBvR25wMlRYQm1Ydm5NdVhsQm4wUzJIYjdHNzVmb21Xd2huaWxfai1BaEpHTDdnMTZlZGRlOVpSYlQxaXl6aVhNdzlMcE1NbzVkX09EWmlrMlYtYlFETGtrQ2czY2lRS1R6TjI2ZVRyX05WdDZCX0NSLXNySkpDaFBPel84eWJTSklsUlRyNWY4TG9JYzgwbHVZQzVpVk9ldk10cWNwb3JKbVFCZmxGWkFzTnJrOWJPeG0yckd3YlJR?oc=5",
+          "source": "Premium Times Nigeria",
+          "published": "2026-10-09T04:26:07.000Z"
         },
         {
           "title": "Petrol Price: Kwankwaso promises bold move if NDC wins in 2027",
@@ -42,22 +48,16 @@
           "published": "2026-10-16T09:01:16.000Z"
         },
         {
-          "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
-          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SZW45N1ozOVQwY1YxTkU5dENJNVdfV2I4X3ZBeHVSN1hQN2hCUlVBQV9jcWdTdEI1X3FiWXprWHptRTdXMXowSnFvbE5oR1ExU2tET1ZBSXRITUlCelHSAWNBVV95cUxPX0kxWFNtZ0lyWmxPUlRQMGJCel9oTDFsUl9qcTRQcEF4el9WTEJIc3NqY3paZ0FzWFctX2VKTm15Q1J6UTZyWldOQW1Fam9zWnlhYkhlWFpxUTBQOWlOZ3o0U0k?oc=5",
-          "source": "BBC",
-          "published": "2026-10-12T13:42:37.000Z"
-        },
-        {
-          "title": "Petrol price cut: Filling stations shut in Kebbi, motorists stranded",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMC0zTFhuRGFELXdNdUYtRUJvZkwxdUptQW5vS20xT3dtbTg4d0dlVS12OS1nWjVzSXJVYXVDMUx2Tmwxdm5Id05meU9DS3hJVllEMjhhbElQeFJILU1GbER4WlpBakVsZUl2ajVJbG5TTU1SZHJ3NHdZRkFiellNU3FBQVc1ckJ6ZXFNV3hWZ1lrZGZCeGVpcTRNTktSM3ZU?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-15T16:15:57.000Z"
+          "title": "Subsidy: Kwankwaso says NDC will do ‘whatever necessary’ to reduce petrol prices",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMl91cS0zTGlkcWpudl80RDRpYW1wQjlDVXhKSHFLN29qSHc4WkRsMkMxWXk1VTYzRTRwT3RBRzZOb3BJQ2xjdFFsTUVnYmluNWhaM0NtU2JsRlpIQnlKaE16RVFKaU5ETWZXRGZLTHdGN3VEb251M0dPc3ZvLU1hNDNhWXdUa3NxT3FSOV9sTXVwZ1BKX2RiZVgxaWdOMkRNbDFjSC1jSUxJcHptb0RkX1ZVUFPSAboBQVVfeXFMTm1VU1ZqQmtGZkhfMHZ6TXgwM05sbGdvaVdnSGJ4SlI2R2U3clBrNTFUbTNzcmFKVjlIVDAtOGxGNEJIUWFGcU1CbDZIZUdudUNlWjhXLVJheGpGQjVGNWhIUm1sMEdUajZOTFBWYkQwNUt1RFNVaVRqcDhqZ0ZadjhRSklYdV9qdHozeXcwY09FR1YzUk1SVXQtV19wS0o4NFQ0c25BSVlPRXBraU5Uekh5dTg2bXRmT1Rn?oc=5",
+          "source": "Vanguard News",
+          "published": "2026-10-16T07:44:54.000Z"
         },
         {
           "title": "FACT-CHECK: Graphic Misleads on Buhari and Tinubu’s Petrol Prices, Debt Figures and Time in Office",
           "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPWHpybjlXbWZ0MXdMYmV5Nm1KcDUwVXZmTlhWWkVTdmNrTlZEWkQxcmRmT0VlUW1yMGxtVUhQVWpfb2NFZ1h4Y0JJY2Rqa3FPUHlLekJsYzhIUjh1RVhPUjl2SnFwZkhCMndsOHNaNHlWaW9MdWpoUVFBenhsRlBRT3JSbGFocjZ2bWJYbGVRUVRGU0N4S1JHVmk3amwweFd5SmJZTTM4TUNGUHJyVDQtYmlMcWRnQ183ZGd4UTNlUHFwZw?oc=5",
           "source": "https://factcheckafrica.net/",
-          "published": "2026-10-16T09:57:04.000Z"
+          "published": "2026-10-16T09:58:41.000Z"
         }
       ]
     },
@@ -73,12 +73,6 @@
           "published": "2026-10-16T05:38:42.000Z"
         },
         {
-          "title": "Dollar-to-Naira exchange rate Today, October 15, 2026: Naira extends appreciation against USD",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORURyMTlYQjBxaW5JNmM2YWV0OFN4Zk1jVVFINE5oN2k4cWlxV0VUWk9jakhxRHZnN3RVa19ZQ2xiSENJTkZuZ3hrbHZHcTlneHNMcmhxVVo4RVVoeXRqQ0cxX3k0N0xJaDRKTkJKS0ZuQ3R0SkRBN0pOYzJVTFdQV3ZDNlQxLUpzeHhMRHR2blhXa0ZWUkw1aEhMWTRuTUwtT2JrU21VbGczNTdKeXZOTC1pMjAtS3I3WnhJQnRoNko?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-15T21:20:00.000Z"
-        },
-        {
           "title": "Dollar to Naira Exchange Rate Today, October 14, 2026",
           "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGTGQtS1FUN0ZDdGd2aVZDTEEtX2JFWWZwN1YxQXgtYmNuM2FmdzhoSFpjczBsQTFicHJyS3BFTWxrTVBZa1FlMVJyZmdDb19YOG10N1dxMVFod01WZy04eERDcmczd2k4WTdGLUY1em5MQ211SWV1ampjbmxsVGc?oc=5",
           "source": "Techeconomy",
@@ -89,6 +83,12 @@
           "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5Cek1oSGlqWXlxMmNmeVBqYmYzdUVFa01LQ05yTTNDU0ppdC1TNDZuckxTMkFWODdJUUV6S1k0cExHOGM3TFlFWW5nU1R6bHVyTnByV0k2WkM3U3h6ZDVpaFZYalEtc2h3Qm14anNxbS1SVVg5MGlLVjVR?oc=5",
           "source": "Business Post Nigeria",
           "published": "2026-10-16T08:17:26.000Z"
+        },
+        {
+          "title": "Dollar-to-Naira exchange rate Today, October 15, 2026: Naira extends appreciation against USD",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORURyMTlYQjBxaW5JNmM2YWV0OFN4Zk1jVVFINE5oN2k4cWlxV0VUWk9jakhxRHZnN3RVa19ZQ2xiSENJTkZuZ3hrbHZHcTlneHNMcmhxVVo4RVVoeXRqQ0cxX3k0N0xJaDRKTkJKS0ZuQ3R0SkRBN0pOYzJVTFdQV3ZDNlQxLUpzeHhMRHR2blhXa0ZWUkw1aEhMWTRuTUwtT2JrU21VbGczNTdKeXZOTC1pMjAtS3I3WnhJQnRoNko?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-15T21:20:00.000Z"
         },
         {
           "title": "Dollar to Naira Today: Black Market Exchange Rate for Wednesday, October 14, 2026",
@@ -158,16 +158,16 @@
           "published": "2026-05-11T07:00:00.000Z"
         },
         {
+          "title": "JAMB to set 2026 UTME cutoff marks on May 11",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9nWVdNMGVfcDF6ZlF2M2FkN0hsTjFsa1pqOVBQdWJjeHYtU25rVFFHS2RNbUZBWWRVOTh2cjRDUHNVbmpua2duS19YWjB6YTdtc3NiamZzN0phcTdtTkQxRzhRMHJuMk1kdjJwM3hIUQ?oc=5",
+          "source": "Punch Newspapers",
+          "published": "2026-05-03T07:00:00.000Z"
+        },
+        {
           "title": "UTME: JAMB Sets 150 Cut-Off Mark For Varsites, Poly 100",
           "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPMUxudTUzZlp2WWs4dGhveHBEaU9Rd0NyV2VXWFJTN1Q0SkpSZHZ1ajE4akhhT3RHQW9XYU1adzJRaTc1c0MyMHVtaFBLV2pZNWpkNDcwZlVhWk94Nm1meUI1d3pRb0lWS3dCQnN6d2VFeXdBaXIweWtZa2RoajJQT01jVQ?oc=5",
           "source": "The Whistler Newspaper",
           "published": "2026-05-11T07:00:00.000Z"
-        },
-        {
-          "title": "JAMB to decide UTME cut-off marks May 11",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE92Z09PTjhhdHJGVFJ1MDUwNUNVdGFwb0xZRm5aeG1jTU9CTHRsWmFyTFNqUnowQ1hBNEcxRXU1c1hQVXlCOVVHMExrSjQtemFLRlNjOVFaSFdrb2M1RUZubkdCVXpZUWRiNXNBai1B?oc=5",
-          "source": "Punch Newspapers",
-          "published": "2026-05-04T07:00:00.000Z"
         }
       ]
     },
@@ -232,34 +232,34 @@
       "query": "Nigeria passport fee NIN registration",
       "items": [
         {
-          "title": "How rising passport fees threaten Nigerians’ freedom of movement",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZFEwbXNsSTM3SWN1NGRZYlk4Tm5zY0JnU2g1ajRpaVI0ZHZJeXNwZHpTTzh6R2xkYnpyQk5ETXo4WWNMVG85cXNSWDQtaVRiTVlfLTFzZjhMU3p6LXJEQmpaS25ja1FGbzBMVWFqenlDWVhpdzNXNXp2UEp4YW85OEdFMmJCYy13c3AteFY4VDdaMGtxT21iWTZBNGJ4TEVPR0U5Nmt3?oc=5",
-          "source": "The Guardian Nigeria News",
-          "published": "2026-03-03T08:00:00.000Z"
-        },
-        {
           "title": "International passport price in Nigeria: Immigration service announce price increment",
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9mb2NiWEVCTzVHNElmalh3WFlfcnRTSDFvZEVCS0U5dUhQUUVZdXZBZTJoYjBxam5wUml1RmZ3N2VXcDRqV0QwQnBnNzJPdWotaDVVT1E4MXpCUkJq0gFiQVVfeXFMTXlHTXBiNzdxdlR3UTItS1JHNUhtbzE0VEkwbldhd1RpaDYtQWdydHFRWENoc25oX1ltUWVUZVNzZ0VUV0JjdE9RY3d1dG1DclZDaHBSekJwQ29ES2M5VGJ6ZEE?oc=5",
           "source": "BBC",
           "published": "2025-08-28T07:00:00.000Z"
         },
         {
-          "title": "Diaspora groups urge FG to resolve NIN, passport delays abroad",
-          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOR2gwV082a0pWMDRYZzBsWnVWbVh0ZDVWcWlUeGF1d0N0S2tPa25fRlJNb3ZlTlNMS3NDZ1BlMmRfb1RjZUFETWtZbEtXa21zMEUwWk5EcW1ydFV0VUZURkxaSzgzR0hKRmppTXgwMnVJYTZjNGlMNnZLVEw5OFZyR2NZU003NjkwX1E?oc=5",
-          "source": "Punch Newspapers",
-          "published": "2025-12-01T08:00:00.000Z"
-        },
-        {
-          "title": "Diaspora groups urge FG to address NIN and passport delays affecting Nigerians abroad",
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUnpCTjNOdk1fMXdvS0wySHRKWFNhUGJ6dzRDNTBhV21VeFFyNEZmNUdqT2hMQ0ZVTTdteUZHY3RJWElEZ3hYbGJUMFNoMlpUQlVPZkl0bEVzdUNGQ1lPY0FiRHJ5RmJDakNTVDFPN1ViYVIxeE9OQURYLXR6d3pIbjFpMmhLUldpZnk1bXhYVl81Q0IzUGJEVDVscGFMMzMwc2NxVTBXVWxrcEdLcU0tbXNRa1I5MVQ2SllBaFVEVdIBxAFBVV95cUxOeHhfOXpBOEhfOXE5aG1JNVBaUkk1cUl0NndHWVptb3ZqWWk0ZHhUSk54dS0xdFlXc2o0eV9ISmM0MWJPMkRVTkxVbXM0aFZRbUpjcEREaGJocjRORmd6WGFpQ05GTXF3YV9yT1pudU5rdEFIYWhiYk83QnAzdmhjcmFwMTE0MjJBODA4a0RCblk1bGdhMXltU1ZXOU1RcjZWZFFJWUlWTHZnVTBjSUpWV3BaOFNZcjhhWU1yMVpuUDVTVS0y?oc=5",
-          "source": "Vanguard News",
-          "published": "2025-12-01T08:00:00.000Z"
+          "title": "How rising passport fees threaten Nigerians’ freedom of movement",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZFEwbXNsSTM3SWN1NGRZYlk4Tm5zY0JnU2g1ajRpaVI0ZHZJeXNwZHpTTzh6R2xkYnpyQk5ETXo4WWNMVG85cXNSWDQtaVRiTVlfLTFzZjhMU3p6LXJEQmpaS25ja1FGbzBMVWFqenlDWVhpdzNXNXp2UEp4YW85OEdFMmJCYy13c3AteFY4VDdaMGtxT21iWTZBNGJ4TEVPR0U5Nmt3?oc=5",
+          "source": "The Guardian Nigeria News",
+          "published": "2026-03-03T08:00:00.000Z"
         },
         {
           "title": "Nigerian passport now costs 3 times the minimum wage",
           "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxObXY4cmJTcUdJQ1ctQ3JSczRweEZtUlhiR0lZN3FiSm1QVFlDbDdkajdKcG5xMldqOEtxSjhIUTJhMFQ1VkxiUDdyV2FCejI4ZUNWcVlrTXpkdGRlazdDNWFwMEJRdEgwQ2xRY1dBZ3VlQ1hRaVdGNDg1RWFidDVtdTM1U1hGX1VBOU5WNFBrZlQzQjTSAZgBQVVfeXFMT1BnblV3UWh0OGJVeGwxejN2M0NPVWFHenZRdFNVaXRCaXgtVURmeXlUVnpqa3owd3U2N0dkbTVhQjZhY2pMQkNaWndZU3k4RWthR2xXQTdySkZRZl81M0ZPbm54aFE4M3k0RzlOSzRodUpvLXJyREY3Q1BJWjViZVVpLXBoZWpIV0dReHVEZl9tR0VjVThSQy0?oc=5",
           "source": "Businessday NG",
           "published": "2025-09-02T07:00:00.000Z"
+        },
+        {
+          "title": "Immigration hikes passport fees to N100,000, N200,000",
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNTmsxN2U4YWw1ZDhrRjZnSkwzUGlOZVRsSlN0WFFnVXJWd3hkMlNUak9aRnV3eGRDeXlTaFlTSEN6QTZhSUNsT1V6cDJQSEJHdUVtWkcyRGZJYU4zLTdySHBfM0V3VDB3aXJkLUo0YTZzRjVrXy1jajFUVFpiUzhzOTc4NjJSQQ?oc=5",
+          "source": "Punch Newspapers",
+          "published": "2025-08-28T07:00:00.000Z"
+        },
+        {
+          "title": "Now that the Nigeria Immigration Service has doubled passport fees",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOeW5aTGxka1VUdEFSXzF1eUFEUFpnWlpkblZFMkNkMGxYMnU3d011VUxTbVJWalR5ZThWZ1ZtQzRvNU54OU1ic1Y1amNEaEtCSnc5X3hYRDhuZ0V1cHZORE5Va1B6aXpWbFZqakRySm5GZWpnYzdMVENtMVhfWXhhSmphTS1LaW56QmUwVEwydjBrM1BVbC1IMmd4THl6bjBERWcxYVNB0gGrAUFVX3lxTE1mQ3RuZzcyRml6a3poNFNYb3F3NzRhcjVlWng4Rlh2MjJpSWJUNWE2TXFuYV9PQ1lrMkk3Y3hscHd3ZWxqc3BRRGlGWjJCNURrSzI5eGtKN2RxT0Y4WHA4dVg1OF9aSUtDenlfUWkxeUFpdk9MdkR4NFpteE9VNUlNbktVcVZvV1M0Vk5VUkJlTFlMQzV3M1pGT0Z6WTkzMFRtVFFEVzAtRF9oQQ?oc=5",
+          "source": "Vanguard News",
+          "published": "2025-09-04T07:00:00.000Z"
         },
         {
           "title": "Nigerian govt approves NIN verification fees for passport services",
@@ -293,6 +293,12 @@
           "published": "2026-05-07T07:00:00.000Z"
         },
         {
+          "title": "Prices of beans, eggs, garri, others rise monthly despite annual decline — NBS",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWmwzNVE0VmhaUm85bDIzYTZXbTFRQi1MbHduOVdFdDc4ODMxc2EwOWlhYkQtRjhLM0M5bm8wdGNGQVBNbTRFeGZSc056MXhpUUV3WC0zQ1BtR2ExRU10NjVIRVNoT1ZJQ296V01oLXJBVktmMHVuX1pxWXhLcTJPY3Y2eWRLOGZ4d05iNWt0LTFReUFraVNWNDMwWERUbTZGX2Q4VnBuNndIaEhTSnJN0gG0AUFVX3lxTE5YZEpVbFlzd1FmSHlZLW5JY0dXekMtSHFCTUZIb2U2WGkyUmxsXzAyUmd2alVJbGtqNU50Q2t0bFJsWS1FRUxMN01VTnQzaDQzNzJLXzRLWVd6M09sbko2VWJfWjlRTU1DLUV0TTBlNmlTVmJNejRza0NBdVBEb1dOOGtkUVc3OFB0VTAxSlptbWFlTE5qOXFYN2dRNmRjeFFYUUxOX0JGVU9RczF2T0xBdUF0dw?oc=5",
+          "source": "Vanguard News",
+          "published": "2026-05-06T07:00:00.000Z"
+        },
+        {
           "title": "Food Prices Show Mixed Trend Across Lagos Markets",
           "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9yeHM2WEZsd2g3WFZzWmNETHdIR2NXaTl3Y0ltcG44SW9xMDJQSXJqMnJyUUp3S2lfRlRhRUxLTUw3eGFhbDhxQlk3ZXZCRTdzcG9zdDZwbWIxaDNkOGk4YkxxeF9tQjVzRXdQSkRpUVdrZWpIanFiUHZId1I0UQ?oc=5",
           "source": "Independent Newspaper Nigeria",
@@ -303,12 +309,6 @@
           "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNFRWTV9GWUstSGJNOXRBZVNxeGt1b2FVaWhoY2VWRU10QmV3MzBYa05sd2pFVG5lSlpnWlFqUHBOQ0w4em14NGJsOFdnOTdUSWZiYTg1MHY2VndEdVhLM0lnNjh2VGdoZk5mMTNJRDhvWFhOSzAwV3RwYWNPazVTZFh4T21YUQ?oc=5",
           "source": "PM News Nigeria",
           "published": "2026-07-12T07:00:00.000Z"
-        },
-        {
-          "title": "Prices of beans, eggs, garri, others rise monthly despite annual decline — NBS",
-          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWmwzNVE0VmhaUm85bDIzYTZXbTFRQi1MbHduOVdFdDc4ODMxc2EwOWlhYkQtRjhLM0M5bm8wdGNGQVBNbTRFeGZSc056MXhpUUV3WC0zQ1BtR2ExRU10NjVIRVNoT1ZJQ296V01oLXJBVktmMHVuX1pxWXhLcTJPY3Y2eWRLOGZ4d05iNWt0LTFReUFraVNWNDMwWERUbTZGX2Q4VnBuNndIaEhTSnJN0gG0AUFVX3lxTE5YZEpVbFlzd1FmSHlZLW5JY0dXekMtSHFCTUZIb2U2WGkyUmxsXzAyUmd2alVJbGtqNU50Q2t0bFJsWS1FRUxMN01VTnQzaDQzNzJLXzRLWVd6M09sbko2VWJfWjlRTU1DLUV0TTBlNmlTVmJNejRza0NBdVBEb1dOOGtkUVc3OFB0VTAxSlptbWFlTE5qOXFYN2dRNmRjeFFYUUxOX0JGVU9RczF2T0xBdUF0dw?oc=5",
-          "source": "Vanguard News",
-          "published": "2026-05-06T07:00:00.000Z"
         },
         {
           "title": "Food Prices Crash Further In Abuja",
@@ -323,16 +323,16 @@
           "published": "2025-11-17T08:00:00.000Z"
         },
         {
-          "title": "Market Survey: Rice, garri, beans prices surge in Lagos",
-          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNLWY0aHJVbzFvX1FWRWlsZG5RaGJmczJVRHV2emc2WEtNNDJzWjc3SURQQmMwX3hyVGpabS1qVTFtRkJfWHdmM1MxblBBMmszMU16RFBvRjZ1OUo3X0dWeFlEdm1Lb2JSZGc2WEphSjZ1bHBhUlNFTWM0YlpGV2ZIdUpGdjE?oc=5",
-          "source": "Peoples Gazette Nigeria",
-          "published": "2025-03-16T07:00:00.000Z"
-        },
-        {
           "title": "Food Prices Drop As Festive Season Approaches",
           "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE41NmJpZVp5M2p3cDRMWm5CSE1lMEE3SlNMUHRhMFVZaHFJN0cyNVJZbTM2VmtaN2FLMTJZNmJtZDdhak1kaDJxcl9VZXQ3di1kZzZtM18wSUVoYnVadkVWeUJzS29IS0NMdlJ6dGZKdTNwQzVLVFhj?oc=5",
           "source": "LEADERSHIP Newspapers",
           "published": "2025-12-06T01:26:36.000Z"
+        },
+        {
+          "title": "Sellers, buyers joyous as food prices drop in Benue, Abia, Imo, Borno, others",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQT3lPb0JVUDlCRnZiSkRNRks4c3ZCek85V2NBNXhfLWxybExjbDBPODd3X05BZjBCWEViQ0l2TzZNa3BJVkl4YldqaWxEd1M4X05uV0ZrbTFHOUxJT1hfTl80Zm5CbkZMOUhKaWRIanlaLU95aWREcDZGa1kzN0tMWnZGWUlBbW15THcxaTRnZmE2UFpLeWQ5RHg5N00?oc=5",
+          "source": "Peoples Gazette Nigeria",
+          "published": "2025-11-16T08:00:00.000Z"
         }
       ]
     }
