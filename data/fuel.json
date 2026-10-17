@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-17T15:32:45.839Z",
+  "updatedAt": "2026-10-17T20:35:27.749Z",
   "sources": [
     {
       "label": "Awajis fuel tables (petroleumprice.ng depot data)",
       "url": "https://awajis.com/fuel-price-in-nigeria-today/",
-      "asOf": "2026-10-17T15:21:00.000Z"
+      "asOf": "2026-10-17T18:21:00.000Z"
     },
     {
       "label": "NNPC and Dangote pump and gantry prices: see news feed. Not auto-parsed.",

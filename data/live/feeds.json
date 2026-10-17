@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-17T15:32:45.839Z",
+  "checkedAt": "2026-10-17T20:35:27.749Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -24,12 +24,6 @@
           "published": "2026-10-17T09:18:46.000Z"
         },
         {
-          "title": "NNPCL increases petrol price amid disputed fuel discount",
-          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQeWJLM3FoUlRZMUx0M2FNa3ZtSE9ZR0ZvRWZuZ0RRZHVnZGR0eHdzaXhaRlJtUTJYbkQ0dTQ4M0VWcnNLc3ZJZ3BFTzJfYkpqclVBTWdwNW9uZFBpM05ib2UxLXlEQmE2XzhBRkZMVmxrTzJ3aENNeU5mWENlenMtcEhlM3NzRTBSdHd5NVEtOTVJQkE?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-16T20:00:42.000Z"
-        },
-        {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
           "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNXZuQks4c2otRlh3czh4dHpPbmR3NXFKbmpjaExMRnZNR0hMMDd1T0tzZjBvR25wMlRYQm1Ydm5NdVhsQm4wUzJIYjdHNzVmb21Xd2huaWxfai1BaEpHTDdnMTZlZGRlOVpSYlQxaXl6aVhNdzlMcE1NbzVkX09EWmlrMlYtYlFETGtrQ2czY2lRS1R6TjI2ZVRyX05WdDZCX0NSLXNySkpDaFBPel84eWJTSklsUlRyNWY4TG9JYzgwbHVZQzVpVk9ldk10cWNwb3JKbVFCZmxGWkFzTnJrOWJPeG0yckd3YlJR?oc=5",
           "source": "Premium Times Nigeria",
@@ -42,22 +36,28 @@
           "published": "2026-10-12T13:42:37.000Z"
         },
         {
+          "title": "MRS, other Nigerian filling stations increase petrol pump price",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQbVI4M25MMldGZ1dhU1FNYVcwd2U1UFpJX1Z5ME9ETFZ0NlU5NFVaMGl3cXRzaEVzTDJuLVRMSFNOMW9mU3dzV212Wnd5UGlmZE5yNVprWTdfVXJKdV84NmVkXzhSRHppbnNvN0hvWHdWUU9ZNllYc1BVWGhSdUpMNzZ5Z0QtbkphckJrc3E5Q0k5UVBVOURZbHYtUQ?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-11T14:09:57.000Z"
+        },
+        {
           "title": "2027: YPP Candidate Agada Rules Out Fuel Subsidy Return",
           "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMlpocDJvMjhwMjhKSzY4ekNUUlJZYkdWbzRQN1YwOHBIZFRSSlR1ckhqS0hfLTh1TEVXN2EzTkkyb1Q3VzFfckxCN3BIT1pZMTRnU0lVbDlaY2djVUY2LVlJUHhxdlo0Q3VnQ3o5TUI1YzE4Z1ljRWJjOWNBWWJXa3h5bGwtRlJ3MkM1WVQ3UUpUSklYaDdtbw?oc=5",
           "source": "Channels Television",
           "published": "2026-10-17T06:47:50.000Z"
         },
         {
-          "title": "Marketers Reject Government’s Plan to Cap Petrol Price at ₦1,350",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRnRmMk9DSXJGdmZZaUw3bTZhOGlpZk9lUXBFR3F5ZnhRTWx0OURDcGRDTjdtYWdQMHpRTE05WmVBRmFjZnYtR0lFTXBYWnhTd2VDdktaMGZEdzBPTDQ5b2hOWjFCUm1ndHI4Tm0zNmV6NEpvUkJBb2l1SDVoWVlJYjdxdDN0YkRvdkJBZ3p1Y2hGSE05QXBEaGQ5Ml9xZllpX09XYldZTElJSU9sSjVTVXJR?oc=5",
-          "source": "Nigeria Info FM",
-          "published": "2026-10-16T05:11:35.000Z"
-        },
-        {
           "title": "Tinubu Government Announces 30-Day Petrol Discount At NNPC Stations, Prioritises Public Transporters",
           "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRUt3VkpYcTdnSjdmVWVRQ0M4aWg1M2Z0My1IaEEwQ1pSV2FEbEpQWGM0bEVnRU1RUmYyMERXQlZXLVFLZU1wSXhOX21SODRxbTlYc1Ftb29NNEJWRmhJbV9RRW1nOWlaLURTejB2V3dFZTJ5ZTNvQTJYNTVYNUkxRUc5b0Z5dWJvSjFhLTVyUkxUbWNKaTVLYzFKbnJzVDZydE9sY1dwUWFSS1BleFM5aU9tMkhicTJkaEZIb2VJTQ?oc=5",
           "source": "Sahara Reporters",
           "published": "2026-10-08T07:00:00.000Z"
+        },
+        {
+          "title": "Marketers Reject Government’s Plan to Cap Petrol Price at ₦1,350",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRnRmMk9DSXJGdmZZaUw3bTZhOGlpZk9lUXBFR3F5ZnhRTWx0OURDcGRDTjdtYWdQMHpRTE05WmVBRmFjZnYtR0lFTXBYWnhTd2VDdktaMGZEdzBPTDQ5b2hOWjFCUm1ndHI4Tm0zNmV6NEpvUkJBb2l1SDVoWVlJYjdxdDN0YkRvdkJBZ3p1Y2hGSE05QXBEaGQ5Ml9xZllpX09XYldZTElJSU9sSjVTVXJR?oc=5",
+          "source": "Nigeria Info FM",
+          "published": "2026-10-16T05:11:35.000Z"
         }
       ]
     },
@@ -85,16 +85,16 @@
           "published": "2026-10-14T07:32:02.000Z"
         },
         {
-          "title": "Dollar-to-Naira exchange rate Today, October 16, 2026: Naira depreciates against USD to end week on negative note",
-          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaUZuX2JpeUlQM2VaTUQ1VnJSUlVVcHV4NkRoeVhnZUx6cTZBN3hPX2RLdjhfUHFEN3lWSERjQ1pqTVRWbkpiVWFDS25kUm1WY0sybmo2eURGT0FpZFdNVjBXbFJ5VVdrdG95enZyYTg5dTVCekZtUW11Y3pPQzVEWkJ5SnR4eUdQLXRvSElXMjVKa3QzRlRwTFhfUnBBMEVWbkh2aU5tZEZGc2F3cEtrVTNIalhpSmZqZ2lTUDlMdnJFQkxZOGxHelYwVDNkbFd1NTlRY2x1LVNvT2s?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-16T20:03:40.000Z"
-        },
-        {
           "title": "Current Black Market Dollar to Naira Exchange Rate Today, Thursday, October 15, 2026",
           "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQalJmbHdIc09ZMEJQZnN2YUlsQUc2encxcU0yZEE4X1J1WV8ySTdwSjgtMUVCel9ENUZMS29VVUtJSG9Iam5ucjRjTTNGbkZTVmNZQ3d3bTlycjhRcmhXMDNJT0RHYmtaMVZZSWNNdUVGeDJMbFpLWERyd0kzUnFZZWlFS1JVQTZWSkUyd2c1RUM1MEJfR0F0WUk2cXZlYnBEZWVtTFdidkE1Y0RFcVg4Z0ZYUV93bzQ3V0dn0gHAAUFVX3lxTE1qeVZmSGVKaE1KRktNci1aWGp2S0pEQ08wMEMtSlFpWUlSN29lMWwyb0dIZHlZcTB1c20weDBnbTlzcGQ0czdWb0lndjBYLVliMUR4TjlmcXMzb2VZb0xGMGtCNkhTNWdoaXh2Q0hPbjlrcjRleGVUZGxZb3I4RnJmVUxtSUZIRFIxR1NMTnRCSURhcU02VXZWTVE0dWpaSi1yZ1VHQ0hMaC1JMDNXa2E5YjVHSmVIbXNIVDV2T2NXVw?oc=5",
           "source": "Investors King",
           "published": "2026-10-15T04:49:59.000Z"
+        },
+        {
+          "title": "Dollar to Naira exchange rate Today, October 14, 2026: Naira records first appreciation against USD",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNbjZkRkNJN1JtV3hrYXlqa2c4RGlYVDU0VWh0bFNLcDVqMXpRb1lLMmQ3T3FaQ1B5MEl3a3cwQ0xDSTM4VGppMDBLZGw0cEZHeEd2S1FWUV9tTWV6QXNSZkFDWDMyempHVV8yOXl5Wk1EdDFLN1pHM245QnlwbXRPUk9kNW52YkhrTDBMQWxVcGRlSWdROXN3Q2xZX29mVEszNjRYOExMVUVvaWk3bkFYcjdZeGxLeWdnUXpqeDBnX1AxUkFPNksyeg?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-14T20:05:26.000Z"
         },
         {
           "title": "Dollar to Naira exchange rate today, October 16, 2026",
@@ -109,10 +109,10 @@
           "published": "2026-10-14T08:34:42.000Z"
         },
         {
-          "title": "Dollar to Naira: Exchange Rate Today, October 12, 2026",
-          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ISjRuOHdwM1ZOUEtRX2YzcThfSnF2RWRoRUVrS05PZFRrQUxCb1BMZFhoXzRGY0JrMWF4RDlmWFVGRmVBUnhxa0NDTFNRVUQ1bFBpRnFXdDVCcWZmQVhGd3NDdVZsOFZJVFBpLVBTN2pWQmhGTGl5REozMmhaWjg?oc=5",
-          "source": "Techeconomy",
-          "published": "2026-10-12T06:24:09.000Z"
+          "title": "Naira Trades N1,332/$1 at Official Market, N1,358/$1 at Black Market |",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOYm5SMjFsNzA0SUpzdEx0b0VlYnFURWxfTjRCZElYcldJbXFSRDJJWkhaUVkzcGJjSkZ3UmEtMHdMMFUzR05oUHBGZVIxNlBxZkwyMnpINHgwVk5Lenh2MnU1bnR3OUswdldZeE94N2JHWDV3Uk9GTHdMcDctS1hDaHQ4X19BeW1mN0Y3ai1pWEwxMm45YUVDdWF3OWU?oc=5",
+          "source": "Business Post Nigeria",
+          "published": "2026-10-15T08:07:09.000Z"
         }
       ]
     },
@@ -189,16 +189,16 @@
           "published": "2026-06-08T07:00:00.000Z"
         },
         {
-          "title": "Implications As MTN, Airtel, Glo, Others Face ₦300bn Revenue Hit As FCCPC Hands Airtime Lending Market To Five New Operators",
-          "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQaGtwMFNqaHBKdmNMUFRuSWJwT2Y0UUhtVkUxSWJwUVVwWmJwQndOMTc3c2d1M2w0UldORXl2eEpWRDhmaXlrMFNEang2TjhKZlJjQXluY0dzNXZ3eDZGQkl3TVhOdUFKbm1GNmpPYnZNcjZRZnBBbUYtdjZpVWVkYlNOaEVneC12Q3JmaHNfSkpjZXpfM0phWjdfbmtqblo0azdqS3VGWjQtOUZwMUFSa2VjYnhhRXFXNlN4blh6ZEJSNV9Wem9JZ0tUTGFqM0EwS0FFVGEwaExFT2wwbnFOZWJxV3dINDdldUg3UjM1QjIwSEE?oc=5",
-          "source": "Brand Communicator",
-          "published": "2026-04-24T07:00:00.000Z"
-        },
-        {
           "title": "Top 10 Telecom Brands in Nigeria 2026: Definitive Ranking",
           "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Edng1UHF4QU4zOHpqY0J3cXMwVmlSOEFlWXpOQUk2M21XbXNqY2U2Mk1JQlBqbHdRS3dlOVRDSTI5ZWNqV3RvWmZQU084S0hMRzZZaGtWNk43WXE5Nk9acmY0RGZobzZHdi0wT3YtV1Y?oc=5",
           "source": "Global Brands Magazine",
           "published": "2026-09-08T08:58:12.000Z"
+        },
+        {
+          "title": "Implications As MTN, Airtel, Glo, Others Face ₦300bn Revenue Hit As FCCPC Hands Airtime Lending Market To Five New Operators",
+          "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQaGtwMFNqaHBKdmNMUFRuSWJwT2Y0UUhtVkUxSWJwUVVwWmJwQndOMTc3c2d1M2w0UldORXl2eEpWRDhmaXlrMFNEang2TjhKZlJjQXluY0dzNXZ3eDZGQkl3TVhOdUFKbm1GNmpPYnZNcjZRZnBBbUYtdjZpVWVkYlNOaEVneC12Q3JmaHNfSkpjZXpfM0phWjdfbmtqblo0azdqS3VGWjQtOUZwMUFSa2VjYnhhRXFXNlN4blh6ZEJSNV9Wem9JZ0tUTGFqM0EwS0FFVGEwaExFT2wwbnFOZWJxV3dINDdldUg3UjM1QjIwSEE?oc=5",
+          "source": "Brand Communicator",
+          "published": "2026-04-24T07:00:00.000Z"
         },
         {
           "title": "Simple tricks to make your MTN, Airtel, Glo and 9mobile data last longer",
