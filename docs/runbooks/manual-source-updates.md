@@ -50,9 +50,17 @@ Store the rows in `data/govhowto.json` under the `prepaid-electricity-bands` doc
 
 ## FRSC driver's licence
 
-Use `https://frsc.gov.ng/` (Service Level Agreements and the ARC Compendium) and `https://www.nigeriadriverslicence.org/` for process steps, the 60-day service standard and the one-month renewal window. Never scrape the application, login or payment flow: the portal generates the amount the applicant actually pays, and that generated amount is the only fee figure worth publishing.
+Use `https://frsc.gov.ng/` (Service Level Agreements and the ARC Compendium) and `https://www.nigeriadriverslicence.org/` for process steps, the 60-day service standard and the one-month renewal window. Never scrape the application, login or payment flow.
 
-If the current statutory fee cannot be confirmed on an FRSC page, leave the row's status at `writing` in [`docs/content-gap-queue.md`](../content-gap-queue.md), keep the fee in `unverifiedItems`, and say plainly on the page that the figure is unverified.
+**Current card fee (owner-verified 18 October 2026):** ₦15,000 for a three-year standard motor vehicle licence card and ₦21,000 for a five-year card, as reported by the site owner from the official portal's Remita payment step. Store both amounts with the check date, the attribution and the verification state `manual`. Do not attribute them to a blog, a forum or a third-party fee table.
+
+Rules that stop this going wrong:
+
+1. **The card fee is not the whole cost.** Learner's permit, driving school and VIO test charges are set locally and differ by state. Never print a national figure for them and never invent a state amount. Say plainly that they are separate from the ₦15,000 / ₦21,000 card fee.
+2. **The live Remita total is the authority.** Banks and payment channels may add a small convenience fee. If the portal's total differs from the published amount, readers pay the portal total against the reference the portal generates.
+3. **The April 2024 SLA is superseded.** It listed ₦10,350 (3-year) and ₦15,450 (5-year). Keep those only as historical context when explaining why older pages show less; never present them as the current fee.
+4. **Re-check method.** Start a licence application in the portal and read the total at the Remita step. Do not submit payment, do not automate or scrape the login/payment flow, and do not record personal data. Update `data/govhowto.json` (`fee`, `feeSource`, the fee table, `sourceNote`, FAQs, `lastVerified`) and `docs/content-gap-queue.md` in the same PR.
+5. **Review triggers.** A changed fingerprint on `frsc-licence-portal` or `frsc-sla` opens human review; it never edits a fee by itself. If a future check cannot read the portal amount, keep the last-good amount explicitly dated and stale rather than guessing, and tell readers the live Remita total governs.
 
 ## Lagos State residency registration (LASRRA / LAG-ID)
 

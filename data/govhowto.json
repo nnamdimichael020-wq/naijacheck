@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-10-18",
   "docs": [
     {
       "slug": "passport-renewal-2026", "title": "Nigerian International Passport Renewal 2026", "short": "Renew your passport in 2026: fees, timelines, the online portal, and what to avoid.",
@@ -56,8 +56,8 @@
       "title": "Nigerian Driver's Licence: Fresh Application and Renewal (3-Year vs 5-Year)",
       "short": "A fresh Nigerian driver's licence runs through a certified driving school, a VIO driving test, payment on the official portal, confirmation at your State BIR or MVAA, and biometric capture at an FRSC Drivers Licence Centre. A renewal drops the school and the test but keeps the payment and the capture.",
       "category": "Transport",
-      "fee": "₦10,350 for three years or ₦15,450 for five years, the last FRSC-published figure we could verify. We re-read FRSC's service agreement and both official portals on 14 October 2026 and no newer published amount was there, so confirm the amount your portal payment page generates before you pay.",
-      "feeSource": "FRSC Service Level Agreements, Second Edition, April 2024, on frsc.gov.ng (re-read 14 October 2026). Neither frsc.gov.ng nor the licence portal's public pages published any payable licence amount on 14 October 2026, so the amount the portal itself generates is the one to pay.",
+      "fee": "₦15,000 for a three-year licence card or ₦21,000 for a five-year licence card (official portal Remita amount, 18 October 2026). This is the standard motor vehicle licence card fee only: banks and payment channels may add a small convenience fee, and first-time applicants pay separate learner's permit, driving school and VIO test charges set locally. If the live Remita total differs, pay the amount the portal generates against its reference.",
+      "feeSource": "Official Nigeria Driver's Licence portal (nigeriadriverslicence.org), Remita payment step, as reported by NaijaCheck's owner on 18 October 2026. The amounts are the standard motor vehicle licence card fees only. FRSC's Service Level Agreements (Second Edition, April 2024) listed lower figures (₦10,350 and ₦15,450); treat that document as superseded and pay the live portal total. No blog or forum figure was used.",
       "timeline": "FRSC's published standard is a temporary licence issued on the spot at capture, valid for 60 days, with the permanent card collected from the State BIR or MVAA after 60 days. Renewal opens one calendar month before your licence expires. A licence verification extract through FRSC's own NDL portal is stated to be ready within 10 working days.",
       "steps":   [
     "Sort out your NIN first. It is the identity record the FRSC process runs on, so a mismatch between your NIN and your other documents will stall the application.",
@@ -66,7 +66,7 @@
     "Collect your certificate of completion. The certificate number is what calls up your pre-populated record on the official portal.",
     "Sit the VIO driving test. Pass and you get a Driver's Test Certificate. Fail and you may apply again, but not earlier than one calendar month after the failed test.",
     "Complete the application online at the official Nigeria Driver's Licence portal and choose three years or five years.",
-    "Pay the licence fee through the portal or at a designated bank. FRSC's service agreement names FCMB, FBN, Access, UBA, Union and Sky Bank, using the PAYARENA / E-PAYMENT platform, and says to keep the teller. Pay only against a reference the system generates for you.",
+    "Pay the licence fee through the portal's Remita step or at a designated bank. The portal's Remita page is where the card fee appears: ₦15,000 for three years or ₦21,000 for five years, as reported on 18 October 2026. FRSC's service agreement names FCMB, FBN, Access, UBA, Union and Sky Bank, using the PAYARENA / E-PAYMENT platform, and says to keep the teller. Pay only against a reference the system generates for you, and pay the live portal total if it differs from the figures here.",
     "Take the payment to the State BIR or MVAA for confirmation. Applications regularly stall at this step.",
     "Go to the FRSC Drivers Licence Centre for the vision acuity test, then biometric and bio-data capture.",
     "Expect a biometric investigation on your record at the FRSC Data Centre before the permanent card is produced. FRSC's service agreement runs that check after capture at the DLC.",
@@ -93,6 +93,7 @@
     "Handing cash to someone at the gate instead of paying against the reference the portal generates.",
     "Waiting until the licence has already expired. The renewal window opens one calendar month before the expiry date.",
     "Skipping the payment confirmation at the State BIR or MVAA.",
+    "Assuming the card fee is the whole cost. The ₦15,000 (three years) or ₦21,000 (five years) does not include the learner's permit, the driving school, the VIO test or any bank convenience fee.",
     "Assuming the licence fee differs by state. FRSC's own harmonisation documents say the fee is the same across the country; what differs is what a driving school charges and what state agencies charge for the permit and the test.",
     "Letting more than six months pass after expiry. FRSC requires a fresh driving test before renewal once that much time has elapsed.",
     "Choosing a driving school you have not checked on dssp.frsc.gov.ng. FRSC grades schools, and a school that drops below its minimum standards can have its certification suspended or withdrawn.",
@@ -103,13 +104,13 @@
       "officialSite": "https://frsc.gov.ng",
       "related": ["nin-correction", "police-character-certificate"],
       "hustleLink": "/hustle/provision-store",
-      "lastVerified": "2026-10-14",
+      "lastVerified": "2026-10-18",
       "verification": "manual",
-      "metaTitle": "Nigerian Driver's Licence: Fresh Application & Renewal (FRSC)",
-      "metaDescription": "The official FRSC route to a Nigerian driver's licence: certified driving school and its FRSC grade, VIO test, payment, BIR or MVAA confirmation and biometric capture — plus the 3-year vs 5-year choice, do-it-yourself licence verification, and how to avoid a fake no-capture card.",
-      "keywords": ["nigeria drivers licence renewal", "frsc drivers licence requirements", "3 year vs 5 year drivers licence nigeria", "how to renew drivers licence nigeria", "accredited driving school nigeria"],
-      "headings": {"cost": "What it costs, and how to confirm the fee before you pay"},
-      "sourceNote": "Everything except the fee comes from FRSC documents and FRSC-run portals, all re-read on 14 October 2026: FRSC's Service Level Agreements, Second Edition, April 2024 (fee lines, designated banks, the 26-session standard, bypass capture, the biometric investigation at the FRSC Data Centre and the NDL verification procedure); the Driving School Standardisation Programme portal at dssp.frsc.gov.ng (certification grades, curriculum, instructor certification and sanctions); the NDL verification portal at ndlverification.frsc.gov.ng (the six-step verification request and shipping flow); and the official Nigeria Driver's Licence portal at nigeriadriverslicence.org (application options, the six-step process, reissue conditions and the eNDL digital licence notice). The fee is the weakest figure on this page: ₦10,350 for three years and ₦15,450 for five years is the most recent FRSC-published amount we can read, dated April 2024, and the higher figures quoted in 2026 write-ups could not be confirmed on any FRSC page.",
+      "metaTitle": "Nigerian Driver's Licence 2026: ₦15,000 (3-Year) & ₦21,000 (5-Year) Fees",
+      "metaDescription": "Nigeria driver's licence in 2026: the card fee reported from the official portal's Remita step on 18 October 2026 is ₦15,000 for three years or ₦21,000 for five. FRSC steps, BIR/MVAA confirmation, biometric capture and how to avoid a fake no-capture card.",
+      "keywords": ["nigeria drivers licence renewal", "frsc drivers licence requirements", "3 year vs 5 year drivers licence nigeria", "how to renew drivers licence nigeria", "accredited driving school nigeria", "drivers licence fee nigeria 2026", "how much is drivers licence in nigeria", "frsc licence card fee"],
+      "headings": {"cost": "How to check the card fee before you pay"},
+      "sourceNote": "Process, documents, timelines and scam warnings come from FRSC documents and FRSC-run portals re-read on 14 October 2026: FRSC's Service Level Agreements, Second Edition, April 2024 (designated banks, the 26-session standard, bypass capture, the biometric investigation at the FRSC Data Centre and the NDL verification procedure); the Driving School Standardisation Programme portal at dssp.frsc.gov.ng (certification grades, curriculum, instructor certification and sanctions); the NDL verification portal at ndlverification.frsc.gov.ng; and the official Nigeria Driver's Licence portal at nigeriadriverslicence.org (application options, the six-step process, reissue conditions and the eNDL notice). The two card fees are the exception: ₦15,000 for three years and ₦21,000 for five years were reported by NaijaCheck's owner from the official portal's Remita payment step on 18 October 2026, not read from a public FRSC publication. FRSC's April 2024 service agreement listed lower amounts (₦10,350 and ₦15,450) and is out of date. Bank and payment-channel convenience fees are added at checkout; learner's permit, driving school and VIO charges are set locally and are not included. Nothing on this page comes from a blog or forum.",
       "officialLinks":   [
     {
       "label": "Nigeria Driver's Licence portal — apply, renew, reissue and track",
@@ -137,27 +138,64 @@
     }
   ],
       "unverifiedItems":   [
-    "The current statutory licence fee. The newest FRSC-published figure we could verify is ₦10,350 for three years and ₦15,450 for five years, from FRSC's Service Level Agreements, Second Edition, April 2024. On 14 October 2026 we re-read that document and both FRSC-run portals and found no newer published amount. Start the application and pay the amount the portal generates.",
-    "The ₦15,000 (three years) and ₦21,000 (five years) figures that circulate in 2026 write-ups and are credited to the FRSC portal. We could not find either amount published anywhere on frsc.gov.ng or on the licence portal's public pages on 14 October 2026, so we are not printing them as the fee.",
-    "Driving school fees, including any charge for the school's own exam and capture. These are set by each school and are not published nationally, so get the full cost in writing before you enrol.",
-    "Learner's permit and VIO test charges. These are set by state agencies (BIR, MLA or MVAA) and differ by state.",
+    "A public FRSC document or portal page that states the current ₦15,000 and ₦21,000 card fees. We could not find one on 18 October 2026: the figures are the owner-reported amounts from the official portal's Remita payment step, so the live portal total remains the authority.",
+    "Driving school fees, including any charge for the school's own exam and capture. These are set by each school and not published nationally, so get the full cost in writing before you enrol. They are not part of the ₦15,000 or ₦21,000 card fee.",
+    "Learner's permit and VIO test charges. These are set by state agencies (BIR, MLA or MVAA) and differ by state, so we do not print a national figure or invent a state amount.",
+    "Bank and payment-channel convenience fees on top of the Remita amount. The charge varies by bank, card and channel and is shown at checkout, so check the total before you approve it.",
     "Card collection time in your state. FRSC's standard is 60 days, but individual centres vary.",
     "Any figure an agent or a blog quotes that is higher than the amount the portal itself generates."
   ],
       "extraIntro":   [
-    "The last licence fee FRSC has published that we could verify is ₦10,350 for a three-year licence and ₦15,450 for a five-year licence, from FRSC's Service Level Agreements, Second Edition, April 2024. Higher amounts are quoted all over the internet for 2026, but we could not confirm any of them on an FRSC page, so we have left the fee marked as unverified rather than repeat a number we cannot stand behind. The portal generates the amount you actually pay — use that.",
-    "Everything else on this page is firmer. The steps, the 60-day standard, the one-month renewal window and the driving school requirement all come from FRSC documents and the official licence portal, and we read each of them on 12 October 2026.",
-    "We went back through FRSC's service agreement and the two FRSC-run portals on 14 October 2026 to see whether anything on the fee had moved. Nothing had: no payable amount is published on the public pages we can read, so the fee stays labelled as unverified rather than replaced with a guess.",
-    "What we did find is depth. The grades a driving school is certified in, the bank-and-reference route FRSC's own service agreement describes for payment, the biometric investigation that runs at FRSC's data centre before your card is produced, and the six-step process for verifying a licence yourself are all on this page now, each traceable to an FRSC document or an FRSC-run portal."
+    "The current standard card fee is ₦15,000 for a three-year licence or ₦21,000 for a five-year licence. Those are the amounts reported from the official Nigeria Driver's Licence portal's Remita payment step on 18 October 2026. The fee table below separates what the card fee covers from what it does not.",
+    "This is the card fee only. A first-time applicant still pays a driving school, a learner's permit and a VIO driving test. Those charges are set locally, differ by state, and are not included in the ₦15,000 or ₦21,000, so we do not print invented state figures for them.",
+    "The steps, the 60-day standard, the one-month renewal window and the driving school requirement come from FRSC documents and the official licence portal. We re-read the service agreement and both FRSC-run portals on 14 October 2026, and the card fee was reported from the portal's payment step four days later.",
+    "Banks and payment channels may add a small convenience fee. The live Remita total is the amount that matters: if it differs from the table, pay what the portal generates against its reference, and keep the receipt."
   ],
       "extraSections":   [
+    {
+      "h2": "Current card fee (owner-verified portal amount): ₦15,000 for 3 years, ₦21,000 for 5 years",
+      "paras": [
+        "These are the current standard motor vehicle licence card fees: ₦15,000 for a three-year licence and ₦21,000 for a five-year licence. The amounts were reported by NaijaCheck's owner from the official Nigeria Driver's Licence portal's Remita payment step on 18 October 2026.",
+        "This is the card fee only. It does not include the learner's permit, the driving school course, the VIO driving test or any state-level charge. First-time applicants pay those separately, and the amounts are set locally — no invented state figures appear on this page.",
+        "Banks and payment channels may add a small convenience fee when you pay. That is why the total on the live Remita page is the number that matters: if it differs from the figures in the table, pay what the portal generates against the reference it gives you, and keep the receipt.",
+        "FRSC's Service Level Agreements, Second Edition (April 2024), still lists lower amounts — ₦10,350 for three years and ₦15,450 for five years. That document is out of date. Read it as the older published schedule, not as today's price."
+      ],
+      "table": {
+        "caption": "Standard motor vehicle licence card fees, reported from the official portal's Remita payment step on 18 October 2026. Card fee only — not learner's permit, driving school or VIO charges.",
+        "columns": [
+          "Licence validity",
+          "Card fee (portal amount)",
+          "What it covers",
+          "What it does not cover"
+        ],
+        "rows": [
+          [
+            "3 years",
+            "₦15,000",
+            "FRSC standard motor vehicle driver's licence card, 3-year validity, paid at the portal's Remita payment step",
+            "Learner's permit, driving school, VIO driving test, state charges, bank or channel convenience fees"
+          ],
+          [
+            "5 years",
+            "₦21,000",
+            "FRSC standard motor vehicle driver's licence card, 5-year validity, paid at the portal's Remita payment step",
+            "Learner's permit, driving school, VIO driving test, state charges, bank or channel convenience fees"
+          ]
+        ]
+      },
+      "bullets": [
+        "Pay only through the official portal at nigeriadriverslicence.org, or at a designated bank against the reference the portal generates. No cash at the gate, and no transfer to a personal account.",
+        "If someone quotes a fee the portal's own Remita page does not show, treat it as that person's quote, not as FRSC's fee.",
+        "Keep the Remita receipt and the portal acknowledgement slip. The State BIR or MVAA confirmation runs on them."
+      ]
+    },
     {
       "h2": "Fresh application and renewal, side by side",
       "paras": [
         "The two routes share the same spine: online application, payment, payment confirmation, capture, collection. What differs is everything that proves you can actually drive."
       ],
       "table": {
-        "caption": "FRSC Service Level Agreements (Second Edition, April 2024) and the official Nigeria Driver's Licence portal, read on 12 October 2026.",
+        "caption": "FRSC Service Level Agreements (Second Edition, April 2024) and the official Nigeria Driver's Licence portal, read on 14 October 2026. Card fees reported from the portal's Remita payment step on 18 October 2026.",
         "columns": [
           "Step",
           "Fresh application",
@@ -191,8 +229,8 @@
           ],
           [
             "Licence fee",
-            "Yes",
-            "Yes"
+            "Yes — ₦15,000 (3-year) or ₦21,000 (5-year) card fee at the portal's Remita step",
+            "Yes — ₦15,000 (3-year) or ₦21,000 (5-year) card fee at the portal's Remita step"
           ],
           [
             "Payment confirmation at State BIR or MVAA",
@@ -225,8 +263,8 @@
     {
       "h2": "Three years or five years: how to choose",
       "paras": [
-        "FRSC's service charter sets the validity of a Nigerian driver's licence at three or five years, and both options are open to first-time applicants as well as to renewals. The fee lines for both durations appear in FRSC's new-issue procedure and in its renewal procedure.",
-        "Using the last FRSC figures we could verify, five years costs ₦5,100 more than three. In return you skip one renewal cycle: one less payment, one less trip to a capture centre, and one less chance of letting the card lapse and having to sit a driving test again.",
+        "FRSC's service charter sets the validity of a Nigerian driver's licence at three or five years, and both options are open to first-time applicants as well as to renewals. The card fee for both durations is paid at the portal's Remita step.",
+        "At the owner-reported portal amounts, five years costs ₦6,000 more than three. In return you skip one renewal cycle: one less payment, one less trip to a capture centre, and one less chance of letting the card lapse and having to sit a driving test again.",
         "Take the five-year option if your details are settled and you expect to keep driving. Take the three-year option if cash flow is tight right now, or if you expect to change your name or address soon."
       ]
     },
@@ -335,7 +373,8 @@
       "bullets": [
         "Never hand cash to a person who cannot show you the payment reference on the portal or on a bank teller.",
         "Keep the teller or the e-payment receipt. The BIR or MVAA confirmation step runs on it.",
-        "If somebody quotes you a 'current' fee that the portal's payment page does not show, ask them to show you the amount on the portal. If they cannot, treat the figure as unverified."
+        "If somebody quotes you a 'current' fee that the portal's payment page does not show, ask them to show you the amount on the portal. If they cannot, treat the figure as unverified.",
+        "The portal's Remita total is the only figure you should approve. Pay it against the reference the system generates, not against a figure somebody sends you in a message."
       ]
     },
     {
@@ -362,18 +401,26 @@
       ]
     },
     {
-      "h2": "The fee we still cannot confirm — and why we will not print a guess",
+      "h2": "Why older pages show a lower licence fee — and which number you actually pay",
       "paras": [
-        "Every other rule on this page comes from a document or portal we can point at. The current statutory fee does not. The newest FRSC-published amount we can read is ₦10,350 for three years and ₦15,450 for five years, in FRSC's Service Level Agreements, Second Edition, April 2024. We re-read that document, this portal and the FRSC site on 14 October 2026 and found no newer published amount.",
-        "In the same round of checking, 2026 write-ups said the fee is now ₦15,000 for three years and ₦21,000 for five years, and credited those figures to the FRSC portal. We could not find either amount published anywhere on frsc.gov.ng or on the licence portal's public pages that day, so we are not printing them as the fee. That is not us being difficult: a figure we cannot trace is exactly the figure an agent will use against you at the gate.",
-        "What you can rely on is the process, not the rumour. Start the application in the portal, look at the amount the payment page generates, pay it against the reference it gives you, and keep the receipt. If a number does not appear on the portal's own payment page, it came from a person."
+        "If you have seen ₦10,350 for three years and ₦15,450 for five years, you are looking at FRSC's Service Level Agreements, Second Edition, April 2024. That was the published schedule at the time; it is not what the portal charges now.",
+        "The current card fees on this page — ₦15,000 for three years and ₦21,000 for five years — were reported from the official portal's Remita payment step on 18 October 2026. We do not take fee figures from blogs or forum posts, and we will not print a number we cannot trace to the portal or to an FRSC document.",
+        "Whatever any page says, the portal's own Remita total is what you will be asked to pay. If it differs from this table — because the fee changed again, because your bank adds a convenience charge, or because a state-level item is included — pay the amount the portal generates against its reference, and keep the receipt. A figure that exists only in somebody's message came from a person, not from FRSC."
       ]
     }
   ],
       "extraFaqs":   [
     {
       "q": "How much is a Nigerian driver's licence right now?",
-      "a": "The most recent fee FRSC has published that we could verify is ₦10,350 for a three-year licence and ₦15,450 for a five-year licence, from FRSC's Service Level Agreements, Second Edition, April 2024. We could not confirm the higher figures quoted for 2026 on any FRSC page, so start the application in the portal and pay the amount it generates."
+      "a": "The standard motor vehicle licence card fee is ₦15,000 for a three-year licence and ₦21,000 for a five-year licence, reported from the official portal's Remita payment step on 18 October 2026. That is the card fee only. Banks and channels may add a small convenience fee, and first-time applicants pay separate learner's permit, driving school and VIO charges set locally. If the live Remita total differs, pay the total the portal generates."
+    },
+    {
+      "q": "Does the ₦15,000 or ₦21,000 include driving school, the learner's permit or the VIO test?",
+      "a": "No. The ₦15,000 (three years) and ₦21,000 (five years) are the standard licence card fees. A first-time applicant pays the driving school, the learner's permit and the VIO driving test separately, and those amounts are set by the school and by the state agency. They differ by state, so we do not print a national figure; ask each provider for the full cost in writing before you pay."
+    },
+    {
+      "q": "Why do some pages say ₦10,350 and ₦15,450?",
+      "a": "Those are the figures in FRSC's Service Level Agreements, Second Edition, April 2024. That document is out of date. The current card fees reported from the portal's Remita payment step on 18 October 2026 are ₦15,000 for three years and ₦21,000 for five years. If the live portal total differs again, pay the portal's total."
     },
     {
       "q": "When can I renew my licence?",
@@ -424,8 +471,8 @@
       "a": "Yes, and the portal's notice sets the rules. Fresh applicants are required to complete the full application process including biometric enrolment before activating it, and an expired licence has to be renewed first. The eNDL app is currently Android-only. Someone offering to 'activate your eNDL' without the biometric steps is describing a card that will not verify."
     },
     {
-      "q": "The portal shows a licence fee that is not the ₦10,350 or ₦15,450 on this page. Which is right?",
-      "a": "Pay the amount the portal's own payment page generates against its reference. We could not verify any newer published fee on an FRSC page when we last checked on 14 October 2026, so we will not print a guess. What we can tell you is what not to do: never pay cash to a person who cannot show you the reference on the portal."
+      "q": "The portal's total is different from the ₦15,000 or ₦21,000 on this page. Which do I pay?",
+      "a": "Pay the total the portal generates against its reference. The figures on this page are the owner-reported card fees from the Remita payment step on 18 October 2026; a live change, a bank or channel convenience fee, or a separate state charge can move the total. What you should never do is pay cash to a person who cannot show you the reference on the portal."
     },
     {
       "q": "How do I track my application without paying an agent?",
@@ -440,7 +487,8 @@
     "Fresh licence: 18 or older, learner's permit, certified driving school, VIO test, online application, payment, BIR or MVAA confirmation, biometric capture at the DLC.",
     "Renewal: apply within one calendar month before expiry. No driving school and no VIO test, unless six months have passed since your licence lapsed.",
     "Temporary licence is issued on the spot and is valid for 60 days. The permanent card comes from the State BIR or MVAA after 60 days.",
-    "The only fee we could verify on an FRSC page is ₦10,350 for three years or ₦15,450 for five years. Confirm the current amount in the portal.",
+    "The card fee does not include the learner's permit, driving school or VIO test. First-time applicants pay those separately, at locally set amounts.",
+    "Standard card fee (portal Remita amount, 18 October 2026): ₦15,000 for three years or ₦21,000 for five years. Pay the live Remita total if it differs.",
     "If nobody captured your biometrics at an FRSC centre, the card is not real.",
     "FRSC grades driving schools from A (90–100% in the assessment) down to E (50–59%); a school scoring below 50% is not certified at all, and its certificate should not be carrying your application.",
     "You can verify a licence yourself at ndlverification.frsc.gov.ng — sign up, upload an application letter plus both sides of the licence and any means of ID, pay by debit card, and FRSC's service agreement says the extract should be ready within 10 working days."
