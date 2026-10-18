@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-18T15:51:13.442Z",
+  "updatedAt": "2026-10-18T20:40:51.122Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
-    "detty-december",
     "japa",
+    "detty-december",
     "achalugo",
     "oblee",
     "chop-life"
@@ -150,7 +150,7 @@
       "term": "Japa",
       "kind": "slang",
       "trend": "rising",
-      "trendScore": 80,
+      "trendScore": 100,
       "confidence": "high",
       "meaning": "To migrate or leave Nigeria, usually for work, study or a better life abroad.",
       "detail": "Japa is Yoruba street slang for escaping or running away. Since the mid-2020s it has meant migrating abroad. It shows up in family WhatsApp groups, church prayers and job chats. It is also a big money topic: passports, visas, IELTS and exam fees are all tied to japa.",
@@ -165,7 +165,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage. See our passport and visa guides for the costs.",
-      "mentions7d": 4
+      "mentions7d": 5
     },
     {
       "slug": "soft-life",
