@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Calculator, Droplet, FileText, GraduationCap, Smartphone, Sparkles, TrendingUp, Wrench, Briefcase, Banknote } from "lucide-react";
-import { SITE_CONFIG, SITE_TAGLINE } from "@/config/site";
+import { SITE_CONFIG, SITE_TAGLINE, heroMotionForPath } from "@/config/site";
 import { AdSlot } from "@/components/ads/ad-slot";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -140,15 +140,26 @@ export default function HomePage() {
             ))}
           </p>
         </div>
-        <Image
-          src="/images/photos/lagos-tomato-seller.jpg"
-          alt="A woman selling tomatoes at a market stall in Lagos"
-          width={500}
-          height={625}
-          priority
-          sizes="(min-width: 768px) 360px, 90vw"
-          className="aspect-[4/5] w-full max-w-sm justify-self-center rounded-xl border object-cover md:justify-self-end"
-        />
+        <div className="aspect-[4/5] w-full max-w-sm justify-self-center overflow-hidden rounded-xl border md:justify-self-end">
+          {/*
+            Home hero image. Motion is read from the flagship allowlist in config/site.ts
+            ("/" is allowlisted): the same subtle CSS-only drift as article heroes, clipped
+            by this overflow-hidden box, and fully disabled under prefers-reduced-motion.
+          */}
+          <Image
+            src="/images/photos/lagos-tomato-seller.jpg"
+            alt="A woman selling tomatoes at a market stall in Lagos"
+            width={500}
+            height={625}
+            priority
+            sizes="(min-width: 768px) 360px, 90vw"
+            className={
+              heroMotionForPath("/") === "subtle"
+                ? "article-hero-motion h-full w-full object-cover"
+                : "h-full w-full object-cover"
+            }
+          />
+        </div>
       </section>
 
       <AdSlot variant="banner" index={0} />

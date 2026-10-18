@@ -1,3 +1,4 @@
+import { heroMotionForPath } from "../config/site";
 import type { ArticleBodyImage, ArticleImage, ImageSourceTier } from "./types";
 
 /**
@@ -81,7 +82,6 @@ export type AiCandidateRecord = {
   caption?: string;
   credit: string;
   license: string;
-  motion?: "static" | "subtle";
   checks: AiQualityGateChecks;
   rejectionNote?: string;
 };
@@ -151,8 +151,16 @@ export function isArticleImageEligible(section: string, routePath: string): bool
 
 /**
  * Validates that an ArticleImage complies with safety, CLS, and anti-scraping rules.
+ *
+ * When `routePath` is provided, hero motion is also checked against the flagship
+ * allowlist in `config/site.ts` ("subtle" only on `HERO_MOTION_ALLOWLIST` paths);
+ * `kind: "body"` in-body images must never carry hero motion at all.
  */
-export function validateArticleImageSafety(img: ArticleImage): { ok: boolean; errors: string[] } {
+export function validateArticleImageSafety(
+  img: ArticleImage,
+  routePath?: string,
+  kind: "hero" | "body" = "hero",
+): { ok: boolean; errors: string[] } {
   const errors: string[] = [];
 
   if (!img.src.startsWith("/images/")) {
@@ -180,6 +188,21 @@ export function validateArticleImageSafety(img: ArticleImage): { ok: boolean; er
   }
   if (!img.credit || img.credit.trim().length === 0) {
     errors.push(`Credit/attribution line is required: "${img.src}"`);
+  }
+
+  // Hero motion is allowlist-driven (config/site.ts). In-body images stay static forever.
+  const motion = img.motion ?? "static";
+  if (kind === "body") {
+    if (motion !== "static") {
+      errors.push(`In-body images must never carry hero motion: "${img.src}" has motion "${motion}"`);
+    }
+  } else if (routePath) {
+    const policyMotion = heroMotionForPath(routePath);
+    if (motion !== policyMotion) {
+      errors.push(
+        `Hero motion must follow HERO_MOTION_ALLOWLIST in config/site.ts: ${routePath} expects "${policyMotion}" but image has "${motion}"`,
+      );
+    }
   }
 
   return { ok: errors.length === 0, errors };
@@ -307,7 +330,6 @@ export const AI_CANDIDATE_LOG: readonly AiCandidateRecord[] = [
     caption: "Residential service drop and meter enclosure on a Lagos compound wall. Your feeder band (A–E) and your DisCo's monthly NERC order determine what each kWh unit costs.",
     credit: "Illustration: NaijaCheck editorial AI fallback (quality-gated, WebP 66 KB)",
     license: "First-party generated editorial asset for NaijaCheck.ng; documented in docs/image-credits.md",
-    motion: "subtle",
     checks: {
       nigerianEditorialContext: true,
       noFakeOfficialDocsOrSeals: true,
@@ -332,7 +354,6 @@ export const AI_CANDIDATE_LOG: readonly AiCandidateRecord[] = [
     caption: "Small workshops and neighbourhood traders register a CAC Business Name (₦10,500 official portal fee in 2026) to open corporate bank accounts and invoice larger clients.",
     credit: "Illustration: NaijaCheck editorial AI fallback (quality-gated, WebP 55 KB)",
     license: "First-party generated editorial asset for NaijaCheck.ng; documented in docs/image-credits.md",
-    motion: "static",
     checks: {
       nigerianEditorialContext: true,
       noFakeOfficialDocsOrSeals: true,
@@ -358,8 +379,10 @@ export type HeroConfigInput = {
   photoCaption?: string;
   /** Optional custom alt text more specific to the article when reusing a Tier 1 / Tier 2 photo. */
   photoAlt?: string;
-  /** Optional motion setting on the hero only (defaults to "static"). */
-  motion?: "static" | "subtle";
+  /**
+   * Hero motion is NOT configurable per article. It is decided only by
+   * `HERO_MOTION_ALLOWLIST` in `config/site.ts` via `heroMotionForPath()`.
+   */
   /** Whether this article opts into a hero image when no Tier 1/2 photo exists. */
   enableHeroWhenNoPhoto?: boolean;
 };
@@ -380,6 +403,10 @@ export function resolveArticleHeroImage(input: HeroConfigInput): ArticleImage | 
     return undefined;
   }
 
+  // Hero motion comes ONLY from the flagship allowlist in config/site.ts — never from
+  // per-article content flags — so "everything else stays motion: static" by construction.
+  const motion = heroMotionForPath(input.articlePath);
+
   // Priority 1: Existing committed public/images with credits
   if (input.existingPhotoKey && EXISTING_COMMITTED_PHOTOS[input.existingPhotoKey]) {
     const base = EXISTING_COMMITTED_PHOTOS[input.existingPhotoKey];
@@ -387,7 +414,7 @@ export function resolveArticleHeroImage(input: HeroConfigInput): ArticleImage | 
       ...base,
       alt: input.photoAlt ?? base.alt,
       caption: input.photoCaption,
-      motion: input.motion ?? "static",
+      motion,
     };
   }
 
@@ -398,7 +425,7 @@ export function resolveArticleHeroImage(input: HeroConfigInput): ArticleImage | 
       ...base,
       alt: input.photoAlt ?? base.alt,
       caption: input.photoCaption,
-      motion: input.motion ?? "static",
+      motion,
     };
   }
 
@@ -422,7 +449,7 @@ export function resolveArticleHeroImage(input: HeroConfigInput): ArticleImage | 
       credit: acceptedAi.credit,
       license: acceptedAi.license,
       caption: acceptedAi.caption,
-      motion: acceptedAi.motion ?? input.motion ?? "static",
+      motion,
     };
   }
 
@@ -440,7 +467,7 @@ export function resolveArticleHeroImage(input: HeroConfigInput): ArticleImage | 
       : "Cover: NaijaCheck branded reference cover",
     license: "First-party SVG cover generated by NaijaCheck.ng (0-cost static asset)",
     caption: input.photoCaption,
-    motion: input.motion ?? "static",
+    motion,
   };
 }
 
@@ -452,6 +479,8 @@ export function resolveArticleHeroImage(input: HeroConfigInput): ArticleImage | 
  *   in-body diagram (max 1) where it genuinely adds understanding.
  * - Other /howto guides omit `heroImage` so the template is verified both with and without a hero.
  * - Pure data/tool pages and /status are never configured here and are blocked by `isArticleImageEligible`.
+ * - Hero motion is deliberately NOT configurable here: it is decided only by
+ *   `HERO_MOTION_ALLOWLIST` in `config/site.ts` (every other route stays `motion: "static"`).
  */
 export const ARTICLE_IMAGE_CONFIG: Record<
   string,
@@ -460,7 +489,6 @@ export const ARTICLE_IMAGE_CONFIG: Record<
     licensedPhotoKey?: keyof typeof OWNER_LICENSED_PHOTOS;
     photoAlt?: string;
     photoCaption?: string;
-    motion?: "static" | "subtle";
     enableHeroWhenNoPhoto?: boolean;
     bodyImage?: ArticleBodyImage;
   }
@@ -470,7 +498,6 @@ export const ARTICLE_IMAGE_CONFIG: Record<
     photoAlt: "A woman selling fresh tomatoes in bowls at a Lagos market stall, illustrating local volume measures versus per-kilogram NBS survey averages",
     photoCaption:
       "Open-market stalls sell tomatoes, grains and garri by bowl, paint bucket or bag — while the NBS Selected Food Price Watch reports monthly state averages per kilogram.",
-    motion: "subtle",
     bodyImage: {
       src: "/images/diagrams/market-unit-conversion.svg",
       alt: "Three-step diagram showing how to weigh local market measures in kilograms and divide price paid by net weight before comparing with NBS state averages",
@@ -488,11 +515,9 @@ export const ARTICLE_IMAGE_CONFIG: Record<
     photoAlt: "Overhead view of yellow commercial buses on a paved Lagos road, illustrating Nigerian road transport and driver licensing",
     photoCaption:
       "Every valid Nigerian driver's licence requires an online application, Remita card fee payment (₦15,000 for 3 years or ₦21,000 for 5 years as of 18 October 2026), BIR/MVAA confirmation, and physical biometric capture at an FRSC centre.",
-    motion: "subtle",
   },
   "/howto/prepaid-electricity-bands": {
     enableHeroWhenNoPhoto: true,
-    motion: "subtle",
     bodyImage: {
       src: "/images/diagrams/nerc-bands-and-receipt-check.svg",
       alt: "Diagram comparing NERC service bands A through E minimum daily supply hours, Eko DisCo September 2026 kWh units per 10,000 Naira, and the vending receipt rate formula",
@@ -507,32 +532,27 @@ export const ARTICLE_IMAGE_CONFIG: Record<
   },
   "/howto/cac-business-name": {
     enableHeroWhenNoPhoto: true,
-    motion: "static",
   },
   "/howto/lasrra-lagos-residency": {
     enableHeroWhenNoPhoto: true,
     photoCaption:
       "LASRRA registration and your first LAG-ID card cost ₦0 at your local government or LCDA enrolment centre.",
-    motion: "static",
   },
   "/howto/passport-renewal-2026": {
     enableHeroWhenNoPhoto: true,
     photoCaption:
       "Apply and pay only on the official Nigeria Immigration Service portal (immigration.gov.ng) — never pay cash to touts for 'fast track' processing.",
-    motion: "static",
   },
   "/learn/budget-80k": {
     existingPhotoKey: "lagos-tomato-seller",
     photoAlt: "A trader selling fresh produce at a Lagos market stall, representing weekly household food budgeting in Lagos",
     photoCaption:
       "Buying core staples in bulk and separating fixed transport and power costs on day one are the main ways Lagos workers stretch a tight monthly budget.",
-    motion: "static",
   },
   "/learn/electricity-bill-explained": {
     enableHeroWhenNoPhoto: true,
     photoCaption:
       "Compare kWh units consumed rather than naira spent each month to spot estimated-billing jumps or tariff band changes.",
-    motion: "static",
   },
 };
 

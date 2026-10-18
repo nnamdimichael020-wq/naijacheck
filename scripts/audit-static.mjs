@@ -39,6 +39,23 @@ const howtoWithHeroRoutes = [];
 const howtoWithoutHeroRoutes = [];
 const badJsonLd = [];
 const pureDataRouteRe = /^(\/status|\/prices(?:\/|$)|\/tools(?:\/|$))/;
+// Hero motion policy: the exact flagship allowlist is read from the committed
+// config/site.ts source (same durability pattern as the Telegram channel URL below),
+// then compared against the built HTML/CSS so motion can never leak site-wide.
+const siteSource = fs.readFileSync(path.join(process.cwd(), "config", "site.ts"), "utf8");
+const heroMotionAllowlist = [...(siteSource.match(/HERO_MOTION_ALLOWLIST\s*=\s*\[([\s\S]*?)\]/)?.[1] ?? "").matchAll(/"([^"]*)"/g)].map((m) => m[1]);
+const heroMotion = {
+  allowlist: heroMotionAllowlist,
+  routesWithMotionClass: [],
+  offAllowlistWithMotionClass: [],
+  forbiddenRoutesWithMotionClass: [],
+  allowlistedRoutesWithoutHero: [],
+  allowlistedHeroMissingMotionClass: [],
+  motionOnPagesWithoutHero: [],
+  motionClassOutsideHeroImg: [],
+  videoOrAudioTagsOnRoutes: [],
+};
+const forbiddenMotionRouteRe = /^(\/status|\/tools(?:\/|$)|\/prices(?:\/|$)|\/hustle(?:\/|$))/;
 for (const [route, file] of routes) {
   const html = fs.readFileSync(file, "utf8");
   const title = text(html, /<title[^>]*>([\s\S]*?)<\/title>/i);
@@ -70,6 +87,27 @@ for (const [route, file] of routes) {
     if (hasHeroFigure) howtoWithHeroRoutes.push(route);
     else howtoWithoutHeroRoutes.push(route);
   }
+  // ---- hero motion checks (ignore RSC flight payloads inside <script>) ----
+  const htmlNoScripts = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ");
+  const hasMotionClass = /article-hero-motion/.test(htmlNoScripts);
+  const motionEligible = hasHeroFigure || route === "/";
+  if (hasMotionClass) {
+    heroMotion.routesWithMotionClass.push(route);
+    if (!heroMotionAllowlist.includes(route)) heroMotion.offAllowlistWithMotionClass.push(route);
+    if (forbiddenMotionRouteRe.test(route)) heroMotion.forbiddenRoutesWithMotionClass.push(route);
+    if (!motionEligible) heroMotion.motionOnPagesWithoutHero.push(route);
+    for (const tag of htmlNoScripts.matchAll(/<[^>]+>/g)) {
+      if (tag[0].includes("article-hero-motion") && !/^<img\b/i.test(tag[0])) {
+        heroMotion.motionClassOutsideHeroImg.push(route);
+        break;
+      }
+    }
+  }
+  if (heroMotionAllowlist.includes(route)) {
+    if (!motionEligible) heroMotion.allowlistedRoutesWithoutHero.push(route);
+    else if (!hasMotionClass) heroMotion.allowlistedHeroMissingMotionClass.push(route);
+  }
+  if (/<video\b|<audio\b/i.test(htmlNoScripts)) heroMotion.videoOrAudioTagsOnRoutes.push(route);
   if (pureDataRouteRe.test(route) && !route.startsWith("/prices/markets/") && (hasHeroFigure || hasBodyFigure)) {
     pureDataPagesWithArticleImages.push(route);
   }
@@ -138,12 +176,45 @@ const robotsOk =
 // Public config is committed (config/site.ts, wrangler.jsonc), never dashboard-only, because dashboard values
 // were dropped by builds before: the "Get alerts on Telegram" link silently disappeared. This guard fails the
 // audit if a build does not render the committed Telegram channel URL on the two pages that show it.
-const siteSource = fs.readFileSync(path.join(process.cwd(), "config", "site.ts"), "utf8");
+// (`siteSource` is read from the same committed file above, next to the hero motion allowlist.)
 const committedTelegramChannelUrl = siteSource.match(/TELEGRAM_CHANNEL_URL_DEFAULT\s*=\s*"([^"]*)"/)?.[1] ?? null;
 const missingTelegramLink = committedTelegramChannelUrl
   ? ["/", "/status"].filter((route) => !routes.has(route) || !fs.readFileSync(routes.get(route), "utf8").includes(`href="${committedTelegramChannelUrl}"`))
   : [];
 const creditsFilePresent = fs.existsSync(path.join(process.cwd(), "docs", "image-credits.md"));
+
+// Hero motion must be pure CSS behind a prefers-reduced-motion gate: the compiled stylesheets
+// may only animate .article-hero-motion under `no-preference`, and `reduce` must kill both the
+// animation and the transform. This is the "same page static when reduce-motion is ON" proof.
+const collectMediaBlocks = (css, featureRe) => {
+  const blocks = [];
+  const re = /@media[^{]*\{/g;
+  let m;
+  while ((m = re.exec(css))) {
+    let depth = 1;
+    let i = re.lastIndex;
+    while (i < css.length && depth > 0) {
+      if (css[i] === "{") depth += 1;
+      else if (css[i] === "}") depth -= 1;
+      i += 1;
+    }
+    if (featureRe.test(m[0])) blocks.push(css.slice(m.index, i));
+  }
+  return blocks;
+};
+const cssFiles = files.filter((f) => f.endsWith(".css"));
+const cssText = cssFiles.map((f) => fs.readFileSync(f, "utf8")).join("\n");
+const reduceBlocks = collectMediaBlocks(cssText, /prefers-reduced-motion\s*:\s*reduce/i);
+const noPrefBlocks = collectMediaBlocks(cssText, /prefers-reduced-motion\s*:\s*no-preference/i);
+const outsideNoPref = noPrefBlocks.reduce((acc, b) => acc.split(b).join(""), cssText);
+heroMotion.css = {
+  files: cssFiles.length,
+  hasMotionClassRule: cssText.includes("article-hero-motion"),
+  animatesOnlyUnderNoPreference: !/\.article-hero-motion[^{]*\{[^}]*animation\s*:(?!\s*none\b)/s.test(outsideNoPref),
+  driftLivesUnderNoPreference: noPrefBlocks.some((b) => /\.article-hero-motion[^{]*\{[^}]*animation\s*:/s.test(b)),
+  reduceDisablesAnimation: reduceBlocks.some((b) => /\.article-hero-motion[^{]*\{[^}]*animation\s*:\s*none/i.test(b)),
+  reduceDisablesTransform: reduceBlocks.some((b) => /\.article-hero-motion[^{]*\{[^}]*transform\s*:\s*none/i.test(b)),
+};
 const findings = {
   generatedHtmlRoutes: rows.length,
   sitemapUrls: sitemap.length,
@@ -162,6 +233,7 @@ const findings = {
     pureDataPagesWithArticleImages,
     articleImagesMissingDimensionsOrAlt,
   },
+  heroMotion,
   wrongCanonicalHost: rows.filter((r) => r.canonical && !r.canonical.startsWith(expectedOrigin)).map((r) => ({ route: r.route, canonical: r.canonical })),
   missing: {
     title: rows.filter((r) => !r.title).map((r) => r.route),
@@ -193,6 +265,18 @@ if (
   !robotsOk ||
   findings.wrongCanonicalHost.length ||
   badJsonLd.length ||
-  missingTelegramLink.length
+  missingTelegramLink.length ||
+  heroMotion.offAllowlistWithMotionClass.length ||
+  heroMotion.forbiddenRoutesWithMotionClass.length ||
+  heroMotion.allowlistedRoutesWithoutHero.length ||
+  heroMotion.allowlistedHeroMissingMotionClass.length ||
+  heroMotion.motionOnPagesWithoutHero.length ||
+  heroMotion.motionClassOutsideHeroImg.length ||
+  heroMotion.videoOrAudioTagsOnRoutes.length ||
+  !heroMotion.css.hasMotionClassRule ||
+  !heroMotion.css.animatesOnlyUnderNoPreference ||
+  !heroMotion.css.driftLivesUnderNoPreference ||
+  !heroMotion.css.reduceDisablesAnimation ||
+  !heroMotion.css.reduceDisablesTransform
 )
   process.exitCode = 1;

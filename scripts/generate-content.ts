@@ -32,6 +32,7 @@ import {
   resolveArticleHeroImage,
   validateArticleImageSafety,
 } from "../lib/article-images";
+import { heroMotionForPath } from "../config/site";
 
 type Table = { caption?: string; columns: string[]; rows: string[][] };
 type Section = { h2: string; paras: string[]; bullets?: string[]; table?: Table };
@@ -1368,12 +1369,11 @@ const articles: Article[] = drafts.map((d) => {
       licensedPhotoKey: imgCfg.licensedPhotoKey,
       photoAlt: imgCfg.photoAlt,
       photoCaption: imgCfg.photoCaption,
-      motion: imgCfg.motion,
       enableHeroWhenNoPhoto: imgCfg.enableHeroWhenNoPhoto,
     });
 
     if (heroImage) {
-      const check = validateArticleImageSafety(heroImage);
+      const check = validateArticleImageSafety(heroImage, rest.path, "hero");
       if (!check.ok) {
         throw new Error(`Invalid heroImage on ${rest.path}: ${check.errors.join("; ")}`);
       }
@@ -1389,7 +1389,7 @@ const articles: Article[] = drafts.map((d) => {
     }
 
     if (imgCfg.bodyImage) {
-      const check = validateArticleImageSafety(imgCfg.bodyImage);
+      const check = validateArticleImageSafety(imgCfg.bodyImage, rest.path, "body");
       if (!check.ok) {
         throw new Error(`Invalid bodyImage on ${rest.path}: ${check.errors.join("; ")}`);
       }
@@ -1398,6 +1398,12 @@ const articles: Article[] = drafts.map((d) => {
       }
       bodyImage = imgCfg.bodyImage;
     }
+  }
+
+  // Hero motion is stamped from the flagship allowlist in config/site.ts only — content
+  // data can never turn motion on, so every non-allowlisted page stays "static".
+  if (heroImage) {
+    heroImage = { ...heroImage, motion: heroMotionForPath(rest.path) };
   }
 
   return {

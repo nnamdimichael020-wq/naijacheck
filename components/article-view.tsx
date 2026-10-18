@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/json-ld";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { isArticleImageEligible } from "@/lib/article-images";
+import { heroMotionForPath } from "@/config/site";
 import type { Article } from "@/lib/types";
 import { articleSchema, absUrl } from "@/lib/seo";
 import { DATA_DATE } from "@/lib/data";
@@ -58,6 +59,9 @@ export function ArticleView({ article, children, showSchema = true }: { article:
   const canRenderImages = isArticleImageEligible(article.section, article.path);
   const heroImage = canRenderImages ? article.heroImage : undefined;
   const bodyImage = canRenderImages ? article.bodyImage : undefined;
+  // Hero motion is read straight from the flagship allowlist (config/site.ts): only those
+  // exact paths get the subtle CSS drift; every other page renders a fully static hero.
+  const heroMotion = heroMotionForPath(article.path);
   const disclosure = article.section.startsWith("prices") || article.section === "cookbook"
     ? `Manual/indicative planning data dated ${article.updatedAt}; not an automatically verified city-market feed. Confirm locally before paying.`
     : article.section === "telecom"
@@ -118,7 +122,7 @@ export function ArticleView({ article, children, showSchema = true }: { article:
               decoding="async"
               sizes="(min-width: 768px) 768px, 100vw"
               className={
-                heroImage.motion === "subtle"
+                heroMotion === "subtle"
                   ? "article-hero-motion aspect-[16/9] h-full w-full object-cover object-center"
                   : "aspect-[16/9] h-full w-full object-cover object-center"
               }
