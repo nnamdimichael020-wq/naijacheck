@@ -84,8 +84,11 @@ All internal links must resolve to real generated routes verified by `npm run au
 3. **No scam tone or tout endorsements**:
    - Never include personal WhatsApp numbers, unofficial "fast-track" agents, or third-party payment links for passports, NIN, driver's licences, JAMB admissions, or CAC filings.
    - Explicitly warn readers to pay only through the official government portal or Remita RRR generated inside that portal.
-4. **No scraped forum text or mass AI pages**:
+4. **No scraped forum text, scraped images, or mass AI pages**:
    - Never copy or paraphrase unverified Nairaland posts into articles.
+   - Never scrape images from `naijasabi`, news sites, social media, or government PDFs, and never use a watermark to "fix" copyright.
+   - Never use autoplay video backgrounds or audio on articles.
+   - Follow the 4-tier image source priority enforced in `lib/article-images.ts` and documented in [`docs/image-credits.md`](./image-credits.md): (1) existing committed `public/images/photos/` with credits, (2) owner-added licensed photos in `docs/image-credits.md`, (3) generated branded cover (`#008751` + logo + short title), (4) optional quality-gated AI fallback hero (falling back to branded cover on reject). Skip article images on pure data/tool pages and `/status`.
    - Never bulk-generate hundreds of thin city/keyword permutations without real underlying observations.
 
 ---

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="nerc-title nerc-desc">
+  <title id="nerc-title">NERC Service Bands (A to E) Minimum Supply Hours and Vending Receipt Rate Check</title>
+  <desc id="nerc-desc">Diagram comparing NERC Bands A through E minimum daily supply hours and straight-line units bought by 10,000 Naira under Eko (EKEDP) September 2026 non-MD rates, plus the vending receipt formula: Amount Paid divided by kWh Units minus VAT.</desc>
+  <defs>
+    <linearGradient id="nercBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071f15"/>
+      <stop offset="100%" stop-color="#0d3322"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#nercBg)"/>
+  <rect x="24" y="24" width="912" height="492" rx="18" fill="#0b281b" stroke="#1b5e3f" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="48" y="46" width="230" height="28" rx="14" fill="#008751"/>
+  <text x="163" y="65" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.8">NERC TARIFF &amp; RECEIPT CHECK</text>
+  <text x="48" y="106" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">Band A&#x2013;E Supply Hours vs Units from &#x20A6;10,000</text>
+  <text x="48" y="132" fill="#a7cbb8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Illustrated with verified Eko (EKEDP) Order/NERC/2026/091 non-MD rows (effective 1 Sept 2026, before VAT).</text>
+
+  <!-- Left Panel: Bands A to E Bars -->
+  <rect x="48" y="154" width="540" height="270" rx="14" fill="#103826" stroke="#236e4b" stroke-width="1.5"/>
+  <text x="68" y="184" fill="#f5b700" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">BAND / MIN SUPPLY</text>
+  <text x="240" y="184" fill="#f5b700" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">EKEDP RATE</text>
+  <text x="360" y="184" fill="#f5b700" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">UNITS PER &#x20A6;10,000 (PRE-VAT)</text>
+
+  <!-- Band A -->
+  <text x="68" y="220" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700">Band A (&#x2265;20h/day)</text>
+  <text x="240" y="220" fill="#d3e8dc" font-family="monospace" font-size="14" font-weight="700">&#x20A6;209.50/kWh</text>
+  <rect x="360" y="205" width="38" height="20" rx="4" fill="#f5b700"/>
+  <text x="406" y="220" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700">~48 kWh</text>
+
+  <!-- Band B -->
+  <text x="68" y="264" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700">Band B (&#x2265;16h/day)</text>
+  <text x="240" y="264" fill="#d3e8dc" font-family="monospace" font-size="14" font-weight="700">&#x20A6;61.00/kWh</text>
+  <rect x="360" y="249" width="110" height="20" rx="4" fill="#008751"/>
+  <text x="478" y="264" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700">~164 kWh</text>
+
+  <!-- Band C -->
+  <text x="68" y="308" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700">Band C (&#x2265;12h/day)</text>
+  <text x="240" y="308" fill="#d3e8dc" font-family="monospace" font-size="14" font-weight="700">&#x20A6;48.53/kWh</text>
+  <rect x="360" y="293" width="138" height="20" rx="4" fill="#008751"/>
+  <text x="506" y="308" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700">~206 kWh</text>
+
+  <!-- Band D -->
+  <text x="68" y="352" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700">Band D (&#x2265;8h/day)</text>
+  <text x="240" y="352" fill="#d3e8dc" font-family="monospace" font-size="14" font-weight="700">&#x20A6;32.48/kWh</text>
+  <rect x="360" y="337" width="160" height="20" rx="4" fill="#22c55e"/>
+  <text x="526" y="352" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700">~308 kWh</text>
+
+  <!-- Band E -->
+  <text x="68" y="396" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700">Band E (&#x2265;4h/day)</text>
+  <text x="240" y="396" fill="#d3e8dc" font-family="monospace" font-size="14" font-weight="700">&#x20A6;32.44/kWh</text>
+  <rect x="360" y="381" width="160" height="20" rx="4" fill="#22c55e"/>
+  <text x="526" y="396" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700">~308 kWh</text>
+
+  <!-- Right Panel: Receipt Formula -->
+  <rect x="608" y="154" width="304" height="270" rx="14" fill="#103826" stroke="#f5b700" stroke-width="1.5"/>
+  <text x="628" y="186" fill="#f5b700" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800">CHECK YOUR VENDING RECEIPT</text>
+  <text x="628" y="214" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">1. Read &#x20A6; Amount Paid on token slip</text>
+  <text x="628" y="240" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">2. Read kWh Units Credited</text>
+  <text x="628" y="266" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">3. Subtract VAT &amp; any debt deduction</text>
+
+  <rect x="624" y="286" width="272" height="68" rx="10" fill="#081d13" stroke="#008751" stroke-width="1.5"/>
+  <text x="760" y="312" fill="#4ade80" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle">NERC FAQ EFFECTIVE RATE</text>
+  <text x="760" y="338" fill="#ffffff" font-family="monospace" font-size="13.5" font-weight="700" text-anchor="middle">(Amount &#xF7; kWh Units) &#x2212; VAT</text>
+
+  <text x="628" y="382" fill="#a7cbb8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Compare your effective rate with your</text>
+  <text x="628" y="400" fill="#a7cbb8" font-family="system-ui, -apple-system, sans-serif" font-size="12">own DisCo&#x2019;s latest NERC order on nerc.gov.ng.</text>
+
+  <!-- Footer -->
+  <rect x="48" y="442" width="864" height="50" rx="10" fill="#081d13" stroke="#1b5e3f" stroke-width="1"/>
+  <text x="68" y="472" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Rates are per DisCo, not national. Benin (BEDC) Band B is &#x20A6;68.56/kWh while Eko (EKEDP) Band B is &#x20A6;61.00/kWh.</text>
+  <text x="892" y="472" fill="#f5b700" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" text-anchor="end">NaijaCheck.ng</text>
+</svg>

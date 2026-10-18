@@ -32,7 +32,13 @@ const normalPath = (href) => {
 const assetPaths = new Set(files.map((f) => "/" + path.relative(root, f).replaceAll(path.sep, "/")));
 const rows = [];
 const broken = [];
+const brokenImageAssets = [];
+const articleImagesMissingDimensionsOrAlt = [];
+const pureDataPagesWithArticleImages = [];
+const howtoWithHeroRoutes = [];
+const howtoWithoutHeroRoutes = [];
 const badJsonLd = [];
+const pureDataRouteRe = /^(\/status|\/prices(?:\/|$)|\/tools(?:\/|$))/;
 for (const [route, file] of routes) {
   const html = fs.readFileSync(file, "utf8");
   const title = text(html, /<title[^>]*>([\s\S]*?)<\/title>/i);
@@ -49,6 +55,34 @@ for (const [route, file] of routes) {
     if (p === null || p.startsWith("/api/")) continue;
     const exists = routes.has(p) || assetPaths.has(p) || assetPaths.has(`${p}.html`) || assetPaths.has(`${p}/index.html`);
     if (!exists) broken.push({ from: route, href: p });
+  }
+  const imgTags = [...html.matchAll(/<img\b[^>]*>/gi)].map((m) => m[0]);
+  for (const tag of imgTags) {
+    const src = tag.match(/\bsrc=["']([^"']+)["']/i)?.[1] ?? "";
+    const p = normalPath(src);
+    if (p && !assetPaths.has(p)) {
+      brokenImageAssets.push({ from: route, src: p });
+    }
+  }
+  const hasHeroFigure = /data-article-image=["']hero["']/i.test(html);
+  const hasBodyFigure = /data-article-image=["']body["']/i.test(html);
+  if (route.startsWith("/howto/")) {
+    if (hasHeroFigure) howtoWithHeroRoutes.push(route);
+    else howtoWithoutHeroRoutes.push(route);
+  }
+  if (pureDataRouteRe.test(route) && !route.startsWith("/prices/markets/") && (hasHeroFigure || hasBodyFigure)) {
+    pureDataPagesWithArticleImages.push(route);
+  }
+  const articleFigures = [...html.matchAll(/<figure[^>]*data-article-image=["'](hero|body)["'][^>]*>([\s\S]*?)<\/figure>/gi)];
+  for (const [, kind, figHtml] of articleFigures) {
+    const imgTag = figHtml.match(/<img\b[^>]*>/i)?.[0] ?? "";
+    const w = imgTag.match(/\bwidth=["'](\d+)["']/i)?.[1];
+    const h = imgTag.match(/\bheight=["'](\d+)["']/i)?.[1];
+    const altText = imgTag.match(/\balt=["']([^"']*)["']/i)?.[1]?.trim() ?? "";
+    const lazy = /\bloading=["']lazy["']/i.test(imgTag);
+    if (!w || !h || !altText || !lazy) {
+      articleImagesMissingDimensionsOrAlt.push({ route, kind, hasWidth: Boolean(w), hasHeight: Boolean(h), hasAlt: Boolean(altText), lazy });
+    }
   }
   const ldScripts = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
   for (const [, raw] of ldScripts) try { JSON.parse(raw); } catch (e) { badJsonLd.push({ route, error: e.message }); }
@@ -109,6 +143,7 @@ const committedTelegramChannelUrl = siteSource.match(/TELEGRAM_CHANNEL_URL_DEFAU
 const missingTelegramLink = committedTelegramChannelUrl
   ? ["/", "/status"].filter((route) => !routes.has(route) || !fs.readFileSync(routes.get(route), "utf8").includes(`href="${committedTelegramChannelUrl}"`))
   : [];
+const creditsFilePresent = fs.existsSync(path.join(process.cwd(), "docs", "image-credits.md"));
 const findings = {
   generatedHtmlRoutes: rows.length,
   sitemapUrls: sitemap.length,
@@ -117,6 +152,16 @@ const findings = {
   noindexInSitemap,
   robots: { ...robots, ok: robotsOk },
   brokenInternalLinks: broken,
+  brokenImageAssets,
+  articleImages: {
+    creditsFilePresent,
+    howtoWithHeroCount: howtoWithHeroRoutes.length,
+    howtoWithoutHeroCount: howtoWithoutHeroRoutes.length,
+    sampleHowtoWithHero: howtoWithHeroRoutes[0] ?? null,
+    sampleHowtoWithoutHero: howtoWithoutHeroRoutes[0] ?? null,
+    pureDataPagesWithArticleImages,
+    articleImagesMissingDimensionsOrAlt,
+  },
   wrongCanonicalHost: rows.filter((r) => r.canonical && !r.canonical.startsWith(expectedOrigin)).map((r) => ({ route: r.route, canonical: r.canonical })),
   missing: {
     title: rows.filter((r) => !r.title).map((r) => r.route),
@@ -136,6 +181,12 @@ if (output) fs.writeFileSync(output, JSON.stringify(findings, null, 2) + "\n");
 console.log(JSON.stringify({ ...findings, pages: undefined }, null, 2));
 if (
   broken.length ||
+  brokenImageAssets.length ||
+  !creditsFilePresent ||
+  !howtoWithHeroRoutes.length ||
+  !howtoWithoutHeroRoutes.length ||
+  pureDataPagesWithArticleImages.length ||
+  articleImagesMissingDimensionsOrAlt.length ||
   sitemapMissing.length ||
   indexedNotInSitemap.length ||
   noindexInSitemap.length ||
