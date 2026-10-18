@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-18T11:02:09.850Z",
+  "checkedAt": "2026-10-18T15:51:13.442Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -12,10 +12,10 @@
       "query": "petrol price Nigeria",
       "items": [
         {
-          "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uneven Relief",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQd2Z4TUVlaVN5aVFNUGIxRm9mU0RjZFJINVhHcV85TDFsQjg2R2tKM3J0SW1EblpRdUNQOEVzaWI5a3FtZHNEdF93cFpHdDZpU3czd0lyM2wyRDRLTnFLWktkT3JhdzNzLWdDdFYwb0RlSnpTMHJrUzBtQWEzaTNGR0EzZW5uSVBwOWQ2UkNDRGFLVzJJck93S20xNA?oc=5",
-          "source": "THISDAYLIVE",
-          "published": "2026-10-18T01:55:02.000Z"
+          "title": "NLC, Falana, activists rally Nigerians against fuel price hike",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNU0pCbnBSUmtsOXpDTGp1RW5jS1VaVmY1UEZZZkJXa1l2YnVFbFBjZnhLSkNwTHM4WWlEcmlCOVRwd1FYRzFQbUFBa0hhM1JGdEhuUXpBRXItVlExQWhsYTlZMEVRdzdsaFdkdXNwcXhteVFObTVWdE55RkRiRlkwVUp1OTd1NnpWZld4ZGpfV1puLVl3WUJpZDB6RmRmQdIBowFBVV95cUxNQWJHeFlWc1ZKLXh4TXhseWpQTGQzOXFQWmpwcmV2VUtTZzVtQ2M4dTBBbG5WdVJFT0FadDZ6dUVJQTNkTVZGLWpRWVpsNjZ4ZDJ0ZG1sLXZVMFFBeG5vTURscGVZbzRyNjBGLVZDNWl5MENRLU9GVjcxUVRPSERDeVQ1TGVQblB2bXN6eUlZR0hac1VVYVZyUW9icFZhdVl5ajA4?oc=5",
+          "source": "Vanguard News",
+          "published": "2026-10-18T15:22:30.000Z"
         },
         {
           "title": "Marketers reject FG’s plan to cap petrol price at N1,350",
@@ -24,16 +24,16 @@
           "published": "2026-10-16T00:56:03.000Z"
         },
         {
+          "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uneven Relief",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQd2Z4TUVlaVN5aVFNUGIxRm9mU0RjZFJINVhHcV85TDFsQjg2R2tKM3J0SW1EblpRdUNQOEVzaWI5a3FtZHNEdF93cFpHdDZpU3czd0lyM2wyRDRLTnFLWktkT3JhdzNzLWdDdFYwb0RlSnpTMHJrUzBtQWEzaTNGR0EzZW5uSVBwOWQ2UkNDRGFLVzJJck93S20xNA?oc=5",
+          "source": "THISDAYLIVE",
+          "published": "2026-10-18T02:18:52.000Z"
+        },
+        {
           "title": "Hardship: Atiku Canvases For Cheaper Petrol Prices In Nigeria",
           "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWmxfSFhYNzRYSDEwM2gycXFqcVBrdzQ2ZTJob0pNSEQtM3RkRTFzNnp2UGd0UGJJeFZtaGVKUmlTbS0xbV9PZW5xVmpWOWpxMGxVZ1dVaEk0YlJTWGxfOEJDN243dDNqS3JTV1V1UjlLdzdnSnExQTFtVHBTbVAwMHhJVU5kQXM?oc=5",
           "source": "https://thefact.ng/",
           "published": "2026-10-18T04:44:17.000Z"
-        },
-        {
-          "title": "Nigeria Maintains Fuel Subsidy Removal Policy, Targets More Investment and Job Creation",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOGRVNEt2a2oyVkg2WUFrVkw3bGN4X0dMSy1EZ0pTTURsQy1jdGRGSGVtdHRSdkpraHM2QVhya1JRX0pxUW1qUmNwb21GT2NfMEpHT2s4VXlxb0FLRW9SOUZrRE42dVFlSlNadUZUVE4tTTU1WXMyM0FaNm9JeU12ZnJkRmgwYS03QnFrM2JHVlAzS1dNeTY4RUZlcjJZRjdqamc?oc=5",
-          "source": "https://www.nigeriahousingmarket.com/",
-          "published": "2026-10-18T06:40:37.000Z"
         },
         {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
@@ -42,22 +42,22 @@
           "published": "2026-10-09T07:00:00.000Z"
         },
         {
-          "title": "Human Rights Lawyer Picks Holes In FG’s Petrol Price Reduction",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONWpfcUNlWk1RZklQdlhpWmJybC1WeFdrMENrZU8xdEtDaWd5Zm44aUMzQ05ISjgyZ1pRQVJYWVZabW8yM3MxYk5iMDRobTV5NkFpb2JQdTJkMlhjZ09FVkw1aXNQZDVJbHUzNzZZdjl1bElBc2d6Z0x5enV6bEl3V3lrMVBTX2VBRzlFQXF3?oc=5",
-          "source": "Independent Newspaper Nigeria",
-          "published": "2026-10-18T04:37:17.000Z"
-        },
-        {
-          "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
-          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SZW45N1ozOVQwY1YxTkU5dENJNVdfV2I4X3ZBeHVSN1hQN2hCUlVBQV9jcWdTdEI1X3FiWXprWHptRTdXMXowSnFvbE5oR1ExU2tET1ZBSXRITUlCelHSAWNBVV95cUxPX0kxWFNtZ0lyWmxPUlRQMGJCel9oTDFsUl9qcTRQcEF4el9WTEJIc3NqY3paZ0FzWFctX2VKTm15Q1J6UTZyWldOQW1Fam9zWnlhYkhlWFpxUTBQOWlOZ3o0U0k?oc=5",
-          "source": "BBC",
-          "published": "2026-10-12T13:42:37.000Z"
+          "title": "Nigeria Maintains Fuel Subsidy Removal Policy, Targets More Investment and Job Creation",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOGRVNEt2a2oyVkg2WUFrVkw3bGN4X0dMSy1EZ0pTTURsQy1jdGRGSGVtdHRSdkpraHM2QVhya1JRX0pxUW1qUmNwb21GT2NfMEpHT2s4VXlxb0FLRW9SOUZrRE42dVFlSlNadUZUVE4tTTU1WXMyM0FaNm9JeU12ZnJkRmgwYS03QnFrM2JHVlAzS1dNeTY4RUZlcjJZRjdqamc?oc=5",
+          "source": "https://www.nigeriahousingmarket.com/",
+          "published": "2026-10-18T06:40:37.000Z"
         },
         {
           "title": "NNPCL increases petrol price amid disputed fuel discount",
           "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQeWJLM3FoUlRZMUx0M2FNa3ZtSE9ZR0ZvRWZuZ0RRZHVnZGR0eHdzaXhaRlJtUTJYbkQ0dTQ4M0VWcnNLc3ZJZ3BFTzJfYkpqclVBTWdwNW9uZFBpM05ib2UxLXlEQmE2XzhBRkZMVmxrTzJ3aENNeU5mWENlenMtcEhlM3NzRTBSdHd5NVEtOTVJQkE?oc=5",
           "source": "Daily Post Nigeria",
           "published": "2026-10-16T20:00:42.000Z"
+        },
+        {
+          "title": "Human Rights Lawyer Picks Holes In FG’s Petrol Price Reduction",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONWpfcUNlWk1RZklQdlhpWmJybC1WeFdrMENrZU8xdEtDaWd5Zm44aUMzQ05ISjgyZ1pRQVJYWVZabW8yM3MxYk5iMDRobTV5NkFpb2JQdTJkMlhjZ09FVkw1aXNQZDVJbHUzNzZZdjl1bElBc2d6Z0x5enV6bEl3V3lrMVBTX2VBRzlFQXF3?oc=5",
+          "source": "Independent Newspaper Nigeria",
+          "published": "2026-10-18T04:37:17.000Z"
         }
       ]
     },
