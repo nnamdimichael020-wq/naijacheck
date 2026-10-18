@@ -8,7 +8,11 @@ if (!fs.existsSync(root)) throw new Error("out/ is missing; run npm run build fi
 
 const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => e.isDirectory() ? walk(path.join(dir, e.name)) : [path.join(dir, e.name)]);
 const files = walk(root);
-const htmlFiles = files.filter((f) => f.endsWith(".html"));
+// Google Search Console's site-verification token is a bare token file copied from public/,
+// not a content page: it has no title, description, canonical or H1 by design, and it is
+// deliberately absent from the sitemap. Exclude only that file shape from the page checks.
+const isSearchConsoleToken = (file) => /(^|[\\/])google[0-9a-z]+\.html$/i.test(file);
+const htmlFiles = files.filter((f) => f.endsWith(".html") && !isSearchConsoleToken(f));
 const routeFor = (file) => {
   const rel = path.relative(root, file).replaceAll(path.sep, "/");
   if (rel === "index.html") return "/";

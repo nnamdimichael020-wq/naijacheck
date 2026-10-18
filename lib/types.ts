@@ -38,6 +38,8 @@ export type Article = {
   officialLinks?: ArticleLink[];
   /** Line items a human could not verify from an official page and must confirm before paying. */
   unverifiedItems?: string[];
+  /** True when the source is a free public release, so the copy must not talk about paying for it. */
+  freeRelease?: boolean;
 };
 
 export type SearchEntry = { path: string; title: string; kind: string; desc: string; keys: string };

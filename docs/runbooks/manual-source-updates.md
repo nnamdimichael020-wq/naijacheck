@@ -23,6 +23,20 @@ npm run nbs:test
 
 Use the matching category/catalogue for PMS, AGO or LPG. The importer rejects city geography, missing units, invalid values, duplicates, wrong catalogue URLs and malformed dates. NBS state/month surveys are not live city prices. Never infer a missing city or convert pack sizes without a reviewed methodology.
 
+## NBS Food Price Watch vs market prices
+
+Use the NBS Microdata Catalog (`https://microdata.nigerianstat.gov.ng/index.php/catalog/162`) for the Selected Food Price Watch. Read the catalog's methodology and release list; download the release ZIP manually and open the PDF and XLSX. Do not scrape a login, an application flow or a paid data service.
+
+Rules that stop this going wrong:
+
+1. **A monthly survey average is not a live market price.** Quote the survey month and the publication date, not the download date. The May 2026 release, for example, was dated 25 June 2026.
+2. **Match the item and unit before comparing.** "Rice local sold loose" is not a branded 50kg bag. A 50kg bag is ₦X ÷ actual kg, not ₦X ÷ an assumed 50.
+3. **Never convert local measures by a fixed table.** Cups, mudus, dericas and paint buckets vary by seller and product. The guide tells readers to weigh their own purchase; the runbook must not introduce a national conversion.
+4. **No state row becomes a city price.** NBS reports state, zone and national averages. A Lagos or Aba market is not the state average, and the national figure is an average of the state averages.
+5. **Import only through the tested path.** Use `npm run nbs:import -- food <file.csv> --survey-month YYYY-MM --publication-date YYYY-MM-DD --geography-level state|national --source-url https://microdata.nigerianstat.gov.ng/index.php/catalog/162 --mapping <mapping.json>`, then `npm run nbs:test`. The importer rejects city geography, missing units, invalid values, duplicates, wrong catalogue URLs and malformed dates.
+6. **Keep the page honest while rows are unimported.** If a release has not been read and imported, keep the figures `unavailable` and let readers open the official release themselves. Do not paste a news report's summary of the NBS figures.
+7. **Update the trail.** Change `data/govhowto.json` (`lastVerified`, `sourceNote`, `unverifiedItems`), add the release date and any imported rows to `docs/content-gap-queue.md`, and update this runbook only if the method changes.
+
 ## Telecom
 
 Use the operator's official current page, app or USSD: MTN, Airtel, Glo or 9mobile. Every offer needs network, plan/data amount, price, validity, eligibility, purchase method, official source URL and check date. If eligibility or validity is unclear, remove the offer and link users to the carrier. Never infer a “best” plan.
@@ -50,9 +64,17 @@ Store the rows in `data/govhowto.json` under the `prepaid-electricity-bands` doc
 
 ## FRSC driver's licence
 
-Use `https://frsc.gov.ng/` (Service Level Agreements and the ARC Compendium) and `https://www.nigeriadriverslicence.org/` for process steps, the 60-day service standard and the one-month renewal window. Never scrape the application, login or payment flow: the portal generates the amount the applicant actually pays, and that generated amount is the only fee figure worth publishing.
+Use `https://frsc.gov.ng/` (Service Level Agreements and the ARC Compendium) and `https://www.nigeriadriverslicence.org/` for process steps, the 60-day service standard and the one-month renewal window. Never scrape the application, login or payment flow.
 
-If the current statutory fee cannot be confirmed on an FRSC page, leave the row's status at `writing` in [`docs/content-gap-queue.md`](../content-gap-queue.md), keep the fee in `unverifiedItems`, and say plainly on the page that the figure is unverified.
+**Current card fee (owner-verified 18 October 2026):** ₦15,000 for a three-year standard motor vehicle licence card and ₦21,000 for a five-year card, as reported by the site owner from the official portal's Remita payment step. Store both amounts with the check date, the attribution and the verification state `manual`. Do not attribute them to a blog, a forum or a third-party fee table.
+
+Rules that stop this going wrong:
+
+1. **The card fee is not the whole cost.** Learner's permit, driving school and VIO test charges are set locally and differ by state. Never print a national figure for them and never invent a state amount. Say plainly that they are separate from the ₦15,000 / ₦21,000 card fee.
+2. **The live Remita total is the authority.** Banks and payment channels may add a small convenience fee. If the portal's total differs from the published amount, readers pay the portal total against the reference the portal generates.
+3. **The April 2024 SLA is superseded.** It listed ₦10,350 (3-year) and ₦15,450 (5-year). Keep those only as historical context when explaining why older pages show less; never present them as the current fee.
+4. **Re-check method.** Start a licence application in the portal and read the total at the Remita step. Do not submit payment, do not automate or scrape the login/payment flow, and do not record personal data. Update `data/govhowto.json` (`fee`, `feeSource`, the fee table, `sourceNote`, FAQs, `lastVerified`) and `docs/content-gap-queue.md` in the same PR.
+5. **Review triggers.** A changed fingerprint on `frsc-licence-portal` or `frsc-sla` opens human review; it never edits a fee by itself. If a future check cannot read the portal amount, keep the last-good amount explicitly dated and stale rather than guessing, and tell readers the live Remita total governs.
 
 ## Lagos State residency registration (LASRRA / LAG-ID)
 
