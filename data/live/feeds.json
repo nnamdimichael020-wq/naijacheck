@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-18T20:40:51.122Z",
+  "checkedAt": "2026-10-18T23:10:42.109Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -12,16 +12,16 @@
       "query": "petrol price Nigeria",
       "items": [
         {
-          "title": "NLC, Falana, activists rally Nigerians against fuel price hike",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNU0pCbnBSUmtsOXpDTGp1RW5jS1VaVmY1UEZZZkJXa1l2YnVFbFBjZnhLSkNwTHM4WWlEcmlCOVRwd1FYRzFQbUFBa0hhM1JGdEhuUXpBRXItVlExQWhsYTlZMEVRdzdsaFdkdXNwcXhteVFObTVWdE55RkRiRlkwVUp1OTd1NnpWZld4ZGpfV1puLVl3WUJpZDB6RmRmQdIBowFBVV95cUxNQWJHeFlWc1ZKLXh4TXhseWpQTGQzOXFQWmpwcmV2VUtTZzVtQ2M4dTBBbG5WdVJFT0FadDZ6dUVJQTNkTVZGLWpRWVpsNjZ4ZDJ0ZG1sLXZVMFFBeG5vTURscGVZbzRyNjBGLVZDNWl5MENRLU9GVjcxUVRPSERDeVQ1TGVQblB2bXN6eUlZR0hac1VVYVZyUW9icFZhdVl5ajA4?oc=5",
-          "source": "Vanguard News",
-          "published": "2026-10-18T15:22:37.000Z"
-        },
-        {
           "title": "Marketers reject FG’s plan to cap petrol price at N1,350",
           "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5WaDNkeTl2ajNUSGtaa0gyR1NETXI1WkNnQlJrSjMyNEJiSWVCay04T3NWOFRSM1psWjVsdkI2c0c3MmpNbzgtSDltZzNVcTU4OGlUck5pSkVnZWtVWWE1SjJEZV9KYnFpbDB2V19zLTRSZTF1?oc=5",
           "source": "Punch Newspapers",
           "published": "2026-10-16T00:56:03.000Z"
+        },
+        {
+          "title": "NLC, Falana, activists rally Nigerians against fuel price hike",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNU0pCbnBSUmtsOXpDTGp1RW5jS1VaVmY1UEZZZkJXa1l2YnVFbFBjZnhLSkNwTHM4WWlEcmlCOVRwd1FYRzFQbUFBa0hhM1JGdEhuUXpBRXItVlExQWhsYTlZMEVRdzdsaFdkdXNwcXhteVFObTVWdE55RkRiRlkwVUp1OTd1NnpWZld4ZGpfV1puLVl3WUJpZDB6RmRmQdIBowFBVV95cUxNQWJHeFlWc1ZKLXh4TXhseWpQTGQzOXFQWmpwcmV2VUtTZzVtQ2M4dTBBbG5WdVJFT0FadDZ6dUVJQTNkTVZGLWpRWVpsNjZ4ZDJ0ZG1sLXZVMFFBeG5vTURscGVZbzRyNjBGLVZDNWl5MENRLU9GVjcxUVRPSERDeVQ1TGVQblB2bXN6eUlZR0hac1VVYVZyUW9icFZhdVl5ajA4?oc=5",
+          "source": "Vanguard News",
+          "published": "2026-10-18T15:22:37.000Z"
         },
         {
           "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uneven Relief",
@@ -48,16 +48,16 @@
           "published": "2026-10-16T20:00:42.000Z"
         },
         {
-          "title": "Nigeria Maintains Fuel Subsidy Removal Policy, Targets More Investment and Job Creation",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOGRVNEt2a2oyVkg2WUFrVkw3bGN4X0dMSy1EZ0pTTURsQy1jdGRGSGVtdHRSdkpraHM2QVhya1JRX0pxUW1qUmNwb21GT2NfMEpHT2s4VXlxb0FLRW9SOUZrRE42dVFlSlNadUZUVE4tTTU1WXMyM0FaNm9JeU12ZnJkRmgwYS03QnFrM2JHVlAzS1dNeTY4RUZlcjJZRjdqamc?oc=5",
-          "source": "https://www.nigeriahousingmarket.com/",
-          "published": "2026-10-18T06:40:37.000Z"
-        },
-        {
           "title": "We’ll Consider Fuel Subsidy To Bring Down Petrol Price – Kwankwaso",
           "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVjBJaWVPcjA0TXpqcHFSU3V5aEJYV285cHB1eVFBZWdGek9GY2RoOTc5bGpYN1U0VmVza1dVOEV4ek1ZNURsOVA5X1pCbG0tOVRlOTVxLWM3QnVPWU5BQU1OWmFuZ2Z1ckNhdTdtVGk3YmJkRENVUGRCZjM1bWZtZjg5Mk40NUIzdGRVUUhZajFqR1BSMU9Qc2lHY0U4VjFUSVlLUQ?oc=5",
           "source": "Channels Television",
           "published": "2026-10-15T19:50:19.000Z"
+        },
+        {
+          "title": "Nigeria Maintains Fuel Subsidy Removal Policy, Targets More Investment and Job Creation",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOGRVNEt2a2oyVkg2WUFrVkw3bGN4X0dMSy1EZ0pTTURsQy1jdGRGSGVtdHRSdkpraHM2QVhya1JRX0pxUW1qUmNwb21GT2NfMEpHT2s4VXlxb0FLRW9SOUZrRE42dVFlSlNadUZUVE4tTTU1WXMyM0FaNm9JeU12ZnJkRmgwYS03QnFrM2JHVlAzS1dNeTY4RUZlcjJZRjdqamc?oc=5",
+          "source": "https://www.nigeriahousingmarket.com/",
+          "published": "2026-10-18T06:40:37.000Z"
         }
       ]
     },
@@ -85,16 +85,16 @@
           "published": "2026-10-15T04:49:59.000Z"
         },
         {
+          "title": "Naira Trades N1,332/$1 at Official Market, N1,358/$1 at Black Market |",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOYm5SMjFsNzA0SUpzdEx0b0VlYnFURWxfTjRCZElYcldJbXFSRDJJWkhaUVkzcGJjSkZ3UmEtMHdMMFUzR05oUHBGZVIxNlBxZkwyMnpINHgwVk5Lenh2MnU1bnR3OUswdldZeE94N2JHWDV3Uk9GTHdMcDctS1hDaHQ4X19BeW1mN0Y3ai1pWEwxMm45YUVDdWF3OWU?oc=5",
+          "source": "Business Post Nigeria",
+          "published": "2026-10-15T08:07:09.000Z"
+        },
+        {
           "title": "Dollar-to-Naira exchange rate Today, October 16, 2026: Naira depreciates against USD to end week on negative note",
           "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaUZuX2JpeUlQM2VaTUQ1VnJSUlVVcHV4NkRoeVhnZUx6cTZBN3hPX2RLdjhfUHFEN3lWSERjQ1pqTVRWbkpiVWFDS25kUm1WY0sybmo2eURGT0FpZFdNVjBXbFJ5VVdrdG95enZyYTg5dTVCekZtUW11Y3pPQzVEWkJ5SnR4eUdQLXRvSElXMjVKa3QzRlRwTFhfUnBBMEVWbkh2aU5tZEZGc2F3cEtrVTNIalhpSmZqZ2lTUDlMdnJFQkxZOGxHelYwVDNkbFd1NTlRY2x1LVNvT2s?oc=5",
           "source": "Daily Post Nigeria",
           "published": "2026-10-16T20:03:40.000Z"
-        },
-        {
-          "title": "Naira Remains N1,331/$1 at Official Market, N1,358/$1 at Parallel Market",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPLV8wdl9iUWVtWnF4dFVBTUlWUloweERuV0V1anhCR2JQQjdtWXM0dXBnX21pc2liNWVDRXNyTnlwNkZXd25xcVhBZHJ2NHBOQl90YXdsMnYzTFVsMXp4WlBoeVZ2dVNRX1NjaDk0eVVJZlpfM2NiRkExOXpVcGpvaC1HM0hnYkV5OGFaWkZkNWMwbWdfd2RRc3VUUENpSWZjUmc?oc=5",
-          "source": "Business Post Nigeria",
-          "published": "2026-10-17T09:48:27.000Z"
         },
         {
           "title": "Dollar to Naira exchange rate today, October 16, 2026",
@@ -177,22 +177,22 @@
       "query": "MTN Airtel Glo data price Nigeria",
       "items": [
         {
-          "title": "Cheapest MTN, Airtel, and Glo AWOOF data codes 2026: See the full list",
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZXV2dVV4eHNsTzRZSE0xVXpPdFJreWQyR0lCMWp6YlFxS25uMWlqWU9jekh1dV9iY1V2Q3paY2Z1OUIxVk1mT3Rma2Etc1VsbDJUZmt1anQyajM3d1hKc2JPcHRPN2NONF8zZ1F0MmxNS0FOdzFsNEFLQmJyQmc1T1FCZTRfYV9ONERJ?oc=5",
-          "source": "Pulse Nigeria",
-          "published": "2026-05-06T07:00:00.000Z"
-        },
-        {
           "title": "2026 data plans and prices for MTN, Airtel, Glo and T2mobile",
           "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBkS2R1UXZfbmI5dmMyX0ZYLWVKVXc4NFhzZlJUc0dudDg5YUw2YmNwekRhRmhKVVY3bndrd09MUDNyUDc0OVhfZXBEMDJNUFl1YmpuUVdhVGJvcXNSM2FxdW95RFV2ZWtEUFQ0OGFvdEZ4MWZWZUFUXzkwS3pGQQ?oc=5",
           "source": "Technext24.com",
           "published": "2026-07-07T23:41:10.000Z"
         },
         {
-          "title": "MTN emerges biggest winner as NCC releases latest mobile subscriber figures",
-          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOcUIwRDJvaTVnVUZveDVSNElDM3oxZzBWdXJfVVNpOVRVRllYcDIzdGM2R1VaTGUteWRobVptd05BYmlKUTlmMDREeWxjWUIya2EwdDBOdHQ2R3RiaVhteFZQTFh0TEdZTnZwM3dXWUozQ1dqdjY4c2xUOVBIRldwZWQybHFUek5tVUtlbVlEMExhcmdtNXE0Wm81QWxkYVJKenJCemxIaGlJUjhianF4M2NWX2Y1eTA?oc=5",
-          "source": "Legit.ng",
-          "published": "2026-08-03T07:00:00.000Z"
+          "title": "Nigerians Question Telcos’ Advertising ‘Unlimited’ Data Plan ‘If It Does Not Exist’",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPb2ljOGtUVXdpX3g1LW4yaGxoemhVLUcwUkdvX1ZSNjFoTW9xdnhUd2xGV01tQXVORnpTYVJSUGRYZHVzbU1PUW9fN2dPdERhcTZETWhtaE4zcU1mVFZnaEJHZU5iM3lOaVoycFBobnVaUS1NcmRJQkxLRkgwR3M0TFZTc3NiX0hJYlZZU3M2RmpwQVVrVV9obVl6eHR5VHJqTGNr?oc=5",
+          "source": "Techeconomy",
+          "published": "2026-06-08T07:00:00.000Z"
+        },
+        {
+          "title": "Top 10 Telecom Brands in Nigeria 2026: Definitive Ranking",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Edng1UHF4QU4zOHpqY0J3cXMwVmlSOEFlWXpOQUk2M21XbXNqY2U2Mk1JQlBqbHdRS3dlOVRDSTI5ZWNqV3RvWmZQU084S0hMRzZZaGtWNk43WXE5Nk9acmY0RGZobzZHdi0wT3YtV1Y?oc=5",
+          "source": "Global Brands Magazine",
+          "published": "2026-09-08T08:58:12.000Z"
         },
         {
           "title": "Implications As MTN, Airtel, Glo, Others Face ₦300bn Revenue Hit As FCCPC Hands Airtime Lending Market To Five New Operators",
@@ -207,22 +207,22 @@
           "published": "2025-12-04T08:00:00.000Z"
         },
         {
-          "title": "Top 10 Telecom Brands in Nigeria 2026: Definitive Ranking",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Edng1UHF4QU4zOHpqY0J3cXMwVmlSOEFlWXpOQUk2M21XbXNqY2U2Mk1JQlBqbHdRS3dlOVRDSTI5ZWNqV3RvWmZQU084S0hMRzZZaGtWNk43WXE5Nk9acmY0RGZobzZHdi0wT3YtV1Y?oc=5",
-          "source": "Global Brands Magazine",
-          "published": "2026-09-08T08:58:12.000Z"
-        },
-        {
-          "title": "Nigerians Question Telcos’ Advertising ‘Unlimited’ Data Plan ‘If It Does Not Exist’",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPb2ljOGtUVXdpX3g1LW4yaGxoemhVLUcwUkdvX1ZSNjFoTW9xdnhUd2xGV01tQXVORnpTYVJSUGRYZHVzbU1PUW9fN2dPdERhcTZETWhtaE4zcU1mVFZnaEJHZU5iM3lOaVoycFBobnVaUS1NcmRJQkxLRkgwR3M0TFZTc3NiX0hJYlZZU3M2RmpwQVVrVV9obVl6eHR5VHJqTGNr?oc=5",
-          "source": "Techeconomy",
-          "published": "2026-06-08T07:00:00.000Z"
+          "title": "Goodbye airtime? Lebara launches in Nigeria with a cloud-first model and cheaper data promises",
+          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ibGRVTEo0OUNzSFg2S0E3cE1URFM1VUUxZWtUcjZkR2pRcDRUdVdWaEF5c2piTUVlcldEamFXekxWSHBUaEFhVXItd3dLbVRQU0tWQVp5OXNBX1pENlpnbWdvQkdLbGZ6bmdKbjhB?oc=5",
+          "source": "Condia",
+          "published": "2026-03-03T08:00:00.000Z"
         },
         {
           "title": "2026 Complete list of voice tariff plans on MTN, Airtel, Globacom and T2mobile",
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yS1ZKUDdWRFJzQmEwb24xX3hhaU9Qd3FTZ3RUeVNsRnNkV2VuaDFuUHFOcl85OG5XR0ljZ3haNnc0RkZEVnZ2ZUlMaHhTVnZGRjFPVzNGb3B0U0lFWDN1bzR3V0J3eU5qbHRkRFJCekNyVjlNVmJDSGticVc?oc=5",
           "source": "Technext24.com",
           "published": "2026-07-05T22:22:32.000Z"
+        },
+        {
+          "title": "MTN, Airtel, glo data bundles: NCC approve 50% increase in price of airtime and data bundles",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5wUkp0TWhBaTFRUEYzeUdkYW1oWi1GTmlYTVNDVVQ5NzBxOEZXNUlpRmJKc3RwS1dLZVBRLUpNdWFVUGp2X3dBR2kxU3k4NU54dG9GTENBc1owcEg20gFiQVVfeXFMTUc1bmZZTnZYa3lscTl6aDdmUEoxdHlqZVo3c0ZCbzZMRDlXZ2lsTFUxVWNBSUFwSlF6RzZId05tOUV0dTcwTl85dGtqdmtRXzV0bFhVRGtYMThZVWdxcFZsUGc?oc=5",
+          "source": "BBC",
+          "published": "2025-01-20T08:00:00.000Z"
         }
       ]
     },
