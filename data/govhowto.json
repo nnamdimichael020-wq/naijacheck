@@ -988,7 +988,7 @@
           "h2": "The latest release, and how to open it without paying anyone",
           "paras": [
             "The catalog's release list is the place to start. When we read it on 18 October 2026, the newest entry was the Selected Food Price Watch for May 2026, dated 25 June 2026. The download is a 5.05 MB ZIP containing a PDF report and an XLSX table. The April 2026 release was dated 1 June 2026, and the March 2026 release was dated 6 May 2026.",
-            "Download the ZIP from the catalog, unzip it on your phone or laptop, and open the PDF first. The PDF gives the executive summary and the state pages; the XLSX is easier if you want to sort or filter the rows. Read the survey month on the cover before you use any number."
+            "Download the ZIP from the catalog, unzip it on your phone or laptop, and open the PDF first. The PDF gives the executive summary, the national item pages, the zone pages and the state appendix; the XLSX is easier if you want to sort or filter the rows. Read the survey month on the cover before you use any number."
           ],
           "bullets": [
             "Open the official catalog at microdata.nigerianstat.gov.ng, catalog 162. Do not use a paid 'data bank' or a WhatsApp forward.",
@@ -1012,7 +1012,7 @@
             "Packaging and repacking. A 50kg bag is cheaper per kilogram than the same rice repacked into small cups or bags. The repacking labour and the risk of short weight are part of the difference.",
             "Transport and fuel. Diesel and petrol costs move the price of every truckload. A market far from the farm or the port carries more transport per kilogram.",
             "Season and supply. Harvest, lean season, border policy and fuel availability all move prices before a survey can capture them.",
-            "Sample versus transaction. NBS averages 10,000 locations; you are one buyer. A single seller's price is not a state average, and a state average is not a quote."
+            "Sample versus transaction. NBS surveys about 10,000 respondents and locations; you are one buyer. A single seller's price is not a state average, and a state average is not a quote."
           ]
         },
         {
@@ -1136,7 +1136,7 @@
           ],
           "bullets": [
             "An 'NBS price' with no survey month, no item label and no unit. You cannot check it, and it may be years old.",
-            "A national average presented as 'the price in Lagos' or 'the price in Aba'. NBS publishes state pages for a reason.",
+            "A national average presented as 'the price in Lagos' or 'the price in Aba'. NBS publishes state-level figures for a reason.",
             "A 50kg bag price compared directly with a 1kg average. Divide by the actual weight first.",
             "A screenshot with the source cropped out. Ask for the release month and the catalog link.",
             "A 'current price report' sold by an agent. The report is free on the NBS catalog.",
