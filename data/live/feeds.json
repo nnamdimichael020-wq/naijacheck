@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-17T23:07:43.484Z",
+  "checkedAt": "2026-10-18T04:30:41.273Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -12,28 +12,28 @@
       "query": "petrol price Nigeria",
       "items": [
         {
+          "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uneven Relief",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQd2Z4TUVlaVN5aVFNUGIxRm9mU0RjZFJINVhHcV85TDFsQjg2R2tKM3J0SW1EblpRdUNQOEVzaWI5a3FtZHNEdF93cFpHdDZpU3czd0lyM2wyRDRLTnFLWktkT3JhdzNzLWdDdFYwb0RlSnpTMHJrUzBtQWEzaTNGR0EzZW5uSVBwOWQ2UkNDRGFLVzJJck93S20xNA?oc=5",
+          "source": "THISDAYLIVE",
+          "published": "2026-10-18T01:55:02.000Z"
+        },
+        {
           "title": "Marketers reject FG’s plan to cap petrol price at N1,350",
           "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5WaDNkeTl2ajNUSGtaa0gyR1NETXI1WkNnQlJrSjMyNEJiSWVCay04T3NWOFRSM1psWjVsdkI2c0c3MmpNbzgtSDltZzNVcTU4OGlUck5pSkVnZWtVWWE1SjJEZV9KYnFpbDB2V19zLTRSZTF1?oc=5",
           "source": "Punch Newspapers",
           "published": "2026-10-16T00:56:03.000Z"
         },
         {
-          "title": "FG to examine petrol discount scheme to determine if further intervention is needed",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVXExdkIwMDlFWDg3OGJOYXEtYVFGVEdUVjdpRlMzUEdhUGpnVHpIWE9XSC1KM0VSTHJmOXNuZXVob0hHSXV2NUMyWVF0Sk5STTZUQXZUc00xOVZhWWhpekFwZ056bm0wUEdOUjNVbnZQSS0tNk5zbU01SWJ3cnJoeTNyaWhmelJwRWNveG5tbEUtQzdHeU15bWxUOWpGMVNjVEpjZnppeXJ5NEZp?oc=5",
-          "source": "TheCable",
-          "published": "2026-10-17T09:18:46.000Z"
-        },
-        {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
           "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNXZuQks4c2otRlh3czh4dHpPbmR3NXFKbmpjaExMRnZNR0hMMDd1T0tzZjBvR25wMlRYQm1Ydm5NdVhsQm4wUzJIYjdHNzVmb21Xd2huaWxfai1BaEpHTDdnMTZlZGRlOVpSYlQxaXl6aVhNdzlMcE1NbzVkX09EWmlrMlYtYlFETGtrQ2czY2lRS1R6TjI2ZVRyX05WdDZCX0NSLXNySkpDaFBPel84eWJTSklsUlRyNWY4TG9JYzgwbHVZQzVpVk9ldk10cWNwb3JKbVFCZmxGWkFzTnJrOWJPeG0yckd3YlJR?oc=5",
           "source": "Premium Times Nigeria",
-          "published": "2026-10-09T04:26:07.000Z"
+          "published": "2026-10-09T07:00:00.000Z"
         },
         {
-          "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
-          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SZW45N1ozOVQwY1YxTkU5dENJNVdfV2I4X3ZBeHVSN1hQN2hCUlVBQV9jcWdTdEI1X3FiWXprWHptRTdXMXowSnFvbE5oR1ExU2tET1ZBSXRITUlCelHSAWNBVV95cUxPX0kxWFNtZ0lyWmxPUlRQMGJCel9oTDFsUl9qcTRQcEF4el9WTEJIc3NqY3paZ0FzWFctX2VKTm15Q1J6UTZyWldOQW1Fam9zWnlhYkhlWFpxUTBQOWlOZ3o0U0k?oc=5",
+          "title": "Fuel price in Nigeria: Why Nigerians continue to dey see increase in fuel prices",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1SSG92NFlMZUFmcjZoenBmWHV2Ymo5ZWNyMjNtY2JPc0VjVm9jaFRKcnNyR2tWcEtEN3BkeGkwV3lnZTdZNlJXUjV4LUFJZGkxelFXZGRzWTZDc3duQmfSAWNBVV95cUxQX3NEd3J3TUVVZEVILXVMWXhucnEzOThGOE9Mbk1HU2RZbnIzNThkeTlDZkFFZFFGRjlQaUtrcEFPNmJNWnBsd21jZlFoa0pEaTJBNjRqN1MzMnBOMktJRFF4QlU?oc=5",
           "source": "BBC",
-          "published": "2026-10-12T13:42:37.000Z"
+          "published": "2026-09-14T07:00:00.000Z"
         },
         {
           "title": "NNPCL increases petrol price amid disputed fuel discount",
@@ -42,16 +42,16 @@
           "published": "2026-10-16T20:00:42.000Z"
         },
         {
+          "title": "FG to examine petrol discount scheme to determine if further intervention is needed",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVXExdkIwMDlFWDg3OGJOYXEtYVFGVEdUVjdpRlMzUEdhUGpnVHpIWE9XSC1KM0VSTHJmOXNuZXVob0hHSXV2NUMyWVF0Sk5STTZUQXZUc00xOVZhWWhpekFwZ056bm0wUEdOUjNVbnZQSS0tNk5zbU01SWJ3cnJoeTNyaWhmelJwRWNveG5tbEUtQzdHeU15bWxUOWpGMVNjVEpjZnppeXJ5NEZp?oc=5",
+          "source": "TheCable",
+          "published": "2026-10-17T09:18:46.000Z"
+        },
+        {
           "title": "We’ll Consider Fuel Subsidy To Bring Down Petrol Price – Kwankwaso",
           "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVjBJaWVPcjA0TXpqcHFSU3V5aEJYV285cHB1eVFBZWdGek9GY2RoOTc5bGpYN1U0VmVza1dVOEV4ek1ZNURsOVA5X1pCbG0tOVRlOTVxLWM3QnVPWU5BQU1OWmFuZ2Z1ckNhdTdtVGk3YmJkRENVUGRCZjM1bWZtZjg5Mk40NUIzdGRVUUhZajFqR1BSMU9Qc2lHY0U4VjFUSVlLUQ?oc=5",
           "source": "Channels Television",
           "published": "2026-10-15T19:50:19.000Z"
-        },
-        {
-          "title": "Tinubu Government Announces 30-Day Petrol Discount At NNPC Stations, Prioritises Public Transporters",
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRUt3VkpYcTdnSjdmVWVRQ0M4aWg1M2Z0My1IaEEwQ1pSV2FEbEpQWGM0bEVnRU1RUmYyMERXQlZXLVFLZU1wSXhOX21SODRxbTlYc1Ftb29NNEJWRmhJbV9RRW1nOWlaLURTejB2V3dFZTJ5ZTNvQTJYNTVYNUkxRUc5b0Z5dWJvSjFhLTVyUkxUbWNKaTVLYzFKbnJzVDZydE9sY1dwUWFSS1BleFM5aU9tMkhicTJkaEZIb2VJTQ?oc=5",
-          "source": "Sahara Reporters",
-          "published": "2026-10-08T07:00:00.000Z"
         },
         {
           "title": "Marketers Reject Government’s Plan to Cap Petrol Price at ₦1,350",
@@ -73,16 +73,16 @@
           "published": "2026-10-13T06:16:33.000Z"
         },
         {
-          "title": "Naira Remains N1,331/$1 at Official Market, N1,358/$1 at Parallel Market",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPLV8wdl9iUWVtWnF4dFVBTUlWUloweERuV0V1anhCR2JQQjdtWXM0dXBnX21pc2liNWVDRXNyTnlwNkZXd25xcVhBZHJ2NHBOQl90YXdsMnYzTFVsMXp4WlBoeVZ2dVNRX1NjaDk0eVVJZlpfM2NiRkExOXpVcGpvaC1HM0hnYkV5OGFaWkZkNWMwbWdfd2RRc3VUUENpSWZjUmc?oc=5",
-          "source": "Business Post Nigeria",
-          "published": "2026-10-17T09:48:27.000Z"
-        },
-        {
           "title": "Dollar to Naira Exchange Rate Today, October 14, 2026",
           "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGTGQtS1FUN0ZDdGd2aVZDTEEtX2JFWWZwN1YxQXgtYmNuM2FmdzhoSFpjczBsQTFicHJyS3BFTWxrTVBZa1FlMVJyZmdDb19YOG10N1dxMVFod01WZy04eERDcmczd2k4WTdGLUY1em5MQ211SWV1ampjbmxsVGc?oc=5",
           "source": "Techeconomy",
           "published": "2026-10-14T07:32:02.000Z"
+        },
+        {
+          "title": "Naira Remains N1,331/$1 at Official Market, N1,358/$1 at Parallel Market",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPLV8wdl9iUWVtWnF4dFVBTUlWUloweERuV0V1anhCR2JQQjdtWXM0dXBnX21pc2liNWVDRXNyTnlwNkZXd25xcVhBZHJ2NHBOQl90YXdsMnYzTFVsMXp4WlBoeVZ2dVNRX1NjaDk0eVVJZlpfM2NiRkExOXpVcGpvaC1HM0hnYkV5OGFaWkZkNWMwbWdfd2RRc3VUUENpSWZjUmc?oc=5",
+          "source": "Business Post Nigeria",
+          "published": "2026-10-17T09:48:27.000Z"
         },
         {
           "title": "Current Black Market Dollar to Naira Exchange Rate Today, Thursday, October 15, 2026",
@@ -91,10 +91,10 @@
           "published": "2026-10-15T04:49:59.000Z"
         },
         {
-          "title": "Dollar to Naira exchange rate Today, October 14, 2026: Naira records first appreciation against USD",
-          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNbjZkRkNJN1JtV3hrYXlqa2c4RGlYVDU0VWh0bFNLcDVqMXpRb1lLMmQ3T3FaQ1B5MEl3a3cwQ0xDSTM4VGppMDBLZGw0cEZHeEd2S1FWUV9tTWV6QXNSZkFDWDMyempHVV8yOXl5Wk1EdDFLN1pHM245QnlwbXRPUk9kNW52YkhrTDBMQWxVcGRlSWdROXN3Q2xZX29mVEszNjRYOExMVUVvaWk3bkFYcjdZeGxLeWdnUXpqeDBnX1AxUkFPNksyeg?oc=5",
+          "title": "Dollar-to-Naira exchange rate Today, October 16, 2026: Naira depreciates against USD to end week on negative note",
+          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPaUZuX2JpeUlQM2VaTUQ1VnJSUlVVcHV4NkRoeVhnZUx6cTZBN3hPX2RLdjhfUHFEN3lWSERjQ1pqTVRWbkpiVWFDS25kUm1WY0sybmo2eURGT0FpZFdNVjBXbFJ5VVdrdG95enZyYTg5dTVCekZtUW11Y3pPQzVEWkJ5SnR4eUdQLXRvSElXMjVKa3QzRlRwTFhfUnBBMEVWbkh2aU5tZEZGc2F3cEtrVTNIalhpSmZqZ2lTUDlMdnJFQkxZOGxHelYwVDNkbFd1NTlRY2x1LVNvT2s?oc=5",
           "source": "Daily Post Nigeria",
-          "published": "2026-10-14T20:05:26.000Z"
+          "published": "2026-10-16T20:03:40.000Z"
         },
         {
           "title": "Dollar to Naira exchange rate today, October 16, 2026",
@@ -183,12 +183,6 @@
           "published": "2026-07-07T23:41:10.000Z"
         },
         {
-          "title": "Implications As MTN, Airtel, Glo, Others Face ₦300bn Revenue Hit As FCCPC Hands Airtime Lending Market To Five New Operators",
-          "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQaGtwMFNqaHBKdmNMUFRuSWJwT2Y0UUhtVkUxSWJwUVVwWmJwQndOMTc3c2d1M2w0UldORXl2eEpWRDhmaXlrMFNEang2TjhKZlJjQXluY0dzNXZ3eDZGQkl3TVhOdUFKbm1GNmpPYnZNcjZRZnBBbUYtdjZpVWVkYlNOaEVneC12Q3JmaHNfSkpjZXpfM0phWjdfbmtqblo0azdqS3VGWjQtOUZwMUFSa2VjYnhhRXFXNlN4blh6ZEJSNV9Wem9JZ0tUTGFqM0EwS0FFVGEwaExFT2wwbnFOZWJxV3dINDdldUg3UjM1QjIwSEE?oc=5",
-          "source": "Brand Communicator",
-          "published": "2026-04-24T07:00:00.000Z"
-        },
-        {
           "title": "Nigerians Question Telcos’ Advertising ‘Unlimited’ Data Plan ‘If It Does Not Exist’",
           "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPb2ljOGtUVXdpX3g1LW4yaGxoemhVLUcwUkdvX1ZSNjFoTW9xdnhUd2xGV01tQXVORnpTYVJSUGRYZHVzbU1PUW9fN2dPdERhcTZETWhtaE4zcU1mVFZnaEJHZU5iM3lOaVoycFBobnVaUS1NcmRJQkxLRkgwR3M0TFZTc3NiX0hJYlZZU3M2RmpwQVVrVV9obVl6eHR5VHJqTGNr?oc=5",
           "source": "Techeconomy",
@@ -199,6 +193,12 @@
           "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Edng1UHF4QU4zOHpqY0J3cXMwVmlSOEFlWXpOQUk2M21XbXNqY2U2Mk1JQlBqbHdRS3dlOVRDSTI5ZWNqV3RvWmZQU084S0hMRzZZaGtWNk43WXE5Nk9acmY0RGZobzZHdi0wT3YtV1Y?oc=5",
           "source": "Global Brands Magazine",
           "published": "2026-09-08T08:58:12.000Z"
+        },
+        {
+          "title": "Implications As MTN, Airtel, Glo, Others Face ₦300bn Revenue Hit As FCCPC Hands Airtime Lending Market To Five New Operators",
+          "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQaGtwMFNqaHBKdmNMUFRuSWJwT2Y0UUhtVkUxSWJwUVVwWmJwQndOMTc3c2d1M2w0UldORXl2eEpWRDhmaXlrMFNEang2TjhKZlJjQXluY0dzNXZ3eDZGQkl3TVhOdUFKbm1GNmpPYnZNcjZRZnBBbUYtdjZpVWVkYlNOaEVneC12Q3JmaHNfSkpjZXpfM0phWjdfbmtqblo0azdqS3VGWjQtOUZwMUFSa2VjYnhhRXFXNlN4blh6ZEJSNV9Wem9JZ0tUTGFqM0EwS0FFVGEwaExFT2wwbnFOZWJxV3dINDdldUg3UjM1QjIwSEE?oc=5",
+          "source": "Brand Communicator",
+          "published": "2026-04-24T07:00:00.000Z"
         },
         {
           "title": "Simple tricks to make your MTN, Airtel, Glo and 9mobile data last longer",

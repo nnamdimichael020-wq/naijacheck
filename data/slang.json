@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-17T23:07:43.484Z",
+  "updatedAt": "2026-10-18T04:30:41.273Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "detty-december",
     "japa",
-    "achalugo",
     "oblee",
+    "achalugo",
     "chop-life"
   ],
   "terms": [
@@ -36,8 +36,8 @@
       "slug": "oblee",
       "term": "Oblee",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 33,
+      "trend": "quiet",
+      "trendScore": 17,
       "confidence": "medium-high",
       "meaning": "Going out to enjoy yourself: vibes, party, outside life, whether you have money or not.",
       "detail": "Oblee became the clarion call of the festive nightlife season. Giftgram and other explainers define it as enjoying life, being outside, partying and living lavishly, even on a small budget. Some outlets give it a looser meaning, so context matters, but the common use is 'we dey oblee' meaning we are out here having fun.",
@@ -53,14 +53,14 @@
       ],
       "platform": "Twitter/X, TikTok, nightlife",
       "source": "Tribune Online (Dec 2025), Giftgram (Dec 2025), The Net (Dec 2024). Some outlets use different meanings.",
-      "mentions7d": 2
+      "mentions7d": 1
     },
     {
       "slug": "achalugo",
       "term": "Achalugo",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 50,
+      "trend": "quiet",
+      "trendScore": 17,
       "confidence": "medium",
       "meaning": "An Igbo expression for a beautiful, graceful woman. Some people also use it for a carefree, go-with-the-flow vibe.",
       "detail": "Achalugo is Igbo. Most usage is a compliment meaning a woman of beauty, grace and character, with some online sources translating it as 'God's treasure' or 'the abode of an eagle'. Gen Z also picked it up for its chill energy, so you will see it used for someone who is calm and unbothered. Check the context before you use it on someone.",
@@ -75,7 +75,7 @@
       ],
       "platform": "TikTok, WhatsApp status",
       "source": "Premium Times year-in-review (Dec 2025), public TikTok explainers (Mar-Aug 2026), Awajis dictionary (Aug 2026). Translations vary.",
-      "mentions7d": 3
+      "mentions7d": 1
     },
     {
       "slug": "sope-purr",
@@ -216,8 +216,8 @@
       "slug": "chop-life",
       "term": "Chop life",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 33,
+      "trend": "quiet",
+      "trendScore": 17,
       "confidence": "high",
       "meaning": "Eating well, enjoying good food, and living the good life through meals.",
       "detail": "Chop is pidgin for eat. Chop life is about enjoying food, sometimes for less money, like buying a plate of jollof and sharing it with friends. It is also a way to talk about the food economy and how far a naira goes at the market.",
@@ -232,7 +232,7 @@
       ],
       "platform": "Instagram, WhatsApp",
       "source": "Common usage in Nigerian pidgin.",
-      "mentions7d": 2
+      "mentions7d": 1
     },
     {
       "slug": "sharp-sharp",
