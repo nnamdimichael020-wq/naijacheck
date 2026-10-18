@@ -23,6 +23,20 @@ npm run nbs:test
 
 Use the matching category/catalogue for PMS, AGO or LPG. The importer rejects city geography, missing units, invalid values, duplicates, wrong catalogue URLs and malformed dates. NBS state/month surveys are not live city prices. Never infer a missing city or convert pack sizes without a reviewed methodology.
 
+## NBS Food Price Watch vs market prices
+
+Use the NBS Microdata Catalog (`https://microdata.nigerianstat.gov.ng/index.php/catalog/162`) for the Selected Food Price Watch. Read the catalog's methodology and release list; download the release ZIP manually and open the PDF and XLSX. Do not scrape a login, an application flow or a paid data service.
+
+Rules that stop this going wrong:
+
+1. **A monthly survey average is not a live market price.** Quote the survey month and the publication date, not the download date. The May 2026 release, for example, was dated 25 June 2026.
+2. **Match the item and unit before comparing.** "Rice local sold loose" is not a branded 50kg bag. A 50kg bag is ₦X ÷ actual kg, not ₦X ÷ an assumed 50.
+3. **Never convert local measures by a fixed table.** Cups, mudus, dericas and paint buckets vary by seller and product. The guide tells readers to weigh their own purchase; the runbook must not introduce a national conversion.
+4. **No state row becomes a city price.** NBS reports state, zone and national averages. A Lagos or Aba market is not the state average, and the national figure is an average of the state averages.
+5. **Import only through the tested path.** Use `npm run nbs:import -- food <file.csv> --survey-month YYYY-MM --publication-date YYYY-MM-DD --geography-level state|national --source-url https://microdata.nigerianstat.gov.ng/index.php/catalog/162 --mapping <mapping.json>`, then `npm run nbs:test`. The importer rejects city geography, missing units, invalid values, duplicates, wrong catalogue URLs and malformed dates.
+6. **Keep the page honest while rows are unimported.** If a release has not been read and imported, keep the figures `unavailable` and let readers open the official release themselves. Do not paste a news report's summary of the NBS figures.
+7. **Update the trail.** Change `data/govhowto.json` (`lastVerified`, `sourceNote`, `unverifiedItems`), add the release date and any imported rows to `docs/content-gap-queue.md`, and update this runbook only if the method changes.
+
 ## Telecom
 
 Use the operator's official current page, app or USSD: MTN, Airtel, Glo or 9mobile. Every offer needs network, plan/data amount, price, validity, eligibility, purchase method, official source URL and check date. If eligibility or validity is unclear, remove the offer and link users to the carrier. Never infer a “best” plan.

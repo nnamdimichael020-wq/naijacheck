@@ -145,7 +145,9 @@ export function ArticleView({ article, children, showSchema = true }: { article:
             {article.sourceNote ? <p className="leading-relaxed text-foreground/90">{article.sourceNote}</p> : null}
             {article.officialLinks?.length ? (
               <div>
-                <p className="font-semibold">Official portals to check before you pay</p>
+                <p className="font-semibold">
+                  {article.freeRelease ? "Official sources to check before you rely on a figure" : "Official portals to check before you pay"}
+                </p>
                 <ul className="mt-1 space-y-1">
                   {article.officialLinks.map((l) => (
                     <li key={l.href}>
@@ -167,7 +169,7 @@ export function ArticleView({ article, children, showSchema = true }: { article:
               <div className="rounded-md border border-amber-300 bg-amber-50 p-3 text-amber-950 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-100">
                 <p className="flex items-center gap-2 font-semibold">
                   <AlertTriangle className="size-4 shrink-0" aria-hidden="true" />
-                  Not verified — confirm before you pay
+                  {article.freeRelease ? "Not verified — confirm before you rely on these" : "Not verified — confirm before you pay"}
                 </p>
                 <ul className="mt-1 list-disc space-y-1 pl-5">
                   {article.unverifiedItems.map((u, i) => (

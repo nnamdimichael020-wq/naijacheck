@@ -837,6 +837,400 @@
         "/prices/cost-of-living",
         "/learn/budget-80k"
       ]
+    },
+    {
+      "slug": "nbs-food-price-watch",
+      "title": "NBS Food Price Watch vs Your Market Price: How to Compare Like for Like",
+      "short": "The NBS Selected Food Price Watch is a monthly official average, not a live market quote. This guide shows what the report measures, why your Mile 12 or Ariaria price can differ, and how to convert cups, mudus and paint buckets to a per-kilogram figure before you compare.",
+      "category": "Food prices & data",
+      "fee": "No fee. The NBS Selected Food Price Watch is a free official statistical release. There is no application and no payment; you download the report from the NBS Microdata Catalog.",
+      "feeSource": "NBS Microdata Catalog, Selected Food Price Watch (catalog 162), read 18 October 2026. The catalog lists a monthly release; the latest one listed was May 2026, published 25 June 2026. No fee is charged for the report.",
+      "timeline": "Monthly, with a publication lag. In the catalog entries read on 18 October 2026, the March 2026 release was dated 6 May 2026, the April 2026 release was dated 1 June 2026, and the May 2026 release was dated 25 June 2026. The report describes a survey month; it is not a price for the day you read it.",
+      "steps": [
+        "Write down the exact item you bought, the market, the date and the pack or local measure. 'Rice' is not enough: note local or foreign, loose or branded, and the bag size.",
+        "Weigh the quantity on a kitchen scale, or ask the seller to weigh it. Convert every local measure to kilograms or litres before comparing. A cup, mudu, derica or paint bucket is not a standard weight.",
+        "Work out your own price per kilogram: price paid divided by weight in kilograms. Do the same for litres. Keep the receipt or a photo of the scale reading.",
+        "Open the NBS Microdata Catalog entry for the Selected Food Price Watch (catalog 162) and download the latest release. Read the survey month and publication date on the report itself, not the date you downloaded it.",
+        "Match the NBS item definition to yours. 'Rice local sold loose' is not the same product as a branded 50kg bag of long-grain rice. Compare only like with like.",
+        "Use the state page or appendix for your state, then compare it with your own market figure for the same month. A national average will not match a single Lagos or Aba market.",
+        "Write the gap as a percentage: (your price minus NBS average) divided by NBS average, times 100. A gap is not automatically cheating; it can be transport, repacking, variety or timing.",
+        "Check the next release before you draw a trend. One month is a snapshot; two or more months show direction. Never mix a 2026 market price with a 2024 report and call it inflation."
+      ],
+      "documents": [
+        "The receipt, or the price, date, market and the seller's measure",
+        "A kitchen scale, or a seller's scale you can read",
+        "The exact pack size (50kg bag, 25kg, 10kg, 5kg, 1kg) or the local measure you bought",
+        "The NBS release for the matching survey month (the ZIP contains a PDF and an XLSX table)",
+        "A calculator or phone notes app for the per-kilogram and percentage arithmetic",
+        "This page's dated ranges, clearly labelled as NaijaCheck planning estimates, not NBS values"
+      ],
+      "pitfalls": [
+        "Comparing a 50kg bag price with an NBS 1kg average without dividing by 50. The bag price looks huge only because the unit is different.",
+        "Treating a cup, mudu, derica or paint bucket as a fixed weight. The same cup can hold different weights of rice, beans and garri.",
+        "Using the download date as the survey date. A report downloaded in October can describe May prices.",
+        "Comparing a branded, stone-free, long-grain rice with 'rice local sold loose'. They are different products.",
+        "Quoting a national average as your city's price. NBS publishes state and zone pages because Nigeria is not one market.",
+        "Reading one month as a trend. Two points make a direction; one point is a snapshot.",
+        "Sharing a screenshot of an NBS table without the survey month, item definition and unit. That is how old numbers get passed around as current.",
+        "Paying an agent or a website for an 'NBS data card' or a 'current price report'. The report is free on the NBS catalog."
+      ],
+      "officialSite": "https://microdata.nigerianstat.gov.ng/index.php/catalog/162",
+      "related": [],
+      "hustleLink": "/hustle/provision-store",
+      "lastVerified": "2026-10-18",
+      "verification": "manual",
+      "metaTitle": "NBS Food Price Watch vs Market Prices: How to Compare (2026)",
+      "metaDescription": "NBS food price averages are monthly state surveys, not live market quotes. Learn why Mile 12, Bodija, Oyingbo, Dawanau and Ariaria prices differ, and how to convert cups, mudus and bags to per-kg before comparing.",
+      "faqTitle": "the NBS Food Price Watch",
+      "keywords": [
+        "nbs food price watch",
+        "nbs food prices 2026",
+        "food price watch nigeria",
+        "why nbs price different from market",
+        "how to compare food prices nigeria",
+        "mudu to kg",
+        "50kg bag rice price per kg"
+      ],
+      "headings": {
+        "cost": "What it costs (nothing) and what the report measures",
+        "steps": "How to compare your market price with the NBS average",
+        "documents": "What to write down before you compare",
+        "pitfalls": "Mistakes that make the comparison wrong",
+        "timeline": "When the report comes out, and why the date matters"
+      },
+      "sourceNote": "The report's existence, publication frequency, latest release and methodology come from the NBS Microdata Catalog entry for the Selected Food Price Watch (catalog 162) and its release list, read on 18 October 2026: monthly publication; over 700 NBS staff collecting in all states; 774 local government areas; 10,000 respondents and locations; an average for each state; a national average of the state averages; and a later audit verification of recorded prices. The release list names the May 2026 report (dated 25 June 2026, 5.05 MB ZIP containing a PDF and an XLSX table), the April 2026 report (1 June 2026) and the March 2026 report (6 May 2026). The report structure described on this page was read from NBS's September 2024 Selected Food Price Watch PDF (executive summary, methodology, national pages, six zone pages, appendix and contact page); the May 2026 release was not read page by page, so its item list is treated as unverified. NaijaCheck's food ranges are its own dated planning estimates of 9 October 2026, not NBS survey values, and no NBS state-level price has been imported into this page. No news article, blog or forum post was used as a source.",
+      "officialLinks": [
+        {
+          "label": "NBS Microdata Catalog — Selected Food Price Watch (catalog 162): description, methodology and monthly releases",
+          "href": "https://microdata.nigerianstat.gov.ng/index.php/catalog/162"
+        },
+        {
+          "label": "NBS Microdata Catalog — Selected Food Price Watch releases and download dates",
+          "href": "https://microdata.nigerianstat.gov.ng/index.php/catalog/162/related-materials"
+        },
+        {
+          "label": "NBS — official site (National Bureau of Statistics)",
+          "href": "https://www.nigerianstat.gov.ng/"
+        },
+        {
+          "label": "NBS Selected Food Price Watch, September 2024 (PDF) — example of the report's structure; historical, not a current price",
+          "href": "https://www.nigerianstat.gov.ng/pdfuploads/Selected_Food_Report_sept%202024.pdf"
+        }
+      ],
+      "unverifiedItems": [
+        "The May 2026 state-level and national price rows. They sit inside the release ZIP; we did not import them into NaijaCheck on 18 October 2026, so this page does not print an NBS price as if it were one of our observations. Download the release and read the row for your state.",
+        "Whether the May 2026 release uses exactly the same item list and units as the September 2024 and May 2023 releases we read. Check the PDF's item labels, especially the 50kg bag lines, before matching a row to your purchase.",
+        "A single official conversion from cups, mudus, dericas or paint buckets to kilograms. NBS prices are per kilogram or per stated pack; local measures vary by seller and product, so weigh your own.",
+        "The NaijaCheck food ranges. They are dated 9 October 2026 legacy planning estimates, not NBS survey values and not live market quotes.",
+        "Any 'current NBS price' posted by a blog, an agent or a WhatsApp group without the survey month, item definition and unit."
+      ],
+      "extraIntro": [
+        "The NBS figure is an average from a monthly survey. Your price is one transaction in one market. Both can be true at the same time, and neither cancels the other.",
+        "We have not imported the NBS state-level rows into NaijaCheck. So this page does not print an NBS number as if it were one of our own observations. It shows you how to open the official release, match the item and unit to your purchase, and do the arithmetic yourself.",
+        "The report is free. The NBS Microdata Catalog lists a monthly Selected Food Price Watch, and the latest release listed when we checked on 18 October 2026 was May 2026, published on 25 June 2026. The ZIP contains a PDF report and an XLSX table.",
+        "This guide follows the definition NBS itself publishes: state averages from fieldwork across 774 local government areas, with a national average of the state averages. Once you know that, the gap between Mile 12, Bodija, Oyingbo, Dawanau or Ariaria and the national figure stops looking like a contradiction."
+      ],
+      "extraSections": [
+        {
+          "h2": "What the NBS Food Price Watch measures — in the agency's own terms",
+          "paras": [
+            "The NBS catalog describes the survey plainly. Fieldwork is done by over 700 NBS staff across all states, supported by supervisors monitored by internal and external observers. Prices are collected across all 774 local government areas from 10,000 respondents and locations. The average of those prices is reported for each state, and the total average of the states is the national average. NBS says its audit team then re-verifies a random selection of recorded prices.",
+            "That is a survey, not a price list. It is designed to show the level and direction of food prices across the country. It is not a quote you can take to a seller, and it is not a promise that your market will match it."
+          ],
+          "table": {
+            "caption": "Definitions from the NBS Microdata Catalog entry for the Selected Food Price Watch (catalog 162), read 18 October 2026.",
+            "columns": [
+              "Question",
+              "NBS Selected Food Price Watch",
+              "Your market price"
+            ],
+            "rows": [
+              [
+                "What is being priced",
+                "A defined item, usually 1kg sold loose or a stated pack such as a 50kg bag, 1 litre or 12 eggs",
+                "Whatever the seller put in front of you, including the brand and grade"
+              ],
+              [
+                "Where",
+                "A state average, zone averages, and a national average of the state averages",
+                "One market, one stall, one seller"
+              ],
+              [
+                "When",
+                "The survey month on the report cover, published weeks later",
+                "The day you bought"
+              ],
+              [
+                "How many observations",
+                "NBS says 10,000 respondents and locations across 774 local government areas, with audit re-verification",
+                "One transaction"
+              ],
+              [
+                "What it is for",
+                "An official monthly price reference for policy, research and public information",
+                "Your actual budget"
+              ],
+              [
+                "What it is not",
+                "Not a live quote, not a price control, and not the CPI inflation rate",
+                "Not a national statistic"
+              ]
+            ]
+          },
+          "bullets": [
+            "The report is a survey-month average. A report published in June describes May prices.",
+            "The national figure is an average of state averages, so it can sit between two very different state prices.",
+            "The item label matters as much as the number. 'Rice local sold loose' and a branded 50kg bag are different products in the same market.",
+            "A price watch is not inflation. Inflation compares a basket with an earlier period; the price watch reports actual average prices for defined items."
+          ]
+        },
+        {
+          "h2": "The latest release, and how to open it without paying anyone",
+          "paras": [
+            "The catalog's release list is the place to start. When we read it on 18 October 2026, the newest entry was the Selected Food Price Watch for May 2026, dated 25 June 2026. The download is a 5.05 MB ZIP containing a PDF report and an XLSX table. The April 2026 release was dated 1 June 2026, and the March 2026 release was dated 6 May 2026.",
+            "Download the ZIP from the catalog, unzip it on your phone or laptop, and open the PDF first. The PDF gives the executive summary and the state pages; the XLSX is easier if you want to sort or filter the rows. Read the survey month on the cover before you use any number."
+          ],
+          "bullets": [
+            "Open the official catalog at microdata.nigerianstat.gov.ng, catalog 162. Do not use a paid 'data bank' or a WhatsApp forward.",
+            "Choose the release for the month you need. The file name includes the month and year.",
+            "Unzip it and open the PDF. Check the survey month and the report date on the first pages.",
+            "Use the XLSX for your state's row or the appendix table. Keep the item label and unit next to the number.",
+            "Save the file or note its release date. If you share a figure, share the month and the item definition too.",
+            "The report is free. If a site asks you to pay for 'NBS data', close it."
+          ]
+        },
+        {
+          "h2": "Why your Mile 12, Bodija, Oyingbo, Dawanau or Ariaria price differs",
+          "paras": [
+            "A gap between your market and the NBS average is normal. The two numbers are answering different questions. Here are the reasons that show up most often, and what each one means for a fair comparison."
+          ],
+          "bullets": [
+            "Unit. You may be buying a cup, a mudu, a derica or a paint bucket; NBS reports per kilogram or per stated pack. Until both are in the same unit, the comparison is meaningless.",
+            "Geography. NBS reports a state average and zone averages. Mile 12 is not Lagos State, Bodija is not Oyo State, Dawanau is not Kano State, and Ariaria is not Abia State. A single market can sit above or below its state average.",
+            "Timing. The report describes the survey month and is published later. If you compare a May report with an October market, you are measuring two different periods.",
+            "Variety and quality. Local rice sold loose, foreign long-grain rice, stone-free rice, white garri and yellow garri are different products with different prices. Match the label before you match the number.",
+            "Packaging and repacking. A 50kg bag is cheaper per kilogram than the same rice repacked into small cups or bags. The repacking labour and the risk of short weight are part of the difference.",
+            "Transport and fuel. Diesel and petrol costs move the price of every truckload. A market far from the farm or the port carries more transport per kilogram.",
+            "Season and supply. Harvest, lean season, border policy and fuel availability all move prices before a survey can capture them.",
+            "Sample versus transaction. NBS averages 10,000 locations; you are one buyer. A single seller's price is not a state average, and a state average is not a quote."
+          ]
+        },
+        {
+          "h2": "The unit problem: cup, mudu, derica, paint bucket and 50kg bag",
+          "paras": [
+            "Most arguments about food prices are really arguments about units. A cup of rice is not a kilogram. A mudu is a volume measure, and the same mudu can hold different weights of rice, beans and garri. A paint bucket is a container, not a scale.",
+            "There is no official national conversion that covers every seller, product and market. The only reliable method is to weigh the quantity you actually bought, then divide the price by the weight in kilograms. If the seller will not weigh it, buy from someone who will, or weigh it at home before you cook."
+          ],
+          "table": {
+            "caption": "Local measures you will hear in the market, and the only safe way to compare them with a per-kilogram report.",
+            "columns": [
+              "Local measure you hear",
+              "What it usually means",
+              "What to do before comparing"
+            ],
+            "rows": [
+              [
+                "Cup (rice cup, garri cup)",
+                "A seller's cup, not a standard weight",
+                "Weigh one cup on a kitchen scale; do not assume it is 1kg"
+              ],
+              [
+                "Mudu",
+                "A volume measure used for grains and beans; size varies by seller and product",
+                "Ask for the weight in kilograms, or weigh it yourself"
+              ],
+              [
+                "Derica",
+                "A small tin or measure for rice, beans or garri; sizes vary",
+                "Weigh the contents and work out the price per kilogram"
+              ],
+              [
+                "Paint bucket / paint rubber",
+                "A volume container often used for tomatoes, pepper and garri",
+                "Weigh the contents, not the bucket, and subtract the container"
+              ],
+              [
+                "50kg bag",
+                "A nominal 50kg bag; the actual weight can be slightly more or less",
+                "Divide the bag price by the actual weight, not by an assumed 50"
+              ]
+            ]
+          },
+          "bullets": [
+            "Formula: price paid ÷ weight in kilograms = naira per kilogram. For liquids: price ÷ litres = naira per litre.",
+            "Illustration only, not a price quote: if a bag costs ₦60,000 and truly weighs 50kg, that is ₦1,200 per kilogram. If it weighs 48kg, the same bag is ₦1,250 per kilogram.",
+            "Weigh a full bag on a platform scale if you can. For small measures, weigh three cups and use the average, because one cup can be packed loosely or tightly.",
+            "Write the unit next to every number you note. A price without a unit is not a measurement."
+          ]
+        },
+        {
+          "h2": "A worked comparison you can copy",
+          "paras": [
+            "This is the whole method on one page. The figures in the right-hand column are an illustration of the arithmetic, not a market quote and not an NBS value. Replace them with your own receipt and the row from the release you downloaded."
+          ],
+          "table": {
+            "caption": "Worked comparison template. The right-hand column is an illustration only; the NBS figure must come from the official release for the same survey month.",
+            "columns": [
+              "Step",
+              "What to write down",
+              "Illustration (not a price quote)"
+            ],
+            "rows": [
+              [
+                "Your purchase",
+                "Item, market, date, measure and price",
+                "Garri white, Mile 12, 18 October 2026, one paint bucket, ₦900"
+              ],
+              [
+                "Weight",
+                "Weigh the contents in kilograms",
+                "0.8kg (example only)"
+              ],
+              [
+                "Your price per kg",
+                "Price ÷ kilograms",
+                "₦900 ÷ 0.8 = ₦1,125 per kg"
+              ],
+              [
+                "NBS row",
+                "Same item, same survey month, your state",
+                "Copy the figure from the release; do not guess it"
+              ],
+              [
+                "Gap",
+                "(your price − NBS average) ÷ NBS average × 100",
+                "Fill this in only after you read the official row"
+              ],
+              [
+                "What the gap means",
+                "Check unit, item label, month, state and quality before drawing a conclusion",
+                "A gap can be transport, repacking, variety or timing"
+              ]
+            ]
+          },
+          "bullets": [
+            "If you cannot match the item label exactly, say so. 'Close enough' is how wrong comparisons start.",
+            "If the release has no row for your state or item, write 'not published' rather than borrowing another state's number.",
+            "Keep the release date and the survey month in your notes. A number without a date is not evidence."
+          ]
+        },
+        {
+          "h2": "What the report contains: a map of the pages",
+          "paras": [
+            "The releases we could read follow a stable structure. The September 2024 PDF opens with an executive summary and a methodology page, then gives national pages for each item, followed by six zone pages (North Central, North East, North West, South East, South West and South-South), an appendix of state tables and a contact page.",
+            "The May 2026 release may differ in layout, so treat this as a map rather than a guarantee. The important habit is the same: read the cover, find your item's label and unit, then find your state's row."
+          ],
+          "bullets": [
+            "Executive summary: the headline changes NBS wants readers to notice.",
+            "Methodology: who collected the prices, where, and how the averages were built.",
+            "National pages: the national average for each item, with the highest and lowest state.",
+            "Zone pages: the six geopolitical zones, useful if your state is not printed separately.",
+            "Appendix: the state tables. This is where you look for your state's row.",
+            "XLSX table: the same data in a sortable file, if you want to filter rather than read."
+          ]
+        },
+        {
+          "h2": "Red flags in food-price content",
+          "paras": [
+            "Food prices are emotional, and that makes them easy to misuse. These are the warning signs that a number is being used to mislead rather than inform."
+          ],
+          "bullets": [
+            "An 'NBS price' with no survey month, no item label and no unit. You cannot check it, and it may be years old.",
+            "A national average presented as 'the price in Lagos' or 'the price in Aba'. NBS publishes state pages for a reason.",
+            "A 50kg bag price compared directly with a 1kg average. Divide by the actual weight first.",
+            "A screenshot with the source cropped out. Ask for the release month and the catalog link.",
+            "A 'current price report' sold by an agent. The report is free on the NBS catalog.",
+            "A single market visit presented as a national trend. One transaction is an anecdote, not a survey."
+          ]
+        },
+        {
+          "h2": "What to do with the number once you have it",
+          "paras": [
+            "Use the NBS figure for direction and context, and use your own weighed market price for your budget. The two jobs are different, and mixing them is how households under-plan.",
+            "If your price is far above the state average for the same item and month, check the unit and the quality first, then ask whether transport, repacking or a lean-season supply gap explains it. If it is far below, check that the weight is what you think it is."
+          ],
+          "bullets": [
+            "Budget with your own receipt, not with a national average.",
+            "Use two or three NBS months to see direction; do not call one month a trend.",
+            "Record the market, date and unit every time you shop, so your own series becomes useful.",
+            "Compare your city's dated planning range on NaijaCheck, but keep it labelled as an estimate, not an NBS value.",
+            "Re-check the official release when a new month is published; do not rely on a forwarded screenshot."
+          ]
+        }
+      ],
+      "extraFaqs": [
+        {
+          "q": "What is the NBS Selected Food Price Watch?",
+          "a": "It is a monthly official statistical release from the National Bureau of Statistics. NBS says its staff collect prices across all 774 local government areas from 10,000 respondents and locations, report an average for each state, and publish a national average of the state averages. It covers defined food items and units, not a live market feed."
+        },
+        {
+          "q": "Is the NBS food price the same as the price in my market?",
+          "a": "No. The NBS figure is a survey-month average for a defined item and unit, often a state average. Your price is one transaction in one market on one day. A gap is normal and can come from unit, geography, timing, variety, packaging, transport or season."
+        },
+        {
+          "q": "How much does the NBS Food Price Watch cost?",
+          "a": "Nothing. It is a free official release on the NBS Microdata Catalog, catalog 162. If a site or an agent asks you to pay for it, you are being charged for something NBS publishes at no cost."
+        },
+        {
+          "q": "Where do I download the latest NBS food price report?",
+          "a": "Open the NBS Microdata Catalog entry for the Selected Food Price Watch (catalog 162) and choose the newest release in the list. When we checked on 18 October 2026, the latest listed was May 2026, published 25 June 2026, as a 5.05 MB ZIP containing a PDF and an XLSX table."
+        },
+        {
+          "q": "Why is the NBS price higher or lower than what I paid?",
+          "a": "Check the unit first: a 50kg bag is not 1kg, and a cup or paint bucket is not a standard weight. Then check the item label, the survey month, the state and the quality. A state average also includes markets and sellers you did not visit."
+        },
+        {
+          "q": "How do I convert a mudu, derica or paint bucket to kilograms?",
+          "a": "Weigh the actual quantity you bought on a kitchen scale, then divide the price by the weight in kilograms. There is no official national conversion for every seller and product, so do not rely on a fixed number from a blog or a WhatsApp group."
+        },
+        {
+          "q": "Can I use NBS data for my household budget?",
+          "a": "Use it for context and direction, not as your shopping quote. Budget with your own weighed price and receipt. Use two or three NBS months to see the direction, and keep your own notes so you can compare like for like."
+        },
+        {
+          "q": "Is the NBS Food Price Watch the same as inflation?",
+          "a": "No. The Food Price Watch reports average prices for defined food items. Inflation compares the price of a basket over time. They are related, but one is a price level and the other is a rate of change."
+        },
+        {
+          "q": "Why does the report not have my market?",
+          "a": "NBS reports state, zone and national averages, not individual markets. Your market is one of the locations behind the state average. Use the state row as the comparison and keep your own market record separately."
+        },
+        {
+          "q": "How often is the NBS Food Price Watch published?",
+          "a": "Monthly, with a lag. The catalog entries we read on 18 October 2026 date the March 2026 release to 6 May 2026, the April 2026 release to 1 June 2026, and the May 2026 release to 25 June 2026."
+        },
+        {
+          "q": "Does NaijaCheck publish NBS state-level prices?",
+          "a": "Not yet. We have not imported the NBS state-level rows, so this page does not print an NBS number as if it were our observation. Our food ranges are dated 9 October 2026 planning estimates. The guide shows you how to read the official release yourself."
+        },
+        {
+          "q": "What is the latest NBS food price release?",
+          "a": "When we read the catalog on 18 October 2026, the newest listed release was May 2026, published 25 June 2026. Always open the catalog and check the list yourself, because a newer month may have been added after this page was last verified."
+        }
+      ],
+      "extraTakeaways": [
+        "The NBS Food Price Watch is a monthly official survey average, not a live market quote.",
+        "The latest release listed on 18 October 2026 was May 2026, published 25 June 2026.",
+        "Match the item, unit, survey month and state before comparing any two numbers.",
+        "Weigh cups, mudus, dericas and paint buckets, then divide price by kilograms.",
+        "A 50kg bag is ₦X ÷ 50 per kg only if it truly weighs 50kg.",
+        "NaijaCheck's food ranges are dated 9 October 2026 planning estimates, not NBS values.",
+        "The report is free on the NBS Microdata Catalog. Never pay an agent for it."
+      ],
+      "extraLinkPaths": [
+        "/prices",
+        "/prices/lagos",
+        "/prices/kano",
+        "/prices/aba",
+        "/prices/markets/mile-12",
+        "/prices/markets/kantin-kwari",
+        "/prices/markets/oyingbo",
+        "/prices/markets/ariaria",
+        "/prices/cost-of-living",
+        "/status",
+        "/howto",
+        "/tools/cookbook"
+      ]
     }
   ]
 }

@@ -54,6 +54,7 @@ export interface Article {
   sourceNote?: string;
   officialLinks?: Link[];
   unverifiedItems?: string[];
+  freeRelease?: boolean;
 }
 
 type Draft = Omit<Article, "links" | "wordCount" | "updatedAt" | "schemaType"> & {
@@ -102,6 +103,8 @@ type GovDoc = {
   metaTitle?: string;
   metaDescription?: string;
   keywords?: string[];
+  /** Optional natural-language subject for the generated "How much is …?" FAQ (e.g. "the NBS Food Price Watch"). */
+  faqTitle?: string;
   headings?: { cost?: string; steps?: string; documents?: string; pitfalls?: string; timeline?: string };
 };
 type Doc = GovDoc;
@@ -737,25 +740,53 @@ function resolveRel(r: string): string {
 }
 
 function buildHowTo(d: Doc) {
+  const freeRelease = /^No fee\b/i.test(d.fee);
   const sections: Section[] = [
     { h2: "Quick answer", paras: [`${d.short} Fees: ${d.fee} Timeline: ${d.timeline}`] },
     ...(d.extraSections ?? []),
     {
       h2: d.headings?.cost ?? "What it costs in 2026",
-      paras: [d.fee, `Source note: ${d.feeSource}`, "Fees change without much notice. Check the official site before you pay, and never pay a 'processing' fee to an unofficial person."],
+      paras: [
+        d.fee,
+        `Source note: ${d.feeSource}`,
+        freeRelease
+          ? "This release is free. If a site or an agent asks you to pay for it, you are being charged for something the agency publishes at no cost."
+          : "Fees change without much notice. Check the official site before you pay, and never pay a 'processing' fee to an unofficial person.",
+      ],
     },
     { h2: d.headings?.steps ?? "Step-by-step", paras: [`Follow these steps in order. Keep a copy of every receipt and screenshot, because you will need them if something goes wrong.`], bullets: d.steps },
-    { h2: d.headings?.documents ?? "Documents you need", paras: ["Have these ready before you start. Missing documents are the number one reason applications stall."], bullets: d.documents },
+    {
+      h2: d.headings?.documents ?? "Documents you need",
+      paras: [freeRelease
+        ? "You do not need to submit anything or open an account. These are the details to note before you compare the official figure with your own price."
+        : "Have these ready before you start. Missing documents are the number one reason applications stall."],
+      bullets: d.documents,
+    },
     { h2: d.headings?.pitfalls ?? "Mistakes that cost you money", paras: ["These are the errors we see most often. Each one can cost you time, money or both."], bullets: d.pitfalls },
-    { h2: "Scam warning", paras: ["Government services in Nigeria are often targeted by touts and fake portals. Only use the official site listed below. If someone asks for cash to 'fast track' your file, walk away and report it."] },
-    { h2: d.headings?.timeline ?? "Timeline and what to expect", paras: [d.timeline, "Plan your application early. If you have a travel date, a school deadline or a contract, start at least a month before you need the document."] },
-    { h2: "Official site", paras: [`The official site for this service is ${d.officialSite}. Bookmark it and check the URL before you enter any personal details.`] },
+    {
+      h2: "Scam warning",
+      paras: [freeRelease
+        ? "Official statistics are sometimes repackaged and sold by agents, data banks and WhatsApp groups. The NBS release is free on the official catalog. Do not pay for a 'current price report', and do not trust a screenshot without the survey month and item definition."
+        : "Government services in Nigeria are often targeted by touts and fake portals. Only use the official site listed below. If someone asks for cash to 'fast track' your file, walk away and report it."],
+    },
+    {
+      h2: d.headings?.timeline ?? "Timeline and what to expect",
+      paras: [d.timeline, freeRelease
+        ? "Check the catalog for a newer release before you rely on a figure. The publication lag means the newest release describes a month that has already passed."
+        : "Plan your application early. If you have a travel date, a school deadline or a contract, start at least a month before you need the document."],
+    },
+    {
+      h2: "Official site",
+      paras: [freeRelease
+        ? `The official source for this release is ${d.officialSite}. Bookmark it and download from there, not from a forwarded file.`
+        : `The official site for this service is ${d.officialSite}. Bookmark it and check the URL before you enter any personal details.`],
+    },
   ];
   const shortTitle = d.title.replace(/ 20\d\d.*$/, "");
   const verifiedLabel = longDate(d.lastVerified ?? UPDATED);
   const faqs: Faq[] = [
     ...(d.extraFaqs ?? []),
-    { q: `How much is ${shortTitle.toLowerCase()} in 2026?`, a: d.fee },
+    { q: `How much is ${(d.faqTitle ?? shortTitle.toLowerCase())} in 2026?`, a: d.fee },
     { q: "How long does this take?", a: d.timeline },
     { q: "Can I do this online?", a: `Where the official portal supports it, yes. Start at ${d.officialSite}. Avoid third-party sites that ask for cash.` },
   ];
@@ -770,7 +801,7 @@ function buildHowTo(d: Doc) {
       d.short,
       ...(d.extraIntro ?? []),
       d.lastVerified
-        ? `This guide gives you the official steps, the documents, the cost picture and the mistakes to avoid. Figures were last verified against the named official sources on ${verifiedLabel}. Always confirm on the official site before you pay.`
+        ? `This guide gives you the official steps, the documents, the cost picture and the mistakes to avoid. Figures were last verified against the named official sources on ${verifiedLabel}. ${freeRelease ? "Always confirm the release month on the official source before you rely on a figure." : "Always confirm on the official site before you pay."}`
         : `This guide gives you the 2026 fee, the timeline, the official steps and the mistakes to avoid. Fee information was last checked on ${DATE_LABEL}. Always confirm on the official site before you pay.`,
     ],
     sections, faqs, steps: d.steps,
@@ -781,6 +812,7 @@ function buildHowTo(d: Doc) {
     sourceNote: d.sourceNote,
     officialLinks: d.officialLinks,
     unverifiedItems: d.unverifiedItems,
+    freeRelease,
     updatedAt: d.lastVerified,
   });
 }
@@ -790,7 +822,7 @@ function buildHowToHub() {
     path: "/howto", section: "hub", navLabel: "GovHowTo hub", kicker: "GovHowTo",
     title: "GovHowTo 2026: Passport, NIN, CAC, Tax and Police Documents",
     metaTitle: "GovHowTo Nigeria 2026: Passport, NIN, CAC & Tax Guides",
-    metaDescription: "Step-by-step Nigerian government and utility guides for 2026: passport renewal, NIN correction, police character certificate, CAC business name, freelancer tax, driver's licence, prepaid electricity bands and Lagos State residency registration (LASRRA / LAG-ID).",
+    metaDescription: "Step-by-step Nigerian government and utility guides for 2026: passport renewal, NIN correction, police character certificate, CAC business name, freelancer tax, driver's licence, prepaid electricity bands, NBS food price comparisons and Lagos State residency registration (LASRRA / LAG-ID).",
     keywords: ["passport renewal 2026 nigeria", "nin correction 2026", "police character certificate 2026", "cac business name registration 2026"],
     params: {},
     intro: [
