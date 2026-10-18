@@ -12,7 +12,14 @@ export function pageMetadata(opts: {
   keywords?: string[];
   type?: "website" | "article";
   noindex?: boolean;
+  image?: { url: string; width: number; height: number; alt: string };
 }): Metadata {
+  const ogImage = opts.image ?? {
+    url: absUrl("/images/photos/lagos-tomato-seller.jpg"),
+    width: 500,
+    height: 625,
+    alt: `${SITE_CONFIG.name}: ${SITE_CONFIG.description}`,
+  };
   return {
     title: opts.title,
     description: opts.description,
@@ -26,13 +33,13 @@ export function pageMetadata(opts: {
       title: opts.title,
       description: opts.description,
       locale: SITE_LOCALE,
-      images: [{ url: absUrl("/images/photos/lagos-tomato-seller.jpg"), width: 500, height: 625, alt: `${SITE_CONFIG.name}: ${SITE_CONFIG.description}` }],
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
       title: opts.title,
       description: opts.description,
-      images: [absUrl("/images/photos/lagos-tomato-seller.jpg")],
+      images: [ogImage.url],
     },
   };
 }
@@ -48,11 +55,20 @@ export const articleMetadata = (a: Article): Metadata =>
     // City/capital permutations substantially repeat their parent blueprint. Keep them usable
     // for visitors while withholding them from indexing until each has distinct sourced value.
     noindex: a.section === "hustle-combo",
+    image: a.heroImage
+      ? {
+          url: absUrl(a.heroImage.src),
+          width: a.heroImage.width,
+          height: a.heroImage.height,
+          alt: a.heroImage.alt,
+        }
+      : undefined,
   });
 
 /** JSON-LD for an article: Article or HowTo, plus FAQPage and BreadcrumbList. */
 export function articleSchema(a: Article) {
   const url = absUrl(a.path);
+  const heroUrl = a.heroImage ? absUrl(a.heroImage.src) : absUrl("/images/photos/lagos-tomato-seller.jpg");
   const base =
     a.schemaType === "HowTo"
       ? {
@@ -63,6 +79,7 @@ export function articleSchema(a: Article) {
           inLanguage: "en-NG",
           url,
           dateModified: a.updatedAt,
+          ...(a.heroImage ? { image: heroUrl } : {}),
           step: (a.steps ?? []).map((s, i) => ({ "@type": "HowToStep", position: i + 1, name: s.split(":")[0].slice(0, 80), text: s })),
           publisher: { "@type": "Organization", name: SITE_CONFIG.name, url: SITE_CONFIG.url },
         }
@@ -79,7 +96,7 @@ export function articleSchema(a: Article) {
           wordCount: a.wordCount,
           author: { "@type": "Organization", name: SITE_CONFIG.name, url: SITE_CONFIG.url },
           publisher: { "@type": "Organization", name: SITE_CONFIG.name, url: SITE_CONFIG.url, logo: { "@type": "ImageObject", url: absUrl("/logo.svg") } },
-          image: absUrl("/images/photos/lagos-tomato-seller.jpg"),
+          image: heroUrl,
         };
   const faq = a.faqs.length
     ? {

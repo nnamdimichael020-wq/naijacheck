@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { AlertTriangle, CheckCircle2, Clock, ExternalLink, Link as LinkIcon, ShieldCheck } from "lucide-react";
 import { AdSlot } from "@/components/ads/ad-slot";
@@ -6,6 +7,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { isArticleImageEligible } from "@/lib/article-images";
 import type { Article } from "@/lib/types";
 import { articleSchema, absUrl } from "@/lib/seo";
 import { DATA_DATE } from "@/lib/data";
@@ -53,6 +55,9 @@ export function ArticleView({ article, children, showSchema = true }: { article:
   const hub = SECTION_HUB[article.section] ?? { label: "Guides", href: "/" };
   const midpoint = Math.floor(article.sections.length / 2);
   const readMins = Math.max(2, Math.round(article.wordCount / 220));
+  const canRenderImages = isArticleImageEligible(article.section, article.path);
+  const heroImage = canRenderImages ? article.heroImage : undefined;
+  const bodyImage = canRenderImages ? article.bodyImage : undefined;
   const disclosure = article.section.startsWith("prices") || article.section === "cookbook"
     ? `Manual/indicative planning data dated ${article.updatedAt}; not an automatically verified city-market feed. Confirm locally before paying.`
     : article.section === "telecom"
@@ -96,6 +101,37 @@ export function ArticleView({ article, children, showSchema = true }: { article:
           summary={`as of ${article.updatedAt}`}
         />
       </header>
+
+      {heroImage ? (
+        <figure
+          data-article-image="hero"
+          data-source-tier={heroImage.sourceTier}
+          className="mt-5 overflow-hidden rounded-xl border bg-muted/30"
+        >
+          <div className="relative aspect-[16/9] w-full overflow-hidden bg-secondary/40">
+            <Image
+              src={heroImage.src}
+              alt={heroImage.alt}
+              width={heroImage.width}
+              height={heroImage.height}
+              loading="lazy"
+              decoding="async"
+              sizes="(min-width: 768px) 768px, 100vw"
+              className={
+                heroImage.motion === "subtle"
+                  ? "article-hero-motion aspect-[16/9] h-full w-full object-cover object-center"
+                  : "aspect-[16/9] h-full w-full object-cover object-center"
+              }
+            />
+          </div>
+          {heroImage.caption || heroImage.credit ? (
+            <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t bg-card/80 px-3.5 py-2 text-xs text-muted-foreground">
+              {heroImage.caption ? <span className="leading-snug">{heroImage.caption}</span> : null}
+              {heroImage.credit ? <span className="shrink-0 font-medium text-foreground/80">{heroImage.credit}</span> : null}
+            </figcaption>
+          ) : null}
+        </figure>
+      ) : null}
 
       {disclosure ? (
         <p className="mt-5 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-100">
@@ -237,6 +273,32 @@ export function ArticleView({ article, children, showSchema = true }: { article:
                 </figure>
               ) : null}
             </section>
+            {bodyImage && i === bodyImage.afterSectionIndex ? (
+              <figure
+                data-article-image="body"
+                data-source-tier={bodyImage.sourceTier}
+                className="my-6 overflow-hidden rounded-xl border bg-muted/30"
+              >
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-secondary/40">
+                  <Image
+                    src={bodyImage.src}
+                    alt={bodyImage.alt}
+                    width={bodyImage.width}
+                    height={bodyImage.height}
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(min-width: 768px) 768px, 100vw"
+                    className="aspect-[16/9] h-full w-full object-cover object-center"
+                  />
+                </div>
+                {bodyImage.caption || bodyImage.credit ? (
+                  <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t bg-card/80 px-3.5 py-2 text-xs text-muted-foreground">
+                    {bodyImage.caption ? <span className="leading-snug">{bodyImage.caption}</span> : null}
+                    {bodyImage.credit ? <span className="shrink-0 font-medium text-foreground/80">{bodyImage.credit}</span> : null}
+                  </figcaption>
+                ) : null}
+              </figure>
+            ) : null}
             {i === midpoint && article.sections.length > 2 ? <AdSlot variant="in-content" index={1} /> : null}
           </React.Fragment>
         ))}

@@ -9,6 +9,34 @@ export type ArticleLink = { href: string; label: string };
 
 export type VerificationState = "live" | "recent" | "stale" | "seeded" | "manual" | "unavailable";
 
+export type ImageSourceTier = "existing-photo" | "licensed-photo" | "branded-cover" | "ai-fallback";
+
+export type ArticleImage = {
+  /** Public asset path starting with /images/... */
+  src: string;
+  /** Descriptive accessible alt text (required for every accepted image). */
+  alt: string;
+  /** Intrinsic pixel width reserved before load to prevent CLS. */
+  width: number;
+  /** Intrinsic pixel height reserved before load to prevent CLS. */
+  height: number;
+  /** Source priority tier (1: existing-photo, 2: licensed-photo, 3: branded-cover, 4: ai-fallback). */
+  sourceTier: ImageSourceTier;
+  /** Visible credit / attribution line shown under the image. */
+  credit: string;
+  /** License or usage note documented in docs/image-credits.md. */
+  license?: string;
+  /** Short editorial caption that adds context for the reader. */
+  caption?: string;
+  /** Static by default; optional subtle CSS motion on hero only (honors prefers-reduced-motion). */
+  motion?: "static" | "subtle";
+};
+
+export type ArticleBodyImage = ArticleImage & {
+  /** 0-based section index after which this in-body image renders. */
+  afterSectionIndex: number;
+};
+
 export type Article = {
   path: string;
   section: string;
@@ -40,6 +68,10 @@ export type Article = {
   unverifiedItems?: string[];
   /** True when the source is a free public release, so the copy must not talk about paying for it. */
   freeRelease?: boolean;
+  /** Optional hero image rendered under the title on eligible howto / long-form article templates. */
+  heroImage?: ArticleImage;
+  /** Optional single in-body image (at most 1 per article) when it adds understanding; skipped on data/tool pages. */
+  bodyImage?: ArticleBodyImage;
 };
 
 export type SearchEntry = { path: string; title: string; kind: string; desc: string; keys: string };

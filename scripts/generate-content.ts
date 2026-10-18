@@ -24,6 +24,14 @@ import exam from "../data/exam.json";
 import telecom from "../data/telecom.json";
 import recipesData from "../data/recipes.json";
 import learnData from "../data/learn.json";
+import type { ArticleBodyImage, ArticleImage } from "../lib/types";
+import {
+  ARTICLE_IMAGE_CONFIG,
+  buildBrandedCoverSvg,
+  isArticleImageEligible,
+  resolveArticleHeroImage,
+  validateArticleImageSafety,
+} from "../lib/article-images";
 
 type Table = { caption?: string; columns: string[]; rows: string[][] };
 type Section = { h2: string; paras: string[]; bullets?: string[]; table?: Table };
@@ -55,6 +63,8 @@ export interface Article {
   officialLinks?: Link[];
   unverifiedItems?: string[];
   freeRelease?: boolean;
+  heroImage?: ArticleImage;
+  bodyImage?: ArticleBodyImage;
 }
 
 type Draft = Omit<Article, "links" | "wordCount" | "updatedAt" | "schemaType"> & {
@@ -1311,6 +1321,10 @@ const PADDING: Link[] = [
   { href: "/tools", label: "Tools" },
 ];
 
+const root = path.resolve(__dirname, "..");
+const coversDir = path.join(root, "public", "images", "covers");
+fs.mkdirSync(coversDir, { recursive: true });
+
 const articles: Article[] = drafts.map((d) => {
   const seen = new Set<string>();
   const links: Link[] = [];
@@ -1337,8 +1351,59 @@ const articles: Article[] = drafts.map((d) => {
     ...rest.faqs.flatMap((f) => [f.q, f.a]),
     ...rest.takeaways,
   ];
+
+  const imgCfg = ARTICLE_IMAGE_CONFIG[rest.path];
+  let heroImage = rest.heroImage;
+  let bodyImage = rest.bodyImage;
+
+  if (imgCfg && isArticleImageEligible(rest.section, rest.path)) {
+    const slug = rest.params.slug ?? (rest.path.split("/").filter(Boolean).pop() ?? "guide");
+    heroImage = resolveArticleHeroImage({
+      articlePath: rest.path,
+      slug,
+      section: rest.section,
+      shortTitle: rest.navLabel,
+      kicker: rest.kicker,
+      existingPhotoKey: imgCfg.existingPhotoKey,
+      licensedPhotoKey: imgCfg.licensedPhotoKey,
+      photoAlt: imgCfg.photoAlt,
+      photoCaption: imgCfg.photoCaption,
+      motion: imgCfg.motion,
+      enableHeroWhenNoPhoto: imgCfg.enableHeroWhenNoPhoto,
+    });
+
+    if (heroImage) {
+      const check = validateArticleImageSafety(heroImage);
+      if (!check.ok) {
+        throw new Error(`Invalid heroImage on ${rest.path}: ${check.errors.join("; ")}`);
+      }
+      if (heroImage.sourceTier === "branded-cover") {
+        const verifiedLabel = rest.lastVerified ? `Verified ${longDate(rest.lastVerified)}` : `Updated ${longDate(rest.updatedAt ?? UPDATED)}`;
+        const svg = buildBrandedCoverSvg({
+          shortTitle: rest.navLabel,
+          kicker: rest.kicker,
+          verifiedLabel,
+        });
+        fs.writeFileSync(path.join(coversDir, `${slug}.svg`), svg, "utf8");
+      }
+    }
+
+    if (imgCfg.bodyImage) {
+      const check = validateArticleImageSafety(imgCfg.bodyImage);
+      if (!check.ok) {
+        throw new Error(`Invalid bodyImage on ${rest.path}: ${check.errors.join("; ")}`);
+      }
+      if (imgCfg.bodyImage.afterSectionIndex < 0 || imgCfg.bodyImage.afterSectionIndex >= rest.sections.length) {
+        throw new Error(`bodyImage.afterSectionIndex (${imgCfg.bodyImage.afterSectionIndex}) out of range on ${rest.path}`);
+      }
+      bodyImage = imgCfg.bodyImage;
+    }
+  }
+
   return {
     ...rest,
+    ...(heroImage ? { heroImage } : {}),
+    ...(bodyImage ? { bodyImage } : {}),
     links,
     wordCount: wordCount(texts),
     updatedAt: d.updatedAt ?? UPDATED,
@@ -1347,7 +1412,6 @@ const articles: Article[] = drafts.map((d) => {
 });
 
 // ---------- write outputs ----------
-const root = path.resolve(__dirname, "..");
 const outDir = path.join(root, "content", "generated");
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, "articles.json"), JSON.stringify(articles));

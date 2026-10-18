@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="muc-title muc-desc">
+  <title id="muc-title">How to Convert Local Market Measures to Per-Kilogram Before Comparing with NBS</title>
+  <desc id="muc-desc">Three-step workflow: 1. Note the local container (cup, derica, mudu, paint bucket, or 50kg bag). 2. Weigh net contents in kilograms and subtract container tare. 3. Divide price paid by weight in kilograms to get comparable Naira per kg.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071f15"/>
+      <stop offset="100%" stop-color="#0d3322"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#bgGrad)"/>
+  <rect x="24" y="24" width="912" height="492" rx="18" fill="#0b281b" stroke="#1b5e3f" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="48" y="46" width="210" height="28" rx="14" fill="#008751"/>
+  <text x="153" y="65" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.8">LIKE-FOR-LIKE ARITHMETIC</text>
+  <text x="48" y="106" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">Local Market Measure &#x2192; Per-Kilogram (&#x20A6;/kg) Check</text>
+  <text x="48" y="132" fill="#a7cbb8" font-family="system-ui, -apple-system, sans-serif" font-size="14">NBS Selected Food Price Watch reports per 1kg (or stated pack). Convert volume measures before comparing.</text>
+
+  <!-- Step 1 Card -->
+  <rect x="48" y="158" width="268" height="262" rx="14" fill="#103826" stroke="#236e4b" stroke-width="1.5"/>
+  <circle cx="80" cy="192" r="16" fill="#f5b700"/>
+  <text x="80" y="197" fill="#071f15" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" text-anchor="middle">1</text>
+  <text x="106" y="198" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700">Record Local Measure</text>
+  <text x="68" y="232" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Cup / Derica (volume tin)</text>
+  <text x="68" y="258" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Mudu (grain bowl)</text>
+  <text x="68" y="284" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Paint bucket / rubber</text>
+  <text x="68" y="310" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Nominal 50kg bag</text>
+  <rect x="64" y="336" width="236" height="66" rx="8" fill="#092217" stroke="#1b5e3f" stroke-width="1"/>
+  <text x="80" y="360" fill="#f5b700" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">WHY IT VARIES</text>
+  <text x="80" y="380" fill="#a7cbb8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Rice, beans &amp; garri have different</text>
+  <text x="80" y="395" fill="#a7cbb8" font-family="system-ui, -apple-system, sans-serif" font-size="12">densities inside the same container.</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M322 288 H340" stroke="#f5b700" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="338,282 346,288 338,294" fill="#f5b700"/>
+
+  <!-- Step 2 Card -->
+  <rect x="346" y="158" width="268" height="262" rx="14" fill="#103826" stroke="#236e4b" stroke-width="1.5"/>
+  <circle cx="378" cy="192" r="16" fill="#f5b700"/>
+  <text x="378" y="197" fill="#071f15" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" text-anchor="middle">2</text>
+  <text x="404" y="198" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700">Weigh Net Kilograms</text>
+  <text x="366" y="232" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Weigh on kitchen/platform scale</text>
+  <text x="366" y="258" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Subtract empty bowl/bucket tare</text>
+  <text x="366" y="284" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Average 3 cups for loose grains</text>
+  <text x="366" y="310" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Check full bag (e.g. 48kg vs 50kg)</text>
+  <rect x="362" y="336" width="236" height="66" rx="8" fill="#092217" stroke="#1b5e3f" stroke-width="1"/>
+  <text x="378" y="360" fill="#f5b700" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">NET WEIGHT FORMULA</text>
+  <text x="378" y="382" fill="#ffffff" font-family="monospace" font-size="13" font-weight="700">Net kg = Gross kg &#x2212; Container</text>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M620 288 H638" stroke="#f5b700" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="636,282 644,288 636,294" fill="#f5b700"/>
+
+  <!-- Step 3 Card -->
+  <rect x="644" y="158" width="268" height="262" rx="14" fill="#103826" stroke="#008751" stroke-width="2"/>
+  <circle cx="676" cy="192" r="16" fill="#008751"/>
+  <text x="676" y="197" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="800" text-anchor="middle">3</text>
+  <text x="702" y="198" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700">Divide &amp; Match NBS</text>
+  <text x="664" y="232" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Unit Price = &#x20A6; Paid &#xF7; Net kg</text>
+  <text x="664" y="258" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Match exact NBS item label</text>
+  <text x="664" y="284" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Match state &amp; survey month</text>
+  <text x="664" y="310" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13.5">&#x2022; Gap % = (Yours &#x2212; NBS) &#xF7; NBS</text>
+  <rect x="660" y="336" width="236" height="66" rx="8" fill="#092217" stroke="#008751" stroke-width="1.5"/>
+  <text x="676" y="360" fill="#4ade80" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">WORKED ILLUSTRATION</text>
+  <text x="676" y="382" fill="#ffffff" font-family="monospace" font-size="13" font-weight="700">&#x20A6;900 &#xF7; 0.8kg = &#x20A6;1,125/kg</text>
+  <text x="676" y="397" fill="#a7cbb8" font-family="system-ui, -apple-system, sans-serif" font-size="11">(Arithmetic example, not a live quote)</text>
+
+  <!-- Footer -->
+  <rect x="48" y="442" width="864" height="50" rx="10" fill="#081d13" stroke="#1b5e3f" stroke-width="1"/>
+  <text x="68" y="472" fill="#d3e8dc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Rule of thumb: Never compare a 50kg bag or unweighed paint bucket directly with an NBS 1kg state average.</text>
+  <text x="892" y="472" fill="#f5b700" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" text-anchor="end">NaijaCheck.ng</text>
+</svg>

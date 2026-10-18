@@ -78,3 +78,28 @@
     @apply mt-6 text-lg font-semibold;
   }
 }
+
+/* Optional subtle CSS motion on hero images only; static default and disabled for reduced-motion users. */
+@keyframes articleHeroSubtleDrift {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.02) translate3d(0, -0.5%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .article-hero-motion {
+    animation: articleHeroSubtleDrift 18s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-hero-motion {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

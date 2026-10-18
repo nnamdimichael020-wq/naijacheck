@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-label="How to Read Your Electricity Bill (Metered vs Estimated) — NaijaCheck branded cover">
+  <defs>
+    <linearGradient id="ncCoverGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#005a36"/>
+      <stop offset="55%" stop-color="#008751"/>
+      <stop offset="100%" stop-color="#063b25"/>
+    </linearGradient>
+    <pattern id="ncGrid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#ncCoverGrad)"/>
+  <rect width="960" height="540" fill="url(#ncGrid)"/>
+
+  <!-- Decorative accent shapes -->
+  <circle cx="880" cy="90" r="180" fill="#f5b700" fill-opacity="0.10"/>
+  <circle cx="850" cy="460" r="220" fill="#000000" fill-opacity="0.16"/>
+
+  <!-- Card frame -->
+  <rect x="40" y="36" width="880" height="468" rx="22" fill="#06291a" fill-opacity="0.58" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.5"/>
+
+  <!-- Brand header with NaijaCheck logo mark -->
+  <g transform="translate(72, 68)">
+    <rect width="52" height="52" rx="13" fill="#008751" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.5"/>
+    <path d="M13 37.4V14.6h4.9l16.2 16.2V14.6H39v22.8h-4.9L17.9 21.2v16.2z" fill="#ffffff"/>
+    <path d="M35.8 11.4l2.4 4.9 4.9.8-3.7 3.5.8 5-4.4-2.4-4.5 2.4.8-5-3.7-3.5 4.9-.8z" fill="#f5b700"/>
+    <text x="68" y="25" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800">NaijaCheck.ng</text>
+    <text x="68" y="45" fill="#b7e4ce" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">LEARN</text>
+  </g>
+
+  <!-- Gold accent bar -->
+  <rect x="72" y="152" width="88" height="6" rx="3" fill="#f5b700"/>
+
+  <!-- Short title -->
+  <text x="72" y="255" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="800" letter-spacing="-0.6">How to Read Your Electricity Bill</text>
+  <text x="72" y="309" fill="#ffffff" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="800" letter-spacing="-0.6">(Metered vs Estimated)</text>
+
+  <!-- Footer bar -->
+  <line x1="72" y1="432" x2="888" y2="432" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
+  <text x="72" y="466" fill="#d3f2e2" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600">Real Prices · Official Portals · Source-Labelled Guides</text>
+  <rect x="650" y="444" width="238" height="32" rx="16" fill="#008751" stroke="#f5b700" stroke-opacity="0.6" stroke-width="1"/>
+  <text x="769" y="465" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">Updated 9 October 2026</text>
+</svg>
