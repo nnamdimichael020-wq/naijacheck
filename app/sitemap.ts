@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absUrl("/about"), lastModified: FIXED_LASTMOD, changeFrequency: "monthly", priority: 0.4 },
     { url: absUrl("/status"), lastModified: liveDate, changeFrequency: "daily", priority: 0.4 },
     { url: absUrl("/privacy"), lastModified: FIXED_LASTMOD, changeFrequency: "yearly", priority: 0.3 },
+    { url: absUrl("/tools/quiz"), lastModified: FIXED_LASTMOD, changeFrequency: "weekly", priority: 0.7 },
   ];
 
   // Every generated article is a public, indexable page — except:
