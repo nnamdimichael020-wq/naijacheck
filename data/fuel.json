@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-19T13:11:02.942Z",
+  "updatedAt": "2026-10-19T20:35:24.631Z",
   "sources": [
     {
       "label": "Awajis fuel tables (petroleumprice.ng depot data)",
       "url": "https://awajis.com/fuel-price-in-nigeria-today/",
-      "asOf": "2026-10-19T12:21:00.000Z"
+      "asOf": "2026-10-19T18:21:00.000Z"
     },
     {
       "label": "NNPC and Dangote pump and gantry prices: see news feed. Not auto-parsed.",
@@ -83,13 +83,13 @@
     {
       "name": "National median depot (petrol)",
       "product": "petrol",
-      "price": 1349,
+      "price": 1349.5,
       "date": "2026-10-19"
     },
     {
       "name": "National median depot (diesel)",
       "product": "diesel",
-      "price": 1817.5,
+      "price": 1790,
       "date": "2026-10-19"
     },
     {
