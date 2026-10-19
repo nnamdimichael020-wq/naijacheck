@@ -31,7 +31,9 @@ Charts are drawn only from observations stored in `data/history.json` (max 56 pe
 
 - Search exact/partial terms for a price, city, slang, tool and absent term; test keyboard choice, URLs, empty state and Escape.
 - Test Web Share on mobile and clipboard fallback/denial on desktop.
-- Shared text/URL may contain only public title, canonical host, source/date—not calculator, hustle, location, local watch or push subscription values.
+- On `/`, `/status`, one `/howto/*`, one `/prices/*` hub and one `/tools/*` result page, confirm the explicit **WhatsApp** and **Post on X** buttons open with the page title, a dated factual line and the canonical URL, on both mobile and desktop. Both must remain visible when native Web Share is unsupported.
+- Shared text/URL may contain only public title, canonical host, source/date—not calculator, hustle, location, local watch or push subscription values. No @handle is added while `SITE_CONFIG.xHandle` is empty.
+- Confirm the WhatsApp/X targets are at least 44px tall, readable in dark mode, and never sit under the fixed bottom nav or the push invitation sheet.
 
 ## PWA and offline
 

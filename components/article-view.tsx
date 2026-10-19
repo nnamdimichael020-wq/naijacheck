@@ -11,6 +11,7 @@ import { isArticleImageEligible } from "@/lib/article-images";
 import { heroMotionForPath } from "@/config/site";
 import type { Article } from "@/lib/types";
 import { articleSchema, absUrl } from "@/lib/seo";
+import { articleShareSummary } from "@/lib/share";
 import { DATA_DATE } from "@/lib/data";
 import { ShareControls } from "@/components/share-controls";
 
@@ -102,7 +103,7 @@ export function ArticleView({ article, children, showSchema = true }: { article:
           placement="inline"
           title={article.title}
           url={absUrl(article.path)}
-          summary={`as of ${article.updatedAt}`}
+          summary={articleShareSummary(article)}
         />
       </header>
 
@@ -365,7 +366,7 @@ export function ArticleView({ article, children, showSchema = true }: { article:
         Figures on this page are indicative for {DATA_DATE} unless a source is named. This is general information, not financial, legal or medical
         advice. Check the official source before you pay or decide.
       </p>
-      <ShareControls title={article.title} url={absUrl(article.path)} summary={`as of ${article.updatedAt}`} />
+      <ShareControls title={article.title} url={absUrl(article.path)} summary={articleShareSummary(article)} />
       <AdSlot variant="inline" index={2} />
     </article>
   );

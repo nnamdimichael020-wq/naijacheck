@@ -18,7 +18,7 @@ export default function AboutPage() {
         <h1 className="mt-1 text-3xl font-extrabold tracking-tight md:text-4xl">
           {SITE_CONFIG.name}: {SITE_TAGLINE}
         </h1>
-        <ShareControls placement="inline" title={`About ${SITE_CONFIG.name}`} url={absUrl("/about")} />
+        <ShareControls placement="inline" title={`About ${SITE_CONFIG.name}`} url={absUrl("/about")} summary={`how we source and check our figures, ${DATA_DATE}`} />
       </header>
       <div className="space-y-4 text-[17px] leading-relaxed text-foreground/90">
         <p>

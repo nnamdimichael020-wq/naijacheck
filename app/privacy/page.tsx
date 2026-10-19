@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         <p className="text-sm font-semibold text-primary">Legal</p>
         <h1 className="mt-1 text-3xl font-extrabold tracking-tight md:text-4xl">Privacy notice</h1>
         <p className="mt-2 text-sm text-muted-foreground">Last updated {LAST_UPDATED}. Prepared under the Nigeria Data Protection Act 2023 (NDPA).</p>
-        <ShareControls placement="inline" title="Privacy notice" url={absUrl("/privacy")} />
+        <ShareControls placement="inline" title="Privacy notice" url={absUrl("/privacy")} summary={`NDPA 2023 notice, last updated ${LAST_UPDATED}`} />
       </header>
 
       <div className="rounded-md border border-accent/60 bg-accent/10 p-3 text-sm">
