@@ -62,3 +62,61 @@ export const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 export const PREMIUM_PRICE_NGN = 2500;
 
 export const SOCIAL_HANDLE = "@naijacheck";
+
+/* ------------------------------------------------------------------ */
+/* Hero motion policy ("subtle" Ken Burns allowlist)                    */
+/* ------------------------------------------------------------------ */
+
+/** Motion setting for a hero image. `"static"` is the site-wide default. */
+export type HeroMotion = "static" | "subtle";
+
+/**
+ * The **only** routes whose hero image may carry the subtle CSS Ken Burns drift
+ * (`.article-hero-motion` in `app/globals.css`). Everything else is `"static"`.
+ *
+ * Rules (see docs/image-credits.md):
+ * - Motion is opt-in per **exact path**, capped at 3–5 flagship routes.
+ * - CSS-only, on the hero image only — no JS animation libraries, no autoplay
+ *   MP4/WebM loops, no sound, and never on the whole page body.
+ * - Fully disabled for `prefers-reduced-motion: reduce` (no animation, no transform).
+ * - Never list `/status`, `/tools/*`, pure price-table pages, hustle-combo pages,
+ *   or guides that render no hero image.
+ */
+export const HERO_MOTION_ALLOWLIST = [
+  "/",
+  "/howto/drivers-licence-frsc",
+  "/howto/prepaid-electricity-bands",
+  "/howto/lasrra-lagos-residency",
+  "/howto/nbs-food-price-watch",
+] as const;
+
+/**
+ * Route trees where hero motion is policy-forbidden even if mistakenly allowlisted:
+ * `/status`, `/tools/*`, pure price tables (`/prices` and everything under it, which
+ * includes the pure price-table pages) and `/hustle` (where the no-motion
+ * hustle-combo pages live). Deliberately conservative: motion belongs only to the
+ * small flagship allowlist above, never to data/tool/status surfaces.
+ */
+export function isHeroMotionForbiddenRoute(routePath: string): boolean {
+  if (!routePath.startsWith("/")) return true;
+  return (
+    routePath === "/status" ||
+    routePath.startsWith("/status/") ||
+    routePath === "/tools" ||
+    routePath.startsWith("/tools/") ||
+    routePath === "/prices" ||
+    routePath.startsWith("/prices/") ||
+    routePath === "/hustle" ||
+    routePath.startsWith("/hustle/")
+  );
+}
+
+/**
+ * The single policy function every hero (article + home) reads. Returns `"subtle"`
+ * only for exact paths on `HERO_MOTION_ALLOWLIST` outside the forbidden route
+ * trees; every other path — including guides without a hero — stays `"static"`.
+ */
+export function heroMotionForPath(routePath: string): HeroMotion {
+  if (isHeroMotionForbiddenRoute(routePath)) return "static";
+  return (HERO_MOTION_ALLOWLIST as readonly string[]).includes(routePath) ? "subtle" : "static";
+}

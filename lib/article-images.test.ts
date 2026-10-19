@@ -243,7 +243,8 @@ function run(): void {
     }
     for (const img of [article.heroImage, article.bodyImage].filter(Boolean)) {
       if (!img) continue;
-      const safety = validateArticleImageSafety(img);
+      const kind = img === article.heroImage ? "hero" : "body";
+      const safety = validateArticleImageSafety(img, article.path, kind);
       assert.ok(safety.ok, `Article ${article.path} image failed safety check: ${safety.errors.join("; ")}`);
       const diskPath = path.join(rootDir, "public", img.src.replace(/^\//, ""));
       assert.ok(fs.existsSync(diskPath), `Image asset ${img.src} referenced by ${article.path} must exist at ${diskPath}`);

@@ -28,7 +28,11 @@ export type ArticleImage = {
   license?: string;
   /** Short editorial caption that adds context for the reader. */
   caption?: string;
-  /** Static by default; optional subtle CSS motion on hero only (honors prefers-reduced-motion). */
+  /**
+   * Hero-only motion, stamped from `HERO_MOTION_ALLOWLIST` in `config/site.ts`
+   * (`"subtle"` only on allowlisted flagship routes, `"static"` everywhere else).
+   * Rendered as pure CSS that honors `prefers-reduced-motion: reduce`.
+   */
   motion?: "static" | "subtle";
 };
 
