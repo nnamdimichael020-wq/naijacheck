@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-10-18T23:10:42.109Z",
+  "checkedAt": "2026-10-19T04:38:42.455Z",
   "official": {
     "USD": 1332.2582,
-    "GBP": 1774.47,
-    "EUR": 1497.68
+    "GBP": 1774.76,
+    "EUR": 1494.75
   },
   "seeded": false,
   "officialStatus": "recent",
@@ -15,7 +15,7 @@
     "url": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
     "apiUrl": "https://www.cbn.gov.ng/api/GetAllNFEM_RatesGRAPH"
   },
-  "crossRateAsOf": "2026-10-18T00:02:31.000Z",
+  "crossRateAsOf": "2026-10-19T00:02:32.000Z",
   "crossRateSource": {
     "label": "open.er-api.com: daily reference rates",
     "url": "https://open.er-api.com/v6/latest/USD"
@@ -34,7 +34,7 @@
       "sell": 1520
     }
   },
-  "blackMarketAsOf": "2026-10-18T23:06:00.000Z",
+  "blackMarketAsOf": "2026-10-19T04:06:00.000Z",
   "blackMarketSource": {
     "label": "Aboki Forex: black market and CBN widget",
     "url": "https://abokiforex.app/"

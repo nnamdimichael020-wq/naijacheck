@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-18T23:10:42.109Z",
+  "checkedAt": "2026-10-19T04:38:42.455Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -12,28 +12,40 @@
       "query": "petrol price Nigeria",
       "items": [
         {
-          "title": "Marketers reject FG’s plan to cap petrol price at N1,350",
-          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5WaDNkeTl2ajNUSGtaa0gyR1NETXI1WkNnQlJrSjMyNEJiSWVCay04T3NWOFRSM1psWjVsdkI2c0c3MmpNbzgtSDltZzNVcTU4OGlUck5pSkVnZWtVWWE1SjJEZV9KYnFpbDB2V19zLTRSZTF1?oc=5",
-          "source": "Punch Newspapers",
-          "published": "2026-10-16T00:56:03.000Z"
-        },
-        {
-          "title": "NLC, Falana, activists rally Nigerians against fuel price hike",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNU0pCbnBSUmtsOXpDTGp1RW5jS1VaVmY1UEZZZkJXa1l2YnVFbFBjZnhLSkNwTHM4WWlEcmlCOVRwd1FYRzFQbUFBa0hhM1JGdEhuUXpBRXItVlExQWhsYTlZMEVRdzdsaFdkdXNwcXhteVFObTVWdE55RkRiRlkwVUp1OTd1NnpWZld4ZGpfV1puLVl3WUJpZDB6RmRmQdIBowFBVV95cUxNQWJHeFlWc1ZKLXh4TXhseWpQTGQzOXFQWmpwcmV2VUtTZzVtQ2M4dTBBbG5WdVJFT0FadDZ6dUVJQTNkTVZGLWpRWVpsNjZ4ZDJ0ZG1sLXZVMFFBeG5vTURscGVZbzRyNjBGLVZDNWl5MENRLU9GVjcxUVRPSERDeVQ1TGVQblB2bXN6eUlZR0hac1VVYVZyUW9icFZhdVl5ajA4?oc=5",
-          "source": "Vanguard News",
-          "published": "2026-10-18T15:22:37.000Z"
-        },
-        {
-          "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uneven Relief",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQd2Z4TUVlaVN5aVFNUGIxRm9mU0RjZFJINVhHcV85TDFsQjg2R2tKM3J0SW1EblpRdUNQOEVzaWI5a3FtZHNEdF93cFpHdDZpU3czd0lyM2wyRDRLTnFLWktkT3JhdzNzLWdDdFYwb0RlSnpTMHJrUzBtQWEzaTNGR0EzZW5uSVBwOWQ2UkNDRGFLVzJJck93S20xNA?oc=5",
+          "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uncertain Relief",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOOHFQdkRhU2JkU0NPMldRMW5VM2JfUXF3UjNDeUlsNzFjZ0poVzlubzdOSFdnUzBxYzRES19yVHVuUEVpSGdlY01XYTRDSG5YajFiYzRBWWVtTElGSGFwbjNaZndRbmlHeWNOU2hNTEtGdl9UeEQ3bFZqTnZyWktqSmhEUVgwaW9uZ0psQWdkUUwxODZTYk5XRk9LM0JQaFk?oc=5",
           "source": "THISDAYLIVE",
-          "published": "2026-10-18T02:18:52.000Z"
+          "published": "2026-10-19T01:01:03.000Z"
         },
         {
-          "title": "Hardship: Atiku Canvases For Cheaper Petrol Prices In Nigeria",
-          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWmxfSFhYNzRYSDEwM2gycXFqcVBrdzQ2ZTJob0pNSEQtM3RkRTFzNnp2UGd0UGJJeFZtaGVKUmlTbS0xbV9PZW5xVmpWOWpxMGxVZ1dVaEk0YlJTWGxfOEJDN243dDNqS3JTV1V1UjlLdzdnSnExQTFtVHBTbVAwMHhJVU5kQXM?oc=5",
-          "source": "https://thefact.ng/",
-          "published": "2026-10-18T04:44:17.000Z"
+          "title": "NLC, Falana, activists rally Nigerians against petrol price hike, hardship",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMTJvQjEySWFEd3pOd0Y3S0RQNHV5QWZfYjI3cWpGOTBmSmV6ZU1STEhJLVp2T3c4SGprLXFWYXo1V2RMV2dIOV82UTU4blRHQjBqcWFEa096c1FTRzFRSmgteEJFWmkyY3VQUFhSdnFGZ0RJeU5QUXFQNWVDX1lVMk8yYm1SNzVqbkNWZVRNV3pQLTFXQ1dQV2pDaTNNT3BRUUJzdDlwbDVtVklo0gGyAUFVX3lxTFBsMHROMzdFa1RDa2dNa2xLRF9IOU1fUktZblR3SFBEN0Y3X25PdlhhU29TUldJRVA4MWpsQ0N0akZmZUk0YzFoSGZXczdNcEZ4Nkx3cjU2V3VTaldwVzBmSEV1VFZUdV83MWwtSUgzb3RCa1RfZXZuNGpTWWhRMjF2Ylk0c1NkMzBsYXpKVUUwaXVYSmlsb2kxbndnZmctdDhsaXpJNjdEY3hVX1pEUDZaRkE?oc=5",
+          "source": "Vanguard News",
+          "published": "2026-10-19T00:51:47.000Z"
+        },
+        {
+          "title": "Govt’s petrol discount may cost 0.4% of GDP – Report",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1RcG0yX0ZKcnVpcmctT2I4YXZEM0Q1LU1uZjR5Xzl6c2taVGtwVkJ5ZGVKdzIxVUstN09VbE13bmZJREdmV2ZoSUtaQ1RnLWt1QVpZZXhzWFhIbjRDVTFlc2pJVTlld284MlhmOGZXUQ?oc=5",
+          "source": "Punch Newspapers",
+          "published": "2026-10-19T01:11:28.000Z"
+        },
+        {
+          "title": "Petrol price hike looms as oil hits $110/barrel",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5VMDdBUWN5Nzh0QlF6NklGN0h2RmhDUEJSR1BWbXhjMVd5cUxjcWdtN0hlUjdmcERsSzNxX3NsR0dCMWQydXdzSEtHZW1XcDFLQmxzTnJ6MmJERDdFVExSRFRCNVdtMU51TDJsMjFYVDJVZ0E?oc=5",
+          "source": "The Sun Nigeria",
+          "published": "2026-10-19T00:34:36.000Z"
+        },
+        {
+          "title": "FG’s Petrol Price Scam An Untidy Election Ploy",
+          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9jcXdNNVk3U1otdWdzVlQzMkRBZThLUEY0eWkteEEwM0I5Zy1pZHpQZnZtWmktbXotWTlZenMwMTNHNmVvXzRTME9xT2NPMF9ua3gyVjBVMWt4dEFISGlBY2VkS2p0aE5kbGFiUHNXOFVRZ01lZGlYVA?oc=5",
+          "source": "Independent Newspaper Nigeria",
+          "published": "2026-10-19T00:41:15.000Z"
+        },
+        {
+          "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SZW45N1ozOVQwY1YxTkU5dENJNVdfV2I4X3ZBeHVSN1hQN2hCUlVBQV9jcWdTdEI1X3FiWXprWHptRTdXMXowSnFvbE5oR1ExU2tET1ZBSXRITUlCelHSAWNBVV95cUxPX0kxWFNtZ0lyWmxPUlRQMGJCel9oTDFsUl9qcTRQcEF4el9WTEJIc3NqY3paZ0FzWFctX2VKTm15Q1J6UTZyWldOQW1Fam9zWnlhYkhlWFpxUTBQOWlOZ3o0U0k?oc=5",
+          "source": "BBC",
+          "published": "2026-10-12T13:42:37.000Z"
         },
         {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
@@ -42,22 +54,10 @@
           "published": "2026-10-09T07:00:00.000Z"
         },
         {
-          "title": "NNPCL increases petrol price amid disputed fuel discount",
-          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQeWJLM3FoUlRZMUx0M2FNa3ZtSE9ZR0ZvRWZuZ0RRZHVnZGR0eHdzaXhaRlJtUTJYbkQ0dTQ4M0VWcnNLc3ZJZ3BFTzJfYkpqclVBTWdwNW9uZFBpM05ib2UxLXlEQmE2XzhBRkZMVmxrTzJ3aENNeU5mWENlenMtcEhlM3NzRTBSdHd5NVEtOTVJQkE?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-16T20:00:42.000Z"
-        },
-        {
-          "title": "We’ll Consider Fuel Subsidy To Bring Down Petrol Price – Kwankwaso",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVjBJaWVPcjA0TXpqcHFSU3V5aEJYV285cHB1eVFBZWdGek9GY2RoOTc5bGpYN1U0VmVza1dVOEV4ek1ZNURsOVA5X1pCbG0tOVRlOTVxLWM3QnVPWU5BQU1OWmFuZ2Z1ckNhdTdtVGk3YmJkRENVUGRCZjM1bWZtZjg5Mk40NUIzdGRVUUhZajFqR1BSMU9Qc2lHY0U4VjFUSVlLUQ?oc=5",
-          "source": "Channels Television",
-          "published": "2026-10-15T19:50:19.000Z"
-        },
-        {
-          "title": "Nigeria Maintains Fuel Subsidy Removal Policy, Targets More Investment and Job Creation",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOGRVNEt2a2oyVkg2WUFrVkw3bGN4X0dMSy1EZ0pTTURsQy1jdGRGSGVtdHRSdkpraHM2QVhya1JRX0pxUW1qUmNwb21GT2NfMEpHT2s4VXlxb0FLRW9SOUZrRE42dVFlSlNadUZUVE4tTTU1WXMyM0FaNm9JeU12ZnJkRmgwYS03QnFrM2JHVlAzS1dNeTY4RUZlcjJZRjdqamc?oc=5",
-          "source": "https://www.nigeriahousingmarket.com/",
-          "published": "2026-10-18T06:40:37.000Z"
+          "title": "Petrol Price Cap Not Solution To Petroleum Market Challenges ……. MEMAN",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTkVxV24yb0dRZ1JNNUREdGpUNXA1M0xUc0t1YjlDQUh0bmRSMjhoV0NTSmVsTmY0ODJCWVhDTEhyRzBrNDI5TnViLVpZMTBaR1VSWXM0TlhqV011QVFEZHB6YkN5bFJtcm4tTE5oTTBGcTFneXlaeUNVTnZkUlhrZ0FSX3hCOXRqZGthaFJiT0VlVzFjNXVaY21kbHFFWWxXZm1Fcm9nS1R0b0RyV2c?oc=5",
+          "source": "The Tide News",
+          "published": "2026-10-19T02:10:47.000Z"
         }
       ]
     },
@@ -329,10 +329,10 @@
           "published": "2025-03-16T07:00:00.000Z"
         },
         {
-          "title": "Food Prices Drop As Festive Season Approaches",
-          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE41NmJpZVp5M2p3cDRMWm5CSE1lMEE3SlNMUHRhMFVZaHFJN0cyNVJZbTM2VmtaN2FLMTJZNmJtZDdhak1kaDJxcl9VZXQ3di1kZzZtM18wSUVoYnVadkVWeUJzS29IS0NMdlJ6dGZKdTNwQzVLVFhj?oc=5",
-          "source": "LEADERSHIP Newspapers",
-          "published": "2025-12-06T01:26:36.000Z"
+          "title": "NBS: Rice, beans, garri, and tomato prices fall nationwide in October 2025",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSEdKcUlQaHExVEhrUDdTV3dfWE1namdVSVFaN1BZMHpBWlR6Q1pTajZacU82NXZabzVfUU9hazhvUE96LWlVWGRrTVFxa0xLNDhfdXN2MlpwMDZicUR5NC1HZkdiZGJremRIWTlUVVBwUUVUbDcwM09Ob0dFWmFKUTl3ZkFHOFUwY3F2OEJROGtwQ0dYZ21nU2U0dVpDbWdwNHJwOVVYNA?oc=5",
+          "source": "21st CENTURY CHRONICLE",
+          "published": "2025-12-12T08:00:00.000Z"
         }
       ]
     }
