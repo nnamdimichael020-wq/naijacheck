@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T04:38:42.455Z",
+  "updatedAt": "2026-10-19T13:11:02.942Z",
   "status": "recent",
   "sources": [
     {
@@ -10,7 +10,7 @@
     {
       "label": "Aboki Forex: black market and CBN widget",
       "url": "https://abokiforex.app/",
-      "asOf": "2026-10-19T04:06:00.000Z"
+      "asOf": "2026-10-19T13:08:00.000Z"
     },
     {
       "label": "open.er-api.com: daily reference rates",
@@ -25,14 +25,14 @@
   },
   "blackMarket": {
     "USD": 1370,
-    "GBP": 1805,
-    "EUR": 1500
+    "GBP": 1800,
+    "EUR": 1490
   },
   "note": "Official USD is the CBN NFEM closing rate. Black market is Aboki Forex's buy rate (sell in blackMarketSell). GBP and EUR official values are cross rates from open.er-api, labelled as reference, not CBN quotes.",
   "blackMarketSell": {
     "USD": 1375,
-    "GBP": 1820,
-    "EUR": 1520
+    "GBP": 1815,
+    "EUR": 1510
   },
   "officialStatus": "recent",
   "blackMarketStatus": "recent",
