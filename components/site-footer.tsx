@@ -1,14 +1,19 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SITE_CONFIG, SITE_TAGLINE, SOCIAL_HANDLE } from "@/config/site";
 import { AdSlot } from "@/components/ads/ad-slot";
 import { TelegramAlertsLink } from "@/components/live/telegram-alerts";
 import { TOP_NAV } from "@/lib/nav";
 
 export function SiteFooter() {
+  const pathname = usePathname();
+  const quizPage = pathname === "/tools/quiz";
   return (
     <footer className="mt-12 border-t bg-card/40">
       <div className="mx-auto max-w-7xl px-4 py-8">
-        <AdSlot variant="footer" />
+        {quizPage ? null : <AdSlot variant="footer" />}
         <div className="mt-8 grid gap-8 md:grid-cols-3">
           <div>
             <p className="text-lg font-extrabold">{SITE_CONFIG.name}</p>

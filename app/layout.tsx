@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import "./globals.css";
-import { SITE_CONFIG, SITE_TAGLINE, ADSENSE_CLIENT_ID } from "@/config/site";
+import { SITE_CONFIG, SITE_TAGLINE } from "@/config/site";
+import { AdsenseLoader } from "@/components/ads/adsense-loader";
+import { SiteSidebarFrame } from "@/components/site-sidebar-frame";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { SiteSidebar } from "@/components/site-sidebar";
 import { BottomNav } from "@/components/bottom-nav";
 import { LiveTicker } from "@/components/live/ticker";
 import { JsonLd } from "@/components/json-ld";
@@ -74,24 +74,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main id="main" className="min-w-0 flex-1 pb-28 pt-6 lg:pb-12">
               {children}
             </main>
-            <aside className="hidden w-[300px] shrink-0 pt-6 lg:block" aria-label="Sidebar">
-              <SiteSidebar />
-            </aside>
+            <SiteSidebarFrame />
           </div>
           <SiteFooter />
           <BottomNav />
           <PushPrompt />
         </ThemeProvider>
         <JsonLd data={[organizationSchema, websiteSchema]} />
-        {ADSENSE_CLIENT_ID ? (
-          <Script
-            id="adsense"
-            async
-            strategy="afterInteractive"
-            crossOrigin="anonymous"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
-          />
-        ) : null}
+        <AdsenseLoader />
       </body>
     </html>
   );

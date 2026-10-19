@@ -7,6 +7,7 @@ const article = getArticle("/tools");
 export const metadata = articleMetadata(article);
 
 const TOOLS = [
+  { href: "/tools/quiz", title: "NaijaCheck quizzes", blurb: "Price IQ from dated FX and fuel snapshots, plus a slang check from our trends desk." },
   { href: "/tools/generator", title: "Generator fuel calculator", blurb: "Diesel or petrol cost per day and per month." },
   { href: "/tools/solar", title: "Solar payback calculator", blurb: "Years to pay off an inverter or solar system." },
   { href: "/tools/cookbook", title: "Recipe cookbook", blurb: "Cost any Nigerian dish for your family, in your city." },
