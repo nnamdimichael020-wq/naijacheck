@@ -33,6 +33,51 @@ const assetPaths = new Set(files.map((f) => "/" + path.relative(root, f).replace
 const rows = [];
 const broken = [];
 const brokenImageAssets = [];
+/**
+ * WhatsApp + X share coverage. Every public page that ships the site shell must
+ * expose both explicit network links, pre-filled with only its title/dated line
+ * and canonical URL. /admin, /404 and the offline shell must never carry share.
+ */
+const shareExcludedRoutes = new Set(["/admin", "/404", "/offline"]);
+const share = {
+  pagesMissingWhatsApp: [],
+  pagesMissingX: [],
+  mismatchedSharePairs: [],
+  excludedRoutesWithShare: [],
+  malformedWhatsApp: [],
+  malformedX: [],
+  anchorMissingTargetRelOrLabel: [],
+  anchorBelow44px: [],
+};
+const shareExpectedUrl = (route) => `${expectedOrigin}${route === "/" ? "/" : route}`;
+const anchorAttribute = (tag, name) => tag.match(new RegExp(`\\b${name}=["']([^"']*)["']`, "i"))?.[1] ?? "";
+/** React escapes text in href attributes (`&#x27;` for an apostrophe), so decode before URL parsing. */
+const decodeHtmlAttribute = (value) =>
+  value
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(Number(dec)))
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&");
+const checkShareAnchorChrome = (route, network, tag) => {
+  if (anchorAttribute(tag, "target") !== "_blank") {
+    share.anchorMissingTargetRelOrLabel.push({ route, network, missing: "target=_blank" });
+  }
+  const rel = anchorAttribute(tag, "rel").toLowerCase();
+  if (!rel.includes("noopener") || !rel.includes("noreferrer")) {
+    share.anchorMissingTargetRelOrLabel.push({ route, network, missing: "rel=noopener noreferrer" });
+  }
+  if (!anchorAttribute(tag, "aria-label").trim()) {
+    share.anchorMissingTargetRelOrLabel.push({ route, network, missing: "aria-label" });
+  }
+  const className = anchorAttribute(tag, "class");
+  if (!/\bmin-h-11\b/.test(className) || !/\bmin-w-11\b/.test(className)) {
+    share.anchorBelow44px.push({ route, network });
+  }
+};
 const articleImagesMissingDimensionsOrAlt = [];
 const pureDataPagesWithArticleImages = [];
 const howtoWithHeroRoutes = [];
@@ -124,6 +169,70 @@ for (const [route, file] of routes) {
   }
   const ldScripts = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
   for (const [, raw] of ldScripts) try { JSON.parse(raw); } catch (e) { badJsonLd.push({ route, error: e.message }); }
+
+  // ---- WhatsApp + X share coverage (client-component markup, not the RSC payload) ----
+  const htmlForShare = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ");
+  const shareAnchors = [...htmlForShare.matchAll(/<a\b[^>]*\bdata-share-target=["'](whatsapp|x)["'][^>]*>/gi)].map((m) => ({
+    network: m[1].toLowerCase(),
+    tag: m[0],
+  }));
+  const waAnchors = shareAnchors.filter((a) => a.network === "whatsapp");
+  const xAnchors = shareAnchors.filter((a) => a.network === "x");
+  const anyShareHref = hrefs.some((href) => href.startsWith("https://wa.me/") || href.startsWith("https://twitter.com/intent/tweet"));
+  if (shareExcludedRoutes.has(route) && (waAnchors.length || xAnchors.length || anyShareHref)) {
+    share.excludedRoutesWithShare.push(route);
+  } else if (!shareExcludedRoutes.has(route)) {
+    const expected = shareExpectedUrl(route);
+    if (!waAnchors.length) share.pagesMissingWhatsApp.push(route);
+    if (!xAnchors.length) share.pagesMissingX.push(route);
+    if (waAnchors.length !== xAnchors.length) share.mismatchedSharePairs.push({ route, whatsapp: waAnchors.length, x: xAnchors.length });
+    for (const anchor of waAnchors) {
+      const href = decodeHtmlAttribute(anchorAttribute(anchor.tag, "href"));
+      if (!href.startsWith("https://wa.me/?text=")) {
+        share.malformedWhatsApp.push({ route, reason: "href prefix", href });
+        continue;
+      }
+      checkShareAnchorChrome(route, "whatsapp", anchor.tag);
+      let waText = "";
+      try {
+        waText = new URL(href).searchParams.get("text") ?? "";
+      } catch {
+        share.malformedWhatsApp.push({ route, reason: "unparseable", href });
+        continue;
+      }
+      if (!waText.endsWith(expected)) {
+        share.malformedWhatsApp.push({ route, reason: "canonical URL missing from text", text: waText });
+      }
+      if (/\blive\b/i.test(waText)) share.malformedWhatsApp.push({ route, reason: "live claim", text: waText });
+      if (/@/.test(waText)) share.malformedWhatsApp.push({ route, reason: "unverified handle", text: waText });
+    }
+    for (const anchor of xAnchors) {
+      const href = decodeHtmlAttribute(anchorAttribute(anchor.tag, "href"));
+      if (!href.startsWith("https://twitter.com/intent/tweet?text=")) {
+        share.malformedX.push({ route, reason: "href prefix", href });
+        continue;
+      }
+      checkShareAnchorChrome(route, "x", anchor.tag);
+      let params;
+      try {
+        params = new URL(href).searchParams;
+      } catch {
+        share.malformedX.push({ route, reason: "unparseable", href });
+        continue;
+      }
+      const tweetText = params.get("text") ?? "";
+      const tweetUrl = params.get("url") ?? "";
+      if (!tweetText.trim()) share.malformedX.push({ route, reason: "empty text", href });
+      if (tweetUrl !== expected) share.malformedX.push({ route, reason: "canonical url mismatch", expected, got: tweetUrl });
+      if (tweetText.includes(expected)) share.malformedX.push({ route, reason: "url duplicated in text", text: tweetText });
+      if (/\blive\b/i.test(tweetText)) share.malformedX.push({ route, reason: "live claim", text: tweetText });
+      if (/@/.test(tweetText)) share.malformedX.push({ route, reason: "unverified handle", text: tweetText });
+      if (params.get("via") && !/^[A-Za-z0-9_]{1,15}$/.test(params.get("via"))) {
+        share.malformedX.push({ route, reason: "malformed via", via: params.get("via") });
+      }
+    }
+  }
+
   rows.push({
     environment: "local-static-export",
     route,
@@ -222,6 +331,13 @@ const findings = {
   indexedNotInSitemap,
   noindexInSitemap,
   robots: { ...robots, ok: robotsOk },
+  share: {
+    pagesRequired: rows.filter((r) => !shareExcludedRoutes.has(r.route)).length,
+    pagesWithWhatsApp: rows.filter((r) => !shareExcludedRoutes.has(r.route) && fs.readFileSync(routes.get(r.route), "utf8").includes("https://wa.me/?text=")).length,
+    pagesWithX: rows.filter((r) => !shareExcludedRoutes.has(r.route) && fs.readFileSync(routes.get(r.route), "utf8").includes("https://twitter.com/intent/tweet?")).length,
+    excludedRoutes: [...shareExcludedRoutes],
+    ...share,
+  },
   brokenInternalLinks: broken,
   brokenImageAssets,
   articleImages: {
@@ -266,6 +382,14 @@ if (
   findings.wrongCanonicalHost.length ||
   badJsonLd.length ||
   missingTelegramLink.length ||
+  share.pagesMissingWhatsApp.length ||
+  share.pagesMissingX.length ||
+  share.mismatchedSharePairs.length ||
+  share.excludedRoutesWithShare.length ||
+  share.malformedWhatsApp.length ||
+  share.malformedX.length ||
+  share.anchorMissingTargetRelOrLabel.length ||
+  share.anchorBelow44px.length ||
   heroMotion.offAllowlistWithMotionClass.length ||
   heroMotion.forbiddenRoutesWithMotionClass.length ||
   heroMotion.allowlistedRoutesWithoutHero.length ||

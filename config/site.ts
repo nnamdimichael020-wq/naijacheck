@@ -47,6 +47,16 @@ export const SITE_CONFIG = {
    * Committed (see `TELEGRAM_CHANNEL_URL_DEFAULT`); only clear it in code to hide every Telegram link.
    */
   telegramChannelUrl: TELEGRAM_CHANNEL_URL,
+  /**
+   * X (Twitter) handle used **only** in share intents, without the leading @.
+   *
+   * Intentionally empty: no X account has been verified for NaijaCheck. `SOCIAL_HANDLE`
+   * below is a general contact string, not proof that an X account exists, so the
+   * WhatsApp/X prefill omits every @mention until a real handle is set here.
+   * `normalizeXHandle()` in `lib/share.ts` accepts 1–15 letters, digits or underscores
+   * and ignores anything malformed, so a bad value can never produce a fake mention.
+   */
+  xHandle: "",
 } as const;
 
 export const SITE_TAGLINE = "Real Prices. Real Slang. Real Hustle.";

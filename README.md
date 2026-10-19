@@ -22,7 +22,8 @@ Node 20.9 or later is required. `.nvmrc` pins Node 20 to match the configured Cl
 | `npm run monitor` | Fetches every live source and writes `data/live/*.json` (see Live data). |
 | `npm run monitor:test` | Parser tests against captured source responses, plus the bounded-history and chart-series rules. |
 | `npm run chart:test` | Renders the history charts with `react-dom/server` and asserts the honest empty state, real-point-only polylines and non-colour series cues. |
-| `npm test` | Runs `monitor:test`, `chart:test`, `push:test`, `telegram:test` and `nbs:test`. |
+| `npm test` | Runs every guard: `site:test`, `share:test`, `govhowto:test`, `images:test`, `hero:test`, `headline:test`, `monitor:test`, `chart:test`, `push:test`, `telegram:test` and `nbs:test`. |
+| `npm run share:test` | Proves the WhatsApp and X prefills carry only a public title, one dated factual line and the canonical URL; no unverified @handle, tracking parameter or private origin can leak, and every generated page gets a dated line. |
 | `npm run telegram:test` | Proves Telegram and Web Push share one genuine-change gate: no send on baseline, flat, below-threshold or failed-monitor runs, one send per genuine change, six-hour coalescing, silent no-op when unconfigured. |
 | `npm run generate` | Runs `scripts/generate-content.ts`. Builds 205 long-form article pages into `content/generated/articles.json` and `public/search-index.json`. |
 | `npm run dev` | Regenerates content, then starts the dev server on 0.0.0.0:3000. |

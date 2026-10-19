@@ -18,6 +18,7 @@ import { PushSettings } from "@/components/push-notifications";
 import { TelegramAlerts } from "@/components/live/telegram-alerts";
 import { DATASET_REGISTRY, stateLabel } from "@/lib/source-registry";
 import { pageMetadata, absUrl } from "@/lib/seo";
+import { formatShareDate } from "@/lib/share";
 import { ShareControls } from "@/components/share-controls";
 import { FxHistorySection, FuelHistorySection, LpgHistorySection } from "@/components/live/history-section";
 import { MiniSparkline } from "@/components/live/sparkline";
@@ -42,6 +43,14 @@ const NOT_AUTO = [
 export default function StatusPage() {
   const health = sourceHealth();
   const watch = Object.entries(LIVE_WATCH.pages ?? {});
+  // The latest recorded check, not "now": the share line must never imply these sources were read live.
+  const latestCheck = DATASET_REGISTRY.map((d) => d.checkedAt)
+    .filter((value): value is string => Boolean(value))
+    .sort()
+    .at(-1);
+  const shareSummary = latestCheck
+    ? `${DATASET_REGISTRY.length} datasets · latest recorded check ${formatShareDate(latestCheck)}`
+    : `${DATASET_REGISTRY.length} datasets with sources, dates and limitations`;
   const localReadings: WatchReading[] = [
     LIVE_FX.official.USD ? { id: "cbn-usd", label: "CBN NFEM USD/NGN", value: LIVE_FX.official.USD, unit: "₦/US$", sourceTime: LIVE_FX.officialAsOf } : null,
     LIVE_FX.blackMarket?.USD.buy ? { id: "parallel-usd-buy", label: "Parallel USD buy", value: LIVE_FX.blackMarket.USD.buy, unit: "₦/US$", sourceTime: LIVE_FX.blackMarketAsOf } : null,
@@ -56,7 +65,7 @@ export default function StatusPage() {
           Monitored readings on {SITE_CONFIG.name} have a named source and separate source and check times. This page distinguishes seeded,
           recent, stale, manual and unavailable data; a scheduled check does not guarantee that an upstream publisher changed its value.
         </p>
-        <ShareControls placement="inline" title="Data status" url={absUrl("/status")} />
+        <ShareControls placement="inline" title="Data status" url={absUrl("/status")} summary={shareSummary} />
       </header>
 
       <section aria-labelledby="ds" className="space-y-3">
