@@ -290,6 +290,16 @@ const committedTelegramChannelUrl = siteSource.match(/TELEGRAM_CHANNEL_URL_DEFAU
 const missingTelegramLink = committedTelegramChannelUrl
   ? ["/", "/status"].filter((route) => !routes.has(route) || !fs.readFileSync(routes.get(route), "utf8").includes(`href="${committedTelegramChannelUrl}"`))
   : [];
+// The micro-bar is shared chrome, but the status dashboard and admin stub must not duplicate it.
+// Check the actual static HTML, not just the React source (static export has no request-time render).
+const htmlFor = (route) => routes.has(route) ? fs.readFileSync(routes.get(route), "utf8") : "";
+const snapshotChrome = {
+  missingOnPublicSample: ["/", "/prices/fuel", "/howto/drivers-licence-frsc"].filter((route) => !htmlFor(route).includes('aria-label="Saved FX and fuel readings"')),
+  noisyOnStatusOrAdmin: ["/status", "/admin"].filter((route) => htmlFor(route).includes('aria-label="Saved FX and fuel readings"')),
+  missingCheckedState: ["/", "/prices/fuel"].filter((route) => !/Recent at last check|Stale|Seeded, unverified|Unavailable/.test(htmlFor(route)) || !htmlFor(route).includes("Checked ")),
+  missingWeeklyModule: !htmlFor("/").includes("Changed this week") ||
+    !["No verified move this week", "Source moved from ", "Article updated "].some((text) => htmlFor("/").includes(text)),
+};
 const creditsFilePresent = fs.existsSync(path.join(process.cwd(), "docs", "image-credits.md"));
 
 // Hero motion must be pure CSS behind a prefers-reduced-motion gate: the compiled stylesheets
@@ -350,6 +360,7 @@ const findings = {
     articleImagesMissingDimensionsOrAlt,
   },
   heroMotion,
+  snapshotChrome,
   wrongCanonicalHost: rows.filter((r) => r.canonical && !r.canonical.startsWith(expectedOrigin)).map((r) => ({ route: r.route, canonical: r.canonical })),
   missing: {
     title: rows.filter((r) => !r.title).map((r) => r.route),
@@ -401,6 +412,10 @@ if (
   !heroMotion.css.animatesOnlyUnderNoPreference ||
   !heroMotion.css.driftLivesUnderNoPreference ||
   !heroMotion.css.reduceDisablesAnimation ||
-  !heroMotion.css.reduceDisablesTransform
+  !heroMotion.css.reduceDisablesTransform ||
+  snapshotChrome.missingOnPublicSample.length ||
+  snapshotChrome.noisyOnStatusOrAdmin.length ||
+  snapshotChrome.missingCheckedState.length ||
+  snapshotChrome.missingWeeklyModule
 )
   process.exitCode = 1;

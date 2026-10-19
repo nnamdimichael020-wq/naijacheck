@@ -8,7 +8,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { pageMetadata, absUrl } from "@/lib/seo";
-import { LIVE_FX, LIVE_FUEL, latestDatasetDelta } from "@/lib/live";
+import { LIVE_FX, LIVE_FUEL, LIVE_HISTORY, latestDatasetDelta } from "@/lib/live";
+import { ARTICLES } from "@/lib/articles";
+import { changedThisWeek } from "@/lib/changed-this-week";
+import { ChangedThisWeek } from "@/components/live/changed-this-week";
 import { ChangeBadge } from "@/components/live/change-badge";
 import { DailyBriefing } from "@/components/live/daily-briefing";
 import { Freshness } from "@/components/live/freshness";
@@ -77,6 +80,7 @@ export default function HomePage() {
   const parallelDelta = latestDatasetDelta("parallel-usd-ngn-buy");
   const petrolDelta = latestDatasetDelta("fuel-depot-petrol");
   const dieselDelta = latestDatasetDelta("fuel-depot-diesel");
+  const snapshotTime = Date.now();
 
   return (
     <div className="space-y-8">
@@ -102,6 +106,8 @@ export default function HomePage() {
       </header>
 
       <DailyBriefing />
+
+      <ChangedThisWeek entries={changedThisWeek(LIVE_HISTORY, ARTICLES, snapshotTime)} snapshotAt={new Date(snapshotTime).toISOString()} />
 
       <InstallTip />
 
