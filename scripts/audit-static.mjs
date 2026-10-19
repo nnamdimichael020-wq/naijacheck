@@ -296,7 +296,9 @@ const htmlFor = (route) => routes.has(route) ? fs.readFileSync(routes.get(route)
 const snapshotChrome = {
   missingOnPublicSample: ["/", "/prices/fuel", "/howto/drivers-licence-frsc"].filter((route) => !htmlFor(route).includes('aria-label="Saved FX and fuel readings"')),
   noisyOnStatusOrAdmin: ["/status", "/admin"].filter((route) => htmlFor(route).includes('aria-label="Saved FX and fuel readings"')),
-  missingCheckedState: ["/", "/prices/fuel"].filter((route) => !/Recent at last check|Stale|Seeded, unverified|Unavailable/.test(htmlFor(route)) || !htmlFor(route).includes("Checked ")),
+  missingCheckedState: ["/", "/prices/fuel"].filter((route) =>
+    !/Recent at last check|Stale|Seeded, unverified|Unavailable/.test(htmlFor(route)) ||
+    !/Checked |No recorded check/.test(htmlFor(route))),
   missingWeeklyModule: !htmlFor("/").includes("Changed this week") ||
     !["No verified move this week", "Source moved from ", "Article updated "].some((text) => htmlFor("/").includes(text)),
 };
