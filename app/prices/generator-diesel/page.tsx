@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArticleView } from "@/components/article-view";
 import { FuelHistorySection } from "@/components/live/history-section";
 import { MAX_HISTORY_POINTS_PER_DATASET } from "@/lib/live";
@@ -21,6 +22,13 @@ export default function GeneratorDieselPage() {
           medians are wholesale gantry prices; add your station&apos;s pump price and delivery cost before budgeting.
         </p>
         <FuelHistorySection only={["fuel-depot-diesel"]} />
+        <p className="text-xs text-muted-foreground">
+          Need the full picture?{" "}
+          <Link href="/charts/depot-diesel" className="font-semibold text-primary underline underline-offset-2">
+            Open the depot diesel chart page
+          </Link>{" "}
+          for a larger scrubbable chart and every stored reading with its source and state.
+        </p>
       </section>
     </ArticleView>
   );

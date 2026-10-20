@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SITE_CONFIG } from "@/config/site";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,6 +18,7 @@ import { LocalWatchlist, type WatchReading } from "@/components/live/local-watch
 import { PushSettings } from "@/components/push-notifications";
 import { TelegramAlerts } from "@/components/live/telegram-alerts";
 import { DATASET_REGISTRY, stateLabel } from "@/lib/source-registry";
+import { chartPageForDataset } from "@/lib/chart-pages";
 import { pageMetadata, absUrl } from "@/lib/seo";
 import { formatShareDate } from "@/lib/share";
 import { ShareControls } from "@/components/share-controls";
@@ -96,6 +98,11 @@ export default function StatusPage() {
         <p className="text-sm text-muted-foreground">
           Each monitored dataset retains up to its last {MAX_HISTORY_POINTS_PER_DATASET} verified observations. Deltas compare the latest reading against the immediately preceding real observation.
           Charts below are drawn only from those stored readings: a dataset with fewer than two shows an empty state instead of a fabricated line.
+          Every series also has a dedicated page with a larger scrubbable chart and the full stored-readings table:{" "}
+          <Link href="/charts" className="font-semibold text-primary underline underline-offset-2">
+            open the chart pages
+          </Link>
+          .
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[
@@ -138,6 +145,7 @@ export default function StatusPage() {
             const pts = datasetHistoryPoints(item.dataset);
             const delta = latestDatasetDelta(item.dataset);
             const latest = pts.at(-1);
+            const chartPage = chartPageForDataset(item.dataset);
             return (
               <Card key={item.dataset}>
                 <CardHeader className="pb-2">
@@ -173,6 +181,14 @@ export default function StatusPage() {
                   ) : (
                     <p className="text-[11px] text-muted-foreground">No successful reading recorded for this dataset yet.</p>
                   )}
+                  {chartPage ? (
+                    <Link
+                      href={`/charts/${chartPage.slug}`}
+                      className="inline-flex min-h-11 items-center text-xs font-semibold text-primary underline-offset-2 hover:underline"
+                    >
+                      Full chart: {chartPage.name} →
+                    </Link>
+                  ) : null}
                 </CardContent>
               </Card>
             );
