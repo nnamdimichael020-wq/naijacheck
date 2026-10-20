@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-20T19:15:23.868Z",
+  "checkedAt": "2026-10-20T23:52:24.580Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -12,16 +12,16 @@
       "query": "petrol price Nigeria",
       "items": [
         {
-          "title": "Fuel subsidy in Nigeria: Wia major Nigeria presidential candidates stand on petrol subsidy",
-          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1laUc1UlptdUZIeUhqcmNmbnBfQU04QTllaXZ0QlBEeF85bERYU0pubnQ4ZExadG5kRktfSXpEQmcwRUxQcEkyVmNLRS1kNGhtUWxHaDNxeHlhdDZITGlTZGZyZ9IBY0FVX3lxTE1laUc1UlptdUZIeUhqcmNmbnBfQU04QTllaXZ0QlBEeF85bERYU0pubnQ4ZExadG5kRktfSXpEQmcwRUxQcEkyVmNLRS1kNGhtUWxHaDNxeHlhdDZITGlTZGZyZw?oc=5",
-          "source": "BBC",
-          "published": "2026-10-20T12:47:03.000Z"
-        },
-        {
           "title": "NLC, Falana, activists rally Nigerians against petrol price hike, hardship",
           "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMTJvQjEySWFEd3pOd0Y3S0RQNHV5QWZfYjI3cWpGOTBmSmV6ZU1STEhJLVp2T3c4SGprLXFWYXo1V2RMV2dIOV82UTU4blRHQjBqcWFEa096c1FTRzFRSmgteEJFWmkyY3VQUFhSdnFGZ0RJeU5QUXFQNWVDX1lVMk8yYm1SNzVqbkNWZVRNV3pQLTFXQ1dQV2pDaTNNT3BRUUJzdDlwbDVtVklo0gGyAUFVX3lxTFBsMHROMzdFa1RDa2dNa2xLRF9IOU1fUktZblR3SFBEN0Y3X25PdlhhU29TUldJRVA4MWpsQ0N0akZmZUk0YzFoSGZXczdNcEZ4Nkx3cjU2V3VTaldwVzBmSEV1VFZUdV83MWwtSUgzb3RCa1RfZXZuNGpTWWhRMjF2Ylk0c1NkMzBsYXpKVUUwaXVYSmlsb2kxbndnZmctdDhsaXpJNjdEY3hVX1pEUDZaRkE?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-19T00:51:47.000Z"
+        },
+        {
+          "title": "Fuel subsidy in Nigeria: Wia major Nigeria presidential candidates stand on petrol subsidy",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1laUc1UlptdUZIeUhqcmNmbnBfQU04QTllaXZ0QlBEeF85bERYU0pubnQ4ZExadG5kRktfSXpEQmcwRUxQcEkyVmNLRS1kNGhtUWxHaDNxeHlhdDZITGlTZGZyZ9IBY0FVX3lxTE1laUc1UlptdUZIeUhqcmNmbnBfQU04QTllaXZ0QlBEeF85bERYU0pubnQ4ZExadG5kRktfSXpEQmcwRUxQcEkyVmNLRS1kNGhtUWxHaDNxeHlhdDZITGlTZGZyZw?oc=5",
+          "source": "BBC",
+          "published": "2026-10-20T12:47:03.000Z"
         },
         {
           "title": "Nigeria can contain petrol prices. But someone must finance the difference",
@@ -48,16 +48,16 @@
           "published": "2026-10-09T07:00:00.000Z"
         },
         {
-          "title": "Petrol Price Relief Could Cost 0.4% of GDP – BMI",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5SVzhuWWNvRXVhUUtfaWwyeGxuWnFYUkZvMm5nZHBJZzJZQXBnRFozOXdDUW1fbDhKbWw0Sm1meHlRTWNpOE5oTGxaR3JKUWtBVE9xa1pFNVRQWmIyelBzU295SlhaNmVK?oc=5",
-          "source": "Economic Confidential",
-          "published": "2026-10-20T13:46:13.000Z"
-        },
-        {
           "title": "Fuel price update in Nigeria weeks after Tinubu’s N1,350/litre announcement",
           "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSzd3bHpXNC0zNDFvWUhtcl9tQ29kSVIzaU1DRDR3QVZsQlRLQjlhRXk5XzhRTVBNSUVFX1VvSG83cDFndF9LTFNaazczbmg0cTdBYXFvWThGRXZyQllPWkNoSVJvbVZNTDZUb0hVeUdJQVpnUHFQMEtMajdvMkZTTElDRDdlUU9mcVo5ZEF2S3kzeTVCUUhFRlUwdERCOE05UVoxNXh1RnBqQQ?oc=5",
           "source": "Daily Post Nigeria",
           "published": "2026-10-19T09:13:28.000Z"
+        },
+        {
+          "title": "Petrol Price Relief Could Cost 0.4% of GDP – BMI",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5SVzhuWWNvRXVhUUtfaWwyeGxuWnFYUkZvMm5nZHBJZzJZQXBnRFozOXdDUW1fbDhKbWw0Sm1meHlRTWNpOE5oTGxaR3JKUWtBVE9xa1pFNVRQWmIyelBzU295SlhaNmVK?oc=5",
+          "source": "Economic Confidential",
+          "published": "2026-10-20T13:46:13.000Z"
         }
       ]
     },
@@ -71,6 +71,12 @@
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQNHNMZVRxeWpnT2tPeXl3cThkd2JJemxINGRBZVZXeHhMVmloVVN4ZGpDVXdaX3VIa2lpSzFtRXc5NTl5SzNnNnY3MW9HWE5ZMWJxOGg4eXBCSXlHb0pEV1hKcGxjV1NTYU9EVkN2MkpFQldPTTgyMmNzMnM5SjZiVVdMRDNZWXM3dk91SmtFNS1KQdIBlwFBVV95cUxOZFRxdWg4MEY5MXByMk9LMXJCamdDUm5vaV9ZUE94M0x2UWJNZlRyUjdvSFd2YUNvTmoxVEcxOTVzMnhyX3VTckFqcFpZaTV1anpQbVZJM0paSll0clJfUG5SbTBQaVJaeHZva3kyYXpnbVhyNWoxU3JOOWtZck9hNXVvcFRZNFpGalBndFVhUDU3eUlRRFNV?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-20T06:06:03.000Z"
+        },
+        {
+          "title": "Dollar-to-Naira exchange rate Today, October 20, 2026: Naira appreciates against USD",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMWlxOWNCcm9zY0c0aThsNDZVS0ZFek5oUWxXdC1BMTZWYThiaDJxUmNSaWd5c0dWLVBiNUkxazhkSXFaOVhQRjByMFlxNThtVi12SmxnLUVxeFNadThUM2xjdDlYeWF6aTMxSXluSVZKZFlXSHlLeGdwN1ZmOXQ4cDF1Z2JkUWFmaXFfTWJ4a0RqcFhsNVZjSGNTZ0NxRkVIVWhJTjlySGxxTXFzZVpPTjEzT1Y?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-20T20:50:58.000Z"
         },
         {
           "title": "Naira faces exchange rate gap as dollar sells for ₦1,380 on black market",
@@ -107,12 +113,6 @@
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSzBFUmNxekk1SFhCcktXNDB2WkNmTXYyM00wOVhNM1hBckdZdmpld0V0ZVFSU1hycnJiRGpTdWtQbVBQMW52alJIdzlYZVZxQjdDS3Q5WFdtclhjSTQwYnk0WV90bXFkNTlCTlllc3h2aTJzUDR1c0J2NzcyYWRHZ0x2eElRZHFIOTRvN0Y5a0gyd9IBlwFBVV95cUxOT0xQQ3dPeXk1aGJFeWhvNkhpdS1NQzdjemlRamRBOHlxaXBnN01TTFdxYllQMFNTVWJoSjZ2R2lVdDdGN0dZX2o1NlpmMVY1YTR1MkVuR2JQek8yUFJuS3lfUDhoN0E5TkhCWmJzNmN0Zjh1WWhtT0FuamVrTTBPV3lnT25rcGRwb3pyWmFxVHdRWVc4NVhV?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-19T05:45:34.000Z"
-        },
-        {
-          "title": "Dollar-to-Naira exchange rate today, October 19, 2026: Naira continues depreciation against USD",
-          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPV2hWRFBwc0VHejNzYkM1a1l5TlR1aWpIWmJjaUx6YnhJdnpFM0QwdkJzSDNxYzhwSFE5YkZoM2VuQzZxM21lVzJmMFdrM1E0RFB2d21WOFNIaDFUS1VhWEMtVlB3VWtHZDVWQk9YbTRvNGJ2cHlPVkM5SEw3RGk0blQ5Q1BTQ1lBWmhUcVZlbkFVd3hWbWZZelFPeEZSTEZidU8yTFMxSGxNcUNIUWJUam5hWEFoMDZ0TUotdll5RW9waUk?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-19T19:09:31.000Z"
         }
       ]
     },
@@ -183,16 +183,22 @@
           "published": "2026-07-07T23:41:10.000Z"
         },
         {
+          "title": "Top 10 Telecom Brands in Nigeria 2026: Definitive Ranking",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Edng1UHF4QU4zOHpqY0J3cXMwVmlSOEFlWXpOQUk2M21XbXNqY2U2Mk1JQlBqbHdRS3dlOVRDSTI5ZWNqV3RvWmZQU084S0hMRzZZaGtWNk43WXE5Nk9acmY0RGZobzZHdi0wT3YtV1Y?oc=5",
+          "source": "Global Brands Magazine",
+          "published": "2026-09-08T07:00:00.000Z"
+        },
+        {
           "title": "Nigerians Question Telcos’ Advertising ‘Unlimited’ Data Plan ‘If It Does Not Exist’",
           "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPb2ljOGtUVXdpX3g1LW4yaGxoemhVLUcwUkdvX1ZSNjFoTW9xdnhUd2xGV01tQXVORnpTYVJSUGRYZHVzbU1PUW9fN2dPdERhcTZETWhtaE4zcU1mVFZnaEJHZU5iM3lOaVoycFBobnVaUS1NcmRJQkxLRkgwR3M0TFZTc3NiX0hJYlZZU3M2RmpwQVVrVV9obVl6eHR5VHJqTGNr?oc=5",
           "source": "Techeconomy",
           "published": "2026-06-08T07:00:00.000Z"
         },
         {
-          "title": "Top 10 Telecom Brands in Nigeria 2026: Definitive Ranking",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Edng1UHF4QU4zOHpqY0J3cXMwVmlSOEFlWXpOQUk2M21XbXNqY2U2Mk1JQlBqbHdRS3dlOVRDSTI5ZWNqV3RvWmZQU084S0hMRzZZaGtWNk43WXE5Nk9acmY0RGZobzZHdi0wT3YtV1Y?oc=5",
-          "source": "Global Brands Magazine",
-          "published": "2026-09-08T08:58:12.000Z"
+          "title": "2026 Complete list of voice tariff plans on MTN, Airtel, Globacom and T2mobile",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yS1ZKUDdWRFJzQmEwb24xX3hhaU9Qd3FTZ3RUeVNsRnNkV2VuaDFuUHFOcl85OG5XR0ljZ3haNnc0RkZEVnZ2ZUlMaHhTVnZGRjFPVzNGb3B0U0lFWDN1bzR3V0J3eU5qbHRkRFJCekNyVjlNVmJDSGticVc?oc=5",
+          "source": "Technext24.com",
+          "published": "2026-07-05T22:22:32.000Z"
         },
         {
           "title": "Implications As MTN, Airtel, Glo, Others Face ₦300bn Revenue Hit As FCCPC Hands Airtime Lending Market To Five New Operators",
@@ -207,22 +213,16 @@
           "published": "2025-12-04T08:00:00.000Z"
         },
         {
-          "title": "Goodbye airtime? Lebara launches in Nigeria with a cloud-first model and cheaper data promises",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ibGRVTEo0OUNzSFg2S0E3cE1URFM1VUUxZWtUcjZkR2pRcDRUdVdWaEF5c2piTUVlcldEamFXekxWSHBUaEFhVXItd3dLbVRQU0tWQVp5OXNBX1pENlpnbWdvQkdLbGZ6bmdKbjhB?oc=5",
-          "source": "Condia",
-          "published": "2026-03-03T08:00:00.000Z"
-        },
-        {
-          "title": "2026 Complete list of voice tariff plans on MTN, Airtel, Globacom and T2mobile",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yS1ZKUDdWRFJzQmEwb24xX3hhaU9Qd3FTZ3RUeVNsRnNkV2VuaDFuUHFOcl85OG5XR0ljZ3haNnc0RkZEVnZ2ZUlMaHhTVnZGRjFPVzNGb3B0U0lFWDN1bzR3V0J3eU5qbHRkRFJCekNyVjlNVmJDSGticVc?oc=5",
-          "source": "Technext24.com",
-          "published": "2026-07-05T22:22:32.000Z"
-        },
-        {
           "title": "MTN, Airtel, glo data bundles: NCC approve 50% increase in price of airtime and data bundles",
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5wUkp0TWhBaTFRUEYzeUdkYW1oWi1GTmlYTVNDVVQ5NzBxOEZXNUlpRmJKc3RwS1dLZVBRLUpNdWFVUGp2X3dBR2kxU3k4NU54dG9GTENBc1owcEg20gFiQVVfeXFMTUc1bmZZTnZYa3lscTl6aDdmUEoxdHlqZVo3c0ZCbzZMRDlXZ2lsTFUxVWNBSUFwSlF6RzZId05tOUV0dTcwTl85dGtqdmtRXzV0bFhVRGtYMThZVWdxcFZsUGc?oc=5",
           "source": "BBC",
           "published": "2025-01-20T08:00:00.000Z"
+        },
+        {
+          "title": "Like MTN, Airtel increases data prices",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFA5SldSZU9ZWF93WDlvUTR4ekpnWnFEYVNzUm5UWkVMd0ZyWlp3ZER2ZGo4TlZsWXhNWmxWY0FTUHNyeHhxSkMtZnpCbXBtRWF2MWVmcVlKbXVYa1ZSd1RRaUtObXktWFlOMzRsSVZ3SQ?oc=5",
+          "source": "TheCable",
+          "published": "2025-02-18T08:00:00.000Z"
         }
       ]
     },
@@ -262,16 +262,16 @@
           "published": "2025-09-04T07:00:00.000Z"
         },
         {
-          "title": "International passport price in Nigeria: Nigerians react to FG passport fee increment",
-          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XUzRZNE5JMFVDdXZFQUJfUzdZMUtvZVI5RlhLN3UtYWtVTE9zemdnNnFvbU5HRGpxR1pqQTAwMjBNemlGZElXa2VwSXJKM29JVWd2RmNNbXRRaDhj0gFiQVVfeXFMTlgwYndFbHJyMV9lTUp0b1dNNzRxOFpSZ2NJajE3eFctRUJQWkhWS21CSExoUk9LQXhJcHNNdmdxV0lKc2RYckk2T0ZTdWxIVlI0ZUdEc0dyNlc5VWJ5ZnctVWc?oc=5",
-          "source": "BBC",
-          "published": "2025-08-29T07:00:00.000Z"
-        },
-        {
           "title": "Nigerian govt approves NIN verification fees for passport services",
           "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNVRmX3FKZmlUVmduakRFenBqVXl1UDhNY1k1WkhKTi0xQkNodUJTSEd4MkJFb21RWTFVRzRaV2IybGFNZ19fYnhSWnZHbVdMRFJrcHBpUXl4djZKODdrZ3I4R3VpS2FLUmd2cG42d0VHN0JzYy1XY18zSHZaRWdUSEdLeUdRM1ZWQnFROHAtU2pTVTJBakEzSFE4WkpGczBBQ3RtaXl4N3V0VHVwWlZXZnpGQVdaUUFKZm5GM0g1VHg?oc=5",
           "source": "Premium Times Nigeria",
           "published": "2023-03-13T07:00:00.000Z"
+        },
+        {
+          "title": "International passport price in Nigeria: Nigerians react to FG passport fee increment",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XUzRZNE5JMFVDdXZFQUJfUzdZMUtvZVI5RlhLN3UtYWtVTE9zemdnNnFvbU5HRGpxR1pqQTAwMjBNemlGZElXa2VwSXJKM29JVWd2RmNNbXRRaDhj0gFiQVVfeXFMTlgwYndFbHJyMV9lTUp0b1dNNzRxOFpSZ2NJajE3eFctRUJQWkhWS21CSExoUk9LQXhJcHNNdmdxV0lKc2RYckk2T0ZTdWxIVlI0ZUdEc0dyNlc5VWJ5ZnctVWc?oc=5",
+          "source": "BBC",
+          "published": "2025-08-29T07:00:00.000Z"
         },
         {
           "title": "FG hikes passport fees by 100% - Tribune Online",
