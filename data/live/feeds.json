@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-19T20:35:24.631Z",
+  "checkedAt": "2026-10-20T00:19:23.003Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -24,6 +24,12 @@
           "published": "2026-10-19T14:11:37.000Z"
         },
         {
+          "title": "How Fuel Costs Deepen Nigerians’ Cost-Of-Living Crisis",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQV2lDVzVDV0RQbWpNc2RTenpmTEhZSG5nWFNjT3hXLXZNODRzazNkZDRCb2NsbkRQbFpJUmdHSlJCbWpqVzhqRzB5UDJRTWc5dTlMR2lfd1lTQ1E1LV9RTWxlbXBTblZIZHFMUGNqOVdyMG4xa2NwQ3JMU0VRRlpWVFlUVQ?oc=5",
+          "source": "Independent Newspaper Nigeria",
+          "published": "2026-10-19T23:18:14.000Z"
+        },
+        {
           "title": "Govt’s petrol discount may cost 0.4% of GDP – Report",
           "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1RcG0yX0ZKcnVpcmctT2I4YXZEM0Q1LU1uZjR5Xzl6c2taVGtwVkJ5ZGVKdzIxVUstN09VbE13bmZJREdmV2ZoSUtaQ1RnLWt1QVpZZXhzWFhIbjRDVTFlc2pJVTlld284MlhmOGZXUQ?oc=5",
           "source": "Punch Newspapers",
@@ -42,22 +48,16 @@
           "published": "2026-10-19T17:12:31.000Z"
         },
         {
-          "title": "NLC, Falana, activists rally Nigerians against petrol price hike, hardship",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMTJvQjEySWFEd3pOd0Y3S0RQNHV5QWZfYjI3cWpGOTBmSmV6ZU1STEhJLVp2T3c4SGprLXFWYXo1V2RMV2dIOV82UTU4blRHQjBqcWFEa096c1FTRzFRSmgteEJFWmkyY3VQUFhSdnFGZ0RJeU5QUXFQNWVDX1lVMk8yYm1SNzVqbkNWZVRNV3pQLTFXQ1dQV2pDaTNNT3BRUUJzdDlwbDVtVklo0gGyAUFVX3lxTFBsMHROMzdFa1RDa2dNa2xLRF9IOU1fUktZblR3SFBEN0Y3X25PdlhhU29TUldJRVA4MWpsQ0N0akZmZUk0YzFoSGZXczdNcEZ4Nkx3cjU2V3VTaldwVzBmSEV1VFZUdV83MWwtSUgzb3RCa1RfZXZuNGpTWWhRMjF2Ylk0c1NkMzBsYXpKVUUwaXVYSmlsb2kxbndnZmctdDhsaXpJNjdEY3hVX1pEUDZaRkE?oc=5",
-          "source": "Vanguard News",
-          "published": "2026-10-19T00:51:47.000Z"
-        },
-        {
           "title": "Fuel subsidy becomes Nigerian election battleground",
           "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPRXkzUXhLZlRodDJFd2lYQ2p5VFNHU2cwcGc3eTNoMnZaWlBDakFwelBlbW9CZVVHRk4zTzN1X1lyZU1KUkIzc0hJZ21QdUpaMDJnOE9uVFN0U0Q4SDlsRW5VbkYwdXdSRHdEdnl3MHVGc3NYUGotcTlJajFjV0Z2QkotWGtZRUFmd0tlemVScFNJek40WVhrcENiSExiWFlnZk1tMU5jd09kS1hG?oc=5",
           "source": "Semafor",
           "published": "2026-10-19T11:55:00.000Z"
         },
         {
-          "title": "2027: ADC-PCC Mobilises Youths Against Tinubu, Faults Petrol Price Relief",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaFE4ejdKcjBkcmljaFJIZXFqa21XaXlEWWtWdU1OdXV5REF0ZUhkOFE3NkpjcVA2b3Jndi12LVJoZnFnZWktaWI0VDdDOFlZTGM1d2dycE5DVVdHM1FQUHN4TC1oZmgzd2NmYnZiV0NVd3phSlZ6bUgzdHJNYW00aTVYTDE0czFHOWM5cFliTXlpakF6Xzg4R1F1TTlMZw?oc=5",
-          "source": "Independent Newspaper Nigeria",
-          "published": "2026-10-19T16:31:46.000Z"
+          "title": "NLC, Falana, activists rally Nigerians against petrol price hike, hardship",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMTJvQjEySWFEd3pOd0Y3S0RQNHV5QWZfYjI3cWpGOTBmSmV6ZU1STEhJLVp2T3c4SGprLXFWYXo1V2RMV2dIOV82UTU4blRHQjBqcWFEa096c1FTRzFRSmgteEJFWmkyY3VQUFhSdnFGZ0RJeU5QUXFQNWVDX1lVMk8yYm1SNzVqbkNWZVRNV3pQLTFXQ1dQV2pDaTNNT3BRUUJzdDlwbDVtVklo0gGyAUFVX3lxTFBsMHROMzdFa1RDa2dNa2xLRF9IOU1fUktZblR3SFBEN0Y3X25PdlhhU29TUldJRVA4MWpsQ0N0akZmZUk0YzFoSGZXczdNcEZ4Nkx3cjU2V3VTaldwVzBmSEV1VFZUdV83MWwtSUgzb3RCa1RfZXZuNGpTWWhRMjF2Ylk0c1NkMzBsYXpKVUUwaXVYSmlsb2kxbndnZmctdDhsaXpJNjdEY3hVX1pEUDZaRkE?oc=5",
+          "source": "Vanguard News",
+          "published": "2026-10-19T00:51:47.000Z"
         }
       ]
     },
@@ -109,10 +109,10 @@
           "published": "2026-10-18T14:40:11.000Z"
         },
         {
-          "title": "Dollar to Naira exchange rate today, October 13, 2026",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPOEw4NXZUbmdVUXJtN1QyWmVNckpJYmdla1dpa1dXczV0SlJPMFdjeFpuaW1JYnJDbnFvakJhUnlJcUFGSW1md2YyM0VERUhyZklBTGstUkpiQ295WnBfTWRXNW00bkpBX2IzTFp2MUpNRlY5WmFERXk0T0NGT2VrTERtNTBaaUFsY2hUbHZQQ2NYQdIBlwFBVV95cUxQM05fTGhKV2JienhJRENhUnkzVUNISnd6bjVWZ2NEWmlSaVFLM2pvSDBxOXljY0J1M2thblBPbVlhSFVERVlXOUh0M3dGck5HdDMzT2RxVDcxMDU4dm5QeWVaU1kxT0trOUh6UF9fT2JpdEV4cllNYlN0OE85ZWdDRTdpTDlEV0Z3OFNBZy1yZjRsSEd4S1h3?oc=5",
+          "title": "Dollar to Naira exchange rate today, October 16, 2026",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPb09RN1BMODVJV193ZGliWWRJYTNncDh4RDVXREI0SklTdXZhZ2J0MFFDcjctV0MwN3NqeXppa1NhWWxIZ3VwUkZOVjE5MFloeWd2ZDhJbnpsa0RkVHczbzlHTjNfOEJYREY5OGlBbEFDbTVTejN1Y3Z1d3NLMlRaeVhGN25SMEZPN3BwalVYVk1rUdIBlwFBVV95cUxOTGh4eHM3QzRWeGtSVVBvTHEzUkdlWElvaVZJbVJzLWw0SkVGd3ZoMTZGSWZ5ZkFvaGJnSFh5MkJoLVBlaGZ2dkV0a04yMllWODg0WTh3dEp0V1hQSmhTcVFKaFY0MGVFeThyNEhoY3oyNkVzNUZBOVB0M3RQOVVDN0JWdU1TcnJoM0w0Y2d4ZGVjUkZiLXJz?oc=5",
           "source": "Vanguard News",
-          "published": "2026-10-13T06:16:33.000Z"
+          "published": "2026-10-16T05:38:42.000Z"
         }
       ]
     },
@@ -128,6 +128,12 @@
           "published": "2026-05-11T07:00:00.000Z"
         },
         {
+          "title": "JAMB: 29 less competitive courses in Nigeria in 2026 and their cut-off marks",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUFctVlBISFY4UU9wWVVuMjFsbUc4Yk9sc2hxODh6RXdtSmdmN1JHVnhPUDdWYXNVdHFPSUNqMVRUQWRuMkNQZlNOZFRXZDl5d1lLTWlOQW96SjdSbFllMmxMUF8yYlBzZWVXb3RoQmlqLTgzMW16bVNYdW5qa214NkMtVjBiUFVNdkpncW0yNjJFOFVFbEtKWEJsMkZLdHpzcDZjNWZVODBmQdIBrwFBVV95cUxOMXZKSVotZVlvWGh2dkpLVEZBeFJtdUxaNk02QzlhMnlHZW41LVVibnpGcU5hNHlIY2xIa1FmQll0d0ZjR1lMMzhONnFhZHVoSWxwczB5ZVdXck94MVIyMTJFcmdTLVhSZ3RMVmh5c0pwdWZNalRFb2trT1VpVkhtQ1pLTE5tYk1zelNlalVNeWVlY29HQXR0bGZDRGViQ2xXZFFZM1FkTndzem1PY3hj?oc=5",
+          "source": "The Nation Newspaper",
+          "published": "2026-05-12T07:00:00.000Z"
+        },
+        {
           "title": "Jamb cut off-mark 2026: Jamb release new policy for UTME candidates seeking admission for education and agriculture course",
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE93OFNVbkwtZEwtYmFuV3VFNzc3OWJhUFE0bjM3d1FVQWsxRno0S3AwdmpTM21fX0JaTHU2eUVuQnF6Rzd4SDlEbTRPR0cyWVdydE55SkpYak9XMmkz0gFiQVVfeXFMUE9zb2lzajRyVENaVFM5OGVST0JwdE5tNmg4eXRzS3pMOHNwN1MyQm1fUnJ4X19zSG9td1kxaUVjd1dxYjRvblh1RU9VRmNVRVpyTEh1d2lueGcxdjJueWlOeFE?oc=5",
           "source": "BBC",
@@ -138,12 +144,6 @@
           "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWTY0QUY5Y2c2dXp2WWtBWlRydW9GUVI3ZHpQSkpNdkVPQ1l4ZFZlVDUzay1VQnV0RERoR3I5QW5fZlhKa1pRMElhc2I0S09YcmR6ZF82WXI5NDRfYnFCZkNuR0RnLThnVWVBcnpxblRLTXViTU5lTVdIdVNDWHMyem83ZXB3eDgwM1FoZ1JXejU?oc=5",
           "source": "TheCable",
           "published": "2026-05-15T07:00:00.000Z"
-        },
-        {
-          "title": "JAMB: 29 less competitive courses in Nigeria in 2026 and their cut-off marks",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUFctVlBISFY4UU9wWVVuMjFsbUc4Yk9sc2hxODh6RXdtSmdmN1JHVnhPUDdWYXNVdHFPSUNqMVRUQWRuMkNQZlNOZFRXZDl5d1lLTWlOQW96SjdSbFllMmxMUF8yYlBzZWVXb3RoQmlqLTgzMW16bVNYdW5qa214NkMtVjBiUFVNdkpncW0yNjJFOFVFbEtKWEJsMkZLdHpzcDZjNWZVODBmQdIBrwFBVV95cUxOMXZKSVotZVlvWGh2dkpLVEZBeFJtdUxaNk02QzlhMnlHZW41LVVibnpGcU5hNHlIY2xIa1FmQll0d0ZjR1lMMzhONnFhZHVoSWxwczB5ZVdXck94MVIyMTJFcmdTLVhSZ3RMVmh5c0pwdWZNalRFb2trT1VpVkhtQ1pLTE5tYk1zelNlalVNeWVlY29HQXR0bGZDRGViQ2xXZFFZM1FkTndzem1PY3hj?oc=5",
-          "source": "The Nation Newspaper",
-          "published": "2026-05-12T07:00:00.000Z"
         },
         {
           "title": "UNILAG Releases 2026/2027 UTME Merit Cut-Off Marks",
@@ -262,22 +262,22 @@
           "published": "2025-09-04T07:00:00.000Z"
         },
         {
-          "title": "Nigerian govt approves NIN verification fees for passport services",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNVRmX3FKZmlUVmduakRFenBqVXl1UDhNY1k1WkhKTi0xQkNodUJTSEd4MkJFb21RWTFVRzRaV2IybGFNZ19fYnhSWnZHbVdMRFJrcHBpUXl4djZKODdrZ3I4R3VpS2FLUmd2cG42d0VHN0JzYy1XY18zSHZaRWdUSEdLeUdRM1ZWQnFROHAtU2pTVTJBakEzSFE4WkpGczBBQ3RtaXl4N3V0VHVwWlZXZnpGQVdaUUFKZm5GM0g1VHg?oc=5",
-          "source": "Premium Times Nigeria",
-          "published": "2023-03-13T07:00:00.000Z"
-        },
-        {
           "title": "International passport price in Nigeria: Nigerians react to FG passport fee increment",
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XUzRZNE5JMFVDdXZFQUJfUzdZMUtvZVI5RlhLN3UtYWtVTE9zemdnNnFvbU5HRGpxR1pqQTAwMjBNemlGZElXa2VwSXJKM29JVWd2RmNNbXRRaDhj0gFiQVVfeXFMTlgwYndFbHJyMV9lTUp0b1dNNzRxOFpSZ2NJajE3eFctRUJQWkhWS21CSExoUk9LQXhJcHNNdmdxV0lKc2RYckk2T0ZTdWxIVlI0ZUdEc0dyNlc5VWJ5ZnctVWc?oc=5",
           "source": "BBC",
           "published": "2025-08-29T07:00:00.000Z"
         },
         {
-          "title": "Fact-Check: Claim That Nigerian Passport Now Costs ₦140,000 Is False",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTi1BUEIyRENXNEY5TDlRZHVZOUNKT1BETXFXN3NZaUVDYXpXenp6NlBSZUhSMllOcDcxWjZEbUdlS0VNOVZSVXhDUVpQemtTRzUwMWdQejlyTDk4TkRsUE9iWURsRmFaZVBpZk1JMnVRNlA0cnBIbWRfZHRfWW5lV3pkZERhUDQxbC1paXZwS1JNZS1TLURvUmpQb1dNSEk?oc=5",
-          "source": "Nigerian Democratic Report",
-          "published": "2026-03-30T07:00:00.000Z"
+          "title": "Nigerian govt approves NIN verification fees for passport services",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNVRmX3FKZmlUVmduakRFenBqVXl1UDhNY1k1WkhKTi0xQkNodUJTSEd4MkJFb21RWTFVRzRaV2IybGFNZ19fYnhSWnZHbVdMRFJrcHBpUXl4djZKODdrZ3I4R3VpS2FLUmd2cG42d0VHN0JzYy1XY18zSHZaRWdUSEdLeUdRM1ZWQnFROHAtU2pTVTJBakEzSFE4WkpGczBBQ3RtaXl4N3V0VHVwWlZXZnpGQVdaUUFKZm5GM0g1VHg?oc=5",
+          "source": "Premium Times Nigeria",
+          "published": "2023-03-13T07:00:00.000Z"
+        },
+        {
+          "title": "FG hikes passport fees by 100% - Tribune Online",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE05SVFkZzlZOTFlVERxa2RkUnFKMlBiVEFWS3lUbnd6S2gwTGpEQnhzMXQwOVBwZnludjNrYXFSYnR3NHQ5ZGFlYlE1TGJiTERlS05zXzNvQ3BHWk9tbHFwdVNnYjhnY29IOVhGeDlyQ2t6VGI2aFHSAXtBVV95cUxOWFFXbTdsOXBhcVZBZkd4U1MyUkxuVVllZVJjZ0dDVmdUa0lvOGl4bDg3QUdWTnhsLThJc3RqYl9GWGlPRmRDejYwS3EzVUczUmM1NTNBVHRhcG1wMi1SLVpIUV9uc2FMVm9RcjRraHNRMzM1V3lSMGw3dnc?oc=5",
+          "source": "Tribune Online",
+          "published": "2025-08-29T07:00:00.000Z"
         }
       ]
     },

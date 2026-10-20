@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-19T20:35:24.631Z",
+  "checkedAt": "2026-10-20T00:19:23.003Z",
   "seeded": false,
   "method": "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
   "limitation": "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
@@ -31,12 +31,6 @@
     {
       "slug": "chop-life",
       "term": "Chop life",
-      "mentions7d": 1,
-      "score": 20
-    },
-    {
-      "slug": "sharp-sharp",
-      "term": "Sharp sharp",
       "mentions7d": 1,
       "score": 20
     },
@@ -89,6 +83,12 @@
       "score": 0
     },
     {
+      "slug": "sharp-sharp",
+      "term": "Sharp sharp",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
       "slug": "owanbe",
       "term": "Owanbe",
       "mentions7d": 0,
@@ -128,39 +128,39 @@
   "wiki": [
     {
       "article": "Nigeria",
-      "views7d": 44726,
-      "prev7d": 44551,
-      "changePct": 0.4
+      "views7d": 37847,
+      "prev7d": 44800,
+      "changePct": -15.5
     },
     {
       "article": "Nigerian naira",
-      "views7d": 3439,
-      "prev7d": 3611,
-      "changePct": -4.8
+      "views7d": 2906,
+      "prev7d": 3554,
+      "changePct": -18.2
     },
     {
       "article": "Dangote Refinery",
-      "views7d": 454,
-      "prev7d": 468,
-      "changePct": -3
+      "views7d": 385,
+      "prev7d": 463,
+      "changePct": -16.8
     },
     {
       "article": "Lagos",
-      "views7d": 15028,
-      "prev7d": 15467,
-      "changePct": -2.8
+      "views7d": 12737,
+      "prev7d": 15454,
+      "changePct": -17.6
     },
     {
       "article": "Joint Admissions and Matriculation Board",
-      "views7d": 630,
-      "prev7d": 711,
-      "changePct": -11.4
+      "views7d": 486,
+      "prev7d": 733,
+      "changePct": -33.7
     },
     {
       "article": "Afrobeats",
-      "views7d": 3152,
-      "prev7d": 3346,
-      "changePct": -5.8
+      "views7d": 2796,
+      "prev7d": 3399,
+      "changePct": -17.7
     }
   ],
   "sources": [
