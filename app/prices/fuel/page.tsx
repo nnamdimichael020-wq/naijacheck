@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArticleView } from "@/components/article-view";
 import { FuelTables } from "@/components/prices/price-tables";
 import { FuelHistorySection, LpgHistorySection } from "@/components/live/history-section";
@@ -32,6 +33,21 @@ export default function FuelPage() {
           <FuelHistorySection />
           <LpgHistorySection />
         </div>
+        <p className="text-xs text-muted-foreground">
+          Prefer a bigger, scrubbable chart with the full stored-readings table?{" "}
+          <Link href="/charts/depot-petrol" className="font-semibold text-primary underline underline-offset-2">
+            Depot petrol chart
+          </Link>
+          {", "}
+          <Link href="/charts/depot-diesel" className="font-semibold text-primary underline underline-offset-2">
+            depot diesel chart
+          </Link>
+          {", "}
+          <Link href="/charts/depot-lpg" className="font-semibold text-primary underline underline-offset-2">
+            LPG chart
+          </Link>
+          .
+        </p>
       </section>
     </ArticleView>
   );

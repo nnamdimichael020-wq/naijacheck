@@ -167,7 +167,7 @@ test("A flat dataset says so instead of implying movement", () => {
   assert.deepEqual([...new Set(ys)], [70], "a flat series is drawn on the centre line");
 });
 
-test("7d/30d filters appear only when enough real points exist inside them", () => {
+test("7D/30D/ALL always appear; a range without two real readings is disabled with honest copy", () => {
   const recent = render([
     { spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 2, 1370), point("parallel-usd-ngn-buy", 1, 1372)] },
   ]);
@@ -178,17 +178,125 @@ test("7d/30d filters appear only when enough real points exist inside them", () 
   assert.ok(recent.includes("all stored readings: 2 of 2 stored real readings plotted"));
   // The button exposes how many stored readings each window would actually plot
   assert.ok(recent.includes("last 7 days: 2 of 2 stored readings plotted"));
+  const recentSeven = recent.match(/<button[^>]*>7d<\/button>/)?.[0] ?? "";
+  assert.ok(recentSeven.length > 0, "the 7D control must be rendered");
+  assert.equal(recentSeven.includes("disabled"), false, "a range holding two real readings stays usable");
+  assert.equal(strip(recent).includes("Ranges without enough stored readings stay off"), false);
 
   const old = render([
     { spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 40, 1360), point("parallel-usd-ngn-buy", 39, 1361)] },
   ]);
   const text = strip(old);
-  assert.equal(old.includes(">7d</button>"), false, "7d holds no readings, so it must not be offered");
-  assert.equal(old.includes(">30d</button>"), false, "30d holds no readings, so it must not be offered");
-  assert.equal(old.includes("<button"), false, "when only one window can plot real points there is nothing to toggle");
+  // The controls stay in the DOM so a visitor can see the ranges exist, but they cannot be used.
+  assert.ok(old.includes(">7d</button>"));
+  assert.ok(old.includes(">30d</button>"));
+  assert.ok(old.includes(">All</button>"));
+  for (const label of ["7d", "30d"]) {
+    const button = old.match(new RegExp(`<button[^>]*>${label}</button>`))?.[0] ?? "";
+    assert.ok(button.length > 0, `${label} control must be rendered`);
+    assert.ok(button.includes('disabled=""'), `${label} holds no readings, so it must be disabled`);
+    assert.ok(button.includes("needs 2 real readings"), `${label} must explain why it is disabled`);
+  }
+  assert.ok(text.includes("Ranges without enough stored readings stay off"), text.slice(0, 500));
+  assert.ok(text.includes("7D needs 2 real readings in the last 7 days; none are stored"), text.slice(0, 500));
+  assert.ok(text.includes("30D needs 2 real readings in the last 30 days; none are stored"), text.slice(0, 500));
   assert.ok(text.includes("2 / 2 stored readings plotted"), text.slice(0, 300));
   assert.ok(text.includes("all stored readings"), "the chart must fall back to every stored real point");
   assert.ok(text.includes("2 of 56 stored"), "the readings table still states the stored/cap count");
+  const coords = (old.match(/<polyline[^>]*points="([^"]+)"/)![1].trim().split(/\s+/));
+  assert.equal(coords.length, 2, "two disabled ranges must not add a point");
+});
+
+test("A series with no readings in the chosen range says so instead of pretending it has no history", () => {
+  const html = render(
+    [
+      { spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 2, 1370), point("parallel-usd-ngn-buy", 1, 1372)] },
+      {
+        spec: CBN_SPEC,
+        points: [point("cbn-usd-ngn", 40, 1300), point("cbn-usd-ngn", 39, 1301), point("cbn-usd-ngn", 38, 1302)],
+      },
+    ],
+    { initialWindow: "7d" },
+  );
+  const text = strip(html);
+  assert.ok(html.includes('aria-pressed="true"') && html.includes(">7d</button>"), "the requested range is selected");
+  assert.ok(text.includes("2 of 2 stored readings in the last 7 days"), text.slice(0, 500));
+  assert.ok(
+    text.includes("only 0 of 3 stored readings fall inside the last 7 days"),
+    "the excluded series must state how many real readings it does have",
+  );
+  assert.ok(text.includes("Choose ALL to plot its older readings"));
+  assert.equal((html.match(/<polyline/g) ?? []).length, 1, "only the series with two in-range readings is drawn");
+  assert.ok(text.includes("2 of 56 stored"), "the readings table still states the real stored/cap count");
+});
+
+test("The interactive plot is a focusable group with instructions and a polite detail row", () => {
+  const html = render([
+    { spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1372)] },
+  ]);
+  assert.ok(html.includes('tabindex="0"'), "the plot must be reachable with the keyboard");
+  assert.ok(html.includes('role="group"'));
+  assert.ok(html.includes('aria-describedby="chart-test-instructions"'));
+  assert.ok(html.includes('id="chart-test-instructions"'));
+  assert.ok(html.includes('id="chart-test-detail"'));
+  assert.ok(html.includes('aria-live="polite"'));
+  assert.ok(html.includes('aria-atomic="true"'));
+  assert.ok(strip(html).includes("Hover or drag across the plot"));
+  assert.ok(strip(html).includes("Only real readings are shown"));
+});
+
+test("The detail row under the chart shows the latest reading's WAT time, value and change vs the previous stored point", () => {
+  const html = render([
+    { spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1375)] },
+  ]);
+  const detail = html.match(/<div id="chart-test-detail"[\s\S]*?<\/div>/)?.[0] ?? "";
+  assert.ok(detail.length > 0, "the detail row must be server-rendered, not hover-only");
+  const text = strip(detail);
+  assert.ok(text.includes("Latest stored reading"));
+  assert.ok(text.includes("₦1,375"));
+  assert.ok(text.includes("11 Oct 2026, 1:00 pm WAT"));
+  assert.ok(text.includes("▲ +₦5"), text);
+  assert.ok(text.includes("vs previous plotted reading"));
+  assert.ok(text.includes("10 Oct 2026, 1:00 pm WAT"));
+});
+
+test("A flat reading in the detail row says unchanged instead of inventing a movement", () => {
+  const html = render([
+    { spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1370)] },
+  ]);
+  const detail = html.match(/<div id="chart-test-detail"[\s\S]*?<\/div>/)?.[0] ?? "";
+  assert.ok(strip(detail).includes("unchanged from ₦1,370"));
+  assert.equal(strip(detail).includes("▲"), false);
+});
+
+test("The large chart variant used by /charts pages keeps the same stored-only rules", () => {
+  const html = render(
+    [{ spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1372)] }],
+    { size: "large" },
+  );
+  assert.ok(html.includes('viewBox="0 0 480 240"'));
+  assert.ok(html.includes("<polyline"));
+  assert.ok(strip(html).includes("2 / 2 stored readings plotted"));
+  assert.ok(html.includes('aria-live="polite"'));
+});
+
+test("Full-chart links point at the dedicated chart pages", () => {
+  const html = render(
+    [{ spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1372)] }],
+    { chartPageLinks: [{ label: "Parallel USD buy", href: "/charts/parallel-usd-buy" }] },
+  );
+  assert.ok(html.includes('href="/charts/parallel-usd-buy"'));
+  assert.ok(strip(html).includes("Full chart: Parallel USD buy"));
+});
+
+test("No chart markup animates, and the only transition is reduced-motion safe", () => {
+  const html = render([
+    { spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1372)] },
+  ]);
+  assert.equal(/\banimate-/.test(html), false, "the chart must not animate");
+  if (html.includes("transition-colors")) {
+    assert.ok(html.includes("motion-reduce:transition-none"), "transitions must be disabled under prefers-reduced-motion");
+  }
 });
 
 test("The toggle is a real button group with pressed state and a focus-visible style", () => {

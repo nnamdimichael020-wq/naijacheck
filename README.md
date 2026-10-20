@@ -21,8 +21,9 @@ Node 20.9 or later is required. `.nvmrc` pins Node 20 to match the configured Cl
 | --- | --- |
 | `npm run monitor` | Fetches every live source and writes `data/live/*.json` (see Live data). |
 | `npm run monitor:test` | Parser tests against captured source responses, plus the bounded-history and chart-series rules. |
-| `npm run chart:test` | Renders the history charts with `react-dom/server` and asserts the honest empty state, real-point-only polylines and non-colour series cues. |
-| `npm test` | Runs every guard: `site:test`, `share:test`, `govhowto:test`, `images:test`, `hero:test`, `headline:test`, `monitor:test`, `chart:test`, `push:test`, `telegram:test` and `nbs:test`. |
+| `npm run chart:test` | Renders the history charts with `react-dom/server` and asserts the honest empty state, real-point-only polylines, non-colour series cues, the focusable plot, the detail row and the disabled-range copy. |
+| `npm run chartui:test` | Unit-tests the chart interaction helpers (window availability, nearest-reading snap, deltas, keyboard steps, pointer mapping) and the `/charts` page registry (unique slugs, honest copy, no "live" claim). |
+| `npm test` | Runs every guard: `site:test`, `share:test`, `quiz:test`, `govhowto:test`, `images:test`, `hero:test`, `headline:test`, `monitor:test`, `chart:test`, `chartui:test`, `push:test`, `telegram:test` and `nbs:test`. |
 | `npm run share:test` | Proves the WhatsApp and X prefills carry only a public title, one dated factual line and the canonical URL; no unverified @handle, tracking parameter or private origin can leak, and every generated page gets a dated line. |
 | `npm run telegram:test` | Proves Telegram and Web Push share one genuine-change gate: no send on baseline, flat, below-threshold or failed-monitor runs, one send per genuine change, six-hour coalescing, silent no-op when unconfigured. |
 | `npm run generate` | Runs `scripts/generate-content.ts`. Builds 205 long-form article pages into `content/generated/articles.json` and `public/search-index.json`. |
@@ -121,15 +122,46 @@ last confirmed value and is marked on `/status`. Nothing is guessed.
 - `components/live/history-chart.tsx` (client) draws multi-series SVG charts: shared value axis for same-unit datasets, dash pattern + marker shape +
   text legend so series are not distinguished by colour alone, `role="img"` with a `<title>`/`<desc>` accessible name, and a `<details>` table listing
   every plotted reading with its source time (WAT) and the UTC time the monitor recorded it.
-- `components/live/history-section.tsx` (server) wires the datasets to those charts and fixes `nowMs` at render time so the exported HTML and the
-  hydrated client agree on which window each reading falls into.
-- `components/live/sparkline.tsx` (server) renders the compact card sparkline used by the daily briefing and the `/status` summary cards with no client JavaScript.
-- Charts appear on `/status` (USD group, depot petrol/diesel group, LPG), `/prices/fuel`, `/prices/generator-diesel` (diesel only) and as sparklines on `/`.
+- Interaction is selection-only. Hovering (desktop), dragging a finger across the plot (mobile), or focusing the plot and pressing ← → / Home / End
+  selects one *stored* reading; the detail row under the chart repeats that reading's own WAT time, value and change against the previous plotted
+  reading. Nothing is estimated between points. The detail row is an `aria-live="polite"` region, so the same information reaches a screen reader.
+- `7D` / `30D` / `ALL` always render. A range holding fewer than two stored readings is disabled, and the card states the exact reason
+  (for example “7D needs 2 real readings in the last 7 days; none are stored”). The filters only ever select points already in `data/history.json`.
+- There is no animation in the chart; the only transition (the range buttons' colour) is switched off under `prefers-reduced-motion: reduce`.
+- `components/live/history-section.tsx` (server) wires the datasets to those charts, fixes `nowMs` at render time so the exported HTML and the
+  hydrated client agree on which window each reading falls into, and adds “Full chart” links to the dedicated pages.
+- `components/live/chart-points-table.tsx` (server) renders the scrollable `time / value / change / source / state` table used on `/charts/*`.
+- `components/live/sparkline.tsx` (server) renders the compact card sparkline used by the daily briefing, the `/status` summary cards and the `/charts` index with no client JavaScript.
+- Charts appear on `/status` (USD group, depot petrol/diesel group, LPG), `/prices/fuel`, `/prices/generator-diesel` (diesel only), as sparklines on `/`,
+  and on the dedicated pages below.
 - Fewer than two stored readings for a dataset means no line: the dataset is listed with its `stored / 56` count and the words "not enough readings yet".
   If no dataset in a group has two readings, the whole card shows that empty state.
-- The 7d and 30d filters are offered only when at least one dataset holds two real readings inside them; otherwise every stored reading is plotted.
 - Change badges and the daily briefing read the same store through `latestDatasetDelta()`, so a chart and a badge can never disagree.
 - No chart library or CDN is used; the whole chart surface costs a few kilobytes of page JavaScript.
+
+#### Dedicated chart pages
+
+Retention, page ownership and the verification checklist are recorded in [`docs/runbooks/chart-pages.md`](docs/runbooks/chart-pages.md).
+
+| Page | Dataset | Unit |
+| --- | --- | --- |
+| `/charts` | index of every chart page + stored counts | — |
+| `/charts/parallel-usd-buy` | `parallel-usd-ngn-buy` (Aboki indicative buy) | ₦ per US$ |
+| `/charts/cbn-usd` | `cbn-usd-ngn` (CBN NFEM closing rate) | ₦ per US$ |
+| `/charts/depot-petrol` | `fuel-depot-petrol` (wholesale PMS median) | ₦ per litre |
+| `/charts/depot-diesel` | `fuel-depot-diesel` (wholesale AGO median) | ₦ per litre |
+| `/charts/depot-lpg` | `fuel-depot-lpg` (wholesale LPG median) | ₦ per kg |
+
+Each page has one large scrubbable chart, the same `7D / 30D / ALL` controls, the scrollable readings table, the registry's verification label
+(`live`, `recent`, `stale`, `seeded`, `manual` or `unavailable`) and links back to `/status` and the related charts. The registry is the only source
+of that label, so a seeded dataset can never be presented as live. The pages are listed in `app/sitemap.ts` with the newest stored observation as
+`lastModified`, and `/status` plus the fuel pages link to them (“Full chart”).
+
+**Retention and cost are unchanged by this work.** `MAX_HISTORY_POINTS_PER_DATASET` is still **56** points per dataset (the oldest reading is dropped
+when a 57th arrives). `data/history.json` is the only store; it is committed by the monitor workflow and shipped inside the static export. No KV
+namespace, D1 database or paid chart service was added, so this adds **zero** KV reads/writes. For reference, the zero-cost audit
+(`docs/zero-cost-operations-2026-10-09.md`) records Cloudflare Workers KV Free limits of 100,000 reads/day and 1,000 writes/day, and states that KV/D1
+are not bound or used by this build.
 
 The workflow `.github/workflows/live-monitor.yml` runs on a 3-hour schedule. It commits changed data, and Cloudflare Workers Builds rebuilds and deploys from that commit.
 Scheduled runs only start from the default branch, so merge to `main` before relying on the schedule.
@@ -173,7 +205,7 @@ and not cached.
 
 ## Release checks
 
-Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run chart:test`, `npm run site:test`, `npm run push:test`, `npm run telegram:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/prices/fuel`, `/api/geo`, `/api/push/config`, an unauthenticated `/api/telegram/test`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
+Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run chart:test`, `npm run chartui:test`, `npm run site:test`, `npm run push:test`, `npm run telegram:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/charts`, `/charts/parallel-usd-buy`, `/charts/depot-petrol`, `/prices/fuel`, `/api/geo`, `/api/push/config`, an unauthenticated `/api/telegram/test`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
 
 ## Licence
 

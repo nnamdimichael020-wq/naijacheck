@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { ARTICLES } from "@/lib/articles";
-import { LIVE_FUEL, LIVE_FX } from "@/lib/live";
+import { LIVE_FUEL, LIVE_FX, datasetHistoryPoints } from "@/lib/live";
+import { CHART_PAGES } from "@/lib/chart-pages";
 import { absUrl } from "@/lib/seo";
 
 /** Static export: this file is evaluated at build time and written to /sitemap.xml. */
@@ -19,6 +20,15 @@ function liveLastmod(): string {
   return (stamps.sort().pop() ?? FIXED_LASTMOD).slice(0, 10);
 }
 
+/**
+ * Latest *stored* observation for a chart dataset, or the live-check date when a series has no
+ * rows yet. Never `new Date()`: a build must not claim a chart changed when no reading arrived.
+ */
+function chartLastmod(dataset: string, fallback: string): string {
+  const last = datasetHistoryPoints(dataset).at(-1);
+  return last ? last.observedAt.slice(0, 10) : fallback;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const liveDate = liveLastmod();
   const fixed: MetadataRoute.Sitemap = [
@@ -27,6 +37,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absUrl("/status"), lastModified: liveDate, changeFrequency: "daily", priority: 0.4 },
     { url: absUrl("/privacy"), lastModified: FIXED_LASTMOD, changeFrequency: "yearly", priority: 0.3 },
     { url: absUrl("/tools/quiz"), lastModified: FIXED_LASTMOD, changeFrequency: "weekly", priority: 0.7 },
+  ];
+
+  // Dedicated chart pages. Their lastModified is the newest stored observation for the series, so
+  // the sitemap agrees with the page instead of using the build clock.
+  const charts: MetadataRoute.Sitemap = [
+    { url: absUrl("/charts"), lastModified: liveDate, changeFrequency: "daily" as const, priority: 0.6 },
+    ...CHART_PAGES.map((page) => ({
+      url: absUrl(`/charts/${page.slug}`),
+      lastModified: chartLastmod(page.dataset, liveDate),
+      changeFrequency: "daily" as const,
+      priority: 0.6,
+    })),
   ];
 
   // Every generated article is a public, indexable page — except:
@@ -46,5 +68,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...fixed, ...generated];
+  return [...fixed, ...charts, ...generated];
 }
