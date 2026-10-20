@@ -21,8 +21,8 @@ Node 20.9 or later is required. `.nvmrc` pins Node 20 to match the configured Cl
 | --- | --- |
 | `npm run monitor` | Fetches every live source and writes `data/live/*.json` (see Live data). |
 | `npm run monitor:test` | Parser tests against captured source responses, plus the bounded-history and chart-series rules. |
-| `npm run chart:test` | Renders the history charts with `react-dom/server` and asserts the honest empty state, real-point-only polylines, non-colour series cues, the focusable plot, the detail row and the disabled-range copy. |
-| `npm run chartui:test` | Unit-tests the chart interaction helpers (window availability, nearest-reading snap, deltas, keyboard steps, pointer mapping) and the `/charts` page registry (unique slugs, honest copy, no "live" claim). |
+| `npm run chart:test` | Renders the history charts with `react-dom/server` and asserts the honest empty state, real-point-only polylines, non-colour series cues, the focusable plot, the crosshair/HUD/axis pills on the stored vertex, the detail row and the disabled-range copy. |
+| `npm run chartui:test` | Unit-tests the chart interaction helpers (window availability, nearest-reading snap, crosshair selection, HUD copy, callout anchoring/stacking, the scrub pointer policy, deltas, keyboard steps, pointer mapping) and the `/charts` page registry (unique slugs, honest copy, no "live" claim). |
 | `npm test` | Runs every guard: `site:test`, `share:test`, `quiz:test`, `govhowto:test`, `images:test`, `hero:test`, `headline:test`, `monitor:test`, `chart:test`, `chartui:test`, `push:test`, `telegram:test` and `nbs:test`. |
 | `npm run share:test` | Proves the WhatsApp and X prefills carry only a public title, one dated factual line and the canonical URL; no unverified @handle, tracking parameter or private origin can leak, and every generated page gets a dated line. |
 | `npm run telegram:test` | Proves Telegram and Web Push share one genuine-change gate: no send on baseline, flat, below-threshold or failed-monitor runs, one send per genuine change, six-hour coalescing, silent no-op when unconfigured. |
@@ -122,16 +122,21 @@ last confirmed value and is marked on `/status`. Nothing is guessed.
 - `components/live/history-chart.tsx` (client) draws multi-series SVG charts: shared value axis for same-unit datasets, dash pattern + marker shape +
   text legend so series are not distinguished by colour alone, `role="img"` with a `<title>`/`<desc>` accessible name, and a `<details>` table listing
   every plotted reading with its source time (WAT) and the UTC time the monitor recorded it.
-- Interaction is selection-only. Hovering (desktop), dragging a finger across the plot (mobile), or focusing the plot and pressing ← → / Home / End
-  selects one *stored* reading; the detail row under the chart repeats that reading's own WAT time, value and change against the previous plotted
-  reading. Nothing is estimated between points. The detail row is an `aria-live="polite"` region, so the same information reaches a screen reader.
+- Interaction is selection-only, with a TradingView-style read-out. Hovering (desktop), dragging a finger across the plot (mobile), or focusing the
+  plot and pressing ← → / Home / End snaps a crosshair to one *stored* reading (`crosshairSelection()` in `lib/chart-interaction.ts`): a vertical
+  line on its x, a horizontal line on its y, an emphasized vertex, a floating HUD above the plot (large price + unit, full WAT time, short delta vs
+  the previous plotted reading), a price pill on the value axis and a time pill under the plot. Nothing is estimated between points. When nobody is
+  scrubbing (mouse left, finger lifted, page scrolled, Escape) it rests on the latest reading, labelled "Latest reading". The detail row under the
+  chart repeats the same facts in an `aria-live="polite"` region for screen readers. Details: `docs/runbooks/chart-pages.md`.
 - `7D` / `30D` / `ALL` always render. A range holding fewer than two stored readings is disabled, and the card states the exact reason
   (for example “7D needs 2 real readings in the last 7 days; none are stored”). The filters only ever select points already in `data/history.json`.
 - There is no animation in the chart; the only transition (the range buttons' colour) is switched off under `prefers-reduced-motion: reduce`.
 - `components/live/history-section.tsx` (server) wires the datasets to those charts, fixes `nowMs` at render time so the exported HTML and the
   hydrated client agree on which window each reading falls into, and adds “Full chart” links to the dedicated pages.
 - `components/live/chart-points-table.tsx` (server) renders the scrollable `time / value / change / source / state` table used on `/charts/*`.
-- `components/live/sparkline.tsx` (server) renders the compact card sparkline used by the daily briefing, the `/status` summary cards and the `/charts` index with no client JavaScript.
+- `components/live/sparkline.tsx` (server) projects the stored points for the compact card sparkline used by the daily briefing, the `/status`
+  summary cards and the `/charts` index, and hands only each reading's value, time and position to `components/live/sparkline-scrub.tsx` (client),
+  which adds the same crosshair + price-tag read-out, scaled down.
 - Charts appear on `/status` (USD group, depot petrol/diesel group, LPG), `/prices/fuel`, `/prices/generator-diesel` (diesel only), as sparklines on `/`,
   and on the dedicated pages below.
 - Fewer than two stored readings for a dataset means no line: the dataset is listed with its `stored / 56` count and the words "not enough readings yet".

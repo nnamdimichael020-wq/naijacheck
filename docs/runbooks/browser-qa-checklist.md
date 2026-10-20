@@ -24,6 +24,8 @@ Charts are drawn only from observations stored in `data/history.json` (max 56 pe
 - Keyboard and screen reader: tab to the window toggle (visible focus, `aria-pressed` announced), confirm the chart SVG is announced as one image with a description naming each series, its count, range and direction, and that the legend and readings table are reachable as real text.
 - On `/`, confirm the daily briefing sparklines match the `/status` charts for the same dataset, and that a dataset with one reading shows the compact "Chart: not enough readings yet — 1/56 stored" note.
 - Confirm change badges and charts agree: the badge's previous value must be the second-to-last point in the chart's readings table.
+- Crosshair read-out (see `chart-pages.md` → "Phone check"): on `/` (briefing sparkline) and `/charts/parallel-usd-buy`, drag a finger across the plot. The HUD must flip to `Selected reading` on first contact; the vertical and horizontal dashed lines must jump between real points only; the ringed marker, HUD price, value-axis price pill and time pill must all show the same stored reading (cross-check the readings table). Lifting the finger must return to `Latest reading`; a vertical drag on the plot must scroll the page. Check both plot edges for clipped pills/HUD.
+- With a mouse: hovering selects, leaving the plot returns to `Latest reading`; keyboard arrows/Home/End step between readings and Escape returns to latest.
 - Offline: load `/status` online, cache it, go offline and reload. The charts are static SVG in the cached HTML, so they must still render with the offline/stale warning.
 - Verify no chart dependency was added: `package.json` must contain no chart library, and the browser network tab must request no third-party chart CDN on these routes.
 

@@ -7,9 +7,14 @@
  *  - A dataset with fewer than two real points gets an honest empty state, never a fabricated line.
  *  - Nothing is interpolated, smoothed or backfilled: the polyline joins stored readings only, and
  *    the x-axis is the reading's own source time so genuine gaps stay visible.
- *  - Interaction (hover, touch scrub, arrow keys) only *selects* a stored reading. The detail row
- *    under the plot repeats that reading's own WAT time, value and its change against the previous
- *    plotted reading — it never estimates a value between points.
+ *  - Interaction (hover, touch scrub, arrow keys) only *selects* a stored reading. A TradingView-style
+ *    crosshair (vertical line on the selected reading's own x, horizontal line on its own y, an
+ *    emphasized vertex marker), a floating HUD with the large price + full WAT time, a right-edge
+ *    price pill and a bottom time pill all repeat that one stored reading. The detail row under the
+ *    plot repeats the same facts — nothing anywhere estimates a value between points.
+ *  - Pointer-leave policy (documented choice): a mouse leaving the plot falls back to the latest
+ *    stored reading, labelled "Latest reading" in the HUD; a touch selection stays visible after the
+ *    finger lifts so the number can still be read. Escape also returns to the latest reading.
  *  - 7D / 30D / ALL always appear. A range that holds fewer than two stored readings is disabled
  *    and says so in visible text instead of quietly showing an empty or fake line.
  *  - Series are told apart by dash pattern, marker shape and a text legend, not by colour alone.
@@ -19,6 +24,8 @@
 
 import * as React from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { ChartHud } from "@/components/live/chart-hud";
+import { useCrosshairScrub } from "@/components/live/use-crosshair-scrub";
 import {
   CHART_MIN_POINTS,
   HISTORY_WINDOWS,
@@ -36,26 +43,25 @@ import {
   type HistoryWindow,
 } from "@/lib/history";
 import {
-  CHART_FOCUS_KEYS,
   chartFocusAt,
   chartWindowStatuses,
-  cursorFromPointer,
-  nearestProjectedIndex,
-  stepFocusIndex,
+  crosshairLabelFraction,
+  crosshairSelection,
+  focusHudCopy,
+  hudModeFor,
+  hudUnitLabel,
+  plotBandFraction,
+  stackAxisCallouts,
   type ChartFocus,
-  type ChartFocusKey,
+  type ChartHudMode,
 } from "@/lib/chart-interaction";
-import {
-  TONE_CLASS,
-  axisDigits,
-  formatChartValue,
-  type ChartSeries,
-  type ChartSeriesSpec,
-  type SeriesMarker,
-} from "@/lib/chart-series";
+// Runtime helpers come from the browser-safe modules; lib/chart-series is only used for types here,
+// so this client component never pulls the live JSON snapshots into the browser bundle.
+import { TONE_CLASS, axisDigits, formatChartValue } from "@/lib/chart-format";
+import type { ChartSeries, ChartSeriesSpec, SeriesMarker } from "@/lib/chart-series";
 import { cn, formatWatDay, formatWatDayTime, formatWatFull } from "@/lib/utils";
 
-export { formatChartValue } from "@/lib/chart-series";
+export { formatChartValue } from "@/lib/chart-format";
 export type { ChartSeries, ChartSeriesSpec, SeriesMarker, SeriesTone } from "@/lib/chart-series";
 
 type ViewBox = {
@@ -78,7 +84,7 @@ const WINDOW_LABEL: Record<HistoryWindow, string> = {
 };
 
 function SeriesMarkerGlyph({ shape, x, y, scale = 1 }: { shape: SeriesMarker; x: number; y: number; scale?: number }) {
-  const s = (n: number) => n * scale;
+  const s = (n: number) => Math.round(n * scale * 100) / 100;
   switch (shape) {
     case "square":
       return <rect x={x - s(2.4)} y={y - s(2.4)} width={s(4.8)} height={s(4.8)} fill="currentColor" />;
@@ -189,6 +195,134 @@ function focusDeltaCopy(focus: ChartFocus, formatValue: (value: number) => strin
   };
 }
 
+/**
+ * Text legend (latest value, stored count, window direction, source link). Memoized: its props do not
+ * change while the crosshair moves, so scrubbing never re-renders it.
+ */
+const SeriesLegend = React.memo(function SeriesLegend({
+  id,
+  plotted,
+  maxPoints,
+}: {
+  id: string;
+  plotted: PreparedSeries[];
+  maxPoints: number;
+}) {
+  return (
+    <ul id={`${id}-legend`} className="space-y-1.5 border-t pt-2.5 text-xs">
+      {plotted.map((entry) => {
+        const stats = entry.stats!;
+        const value = (n: number) => formatChartValue(n, entry.spec.fractionDigits, entry.spec.unitSuffix);
+        return (
+          <li key={entry.spec.dataset} className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <svg width="30" height="12" viewBox="0 0 30 12" aria-hidden="true" focusable="false" className={cn("shrink-0", TONE_CLASS[entry.spec.tone])}>
+              <line x1="1" y1="6" x2="29" y2="6" stroke="currentColor" strokeWidth={2} strokeDasharray={entry.spec.dash} />
+              <g transform="translate(15 6)">
+                <SeriesMarkerGlyph shape={entry.spec.marker} x={0} y={0} />
+              </g>
+            </svg>
+            <span className="font-semibold text-foreground">{entry.spec.shortLabel ?? entry.spec.label}</span>
+            <span className="tabular-nums text-muted-foreground">
+              latest {value(stats.last.value)} · {stats.count}/{maxPoints} points
+            </span>
+            <span
+              className={cn(
+                "inline-flex items-center gap-1 rounded-md border px-1.5 py-0.5 text-[10px] font-semibold tabular-nums",
+                stats.direction === "up"
+                  ? "border-amber-500/40 bg-amber-500/10 text-amber-900 dark:text-amber-200"
+                  : stats.direction === "down"
+                    ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-900 dark:text-emerald-200"
+                    : "border-border bg-secondary/70 text-foreground/85",
+              )}
+              title={`First plotted reading ${value(stats.first.value)} on ${formatWatFull(stats.startedAtMs)}`}
+            >
+              <span aria-hidden="true">{stats.direction === "up" ? "▲" : stats.direction === "down" ? "▼" : "■"}</span>
+              <span>
+                {stats.direction === "flat"
+                  ? "no change in window"
+                  : `${stats.direction} ${value(Math.abs(stats.change))}${
+                      stats.pctChange === null ? "" : ` (${stats.pctChange > 0 ? "+" : ""}${stats.pctChange}%)`
+                    }`}
+              </span>
+            </span>
+            {entry.spec.sourceUrl ? (
+              <a
+                href={entry.spec.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="text-[10px] text-muted-foreground underline decoration-border underline-offset-2 hover:text-primary"
+              >
+                {entry.spec.sourceName ?? "source"}
+              </a>
+            ) : null}
+          </li>
+        );
+      })}
+    </ul>
+  );
+});
+
+/**
+ * Every plotted stored reading as a real table. Memoized for the same reason as the legend: up to
+ * ~110 rows would otherwise be re-rendered on every scrub step on a low-end phone.
+ */
+const ReadingsTables = React.memo(function ReadingsTables({
+  plotted,
+  maxPoints,
+  windowReadings,
+  scopePhrase,
+}: {
+  plotted: PreparedSeries[];
+  maxPoints: number;
+  windowReadings: number;
+  scopePhrase: string;
+}) {
+  return (
+    <details className="rounded-lg border bg-background/40 p-2 text-[11px]">
+      <summary className="flex min-h-11 cursor-pointer items-center font-semibold text-foreground/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-h-0">
+        Show the {windowReadings} real readings plotted ({scopePhrase})
+      </summary>
+      <div className="mt-2 space-y-3">
+        {plotted.map((entry) => (
+          <table key={entry.spec.dataset} className="w-full border-collapse text-left">
+            <caption className="pb-1 text-left font-semibold text-foreground/85">
+              {entry.spec.label} · {entry.points.length} of {maxPoints} stored
+            </caption>
+            <thead>
+              <tr className="text-muted-foreground">
+                <th scope="col" className="border-b py-1 pr-2 font-medium">
+                  Reading time (WAT)
+                </th>
+                <th scope="col" className="border-b py-1 pr-2 font-medium">
+                  Value
+                </th>
+                <th scope="col" className="border-b py-1 font-medium">
+                  Recorded (UTC)
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {entry.points.map((p, i) => (
+                <tr key={`${p.sourceTime}-${p.value}-${i}`} className="tabular-nums">
+                  <th scope="row" className="border-b border-border/60 py-1 pr-2 font-normal">
+                    {formatWatFull(historyPointTimeMs(p))}
+                  </th>
+                  <td className="border-b border-border/60 py-1 pr-2">
+                    {formatChartValue(p.value, entry.spec.fractionDigits, entry.spec.unitSuffix)}
+                  </td>
+                  <td className="border-b border-border/60 py-1 text-muted-foreground">
+                    {p.observedAt.slice(0, 16).replace("T", " ")}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ))}
+      </div>
+    </details>
+  );
+});
+
 export type HistoryChartProps = {
   id: string;
   title: string;
@@ -224,9 +358,10 @@ export function HistoryChart({
   className,
 }: HistoryChartProps) {
   const [window, setWindow] = React.useState<HistoryWindow>(initialWindow);
-  const [cursorX, setCursorX] = React.useState<number | null>(null);
 
   const view = size === "large" ? LARGE_VIEW : COMPACT_VIEW;
+  // Shared scrub state + documented pointer policy (see scrubPointerAction in lib/chart-interaction).
+  const { cursorX, setCursorX, pointerHandlers, onKeyDown } = useCrosshairScrub(view.width);
   const markerScale = size === "large" ? 1.5 : 1;
   const plotTop = view.paddingTop;
   const plotBottom = view.height - view.paddingBottom;
@@ -254,7 +389,12 @@ export function HistoryChart({
     return prepare(series, activeWindow, nowMs, drawable, view);
   }, [series, activeWindow, nowMs, view]);
 
-  const plotted = prepared.filter((entry) => entry.stats !== null && entry.projected.length >= CHART_MIN_POINTS);
+  // Memoized so the static subtrees below (legend, readings tables) keep the same props while a finger
+  // scrubs: a scrub step then only re-renders the plot, the HUD, the pills and the detail row.
+  const plotted = React.useMemo(
+    () => prepared.filter((entry) => entry.stats !== null && entry.projected.length >= CHART_MIN_POINTS),
+    [prepared],
+  );
   const insufficient = prepared.filter((entry) => entry.stats === null);
   const totalStored = series.reduce((sum, entry) => sum + entry.points.length, 0);
   // Stored totals across every range: a series excluded from a narrow window may still have plenty
@@ -311,48 +451,62 @@ export function HistoryChart({
   const primary = plotted[0];
   const primaryProjected = primary.projected;
 
-  const detailRows = plotted.map((entry) => {
-    const index =
-      cursorX === null
-        ? entry.projected.length - 1
-        : nearestProjectedIndex(entry.projected, cursorX);
+  const hudMode: ChartHudMode = hudModeFor(cursorX);
+  const scrubbing = hudMode === "selected";
+
+  // One selection per plotted series: always a stored projected reading — the latest one when
+  // nothing is being scrubbed, otherwise the reading nearest the pointer/finger/keyboard cursor.
+  // The crosshair, the HUD, the axis pills and the detail row all read from this same object, so
+  // they can never disagree or show a value that is not in data/history.json.
+  const selections = plotted.map((entry) => {
+    const selected = crosshairSelection(entry.projected, cursorX);
+    const focus = selected ? chartFocusAt(entry.points, selected.index) : null;
     return {
       entry,
-      focus: index === null ? null : chartFocusAt(entry.points, index),
+      selected,
+      focus,
+      hud: focusHudCopy(focus, {
+        mode: hudMode,
+        formatValue: (value) => formatChartValue(value, entry.spec.fractionDigits, entry.spec.unitSuffix),
+        formatDateTime: formatWatFull,
+        unit: hudUnitLabel(focus?.point.unit, entry.spec.unitSuffix),
+      }),
     };
   });
 
-  const updateCursorFromPointer = (event: React.PointerEvent<HTMLDivElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = cursorFromPointer(event.clientX - rect.left, rect.width, view.width);
-    if (x !== null) setCursorX(x);
-  };
+  const detailRows = selections.map(({ entry, focus }) => ({ entry, focus }));
 
-  const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
-    updateCursorFromPointer(event);
-  };
+  // The vertical crosshair, the floating HUD and the bottom time pill follow the primary (first
+  // plotted) series; every series keeps its own horizontal line, emphasized vertex and price pill.
+  const primarySelection = selections[0];
+  const crosshairX = primarySelection.selected?.x ?? null;
+  const crosshairTimeMs = primarySelection.focus?.timeMs ?? null;
+  const primaryHud = primarySelection.hud;
+  const crosshairFraction = crosshairLabelFraction(crosshairX ?? view.width, view.width);
 
-  const handlePointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
-    updateCursorFromPointer(event);
-  };
-
-  const handlePointerLeave = (event: React.PointerEvent<HTMLDivElement>) => {
-    // Mouse users return to the latest reading when leaving the plot. A touch selection stays
-    // visible after the finger lifts so the number can still be read.
-    if (event.pointerType === "mouse") setCursorX(null);
-  };
-
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === "Escape") {
-      setCursorX(null);
-      return;
-    }
-    if (!CHART_FOCUS_KEYS.includes(event.key as ChartFocusKey)) return;
-    event.preventDefault();
-    const current = cursorX === null ? null : nearestProjectedIndex(primaryProjected, cursorX);
-    const next = stepFocusIndex(current, primaryProjected.length, event.key as ChartFocusKey);
-    if (next !== null) setCursorX(primaryProjected[next].x);
-  };
+  // Price pills on the value axis, aligned with each horizontal crosshair (the same column as the
+  // static axis labels, so a phone keeps the full plot width). Overlapping pills are spread around
+  // their true levels; the crosshair lines themselves always stay on the exact stored y.
+  const pricePills = stackAxisCallouts(
+    selections.flatMap(({ entry, selected }) =>
+      selected
+        ? [
+            {
+              key: entry.spec.dataset,
+              tone: entry.spec.tone,
+              text: formatChartValue(selected.value, entry.spec.fractionDigits),
+              y: plotBandFraction(selected.y, plotTop, plotBottom) * 100,
+            },
+          ]
+        : [],
+    ),
+    12,
+  );
+  // The time row is indented by the value-axis column (w-14 / w-16) plus the gap-2 between columns.
+  const axisInset = size === "large" ? "4.5rem" : "4rem";
+  // Emphasized vertex: clearly larger than the normal markers (glyph ×1.45, plus ring and halo).
+  const vertexHaloR = Math.round(markerScale * 640) / 100;
+  const vertexRingR = Math.round(markerScale * 540) / 100;
 
   const selectWindow = (next: HistoryWindow) => {
     setWindow(next);
@@ -427,153 +581,237 @@ export function HistoryChart({
       </CardHeader>
 
       <CardContent className="space-y-3">
-        <div className={cn("flex items-stretch gap-2", size === "large" ? "py-2" : "py-1.5")}>
-          {/* Value axis: rendered as HTML so it stays crisp and readable at every viewport width. */}
-          <div className={cn("relative shrink-0", size === "large" ? "w-16" : "w-14")} aria-hidden="true">
-            <div className="absolute inset-x-0" style={{ top: `${plotInsetPct}%`, bottom: `${plotInsetPct}%` }}>
-              {domain.flat ? (
-                <span className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-right text-[10px] leading-none tabular-nums text-muted-foreground">
-                  {formatChartValue(domain.maxValue, digits)}
-                </span>
-              ) : (
-                <>
-                  <span className="absolute inset-x-0 top-0 -translate-y-1/2 text-right text-[10px] leading-none tabular-nums text-muted-foreground">
+        {/* Floating HUD: rides along the top edge of the plot with the crosshair (proportional
+            anchoring keeps it inside the plot's width) and never covers the line, which matters on
+            a ~100px-tall phone plot. It repeats the selected — or, when idle, the latest — stored
+            reading's own value, unit, WAT time and change vs the previous plotted reading. The
+            aria-live detail row below announces the same facts, so the overlay is decorative. */}
+        <div>
+          {primaryHud ? (
+            <div className={size === "large" ? "pl-[4.5rem]" : "pl-16"} aria-hidden="true">
+              <ChartHud
+                id={`${id}-hud`}
+                hud={primaryHud}
+                size={size}
+                fraction={crosshairFraction}
+                secondary={selections.slice(1).map(({ entry, hud }) => ({
+                  key: entry.spec.dataset,
+                  label: entry.spec.shortLabel ?? entry.spec.label,
+                  hud,
+                }))}
+              />
+            </div>
+          ) : null}
+
+          <div className={cn("flex items-stretch gap-2", size === "large" ? "py-2" : "py-1.5")}>
+            {/* Value axis: rendered as HTML so it stays crisp and readable at every viewport width.
+                The crosshair price pill lives here too, aligned with the horizontal crosshair. */}
+            <div className={cn("relative shrink-0", size === "large" ? "w-16" : "w-14")} aria-hidden="true">
+              <div className="absolute inset-x-0" style={{ top: `${plotInsetPct}%`, bottom: `${plotInsetPct}%` }}>
+                {domain.flat ? (
+                  <span className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-right text-[10px] leading-none tabular-nums text-muted-foreground">
                     {formatChartValue(domain.maxValue, digits)}
                   </span>
-                  <span className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-right text-[10px] leading-none tabular-nums text-muted-foreground">
-                    {formatChartValue(midValue, digits)}
-                  </span>
-                  <span className="absolute inset-x-0 bottom-0 translate-y-1/2 text-right text-[10px] leading-none tabular-nums text-muted-foreground">
-                    {formatChartValue(domain.minValue, digits)}
-                  </span>
-                </>
-              )}
-            </div>
-          </div>
-
-          <div
-            className="relative min-w-0 flex-1 cursor-crosshair select-none rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-            style={{ touchAction: "pan-y" }}
-            tabIndex={0}
-            role="group"
-            aria-label={`${title}: interactive stored readings`}
-            aria-describedby={`${id}-instructions`}
-            onPointerMove={handlePointerMove}
-            onPointerDown={handlePointerDown}
-            onPointerLeave={handlePointerLeave}
-            onKeyDown={handleKeyDown}
-          >
-            <svg
-              viewBox={`0 0 ${view.width} ${view.height}`}
-              className="h-auto w-full"
-              role="img"
-              aria-labelledby={`${id}-title ${id}-desc`}
-              aria-describedby={`${id}-legend`}
-              focusable="false"
-            >
-              <title id={`${id}-title`}>{title}</title>
-              <desc id={`${id}-desc`}>{ariaLabel}</desc>
-
-              <g className="text-border" aria-hidden="true">
-                {domain.flat ? (
-                  <line
-                    x1={0}
-                    x2={view.width}
-                    y1={plotMid}
-                    y2={plotMid}
-                    stroke="currentColor"
-                    strokeWidth={1}
-                    strokeDasharray="3 4"
-                    vectorEffect="non-scaling-stroke"
-                  />
                 ) : (
-                  [plotTop, plotMid, plotBottom].map((y) => (
+                  <>
+                    <span className="absolute inset-x-0 top-0 -translate-y-1/2 text-right text-[10px] leading-none tabular-nums text-muted-foreground">
+                      {formatChartValue(domain.maxValue, digits)}
+                    </span>
+                    <span className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-right text-[10px] leading-none tabular-nums text-muted-foreground">
+                      {formatChartValue(midValue, digits)}
+                    </span>
+                    <span className="absolute inset-x-0 bottom-0 translate-y-1/2 text-right text-[10px] leading-none tabular-nums text-muted-foreground">
+                      {formatChartValue(domain.minValue, digits)}
+                    </span>
+                  </>
+                )}
+                {pricePills.map((pill) => (
+                  <span
+                    key={pill.key}
+                    data-chart-callout="price"
+                    className={cn(
+                      "absolute right-0 z-10 -translate-y-1/2 whitespace-nowrap rounded border bg-background px-1 py-px text-[10px] font-bold leading-tight tabular-nums shadow-sm",
+                      TONE_CLASS[pill.tone],
+                      scrubbing ? "border-current" : "border-border",
+                    )}
+                    style={{ top: `${pill.displayY}%` }}
+                  >
+                    {pill.text}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div
+              className="relative min-w-0 flex-1 cursor-crosshair select-none rounded-sm outline-none [-webkit-touch-callout:none] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              style={{ touchAction: "pan-y" }}
+              tabIndex={0}
+              role="group"
+              aria-label={`${title}: interactive stored readings`}
+              aria-describedby={`${id}-instructions`}
+              data-scrubbing={scrubbing ? "true" : "false"}
+              {...pointerHandlers}
+              onKeyDown={(event) => onKeyDown(event, primaryProjected)}
+            >
+              <svg
+                viewBox={`0 0 ${view.width} ${view.height}`}
+                className="h-auto w-full overflow-visible"
+                role="img"
+                aria-labelledby={`${id}-title ${id}-desc`}
+                aria-describedby={`${id}-legend`}
+                focusable="false"
+              >
+                <title id={`${id}-title`}>{title}</title>
+                <desc id={`${id}-desc`}>{ariaLabel}</desc>
+
+                <g className="text-border" aria-hidden="true">
+                  {domain.flat ? (
                     <line
-                      key={y}
                       x1={0}
                       x2={view.width}
-                      y1={y}
-                      y2={y}
+                      y1={plotMid}
+                      y2={plotMid}
                       stroke="currentColor"
                       strokeWidth={1}
                       strokeDasharray="3 4"
                       vectorEffect="non-scaling-stroke"
                     />
-                  ))
-                )}
-              </g>
+                  ) : (
+                    [plotTop, plotMid, plotBottom].map((y) => (
+                      <line
+                        key={y}
+                        x1={0}
+                        x2={view.width}
+                        y1={y}
+                        y2={y}
+                        stroke="currentColor"
+                        strokeWidth={1}
+                        strokeDasharray="3 4"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                    ))
+                  )}
+                </g>
 
-              {cursorX !== null ? (
-                <line
-                  aria-hidden="true"
-                  x1={cursorX}
-                  x2={cursorX}
-                  y1={plotTop}
-                  y2={plotBottom}
-                  className="text-foreground/50"
-                  stroke="currentColor"
-                  strokeWidth={1}
-                  strokeDasharray="2 3"
-                  vectorEffect="non-scaling-stroke"
-                />
-              ) : null}
-
-              {plotted.map((entry) => {
-                const stride = historyMarkerStride(entry.projected.length, 12);
-                const selectedIndex =
-                  cursorX === null ? entry.projected.length - 1 : nearestProjectedIndex(entry.projected, cursorX);
-                const selected = selectedIndex === null ? null : entry.projected[selectedIndex];
-                return (
-                  <g key={entry.spec.dataset} className={TONE_CLASS[entry.spec.tone]}>
-                    <polyline
-                      points={historyPolylinePoints(entry.projected)}
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={size === "large" ? 2.25 : 2}
-                      strokeLinejoin="round"
-                      strokeLinecap="round"
-                      strokeDasharray={entry.spec.dash}
-                      vectorEffect="non-scaling-stroke"
-                    />
-                    {entry.projected.map((p, i) =>
-                      i % stride === 0 || i === entry.projected.length - 1 ? (
-                        <SeriesMarkerGlyph
-                          key={`${entry.spec.dataset}-${i}`}
-                          shape={entry.spec.marker}
-                          x={p.x}
-                          y={p.y}
-                          scale={markerScale}
-                        />
-                      ) : null,
-                    )}
-                    {selected ? (
-                      <circle
-                        cx={selected.x}
-                        cy={selected.y}
-                        r={markerScale * (cursorX === null ? 3.4 : 5)}
+                {selections.map(({ entry, selected }) => {
+                  const stride = historyMarkerStride(entry.projected.length, 12);
+                  return (
+                    <g key={entry.spec.dataset} className={TONE_CLASS[entry.spec.tone]}>
+                      <polyline
+                        points={historyPolylinePoints(entry.projected)}
                         fill="none"
                         stroke="currentColor"
-                        strokeWidth={1.5}
+                        strokeWidth={size === "large" ? 2.25 : 2}
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
+                        strokeDasharray={entry.spec.dash}
                         vectorEffect="non-scaling-stroke"
-                        opacity={cursorX === null ? 0.55 : 1}
                       />
-                    ) : null}
-                  </g>
-                );
-              })}
-            </svg>
+                      {entry.projected.map((p, i) =>
+                        (i % stride === 0 || i === entry.projected.length - 1) && i !== selected?.index ? (
+                          <SeriesMarkerGlyph
+                            key={`${entry.spec.dataset}-${i}`}
+                            shape={entry.spec.marker}
+                            x={p.x}
+                            y={p.y}
+                            scale={markerScale}
+                          />
+                        ) : null,
+                      )}
+                    </g>
+                  );
+                })}
+
+                {/* Crosshair: always drawn. Idle, it rests (dimmed) on the latest stored reading — the
+                    documented pointer-leave fallback. While scrubbing it snaps to the stored reading
+                    nearest the pointer: the vertical line on that reading's own x, one horizontal line
+                    per series on that series' own selected y. Never between two points. */}
+                <g data-chart-crosshair={scrubbing ? "selected" : "latest"} aria-hidden="true">
+                  {crosshairX !== null ? (
+                    <line
+                      data-crosshair="vertical"
+                      x1={crosshairX}
+                      x2={crosshairX}
+                      y1={0}
+                      y2={view.height}
+                      className={scrubbing ? "text-foreground/70" : "text-foreground/35"}
+                      stroke="currentColor"
+                      strokeWidth={1}
+                      strokeDasharray="3 3"
+                      vectorEffect="non-scaling-stroke"
+                    />
+                  ) : null}
+                  {selections.map(({ entry, selected }) =>
+                    selected ? (
+                      <line
+                        key={`crosshair-${entry.spec.dataset}`}
+                        data-crosshair="horizontal"
+                        x1={0}
+                        x2={view.width}
+                        y1={selected.y}
+                        y2={selected.y}
+                        className={cn(TONE_CLASS[entry.spec.tone], scrubbing ? "opacity-80" : "opacity-45")}
+                        stroke="currentColor"
+                        strokeWidth={1}
+                        strokeDasharray="3 3"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                    ) : null,
+                  )}
+                  {/* Emphasized vertex: a background halo, a ring and the series' own marker shape drawn
+                      larger than any normal point, so the selected reading is obvious at a glance. */}
+                  {selections.map(({ entry, selected }) =>
+                    selected ? (
+                      <g key={`vertex-${entry.spec.dataset}`} data-crosshair="vertex" className={TONE_CLASS[entry.spec.tone]}>
+                        <circle cx={selected.x} cy={selected.y} r={vertexHaloR} className="fill-background" />
+                        <circle
+                          cx={selected.x}
+                          cy={selected.y}
+                          r={vertexRingR}
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={scrubbing ? 2 : 1.5}
+                          vectorEffect="non-scaling-stroke"
+                        />
+                        <SeriesMarkerGlyph shape={entry.spec.marker} x={selected.x} y={selected.y} scale={markerScale * 1.45} />
+                      </g>
+                    ) : null,
+                  )}
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
 
-        <div
-          className={cn(
-            "grid grid-cols-3 gap-2 text-[10px] tabular-nums text-muted-foreground",
-            size === "large" ? "pl-[4.5rem]" : "pl-16",
-          )}
-        >
-          <span>{formatWatDayTime(earliestMs)} WAT</span>
-          <span className="text-center">{domain.singleInstant ? "" : `${formatWatDayTime(midTimeMs)} WAT`}</span>
-          <span className="text-right">{formatWatDayTime(latestMs)} WAT</span>
+        <div>
+          {/* Time pill: its own slim row directly under the plot, aligned with the vertical crosshair
+              (TradingView-style time callout). A separate row keeps it from colliding with the static
+              axis labels, which wrap to two lines on phones. Proportional anchoring keeps the pill
+              over the crosshair x without ever clipping at the plot edges. */}
+          {crosshairTimeMs !== null ? (
+            <div aria-hidden="true" className="relative h-5" style={{ marginLeft: axisInset }}>
+              <span
+                data-chart-callout="time"
+                className={cn(
+                  "absolute top-0 whitespace-nowrap rounded border bg-background px-1.5 py-px text-[10px] font-bold leading-tight tabular-nums text-foreground shadow-sm",
+                  scrubbing ? "border-foreground/60" : "border-border",
+                )}
+                style={{ left: `${crosshairFraction * 100}%`, transform: `translateX(-${crosshairFraction * 100}%)` }}
+              >
+                {formatWatDayTime(crosshairTimeMs)} WAT
+              </span>
+            </div>
+          ) : null}
+          <div
+            className={cn(
+              "grid grid-cols-3 gap-2 text-[10px] tabular-nums text-muted-foreground",
+              size === "large" ? "pl-[4.5rem]" : "pl-16",
+            )}
+          >
+            <span>{formatWatDayTime(earliestMs)} WAT</span>
+            <span className="text-center">{domain.singleInstant ? "" : `${formatWatDayTime(midTimeMs)} WAT`}</span>
+            <span className="text-right">{formatWatDayTime(latestMs)} WAT</span>
+          </div>
         </div>
 
         {/* Detail row: the single place hover, touch scrub and keyboard readings are reported. */}
@@ -598,69 +836,25 @@ export function HistoryChart({
                 <li key={entry.spec.dataset} className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
                   <span className="font-semibold text-foreground">{entry.spec.shortLabel ?? entry.spec.label}</span>
                   <span className="font-extrabold tabular-nums">{value(focus.point.value)}</span>
-                  <span className="tabular-nums text-muted-foreground">{formatWatFull(focus.timeMs)}</span>
-                  <span className={cn("text-[11px] tabular-nums", delta.className)}>{delta.text}</span>
+                  {/* On phones the time and the change each get their own line, with two lines kept
+                      for the change, so this row keeps its height while a finger scrubs and nothing
+                      below it jumps. */}
+                  <span className="basis-full tabular-nums text-muted-foreground sm:basis-auto">{formatWatFull(focus.timeMs)}</span>
+                  <span className={cn("min-h-8 basis-full text-[11px] tabular-nums sm:min-h-0 sm:basis-auto", delta.className)}>
+                    {delta.text}
+                  </span>
                 </li>
               );
             })}
           </ul>
           <p id={`${id}-instructions`} className="mt-1 text-[11px] text-muted-foreground">
             {size === "large"
-              ? "Hover, drag a finger across the plot, or focus it and use the arrow keys (Home and End jump to the ends) to read a stored point. Only real readings are shown."
-              : "Hover or drag across the plot, or focus it and use the arrow keys, to read a stored point. Only real readings are shown."}
+              ? "Hover, drag a finger across the plot, or focus it and use the arrow keys (Home and End jump to the ends). The crosshair snaps to the nearest stored reading; the price tag above the plot, the price pill on the value axis, the time pill under it and this row all repeat that reading's own value and WAT time. Moving the mouse away, lifting your finger or pressing Escape returns to the latest reading. Only real readings are shown."
+              : "Hover or drag across the plot, or focus it and use the arrow keys: the crosshair snaps to the nearest stored reading and the price tag repeats its own value and WAT time. Letting go returns to the latest reading. Only real readings are shown."}
           </p>
         </div>
 
-        <ul id={`${id}-legend`} className="space-y-1.5 border-t pt-2.5 text-xs">
-          {plotted.map((entry) => {
-            const stats = entry.stats!;
-            const value = (n: number) => formatChartValue(n, entry.spec.fractionDigits, entry.spec.unitSuffix);
-            return (
-              <li key={entry.spec.dataset} className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                <svg width="30" height="12" viewBox="0 0 30 12" aria-hidden="true" focusable="false" className={cn("shrink-0", TONE_CLASS[entry.spec.tone])}>
-                  <line x1="1" y1="6" x2="29" y2="6" stroke="currentColor" strokeWidth={2} strokeDasharray={entry.spec.dash} />
-                  <g transform="translate(15 6)">
-                    <SeriesMarkerGlyph shape={entry.spec.marker} x={0} y={0} />
-                  </g>
-                </svg>
-                <span className="font-semibold text-foreground">{entry.spec.shortLabel ?? entry.spec.label}</span>
-                <span className="tabular-nums text-muted-foreground">
-                  latest {value(stats.last.value)} · {stats.count}/{maxPoints} points
-                </span>
-                <span
-                  className={cn(
-                    "inline-flex items-center gap-1 rounded-md border px-1.5 py-0.5 text-[10px] font-semibold tabular-nums",
-                    stats.direction === "up"
-                      ? "border-amber-500/40 bg-amber-500/10 text-amber-900 dark:text-amber-200"
-                      : stats.direction === "down"
-                        ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-900 dark:text-emerald-200"
-                        : "border-border bg-secondary/70 text-foreground/85",
-                  )}
-                  title={`First plotted reading ${value(stats.first.value)} on ${formatWatFull(stats.startedAtMs)}`}
-                >
-                  <span aria-hidden="true">{stats.direction === "up" ? "▲" : stats.direction === "down" ? "▼" : "■"}</span>
-                  <span>
-                    {stats.direction === "flat"
-                      ? "no change in window"
-                      : `${stats.direction} ${value(Math.abs(stats.change))}${
-                          stats.pctChange === null ? "" : ` (${stats.pctChange > 0 ? "+" : ""}${stats.pctChange}%)`
-                        }`}
-                  </span>
-                </span>
-                {entry.spec.sourceUrl ? (
-                  <a
-                    href={entry.spec.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className="text-[10px] text-muted-foreground underline decoration-border underline-offset-2 hover:text-primary"
-                  >
-                    {entry.spec.sourceName ?? "source"}
-                  </a>
-                ) : null}
-              </li>
-            );
-          })}
-        </ul>
+        <SeriesLegend id={id} plotted={plotted} maxPoints={maxPoints} />
 
         {chartPageLinks?.length ? (
           <ul className="flex flex-wrap gap-x-4 gap-y-1 border-t pt-2 text-xs">
@@ -705,48 +899,7 @@ export function HistoryChart({
           </ul>
         ) : null}
 
-        <details className="rounded-lg border bg-background/40 p-2 text-[11px]">
-          <summary className="flex min-h-11 cursor-pointer items-center font-semibold text-foreground/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-h-0">
-            Show the {windowReadings} real readings plotted ({scopePhrase})
-          </summary>
-          <div className="mt-2 space-y-3">
-            {plotted.map((entry) => (
-              <table key={entry.spec.dataset} className="w-full border-collapse text-left">
-                <caption className="pb-1 text-left font-semibold text-foreground/85">
-                  {entry.spec.label} · {entry.points.length} of {maxPoints} stored
-                </caption>
-                <thead>
-                  <tr className="text-muted-foreground">
-                    <th scope="col" className="border-b py-1 pr-2 font-medium">
-                      Reading time (WAT)
-                    </th>
-                    <th scope="col" className="border-b py-1 pr-2 font-medium">
-                      Value
-                    </th>
-                    <th scope="col" className="border-b py-1 font-medium">
-                      Recorded (UTC)
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {entry.points.map((p, i) => (
-                    <tr key={`${p.sourceTime}-${p.value}-${i}`} className="tabular-nums">
-                      <th scope="row" className="border-b border-border/60 py-1 pr-2 font-normal">
-                        {formatWatFull(historyPointTimeMs(p))}
-                      </th>
-                      <td className="border-b border-border/60 py-1 pr-2">
-                        {formatChartValue(p.value, entry.spec.fractionDigits, entry.spec.unitSuffix)}
-                      </td>
-                      <td className="border-b border-border/60 py-1 text-muted-foreground">
-                        {p.observedAt.slice(0, 16).replace("T", " ")}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            ))}
-          </div>
-        </details>
+        <ReadingsTables plotted={plotted} maxPoints={maxPoints} windowReadings={windowReadings} scopePhrase={scopePhrase} />
       </CardContent>
     </Card>
   );

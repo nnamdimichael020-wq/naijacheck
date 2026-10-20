@@ -7,8 +7,19 @@ import assert from "node:assert/strict";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createElement } from "react";
 import { HistoryChart, HistoryEmptyState, formatChartValue, type ChartSeries } from "../../components/live/history-chart";
+import { ChartHud } from "../../components/live/chart-hud";
 import { MiniSparkline } from "../../components/live/sparkline";
-import { MAX_HISTORY_POINTS_PER_DATASET, type HistoryPoint } from "../../lib/history";
+import { SparklineScrub } from "../../components/live/sparkline-scrub";
+import { focusHudCopy, readingFocusAt } from "../../lib/chart-interaction";
+import {
+  MAX_HISTORY_POINTS_PER_DATASET,
+  historyPointTimeMs,
+  historySeriesDomain,
+  projectHistorySeries,
+  type HistoryPoint,
+} from "../../lib/history";
+import { datasetHistoryPoints } from "../../lib/live";
+import { formatWatDayTime, formatWatFull } from "../../lib/utils";
 
 let passed = 0;
 const test = (name: string, fn: () => void) => {
@@ -360,6 +371,200 @@ test("MiniSparkline draws only from stored points and shows an honest empty stat
     assert.ok(strip(html).includes("not enough readings yet"));
     assert.ok(strip(html).includes("/56 stored"));
   }
+});
+
+/* ---------- TradingView-style crosshair read-out ---------- */
+
+const polylineCoords = (html: string, nth = 0) =>
+  [...html.matchAll(/<polyline[^>]*points="([^"]+)"/g)][nth][1]
+    .trim()
+    .split(/\s+/)
+    .map((c) => c.split(",").map(Number) as [number, number]);
+const attrOf = (tag: string, name: string) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1] ?? "";
+const crosshairLines = (html: string, kind: "vertical" | "horizontal") =>
+  [...html.matchAll(new RegExp(`<line data-crosshair="${kind}"[^>]*>`, "g"))].map((m) => m[0]);
+const hudOf = (html: string) => html.match(/<div id="chart-test-hud"[\s\S]*?<\/div>/)?.[0] ?? "";
+
+test("Idle chart: both crosshair lines rest exactly on the latest stored vertex (documented pointer-leave fallback)", () => {
+  const points = [point("parallel-usd-ngn-buy", 2, 1360), point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1375)];
+  const html = render([{ spec: PARALLEL_SPEC, points }], { size: "large" });
+  const [lastX, lastY] = polylineCoords(html).at(-1)!;
+  assert.ok(html.includes('data-chart-crosshair="latest"'), "idle state is labelled latest");
+  const vertical = crosshairLines(html, "vertical");
+  const horizontal = crosshairLines(html, "horizontal");
+  assert.equal(vertical.length, 1, "one vertical crosshair");
+  assert.equal(horizontal.length, 1, "one horizontal crosshair per plotted series");
+  assert.equal(Number(attrOf(vertical[0], "x1")), lastX);
+  assert.equal(Number(attrOf(vertical[0], "x2")), lastX);
+  assert.equal(Number(attrOf(horizontal[0], "y1")), lastY);
+  assert.equal(Number(attrOf(horizontal[0], "y2")), lastY);
+  assert.equal(Number(attrOf(horizontal[0], "x1")), 0, "the price line spans the plot");
+  assert.equal(Number(attrOf(horizontal[0], "x2")), 480);
+});
+
+test("The selected vertex is emphasized: larger than every normal marker, on the stored point", () => {
+  const points = [point("parallel-usd-ngn-buy", 2, 1360), point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1375)];
+  const html = render([{ spec: PARALLEL_SPEC, points }], { size: "large" });
+  const [lastX, lastY] = polylineCoords(html).at(-1)!;
+  const vertex = html.match(/<g data-crosshair="vertex"[\s\S]*?<\/g>/)?.[0] ?? "";
+  assert.ok(vertex.length > 0, "an emphasized vertex is rendered");
+  const vertexRadii = [...vertex.matchAll(/<circle[^>]*\br="([\d.]+)"/g)].map((m) => Number(m[1]));
+  const vertexCentres = [...vertex.matchAll(/<circle[^>]*cx="([\d.]+)" cy="([\d.]+)"/g)].map((m) => [Number(m[1]), Number(m[2])]);
+  for (const [cx, cy] of vertexCentres) assert.deepEqual([cx, cy], [lastX, lastY], "the emphasis sits on the stored vertex");
+  const svgBody = html.slice(html.indexOf("<polyline"), html.indexOf("data-chart-crosshair"));
+  const normalRadii = [...svgBody.matchAll(/<circle[^>]*\br="([\d.]+)"/g)].map((m) => Number(m[1]));
+  assert.ok(normalRadii.length > 0, "normal markers are still drawn");
+  assert.ok(Math.max(...vertexRadii) > Math.max(...normalRadii) * 1.4, `vertex ${vertexRadii} must clearly exceed markers ${normalRadii}`);
+});
+
+test("Floating HUD shows the stored price large with its unit, full WAT time, short delta and a Latest label", () => {
+  const points = [point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1375)];
+  const html = render([{ spec: PARALLEL_SPEC, points }]);
+  const hud = hudOf(html);
+  assert.ok(hud.length > 0, "the HUD is server-rendered, so it is visible before any interaction");
+  assert.ok(hud.includes('data-chart-hud="latest"'));
+  assert.ok(/aria-hidden="true"><div id="chart-test-hud"/.test(html), "the HUD is decorative: the aria-live detail row announces the same reading");
+  const text = strip(hud);
+  assert.ok(text.includes("Latest reading"), text);
+  assert.ok(text.includes("₦1,375 per USD"), text);
+  assert.ok(text.includes("11 Oct 2026, 1:00 pm WAT"), text);
+  assert.ok(text.includes("▲ +₦5 (+0.36%)"), text);
+  assert.ok(text.includes("vs previous plotted reading"), text);
+  const price = hud.match(/<span data-hud="price" class="([^"]+)">([^<]+)<\/span>/)!;
+  assert.ok(/\btext-base\b/.test(price[1]) && /\btabular-nums\b/.test(price[1]) && /\bfont-extrabold\b/.test(price[1]));
+  assert.equal(price[2], "₦1,375");
+  assert.equal(/\btransition|animate-/.test(hud), false, "the HUD moves instantly, with no animation");
+  const large = hudOf(render([{ spec: PARALLEL_SPEC, points }], { size: "large" }));
+  assert.ok(/data-hud="price" class="[^"]*\btext-xl\b/.test(large), "the /charts pages use an even larger price");
+});
+
+test("Axis callouts: a price pill on the value axis and a time pill on the time axis, both from the stored reading", () => {
+  const points = [point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1375)];
+  const html = render([{ spec: PARALLEL_SPEC, points }]);
+  const pills = [...html.matchAll(/<span data-chart-callout="(price|time)"[^>]*style="([^"]*)"[^>]*>([^<]+)<\/span>/g)];
+  const price = pills.filter((m) => m[1] === "price");
+  const time = pills.filter((m) => m[1] === "time");
+  assert.equal(price.length, 1);
+  assert.equal(time.length, 1);
+  assert.equal(price[0][3], "₦1,375");
+  assert.match(price[0][2], /top:0%/, "the latest (highest) reading's pill sits at the top of the value band");
+  assert.equal(time[0][3], `${formatWatDayTime(historyPointTimeMs(points[1]))} WAT`);
+  const pct = Math.round((polylineCoords(html).at(-1)![0] / 300) * 10000) / 100;
+  assert.ok(time[0][2].includes(`left:${pct}%`), `the time pill is anchored at the reading's own x (${pct}%): ${time[0][2]}`);
+  assert.ok(time[0][2].includes(`translateX(-${pct}%)`), "proportional anchoring keeps the pill inside the plot");
+  const timeRow = html.match(/<div aria-hidden="true" class="relative h-5"[^>]*>/)?.[0] ?? "";
+  assert.ok(timeRow.includes("margin-left:4rem"), "the time pill has its own row, aligned with the plot's left edge");
+});
+
+test("Two series on one axis: one horizontal line, one price pill and one HUD line each — each its own stored reading", () => {
+  const html = render([
+    { spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1375)] },
+    { spec: CBN_SPEC, points: [point("cbn-usd-ngn", 1, 1331), point("cbn-usd-ngn", 0, 1333.25)] },
+  ]);
+  const horizontal = crosshairLines(html, "horizontal");
+  assert.equal(horizontal.length, 2);
+  assert.equal(Number(attrOf(horizontal[0], "y1")), polylineCoords(html, 0).at(-1)![1]);
+  assert.equal(Number(attrOf(horizontal[1], "y1")), polylineCoords(html, 1).at(-1)![1]);
+  assert.equal(crosshairLines(html, "vertical").length, 1, "one vertical line, on the primary series' reading");
+  const pills = [...html.matchAll(/data-chart-callout="price"[^>]*>([^<]+)</g)].map((m) => m[1]);
+  assert.deepEqual(pills, ["₦1,375", "₦1,333.25"]);
+  const hud = strip(hudOf(html));
+  assert.ok(hud.includes("₦1,375 per USD"), hud);
+  assert.ok(hud.includes("CBN official USD ₦1,333.25"), hud);
+  assert.ok(hud.includes("11 Oct, 1:00 pm WAT"), "secondary lines carry their own WAT time");
+});
+
+test("The HUD keeps a constant height: four lines whether or not a previous reading exists", () => {
+  const readings = [
+    { value: 1370, timeMs: Date.parse("2026-10-10T12:00:00.000Z") },
+    { value: 1375, timeMs: Date.parse("2026-10-11T12:00:00.000Z") },
+  ];
+  const copy = (index: number) =>
+    focusHudCopy(readingFocusAt(readings, index), {
+      mode: "selected",
+      formatValue: (value) => formatChartValue(value, 0),
+      formatDateTime: formatWatFull,
+      unit: "per USD",
+    })!;
+  const first = renderToStaticMarkup(createElement(ChartHud, { hud: copy(0), size: "compact", fraction: 0 }));
+  const second = renderToStaticMarkup(createElement(ChartHud, { hud: copy(1), size: "compact", fraction: 1 }));
+  assert.equal((first.match(/<p\b/g) ?? []).length, 4);
+  assert.equal((second.match(/<p\b/g) ?? []).length, 4);
+  for (const html of [first, second]) {
+    assert.ok(html.includes('data-chart-hud="selected"'));
+    assert.ok(strip(html).includes("Selected reading"));
+    assert.equal((html.match(/\btruncate\b/g) ?? []).length >= 4, true, "every line is single-line, so the plot never jumps");
+    assert.ok(html.includes("border-primary/60"), "a selection is visibly emphasized");
+  }
+  assert.ok(strip(first).includes("first plotted reading in this range"), "no change is invented for the first reading");
+  assert.ok(first.includes("left:0%;transform:translateX(-0%)"));
+  assert.ok(second.includes("left:100%;transform:translateX(-100%)"));
+  const mini = renderToStaticMarkup(createElement(ChartHud, { hud: copy(1), size: "mini", fraction: 1 }));
+  assert.equal((mini.match(/<p\b/g) ?? []).length, 3, "the card-sparkline HUD is scaled down to three lines");
+  assert.ok(/<span data-hud="label"[^>]*>Selected reading<\/span>/.test(mini), "label shares the price line on the mini HUD");
+});
+
+test("The plot keeps vertical page scroll (pan-y), suppresses the long-press callout and starts idle", () => {
+  const html = render([
+    { spec: PARALLEL_SPEC, points: [point("parallel-usd-ngn-buy", 1, 1370), point("parallel-usd-ngn-buy", 0, 1372)] },
+  ]);
+  const plot = html.match(/<div class="relative min-w-0 flex-1 cursor-crosshair[^>]*>/)?.[0] ?? "";
+  assert.ok(plot.includes("touch-action:pan-y"), plot);
+  assert.ok(plot.includes("[-webkit-touch-callout:none]"));
+  assert.ok(plot.includes("select-none"));
+  assert.ok(plot.includes('data-scrubbing="false"'));
+  assert.ok(strip(html).includes("Letting go returns to the latest reading"));
+});
+
+test("Homepage sparkline: the same crosshair + price tag, scaled down, from the stored readings only", () => {
+  const points = datasetHistoryPoints("parallel-usd-ngn-buy");
+  const html = renderToStaticMarkup(
+    createElement(MiniSparkline, { dataset: "parallel-usd-ngn-buy", label: "Parallel USD buy", fractionDigits: 0 }),
+  );
+  if (points.length < 2) {
+    assert.ok(strip(html).includes("not enough readings yet"));
+    assert.equal(html.includes("data-chart-hud"), false, "no price tag without a real line");
+    return;
+  }
+  const latest = points.at(-1)!;
+  assert.ok(html.includes('role="group"') && html.includes('tabindex="0"'), "the sparkline is interactive and keyboard reachable");
+  assert.ok(html.includes("touch-action:pan-y"), "page scroll still works over the sparkline");
+  assert.ok(html.includes('data-chart-hud="latest"'));
+  const text = strip(html.match(/<div data-chart-hud[\s\S]*?<\/div>/)![0]);
+  assert.ok(text.includes("Latest reading"), text);
+  assert.ok(text.includes(`${formatChartValue(latest.value, 0)} per USD`), text);
+  assert.ok(text.includes(formatWatFull(historyPointTimeMs(latest))), text);
+  const coords = polylineCoords(html);
+  assert.equal(coords.length, points.length, "one plotted coordinate per stored reading");
+  const vertical = crosshairLines(html, "vertical");
+  const horizontal = crosshairLines(html, "horizontal");
+  assert.equal(vertical.length, 1);
+  assert.equal(horizontal.length, 1);
+  assert.equal(Number(attrOf(vertical[0], "x1")), coords.at(-1)![0]);
+  assert.equal(Number(attrOf(horizontal[0], "y1")), coords.at(-1)![1]);
+  assert.ok(html.includes('aria-live="polite"'), "screen readers hear the same read-out");
+});
+
+test("SparklineScrub renders the HUD for the reading the crosshair rests on, with the right unit", () => {
+  const pts = [point("fuel-depot-petrol", 2, 1342.5), point("fuel-depot-petrol", 1, 1349.5), point("fuel-depot-petrol", 0, 1350)];
+  const view = { width: 240, height: 36, paddingTop: 4, paddingBottom: 4, paddingLeft: 2, paddingRight: 2 };
+  const projected = projectHistorySeries(pts, historySeriesDomain([pts])!, view);
+  const html = renderToStaticMarkup(
+    createElement(SparklineScrub, {
+      label: "Depot petrol",
+      title: "Depot petrol",
+      ariaLabel: "Depot petrol: 3 real readings",
+      readings: projected.map((p) => ({ x: p.x, y: p.y, value: p.value, timeMs: p.timeMs })),
+      view,
+      unitSuffix: "/L",
+      unitLabel: null,
+    }),
+  );
+  const text = strip(html.match(/<div data-chart-hud[\s\S]*?<\/div>/)![0]);
+  assert.ok(text.includes("₦1,350.00/L") || text.includes("₦1,350/L"), text);
+  assert.equal(text.includes("per litre"), false, "the /L suffix is not doubled with a unit label");
+  assert.ok(text.includes("▲ +₦0.50/L (+0.04%)"), text);
+  assert.equal(Number(attrOf(crosshairLines(html, "vertical")[0], "x1")), projected.at(-1)!.x);
 });
 
 console.log(`\n${passed} chart render tests passed`);

@@ -340,7 +340,7 @@ export function projectHistorySeries(
 }
 
 /** SVG polyline/polygon `points` attribute for projected real observations. */
-export function historyPolylinePoints(projected: ProjectedHistoryPoint[]): string {
+export function historyPolylinePoints(projected: ReadonlyArray<Pick<ProjectedHistoryPoint, "x" | "y">>): string {
   return projected.map((p) => `${p.x},${p.y}`).join(" ");
 }
 
