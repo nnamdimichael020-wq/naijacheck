@@ -1386,6 +1386,15 @@
       "unit": "NGN per litre",
       "geography": "Nigeria depot median",
       "sourceUrl": "https://awajis.com/fuel-price-in-nigeria-today/"
+    },
+    {
+      "dataset": "parallel-usd-ngn-buy",
+      "observedAt": "2026-10-20T08:30:15.921Z",
+      "sourceTime": "2026-10-20T08:06:00.000Z",
+      "value": 1370,
+      "unit": "NGN per USD",
+      "geography": "Nigeria indicative quote",
+      "sourceUrl": "https://abokiforex.app/"
     }
   ]
 }
