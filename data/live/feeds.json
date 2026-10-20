@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-20T08:30:15.921Z",
+  "checkedAt": "2026-10-20T14:18:17.608Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -11,6 +11,12 @@
       "label": "Fuel",
       "query": "petrol price Nigeria",
       "items": [
+        {
+          "title": "Fuel subsidy in Nigeria: Wia major Nigeria presidential candidates stand on petrol subsidy",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1laUc1UlptdUZIeUhqcmNmbnBfQU04QTllaXZ0QlBEeF85bERYU0pubnQ4ZExadG5kRktfSXpEQmcwRUxQcEkyVmNLRS1kNGhtUWxHaDNxeHlhdDZITGlTZGZyZ9IBY0FVX3lxTE1laUc1UlptdUZIeUhqcmNmbnBfQU04QTllaXZ0QlBEeF85bERYU0pubnQ4ZExadG5kRktfSXpEQmcwRUxQcEkyVmNLRS1kNGhtUWxHaDNxeHlhdDZITGlTZGZyZw?oc=5",
+          "source": "BBC",
+          "published": "2026-10-20T12:47:03.000Z"
+        },
         {
           "title": "Nigeria can contain petrol prices. But someone must finance the difference",
           "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQRkdZaE9GckFnbnhDZDlHQ2Q0LW9rcnEtUGhCZlZpLU9VMXdmT282T1ZYX004eFl2RldFeWlqMVhWTFQ5Y3VPOXNCenR5V0NBS3pHUmJ5SnpEVFVoWXV5V1UtTEJyODFsZkMzMWlSY1ppU1lUbFVyQk00WTdDV0NRaWd5RGItUFNRTy1fZzVEVEhFN29kRlZiOTY5LWp0ZFk?oc=5",
@@ -24,22 +30,10 @@
           "published": "2026-10-20T02:10:41.000Z"
         },
         {
-          "title": "Marketers reject FG’s plan to cap petrol price at N1,350",
-          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5WaDNkeTl2ajNUSGtaa0gyR1NETXI1WkNnQlJrSjMyNEJiSWVCay04T3NWOFRSM1psWjVsdkI2c0c3MmpNbzgtSDltZzNVcTU4OGlUck5pSkVnZWtVWWE1SjJEZV9KYnFpbDB2V19zLTRSZTF1?oc=5",
+          "title": "Govt’s petrol discount may cost 0.4% of GDP – Report",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1RcG0yX0ZKcnVpcmctT2I4YXZEM0Q1LU1uZjR5Xzl6c2taVGtwVkJ5ZGVKdzIxVUstN09VbE13bmZJREdmV2ZoSUtaQ1RnLWt1QVpZZXhzWFhIbjRDVTFlc2pJVTlld284MlhmOGZXUQ?oc=5",
           "source": "Punch Newspapers",
-          "published": "2026-10-16T00:56:03.000Z"
-        },
-        {
-          "title": "How Fuel Costs Deepen Nigerians’ Cost-Of-Living Crisis",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQV2lDVzVDV0RQbWpNc2RTenpmTEhZSG5nWFNjT3hXLXZNODRzazNkZDRCb2NsbkRQbFpJUmdHSlJCbWpqVzhqRzB5UDJRTWc5dTlMR2lfd1lTQ1E1LV9RTWxlbXBTblZIZHFMUGNqOVdyMG4xa2NwQ3JMU0VRRlpWVFlUVQ?oc=5",
-          "source": "Independent Newspaper Nigeria",
-          "published": "2026-10-19T23:18:14.000Z"
-        },
-        {
-          "title": "Major Marketers Insists Petrol Price Capping Won’t Stabilise Market Structure",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbEFfYm9LNkNxOE1oRFNCZ3A5bnpwdTZ6QTgwNi1oOUY2dHBfVldOY0gwWS1raktXZDBua2FhUjlJcmZwYWJmUGpZX3M0Y3BDMk45UzhBYW82SWpFejZkX0w5dDNqT0NQekJXLU9CNTZobjRHNHcxY3FoZzZwX3J2QkNYNlBDU2hrU2R4c2R3NjRieEFuTHRFdlpfNHd0am5w?oc=5",
-          "source": "LEADERSHIP Newspapers",
-          "published": "2026-10-19T17:12:31.000Z"
+          "published": "2026-10-19T01:11:28.000Z"
         },
         {
           "title": "NLC, Falana, activists rally Nigerians against petrol price hike, hardship",
@@ -48,16 +42,22 @@
           "published": "2026-10-19T00:51:47.000Z"
         },
         {
-          "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
-          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SZW45N1ozOVQwY1YxTkU5dENJNVdfV2I4X3ZBeHVSN1hQN2hCUlVBQV9jcWdTdEI1X3FiWXprWHptRTdXMXowSnFvbE5oR1ExU2tET1ZBSXRITUlCelHSAWNBVV95cUxPX0kxWFNtZ0lyWmxPUlRQMGJCel9oTDFsUl9qcTRQcEF4el9WTEJIc3NqY3paZ0FzWFctX2VKTm15Q1J6UTZyWldOQW1Fam9zWnlhYkhlWFpxUTBQOWlOZ3o0U0k?oc=5",
-          "source": "BBC",
-          "published": "2026-10-12T13:42:37.000Z"
-        },
-        {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
           "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNXZuQks4c2otRlh3czh4dHpPbmR3NXFKbmpjaExMRnZNR0hMMDd1T0tzZjBvR25wMlRYQm1Ydm5NdVhsQm4wUzJIYjdHNzVmb21Xd2huaWxfai1BaEpHTDdnMTZlZGRlOVpSYlQxaXl6aVhNdzlMcE1NbzVkX09EWmlrMlYtYlFETGtrQ2czY2lRS1R6TjI2ZVRyX05WdDZCX0NSLXNySkpDaFBPel84eWJTSklsUlRyNWY4TG9JYzgwbHVZQzVpVk9ldk10cWNwb3JKbVFCZmxGWkFzTnJrOWJPeG0yckd3YlJR?oc=5",
           "source": "Premium Times Nigeria",
           "published": "2026-10-09T07:00:00.000Z"
+        },
+        {
+          "title": "Major Marketers Insists Petrol Price Capping Won’t Stabilise Market Structure",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbEFfYm9LNkNxOE1oRFNCZ3A5bnpwdTZ6QTgwNi1oOUY2dHBfVldOY0gwWS1raktXZDBua2FhUjlJcmZwYWJmUGpZX3M0Y3BDMk45UzhBYW82SWpFejZkX0w5dDNqT0NQekJXLU9CNTZobjRHNHcxY3FoZzZwX3J2QkNYNlBDU2hrU2R4c2R3NjRieEFuTHRFdlpfNHd0am5w?oc=5",
+          "source": "LEADERSHIP Newspapers",
+          "published": "2026-10-19T17:12:31.000Z"
+        },
+        {
+          "title": "Nigeria petrol discount costs may rise as oil prices climb",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXotVTlEQ25Ddm5JVjM2QmdWcWtVRGtHc0JZT3F3YnlLVllEN09pUngxSzdLdTJVeXVVYXptSGlZc21kUUYxSHpFMkg2eWxxalplNzRUYmZZUmxSdE4xc1V6M3VLTEVFaG9WV0RtSUtDU2ZPRHMtcEdaOVNNVDJ0WnRMYWU2REpGdEZfaUhJM3puV0xUcFNFdTgxZw?oc=5",
+          "source": "Traders Union",
+          "published": "2026-10-20T03:40:32.000Z"
         }
       ]
     },
@@ -73,6 +73,12 @@
           "published": "2026-10-20T06:06:03.000Z"
         },
         {
+          "title": "Naira faces exchange rate gap as dollar sells for ₦1,380 on black market",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUzNhclB5RVd1WGppUmctOU9ualF5YkxCRmEydFdycHFheVd4RmJQaGx5LTlvYktSeVVYb0JXenVzUEI0aTdLM0hZTmVLUERpWEdiRm5wVGhSOU9MRG5JUTFaWEl3UUlpNDFHamo0TXg1Mkt5UDVjQU5aUlAxSlduM2wyNTFyUVZsZzFTS0ZHT0FDeGJpZlJEc1RCN2VadV9WYmJmR2g3MVIxYXNmazUxQlpZbHJfNHdI?oc=5",
+          "source": "PM News Nigeria",
+          "published": "2026-10-20T10:03:26.000Z"
+        },
+        {
           "title": "Dollar to Naira Exchange Rate Today, October 19, 2026",
           "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE10d2E1cFdkOUFOWUVtdHlpdEJEUlVtS0dhcWo4VjBvSUluRVR3dHNxVEhIMHlBb1IzOS11U2JSUTlaOHprNjlEenc4U2QxV3FrQnNGbmx2V1E1dzJLNW15UDFidFpOR09tVGhsS0lWdHN4allIY3RFRWdJc2w5cW8?oc=5",
           "source": "Techeconomy",
@@ -82,7 +88,13 @@
           "title": "Naira Slides N2 to N1,333 Per Dollar at Official Market",
           "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNG0yOEdtRnFBRUNXOGUtcUJLX3oyc3N1ZmhIMEhLekNWUDJGd3Uwa0pTa3o4SWpNSUowaHcySVB1QXdVNzZzSmxPSkVlTmhHcU9IaURpM1JMUFhMemhwdWZwSU9aNHlUb3M3R2FQNWRPOGpPNm5nTVNVZ1hrS2FIR3F3dzZibVdTUmY1SHJGVU0?oc=5",
           "source": "Business Post Nigeria",
-          "published": "2026-10-20T08:16:43.000Z"
+          "published": "2026-10-20T08:16:55.000Z"
+        },
+        {
+          "title": "Naira depreciates against dollar at official FX market",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZWMyQXZnSThtd3Q0TXpueTkxb2tSMTh2cFJaek5HR1dzSUo2RDZxSVBzMkdTa2ZjNnVSS3diVFhvSkpINnFmTXdtOW1hb0RZOGlSVDVrSGlYMVRLUUR1Z2JGX3M3dl8yRWRwelFoYTJIRXE3RzhFRG1yMnI2R0xjT29fb1NIMlNNLUZQT1Fvb9IBlAFBVV95cUxOdDE5U0lfbGRlX1g2TndjMFVBbC1CVUlCakhHWXA2R05OOVJrQmE4Q1FEdmxTSHZSb2Q2WnZUZE45NFB3UTgzMzZjcUpiSDBHMlNENFUxZjg2b3pPM0dNcU9GQW95MDBGUk5GdWs3YXU2SmhpZGtaWGxuX1RmOGxRS2hEWU1jTlFGR0RNUG40RzJ5eGot?oc=5",
+          "source": "Tribune Online",
+          "published": "2026-10-20T10:07:42.000Z"
         },
         {
           "title": "Dollar-to-Naira exchange rate today, October 19, 2026: Naira continues depreciation against USD",
@@ -101,18 +113,6 @@
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSzBFUmNxekk1SFhCcktXNDB2WkNmTXYyM00wOVhNM1hBckdZdmpld0V0ZVFSU1hycnJiRGpTdWtQbVBQMW52alJIdzlYZVZxQjdDS3Q5WFdtclhjSTQwYnk0WV90bXFkNTlCTlllc3h2aTJzUDR1c0J2NzcyYWRHZ0x2eElRZHFIOTRvN0Y5a0gyd9IBlwFBVV95cUxOT0xQQ3dPeXk1aGJFeWhvNkhpdS1NQzdjemlRamRBOHlxaXBnN01TTFdxYllQMFNTVWJoSjZ2R2lVdDdGN0dZX2o1NlpmMVY1YTR1MkVuR2JQek8yUFJuS3lfUDhoN0E5TkhCWmJzNmN0Zjh1WWhtT0FuamVrTTBPV3lnT25rcGRwb3pyWmFxVHdRWVc4NVhV?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-19T05:45:34.000Z"
-        },
-        {
-          "title": "Naira Falls Against US Dollar, NFEM Rate Closed At NGN1332",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWE9TdUF4S09yRUYyRmstMXY2WGxMMXpoajRLSVpUQzRBcFpPWjVWTm9aamJaVEFGVjgwT1d3akZNTEZfd05hMU5wd2NMY3JTYTFBTG52Q1RHWDdVY1JpLWw2SzJxeHg2NE9NY1V1bkJSOHJLNE9NcFVPZTY0dXRKa2MzT2JCbENYekRudQ?oc=5",
-          "source": "MarketForces Africa",
-          "published": "2026-10-18T14:40:11.000Z"
-        },
-        {
-          "title": "Dollar to Naira Exchange Rate Today, October 14, 2026",
-          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGTGQtS1FUN0ZDdGd2aVZDTEEtX2JFWWZwN1YxQXgtYmNuM2FmdzhoSFpjczBsQTFicHJyS3BFTWxrTVBZa1FlMVJyZmdDb19YOG10N1dxMVFod01WZy04eERDcmczd2k4WTdGLUY1em5MQ211SWV1ampjbmxsVGc?oc=5",
-          "source": "Techeconomy",
-          "published": "2026-10-14T07:32:02.000Z"
         }
       ]
     },
@@ -262,16 +262,16 @@
           "published": "2025-09-04T07:00:00.000Z"
         },
         {
-          "title": "Nigerian govt approves NIN verification fees for passport services",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNVRmX3FKZmlUVmduakRFenBqVXl1UDhNY1k1WkhKTi0xQkNodUJTSEd4MkJFb21RWTFVRzRaV2IybGFNZ19fYnhSWnZHbVdMRFJrcHBpUXl4djZKODdrZ3I4R3VpS2FLUmd2cG42d0VHN0JzYy1XY18zSHZaRWdUSEdLeUdRM1ZWQnFROHAtU2pTVTJBakEzSFE4WkpGczBBQ3RtaXl4N3V0VHVwWlZXZnpGQVdaUUFKZm5GM0g1VHg?oc=5",
-          "source": "Premium Times Nigeria",
-          "published": "2023-03-13T07:00:00.000Z"
-        },
-        {
           "title": "International passport price in Nigeria: Nigerians react to FG passport fee increment",
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XUzRZNE5JMFVDdXZFQUJfUzdZMUtvZVI5RlhLN3UtYWtVTE9zemdnNnFvbU5HRGpxR1pqQTAwMjBNemlGZElXa2VwSXJKM29JVWd2RmNNbXRRaDhj0gFiQVVfeXFMTlgwYndFbHJyMV9lTUp0b1dNNzRxOFpSZ2NJajE3eFctRUJQWkhWS21CSExoUk9LQXhJcHNNdmdxV0lKc2RYckk2T0ZTdWxIVlI0ZUdEc0dyNlc5VWJ5ZnctVWc?oc=5",
           "source": "BBC",
           "published": "2025-08-29T07:00:00.000Z"
+        },
+        {
+          "title": "Nigerian govt approves NIN verification fees for passport services",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNVRmX3FKZmlUVmduakRFenBqVXl1UDhNY1k1WkhKTi0xQkNodUJTSEd4MkJFb21RWTFVRzRaV2IybGFNZ19fYnhSWnZHbVdMRFJrcHBpUXl4djZKODdrZ3I4R3VpS2FLUmd2cG42d0VHN0JzYy1XY18zSHZaRWdUSEdLeUdRM1ZWQnFROHAtU2pTVTJBakEzSFE4WkpGczBBQ3RtaXl4N3V0VHVwWlZXZnpGQVdaUUFKZm5GM0g1VHg?oc=5",
+          "source": "Premium Times Nigeria",
+          "published": "2023-03-13T07:00:00.000Z"
         },
         {
           "title": "FG hikes passport fees by 100% - Tribune Online",
@@ -287,16 +287,16 @@
       "query": "rice garri beans price Nigeria market",
       "items": [
         {
-          "title": "Consumers Pay More As Prices Of Eggs, Beans, Local Rice, Others Rise In March",
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRUZuREVCdHdjY1V5Vmx3akY1bWtwclBqWGpXT0pianJmRHVrZlBBMFhBQkduV0ttSXRVdEtKdXVscTVFajBkZVpfREtJMmVOT3dyWFRjN1I0VGtzMnVEOVlWM0pRRDR0Y1BQc09tMFpsS2cyRXU4QWlEVURhRkhMQTZvNXBMUE11dERYWVdSQ2VZVG1HZVlNYldvQlRMbGZicEdEUkpCOEh4eTgtOWl2b20tTQ?oc=5",
-          "source": "Channels Television",
-          "published": "2026-05-07T07:00:00.000Z"
-        },
-        {
           "title": "Food Prices Show Mixed Trend Across Lagos Markets",
           "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9yeHM2WEZsd2g3WFZzWmNETHdIR2NXaTl3Y0ltcG44SW9xMDJQSXJqMnJyUUp3S2lfRlRhRUxLTUw3eGFhbDhxQlk3ZXZCRTdzcG9zdDZwbWIxaDNkOGk4YkxxeF9tQjVzRXdQSkRpUVdrZWpIanFiUHZId1I0UQ?oc=5",
           "source": "Independent Newspaper Nigeria",
           "published": "2026-08-31T07:00:00.000Z"
+        },
+        {
+          "title": "Consumers Pay More As Prices Of Eggs, Beans, Local Rice, Others Rise In March",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRUZuREVCdHdjY1V5Vmx3akY1bWtwclBqWGpXT0pianJmRHVrZlBBMFhBQkduV0ttSXRVdEtKdXVscTVFajBkZVpfREtJMmVOT3dyWFRjN1I0VGtzMnVEOVlWM0pRRDR0Y1BQc09tMFpsS2cyRXU4QWlEVURhRkhMQTZvNXBMUE11dERYWVdSQ2VZVG1HZVlNYldvQlRMbGZicEdEUkpCOEh4eTgtOWl2b20tTQ?oc=5",
+          "source": "Channels Television",
+          "published": "2026-05-07T07:00:00.000Z"
         },
         {
           "title": "Market survey reveals fall in food prices",
@@ -311,16 +311,16 @@
           "published": "2026-05-06T07:00:00.000Z"
         },
         {
-          "title": "Food Prices Crash Further In Abuja",
-          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBMRWo4cUh5bEFJcFVOMWFIVUxZdjA1eDhUYk1JWjBpQVlYYWpFMlVaWEM3WWVmdmVESTZXOWJ6dmdHcFA0M1lQNVJLRkpiUjc4RlBocXdzaVZSd0xlaHQ5MnBEUVBOS1Z0U3c?oc=5",
-          "source": "The Whistler Newspaper",
-          "published": "2026-01-18T08:00:00.000Z"
-        },
-        {
           "title": "Imo, Abia traders speak on drop in price of food items",
           "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZ3lKV25kVVRIcTR5ekJJQ3NKSHdKbGpKSlR2MUFGc3IzMjB6dnlCN3JOTDZUM0xFRUljNTd5akdKTUNuMnBtTHJmQlFzY3FJSGp3NlFVU2tJWFBnaGIzV01rNkdGVEV6VEZIRXhmWTd4VTRqX0hMQlB1QkhNUjcxTFh1TjQtVmEtYXItamJnZVVmMlRIREdDc3VhNjdJcE84NlVkZ2ItY0ZRNThWTnVV?oc=5",
           "source": "Premium Times Nigeria",
           "published": "2025-11-17T08:00:00.000Z"
+        },
+        {
+          "title": "Food Prices Crash Further In Abuja",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBMRWo4cUh5bEFJcFVOMWFIVUxZdjA1eDhUYk1JWjBpQVlYYWpFMlVaWEM3WWVmdmVESTZXOWJ6dmdHcFA0M1lQNVJLRkpiUjc4RlBocXdzaVZSd0xlaHQ5MnBEUVBOS1Z0U3c?oc=5",
+          "source": "The Whistler Newspaper",
+          "published": "2026-01-18T08:00:00.000Z"
         },
         {
           "title": "Market Survey: Rice, garri, beans prices surge in Lagos",
