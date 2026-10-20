@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-20T14:18:17.608Z",
+  "checkedAt": "2026-10-20T19:15:23.868Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -18,16 +18,16 @@
           "published": "2026-10-20T12:47:03.000Z"
         },
         {
+          "title": "NLC, Falana, activists rally Nigerians against petrol price hike, hardship",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMTJvQjEySWFEd3pOd0Y3S0RQNHV5QWZfYjI3cWpGOTBmSmV6ZU1STEhJLVp2T3c4SGprLXFWYXo1V2RMV2dIOV82UTU4blRHQjBqcWFEa096c1FTRzFRSmgteEJFWmkyY3VQUFhSdnFGZ0RJeU5QUXFQNWVDX1lVMk8yYm1SNzVqbkNWZVRNV3pQLTFXQ1dQV2pDaTNNT3BRUUJzdDlwbDVtVklo0gGyAUFVX3lxTFBsMHROMzdFa1RDa2dNa2xLRF9IOU1fUktZblR3SFBEN0Y3X25PdlhhU29TUldJRVA4MWpsQ0N0akZmZUk0YzFoSGZXczdNcEZ4Nkx3cjU2V3VTaldwVzBmSEV1VFZUdV83MWwtSUgzb3RCa1RfZXZuNGpTWWhRMjF2Ylk0c1NkMzBsYXpKVUUwaXVYSmlsb2kxbndnZmctdDhsaXpJNjdEY3hVX1pEUDZaRkE?oc=5",
+          "source": "Vanguard News",
+          "published": "2026-10-19T00:51:47.000Z"
+        },
+        {
           "title": "Nigeria can contain petrol prices. But someone must finance the difference",
           "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQRkdZaE9GckFnbnhDZDlHQ2Q0LW9rcnEtUGhCZlZpLU9VMXdmT282T1ZYX004eFl2RldFeWlqMVhWTFQ5Y3VPOXNCenR5V0NBS3pHUmJ5SnpEVFVoWXV5V1UtTEJyODFsZkMzMWlSY1ppU1lUbFVyQk00WTdDV0NRaWd5RGItUFNRTy1fZzVEVEhFN29kRlZiOTY5LWp0ZFk?oc=5",
           "source": "TheCable",
           "published": "2026-10-19T19:41:00.000Z"
-        },
-        {
-          "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uncertain Relief",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOOHFQdkRhU2JkU0NPMldRMW5VM2JfUXF3UjNDeUlsNzFjZ0poVzlubzdOSFdnUzBxYzRES19yVHVuUEVpSGdlY01XYTRDSG5YajFiYzRBWWVtTElGSGFwbjNaZndRbmlHeWNOU2hNTEtGdl9UeEQ3bFZqTnZyWktqSmhEUVgwaW9uZ0psQWdkUUwxODZTYk5XRk9LM0JQaFk?oc=5",
-          "source": "THISDAYLIVE",
-          "published": "2026-10-20T02:10:41.000Z"
         },
         {
           "title": "Govt’s petrol discount may cost 0.4% of GDP – Report",
@@ -36,10 +36,10 @@
           "published": "2026-10-19T01:11:28.000Z"
         },
         {
-          "title": "NLC, Falana, activists rally Nigerians against petrol price hike, hardship",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMTJvQjEySWFEd3pOd0Y3S0RQNHV5QWZfYjI3cWpGOTBmSmV6ZU1STEhJLVp2T3c4SGprLXFWYXo1V2RMV2dIOV82UTU4blRHQjBqcWFEa096c1FTRzFRSmgteEJFWmkyY3VQUFhSdnFGZ0RJeU5QUXFQNWVDX1lVMk8yYm1SNzVqbkNWZVRNV3pQLTFXQ1dQV2pDaTNNT3BRUUJzdDlwbDVtVklo0gGyAUFVX3lxTFBsMHROMzdFa1RDa2dNa2xLRF9IOU1fUktZblR3SFBEN0Y3X25PdlhhU29TUldJRVA4MWpsQ0N0akZmZUk0YzFoSGZXczdNcEZ4Nkx3cjU2V3VTaldwVzBmSEV1VFZUdV83MWwtSUgzb3RCa1RfZXZuNGpTWWhRMjF2Ylk0c1NkMzBsYXpKVUUwaXVYSmlsb2kxbndnZmctdDhsaXpJNjdEY3hVX1pEUDZaRkE?oc=5",
-          "source": "Vanguard News",
-          "published": "2026-10-19T00:51:47.000Z"
+          "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uncertain Relief",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOOHFQdkRhU2JkU0NPMldRMW5VM2JfUXF3UjNDeUlsNzFjZ0poVzlubzdOSFdnUzBxYzRES19yVHVuUEVpSGdlY01XYTRDSG5YajFiYzRBWWVtTElGSGFwbjNaZndRbmlHeWNOU2hNTEtGdl9UeEQ3bFZqTnZyWktqSmhEUVgwaW9uZ0psQWdkUUwxODZTYk5XRk9LM0JQaFk?oc=5",
+          "source": "THISDAYLIVE",
+          "published": "2026-10-19T07:00:00.000Z"
         },
         {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
@@ -48,16 +48,16 @@
           "published": "2026-10-09T07:00:00.000Z"
         },
         {
-          "title": "Major Marketers Insists Petrol Price Capping Won’t Stabilise Market Structure",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbEFfYm9LNkNxOE1oRFNCZ3A5bnpwdTZ6QTgwNi1oOUY2dHBfVldOY0gwWS1raktXZDBua2FhUjlJcmZwYWJmUGpZX3M0Y3BDMk45UzhBYW82SWpFejZkX0w5dDNqT0NQekJXLU9CNTZobjRHNHcxY3FoZzZwX3J2QkNYNlBDU2hrU2R4c2R3NjRieEFuTHRFdlpfNHd0am5w?oc=5",
-          "source": "LEADERSHIP Newspapers",
-          "published": "2026-10-19T17:12:31.000Z"
+          "title": "Petrol Price Relief Could Cost 0.4% of GDP – BMI",
+          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5SVzhuWWNvRXVhUUtfaWwyeGxuWnFYUkZvMm5nZHBJZzJZQXBnRFozOXdDUW1fbDhKbWw0Sm1meHlRTWNpOE5oTGxaR3JKUWtBVE9xa1pFNVRQWmIyelBzU295SlhaNmVK?oc=5",
+          "source": "Economic Confidential",
+          "published": "2026-10-20T13:46:13.000Z"
         },
         {
-          "title": "Nigeria petrol discount costs may rise as oil prices climb",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXotVTlEQ25Ddm5JVjM2QmdWcWtVRGtHc0JZT3F3YnlLVllEN09pUngxSzdLdTJVeXVVYXptSGlZc21kUUYxSHpFMkg2eWxxalplNzRUYmZZUmxSdE4xc1V6M3VLTEVFaG9WV0RtSUtDU2ZPRHMtcEdaOVNNVDJ0WnRMYWU2REpGdEZfaUhJM3puV0xUcFNFdTgxZw?oc=5",
-          "source": "Traders Union",
-          "published": "2026-10-20T03:40:32.000Z"
+          "title": "Fuel price update in Nigeria weeks after Tinubu’s N1,350/litre announcement",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSzd3bHpXNC0zNDFvWUhtcl9tQ29kSVIzaU1DRDR3QVZsQlRLQjlhRXk5XzhRTVBNSUVFX1VvSG83cDFndF9LTFNaazczbmg0cTdBYXFvWThGRXZyQllPWkNoSVJvbVZNTDZUb0hVeUdJQVpnUHFQMEtMajdvMkZTTElDRDdlUU9mcVo5ZEF2S3kzeTVCUUhFRlUwdERCOE05UVoxNXh1RnBqQQ?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-19T09:13:28.000Z"
         }
       ]
     },
@@ -85,22 +85,16 @@
           "published": "2026-10-19T09:57:20.000Z"
         },
         {
-          "title": "Naira Slides N2 to N1,333 Per Dollar at Official Market",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNG0yOEdtRnFBRUNXOGUtcUJLX3oyc3N1ZmhIMEhLekNWUDJGd3Uwa0pTa3o4SWpNSUowaHcySVB1QXdVNzZzSmxPSkVlTmhHcU9IaURpM1JMUFhMemhwdWZwSU9aNHlUb3M3R2FQNWRPOGpPNm5nTVNVZ1hrS2FIR3F3dzZibVdTUmY1SHJGVU0?oc=5",
-          "source": "Business Post Nigeria",
-          "published": "2026-10-20T08:16:55.000Z"
-        },
-        {
           "title": "Naira depreciates against dollar at official FX market",
           "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZWMyQXZnSThtd3Q0TXpueTkxb2tSMTh2cFJaek5HR1dzSUo2RDZxSVBzMkdTa2ZjNnVSS3diVFhvSkpINnFmTXdtOW1hb0RZOGlSVDVrSGlYMVRLUUR1Z2JGX3M3dl8yRWRwelFoYTJIRXE3RzhFRG1yMnI2R0xjT29fb1NIMlNNLUZQT1Fvb9IBlAFBVV95cUxOdDE5U0lfbGRlX1g2TndjMFVBbC1CVUlCakhHWXA2R05OOVJrQmE4Q1FEdmxTSHZSb2Q2WnZUZE45NFB3UTgzMzZjcUpiSDBHMlNENFUxZjg2b3pPM0dNcU9GQW95MDBGUk5GdWs3YXU2SmhpZGtaWGxuX1RmOGxRS2hEWU1jTlFGR0RNUG40RzJ5eGot?oc=5",
           "source": "Tribune Online",
           "published": "2026-10-20T10:07:42.000Z"
         },
         {
-          "title": "Dollar-to-Naira exchange rate today, October 19, 2026: Naira continues depreciation against USD",
-          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPV2hWRFBwc0VHejNzYkM1a1l5TlR1aWpIWmJjaUx6YnhJdnpFM0QwdkJzSDNxYzhwSFE5YkZoM2VuQzZxM21lVzJmMFdrM1E0RFB2d21WOFNIaDFUS1VhWEMtVlB3VWtHZDVWQk9YbTRvNGJ2cHlPVkM5SEw3RGk0blQ5Q1BTQ1lBWmhUcVZlbkFVd3hWbWZZelFPeEZSTEZidU8yTFMxSGxNcUNIUWJUam5hWEFoMDZ0TUotdll5RW9waUk?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-19T19:09:31.000Z"
+          "title": "Naira Slides N2 to N1,333 Per Dollar at Official Market",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNG0yOEdtRnFBRUNXOGUtcUJLX3oyc3N1ZmhIMEhLekNWUDJGd3Uwa0pTa3o4SWpNSUowaHcySVB1QXdVNzZzSmxPSkVlTmhHcU9IaURpM1JMUFhMemhwdWZwSU9aNHlUb3M3R2FQNWRPOGpPNm5nTVNVZ1hrS2FIR3F3dzZibVdTUmY1SHJGVU0?oc=5",
+          "source": "Business Post Nigeria",
+          "published": "2026-10-20T08:16:55.000Z"
         },
         {
           "title": "Dollar to Naira Black Market Exchange Rate Today, Monday, October 19, 2026",
@@ -113,6 +107,12 @@
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSzBFUmNxekk1SFhCcktXNDB2WkNmTXYyM00wOVhNM1hBckdZdmpld0V0ZVFSU1hycnJiRGpTdWtQbVBQMW52alJIdzlYZVZxQjdDS3Q5WFdtclhjSTQwYnk0WV90bXFkNTlCTlllc3h2aTJzUDR1c0J2NzcyYWRHZ0x2eElRZHFIOTRvN0Y5a0gyd9IBlwFBVV95cUxOT0xQQ3dPeXk1aGJFeWhvNkhpdS1NQzdjemlRamRBOHlxaXBnN01TTFdxYllQMFNTVWJoSjZ2R2lVdDdGN0dZX2o1NlpmMVY1YTR1MkVuR2JQek8yUFJuS3lfUDhoN0E5TkhCWmJzNmN0Zjh1WWhtT0FuamVrTTBPV3lnT25rcGRwb3pyWmFxVHdRWVc4NVhV?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-19T05:45:34.000Z"
+        },
+        {
+          "title": "Dollar-to-Naira exchange rate today, October 19, 2026: Naira continues depreciation against USD",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPV2hWRFBwc0VHejNzYkM1a1l5TlR1aWpIWmJjaUx6YnhJdnpFM0QwdkJzSDNxYzhwSFE5YkZoM2VuQzZxM21lVzJmMFdrM1E0RFB2d21WOFNIaDFUS1VhWEMtVlB3VWtHZDVWQk9YbTRvNGJ2cHlPVkM5SEw3RGk0blQ5Q1BTQ1lBWmhUcVZlbkFVd3hWbWZZelFPeEZSTEZidU8yTFMxSGxNcUNIUWJUam5hWEFoMDZ0TUotdll5RW9waUk?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-19T19:09:31.000Z"
         }
       ]
     },
