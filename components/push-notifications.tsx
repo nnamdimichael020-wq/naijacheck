@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { InlineSpinner, useDelayedFlag } from "@/components/ui/inline-spinner";
 
 const NOT_NOW_KEY = "naijacheck:push-not-now-until:v1";
 const VISITS_KEY = "naijacheck:meaningful-visits:v1";
@@ -367,6 +368,8 @@ const IOS_INSTALL_TEXT =
 export function PushPrompt() {
   const [open, setOpen] = React.useState(false);
   const push = usePushState(open);
+  // Button-only feedback: a tiny spinner if enabling takes longer than 150 ms. No page-level loader.
+  const enablingSpinner = useDelayedFlag(push.state === "enabling");
 
   React.useEffect(() => {
     // Never requests permission here — only decides whether to show the sheet.
@@ -446,8 +449,10 @@ export function PushPrompt() {
               type="button"
               onClick={push.enable}
               disabled={push.state === "enabling" || push.state === "subscribed" || push.state === "checking"}
-              className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-60"
+              aria-busy={push.state === "enabling" || undefined}
+              className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-60"
             >
+              {enablingSpinner ? <InlineSpinner /> : null}
               {push.state === "enabling" ? "Enabling…" : push.state === "subscribed" ? "Enabled" : "Enable alerts"}
             </button>
             <button type="button" onClick={notNow} className="rounded-md border px-4 py-2 text-sm font-semibold">
@@ -467,6 +472,8 @@ export function PushPrompt() {
 
 export function PushSettings() {
   const push = usePushState(true);
+  const enablingSpinner = useDelayedFlag(push.state === "enabling");
+  const clearingSpinner = useDelayedFlag(push.state === "unsubscribing");
   const showInstall = push.state === "ios-install";
   return (
     <section aria-labelledby="push-settings-title" className="rounded-xl border p-4">
@@ -498,8 +505,10 @@ export function PushSettings() {
             type="button"
             onClick={push.disable}
             disabled={push.state === "unsubscribing"}
-            className="rounded-md border border-destructive px-4 py-2 text-sm font-semibold text-destructive disabled:opacity-60"
+            aria-busy={push.state === "unsubscribing" || undefined}
+            className="inline-flex items-center gap-2 rounded-md border border-destructive px-4 py-2 text-sm font-semibold text-destructive disabled:opacity-60"
           >
+            {clearingSpinner ? <InlineSpinner /> : null}
             {push.state === "unsubscribing" ? "Clearing…" : "Unsubscribe and clear"}
           </button>
         ) : (
@@ -507,8 +516,10 @@ export function PushSettings() {
             type="button"
             onClick={push.enable}
             disabled={["checking", "unavailable", "unsupported", "enabling", "denied", "ios-install"].includes(push.state)}
-            className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-60"
+            aria-busy={push.state === "enabling" || undefined}
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-60"
           >
+            {enablingSpinner ? <InlineSpinner /> : null}
             {push.state === "enabling" ? "Enabling…" : showInstall ? "Install to enable" : "Enable alerts"}
           </button>
         )}

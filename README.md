@@ -23,7 +23,8 @@ Node 20.9 or later is required. `.nvmrc` pins Node 20 to match the configured Cl
 | `npm run monitor:test` | Parser tests against captured source responses, plus the bounded-history and chart-series rules. |
 | `npm run chart:test` | Renders the history charts with `react-dom/server` and asserts the honest empty state, real-point-only polylines, non-colour series cues, the focusable plot, the crosshair/HUD/axis pills on the stored vertex, the detail row and the disabled-range copy. |
 | `npm run chartui:test` | Unit-tests the chart interaction helpers (window availability, nearest-reading snap, crosshair selection, HUD copy, callout anchoring/stacking, the scrub pointer policy, deltas, keyboard steps, pointer mapping) and the `/charts` page registry (unique slugs, honest copy, no "live" claim). |
-| `npm test` | Runs every guard: `site:test`, `share:test`, `quiz:test`, `govhowto:test`, `images:test`, `hero:test`, `headline:test`, `monitor:test`, `chart:test`, `chartui:test`, `push:test`, `telegram:test` and `nbs:test`. |
+| `npm run navfeedback:test` | Navigation feedback policy. Fast navigations show nothing. The 3px top strip appears only past 150 ms and the logo pulse only past 300 ms, and both clear at commit with no minimum display time. Hash, same-page and query-only changes are ignored. Marked actions never drive the strip. The CSS is static by default with motion only under `no-preference`, `reduce` kills it, and there are no `loading.tsx` screens. |
+| `npm test` | Runs every guard: `site:test`, `share:test`, `quiz:test`, `govhowto:test`, `images:test`, `hero:test`, `headline:test`, `monitor:test`, `chart:test`, `chartui:test`, `navfeedback:test`, `push:test`, `telegram:test` and `nbs:test`. |
 | `npm run share:test` | Proves the WhatsApp and X prefills carry only a public title, one dated factual line and the canonical URL; no unverified @handle, tracking parameter or private origin can leak, and every generated page gets a dated line. |
 | `npm run telegram:test` | Proves Telegram and Web Push share one genuine-change gate: no send on baseline, flat, below-threshold or failed-monitor runs, one send per genuine change, six-hour coalescing, silent no-op when unconfigured. |
 | `npm run generate` | Runs `scripts/generate-content.ts`. Builds 205 long-form article pages into `content/generated/articles.json` and `public/search-index.json`. |
@@ -180,6 +181,21 @@ and not cached.
 
 **Trends:** the trend board reads news and Wikipedia. X and TikTok are not read, because that needs a paid API.
 
+## Navigation feedback (no full-screen loader)
+
+Page changes get **light** feedback only:
+- a 3px brand-green strip at the top when a client navigation is still pending after 150 ms;
+- a small header-logo pulse after 300 ms;
+- both cleared in the frame the new page renders.
+
+Prefetched and fast navigations show nothing. With `prefers-reduced-motion: reduce` the strip is static and the
+logo never moves. Push and tool buttons show a tiny spinner on the button only. There is no full-screen or branded
+loader and no `loading.tsx`; the tests and `audit:static` enforce this.
+
+Switches and thresholds live in `NAV_FEEDBACK_CONFIG` (`lib/nav-feedback.ts`). Behaviour on fast vs slow
+networks, the phone check and the rules are in
+[`docs/runbooks/navigation-feedback.md`](docs/runbooks/navigation-feedback.md).
+
 ## Cloudflare Workers notes
 
 - `wrangler.jsonc` binds the static export in `out/` as `ASSETS`; `/api/*` requests run through `worker/index.ts`.
@@ -210,7 +226,7 @@ and not cached.
 
 ## Release checks
 
-Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run chart:test`, `npm run chartui:test`, `npm run site:test`, `npm run push:test`, `npm run telegram:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/charts`, `/charts/parallel-usd-buy`, `/charts/depot-petrol`, `/prices/fuel`, `/api/geo`, `/api/push/config`, an unauthenticated `/api/telegram/test`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
+Run `npm ci`, `npm run typecheck`, `npm run lint`, `npm run monitor:test`, `npm run chart:test`, `npm run chartui:test`, `npm run navfeedback:test`, `npm run site:test`, `npm run push:test`, `npm run telegram:test`, `npm run build`, `npm run audit:static -- /tmp/audit.json`, and `npx wrangler deploy --dry-run`. Then use `npx wrangler dev --local --ip 0.0.0.0` to smoke-test `/`, `/status`, `/charts`, `/charts/parallel-usd-buy`, `/charts/depot-petrol`, `/prices/fuel`, `/api/geo`, `/api/push/config`, an unauthenticated `/api/telegram/test`, an unknown `/api/*`, and a missing static route. Browser-only keyboard, install/offline and Web Share behavior must be tested in a real browser before deployment; a successful static build is not that test.
 
 ## Licence
 

@@ -103,3 +103,102 @@
     transform: none !important;
   }
 }
+
+/* ---------------------------------------------------------------------------------------------
+ * Light navigation feedback (lib/nav-feedback.ts, docs/runbooks/navigation-feedback.md).
+ * - .nav-progress: a 3px strip fixed to the top edge, aria-hidden, pointer-events: none. It is
+ *   shown only while a client navigation is still pending after 150 ms, so it can never block,
+ *   cover or delay content. There is deliberately no full-screen or branded loader.
+ * - html[data-nav-slow] .nav-logo-mark: small header-logo pulse, only past ~300 ms.
+ * - .inline-spinner: tiny ring for a pending button (push, tools, quiz) — never an overlay.
+ * Static by default (static strip, still logo, still ring); motion only under `no-preference`;
+ * `reduce` kills animation, transition and transform.
+ * ------------------------------------------------------------------------------------------- */
+.nav-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 70;
+  height: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.nav-progress-bar {
+  height: 100%;
+  background-color: hsl(var(--primary));
+  transform-origin: left center;
+}
+
+.nav-progress[data-nav-progress="loading"] {
+  opacity: 1;
+}
+
+.inline-spinner {
+  display: inline-block;
+  flex: none;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 9999px;
+  vertical-align: -0.15em;
+}
+
+@keyframes nav-progress-grow {
+  from {
+    transform: scaleX(0.08);
+  }
+  to {
+    transform: scaleX(0.94);
+  }
+}
+
+@keyframes nav-logo-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.72;
+  }
+}
+
+@keyframes inline-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav-progress[data-nav-progress="loading"] .nav-progress-bar {
+    animation: nav-progress-grow 12s cubic-bezier(0.1, 0.7, 0.2, 1) forwards;
+  }
+  .nav-progress[data-nav-progress="done"] {
+    transition: opacity 200ms ease-out 100ms;
+  }
+  .nav-progress[data-nav-progress="done"] .nav-progress-bar {
+    transform: scaleX(1);
+    transition: transform 150ms ease-out;
+  }
+  html[data-nav-slow] .nav-logo-mark {
+    animation: nav-logo-pulse 1.2s ease-in-out infinite;
+  }
+  .inline-spinner {
+    animation: inline-spin 0.8s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-progress,
+  .nav-progress-bar,
+  .nav-logo-mark,
+  .inline-spinner {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

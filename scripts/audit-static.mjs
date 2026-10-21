@@ -101,6 +101,21 @@ const heroMotion = {
   videoOrAudioTagsOnRoutes: [],
 };
 const forbiddenMotionRouteRe = /^(\/status|\/tools(?:\/|$)|\/prices(?:\/|$)|\/hustle(?:\/|$))/;
+// Light navigation feedback (lib/nav-feedback.ts, docs/runbooks/navigation-feedback.md): every page that
+// ships the site shell carries exactly ONE idle, aria-hidden 3px top strip and ONE header logo mark (the
+// only element the slow-navigation pulse may animate); loader-style Tailwind animations must be
+// motion-safe; and no route may add a loading.tsx screen, so a page transition can never swap content
+// for a full-screen or branded loader. The offline shell is a static public/ file without the site shell.
+const navFeedbackExcludedRoutes = new Set(["/offline"]);
+const navFeedback = {
+  pagesChecked: 0,
+  pagesMissingProgressBar: [],
+  pagesWithMultipleProgressBars: [],
+  progressBarNotIdleInHtml: [],
+  progressBarNotAriaHidden: [],
+  pagesWithoutSingleLogoMark: [],
+  unsafeLoaderAnimations: [],
+};
 for (const [route, file] of routes) {
   const html = fs.readFileSync(file, "utf8");
   const title = text(html, /<title[^>]*>([\s\S]*?)<\/title>/i);
@@ -153,6 +168,26 @@ for (const [route, file] of routes) {
     else if (!hasMotionClass) heroMotion.allowlistedHeroMissingMotionClass.push(route);
   }
   if (/<video\b|<audio\b/i.test(htmlNoScripts)) heroMotion.videoOrAudioTagsOnRoutes.push(route);
+  // ---- light navigation feedback (client-component markup, not the RSC payload) ----
+  if (!navFeedbackExcludedRoutes.has(route)) {
+    navFeedback.pagesChecked += 1;
+    const strips = [...htmlNoScripts.matchAll(/<[a-z]+\b[^>]*\bdata-nav-progress=["']([^"']*)["'][^>]*>/gi)];
+    if (!strips.length) navFeedback.pagesMissingProgressBar.push(route);
+    if (strips.length > 1) navFeedback.pagesWithMultipleProgressBars.push({ route, count: strips.length });
+    for (const [tag, state] of strips) {
+      if (state !== "idle") navFeedback.progressBarNotIdleInHtml.push({ route, state });
+      if (!/\baria-hidden=["']true["']/i.test(tag)) navFeedback.progressBarNotAriaHidden.push(route);
+    }
+    const logoMarks = (htmlNoScripts.match(/\bclass=["'][^"']*\bnav-logo-mark\b/g) ?? []).length;
+    if (logoMarks !== 1) navFeedback.pagesWithoutSingleLogoMark.push({ route, count: logoMarks });
+  }
+  for (const classAttr of htmlNoScripts.matchAll(/\bclass=["']([^"']*)["']/g)) {
+    const unsafe = classAttr[1].split(/\s+/).filter((token) => /^animate-(spin|bounce|ping|pulse)$/.test(token));
+    if (unsafe.length) {
+      navFeedback.unsafeLoaderAnimations.push({ route, classes: unsafe });
+      break;
+    }
+  }
   if (pureDataRouteRe.test(route) && !route.startsWith("/prices/markets/") && (hasHeroFigure || hasBodyFigure)) {
     pureDataPagesWithArticleImages.push(route);
   }
@@ -324,6 +359,39 @@ heroMotion.css = {
   reduceDisablesAnimation: reduceBlocks.some((b) => /\.article-hero-motion[^{]*\{[^}]*animation\s*:\s*none/i.test(b)),
   reduceDisablesTransform: reduceBlocks.some((b) => /\.article-hero-motion[^{]*\{[^}]*transform\s*:\s*none/i.test(b)),
 };
+// Navigation feedback CSS: the strip is a fixed, thin, pointer-transparent top bar; nav/spinner motion
+// exists only under `no-preference`; the logo animates only under html[data-nav-slow]; `reduce` kills it.
+navFeedback.routeLoadingScreens = walk(path.join(process.cwd(), "app"))
+  .filter((f) => /(^|[\\/])loading\.(t|j)sx?$/.test(f))
+  .map((f) => path.relative(process.cwd(), f).replaceAll(path.sep, "/"));
+const cssRules = (source) =>
+  [...source.replace(/\/\*[\s\S]*?\*\//g, "").matchAll(/([^{}]+)\{([^{}]*)\}/g)].map((m) => ({ selector: m[1].trim(), body: m[2] }));
+const navClassRe = /\.(nav-progress|nav-progress-bar|nav-logo-mark|inline-spinner)\b/;
+const outsideMotionGates = reduceBlocks.reduce((acc, b) => acc.split(b).join(""), outsideNoPref);
+const stripRule = cssRules(outsideMotionGates).find((r) => r.selector === ".nav-progress");
+const stripHeightPx = Number(stripRule?.body.match(/(?:^|;)\s*height:\s*(\d+(?:\.\d+)?)px/)?.[1] ?? NaN);
+const animatedLogoRules = cssRules(cssText).filter((r) => /\.nav-logo-mark/.test(r.selector) && /animation\s*:(?!\s*none\b)/.test(r.body));
+navFeedback.css = {
+  stripRulePresent: Boolean(stripRule),
+  stripFixedTop: Boolean(stripRule && /position:\s*fixed/.test(stripRule.body) && /(?:^|;)\s*(?:top:\s*0|inset:\s*0)/.test(stripRule.body)),
+  stripIgnoresPointer: Boolean(stripRule && /pointer-events:\s*none/.test(stripRule.body)),
+  stripHeightPx,
+  stripIsThin: stripHeightPx > 0 && stripHeightPx <= 4,
+  staticByDefault: !cssRules(outsideMotionGates).some((r) => navClassRe.test(r.selector) && /(animation|transition)\s*:(?!\s*none\b)/.test(r.body)),
+  logoPulseOnlyWhenSlow:
+    animatedLogoRules.length > 0 &&
+    animatedLogoRules.every((r) => /^html\[data-nav-slow\]\s+\.nav-logo-mark$/.test(r.selector)) &&
+    noPrefBlocks.some((b) => /html\[data-nav-slow\]\s+\.nav-logo-mark/.test(b)),
+  reduceDisablesMotion: cssRules(reduceBlocks.join("\n")).some((r) => {
+    const selectors = r.selector.split(/\s*,\s*/);
+    return (
+      [".nav-progress", ".nav-progress-bar", ".nav-logo-mark", ".inline-spinner"].every((c) => selectors.includes(c)) &&
+      /animation:\s*none/.test(r.body) &&
+      /transition:\s*none/.test(r.body) &&
+      /transform:\s*none/.test(r.body)
+    );
+  }),
+};
 const findings = {
   generatedHtmlRoutes: rows.length,
   sitemapUrls: sitemap.length,
@@ -350,6 +418,7 @@ const findings = {
     articleImagesMissingDimensionsOrAlt,
   },
   heroMotion,
+  navFeedback,
   wrongCanonicalHost: rows.filter((r) => r.canonical && !r.canonical.startsWith(expectedOrigin)).map((r) => ({ route: r.route, canonical: r.canonical })),
   missing: {
     title: rows.filter((r) => !r.title).map((r) => r.route),
@@ -401,6 +470,20 @@ if (
   !heroMotion.css.animatesOnlyUnderNoPreference ||
   !heroMotion.css.driftLivesUnderNoPreference ||
   !heroMotion.css.reduceDisablesAnimation ||
-  !heroMotion.css.reduceDisablesTransform
+  !heroMotion.css.reduceDisablesTransform ||
+  navFeedback.pagesMissingProgressBar.length ||
+  navFeedback.pagesWithMultipleProgressBars.length ||
+  navFeedback.progressBarNotIdleInHtml.length ||
+  navFeedback.progressBarNotAriaHidden.length ||
+  navFeedback.pagesWithoutSingleLogoMark.length ||
+  navFeedback.unsafeLoaderAnimations.length ||
+  navFeedback.routeLoadingScreens.length ||
+  !navFeedback.css.stripRulePresent ||
+  !navFeedback.css.stripFixedTop ||
+  !navFeedback.css.stripIgnoresPointer ||
+  !navFeedback.css.stripIsThin ||
+  !navFeedback.css.staticByDefault ||
+  !navFeedback.css.logoPulseOnlyWhenSlow ||
+  !navFeedback.css.reduceDisablesMotion
 )
   process.exitCode = 1;

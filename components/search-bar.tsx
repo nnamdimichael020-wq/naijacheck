@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { SearchEntry } from "@/lib/types";
@@ -69,6 +70,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
   const [open, setOpen] = React.useState(false);
   const [active, setActive] = React.useState(0);
   const [failed, setFailed] = React.useState(false);
+  const router = useRouter();
 
   const load = React.useCallback(async () => {
     if (index || failed) return;
@@ -129,7 +131,12 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
               setActive((a) => Math.max(a - 1, 0));
             }
             if (e.key === "Enter" && results[active]) {
-              window.location.href = results[active].path;
+              // Client navigation (same as tapping a result): lighter than a full reload on 3G and
+              // gets the light navigation feedback. Blur so the phone keyboard closes as it did.
+              e.preventDefault();
+              setOpen(false);
+              e.currentTarget.blur();
+              router.push(results[active].path);
             }
           }}
           role="combobox"
