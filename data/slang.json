@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-20T23:52:24.580Z",
+  "updatedAt": "2026-10-21T04:44:07.928Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "japa",
     "detty-december",
-    "achalugo",
     "oblee",
+    "achalugo",
     "chop-life"
   ],
   "terms": [
@@ -60,7 +60,7 @@
       "term": "Achalugo",
       "kind": "slang",
       "trend": "steady",
-      "trendScore": 50,
+      "trendScore": 25,
       "confidence": "medium",
       "meaning": "An Igbo expression for a beautiful, graceful woman. Some people also use it for a carefree, go-with-the-flow vibe.",
       "detail": "Achalugo is Igbo. Most usage is a compliment meaning a woman of beauty, grace and character, with some online sources translating it as 'God's treasure' or 'the abode of an eagle'. Gen Z also picked it up for its chill energy, so you will see it used for someone who is calm and unbothered. Check the context before you use it on someone.",
@@ -75,7 +75,7 @@
       ],
       "platform": "TikTok, WhatsApp status",
       "source": "Premium Times year-in-review (Dec 2025), public TikTok explainers (Mar-Aug 2026), Awajis dictionary (Aug 2026). Translations vary.",
-      "mentions7d": 2
+      "mentions7d": 1
     },
     {
       "slug": "sope-purr",
@@ -306,7 +306,7 @@
       "term": "Detty December",
       "kind": "trend",
       "trend": "rising",
-      "trendScore": 100,
+      "trendScore": 75,
       "confidence": "high",
       "meaning": "The December festive season when diaspora Africans come home and spend heavily on parties, travel and fashion.",
       "detail": "Detty December started as a Ghanaian and Nigerian festive phrase. It describes the nightlife and money flow when returning diaspora folk spend in Lagos, Accra and other cities. For traders, it is the busiest season of the year: food, fashion and events see huge spikes.",
@@ -321,7 +321,7 @@
       ],
       "platform": "Instagram, TikTok",
       "source": "Seasonal usage, 2024-2026.",
-      "mentions7d": 4
+      "mentions7d": 3
     },
     {
       "slug": "sabi",
