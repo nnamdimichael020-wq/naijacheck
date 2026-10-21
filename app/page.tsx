@@ -468,6 +468,47 @@ export default function HomePage() {
 
       <AdSlot variant="inline" index={1} />
 
+      {/* Bank codes — new Phase B hub (mobile-friendly, consistent) */}
+      <section aria-labelledby="codes-h" className="space-y-3 rounded-xl border bg-card/40 p-4">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h2 id="codes-h" className="text-lg font-bold tracking-tight">Bank codes — sort codes & USSD codes</h2>
+            <p className="mt-1 max-w-3xl text-sm text-muted-foreground">
+              Look up any Nigerian bank’s 3-digit sort (NIP) code or its <code>*901#</code>-style USSD code — copied in one tap, every row with a source link and last-verified date. No guesswork, 12 banks to start.
+            </p>
+          </div>
+          <Badge variant="accent">12 banks · verified {`2026-10-21`}</Badge>
+        </div>
+        <ul className="flex flex-wrap gap-2 text-sm">
+          <li>
+            <Link href="/codes" className="inline-flex min-h-11 items-center rounded-full border bg-background px-4 py-1.5 font-semibold hover:border-primary hover:text-primary">
+              Codes hub — sort vs USSD →
+            </Link>
+          </li>
+          <li>
+            <Link href="/codes/banks" className="inline-flex min-h-11 items-center rounded-full bg-primary px-4 py-1.5 font-semibold text-primary-foreground hover:bg-primary/90">
+              Search bank codes
+            </Link>
+          </li>
+        </ul>
+        <p className="text-xs text-muted-foreground">
+          Popular:{" "}
+          <Link href="/codes/banks/access-bank" className="font-semibold text-primary underline-offset-2 hover:underline">Access 044 *901#</Link>
+          {" · "}
+          <Link href="/codes/banks/gtbank" className="font-semibold text-primary underline-offset-2 hover:underline">GTB 058 *737#</Link>
+          {" · "}
+          <Link href="/codes/banks/zenith-bank" className="font-semibold text-primary underline-offset-2 hover:underline">Zenith 057 *966#</Link>
+          {" · "}
+          <Link href="/codes/banks/first-bank" className="font-semibold text-primary underline-offset-2 hover:underline">FirstBank 011 *894#</Link>
+          {" · "}
+          <Link href="/codes/banks/uba" className="font-semibold text-primary underline-offset-2 hover:underline">UBA 033 *919#</Link>
+          {" · "}
+          <Link href="/codes/banks/fidelity-bank" className="font-semibold text-primary underline-offset-2 hover:underline">Fidelity 070 *770#</Link>
+          {" · "}
+          <Link href="/status" className="font-medium underline-offset-2 hover:underline">how we verify (/status)</Link>.
+        </p>
+      </section>
+
       {/* Tools */}
       <section aria-labelledby="tools-h" className="space-y-4">
         <h2 id="tools-h" className="text-2xl font-bold tracking-tight">
