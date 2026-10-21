@@ -8,9 +8,9 @@
  */
 import { LIVE_FUEL, LIVE_FX } from "@/lib/live";
 import type { HistoryPoint } from "@/lib/history";
+import type { SeriesMarker, SeriesTone } from "@/lib/chart-format";
 
-export type SeriesMarker = "circle" | "square" | "triangle" | "diamond";
-export type SeriesTone = "primary" | "amber" | "sky" | "violet";
+export type { SeriesMarker, SeriesTone } from "@/lib/chart-format";
 
 export type ChartSeriesSpec = {
   /** Dataset id in data/history.json, e.g. "parallel-usd-ngn-buy". */
@@ -31,32 +31,9 @@ export type ChartSeriesSpec = {
 
 export type ChartSeries = { spec: ChartSeriesSpec; points: HistoryPoint[] };
 
-/** Tailwind text colours. Series also differ by dash and marker, never by colour alone. */
-export const TONE_CLASS: Record<SeriesTone, string> = {
-  primary: "text-primary",
-  amber: "text-amber-600 dark:text-amber-400",
-  sky: "text-sky-700 dark:text-sky-400",
-  violet: "text-violet-700 dark:text-violet-400",
-};
-
-const group3 = (digits: string) => digits.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-/** Deterministic naira formatting (no Intl) so server HTML and client hydration always match. */
-export function formatChartValue(value: number, fractionDigits?: number, unitSuffix?: string): string {
-  if (!Number.isFinite(value)) return "Unavailable";
-  const digits = fractionDigits ?? (Number.isInteger(value) ? 0 : 2);
-  const fixed = Math.abs(value).toFixed(digits);
-  const [whole, decimal] = fixed.split(".");
-  return `₦${group3(whole)}${decimal ? `.${decimal}` : ""}${unitSuffix ?? ""}`;
-}
-
-/** Axis labels stay narrow on phones: fewer decimals when the plotted range is wide. */
-export function axisDigits(span: number): number {
-  if (span <= 0) return 0;
-  if (span >= 20) return 0;
-  if (span >= 2) return 1;
-  return 2;
-}
+/* Tone classes and value formatting live in lib/chart-format.ts so browser components never need
+ * the live JSON snapshots that this module imports; they are re-exported here for every caller. */
+export { TONE_CLASS, axisDigits, formatChartValue } from "@/lib/chart-format";
 
 const ABOKI_URL = LIVE_FX.blackMarketSource?.url ?? "https://abokiforex.app/";
 const CBN_URL = LIVE_FX.officialSource?.url ?? "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html";

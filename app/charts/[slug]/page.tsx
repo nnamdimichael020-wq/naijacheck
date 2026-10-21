@@ -148,10 +148,12 @@ function PageBody({ chartPage }: { chartPage: ChartPage }) {
           Chart
         </h2>
         <p className="text-sm text-muted-foreground">
-          Hover, drag a finger across the plot, or focus it and use ← → (Home and End jump to the ends). The detail row
-          under the chart repeats the selected reading&apos;s own WAT time, value and its change against the previous
-          plotted reading. 7D, 30D and ALL filter to readings that actually exist; a range with fewer than two stored
-          readings stays disabled and says why.
+          Hover, drag a finger across the plot, or focus it and use ← → (Home and End jump to the ends). The crosshair
+          snaps to the nearest stored reading — never to a price between two readings — and the price tag above the
+          plot, the pill on the value axis, the time pill under the plot and the detail row all repeat that
+          reading&apos;s own value, WAT time and change against the previous plotted reading. Let go (or move the
+          mouse away) and it returns to the latest reading. 7D, 30D and ALL filter to readings that actually exist; a
+          range with fewer than two stored readings stays disabled and says why.
         </p>
         <HistoryChart
           id={`chart-${chartPage.slug}`}
