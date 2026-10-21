@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-21T04:44:07.928Z",
+  "checkedAt": "2026-10-21T11:46:37.659Z",
   "official": {
     "USD": 1333.6467,
     "GBP": 1780.87,
@@ -34,7 +34,7 @@
       "sell": 1520
     }
   },
-  "blackMarketAsOf": "2026-10-21T04:08:00.000Z",
+  "blackMarketAsOf": "2026-10-21T11:06:00.000Z",
   "blackMarketSource": {
     "label": "Aboki Forex: black market and CBN widget",
     "url": "https://abokiforex.app/"
