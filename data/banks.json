@@ -1,0 +1,742 @@
+{
+  "updatedAt": "2026-10-21",
+  "notes": "Sort codes are the 3-digit NIP/CBN bank codes used for NUBAN transfers (commonly called sort codes). 9-digit head-office sort codes are legacy cheque-clearing codes where first 3 digits match the NIP code. USSD codes are dialled on the phone linked to the bank account; they can change — verify in official app/bank before transacting. Do NOT claim CBN endorsement. Every code below cites its source in the per-bank sources list.",
+  "banks": [
+    {
+      "slug": "access-bank",
+      "name": "Access Bank",
+      "fullName": "Access Bank Plc",
+      "sortCodes": [
+        {
+          "code": "044",
+          "label": "NIP / CBN bank code (primary code for NUBAN transfers)",
+          "type": "nip"
+        },
+        {
+          "code": "044150149",
+          "label": "Head-office sort code (Victoria Island, cheque clearing example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*901#",
+          "label": "Main USSD menu",
+          "purpose": "Open Access Bank USSD banking on any network; shows transfers, balance, airtime, bills"
+        },
+        {
+          "code": "*901*00#",
+          "label": "Check balance (shortcut)",
+          "purpose": "Fast balance enquiry without menu navigation"
+        },
+        {
+          "code": "*901*1*Amount*AccountNumber#",
+          "label": "Transfer to Access Bank",
+          "purpose": "Transfer to own bank; replace Amount and AccountNumber"
+        },
+        {
+          "code": "*901*2*Amount*AccountNumber#",
+          "label": "Transfer to other banks",
+          "purpose": "NIP transfer to any Nigerian bank"
+        },
+        {
+          "code": "*901*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Buy airtime for own line"
+        },
+        {
+          "code": "*901*Amount*PhoneNumber#",
+          "label": "Airtime — others",
+          "purpose": "Buy airtime for third-party number"
+        },
+        {
+          "code": "*901*911#",
+          "label": "Block / deactivate USSD",
+          "purpose": "Block account/USSD profile from any phone if device lost"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Access Bank — USSD Banking FAQs (official, lists *901#, *901*00#, *901*911#)",
+          "url": "https://www.accessbankplc.com/help/frequently-asked-questions/ussd-banking"
+        },
+        {
+          "label": "Access Bank — USSD Activation Page (official, Airtime *901*Amount# etc.)",
+          "url": "https://namibiaweb.accessbankplc.com/ways-to-bank/901"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes (CBN code 044, USSD *901#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes 2026 (Access 044)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Main USSD *901# works on MTN, Airtel, Glo, 9mobile from number linked to account. NGN6.98 telco USSD session fee applies per financial transaction (CBN/NCC rule). Verify current codes in AccessMore app or branch before transacting."
+    },
+    {
+      "slug": "gtbank",
+      "name": "GTBank",
+      "fullName": "Guaranty Trust Bank (GTBank) Ltd",
+      "sortCodes": [
+        {
+          "code": "058",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "058152052",
+          "label": "Head-office / common sort code (cheque clearing)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*737#",
+          "label": "Main USSD menu (Bank 737)",
+          "purpose": "Entry point for GTBank USSD banking"
+        },
+        {
+          "code": "*737*6*1#",
+          "label": "Check balance",
+          "purpose": "Instant balance display"
+        },
+        {
+          "code": "*737*1*Amount*AccountNumber#",
+          "label": "Transfer to GTBank",
+          "purpose": "Transfer to another GTBank account"
+        },
+        {
+          "code": "*737*2*Amount*AccountNumber#",
+          "label": "Transfer to other banks",
+          "purpose": "NIP transfer to any bank"
+        },
+        {
+          "code": "*737*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Recharge own line"
+        },
+        {
+          "code": "*737*Amount*PhoneNumber#",
+          "label": "Airtime — others",
+          "purpose": "Recharge third-party line"
+        },
+        {
+          "code": "*737*911#",
+          "label": "Block account",
+          "purpose": "Emergency block if phone/account compromised"
+        }
+      ],
+      "sources": [
+        {
+          "label": "GTBank — Bank 737 official USSD service page (lists *737#, *737*6*1#, transfers, airtime, *737*911#)",
+          "url": "https://www.gtbank.com/personal-banking/services/e-banking/bank-737"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes (CBN code 058, USSD *737#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes (GTBank 058)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Dial from phone number linked to GTBank account. Transfer limits and NGN6.98 telco session fee apply. Confirm codes in GTWorld app or branch."
+    },
+    {
+      "slug": "zenith-bank",
+      "name": "Zenith Bank",
+      "fullName": "Zenith Bank Plc",
+      "sortCodes": [
+        {
+          "code": "057",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "057150013",
+          "label": "Head-office sort code (VI, Ajose Adeogun example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*966#",
+          "label": "Main USSD (EazyBanking)",
+          "purpose": "Open Zenith USSD banking; menu for all services"
+        },
+        {
+          "code": "*966*00#",
+          "label": "Check balance",
+          "purpose": "Balance enquiry"
+        },
+        {
+          "code": "*966*Amount*AccountNumber#",
+          "label": "Transfer (any bank)",
+          "purpose": "NIP transfer to Zenith or other banks"
+        },
+        {
+          "code": "*966*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Buy airtime for self"
+        },
+        {
+          "code": "*966*Amount*PhoneNumber#",
+          "label": "Airtime — others",
+          "purpose": "Buy airtime for others"
+        },
+        {
+          "code": "*966*911#",
+          "label": "Stop debit / block account",
+          "purpose": "Instantly block account if phone stolen; needs account no. + AlertZ number"
+        },
+        {
+          "code": "*966*0#",
+          "label": "Open Zenith account",
+          "purpose": "Instant account opening via USSD"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Zenith Bank — USSD Banking *966# (official, lists *966#, *966*00#, *966*911#, *966*0#)",
+          "url": "https://www.zenithbank.com/966/"
+        },
+        {
+          "label": "Zenith Bank — Debuts *966*911# Account Control Code (official news)",
+          "url": "https://www.zenithbank.com/media/news/zenith-bank-debuts-star966star911-account-control-code/"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes (Zenith 057, USSD *966#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes (Zenith 057)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Use phone linked to Zenith account. Indemnity may be needed for >NGN100k USSD transfers. Verify in Zenith app/branch."
+    },
+    {
+      "slug": "first-bank",
+      "name": "First Bank",
+      "fullName": "First Bank of Nigeria Ltd",
+      "sortCodes": [
+        {
+          "code": "011",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "011151003",
+          "label": "Head-office sort code (Marina example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*894#",
+          "label": "Main USSD (894 Banking)",
+          "purpose": "FirstBank USSD — transfers, balance, airtime, bills, loans"
+        },
+        {
+          "code": "*894*0#",
+          "label": "Register / Reset PIN",
+          "purpose": "Register for 894 Banking or reset PIN"
+        },
+        {
+          "code": "*894*00#",
+          "label": "Check balance",
+          "purpose": "Quick balance enquiry"
+        },
+        {
+          "code": "*894*Amount*AccountNumber#",
+          "label": "Transfer",
+          "purpose": "Send money to any Nigerian bank"
+        },
+        {
+          "code": "*894*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Recharge own line"
+        },
+        {
+          "code": "*894*Amount*PhoneNumber#",
+          "label": "Airtime — others",
+          "purpose": "Recharge another number"
+        },
+        {
+          "code": "*894*911#",
+          "label": "Block / stop debit",
+          "purpose": "Block account from any phone"
+        }
+      ],
+      "sources": [
+        {
+          "label": "First Bank — USSD (*894#) official page (lists *894#, *894*0#, *894*00#, *894*Amount#, *894*911#)",
+          "url": "https://www.firstbanknigeria.com/personal/ways-to-bank/ussd/"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes (First Bank 011, USSD *894#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes (First Bank 011)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Only individual accounts registered on SMS alert can use *894#. Corporate/joint accounts excluded. USSD daily limits apply; verify in FirstMobile app/branch."
+    },
+    {
+      "slug": "uba",
+      "name": "UBA",
+      "fullName": "United Bank for Africa (UBA) Plc",
+      "sortCodes": [
+        {
+          "code": "033",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "033154282",
+          "label": "Head-office sort code (Lagos example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*919#",
+          "label": "Main USSD (UBA Magic Banking)",
+          "purpose": "Entry for UBA USSD on all networks"
+        },
+        {
+          "code": "*919*00#",
+          "label": "Check balance",
+          "purpose": "Balance enquiry"
+        },
+        {
+          "code": "*919*3#",
+          "label": "Transfer to UBA",
+          "purpose": "Transfer within UBA"
+        },
+        {
+          "code": "*919*4#",
+          "label": "Transfer to other banks",
+          "purpose": "NIP transfer to other banks"
+        },
+        {
+          "code": "*919*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Airtime for self"
+        },
+        {
+          "code": "*919*PhoneNumber*Amount#",
+          "label": "Airtime — others",
+          "purpose": "Airtime for third party"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Current Affairs Nigeria — Bank codes list (UBA CBN 033, USSD *919#)",
+          "url": "https://currentaffairs.com.ng/bank-codes/"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes (UBA 033, USSD *919#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes (UBA 033, USSD *919#)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Dial from number linked to UBA account. Verify exact transfer shortcuts (*919*3# vs *919*4#) in UBA mobile app or branch; USSD flows can be updated."
+    },
+    {
+      "slug": "fidelity-bank",
+      "name": "Fidelity Bank",
+      "fullName": "Fidelity Bank Plc",
+      "sortCodes": [
+        {
+          "code": "070",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "070150003",
+          "label": "Head-office sort code (example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*770#",
+          "label": "Main USSD",
+          "purpose": "Fidelity Instant Banking entry"
+        },
+        {
+          "code": "*770*0#",
+          "label": "Check balance",
+          "purpose": "Balance enquiry"
+        },
+        {
+          "code": "*770*AccountNumber*Amount#",
+          "label": "Transfer",
+          "purpose": "Transfer to any bank"
+        },
+        {
+          "code": "*770*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Buy airtime for self"
+        },
+        {
+          "code": "*770*PhoneNumber*Amount#",
+          "label": "Airtime — others",
+          "purpose": "Buy airtime for others"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mansa API — Nigerian bank codes (Fidelity 070, USSD *770#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes (Fidelity 070, USSD *770#)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        },
+        {
+          "label": "Current Affairs Nigeria — Bank codes list (Fidelity 070, *770#)",
+          "url": "https://currentaffairs.com.ng/bank-codes/"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Verify full menu flow in Fidelity Bank app or dial *770# directly; third-party compilations vary on exact shortcut syntax."
+    },
+    {
+      "slug": "ecobank",
+      "name": "Ecobank",
+      "fullName": "Ecobank Nigeria Ltd",
+      "sortCodes": [
+        {
+          "code": "050",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "050150010",
+          "label": "Head-office sort code (VI example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*326#",
+          "label": "Main USSD (Ecobank Mobile)",
+          "purpose": "Entry for Ecobank USSD banking"
+        },
+        {
+          "code": "*326*0#",
+          "label": "Check balance",
+          "purpose": "Balance enquiry"
+        },
+        {
+          "code": "*326*Amount*AccountNumber#",
+          "label": "Transfer",
+          "purpose": "Transfer to any bank"
+        },
+        {
+          "code": "*326*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Airtime for self"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mansa API — Nigerian bank codes (Ecobank 050, USSD *326#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes (Ecobank 050, USSD *326#)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Ecobank USSD branded *326#. Verify exact shortcuts in Ecobank app/branch; compilation sources vary."
+    },
+    {
+      "slug": "union-bank",
+      "name": "Union Bank",
+      "fullName": "Union Bank of Nigeria Plc",
+      "sortCodes": [
+        {
+          "code": "032",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "032156825",
+          "label": "Head-office sort code (example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*826#",
+          "label": "Main USSD (UnionMobile)",
+          "purpose": "Entry for Union Bank USSD"
+        },
+        {
+          "code": "*826*4#",
+          "label": "Check balance",
+          "purpose": "Balance enquiry"
+        },
+        {
+          "code": "*826*1*Amount*AccountNumber#",
+          "label": "Transfer to Union Bank",
+          "purpose": "Within-bank transfer"
+        },
+        {
+          "code": "*826*2*Amount*AccountNumber#",
+          "label": "Transfer to other banks",
+          "purpose": "NIP to other banks"
+        },
+        {
+          "code": "*826*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Airtime for self"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mansa API — Nigerian bank codes (Union Bank 032, USSD *826#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes (Union Bank 032, USSD *826#)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Use line linked to Union Bank account. Confirm transfer shortcuts in UnionDigital app; secondary compilations differ."
+    },
+    {
+      "slug": "sterling-bank",
+      "name": "Sterling Bank",
+      "fullName": "Sterling Bank Plc",
+      "sortCodes": [
+        {
+          "code": "232",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "232150029",
+          "label": "Head-office sort code (example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*822#",
+          "label": "Main USSD (Sterling OneBank)",
+          "purpose": "Entry for Sterling USSD banking"
+        },
+        {
+          "code": "*822*6#",
+          "label": "Check balance",
+          "purpose": "Balance enquiry"
+        },
+        {
+          "code": "*822*4*Amount*AccountNumber#",
+          "label": "Transfer",
+          "purpose": "Transfer to any bank"
+        },
+        {
+          "code": "*822*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Airtime for self"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mansa API — Nigerian bank codes (Sterling 232, USSD *822#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes (Sterling 232, USSD *822#)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Secondary compilation sourced; verify in Sterling Bank OneBank app or branch before relying on exact shortcut."
+    },
+    {
+      "slug": "wema-bank",
+      "name": "Wema Bank",
+      "fullName": "Wema Bank Plc (ALAT)",
+      "sortCodes": [
+        {
+          "code": "035",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "035150103",
+          "label": "Head-office sort code (example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*945#",
+          "label": "Main USSD (ALAT/*945#)",
+          "purpose": "Wema/ALAT USSD banking entry"
+        },
+        {
+          "code": "*945*0#",
+          "label": "Check balance",
+          "purpose": "Balance enquiry"
+        },
+        {
+          "code": "*945*AccountNumber*Amount#",
+          "label": "Transfer",
+          "purpose": "Transfer to any bank"
+        },
+        {
+          "code": "*945*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Airtime for self"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mansa API — Nigerian bank codes (Wema 035, USSD *945#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes (Wema 035, USSD *945#)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Wema Bank USSD is *945# (ALAT). Confirm exact transfer syntax in ALAT app or branch."
+    },
+    {
+      "slug": "stanbic-ibtc",
+      "name": "Stanbic IBTC",
+      "fullName": "Stanbic IBTC Bank Plc",
+      "sortCodes": [
+        {
+          "code": "221",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "221159522",
+          "label": "Head-office sort code (example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*909#",
+          "label": "Main USSD",
+          "purpose": "Stanbic IBTC USSD banking entry"
+        },
+        {
+          "code": "*909*00#",
+          "label": "Check balance",
+          "purpose": "Balance enquiry"
+        },
+        {
+          "code": "*909*Amount*AccountNumber#",
+          "label": "Transfer",
+          "purpose": "Transfer to any bank"
+        },
+        {
+          "code": "*909*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Airtime for self"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mansa API — Nigerian bank codes (Stanbic IBTC 221, USSD *909#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes (Stanbic IBTC 221, USSD *909#)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Secondary compilation sourced; verify in Stanbic IBTC app/branch for exact transfer syntax."
+    },
+    {
+      "slug": "fcmb",
+      "name": "FCMB",
+      "fullName": "First City Monument Bank (FCMB) Ltd",
+      "sortCodes": [
+        {
+          "code": "214",
+          "label": "NIP / CBN bank code",
+          "type": "nip"
+        },
+        {
+          "code": "214150018",
+          "label": "Head-office sort code (example)",
+          "type": "head-office"
+        }
+      ],
+      "ussd": [
+        {
+          "code": "*329#",
+          "label": "Main USSD (FCMB Mobile)",
+          "purpose": "Entry for FCMB USSD banking"
+        },
+        {
+          "code": "*329*0#",
+          "label": "Check balance",
+          "purpose": "Balance enquiry"
+        },
+        {
+          "code": "*329*Amount*AccountNumber#",
+          "label": "Transfer",
+          "purpose": "Transfer to any bank"
+        },
+        {
+          "code": "*329*Amount#",
+          "label": "Airtime — self",
+          "purpose": "Airtime for self"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mansa API — Nigerian bank codes (FCMB 214, USSD *329#)",
+          "url": "https://mansaapi.com/banks/nigeria"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes (FCMB 214, USSD *329#)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+        }
+      ],
+      "lastVerified": "2026-10-21",
+      "verification": "manual",
+      "notes": "Secondary compilation sourced; verify exact shortcuts in FCMB mobile app/branch."
+    }
+  ]
+}
