@@ -468,21 +468,23 @@ export default function HomePage() {
 
       <AdSlot variant="inline" index={1} />
 
-      {/* Bank codes — new Phase B hub (mobile-friendly, consistent) */}
+      {/* Codes hub — Phase B banks + Phase C postal (mobile-friendly, consistent) */}
       <section aria-labelledby="codes-h" className="space-y-3 rounded-xl border bg-card/40 p-4">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h2 id="codes-h" className="text-lg font-bold tracking-tight">Bank codes — sort codes & USSD codes</h2>
+            <h2 id="codes-h" className="text-lg font-bold tracking-tight">Codes — bank sort/USSD & postal/ZIP codes</h2>
             <p className="mt-1 max-w-3xl text-sm text-muted-foreground">
-              Look up any Nigerian bank’s 3-digit sort (NIP) code or its <code>*901#</code>-style USSD code — copied in one tap, every row with a source link and last-verified date. No guesswork, 12 banks to start.
+              Look up a bank’s 3-digit sort/NIP (058 for GTB) or <code>*901#</code>-style USSD — or a 6-digit NIPOST postal
+              code (Ikeja 100001, Garki 900001) — copied in one tap, every row with source and last-verified date. No
+              guesswork, no fake codes.
             </p>
           </div>
-          <Badge variant="accent">12 banks · verified {`2026-10-21`}</Badge>
+          <Badge variant="accent">12 banks · 37 states · verified 2026-10-21</Badge>
         </div>
         <ul className="flex flex-wrap gap-2 text-sm">
           <li>
             <Link href="/codes" className="inline-flex min-h-11 items-center rounded-full border bg-background px-4 py-1.5 font-semibold hover:border-primary hover:text-primary">
-              Codes hub — sort vs USSD →
+              Codes hub →
             </Link>
           </li>
           <li>
@@ -490,9 +492,14 @@ export default function HomePage() {
               Search bank codes
             </Link>
           </li>
+          <li>
+            <Link href="/codes/postal" className="inline-flex min-h-11 items-center rounded-full border bg-background px-4 py-1.5 font-semibold hover:border-primary hover:text-primary">
+              Search postal codes
+            </Link>
+          </li>
         </ul>
         <p className="text-xs text-muted-foreground">
-          Popular:{" "}
+          Popular banks:{" "}
           <Link href="/codes/banks/access-bank" className="font-semibold text-primary underline-offset-2 hover:underline">Access 044 *901#</Link>
           {" · "}
           <Link href="/codes/banks/gtbank" className="font-semibold text-primary underline-offset-2 hover:underline">GTB 058 *737#</Link>
@@ -500,10 +507,14 @@ export default function HomePage() {
           <Link href="/codes/banks/zenith-bank" className="font-semibold text-primary underline-offset-2 hover:underline">Zenith 057 *966#</Link>
           {" · "}
           <Link href="/codes/banks/first-bank" className="font-semibold text-primary underline-offset-2 hover:underline">FirstBank 011 *894#</Link>
+          {" · "}Postal:{" "}
+          <Link href="/codes/postal/lagos" className="font-semibold text-primary underline-offset-2 hover:underline">Lagos 100001</Link>
           {" · "}
-          <Link href="/codes/banks/uba" className="font-semibold text-primary underline-offset-2 hover:underline">UBA 033 *919#</Link>
+          <Link href="/codes/postal/fct-abuja" className="font-semibold text-primary underline-offset-2 hover:underline">FCT Abuja 900001</Link>
           {" · "}
-          <Link href="/codes/banks/fidelity-bank" className="font-semibold text-primary underline-offset-2 hover:underline">Fidelity 070 *770#</Link>
+          <Link href="/codes/postal/rivers" className="font-semibold text-primary underline-offset-2 hover:underline">Rivers 500001</Link>
+          {" · "}
+          <Link href="/codes/postal/kano" className="font-semibold text-primary underline-offset-2 hover:underline">Kano 700001</Link>
           {" · "}
           <Link href="/status" className="font-medium underline-offset-2 hover:underline">how we verify (/status)</Link>.
         </p>

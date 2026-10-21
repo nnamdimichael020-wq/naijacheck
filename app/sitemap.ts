@@ -3,6 +3,7 @@ import { ARTICLES } from "@/lib/articles";
 import { LIVE_FUEL, LIVE_FX, datasetHistoryPoints } from "@/lib/live";
 import { CHART_PAGES } from "@/lib/chart-pages";
 import { BANKS_FILE_UPDATED_AT, getAllBanks } from "@/lib/banks";
+import { getAllPostalStates, getAllPostalAreaParams, POSTAL_FILE_UPDATED_AT } from "@/lib/postal";
 import { absUrl } from "@/lib/seo";
 
 /** Static export: this file is evaluated at build time and written to /sitemap.xml. */
@@ -51,12 +52,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absUrl("/rates/history"), lastModified: fxHubLastmod, changeFrequency: "daily", priority: 0.5 },
   ];
 
-  // Bank codes hub: /codes + /codes/banks + one page per bank. LastModified is banks.json updatedAt so
-  // the sitemap stays honest (no build clock). One bank page → one sitemap URL; no mass junk URLs.
+  // Codes hub: banks + postal. LastModified is file updatedAt so sitemap stays honest (no build clock).
   const banksUpdatedAt =
     BANKS_FILE_UPDATED_AT && /^\d{4}-\d{2}-\d{2}/.test(BANKS_FILE_UPDATED_AT) ? BANKS_FILE_UPDATED_AT.slice(0, 10) : FIXED_LASTMOD;
+  const postalUpdatedAt =
+    POSTAL_FILE_UPDATED_AT && /^\d{4}-\d{2}-\d{2}/.test(POSTAL_FILE_UPDATED_AT) ? POSTAL_FILE_UPDATED_AT.slice(0, 10) : FIXED_LASTMOD;
   const bankSitemap: MetadataRoute.Sitemap = [
-    { url: absUrl("/codes"), lastModified: banksUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
+    { url: absUrl("/codes"), lastModified: postalUpdatedAt > banksUpdatedAt ? postalUpdatedAt : banksUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
     { url: absUrl("/codes/banks"), lastModified: banksUpdatedAt, changeFrequency: "weekly", priority: 0.6 },
     ...getAllBanks().map((b) => ({
       url: absUrl(`/codes/banks/${b.slug}`),
@@ -64,6 +66,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.5,
     })),
+  ];
+  const postalSitemap: MetadataRoute.Sitemap = [
+    { url: absUrl("/codes/postal"), lastModified: postalUpdatedAt, changeFrequency: "weekly", priority: 0.6 },
+    ...getAllPostalStates().map((s) => ({
+      url: absUrl(`/codes/postal/${s.slug}`),
+      lastModified: s.lastVerified.slice(0, 10),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+    ...getAllPostalAreaParams().map(({ state, area }) => {
+      const st = getAllPostalStates().find((x) => x.slug === state);
+      return {
+        url: absUrl(`/codes/postal/${state}/${area}`),
+        lastModified: st?.lastVerified.slice(0, 10) ?? postalUpdatedAt,
+        changeFrequency: "monthly" as const,
+        priority: 0.4,
+      };
+    }),
   ];
 
   // Dedicated chart pages. Their lastModified is the newest stored observation for the series, so
@@ -95,5 +115,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...fixed, ...charts, ...bankSitemap, ...generated];
+  return [...fixed, ...charts, ...bankSitemap, ...postalSitemap, ...generated];
 }
