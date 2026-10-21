@@ -94,13 +94,25 @@ export default function StatusPage() {
       </section>
 
       <section aria-labelledby="history" className="space-y-3">
-        <h2 id="history" className="text-xl font-bold">Price history</h2>
+        <h2 id="history" className="text-xl font-bold">Price history — honest archives</h2>
         <p className="text-sm text-muted-foreground">
           Each monitored dataset retains up to its last {MAX_HISTORY_POINTS_PER_DATASET} verified observations. Deltas compare the latest reading against the immediately preceding real observation.
           Charts below are drawn only from those stored readings: a dataset with fewer than two shows an empty state instead of a fabricated line.
           Every series also has a dedicated page with a larger scrubbable chart and the full stored-readings table:{" "}
           <Link href="/charts" className="font-semibold text-primary underline underline-offset-2">
             open the chart pages
+          </Link>
+          . For the full hubs with sourcing, retention and FAQs:{" "}
+          <Link href="/rates" className="font-semibold text-primary underline underline-offset-2">
+            FX rates &amp; history hub (/rates)
+          </Link>
+          {" · "}
+          <Link href="/rates/history" className="font-semibold text-primary underline underline-offset-2">
+            FX archive
+          </Link>
+          {" · "}
+          <Link href="/prices/fuel" className="font-semibold text-primary underline underline-offset-2">
+            fuel depot history
           </Link>
           .
         </p>
@@ -203,6 +215,31 @@ export default function StatusPage() {
           Series are distinguished by dash pattern, marker shape and the text legend, not by colour alone. Open “Show the real
           readings plotted” under a chart to read every stored observation, its source time and when the monitor recorded it.
         </p>
+        <div className="rounded-lg border bg-card/40 p-3 text-sm">
+          <p className="font-semibold">More history</p>
+          <ul className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
+            <li>
+              <Link href="/rates" className="font-semibold text-primary underline-offset-2 hover:underline">
+                FX rates &amp; history — why official ≠ parallel (/rates)
+              </Link>
+            </li>
+            <li>
+              <Link href="/prices/fuel" className="font-semibold text-primary underline-offset-2 hover:underline">
+                Fuel depot history — why depot ≠ pump (/prices/fuel)
+              </Link>
+            </li>
+            <li>
+              <Link href="/charts/parallel-usd-buy" className="text-muted-foreground underline-offset-2 hover:underline">
+                Parallel USD chart
+              </Link>
+            </li>
+            <li>
+              <Link href="/charts/depot-petrol" className="text-muted-foreground underline-offset-2 hover:underline">
+                Depot petrol chart
+              </Link>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <PushSettings />

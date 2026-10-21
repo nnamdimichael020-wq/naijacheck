@@ -400,6 +400,72 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FX & fuel history — SEO entry points: modest text links + preview */}
+      <section aria-labelledby="history-h" className="space-y-3 rounded-xl border bg-card/40 p-4">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h2 id="history-h" className="text-lg font-bold tracking-tight">
+              FX &amp; fuel history — every stored reading, honest gaps
+            </h2>
+            <p className="mt-1 max-w-3xl text-sm text-muted-foreground">
+              No “dollar in 2015” guesses. Charts draw only readings the monitor actually stored (from{" "}
+              <span className="font-medium">2026-10-09</span>), up to last 56 per dataset. Gaps mean no reading. Learn why
+              official ≠ parallel and depot ≠ pump.
+            </p>
+          </div>
+          <Badge variant="accent">Archive grows as monitor checks</Badge>
+        </div>
+        <ul className="flex flex-wrap gap-2 text-sm">
+          <li>
+            <Link href="/rates" className="inline-flex min-h-11 items-center rounded-full border bg-background px-4 py-1.5 font-semibold hover:border-primary hover:text-primary">
+              FX rates &amp; history hub
+            </Link>
+          </li>
+          <li>
+            <Link href="/rates/history" className="inline-flex min-h-11 items-center rounded-full border bg-background px-4 py-1.5 font-semibold hover:border-primary hover:text-primary">
+              FX archive table
+            </Link>
+          </li>
+          <li>
+            <Link href="/prices/fuel" className="inline-flex min-h-11 items-center rounded-full border bg-background px-4 py-1.5 font-semibold hover:border-primary hover:text-primary">
+              Fuel depot history
+            </Link>
+          </li>
+          <li>
+            <Link href="/charts" className="inline-flex min-h-11 items-center rounded-full border bg-background px-4 py-1.5 font-semibold hover:border-primary hover:text-primary">
+              All price charts
+            </Link>
+          </li>
+        </ul>
+        <p className="text-xs text-muted-foreground">
+          Detailed charts:{" "}
+          <Link href="/charts/parallel-usd-buy" className="font-semibold text-primary underline-offset-2 hover:underline">
+            Parallel USD
+          </Link>
+          {" · "}
+          <Link href="/charts/cbn-usd" className="font-semibold text-primary underline-offset-2 hover:underline">
+            CBN USD
+          </Link>
+          {" · "}
+          <Link href="/charts/depot-petrol" className="font-semibold text-primary underline-offset-2 hover:underline">
+            Depot petrol
+          </Link>
+          {" · "}
+          <Link href="/charts/depot-diesel" className="font-semibold text-primary underline-offset-2 hover:underline">
+            Depot diesel
+          </Link>
+          {" · "}
+          <Link href="/charts/depot-lpg" className="font-semibold text-primary underline-offset-2 hover:underline">
+            LPG per kg
+          </Link>
+          {" · "}
+          <Link href="/status" className="font-medium underline-offset-2 hover:underline">
+            how we source &amp; how often we check (/status)
+          </Link>
+          .
+        </p>
+      </section>
+
       <AdSlot variant="inline" index={1} />
 
       {/* Tools */}

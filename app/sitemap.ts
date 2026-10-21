@@ -31,12 +31,23 @@ function chartLastmod(dataset: string, fallback: string): string {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const liveDate = liveLastmod();
+  // FX & fuel history hubs: indexable entry points for naira-to-dollar and depot-fuel history.
+  // Their lastModified follows the newest stored FX/fuel observation so the sitemap stays honest
+  // and agrees with the page (never the build clock).
+  function hubLastmod(datasets: string[]): string {
+    const stamps = datasets.map((d) => chartLastmod(d, liveDate)).sort();
+    return stamps.pop() ?? liveDate;
+  }
+  const fxHubLastmod = hubLastmod(["parallel-usd-ngn-buy", "cbn-usd-ngn"]);
+  const fuelHubLastmod = hubLastmod(["fuel-depot-petrol", "fuel-depot-diesel", "fuel-depot-lpg"]);
   const fixed: MetadataRoute.Sitemap = [
     { url: absUrl("/"), lastModified: liveDate, changeFrequency: "daily", priority: 1 },
     { url: absUrl("/about"), lastModified: FIXED_LASTMOD, changeFrequency: "monthly", priority: 0.4 },
     { url: absUrl("/status"), lastModified: liveDate, changeFrequency: "daily", priority: 0.4 },
     { url: absUrl("/privacy"), lastModified: FIXED_LASTMOD, changeFrequency: "yearly", priority: 0.3 },
     { url: absUrl("/tools/quiz"), lastModified: FIXED_LASTMOD, changeFrequency: "weekly", priority: 0.7 },
+    { url: absUrl("/rates"), lastModified: fxHubLastmod, changeFrequency: "daily", priority: 0.7 },
+    { url: absUrl("/rates/history"), lastModified: fxHubLastmod, changeFrequency: "daily", priority: 0.5 },
   ];
 
   // Dedicated chart pages. Their lastModified is the newest stored observation for the series, so
