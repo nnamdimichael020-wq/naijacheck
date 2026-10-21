@@ -11,6 +11,7 @@ import { LiveTicker } from "@/components/live/ticker";
 import { JsonLd } from "@/components/json-ld";
 import { PwaClient } from "@/components/pwa-client";
 import { PushPrompt } from "@/components/push-notifications";
+import { NavigationFeedback } from "@/components/navigation-feedback";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -67,6 +68,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           >
             Skip to content
           </a>
+          {/* Light navigation feedback: 3px top strip + delayed logo pulse. Never a full-screen loader. */}
+          <NavigationFeedback />
           <PwaClient />
           <SiteHeader />
           <LiveTicker />

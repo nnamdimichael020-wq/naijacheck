@@ -11,7 +11,7 @@ export function SiteHeader() {
       {/* Row 1: brand, centred search (desktop), theme toggle */}
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3">
         <Link href="/" className="flex shrink-0 items-center gap-2" aria-label={`${SITE_CONFIG.name} home`}>
-          <Image src="/logo.svg" alt="" width={36} height={36} priority className="size-9" />
+          <Image src="/logo.svg" alt="" width={36} height={36} priority className="nav-logo-mark size-9" />
           <span className="hidden flex-col leading-none sm:flex">
             <span className="text-lg font-extrabold tracking-tight">{SITE_CONFIG.name}</span>
             <span className="mt-1 text-[11px] text-muted-foreground">{SITE_TAGLINE}</span>

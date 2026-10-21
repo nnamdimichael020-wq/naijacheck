@@ -6,6 +6,7 @@ import { CheckCircle2, Lock, ShieldAlert, Sparkles } from "lucide-react";
 import { AdSlot } from "@/components/ads/ad-slot";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { InlineSpinner, useDelayedFlag } from "@/components/ui/inline-spinner";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input, Select } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -343,6 +344,8 @@ function CheckoutDialog({ premiumPrice, onUnlocked }: { premiumPrice: number; on
   const [method, setMethod] = React.useState<"card" | "transfer" | "ussd">("transfer");
   const [state, setState] = React.useState<"idle" | "processing" | "done">("idle");
   const [open, setOpen] = React.useState(false);
+  // Tool action: feedback stays on the button (tiny spinner after 150 ms) — no overlay, no page loader.
+  const processingSpinner = useDelayedFlag(state === "processing");
 
   const handlePay = () => {
     setState("processing");
@@ -428,7 +431,8 @@ function CheckoutDialog({ premiumPrice, onUnlocked }: { premiumPrice: number; on
               {method === "card" && "Demo: a secure card form from the processor would appear here."}
               {method === "ussd" && "Demo: a USSD code from your bank would appear here."}
             </p>
-            <Button className="w-full" variant="accent" onClick={handlePay} disabled={state === "processing"}>
+            <Button className="w-full" variant="accent" onClick={handlePay} disabled={state === "processing"} aria-busy={state === "processing" || undefined}>
+              {processingSpinner ? <InlineSpinner /> : null}
               {state === "processing" ? "Processing demo payment…" : `Pay ₦${premiumPrice.toLocaleString("en-NG")} (demo)`}
             </Button>
           </div>

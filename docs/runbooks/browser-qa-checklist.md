@@ -9,6 +9,18 @@ Record browser/version, OS/device, viewport, preview/live URL, network profile, 
 - Open representative generated routes. Verify title, description, canonical, one H1, JSON-LD, source/state/freshness copy and no console errors.
 - Emulate slow 3G and verify the push invitation does not delay content or fight the bottom navigation.
 
+## Navigation feedback (`docs/runbooks/navigation-feedback.md`)
+
+- Fast connection: tap the bottom-nav items. Prefetched pages must appear with **no** top strip and **no** logo pulse flashing.
+- Slow 3G: tap a footer link that is not prefetched (`/privacy`, `/about`).
+  - A 3px brand-green strip appears at the very top after about 0.15 s, and the header logo pulses after about 0.3 s.
+  - Both stop the moment the new page renders.
+  - The old page stays visible, scrollable and tappable meanwhile. There is never a full-screen or branded loader.
+- Reduced motion (OS setting): the strip is static and full-width, the logo never moves, and the strip disappears instantly.
+- Back/forward, hash links, the skip link and search Enter (a client navigation, not a reload) leave nothing on screen.
+- `/hustle` demo payment and `/status` Enable alerts / Unsubscribe: a tiny spinner appears on the button only (after about 0.15 s), with `aria-busy`. The text label stays, and the page strip and logo stay idle.
+- Automated equivalent: `scripts/qa/nav-feedback-check.mjs` (emulation; still do the on-device check).
+
 ## History charts (`/status`, `/prices/fuel`, `/prices/generator-diesel`, `/` sparklines)
 
 Charts are drawn only from observations stored in `data/history.json` (max 56 per dataset). Confirm on a real phone, in both themes, before signing off.

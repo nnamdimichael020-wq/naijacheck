@@ -2,9 +2,10 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { MapPin, Globe2, Loader2 } from "lucide-react";
+import { MapPin, Globe2 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { InlineSpinner } from "@/components/ui/inline-spinner";
 import { Freshness } from "@/components/live/freshness";
 import { STATES, matchState, type StateEntry } from "@/lib/states";
 import type { VerificationState } from "@/lib/source-registry";
@@ -108,7 +109,7 @@ export function LocationCard(p: LocationProps) {
         <CardDescription>
           {r === null ? (
             <span className="inline-flex items-center gap-2">
-              <Loader2 className="size-4 animate-spin" aria-hidden="true" /> Checking your network location
+              <InlineSpinner /> Checking your network location
             </span>
           ) : r.mode === "ng" ? (
             `Your nearest priced market is ${p.cityNames[r.state.city] ?? r.state.city}.${r.state.note ? " " + r.state.note : ""}`
