@@ -8,12 +8,13 @@ import { absUrl, breadcrumbSchema, pageMetadata } from "@/lib/seo";
 import { SITE_CONFIG } from "@/config/site";
 import { getAllBanks, banksUpdatedAt } from "@/lib/banks";
 import { getAllPostalStates, POSTAL_FILE_UPDATED_AT, postalPlaceCount } from "@/lib/postal";
+import { LGAS_FILE_UPDATED_AT, lgaCounts } from "@/lib/lgas";
 
 export const metadata: Metadata = pageMetadata({
   path: "/codes",
   title: "Nigerian codes — bank sort & USSD codes plus postal / ZIP codes by state",
   description:
-    "Nigerian codes hub: bank sort codes (CBN/NIP) + USSD codes for GTB *737#, Access *901# and 10 more banks, plus postal/ZIP codes for all 36 states + FCT — 6-digit NIPOST codes by area with sources and copy button. Last verified 2026-10-21.",
+    "Nigerian codes hub: bank sort codes (CBN/NIP) + USSD codes for GTB *737#, Access *901# and 10 more banks, plus postal/ZIP codes for all 36 states + FCT — 6-digit NIPOST codes by area with sources and copy button. Plus 774 LGAs via /geo. Last verified 2026-10-21.",
   keywords: [
     "Nigeria bank sort codes",
     "GTBank sort code",
@@ -25,6 +26,7 @@ export const metadata: Metadata = pageMetadata({
     "bank USSD codes Nigeria",
     "CBN bank codes",
     "NIPOST postal codes",
+    "Nigeria 774 LGAs",
   ],
 });
 
@@ -33,6 +35,8 @@ export default function CodesHubPage() {
   const postalStates = getAllPostalStates();
   const postalUpdatedAt = POSTAL_FILE_UPDATED_AT ?? banksUpdatedAt() ?? "2026-10-21";
   const postalPlaces = postalPlaceCount();
+  const { lgas: lgaTotal, states: lgaStateCount } = lgaCounts();
+  const lgasUpdatedAt = LGAS_FILE_UPDATED_AT ?? "2026-10-21";
   const featured = banks.slice(0, 6);
 
   return (
@@ -42,7 +46,7 @@ export default function CodesHubPage() {
       <header className="space-y-3">
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="accent">Verified manually · every code cites its source</Badge>
-          <span className="text-xs font-medium text-muted-foreground">Updated {postalUpdatedAt} · {banks.length} banks · {postalStates.length} states · {postalPlaces} places · ₦0 research, no scraping</span>
+          <span className="text-xs font-medium text-muted-foreground">Updated {postalUpdatedAt} · {banks.length} banks · {postalStates.length} states · {postalPlaces} places · {lgaTotal} LGAs · ₦0 research, no scraping</span>
         </div>
         <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl">Nigerian codes — bank sort/USSD & postal / ZIP codes</h1>
         <p className="text-muted-foreground">
@@ -50,9 +54,10 @@ export default function CodesHubPage() {
           <code>*901#</code>-style USSD you dial on your phone) and <strong>postal/ZIP codes</strong> (6-digit NIPOST numbers
           for forms and parcels, e.g. Ikeja 100001, Garki 900001 — Nigeria doesn’t use ZIP daily; you need the right one for
           international forms). This hub is the honest directory: one index per family, one page per bank and one per state,
-          every code with a source link, copy button and last-verified date. No mass junk URLs, no invented codes.
+          every code with a source link, copy button and last-verified date. No mass junk URLs, no invented codes.{" "}
+          <strong>LGAs</strong> now live at <Link href="/geo" className="underline">/geo — {lgaTotal} LGAs across {lgaStateCount} states/FCT</Link> (verified {lgasUpdatedAt}) — same slug scheme as postal.
         </p>
-        <ShareControls placement="inline" title="Nigerian codes — banks + postal/ZIP" url={absUrl("/codes")} summary={`${banks.length} banks + ${postalStates.length} states (${postalPlaces} places) — every code sourced and verified ${postalUpdatedAt}`} />
+        <ShareControls placement="inline" title="Nigerian codes — banks + postal/ZIP" url={absUrl("/codes")} summary={`${banks.length} banks + ${postalStates.length} states (${postalPlaces} places) + ${lgaTotal} LGAs — every code sourced and verified ${postalUpdatedAt}`} />
       </header>
 
       <section aria-labelledby="sort-vs-ussd" className="space-y-3 rounded-xl border bg-card/40 p-4">
@@ -137,16 +142,17 @@ export default function CodesHubPage() {
       <section aria-labelledby="what-next" className="space-y-3 rounded-xl border bg-card/40 p-4">
         <h2 id="what-next" className="text-base font-bold">What else lives in this Codes hub?</h2>
         <p className="text-sm text-muted-foreground">
-          Bank codes + postal codes are live. LGA demographics (Phase D) and exam PDFs are <em>not</em> in this PR — no empty
+          Bank codes + postal codes + 774 LGAs are live. Exam PDFs are <em>not</em> in this PR — no empty
           junk URLs. Cross-links to <Link href="/rates" className="font-semibold text-primary underline-offset-2 hover:underline">FX rates</Link> and{" "}
           <Link href="/codes/banks" className="font-semibold text-primary underline-offset-2 hover:underline">bank codes</Link> stay.
         </p>
         <ul className="grid gap-2 text-sm sm:grid-cols-2">
           <li><Link href="/codes/banks" className="inline-flex min-h-11 w-full items-center justify-between rounded-lg border bg-background px-4 py-3 font-semibold hover:border-primary">Banks — sort & USSD codes<span aria-hidden>→</span></Link></li>
           <li><Link href="/codes/postal" className="inline-flex min-h-11 w-full items-center justify-between rounded-lg border bg-background px-4 py-3 font-semibold hover:border-primary">Postal codes — {postalStates.length} states, {postalPlaces} places<span aria-hidden>→</span></Link></li>
-          <li><span className="inline-flex min-h-11 w-full items-center justify-between rounded-lg border bg-background px-4 py-3 text-muted-foreground">LGA demographics — planned, no empty routes<span aria-hidden>•</span></span></li>
+          <li><Link href="/geo" className="inline-flex min-h-11 w-full items-center justify-between rounded-lg border bg-background px-4 py-3 font-semibold hover:border-primary">LGAs — {lgaTotal} LGAs across {lgaStateCount} states/FCT · {lgasUpdatedAt}<span aria-hidden>→</span></Link></li>
           <li><Link href="/exam" className="inline-flex min-h-11 w-full items-center justify-between rounded-lg border bg-background px-4 py-3 font-semibold hover:border-primary">Exam hub — under /exam<span aria-hidden>→</span></Link></li>
         </ul>
+        <p className="text-xs text-muted-foreground">LGA URL scheme: <code>/geo</code> hub → <code>/geo/[state]</code> (matches <code>/codes/postal/[state]</code> slugs) → <code>/geo/[state]/[lga-slug]</code>. No duplicate tree under <code>/codes/lga</code> — documented in runbook.</p>
       </section>
 
       <section aria-labelledby="related" className="space-y-2">

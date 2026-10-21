@@ -472,14 +472,14 @@ export default function HomePage() {
       <section aria-labelledby="codes-h" className="space-y-3 rounded-xl border bg-card/40 p-4">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h2 id="codes-h" className="text-lg font-bold tracking-tight">Codes — bank sort/USSD & postal/ZIP codes</h2>
+            <h2 id="codes-h" className="text-lg font-bold tracking-tight">Codes & LGAs — bank sort/USSD, postal/ZIP & 774 LGAs</h2>
             <p className="mt-1 max-w-3xl text-sm text-muted-foreground">
               Look up a bank’s 3-digit sort/NIP (058 for GTB) or <code>*901#</code>-style USSD — or a 6-digit NIPOST postal
-              code (Ikeja 100001, Garki 900001) — copied in one tap, every row with source and last-verified date. No
+              code (Ikeja 100001, Garki 900001) — or browse all 774 LGAs by state — copied in one tap, every row with source and last-verified date. No
               guesswork, no fake codes.
             </p>
           </div>
-          <Badge variant="accent">12 banks · 37 states · verified 2026-10-21</Badge>
+          <Badge variant="accent">12 banks · 37 states · 774 LGAs · verified 2026-10-21</Badge>
         </div>
         <ul className="flex flex-wrap gap-2 text-sm">
           <li>
@@ -495,6 +495,11 @@ export default function HomePage() {
           <li>
             <Link href="/codes/postal" className="inline-flex min-h-11 items-center rounded-full border bg-background px-4 py-1.5 font-semibold hover:border-primary hover:text-primary">
               Search postal codes
+            </Link>
+          </li>
+          <li>
+            <Link href="/geo" className="inline-flex min-h-11 items-center rounded-full border bg-background px-4 py-1.5 font-semibold hover:border-primary hover:text-primary">
+              Browse 774 LGAs
             </Link>
           </li>
         </ul>
@@ -515,6 +520,14 @@ export default function HomePage() {
           <Link href="/codes/postal/rivers" className="font-semibold text-primary underline-offset-2 hover:underline">Rivers 500001</Link>
           {" · "}
           <Link href="/codes/postal/kano" className="font-semibold text-primary underline-offset-2 hover:underline">Kano 700001</Link>
+          {" · "}LGAs:{" "}
+          <Link href="/geo/lagos/ikeja" className="font-semibold text-primary underline-offset-2 hover:underline">Ikeja LGA (Lagos)</Link>
+          {" · "}
+          <Link href="/geo/fct-abuja/bwari" className="font-semibold text-primary underline-offset-2 hover:underline">Bwari (FCT)</Link>
+          {" · "}
+          <Link href="/geo/kano/kano-municipal" className="font-semibold text-primary underline-offset-2 hover:underline">Kano Municipal</Link>
+          {" · "}
+          <Link href="/geo" className="font-semibold text-primary underline-offset-2 hover:underline">All 774 LGAs</Link>
           {" · "}
           <Link href="/status" className="font-medium underline-offset-2 hover:underline">how we verify (/status)</Link>.
         </p>
