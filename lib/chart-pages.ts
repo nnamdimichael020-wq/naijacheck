@@ -49,10 +49,10 @@ export const CHART_PAGES: ChartPage[] = [
     registryId: "parallel-fx",
     spec: need("parallel-usd-ngn-buy"),
     name: "Parallel USD buy",
-    h1: "Parallel USD buy chart (₦ per US$)",
-    metaTitle: "Parallel USD buy chart — stored readings, no interpolation",
+    h1: "Naira to dollar history — parallel market buy rate chart (Nigeria)",
+    metaTitle: "Naira to dollar history — parallel market buy rate chart Nigeria (Aboki Forex)",
     metaDescription:
-      "Every stored parallel-market USD buy reading from Aboki Forex, plotted in naira per US$ with real gaps kept as gaps. A third-party indicative quote, not a CBN rate.",
+      "Parallel market USD buy rate history in naira per dollar: every stored Aboki Forex reading, no interpolation, real gaps kept. Not a CBN rate. Nigeria-focused archive.",
     summary:
       "The indicative parallel-market buy quote the monitor parsed from Aboki Forex. It is a third-party quote, not a CBN rate and not a guaranteed dealer price.",
     unitLabel: "₦ per US$",
@@ -64,10 +64,10 @@ export const CHART_PAGES: ChartPage[] = [
     registryId: "cbn-usd",
     spec: need("cbn-usd-ngn"),
     name: "CBN official USD",
-    h1: "CBN NFEM USD chart (₦ per US$)",
-    metaTitle: "CBN NFEM USD chart — official closing readings",
+    h1: "CBN official dollar to naira history — NFEM closing rate chart",
+    metaTitle: "CBN dollar to naira history — official NFEM closing rate chart Nigeria",
     metaDescription:
-      "Official CBN NFEM USD/NGN closing readings stored by NaijaCheck, with the source's own date and time. No interpolation and no parallel-market values mixed in.",
+      "Official CBN NFEM USD to naira history chart: stored closing readings in NGN per US$ from the CBN site, source-dated, never mixed with parallel-market values.",
     summary:
       "The official CBN NFEM closing rate the monitor parsed from the CBN exchange-rate page. It is a separate market from the parallel quote and is never averaged with it.",
     unitLabel: "₦ per US$",
@@ -79,10 +79,10 @@ export const CHART_PAGES: ChartPage[] = [
     registryId: "fuel-depot",
     spec: need("fuel-depot-petrol"),
     name: "Depot petrol median",
-    h1: "Depot petrol median chart (₦ per litre)",
-    metaTitle: "Depot petrol median chart — wholesale PMS readings",
+    h1: "Depot petrol price history Nigeria — wholesale PMS median chart (gantry, not pump)",
+    metaTitle: "Depot petrol price history Nigeria — wholesale PMS median chart (gantry)",
     metaDescription:
-      "Wholesale depot petrol (PMS) medians in naira per litre, plotted only from readings the monitor parsed. These are gantry prices, not station pump prices.",
+      "Depot petrol price history in Nigeria: wholesale PMS median per litre from stored Awajis/petroleumprice.ng readings only. Gantry prices, not station pump prices.",
     summary:
       "A national median of the wholesale depot/gantry petrol prices published in the parsed depot tables. It is not a station pump price; fuel pages show the same series so the numbers cannot disagree.",
     unitLabel: "₦ per litre",
@@ -94,10 +94,10 @@ export const CHART_PAGES: ChartPage[] = [
     registryId: "fuel-depot",
     spec: need("fuel-depot-diesel"),
     name: "Depot diesel median",
-    h1: "Depot diesel median chart (₦ per litre)",
-    metaTitle: "Depot diesel median chart — wholesale AGO readings",
+    h1: "Diesel depot price history Nigeria — wholesale AGO median chart",
+    metaTitle: "Diesel depot price history Nigeria — wholesale AGO median chart",
     metaDescription:
-      "Wholesale depot diesel (AGO) medians in naira per litre from stored monitor readings only. Gantry prices, not pump prices, with every gap left visible.",
+      "Diesel depot price history in Nigeria: wholesale AGO median per litre from stored monitor readings only. Gantry prices, not pump prices, gaps left visible.",
     summary:
       "A national median of the wholesale depot/gantry diesel (AGO) prices published in the parsed depot tables. Generator running-cost pages use the same stored series.",
     unitLabel: "₦ per litre",
@@ -109,10 +109,10 @@ export const CHART_PAGES: ChartPage[] = [
     registryId: "fuel-depot",
     spec: need("fuel-depot-lpg"),
     name: "Depot cooking gas median",
-    h1: "Depot cooking gas (LPG) median chart (₦ per kg)",
-    metaTitle: "Depot cooking gas median chart — wholesale LPG readings",
+    h1: "Cooking gas depot price history Nigeria — wholesale LPG median chart (per kg)",
+    metaTitle: "Cooking gas depot price history Nigeria — wholesale LPG median per kg chart",
     metaDescription:
-      "Wholesale depot cooking gas (LPG) medians in naira per kilogram from stored monitor readings. LPG is priced per kg, so it is never mixed into the per-litre chart.",
+      "Cooking gas depot price history in Nigeria: wholesale LPG median per kilogram from stored Awajis readings. LPG is priced per kg, never mixed into per-litre chart.",
     summary:
       "A national median of the wholesale depot/gantry cooking gas (LPG) prices published in the parsed depot tables. LPG is priced per kilogram, so it is charted on its own axis.",
     unitLabel: "₦ per kilogram",

@@ -16,10 +16,10 @@ import { DATASET_REGISTRY, stateLabel } from "@/lib/source-registry";
 
 export const metadata: Metadata = pageMetadata({
   path: "/charts",
-  title: "Price charts — every stored reading, no interpolation",
+  title: "Naira price history charts — dollar, CBN & fuel depot (Nigeria)",
   description:
-    "Dedicated naira charts for the parallel USD buy quote, the CBN NFEM rate and wholesale depot petrol, diesel and LPG. Only readings the monitor stored are drawn; gaps stay gaps.",
-  keywords: ["naira price charts", "parallel dollar chart nigeria", "cbn nfem chart", "depot fuel price chart"],
+    "Naira price history charts: parallel USD buy, CBN NFEM official, depot petrol, diesel and LPG. Every stored monitor reading plotted, real gaps kept, no interpolation. Nigeria-focused archive.",
+  keywords: ["naira price charts", "naira to dollar history chart", "parallel dollar chart nigeria", "cbn nfem chart", "depot fuel price history nigeria", "dollar history Nigeria"],
 });
 
 export default function ChartsIndexPage() {
@@ -101,6 +101,42 @@ export default function ChartsIndexPage() {
             );
           })}
         </ul>
+      </section>
+
+      <section aria-labelledby="history-hubs" className="space-y-2 rounded-xl border p-4 text-sm">
+        <h2 id="history-hubs" className="text-base font-bold">
+          History hubs — the honest archives
+        </h2>
+        <p className="text-muted-foreground">
+          For the full story around each chart (why official ≠ parallel, depot ≠ pump, what is stored and what is not, how
+          often we check, retention and source links):
+        </p>
+        <ul className="flex flex-wrap gap-x-4 gap-y-1">
+          <li>
+            <Link href="/rates" className="font-semibold text-primary underline-offset-2 hover:underline">
+              FX rates &amp; history hub (/rates)
+            </Link>
+          </li>
+          <li>
+            <Link href="/rates/history" className="font-semibold text-primary underline-offset-2 hover:underline">
+              FX archive table (/rates/history)
+            </Link>
+          </li>
+          <li>
+            <Link href="/prices/fuel" className="font-semibold text-primary underline-offset-2 hover:underline">
+              Fuel depot history hub (/prices/fuel)
+            </Link>
+          </li>
+          <li>
+            <Link href="/status" className="text-muted-foreground underline-offset-2 hover:underline">
+              Data status
+            </Link>
+          </li>
+        </ul>
+        <p className="text-xs text-muted-foreground">
+          Every hub states the same honestly: archive from 2026-10-09, last {MAX_HISTORY_POINTS_PER_DATASET} per dataset,
+          only real monitor parses, gaps mean no reading. No “complete from 1999” claim.
+        </p>
       </section>
 
       <section aria-labelledby="chart-rules" className="space-y-2 rounded-xl border bg-card/40 p-4 text-sm">

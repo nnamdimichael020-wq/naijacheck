@@ -212,6 +212,90 @@ function PageBody({ chartPage }: { chartPage: ChartPage }) {
         </p>
       </section>
 
+      <section aria-labelledby="faq" className="space-y-2 rounded-xl border bg-card/40 p-4 text-sm">
+        <h2 id="faq" className="text-base font-bold">
+          Questions about this chart (true answers only)
+        </h2>
+        <div className="space-y-3 text-muted-foreground">
+          <div>
+            <h3 className="font-semibold text-foreground">Why might 7D or 30D be disabled?</h3>
+            <p>
+              Timeframes filter only readings that actually exist. If fewer than two stored readings fall inside the last 7
+              or 30 days, that toggle is disabled and the page says so (e.g. “Need 2 readings in last 7 days, have 1”).
+              The archive started 2026-10-09 and grows only from real monitor parses — we do not invent older points to
+              unlock the toggle.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-foreground">Why does the line have a gap?</h3>
+            <p>
+              A gap means no successful parse was stored at that time. The horizontal axis is the source’s own reading
+              time, so a missed check leaves a visible gap — we never interpolate or draw a flat line across it.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-foreground">Why is the change badge “—” or “no prior reading”?</h3>
+            <p>
+              The change badge compares the latest reading with the immediately preceding stored reading. With fewer than
+              two readings, there is no prior point to compare, so it shows “No prior reading” instead of guessing.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-foreground">Can I get older history (e.g. 2015 dollar)?</h3>
+            <p>
+              Not from this page. We do not scrape or fabricate historical “dollar in 2015” series from blogs. The table
+              below is the honest archive: collection started 2026-10-09, up to {MAX_HISTORY_POINTS_PER_DATASET} per dataset,
+              and it grows as the monitor records real checks. No “complete from 1999” claim is made.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-foreground">Where do I see how often this is checked?</h3>
+            <p>
+              On <Link href="/status" className="font-semibold text-primary underline underline-offset-2">/status</Link> — each
+              dataset shows last check time, source time, cadence (every 3 hours attempted), stale/seeded flags and
+              limitations. The FX hub at{" "}
+              <Link href="/rates" className="font-semibold text-primary underline underline-offset-2">/rates</Link> and the
+              fuel hub at{" "}
+              <Link href="/prices/fuel" className="font-semibold text-primary underline underline-offset-2">/prices/fuel</Link>{" "}
+              explain what is stored and what is not.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="hub-links" className="space-y-2 rounded-xl border p-4 text-sm">
+        <h2 id="hub-links" className="text-base font-bold">
+          More history hubs
+        </h2>
+        <ul className="flex flex-wrap gap-x-4 gap-y-1">
+          <li>
+            <Link href="/rates" className="font-semibold text-primary underline-offset-2 hover:underline">
+              FX rates &amp; history hub (/rates)
+            </Link>
+          </li>
+          <li>
+            <Link href="/rates/history" className="font-semibold text-primary underline-offset-2 hover:underline">
+              FX archive table (/rates/history)
+            </Link>
+          </li>
+          <li>
+            <Link href="/prices/fuel" className="font-semibold text-primary underline-offset-2 hover:underline">
+              Fuel depot history hub (/prices/fuel)
+            </Link>
+          </li>
+          <li>
+            <Link href="/charts" className="text-muted-foreground underline-offset-2 hover:underline">
+              All charts
+            </Link>
+          </li>
+          <li>
+            <Link href="/status" className="text-muted-foreground underline-offset-2 hover:underline">
+              Data status
+            </Link>
+          </li>
+        </ul>
+      </section>
+
       {related.length ? (
         <section aria-labelledby="related" className="space-y-2">
           <h2 id="related" className="text-xl font-bold">
@@ -256,6 +340,36 @@ function PageBody({ chartPage }: { chartPage: ChartPage }) {
               ? { temporalCoverage: `${earliest.sourceTime}/${latest.sourceTime}` }
               : {}),
             ...(sourceUrl ? { isBasedOn: sourceUrl } : {}),
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Why might 7D or 30D be disabled?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Timeframes filter only readings that actually exist. If fewer than two stored readings fall inside the last 7 or 30 days, that toggle is disabled and the page says so. The archive started 2026-10-09 and grows only from real monitor parses.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Why does the line have a gap?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A gap means no successful parse was stored at that time. The horizontal axis is the source's own reading time, so a missed check leaves a visible gap — we never interpolate.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I get older history (e.g. 2015 dollar)?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Not from this page. We do not scrape or fabricate historical dollar series. The table below is the honest archive from 2026-10-09, up to 56 per dataset, growing as the monitor records real checks.",
+                },
+              },
+            ],
           },
         ]}
       />
