@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T17:10:31.422Z",
+  "updatedAt": "2026-10-21T21:41:47.745Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "japa",
@@ -306,7 +306,7 @@
       "term": "Detty December",
       "kind": "trend",
       "trend": "rising",
-      "trendScore": 75,
+      "trendScore": 100,
       "confidence": "high",
       "meaning": "The December festive season when diaspora Africans come home and spend heavily on parties, travel and fashion.",
       "detail": "Detty December started as a Ghanaian and Nigerian festive phrase. It describes the nightlife and money flow when returning diaspora folk spend in Lagos, Accra and other cities. For traders, it is the busiest season of the year: food, fashion and events see huge spikes.",
@@ -321,7 +321,7 @@
       ],
       "platform": "Instagram, TikTok",
       "source": "Seasonal usage, 2024-2026.",
-      "mentions7d": 3
+      "mentions7d": 4
     },
     {
       "slug": "sabi",
@@ -349,8 +349,8 @@
       "slug": "gist",
       "term": "Gist",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 0,
       "confidence": "high",
       "meaning": "News, gossip or a story. 'Give me the gist' means tell me what's happening.",
       "detail": "Gist is a Nigerian English word for information, usually gossip. It moves fast in group chats. Everyone wants the gist, but be careful: gist can mean facts or rumours, so check before you share.",
@@ -365,14 +365,14 @@
       ],
       "platform": "WhatsApp, X",
       "source": "Common usage in Nigerian English.",
-      "mentions7d": 1
+      "mentions7d": 0
     },
     {
       "slug": "jara",
       "term": "Jara",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 0,
       "confidence": "medium-high",
       "meaning": "Extra or bonus, especially a small extra you add to a purchase for goodwill.",
       "detail": "Jara is a Yoruba word that means extra. Market traders often add jara to a bag or a bunch to keep customers happy. It is a small thing that builds loyalty, and it is a smart tactic for any small business.",
@@ -387,7 +387,7 @@
       ],
       "platform": "Markets, WhatsApp",
       "source": "Common usage in Yoruba and Nigerian markets.",
-      "mentions7d": 1
+      "mentions7d": 0
     },
     {
       "slug": "shakara",
