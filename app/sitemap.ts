@@ -4,6 +4,7 @@ import { LIVE_FUEL, LIVE_FX, datasetHistoryPoints } from "@/lib/live";
 import { CHART_PAGES } from "@/lib/chart-pages";
 import { BANKS_FILE_UPDATED_AT, getAllBanks } from "@/lib/banks";
 import { getAllPostalStates, getAllPostalAreaParams, POSTAL_FILE_UPDATED_AT } from "@/lib/postal";
+import { LGAS_FILE_UPDATED_AT, getAllLgaStates, getAllLgaParams } from "@/lib/lgas";
 import { absUrl } from "@/lib/seo";
 
 /** Static export: this file is evaluated at build time and written to /sitemap.xml. */
@@ -86,6 +87,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   ];
 
+  // Geo — 774 LGAs (768 + 6 FCT councils) — URL scheme /geo chosen to avoid /codes/banks, /codes/postal collision.
+  // Docs: docs/runbooks/lgas.md — why /geo not /codes/lga. Sitemap lastModified from data/lgas.json.
+  const lgasUpdatedAt =
+    LGAS_FILE_UPDATED_AT && /^\d{4}-\d{2}-\d{2}/.test(LGAS_FILE_UPDATED_AT) ? LGAS_FILE_UPDATED_AT.slice(0, 10) : FIXED_LASTMOD;
+  const geoSitemap: MetadataRoute.Sitemap = [
+    { url: absUrl("/geo"), lastModified: lgasUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
+    ...getAllLgaStates().map((s) => ({
+      url: absUrl(`/geo/${s.slug}`),
+      lastModified: s.lastVerified.slice(0, 10),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+    ...getAllLgaParams().map(({ state, lga }) => {
+      const st = getAllLgaStates().find((x) => x.slug === state);
+      return {
+        url: absUrl(`/geo/${state}/${lga}`),
+        lastModified: st?.lastVerified.slice(0, 10) ?? lgasUpdatedAt,
+        changeFrequency: "monthly" as const,
+        priority: 0.4,
+      };
+    }),
+  ];
+
   // Dedicated chart pages. Their lastModified is the newest stored observation for the series, so
   // the sitemap agrees with the page instead of using the build clock.
   const charts: MetadataRoute.Sitemap = [
@@ -115,5 +139,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...fixed, ...charts, ...bankSitemap, ...postalSitemap, ...generated];
+  return [...fixed, ...charts, ...bankSitemap, ...postalSitemap, ...geoSitemap, ...generated];
 }
