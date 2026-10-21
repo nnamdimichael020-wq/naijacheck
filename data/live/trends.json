@@ -1,20 +1,20 @@
 {
-  "checkedAt": "2026-10-21T11:46:37.659Z",
+  "checkedAt": "2026-10-21T17:10:31.422Z",
   "seeded": false,
   "method": "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
   "limitation": "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
   "terms": [
     {
-      "slug": "detty-december",
-      "term": "Detty December",
+      "slug": "japa",
+      "term": "Japa",
       "mentions7d": 4,
       "score": 100
     },
     {
-      "slug": "japa",
-      "term": "Japa",
-      "mentions7d": 2,
-      "score": 50
+      "slug": "detty-december",
+      "term": "Detty December",
+      "mentions7d": 3,
+      "score": 75
     },
     {
       "slug": "oblee",
@@ -49,12 +49,6 @@
     {
       "slug": "jara",
       "term": "Jara",
-      "mentions7d": 1,
-      "score": 25
-    },
-    {
-      "slug": "abeg",
-      "term": "Abeg",
       "mentions7d": 1,
       "score": 25
     },
@@ -115,6 +109,12 @@
     {
       "slug": "shakara",
       "term": "Shakara",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "abeg",
+      "term": "Abeg",
       "mentions7d": 0,
       "score": 0
     },

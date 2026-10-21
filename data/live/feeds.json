@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-21T11:46:37.659Z",
+  "checkedAt": "2026-10-21T17:10:31.422Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -36,22 +36,22 @@
           "published": "2026-10-12T07:00:00.000Z"
         },
         {
-          "title": "Again, Tinubu Forecloses Fuel Subsidy Return, Says Nigeria Won’t Go Back",
-          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUUVpa0dPYUxDU3kwM21sTEpTVWNWMVpZb0dCNDAtU21lT0ZGV3VSYWJCZlNtck1lWkVDQ2xYYmMtUHBJVFdfaTZib0xIbDhxSS0yUXFNeEZuOUd4VWd1WlpkdEdraXN1YUg3YVYzMVJzWlJmeHBZY2t3MV95bTdkcGlESkVTdEJxcUQ1Qk44cF8tU053Q2Fmekk2VVpqTFQ5cjZCSThfTkNMNmN6WVE?oc=5",
-          "source": "THISDAYLIVE",
-          "published": "2026-10-20T18:08:11.000Z"
-        },
-        {
           "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
           "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNXZuQks4c2otRlh3czh4dHpPbmR3NXFKbmpjaExMRnZNR0hMMDd1T0tzZjBvR25wMlRYQm1Ydm5NdVhsQm4wUzJIYjdHNzVmb21Xd2huaWxfai1BaEpHTDdnMTZlZGRlOVpSYlQxaXl6aVhNdzlMcE1NbzVkX09EWmlrMlYtYlFETGtrQ2czY2lRS1R6TjI2ZVRyX05WdDZCX0NSLXNySkpDaFBPel84eWJTSklsUlRyNWY4TG9JYzgwbHVZQzVpVk9ldk10cWNwb3JKbVFCZmxGWkFzTnJrOWJPeG0yckd3YlJR?oc=5",
           "source": "Premium Times Nigeria",
           "published": "2026-10-09T07:00:00.000Z"
         },
         {
-          "title": "Makinde questions FG’s coastal road, demands petrol pricing details",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOU1pBWXY2QWk0V2FudkNRNFhOTlBzMEQ4NzNiVXlUVmZCcDZaT3hEN1M5d2VQOXNibmlJeEhIamJsdS1lVFJxTjN0S2FZSzFDM1JGRjhfb2NNalU1VVRFNkt1TmlWaXNlczZLaWtabkZSVUN2TDVLNlFlcWNjZlo2djVXdmt4NU5SNWxnbg?oc=5",
-          "source": "The Sun Nigeria",
-          "published": "2026-10-21T06:12:09.000Z"
+          "title": "ADC: If re-elected, Tinubu will announce fuel tax on May 29, 2027",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONno0cmNWMGJWdk5pZi1oSmIybzhFVVllc1QxaGZTcXJXMUQ2YjB4dDZoaUZDRG5qY29UcHVPaU1DcHhQLWRfeUJtNFRtdnZ0b2Ria0UtV2V5UXV1bkN5c0pVOVRvb1Zwcl90S3pIZnRsU3VMUmZBM0M3Q3loVUJ1UExiS08xUTVtWGVLMnZTTQ?oc=5",
+          "source": "Daily Trust",
+          "published": "2026-10-21T13:07:30.000Z"
+        },
+        {
+          "title": "Nigeria’s Fuel Price Gamble: Cheaper Petrol, Uneven Relief",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQd2Z4TUVlaVN5aVFNUGIxRm9mU0RjZFJINVhHcV85TDFsQjg2R2tKM3J0SW1EblpRdUNQOEVzaWI5a3FtZHNEdF93cFpHdDZpU3czd0lyM2wyRDRLTnFLWktkT3JhdzNzLWdDdFYwb0RlSnpTMHJrUzBtQWEzaTNGR0EzZW5uSVBwOWQ2UkNDRGFLVzJJck93S20xNA?oc=5",
+          "source": "THISDAYLIVE",
+          "published": "2026-10-18T02:18:52.000Z"
         },
         {
           "title": "Fuel price update in Nigeria weeks after Tinubu’s N1,350/litre announcement",
@@ -67,10 +67,22 @@
       "query": "naira dollar exchange rate Nigeria",
       "items": [
         {
+          "title": "Dollar to Naira Today: Black Market Exchange Rate — Wednesday, October 21, 2026",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaFhuOC16V1VfcG5oQ3NUSzQtN1hfN3lJc1ZEc1VHZGhNazBJdUhZcWoyQ0tqUDBkQ2V1MmRmY0Y3SXFwS3U1aG5leTJNZlZtN2Mxa2hRUXpVR2tOVzlWOXhDRUJzemdET3VZM3VtX2hldndybHEtTlY2cjVLMTFhcXZsWFZSUmdsa1p1X2M2UVR4OHQxSF9saTJOcUxOem92N1VURC1JTnBFMlU0QUZ6VUFn0gG3AUFVX3lxTFBkcUpPUEs4bTE3UW02TzQ4bVBGLUQ5YlNKVF9Fd1ctQ1RqbXlTOWRnNmg1RDNTWDRWd1pBNF9kZm9ycmpfbnZVN2Z1VVYyRk8yaVJEZGtReHBvS09IUG83cF9QU1F6UERpUFRWZVJzMXFfNVgyNzY1RGlwTWZYcGktMTExZ0tVT056MXllS3hpajN0aUFXZjZ3VFg5ME9WcWNZWFE0OEpJQnA3elZVSXhxbnNYSG4xYw?oc=5",
+          "source": "Investors King",
+          "published": "2026-10-21T11:55:44.000Z"
+        },
+        {
           "title": "Dollar to Naira exchange rate today, October 21, 2026",
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdjZBeFdTVXEtYWd2ZXVra0V2eUk1S3FEbnpVQTV0U2FSVldhVl95RjNWZ2FxMm9rX3gzakZhUEVVNFctVS1UVXMxU2EzaTFRUEtlbFhIS3VWVlFXcFlPR29idktQdlJGcVF1WjV2TmIwdlJrX19rVUdTSXpVTC0zU1FNTDBCcDU1QmtOTVhIc1Q3Z9IBlwFBVV95cUxNUFppY3FpSXg4LU5RY2xOWFZpWjJtczEtUGpJZXZLUzRCTWVLdEhCdHhUUkl5RWhtbU02X056RmZHSVRaQVRuNWJtcFQ2djlJdEJ2TzRqbXpXYzhmSTVUSlV0VDJhaFVVUGhHVzNobjJPc0I2VVFOSDExUjU1VVI1REtTQTY4a1N4WjVpRkJsVXlqbFU4VDJ3?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-21T05:55:12.000Z"
+        },
+        {
+          "title": "Naira Marginally Appreciates by 11 Kobo Against USD at Official Market",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTU1Sdm55eVJfVnItd0N6TnYyVkgzOU9CWGo3Si1RbzRNYXRwSUhGOF8ydVI4a0FETWUtcFNuLWdlbm5DR1NxbzhCeGFKSHd2ZF92Z1BvbzdLNW1aQXpHWTF0N2U4QnRlSTBLV1VtLUZtME5TVXpZcmVQZDhrcGNJZEVPTmNNTWxvaGE5SjhJMWNiZGNzQlNhalFPa2VZV0xxdlZpNlVn?oc=5",
+          "source": "Business Post Nigeria",
+          "published": "2026-10-21T08:26:56.000Z"
         },
         {
           "title": "Dollar to Naira Exchange Rate Today, October 21, 2026",
@@ -79,40 +91,28 @@
           "published": "2026-10-21T09:44:05.000Z"
         },
         {
-          "title": "Naira Marginally Appreciates by 11 Kobo Against USD at Official Market",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTU1Sdm55eVJfVnItd0N6TnYyVkgzOU9CWGo3Si1RbzRNYXRwSUhGOF8ydVI4a0FETWUtcFNuLWdlbm5DR1NxbzhCeGFKSHd2ZF92Z1BvbzdLNW1aQXpHWTF0N2U4QnRlSTBLV1VtLUZtME5TVXpZcmVQZDhrcGNJZEVPTmNNTWxvaGE5SjhJMWNiZGNzQlNhalFPa2VZV0xxdlZpNlVn?oc=5",
-          "source": "Business Post Nigeria",
-          "published": "2026-10-21T08:26:27.000Z"
-        },
-        {
           "title": "Dollar-to-Naira exchange rate Today, October 20, 2026: Naira appreciates against USD",
           "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMWlxOWNCcm9zY0c0aThsNDZVS0ZFek5oUWxXdC1BMTZWYThiaDJxUmNSaWd5c0dWLVBiNUkxazhkSXFaOVhQRjByMFlxNThtVi12SmxnLUVxeFNadThUM2xjdDlYeWF6aTMxSXluSVZKZFlXSHlLeGdwN1ZmOXQ4cDF1Z2JkUWFmaXFfTWJ4a0RqcFhsNVZjSGNTZ0NxRkVIVWhJTjlySGxxTXFzZVpPTjEzT1Y?oc=5",
           "source": "Daily Post Nigeria",
           "published": "2026-10-20T20:50:58.000Z"
         },
         {
+          "title": "Naira Exchange Rates Update: CBN Releases Dollar, Euro, Pound Prices at Official Market",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOThDclNzcDI5N2Q4d25XM3hSa19TV2kyYXd4TlRqV1dFOWhaODhRSzhRR1FDYXdhT3FFSkNEM0psX2YtenNENk1fNmtDakVSRVlYWm01aXNJN1YzZU50VHFvMlREWlNGUmlZQTZvdG94YzljM2YzY1paMXZIdFkwbVpTYTh3em00NDZVeG95RVJpMmJBNmtKak5GZE10REVsdnI5QVFPWV9LMUYxNGV5VVpFNDE?oc=5",
+          "source": "Legit News",
+          "published": "2026-10-21T09:55:11.000Z"
+        },
+        {
+          "title": "Naira appreciates against dollar at official FX market",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPMEhhVE51eW16dHJDSnZGWnpMRi1lZ3VzLU04S1hzcXJkUGRlNHVTLWVjc0h1T2JZWXJkdEk0UDRIZ3pyd0s3ZkxnTzVhX1hCQ3dIbXd3YU5XRnZIMjg4ek1sU25aOXA3N05ta09HYTFUS3hsNk9fWmpoWG5CZno3SDR5ejZ4MzdFWm1YUWVB0gGTAUFVX3lxTE5CNGI2bl9qX08wNHgtNlFxdnltSG0xSm5XVWYyLVFoekpvblg4UWNsRFg4WGZnWnBEQnR5V0dfVlR5MG9Dc0hiYUJ3a2FvYjd0cWpibXhkaTVFMEYzQXdOTUhQNmZodGRwcG82NUZ3Zk14SzIxSDQzMGU2V1ptaHJXMjZOMFhib1dXcDU0RG8zdWRDTQ?oc=5",
+          "source": "Tribune Online",
+          "published": "2026-10-21T09:02:00.000Z"
+        },
+        {
           "title": "Dollar to Naira exchange rate today, October 20, 2026",
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQNHNMZVRxeWpnT2tPeXl3cThkd2JJemxINGRBZVZXeHhMVmloVVN4ZGpDVXdaX3VIa2lpSzFtRXc5NTl5SzNnNnY3MW9HWE5ZMWJxOGg4eXBCSXlHb0pEV1hKcGxjV1NTYU9EVkN2MkpFQldPTTgyMmNzMnM5SjZiVVdMRDNZWXM3dk91SmtFNS1KQdIBlwFBVV95cUxOZFRxdWg4MEY5MXByMk9LMXJCamdDUm5vaV9ZUE94M0x2UWJNZlRyUjdvSFd2YUNvTmoxVEcxOTVzMnhyX3VTckFqcFpZaTV1anpQbVZJM0paSll0clJfUG5SbTBQaVJaeHZva3kyYXpnbVhyNWoxU3JOOWtZck9hNXVvcFRZNFpGalBndFVhUDU3eUlRRFNV?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-20T06:06:03.000Z"
-        },
-        {
-          "title": "Dollar to Naira Black Market Exchange Rate Today, Monday, October 19, 2026",
-          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNdURwZ3VuNkI1bmp2UVBuRk9XNmhTSUxwS1IyRjZJclpwZ21UV3EzSWtLanhwckxCU0ZoY0RPMndfbXY0bmRVdmtBQ093UmxmaUpIcVMtbDBHaVE1eDNuMlJ3Z0Q2QXFENjcxV0RmbkJQU0U3MENpeVM2T1AyNFpXV3B3M1NGenlkd0NsbGtTb3dQd1ZLWHltQzBKeEcxX1dCaTcxSVBQdE4zOWY5QVHSAbMBQVVfeXFMUG5YVFczRDk5VDhjcHFCWjlMWnV6T3ZEd19NU05pZlFMMWExc1ltdnZ1ZnpOaVFXVVBRNnlGZU11LTFHenVsU2I3VVJJV2RneGo1X1YxcHM3Y0hlN3QyTExSTnd2dEE1dHBVa19VSTA4akZjVFFNek8xVDRCS0d1QmtHTzlGVHNFWk5MaEVVTTNyNnoyUFBwZ2JCQkoyb3lKdHRBeWM1NmRDNXNQbS15ODF2dUU?oc=5",
-          "source": "Investors King",
-          "published": "2026-10-19T05:54:13.000Z"
-        },
-        {
-          "title": "Naira faces exchange rate gap as dollar sells for ₦1,380 on black market",
-          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUzNhclB5RVd1WGppUmctOU9ualF5YkxCRmEydFdycHFheVd4RmJQaGx5LTlvYktSeVVYb0JXenVzUEI0aTdLM0hZTmVLUERpWEdiRm5wVGhSOU9MRG5JUTFaWEl3UUlpNDFHamo0TXg1Mkt5UDVjQU5aUlAxSlduM2wyNTFyUVZsZzFTS0ZHT0FDeGJpZlJEc1RCN2VadV9WYmJmR2g3MVIxYXNmazUxQlpZbHJfNHdI?oc=5",
-          "source": "PM News Nigeria",
-          "published": "2026-10-20T10:03:26.000Z"
-        },
-        {
-          "title": "Dollar to Naira Exchange Rate Today, October 19, 2026",
-          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE10d2E1cFdkOUFOWUVtdHlpdEJEUlVtS0dhcWo4VjBvSUluRVR3dHNxVEhIMHlBb1IzOS11U2JSUTlaOHprNjlEenc4U2QxV3FrQnNGbmx2V1E1dzJLNW15UDFidFpOR09tVGhsS0lWdHN4allIY3RFRWdJc2w5cW8?oc=5",
-          "source": "Techeconomy",
-          "published": "2026-10-19T09:57:20.000Z"
         }
       ]
     },
@@ -183,22 +183,28 @@
           "published": "2026-07-07T23:41:10.000Z"
         },
         {
-          "title": "Nigerians Question Telcos’ Advertising ‘Unlimited’ Data Plan ‘If It Does Not Exist’",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPb2ljOGtUVXdpX3g1LW4yaGxoemhVLUcwUkdvX1ZSNjFoTW9xdnhUd2xGV01tQXVORnpTYVJSUGRYZHVzbU1PUW9fN2dPdERhcTZETWhtaE4zcU1mVFZnaEJHZU5iM3lOaVoycFBobnVaUS1NcmRJQkxLRkgwR3M0TFZTc3NiX0hJYlZZU3M2RmpwQVVrVV9obVl6eHR5VHJqTGNr?oc=5",
-          "source": "Techeconomy",
-          "published": "2026-06-08T07:00:00.000Z"
-        },
-        {
           "title": "Top 10 Telecom Brands in Nigeria 2026: Definitive Ranking",
           "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Edng1UHF4QU4zOHpqY0J3cXMwVmlSOEFlWXpOQUk2M21XbXNqY2U2Mk1JQlBqbHdRS3dlOVRDSTI5ZWNqV3RvWmZQU084S0hMRzZZaGtWNk43WXE5Nk9acmY0RGZobzZHdi0wT3YtV1Y?oc=5",
           "source": "Global Brands Magazine",
           "published": "2026-09-08T07:00:00.000Z"
         },
         {
-          "title": "Implications As MTN, Airtel, Glo, Others Face ₦300bn Revenue Hit As FCCPC Hands Airtime Lending Market To Five New Operators",
-          "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQaGtwMFNqaHBKdmNMUFRuSWJwT2Y0UUhtVkUxSWJwUVVwWmJwQndOMTc3c2d1M2w0UldORXl2eEpWRDhmaXlrMFNEang2TjhKZlJjQXluY0dzNXZ3eDZGQkl3TVhOdUFKbm1GNmpPYnZNcjZRZnBBbUYtdjZpVWVkYlNOaEVneC12Q3JmaHNfSkpjZXpfM0phWjdfbmtqblo0azdqS3VGWjQtOUZwMUFSa2VjYnhhRXFXNlN4blh6ZEJSNV9Wem9JZ0tUTGFqM0EwS0FFVGEwaExFT2wwbnFOZWJxV3dINDdldUg3UjM1QjIwSEE?oc=5",
-          "source": "Brand Communicator",
-          "published": "2026-04-24T07:00:00.000Z"
+          "title": "Nigerians Question Telcos’ Advertising ‘Unlimited’ Data Plan ‘If It Does Not Exist’",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPb2ljOGtUVXdpX3g1LW4yaGxoemhVLUcwUkdvX1ZSNjFoTW9xdnhUd2xGV01tQXVORnpTYVJSUGRYZHVzbU1PUW9fN2dPdERhcTZETWhtaE4zcU1mVFZnaEJHZU5iM3lOaVoycFBobnVaUS1NcmRJQkxLRkgwR3M0TFZTc3NiX0hJYlZZU3M2RmpwQVVrVV9obVl6eHR5VHJqTGNr?oc=5",
+          "source": "Techeconomy",
+          "published": "2026-06-08T07:00:00.000Z"
+        },
+        {
+          "title": "2026 Complete list of voice tariff plans on MTN, Airtel, Globacom and T2mobile",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yS1ZKUDdWRFJzQmEwb24xX3hhaU9Qd3FTZ3RUeVNsRnNkV2VuaDFuUHFOcl85OG5XR0ljZ3haNnc0RkZEVnZ2ZUlMaHhTVnZGRjFPVzNGb3B0U0lFWDN1bzR3V0J3eU5qbHRkRFJCekNyVjlNVmJDSGticVc?oc=5",
+          "source": "Technext24.com",
+          "published": "2026-07-05T22:22:32.000Z"
+        },
+        {
+          "title": "MTN becomes first Nigerian telco to reach 100 million subscribers",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE04X3F0N3Y2clg2TUNJcXhPUFFoWUdWck5GcTF6d3NwVXAxU2J0LVdTelozdXVYYk9yRTF2QkxlRWlpLXBHSHBSNkdJaE52RlE0a2pZUzRoNTFLQlRYUzhiTXd4dS10V28zMzUzVUVZYWVHOVJ5dXZtWmthVEI?oc=5",
+          "source": "Technext24.com",
+          "published": "2026-09-09T18:31:51.000Z"
         },
         {
           "title": "Simple tricks to make your MTN, Airtel, Glo and 9mobile data last longer",
@@ -207,16 +213,10 @@
           "published": "2025-12-04T08:00:00.000Z"
         },
         {
-          "title": "Goodbye airtime? Lebara launches in Nigeria with a cloud-first model and cheaper data promises",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ibGRVTEo0OUNzSFg2S0E3cE1URFM1VUUxZWtUcjZkR2pRcDRUdVdWaEF5c2piTUVlcldEamFXekxWSHBUaEFhVXItd3dLbVRQU0tWQVp5OXNBX1pENlpnbWdvQkdLbGZ6bmdKbjhB?oc=5",
-          "source": "Condia",
-          "published": "2026-03-03T08:00:00.000Z"
-        },
-        {
-          "title": "2026 Complete list of voice tariff plans on MTN, Airtel, Globacom and T2mobile",
-          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yS1ZKUDdWRFJzQmEwb24xX3hhaU9Qd3FTZ3RUeVNsRnNkV2VuaDFuUHFOcl85OG5XR0ljZ3haNnc0RkZEVnZ2ZUlMaHhTVnZGRjFPVzNGb3B0U0lFWDN1bzR3V0J3eU5qbHRkRFJCekNyVjlNVmJDSGticVc?oc=5",
-          "source": "Technext24.com",
-          "published": "2026-07-05T22:22:32.000Z"
+          "title": "Implications As MTN, Airtel, Glo, Others Face ₦300bn Revenue Hit As FCCPC Hands Airtime Lending Market To Five New Operators",
+          "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQaGtwMFNqaHBKdmNMUFRuSWJwT2Y0UUhtVkUxSWJwUVVwWmJwQndOMTc3c2d1M2w0UldORXl2eEpWRDhmaXlrMFNEang2TjhKZlJjQXluY0dzNXZ3eDZGQkl3TVhOdUFKbm1GNmpPYnZNcjZRZnBBbUYtdjZpVWVkYlNOaEVneC12Q3JmaHNfSkpjZXpfM0phWjdfbmtqblo0azdqS3VGWjQtOUZwMUFSa2VjYnhhRXFXNlN4blh6ZEJSNV9Wem9JZ0tUTGFqM0EwS0FFVGEwaExFT2wwbnFOZWJxV3dINDdldUg3UjM1QjIwSEE?oc=5",
+          "source": "Brand Communicator",
+          "published": "2026-04-24T07:00:00.000Z"
         },
         {
           "title": "MTN, Airtel, glo data bundles: NCC approve 50% increase in price of airtime and data bundles",
@@ -299,12 +299,6 @@
           "published": "2026-05-07T07:00:00.000Z"
         },
         {
-          "title": "Market survey reveals fall in food prices",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNFRWTV9GWUstSGJNOXRBZVNxeGt1b2FVaWhoY2VWRU10QmV3MzBYa05sd2pFVG5lSlpnWlFqUHBOQ0w4em14NGJsOFdnOTdUSWZiYTg1MHY2VndEdVhLM0lnNjh2VGdoZk5mMTNJRDhvWFhOSzAwV3RwYWNPazVTZFh4T21YUQ?oc=5",
-          "source": "PM News Nigeria",
-          "published": "2026-07-12T07:00:00.000Z"
-        },
-        {
           "title": "Prices of beans, eggs, garri, others rise monthly despite annual decline — NBS",
           "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWmwzNVE0VmhaUm85bDIzYTZXbTFRQi1MbHduOVdFdDc4ODMxc2EwOWlhYkQtRjhLM0M5bm8wdGNGQVBNbTRFeGZSc056MXhpUUV3WC0zQ1BtR2ExRU10NjVIRVNoT1ZJQ296V01oLXJBVktmMHVuX1pxWXhLcTJPY3Y2eWRLOGZ4d05iNWt0LTFReUFraVNWNDMwWERUbTZGX2Q4VnBuNndIaEhTSnJN0gG0AUFVX3lxTE5YZEpVbFlzd1FmSHlZLW5JY0dXekMtSHFCTUZIb2U2WGkyUmxsXzAyUmd2alVJbGtqNU50Q2t0bFJsWS1FRUxMN01VTnQzaDQzNzJLXzRLWVd6M09sbko2VWJfWjlRTU1DLUV0TTBlNmlTVmJNejRza0NBdVBEb1dOOGtkUVc3OFB0VTAxSlptbWFlTE5qOXFYN2dRNmRjeFFYUUxOX0JGVU9RczF2T0xBdUF0dw?oc=5",
           "source": "Vanguard News",
@@ -333,6 +327,12 @@
           "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSEdKcUlQaHExVEhrUDdTV3dfWE1namdVSVFaN1BZMHpBWlR6Q1pTajZacU82NXZabzVfUU9hazhvUE96LWlVWGRrTVFxa0xLNDhfdXN2MlpwMDZicUR5NC1HZkdiZGJremRIWTlUVVBwUUVUbDcwM09Ob0dFWmFKUTl3ZkFHOFUwY3F2OEJROGtwQ0dYZ21nU2U0dVpDbWdwNHJwOVVYNA?oc=5",
           "source": "21st CENTURY CHRONICLE",
           "published": "2025-12-12T08:00:00.000Z"
+        },
+        {
+          "title": "Food Prices Drop As Festive Season Approaches",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE41NmJpZVp5M2p3cDRMWm5CSE1lMEE3SlNMUHRhMFVZaHFJN0cyNVJZbTM2VmtaN2FLMTJZNmJtZDdhak1kaDJxcl9VZXQ3di1kZzZtM18wSUVoYnVadkVWeUJzS29IS0NMdlJ6dGZKdTNwQzVLVFhj?oc=5",
+          "source": "LEADERSHIP Newspapers",
+          "published": "2025-12-06T01:26:36.000Z"
         }
       ]
     }
