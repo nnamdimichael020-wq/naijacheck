@@ -6,71 +6,51 @@ import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { SearchEntry } from "@/lib/types";
+import {
+  SEARCH_CATEGORIES,
+  POPULAR_SHORTCUTS,
+  filterByCategory,
+  rankedSearch,
+  WAT_SEARCH_KIND_LABEL,
+} from "@/lib/search";
 
-const KIND_LABEL: Record<string, string> = {
-  "prices-city": "Prices",
-  "prices-item": "Prices",
-  "prices-market": "Market",
-  "prices-static": "Prices",
-  hub: "Section",
-  "trends-slang": "Slang",
-  "trends-psych": "Relationships",
-  "hustle-blueprint": "Hustle",
-  "hustle-combo": "Hustle",
-  howto: "GovHowTo",
-  exam: "Exam",
-  telecom: "Telecom",
-  cookbook: "Cookbook",
-  tools: "Tools",
-  learn: "Learn",
-};
+const KIND_LABEL: Record<string, string> = WAT_SEARCH_KIND_LABEL;
 
-const ALIASES: Record<string, string> = {
-  dollar: "usd", naira: "ngn", gas: "fuel", pms: "petrol", ago: "diesel",
-  jamb: "admission cutoff", "cut-off": "cutoff", data: "telecom bundle",
-  business: "hustle", passport: "immigration",
-};
-const normalize = (value: string) => value.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9₦]+/g, " ").trim();
-const oneEditAway = (a: string, b: string) => {
-  if (Math.abs(a.length - b.length) > 1) return false;
-  let i = 0, j = 0, edits = 0;
-  while (i < a.length && j < b.length) {
-    if (a[i] === b[j]) { i++; j++; continue; }
-    if (++edits > 1) return false;
-    if (a.length > b.length) i++; else if (b.length > a.length) j++; else { i++; j++; }
-  }
-  return edits + Number(i < a.length || j < b.length) <= 1;
-};
-
-function score(e: SearchEntry, terms: string[]) {
-  const title = normalize(e.title);
-  const keys = normalize(e.keys);
-  const desc = normalize(e.desc);
-  const words = `${title} ${keys}`.split(/\s+/);
-  let s = 0;
-  for (const raw of terms) {
-    const expanded = `${raw} ${ALIASES[raw] ?? ""}`.trim().split(/\s+/);
-    for (const t of expanded) {
-      if (title.includes(t)) s += 3;
-      if (keys.includes(t)) s += 2;
-      if (desc.includes(t)) s += 1;
-      if (t.length >= 4 && words.some((word) => oneEditAway(t, word))) s += 1;
-    }
-  }
-  return s;
+function useHotkeyFocus(inputRef: React.RefObject<HTMLInputElement | null>) {
+  React.useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      const isTyping = target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable);
+      if (isTyping) return;
+      if (e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        e.preventDefault();
+        inputRef.current?.focus();
+      }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        inputRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [inputRef]);
 }
 
 /**
  * Site search. The index (public/search-index.json) is fetched the first time the user focuses the box,
- * so the initial page load stays light for 2G/3G visitors.
+ * so the initial page load stays light for 3G visitors.
  */
 export function SearchBar({ className, id = "site-search" }: { className?: string; id?: string }) {
   const [q, setQ] = React.useState("");
+  const [category, setCategory] = React.useState("all");
   const [index, setIndex] = React.useState<SearchEntry[] | null>(null);
   const [open, setOpen] = React.useState(false);
   const [active, setActive] = React.useState(0);
   const [failed, setFailed] = React.useState(false);
   const router = useRouter();
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  useHotkeyFocus(inputRef);
 
   const load = React.useCallback(async () => {
     if (index || failed) return;
@@ -83,103 +63,258 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
     }
   }, [index, failed]);
 
+  const trimmed = q.trim();
+  const isAllEmpty = category === "all" && trimmed.length === 0;
+
   const results = React.useMemo(() => {
-    const terms = normalize(q).split(/\s+/).filter((t) => t.length > 1);
-    if (!index || terms.length === 0) return [];
-    return index
-      .map((e) => ({ e, s: score(e, terms) }))
-      .filter((x) => x.s > 0)
-      .sort((a, b) => b.s - a.s)
-      .slice(0, 8)
-      .map((x) => x.e);
-  }, [index, q]);
+    if (!index) return [];
+    if (isAllEmpty) return [];
+    // rankedSearch handles empty query browse mode and filtered categories
+    return rankedSearch(index, q, category, 8);
+  }, [index, q, category, isAllEmpty]);
+
+  const popular = POPULAR_SHORTCUTS;
+  const showPopular = open && isAllEmpty && !failed && !!index;
+  const showBrowse = open && category !== "all" && trimmed.length === 0 && index && results.length > 0;
+  const showResults = open && trimmed.length > 1;
+  const showList = open && (showResults || showBrowse || showPopular || failed || (index && results.length === 0 && trimmed.length > 1));
 
   const listId = `${id}-results`;
-  const showList = open && q.trim().length > 1;
+  const hasDropdown = showList;
+
+  const navigateToSearch = React.useCallback(
+    (query: string, cat: string) => {
+      const params = new URLSearchParams();
+      if (query.trim()) params.set("q", query.trim());
+      if (cat && cat !== "all") params.set("category", cat);
+      // Empty query + Enter: stay put, show popular — don't push empty /search
+      if (!params.get("q")) return;
+      router.push(`/search?${params.toString()}`);
+      setOpen(false);
+      // Reset filter on navigation is documented; we keep category locally but new page will read from URL
+    },
+    [router],
+  );
+
+  // Reset active index when results change
+  React.useEffect(() => {
+    setActive(0);
+  }, [q, category, results.length]);
 
   return (
-    <div className={cn("relative w-full", className)}>
-      <form role="search" onSubmit={(e) => e.preventDefault()} className="relative">
-        <Search className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
-        <label htmlFor={id} className="sr-only">
-          Search prices, slang, hustles, GovHowTo and exams
-        </label>
-        <input
-          id={id}
-          type="search"
-          autoComplete="off"
-          value={q}
-          placeholder="Search rice price, kelebu, POS business, JAMB cut-off…"
-          onFocus={() => {
-            setOpen(true);
-            load();
-          }}
-          onBlur={() => setTimeout(() => setOpen(false), 150)}
-          onChange={(e) => {
-            setQ(e.target.value);
-            setActive(0);
-            setOpen(true);
-          }}
-          onKeyDown={(e) => {
-            if (e.key === "Escape") setOpen(false);
-            if (e.key === "ArrowDown") {
-              e.preventDefault();
-              setActive((a) => Math.min(a + 1, results.length - 1));
-            }
-            if (e.key === "ArrowUp") {
-              e.preventDefault();
-              setActive((a) => Math.max(a - 1, 0));
-            }
-            if (e.key === "Enter" && results[active]) {
-              // Client navigation (same as tapping a result): lighter than a full reload on 3G and
-              // gets the light navigation feedback. Blur so the phone keyboard closes as it did.
-              e.preventDefault();
-              setOpen(false);
-              e.currentTarget.blur();
-              router.push(results[active].path);
-            }
-          }}
-          role="combobox"
-          aria-expanded={showList}
-          aria-controls={listId}
-          aria-autocomplete="list"
-          aria-activedescendant={showList && results[active] ? `${id}-opt-${active}` : undefined}
-          className="h-12 w-full rounded-full border-2 border-input bg-card pl-12 pr-4 text-base shadow-sm placeholder:text-muted-foreground focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:h-14"
-        />
+    <div ref={containerRef} className={cn("relative w-full", className)}>
+      <form
+        role="search"
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (trimmed.length > 0) navigateToSearch(q, category);
+        }}
+        className="flex flex-wrap gap-2"
+      >
+        <div className="relative min-w-[200px] flex-1">
+          <Search className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
+          <label htmlFor={id} className="sr-only">
+            Search NaijaCheck
+          </label>
+          <input
+            ref={inputRef}
+            id={id}
+            type="search"
+            autoComplete="off"
+            value={q}
+            placeholder="Search rice price, kelebu, GTBank sort, postal code…"
+            onFocus={() => {
+              setOpen(true);
+              load();
+            }}
+            onBlur={() => setTimeout(() => setOpen(false), 180)}
+            onChange={(e) => {
+              setQ(e.target.value);
+              setOpen(true);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Escape") {
+                setOpen(false);
+                (e.target as HTMLInputElement).blur();
+              }
+              if (e.key === "ArrowDown") {
+                e.preventDefault();
+                setActive((a) => Math.min(a + 1, results.length - 1));
+              }
+              if (e.key === "ArrowUp") {
+                e.preventDefault();
+                setActive((a) => Math.max(a - 1, 0));
+              }
+              if (e.key === "Enter") {
+                // If dropdown is open and user expects full search, go to /search
+                // (spec test: Enter on gtbank → /search?q=gtbank)
+                if (trimmed.length > 0) {
+                  e.preventDefault();
+                  navigateToSearch(q, category);
+                }
+              }
+            }}
+            role="combobox"
+            aria-expanded={hasDropdown ? true : false}
+            aria-controls={listId}
+            aria-autocomplete="list"
+            aria-activedescendant={hasDropdown && results[active] ? `${id}-opt-${active}` : undefined}
+            className="h-12 w-full rounded-full border-2 border-input bg-card pl-12 pr-4 text-base shadow-sm placeholder:text-muted-foreground focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:h-14"
+          />
+        </div>
+
+        {/* Filter beside search — compact select, min 44px, dark-mode readable */}
+        <div className="flex min-h-11 items-center">
+          <label htmlFor={`${id}-filter`} className="sr-only">
+            Filter by category
+          </label>
+          <select
+            id={`${id}-filter`}
+            value={category}
+            onChange={(e) => {
+              setCategory(e.target.value);
+              setOpen(true);
+              load();
+              // keep focus on input for continuous typing
+              inputRef.current?.focus();
+            }}
+            onFocus={load}
+            className="h-12 min-h-11 min-w-[120px] rounded-full border-2 border-input bg-card px-4 pr-8 text-sm font-medium shadow-sm focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:h-14"
+            aria-label="Filter by category"
+          >
+            {SEARCH_CATEGORIES.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.label}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Visible Search action for submit — min 44px */}
+        <button
+          type="submit"
+          className="inline-flex h-12 min-h-11 min-w-11 items-center justify-center rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:h-14"
+          aria-label="Search"
+        >
+          <span className="hidden sm:inline">Search</span>
+          <Search className="size-4 sm:hidden" aria-hidden="true" />
+        </button>
       </form>
-      {showList ? (
+
+      {hasDropdown ? (
         <div
           id={listId}
           role="listbox"
-          className="absolute left-0 right-0 top-full z-50 mt-2 max-h-96 overflow-y-auto rounded-lg border bg-popover p-1 shadow-xl"
+          className="absolute left-0 right-0 top-full z-50 mt-2 max-h-[60vh] max-h-96 overflow-y-auto rounded-lg border bg-popover p-1 shadow-xl"
+          style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
         >
           {!index && !failed ? <p className="px-3 py-2 text-sm text-muted-foreground">Loading search…</p> : null}
           {failed ? <p className="px-3 py-2 text-sm text-muted-foreground">Search is unavailable right now. Try the menu.</p> : null}
-          {index && results.length === 0 ? (
-            <p className="px-3 py-2 text-sm text-muted-foreground">Nothing matched. Try “rice”, “kelebu”, “JAMB” or “POS”.</p>
+
+          {/* Popular shortcuts — All + empty */}
+          {showPopular ? (
+            <div className="space-y-1 p-1">
+              <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Popular</p>
+              {popular.map((p) => (
+                <Link
+                  key={p.path}
+                  href={p.path}
+                  className="flex items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-secondary"
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => setOpen(false)}
+                >
+                  <span className="font-medium">{p.label}</span>
+                  <span className="shrink-0 rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-semibold text-primary">{KIND_LABEL[p.kind] ?? p.kind}</span>
+                </Link>
+              ))}
+              <p className="px-2 py-1 text-xs text-muted-foreground">Tip: try “gtbank”, “100001”, “lagos”, “chikin” or filter by Cities.</p>
+            </div>
           ) : null}
-          {results.map((r, i) => (
-            <Link
-              key={r.path}
-              id={`${id}-opt-${i}`}
-              href={r.path}
-              role="option"
-              aria-selected={i === active}
-              className={cn(
-                "flex items-start justify-between gap-3 rounded-md px-3 py-2 text-sm",
-                i === active ? "bg-secondary" : "hover:bg-secondary",
-              )}
-              onMouseEnter={() => setActive(i)}
-            >
-              <span className="min-w-0">
-                <span className="block truncate font-medium">{r.title}</span>
-                <span className="block truncate text-xs text-muted-foreground">{r.desc}</span>
-              </span>
-              <span className="shrink-0 rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-semibold text-primary">
-                {KIND_LABEL[r.kind] ?? "Guide"}
-              </span>
-            </Link>
-          ))}
+
+          {/* Browse mode — category + empty query */}
+          {showBrowse ? (
+            <div className="space-y-1">
+              <p className="px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                Browse {SEARCH_CATEGORIES.find((c) => c.id === category)?.label} — {filterByCategory(index!, category).length} items
+              </p>
+              {results.map((r, i) => (
+                <Link
+                  key={r.path}
+                  id={`${id}-opt-${i}`}
+                  href={r.path}
+                  role="option"
+                  aria-selected={i === active}
+                  className={cn("flex items-start justify-between gap-3 rounded-md px-3 py-2 text-sm", i === active ? "bg-secondary" : "hover:bg-secondary")}
+                  onMouseEnter={() => setActive(i)}
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => setOpen(false)}
+                >
+                  <span className="min-w-0">
+                    <span className="block truncate font-medium">{r.title}</span>
+                    <span className="block truncate text-xs text-muted-foreground">{r.desc}</span>
+                  </span>
+                  <span className="shrink-0 rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-semibold text-primary">{KIND_LABEL[r.kind] ?? r.kind}</span>
+                </Link>
+              ))}
+              <Link href={`/search?${new URLSearchParams({ category }).toString()}`} className="block px-3 py-2 text-xs font-semibold text-primary hover:underline">
+                See all {SEARCH_CATEGORIES.find((c) => c.id === category)?.label} →
+              </Link>
+            </div>
+          ) : null}
+
+          {/* Search results */}
+          {showResults ? (
+            <>
+              {index && results.length === 0 ? (
+                <div className="px-3 py-3 text-sm">
+                  <p className="font-medium">No results for “{trimmed}” in {SEARCH_CATEGORIES.find((c) => c.id === category)?.label ?? "All"}.</p>
+                  <p className="mt-1 text-xs text-muted-foreground">Try a broader term or switch category. Popular:</p>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    <Link href="/codes" onClick={() => setOpen(false)} className="rounded-full border px-2.5 py-1 text-xs hover:bg-secondary">
+                      Explore codes
+                    </Link>
+                    <Link href="/" onClick={() => setOpen(false)} className="rounded-full border px-2.5 py-1 text-xs hover:bg-secondary">
+                      Homepage Explore
+                    </Link>
+                    <Link href="/geo" onClick={() => setOpen(false)} className="rounded-full border px-2.5 py-1 text-xs hover:bg-secondary">
+                      774 LGAs
+                    </Link>
+                  </div>
+                </div>
+              ) : null}
+              {results.map((r, i) => (
+                <Link
+                  key={r.path}
+                  id={`${id}-opt-${i}`}
+                  href={r.path}
+                  role="option"
+                  aria-selected={i === active}
+                  className={cn("flex items-start justify-between gap-3 rounded-md px-3 py-2 text-sm", i === active ? "bg-secondary" : "hover:bg-secondary")}
+                  onMouseEnter={() => setActive(i)}
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                >
+                  <span className="min-w-0">
+                    <span className="block truncate font-medium">{r.title}</span>
+                    <span className="block truncate text-xs text-muted-foreground">{r.desc}</span>
+                  </span>
+                  <span className="shrink-0 rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-semibold text-primary">{KIND_LABEL[r.kind] ?? r.kind}</span>
+                </Link>
+              ))}
+              {results.length > 0 ? (
+                <button
+                  type="button"
+                  className="w-full rounded-md px-3 py-2 text-xs font-semibold text-primary hover:bg-secondary text-left"
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => navigateToSearch(q, category)}
+                >
+                  See all {results.length}+ results for “{trimmed}” →
+                </button>
+              ) : null}
+            </>
+          ) : null}
         </div>
       ) : null}
     </div>
