@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-10-22T11:49:53.102Z",
+  "updatedAt": "2026-10-22T17:09:14.628Z",
   "status": "recent",
   "sources": [
     {
       "label": "Central Bank of Nigeria: NFEM exchange rates",
       "url": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
-      "asOf": "2026-10-21T14:00:00.000Z"
+      "asOf": "2026-10-22T14:00:00.000Z"
     },
     {
       "label": "Aboki Forex: black market and CBN widget",
       "url": "https://abokiforex.app/",
-      "asOf": "2026-10-22T11:06:00.000Z"
+      "asOf": "2026-10-22T17:07:00.000Z"
     },
     {
       "label": "open.er-api.com: daily reference rates",
@@ -19,19 +19,19 @@
     }
   ],
   "official": {
-    "USD": 1334.7233,
+    "USD": 1344.4049,
     "GBP": 1787.16,
     "EUR": 1498.85
   },
   "blackMarket": {
-    "USD": 1373,
-    "GBP": 1800,
-    "EUR": 1490
+    "USD": 1375,
+    "GBP": 1790,
+    "EUR": 1495
   },
   "note": "Official USD is the CBN NFEM closing rate. Black market is Aboki Forex's buy rate (sell in blackMarketSell). GBP and EUR official values are cross rates from open.er-api, labelled as reference, not CBN quotes.",
   "blackMarketSell": {
-    "USD": 1378,
-    "GBP": 1820,
+    "USD": 1383,
+    "GBP": 1815,
     "EUR": 1515
   },
   "officialStatus": "recent",

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-22T11:49:53.102Z",
+  "checkedAt": "2026-10-22T17:09:14.628Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -30,6 +30,12 @@
           "published": "2026-10-19T19:41:00.000Z"
         },
         {
+          "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
+          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SZW45N1ozOVQwY1YxTkU5dENJNVdfV2I4X3ZBeHVSN1hQN2hCUlVBQV9jcWdTdEI1X3FiWXprWHptRTdXMXowSnFvbE5oR1ExU2tET1ZBSXRITUlCelHSAWNBVV95cUxPX0kxWFNtZ0lyWmxPUlRQMGJCel9oTDFsUl9qcTRQcEF4el9WTEJIc3NqY3paZ0FzWFctX2VKTm15Q1J6UTZyWldOQW1Fam9zWnlhYkhlWFpxUTBQOWlOZ3o0U0k?oc=5",
+          "source": "BBC",
+          "published": "2026-10-12T07:00:00.000Z"
+        },
+        {
           "title": "Rising petrol price and cost of living",
           "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5JdC04UXBfaGgwdWlacmVCWVdlOGFsY0EzZGlZVUNZMTdROTZNSWZIX19GMkFiWVZSQkE1QUdDZUtqQUhQVDVNZ1oxaXB0SWR6VlotZ2pJVTl4aVFBUnRRaW5rQlFmcmZUMFNkRjVGbmlJcndDLVVIedIBfkFVX3lxTE1qSjhSU3FyajMtd090TDdMS3pRb1BmZ3ljajludHQ2bldaTFYyeXlfRllUMGNyQ2xMejdfa293MVdxdGIzR2FFTkx4am9BZ1FVQklxRHBpVjBhVllsYWFocFdEV3BOZG9DSV9veTd2SF9VemNjZGJFeTNvd0hCUQ?oc=5",
           "source": "The Nation Newspaper",
@@ -42,16 +48,10 @@
           "published": "2026-10-21T19:06:08.000Z"
         },
         {
-          "title": "Price of fuel in Nigeria: NNPC petrol discount for govment filling stations",
-          "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SZW45N1ozOVQwY1YxTkU5dENJNVdfV2I4X3ZBeHVSN1hQN2hCUlVBQV9jcWdTdEI1X3FiWXprWHptRTdXMXowSnFvbE5oR1ExU2tET1ZBSXRITUlCelHSAWNBVV95cUxPX0kxWFNtZ0lyWmxPUlRQMGJCel9oTDFsUl9qcTRQcEF4el9WTEJIc3NqY3paZ0FzWFctX2VKTm15Q1J6UTZyWldOQW1Fam9zWnlhYkhlWFpxUTBQOWlOZ3o0U0k?oc=5",
-          "source": "BBC",
-          "published": "2026-10-12T07:00:00.000Z"
-        },
-        {
-          "title": "How to make reforms in Nigeria reach the kitchen faster",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcnlMcTNWSUstQkJLNHhFMFBNQm5MdEpSR3l1dEs0Q1lER2hkRUphNkp2OUYtdkhKeWlsbFVEZUgzVzFrTFpwRmtSczN3RnVMR3p0dWNNWlZ6RVAtcWk0ZGx4QTFQT3ptVDBaZDlHQUpZMXJIdThqeEtuSHZtRUVXQWF4TGNseEFpc2VCa1BQLTN5OXNrZVJWQjhMVQ?oc=5",
-          "source": "The Guardian Nigeria News",
-          "published": "2026-10-22T04:36:00.000Z"
+          "title": "FG to negotiate ₦1,350 petrol price ceiling as global oil shock drives pump prices",
+          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNXZuQks4c2otRlh3czh4dHpPbmR3NXFKbmpjaExMRnZNR0hMMDd1T0tzZjBvR25wMlRYQm1Ydm5NdVhsQm4wUzJIYjdHNzVmb21Xd2huaWxfai1BaEpHTDdnMTZlZGRlOVpSYlQxaXl6aVhNdzlMcE1NbzVkX09EWmlrMlYtYlFETGtrQ2czY2lRS1R6TjI2ZVRyX05WdDZCX0NSLXNySkpDaFBPel84eWJTSklsUlRyNWY4TG9JYzgwbHVZQzVpVk9ldk10cWNwb3JKbVFCZmxGWkFzTnJrOWJPeG0yckd3YlJR?oc=5",
+          "source": "Premium Times Nigeria",
+          "published": "2026-10-09T07:00:00.000Z"
         },
         {
           "title": "Oyedele: Tinubu govt fails to implement N1,350/litre petrol discount at NNPCL two weeks after announcement",
@@ -79,22 +79,22 @@
           "published": "2026-10-22T07:52:27.000Z"
         },
         {
+          "title": "Dollar to Naira Exchange Rate Today, October 21, 2026",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9KYlRxUTlHTU0wa3J5aUo2SU1zX1k0bnRMY2x4QmdwaG0wdXNjUnZKUHMzc1VWajJteTFKOTIzaU16MG40TnZkakNhVVYzbzJ6WF84M3NiY3dfaG5KQlRYN01xMGJPcGpuS1FkWklGbS0yMF9rM3dQNmg2ejNncUk?oc=5",
+          "source": "Techeconomy",
+          "published": "2026-10-21T09:44:05.000Z"
+        },
+        {
           "title": "Naira trades at N1,334 against dollar at official FX market",
           "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcU9xbnU2LXI0YWJUNjAzNFh0T0ZzOWZkdmJHNlk4SUFYaGYtQ3N4RzVNZHhGRC1nRUpadG8xX3AwSVFSaFhwODBaQ1kxblJmR1A4NXZsTy1OblktbDM3LU92RnZLZ2dGWG1Bc2kwOEdtcHppUEdVbFdBSV83SGJfZkd4dzVFZ1FjQkMzc1NBSGk?oc=5",
           "source": "Tribune Online",
           "published": "2026-10-22T10:01:16.000Z"
         },
         {
-          "title": "Dollar-to-Naira exchange rate Today, October 21, 2026: Naira depreciates against USD",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUXVpZndROEhWZjM5Y3hGNXhQck9HdFE4cnIyc29JeHp2U0hyN1hYOWU2Nm15RWJOVXF2Y29RUDFEWjNfb0F2NkhNMXVzcnFXWGtlWDhUWDZNV2dRYjFEQVJZXzFsa0s1dVBLa2F1Zkl4MTNZNjN0bFF1bnFuTmhTcnBrTUQwYTM1UWpObUxuN05vUUphRXN1aV9BbWYxRlpmemRFTEJnWTZDbEp1R01vOW9YS1k?oc=5",
+          "title": "Dollar-to-Naira exchange rate Today, October 20, 2026: Naira appreciates against USD",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMWlxOWNCcm9zY0c0aThsNDZVS0ZFek5oUWxXdC1BMTZWYThiaDJxUmNSaWd5c0dWLVBiNUkxazhkSXFaOVhQRjByMFlxNThtVi12SmxnLUVxeFNadThUM2xjdDlYeWF6aTMxSXluSVZKZFlXSHlLeGdwN1ZmOXQ4cDF1Z2JkUWFmaXFfTWJ4a0RqcFhsNVZjSGNTZ0NxRkVIVWhJTjlySGxxTXFzZVpPTjEzT1Y?oc=5",
           "source": "Daily Post Nigeria",
-          "published": "2026-10-21T20:21:28.000Z"
-        },
-        {
-          "title": "Dollar to Naira Exchange Rate Today, October 19, 2026",
-          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE10d2E1cFdkOUFOWUVtdHlpdEJEUlVtS0dhcWo4VjBvSUluRVR3dHNxVEhIMHlBb1IzOS11U2JSUTlaOHprNjlEenc4U2QxV3FrQnNGbmx2V1E1dzJLNW15UDFidFpOR09tVGhsS0lWdHN4allIY3RFRWdJc2w5cW8?oc=5",
-          "source": "Techeconomy",
-          "published": "2026-10-19T09:57:20.000Z"
+          "published": "2026-10-20T20:50:58.000Z"
         },
         {
           "title": "Dollar to Naira Today: Black Market Exchange Rate — Wednesday, October 21, 2026",
