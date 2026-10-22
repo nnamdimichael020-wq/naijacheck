@@ -5,6 +5,7 @@ import { AdsenseLoader } from "@/components/ads/adsense-loader";
 import { SiteSidebarFrame } from "@/components/site-sidebar-frame";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
+import { WatClockBar } from "@/components/wat-clock";
 import { SiteFooter } from "@/components/site-footer";
 import { BottomNav } from "@/components/bottom-nav";
 import { LiveTicker } from "@/components/live/ticker";
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <NavigationFeedback />
           <PwaClient />
           <SiteHeader />
+          <WatClockBar />
           <LiveTicker />
           <div className="mx-auto flex w-full max-w-7xl flex-1 gap-8 px-4 lg:px-6">
             <main id="main" className="min-w-0 flex-1 pb-28 pt-6 lg:pb-12">
