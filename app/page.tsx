@@ -16,6 +16,7 @@ import { InstallTip } from "@/components/install-tip";
 import { LocationCard } from "@/components/live/location-card";
 import { LiveNewsFeed } from "@/components/live/news-feed";
 import { ShareControls } from "@/components/share-controls";
+import { ExploreGrid } from "@/components/home/explore-grid";
 import { DATASET_REGISTRY } from "@/lib/source-registry";
 import {
   BLUEPRINT_BY_SLUG,
@@ -399,6 +400,8 @@ export default function HomePage() {
           </Card>
         </div>
       </section>
+
+      <ExploreGrid />
 
       {/* FX & fuel history — SEO entry points: modest text links + preview */}
       <section aria-labelledby="history-h" className="space-y-3 rounded-xl border bg-card/40 p-4">
