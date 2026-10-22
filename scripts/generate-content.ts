@@ -24,6 +24,9 @@ import exam from "../data/exam.json";
 import telecom from "../data/telecom.json";
 import recipesData from "../data/recipes.json";
 import learnData from "../data/learn.json";
+import banksData from "../data/banks.json";
+import postalData from "../data/postal-codes.json";
+import lgasData from "../data/lgas.json";
 import type { ArticleBodyImage, ArticleImage } from "../lib/types";
 import {
   ARTICLE_IMAGE_CONFIG,
@@ -1424,11 +1427,105 @@ fs.writeFileSync(path.join(outDir, "articles.json"), JSON.stringify(articles));
 
 const fixedSearch = [
   { path: "/", title: "NaijaCheck home", kind: "hub", desc: "Nigerian prices, guides, slang, hustles and practical calculators.", keys: "home naijacheck nigeria utility" },
-  { path: "/about", title: "About NaijaCheck", kind: "learn", desc: "How NaijaCheck sources and labels its information.", keys: "about sourcing corrections trust" },
-  { path: "/status", title: "Data status", kind: "learn", desc: "Source checks, timestamps, limitations and verification states.", keys: "source freshness stale seeded monitor status" },
-  { path: "/privacy", title: "Privacy notice", kind: "learn", desc: "What the site processes and stores on your device.", keys: "privacy NDPA storage data rights" },
+  { path: "/about", title: "About NaijaCheck", kind: "hub", desc: "How NaijaCheck sources and labels its information.", keys: "about sourcing corrections trust" },
+  { path: "/status", title: "Data status", kind: "hub", desc: "Source checks, timestamps, limitations and verification states.", keys: "source freshness stale seeded monitor status" },
+  { path: "/privacy", title: "Privacy notice", kind: "hub", desc: "What the site processes and stores on your device.", keys: "privacy NDPA storage data rights" },
+  // Real section hubs missing from article pipeline (must be indexed or search would miss them)
+  { path: "/rates", title: "Naira to Dollar History & Rates — CBN Official vs Parallel Market", kind: "rates", desc: "CBN official NFEM vs parallel buy quote — every stored reading, honest gaps, FX history hubs.", keys: "naira dollar rates history cbn parallel usd fx nfem black market archive" },
+  { path: "/rates/history", title: "FX Archive Table — Every Stored Reading", kind: "rates", desc: "Full table of every stored FX reading — source-dated, no interpolation.", keys: "fx archive table history rates dollar naira cbn parallel" },
+  { path: "/prices/fuel", title: "Fuel Depot Prices — Petrol, Diesel & LPG History", kind: "charts", desc: "Depot petrol & diesel medians — stored gantry readings, honest gaps.", keys: "fuel petrol diesel lpg depot gantry pms ago cooking gas price history" },
+  { path: "/charts", title: "Naira Price History Charts — Dollar, CBN & Fuel Depot", kind: "charts", desc: "Parallel USD buy, CBN NFEM, depot petrol, diesel & LPG — every stored monitor reading charted.", keys: "charts naira dollar cbn depot petrol diesel lpg history price" },
+  { path: "/codes", title: "Nigerian Codes — Bank Sort & USSD plus Postal/ZIP & LGAs", kind: "hub", desc: "Bank sort codes + USSD + postal/ZIP codes + 774 LGAs — the codes home.", keys: "codes bank sort ussd postal zip lga 044 058" },
+  { path: "/codes/banks", title: "Nigerian Bank Sort & USSD Codes — All Banks", kind: "banks", desc: "12 major banks — 3-digit sort codes (044, 058…) + USSD menus (*901#, *737#…).", keys: "bank sort ussd code nip cbn 044 058 057 011 gtbank access zenith firstbank 737 901" },
+  { path: "/codes/postal", title: "Nigerian Postal Codes — 6-digit NIPOST by State", kind: "postal", desc: "37 states/FCT · 77 places — head-office codes 100001–900001, district codes.", keys: "postal zip nipost 100001 900001 zip code state lga place" },
+  { path: "/geo", title: "Nigeria 774 LGAs — Complete Local Government Areas by State", kind: "geo", desc: "All 774 LGAs (768 LGAs + 6 FCT Area Councils) — browse by state, search any LGA.", keys: "lga local government area 774 abia lagos kano council state" },
 ];
-const searchIndex = [...fixedSearch, ...articles.map((a) => ({ path: a.path, title: a.title, kind: a.section, desc: a.metaDescription, keys: a.keywords.join(" ") }))];
+
+// Chart series pages — mirrors lib/chart-pages.ts (kept explicit so generator cannot drift from lib)
+const chartSearchEntries = [
+  { path: "/charts/parallel-usd-buy", title: "Parallel USD Buy — Naira to Dollar History (Aboki Forex)", kind: "charts", desc: "Parallel market USD buy rate history — every stored Aboki quote, no interpolation.", keys: "parallel dollar usd buy naira history aboki forex chart" },
+  { path: "/charts/cbn-usd", title: "CBN Official USD — Naira to Dollar History (NFEM)", kind: "charts", desc: "CBN official NFEM closing rate history — every stored reading, honest gaps.", keys: "cbn official usd dollar naira nfem history chart" },
+  { path: "/charts/depot-petrol", title: "Depot Petrol — Wholesale PMS Median History", kind: "charts", desc: "Depot petrol median price history — gantry readings, real gaps kept.", keys: "depot petrol pms fuel history chart gantry" },
+  { path: "/charts/depot-diesel", title: "Depot Diesel — Wholesale AGO Median History", kind: "charts", desc: "Depot diesel median price history — AGO gantry readings.", keys: "depot diesel ago fuel history chart" },
+  { path: "/charts/depot-lpg", title: "Depot Cooking Gas — LPG Median per Kg History", kind: "charts", desc: "Cooking gas depot LPG median per kg — wholesale history chart.", keys: "lpg cooking gas depot history chart per kg" },
+];
+
+// Banks — 12 real pages from data/banks.json SSOT
+const bankEntries = (banksData as { banks: Array<{ slug: string; name: string; sortCodes: Array<{ code: string }>; ussd: Array<{ code: string }> }> }).banks.map((b) => {
+  const sortDigits = b.sortCodes.map((s) => s.code).join(" ");
+  const ussdCodes = b.ussd.map((u) => u.code).join(" ");
+  return {
+    path: `/codes/banks/${b.slug}`,
+    title: `${b.name} — ${b.sortCodes[0]?.code ?? ""} · ${b.ussd[0]?.code ?? ""}`,
+    kind: "banks",
+    desc: `Sort code ${sortDigits} — USSD ${ussdCodes} — verified source & last-checked date.`,
+    keys: `${b.name} ${b.slug.replace(/-/g, " ")} ${sortDigits} ${ussdCodes} bank sort code ussd nip cbn`,
+  };
+});
+
+// Postal — 37 state pages + 12 curated leaves from data/postal-codes.json SSOT (must match sitemap allowlist)
+const postalStateEntries = (postalData as { states: Array<{ slug: string; name: string; capital: string; headOfficeCode: string; places: Array<{ slug?: string; name: string; code: string }> }> }).states.map((s) => ({
+  path: `/codes/postal/${s.slug}`,
+  title: `${s.name} State Postal Codes — ${s.headOfficeCode}`,
+  kind: "postal",
+  desc: `Head office ${s.headOfficeCode} — ${s.places.length} place${s.places.length !== 1 ? "s" : ""} inc. ${s.capital}`,
+  keys: `${s.name} ${s.slug.replace(/-/g, " ")} ${s.capital} ${s.headOfficeCode} postal zip nipost ${s.places.map((p) => `${p.name} ${p.code}`).join(" ")}`,
+}));
+const postalCuratedLeaves: Array<{ state: string; area: string }> = [
+  { state: "lagos", area: "ikeja" },
+  { state: "lagos", area: "victoria-island" },
+  { state: "lagos", area: "lekki" },
+  { state: "lagos", area: "surulere" },
+  { state: "lagos", area: "ikorodu" },
+  { state: "fct-abuja", area: "garki" },
+  { state: "fct-abuja", area: "wuse" },
+  { state: "fct-abuja", area: "maitama" },
+  { state: "fct-abuja", area: "asokoro" },
+  { state: "fct-abuja", area: "gwarinpa" },
+  { state: "rivers", area: "port-harcourt" },
+  { state: "kano", area: "kano-municipal" },
+];
+const postalLeafEntries = postalCuratedLeaves
+  .map(({ state, area }) => {
+    const st = (postalData as { states: Array<{ slug: string; name: string; places: Array<{ slug?: string; name: string; code: string }> }> }).states.find((s) => s.slug === state);
+    const place = st?.places.find((p) => p.slug === area);
+    if (!st || !place) return null;
+    return {
+      path: `/codes/postal/${state}/${area}`,
+      title: `${place.name} — ${st.name} Postal Code ${place.code}`,
+      kind: "postal",
+      desc: `${place.name} district ${place.code} — verified NIPOST 6-digit code in ${st.name} State.`,
+      keys: `${place.name} ${st.name} ${place.code} ${area.replace(/-/g, " ")} postal zip district nipost`,
+    };
+  })
+  .filter(Boolean) as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;
+
+// Geo — 1 hub + 37 state pages + 774 LGA leaves from data/lgas.json SSOT (compact entries for 3G)
+const geoStateEntries = (lgasData as { states: Array<{ slug: string; name: string; count: number; lgas: Array<{ slug: string; name: string }> }> }).states.map((s) => ({
+  path: `/geo/${s.slug}`,
+  title: `${s.name} State LGAs — ${s.count} Local Government Areas`,
+  kind: "geo",
+  desc: `All ${s.count} LGAs in ${s.name} State — official names, grouped by state.`,
+  keys: `${s.name} ${s.slug.replace(/-/g, " ")} lga local government ${s.lgas.map((l) => l.name).join(" ")}`,
+}));
+const geoLgaEntries = (lgasData as { states: Array<{ slug: string; name: string; count: number; lgas: Array<{ slug: string; name: string }> }> }).states.flatMap((s) =>
+  s.lgas.map((l) => ({
+    path: `/geo/${s.slug}/${l.slug}`,
+    title: `${l.name} LGA (${s.name}) — HQ, postal links`,
+    kind: "geo",
+    desc: `${l.name} is a Local Government Area in ${s.name} State — one of ${s.count ?? "?"} LGAs.`,
+    keys: `${l.name} ${s.name} ${l.slug.replace(/-/g, " ")} ${s.slug.replace(/-/g, " ")} lga local government area council`,
+  })),
+);
+
+const omniExtras = [...chartSearchEntries, ...bankEntries, ...postalStateEntries, ...postalLeafEntries, ...geoStateEntries, ...geoLgaEntries] as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;
+// Merge fixedSearch + omni extras + articles, de-dupe by path (articles win for overlapping /prices/fuel etc should not duplicate)
+const articleSearchEntries = articles.map((a) => ({ path: a.path, title: a.title, kind: a.section, desc: a.metaDescription, keys: a.keywords.join(" ") }));
+const deduped = new Map<string, { path: string; title: string; kind: string; desc: string; keys: string }>();
+for (const e of [...fixedSearch, ...omniExtras, ...articleSearchEntries]) {
+  if (!deduped.has(e.path)) deduped.set(e.path, e);
+}
+const searchIndex = [...deduped.values()];
 fs.mkdirSync(path.join(root, "public"), { recursive: true });
 fs.writeFileSync(path.join(root, "public", "search-index.json"), JSON.stringify(searchIndex));
 
