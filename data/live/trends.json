@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-22T17:09:14.628Z",
+  "checkedAt": "2026-10-22T21:34:24.770Z",
   "seeded": false,
   "method": "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
   "limitation": "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
@@ -11,10 +11,16 @@
       "score": 100
     },
     {
+      "slug": "achalugo",
+      "term": "Achalugo",
+      "mentions7d": 2,
+      "score": 50
+    },
+    {
       "slug": "detty-december",
       "term": "Detty December",
-      "mentions7d": 4,
-      "score": 100
+      "mentions7d": 2,
+      "score": 50
     },
     {
       "slug": "oblee",
@@ -23,8 +29,8 @@
       "score": 25
     },
     {
-      "slug": "achalugo",
-      "term": "Achalugo",
+      "slug": "wahala",
+      "term": "Wahala",
       "mentions7d": 1,
       "score": 25
     },
@@ -79,12 +85,6 @@
     {
       "slug": "soft-life",
       "term": "Soft life",
-      "mentions7d": 0,
-      "score": 0
-    },
-    {
-      "slug": "wahala",
-      "term": "Wahala",
       "mentions7d": 0,
       "score": 0
     },
