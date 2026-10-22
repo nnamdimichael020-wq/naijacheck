@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-21T21:41:47.745Z",
+  "checkedAt": "2026-10-22T04:41:55.100Z",
   "seeded": false,
   "source": {
     "label": "Google News (public RSS)",
@@ -12,16 +12,16 @@
       "query": "petrol price Nigeria",
       "items": [
         {
-          "title": "Nigeria Customs Seizes 38,700 Litres In Adamawa, Blames ‘Cheaper Petrol Prices’ For Smuggling To Cameroon",
-          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUU5VMkh0OWNCMFJtcEh4VlIzbk1ILVhWTHhJUTFpWDdFODIzVnNCYkZIemVEWGhMLTR1RUQ0QVA0LUpRWTA1R25TZlRidHA4MXBLQmMwTzRMeVo4MzBPZ0ZGeU4weXJoUWhJbEVMQ2NMTUJQb3Qtc3hjYlpzcUowRFk1aHBkV0tGemxLWTRNSV83dU5iSUpac2VtZS1RSjJVZTUtS0FRWGtDOXdOaTdrTjFRRV8xQ0JRZ0ZlMnhn?oc=5",
-          "source": "Sahara Reporters",
-          "published": "2026-10-21T19:06:08.000Z"
-        },
-        {
           "title": "NLC, Falana, activists rally Nigerians against petrol price hike, hardship",
           "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMTJvQjEySWFEd3pOd0Y3S0RQNHV5QWZfYjI3cWpGOTBmSmV6ZU1STEhJLVp2T3c4SGprLXFWYXo1V2RMV2dIOV82UTU4blRHQjBqcWFEa096c1FTRzFRSmgteEJFWmkyY3VQUFhSdnFGZ0RJeU5QUXFQNWVDX1lVMk8yYm1SNzVqbkNWZVRNV3pQLTFXQ1dQV2pDaTNNT3BRUUJzdDlwbDVtVklo0gGyAUFVX3lxTFBsMHROMzdFa1RDa2dNa2xLRF9IOU1fUktZblR3SFBEN0Y3X25PdlhhU29TUldJRVA4MWpsQ0N0akZmZUk0YzFoSGZXczdNcEZ4Nkx3cjU2V3VTaldwVzBmSEV1VFZUdV83MWwtSUgzb3RCa1RfZXZuNGpTWWhRMjF2Ylk0c1NkMzBsYXpKVUUwaXVYSmlsb2kxbndnZmctdDhsaXpJNjdEY3hVX1pEUDZaRkE?oc=5",
           "source": "Vanguard News",
           "published": "2026-10-19T00:51:47.000Z"
+        },
+        {
+          "title": "Nigeria Customs Seizes 38,700 Litres In Adamawa, Blames ‘Cheaper Petrol Prices’ For Smuggling To Cameroon",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUU5VMkh0OWNCMFJtcEh4VlIzbk1ILVhWTHhJUTFpWDdFODIzVnNCYkZIemVEWGhMLTR1RUQ0QVA0LUpRWTA1R25TZlRidHA4MXBLQmMwTzRMeVo4MzBPZ0ZGeU4weXJoUWhJbEVMQ2NMTUJQb3Qtc3hjYlpzcUowRFk1aHBkV0tGemxLWTRNSV83dU5iSUpac2VtZS1RSjJVZTUtS0FRWGtDOXdOaTdrTjFRRV8xQ0JRZ0ZlMnhn?oc=5",
+          "source": "Sahara Reporters",
+          "published": "2026-10-21T19:06:08.000Z"
         },
         {
           "title": "Govt’s petrol discount may cost 0.4% of GDP – Report",
@@ -67,10 +67,10 @@
       "query": "naira dollar exchange rate Nigeria",
       "items": [
         {
-          "title": "Dollar to Naira exchange rate today, October 21, 2026",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdjZBeFdTVXEtYWd2ZXVra0V2eUk1S3FEbnpVQTV0U2FSVldhVl95RjNWZ2FxMm9rX3gzakZhUEVVNFctVS1UVXMxU2EzaTFRUEtlbFhIS3VWVlFXcFlPR29idktQdlJGcVF1WjV2TmIwdlJrX19rVUdTSXpVTC0zU1FNTDBCcDU1QmtOTVhIc1Q3Z9IBlwFBVV95cUxNUFppY3FpSXg4LU5RY2xOWFZpWjJtczEtUGpJZXZLUzRCTWVLdEhCdHhUUkl5RWhtbU02X056RmZHSVRaQVRuNWJtcFQ2djlJdEJ2TzRqbXpXYzhmSTVUSlV0VDJhaFVVUGhHVzNobjJPc0I2VVFOSDExUjU1VVI1REtTQTY4a1N4WjVpRkJsVXlqbFU4VDJ3?oc=5",
+          "title": "Dollar to Naira exchange rate today, October 20, 2026",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQNHNMZVRxeWpnT2tPeXl3cThkd2JJemxINGRBZVZXeHhMVmloVVN4ZGpDVXdaX3VIa2lpSzFtRXc5NTl5SzNnNnY3MW9HWE5ZMWJxOGg4eXBCSXlHb0pEV1hKcGxjV1NTYU9EVkN2MkpFQldPTTgyMmNzMnM5SjZiVVdMRDNZWXM3dk91SmtFNS1KQdIBlwFBVV95cUxOZFRxdWg4MEY5MXByMk9LMXJCamdDUm5vaV9ZUE94M0x2UWJNZlRyUjdvSFd2YUNvTmoxVEcxOTVzMnhyX3VTckFqcFpZaTV1anpQbVZJM0paSll0clJfUG5SbTBQaVJaeHZva3kyYXpnbVhyNWoxU3JOOWtZck9hNXVvcFRZNFpGalBndFVhUDU3eUlRRFNV?oc=5",
           "source": "Vanguard News",
-          "published": "2026-10-21T05:55:12.000Z"
+          "published": "2026-10-20T06:06:03.000Z"
         },
         {
           "title": "Dollar to Naira Exchange Rate Today, October 21, 2026",
@@ -85,34 +85,34 @@
           "published": "2026-10-21T11:55:44.000Z"
         },
         {
+          "title": "Dollar-to-Naira exchange rate Today, October 21, 2026: Naira depreciates against USD",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUXVpZndROEhWZjM5Y3hGNXhQck9HdFE4cnIyc29JeHp2U0hyN1hYOWU2Nm15RWJOVXF2Y29RUDFEWjNfb0F2NkhNMXVzcnFXWGtlWDhUWDZNV2dRYjFEQVJZXzFsa0s1dVBLa2F1Zkl4MTNZNjN0bFF1bnFuTmhTcnBrTUQwYTM1UWpObUxuN05vUUphRXN1aV9BbWYxRlpmemRFTEJnWTZDbEp1R01vOW9YS1k?oc=5",
+          "source": "Daily Post Nigeria",
+          "published": "2026-10-21T20:21:28.000Z"
+        },
+        {
           "title": "Naira Marginally Appreciates by 11 Kobo Against USD at Official Market",
           "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTU1Sdm55eVJfVnItd0N6TnYyVkgzOU9CWGo3Si1RbzRNYXRwSUhGOF8ydVI4a0FETWUtcFNuLWdlbm5DR1NxbzhCeGFKSHd2ZF92Z1BvbzdLNW1aQXpHWTF0N2U4QnRlSTBLV1VtLUZtME5TVXpZcmVQZDhrcGNJZEVPTmNNTWxvaGE5SjhJMWNiZGNzQlNhalFPa2VZV0xxdlZpNlVn?oc=5",
           "source": "Business Post Nigeria",
           "published": "2026-10-21T08:26:56.000Z"
         },
         {
-          "title": "Dollar-to-Naira exchange rate Today, October 20, 2026: Naira appreciates against USD",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMWlxOWNCcm9zY0c0aThsNDZVS0ZFek5oUWxXdC1BMTZWYThiaDJxUmNSaWd5c0dWLVBiNUkxazhkSXFaOVhQRjByMFlxNThtVi12SmxnLUVxeFNadThUM2xjdDlYeWF6aTMxSXluSVZKZFlXSHlLeGdwN1ZmOXQ4cDF1Z2JkUWFmaXFfTWJ4a0RqcFhsNVZjSGNTZ0NxRkVIVWhJTjlySGxxTXFzZVpPTjEzT1Y?oc=5",
-          "source": "Daily Post Nigeria",
-          "published": "2026-10-20T20:50:58.000Z"
-        },
-        {
-          "title": "Dollar to Naira exchange rate today, October 20, 2026",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQNHNMZVRxeWpnT2tPeXl3cThkd2JJemxINGRBZVZXeHhMVmloVVN4ZGpDVXdaX3VIa2lpSzFtRXc5NTl5SzNnNnY3MW9HWE5ZMWJxOGg4eXBCSXlHb0pEV1hKcGxjV1NTYU9EVkN2MkpFQldPTTgyMmNzMnM5SjZiVVdMRDNZWXM3dk91SmtFNS1KQdIBlwFBVV95cUxOZFRxdWg4MEY5MXByMk9LMXJCamdDUm5vaV9ZUE94M0x2UWJNZlRyUjdvSFd2YUNvTmoxVEcxOTVzMnhyX3VTckFqcFpZaTV1anpQbVZJM0paSll0clJfUG5SbTBQaVJaeHZva3kyYXpnbVhyNWoxU3JOOWtZck9hNXVvcFRZNFpGalBndFVhUDU3eUlRRFNV?oc=5",
+          "title": "Dollar to Naira exchange rate today, October 19, 2026",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSzBFUmNxekk1SFhCcktXNDB2WkNmTXYyM00wOVhNM1hBckdZdmpld0V0ZVFSU1hycnJiRGpTdWtQbVBQMW52alJIdzlYZVZxQjdDS3Q5WFdtclhjSTQwYnk0WV90bXFkNTlCTlllc3h2aTJzUDR1c0J2NzcyYWRHZ0x2eElRZHFIOTRvN0Y5a0gyd9IBlwFBVV95cUxOT0xQQ3dPeXk1aGJFeWhvNkhpdS1NQzdjemlRamRBOHlxaXBnN01TTFdxYllQMFNTVWJoSjZ2R2lVdDdGN0dZX2o1NlpmMVY1YTR1MkVuR2JQek8yUFJuS3lfUDhoN0E5TkhCWmJzNmN0Zjh1WWhtT0FuamVrTTBPV3lnT25rcGRwb3pyWmFxVHdRWVc4NVhV?oc=5",
           "source": "Vanguard News",
-          "published": "2026-10-20T06:06:03.000Z"
-        },
-        {
-          "title": "Naira appreciates against dollar at official FX market",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPMEhhVE51eW16dHJDSnZGWnpMRi1lZ3VzLU04S1hzcXJkUGRlNHVTLWVjc0h1T2JZWXJkdEk0UDRIZ3pyd0s3ZkxnTzVhX1hCQ3dIbXd3YU5XRnZIMjg4ek1sU25aOXA3N05ta09HYTFUS3hsNk9fWmpoWG5CZno3SDR5ejZ4MzdFWm1YUWVB0gGTAUFVX3lxTE5CNGI2bl9qX08wNHgtNlFxdnltSG0xSm5XVWYyLVFoekpvblg4UWNsRFg4WGZnWnBEQnR5V0dfVlR5MG9Dc0hiYUJ3a2FvYjd0cWpibXhkaTVFMEYzQXdOTUhQNmZodGRwcG82NUZ3Zk14SzIxSDQzMGU2V1ptaHJXMjZOMFhib1dXcDU0RG8zdWRDTQ?oc=5",
-          "source": "Tribune Online",
-          "published": "2026-10-21T09:02:00.000Z"
+          "published": "2026-10-19T05:45:34.000Z"
         },
         {
           "title": "Naira faces exchange rate gap as dollar sells for ₦1,380 on black market",
           "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUzNhclB5RVd1WGppUmctOU9ualF5YkxCRmEydFdycHFheVd4RmJQaGx5LTlvYktSeVVYb0JXenVzUEI0aTdLM0hZTmVLUERpWEdiRm5wVGhSOU9MRG5JUTFaWEl3UUlpNDFHamo0TXg1Mkt5UDVjQU5aUlAxSlduM2wyNTFyUVZsZzFTS0ZHT0FDeGJpZlJEc1RCN2VadV9WYmJmR2g3MVIxYXNmazUxQlpZbHJfNHdI?oc=5",
           "source": "PM News Nigeria",
           "published": "2026-10-20T10:03:26.000Z"
+        },
+        {
+          "title": "Naira appreciates against dollar at official FX market",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPMEhhVE51eW16dHJDSnZGWnpMRi1lZ3VzLU04S1hzcXJkUGRlNHVTLWVjc0h1T2JZWXJkdEk0UDRIZ3pyd0s3ZkxnTzVhX1hCQ3dIbXd3YU5XRnZIMjg4ek1sU25aOXA3N05ta09HYTFUS3hsNk9fWmpoWG5CZno3SDR5ejZ4MzdFWm1YUWVB0gGTAUFVX3lxTE5CNGI2bl9qX08wNHgtNlFxdnltSG0xSm5XVWYyLVFoekpvblg4UWNsRFg4WGZnWnBEQnR5V0dfVlR5MG9Dc0hiYUJ3a2FvYjd0cWpibXhkaTVFMEYzQXdOTUhQNmZodGRwcG82NUZ3Zk14SzIxSDQzMGU2V1ptaHJXMjZOMFhib1dXcDU0RG8zdWRDTQ?oc=5",
+          "source": "Tribune Online",
+          "published": "2026-10-21T09:02:00.000Z"
         }
       ]
     },
@@ -189,12 +189,6 @@
           "published": "2026-09-08T07:00:00.000Z"
         },
         {
-          "title": "Nigerians Question Telcos’ Advertising ‘Unlimited’ Data Plan ‘If It Does Not Exist’",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPb2ljOGtUVXdpX3g1LW4yaGxoemhVLUcwUkdvX1ZSNjFoTW9xdnhUd2xGV01tQXVORnpTYVJSUGRYZHVzbU1PUW9fN2dPdERhcTZETWhtaE4zcU1mVFZnaEJHZU5iM3lOaVoycFBobnVaUS1NcmRJQkxLRkgwR3M0TFZTc3NiX0hJYlZZU3M2RmpwQVVrVV9obVl6eHR5VHJqTGNr?oc=5",
-          "source": "Techeconomy",
-          "published": "2026-06-08T07:00:00.000Z"
-        },
-        {
           "title": "2026 Complete list of voice tariff plans on MTN, Airtel, Globacom and T2mobile",
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yS1ZKUDdWRFJzQmEwb24xX3hhaU9Qd3FTZ3RUeVNsRnNkV2VuaDFuUHFOcl85OG5XR0ljZ3haNnc0RkZEVnZ2ZUlMaHhTVnZGRjFPVzNGb3B0U0lFWDN1bzR3V0J3eU5qbHRkRFJCekNyVjlNVmJDSGticVc?oc=5",
           "source": "Technext24.com",
@@ -205,6 +199,12 @@
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE04X3F0N3Y2clg2TUNJcXhPUFFoWUdWck5GcTF6d3NwVXAxU2J0LVdTelozdXVYYk9yRTF2QkxlRWlpLXBHSHBSNkdJaE52RlE0a2pZUzRoNTFLQlRYUzhiTXd4dS10V28zMzUzVUVZYWVHOVJ5dXZtWmthVEI?oc=5",
           "source": "Technext24.com",
           "published": "2026-09-09T18:31:51.000Z"
+        },
+        {
+          "title": "Best Data Plans in Nigeria 2025: MTN, Airtel, Glo & 9mobile Compared",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA5WDkwNUtuOGFuTEZYSXZtR01jSFFwN19ObDJVbTAtUXJhbDNLc0pMVHMwX3pLZVRHRUlSQnB0aXdnNDQ4Z0pqTDZoM3N6WFk0V0dlOTdsV3E2c1Qwc2I2NQ?oc=5",
+          "source": "Techeconomy",
+          "published": "2025-08-07T07:00:00.000Z"
         },
         {
           "title": "Simple tricks to make your MTN, Airtel, Glo and 9mobile data last longer",
