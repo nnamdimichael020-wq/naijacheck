@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { SITE_CONFIG } from "@/config/site";
+import { DATA_DATE } from "@/lib/data";
+import { absUrl } from "@/lib/seo";
+import { ShareControls } from "@/components/share-controls";
 import { SearchResultsClient } from "@/components/search-results-client";
 
 export const dynamic = "force-static";
@@ -13,8 +17,25 @@ export const metadata: Metadata = {
 
 export default function SearchPage() {
   return (
-    <Suspense fallback={<div className="mx-auto w-full max-w-3xl px-4 py-6"><p className="text-sm text-muted-foreground">Loading search…</p></div>}>
-      <SearchResultsClient />
-    </Suspense>
+    <div>
+      <Suspense
+        fallback={
+          <div className="mx-auto w-full max-w-3xl px-4 py-6">
+            <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Search NaijaCheck</h1>
+            <p className="mt-2 text-sm text-muted-foreground">Loading search…</p>
+          </div>
+        }
+      >
+        <SearchResultsClient />
+      </Suspense>
+      <div className="mx-auto w-full max-w-3xl px-4 pb-6">
+        <ShareControls
+          placement="inline"
+          title={`Search ${SITE_CONFIG.name}`}
+          url={absUrl("/search")}
+          summary={`search Nigerian rates, bank codes, postal codes, 774 LGAs and guides, ${DATA_DATE}`}
+        />
+      </div>
+    </div>
   );
 }
