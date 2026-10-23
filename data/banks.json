@@ -1,11 +1,47 @@
 {
-  "updatedAt": "2026-10-21",
-  "notes": "Sort codes are the 3-digit NIP/CBN bank codes used for NUBAN transfers (commonly called sort codes). 9-digit head-office sort codes are legacy cheque-clearing codes where first 3 digits match the NIP code. USSD codes are dialled on the phone linked to the bank account; they can change — verify in official app/bank before transacting. Do NOT claim CBN endorsement. Every code below cites its source in the per-bank sources list.",
+  "updatedAt": "2026-10-23",
+  "scope": "12 major retail Deposit Money Banks operating in Nigeria — all 7 commercial banks holding CBN International Authorization plus 5 nationwide retail commercial banks holding CBN National Authorization — manually verified with corporate headquarters, CBN commercial banking licence tier, 3-digit NIP/CBN bank code, example 9-digit head-office cheque-clearing sort code, and public retail USSD shortcuts. Regional commercial banks, merchant banks, non-interest banks, and microfinance banks are outside this Phase 1 retail directory.",
+  "notes": "Sort codes are the 3-digit NIP/CBN bank codes used for NUBAN transfers (commonly called sort codes). 9-digit head-office sort codes are legacy cheque-clearing codes where the first 3 digits match the NIP code. USSD codes are dialled on the phone linked to the bank account; they can change — verify critical actions in the official bank app or branch before transacting. Independent reference — do NOT claim CBN endorsement. Every factual field cites its source in the per-bank sources list.",
+  "hubSources": [
+    {
+      "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks, Authorisation Tiers & Head Office Addresses",
+      "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+      "kind": "primary"
+    },
+    {
+      "label": "Central Bank of Nigeria (CBN) — Banking Sector Recapitalisation & Minimum Capital Framework (2024–2026)",
+      "url": "https://www.cbn.gov.ng/AboutCBN/Reforms.html",
+      "kind": "primary"
+    },
+    {
+      "label": "Mansa API — Public Nigerian Bank NIP/CBN Codes Reference (secondary cross-check)",
+      "url": "https://mansaapi.com/banks/nigeria",
+      "kind": "secondary"
+    },
+    {
+      "label": "YouVerify — Nigerian Bank Codes & Head-Office Sort Codes Compilation (secondary cross-check)",
+      "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+      "kind": "secondary"
+    }
+  ],
   "banks": [
     {
       "slug": "access-bank",
       "name": "Access Bank",
       "fullName": "Access Bank Plc",
+      "fullLegalName": "Access Bank Plc",
+      "parentGroup": "Access Holdings Plc",
+      "officialWebsite": "https://www.accessbankplc.com",
+      "headquarters": "Access Tower, 14/15 Prince Alaba Oniru Road, Victoria Island, Lagos",
+      "headquartersCity": "Victoria Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos/victoria-island",
+        "postalLabel": "Victoria Island postal code (101241)",
+        "geoHref": "/geo/lagos/eti-osa",
+        "geoLabel": "Eti-Osa LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — International Authorization",
+      "statusNote": "Flagship commercial banking subsidiary of Access Holdings Plc; relocated corporate head office from Plot 999c Danmole Street to Access Tower on Prince Alaba Oniru Road, Victoria Island, Lagos.",
       "sortCodes": [
         {
           "code": "044",
@@ -57,30 +93,57 @@
       ],
       "sources": [
         {
+          "label": "Access Bank — Corporate Head Office & Customers’ Ombudsman (official, 14/15 Prince Alaba Oniru Road, VI)",
+          "url": "https://www.accessbankplc.com/contact-us/we-care",
+          "kind": "primary"
+        },
+        {
           "label": "Access Bank — USSD Banking FAQs (official, lists *901#, *901*00#, *901*911#)",
-          "url": "https://www.accessbankplc.com/help/frequently-asked-questions/ussd-banking"
+          "url": "https://www.accessbankplc.com/help/frequently-asked-questions/ussd-banking",
+          "kind": "primary"
         },
         {
-          "label": "Access Bank — USSD Activation Page (official, Airtime *901*Amount# etc.)",
-          "url": "https://namibiaweb.accessbankplc.com/ways-to-bank/901"
+          "label": "Access Bank — *901# USSD Activation Page (official, lists *901*Amount# airtime & transfer shortcuts)",
+          "url": "https://namibiaweb.accessbankplc.com/ways-to-bank/901",
+          "kind": "primary"
         },
         {
-          "label": "Mansa API — Nigerian bank codes (CBN code 044, USSD *901#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (International Authorization & Oniru HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes & sort codes 2026 (Access 044)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "Mansa API — Nigerian bank codes compilation (CBN code 044, USSD *901#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (Access 044, 044150149)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Main USSD *901# works on MTN, Airtel, Glo, 9mobile from number linked to account. NGN6.98 telco USSD session fee applies per financial transaction (CBN/NCC rule). Verify current codes in AccessMore app or branch before transacting."
+      "notes": "Main USSD *901# works on MTN, Airtel, Glo, 9mobile from the number linked to your account. ₦6.98 telco USSD session fee applies per financial transaction (CBN/NCC rule). Verify current codes in the AccessMore app or branch before transacting."
     },
     {
       "slug": "gtbank",
       "name": "GTBank",
-      "fullName": "Guaranty Trust Bank (GTBank) Ltd",
+      "fullName": "Guaranty Trust Bank Limited (GTBank)",
+      "fullLegalName": "Guaranty Trust Bank Limited",
+      "parentGroup": "Guaranty Trust Holding Company Plc (GTCO)",
+      "officialWebsite": "https://www.gtbank.com",
+      "headquarters": "Plot 635, Akin Adesola Street, Victoria Island, Lagos",
+      "headquartersCity": "Victoria Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos/victoria-island",
+        "postalLabel": "Victoria Island postal code (101241)",
+        "geoHref": "/geo/lagos/eti-osa",
+        "geoLabel": "Eti-Osa LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — International Authorization",
+      "statusNote": "Flagship Nigerian commercial banking subsidiary (Guaranty Trust Bank Limited, RC 152321) under Guaranty Trust Holding Company Plc (GTCO); operates Bank 737 USSD and GTWorld digital channels from Plot 635 Akin Adesola Street, Victoria Island.",
       "sortCodes": [
         {
           "code": "058",
@@ -89,7 +152,7 @@
         },
         {
           "code": "058152052",
-          "label": "Head-office / common sort code (cheque clearing)",
+          "label": "Head-office / common sort code (cheque clearing example)",
           "type": "head-office"
         }
       ],
@@ -132,26 +195,56 @@
       ],
       "sources": [
         {
-          "label": "GTBank — Bank 737 official USSD service page (lists *737#, *737*6*1#, transfers, airtime, *737*911#)",
-          "url": "https://www.gtbank.com/personal-banking/services/e-banking/bank-737"
+          "label": "GTBank — Corporate Head Office Contact Page (official, Plot 635 Akin Adesola Street, VI)",
+          "url": "https://www.gtbank.com/help-centre/contact-us",
+          "kind": "primary"
         },
         {
-          "label": "Mansa API — Nigerian bank codes (CBN code 058, USSD *737#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "GTBank — Bank 737 Official USSD Service Page (lists *737#, *737*6*1#, transfers, airtime, *737*911#)",
+          "url": "https://www.gtbank.com/personal-banking/services/e-banking/bank-737",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes & sort codes (GTBank 058)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "GTBank — Branch Sort Codes Help Page (official)",
+          "url": "https://www.gtbank.com/help-centre/branch-sort-codes",
+          "kind": "primary"
+        },
+        {
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (International Authorization & 635 Akin Adesola HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes compilation (CBN code 058, USSD *737#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (GTBank 058, 058152052)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Dial from phone number linked to GTBank account. Transfer limits and NGN6.98 telco session fee apply. Confirm codes in GTWorld app or branch."
+      "notes": "Dial from the phone number linked to your GTBank account. Transfer limits and ₦6.98 telco session fee apply. Confirm codes in GTWorld app or branch."
     },
     {
       "slug": "zenith-bank",
       "name": "Zenith Bank",
       "fullName": "Zenith Bank Plc",
+      "fullLegalName": "Zenith Bank Plc",
+      "officialWebsite": "https://www.zenithbank.com",
+      "headquarters": "Zenith Heights, Plot 84/87 Ajose Adeogun Street, Victoria Island, Lagos",
+      "headquartersCity": "Victoria Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos/victoria-island",
+        "postalLabel": "Victoria Island postal code (101241)",
+        "geoHref": "/geo/lagos/eti-osa",
+        "geoLabel": "Eti-Osa LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — International Authorization",
+      "statusNote": "Publicly listed Deposit Money Bank (Zenith Bank Plc, RC 150224) headquartered at Zenith Heights on Ajose Adeogun Street, Victoria Island; CBN registers Plot 84 while investor prospectuses list the combined Plot 84/87 Zenith Heights campus.",
       "sortCodes": [
         {
           "code": "057",
@@ -203,30 +296,57 @@
       ],
       "sources": [
         {
+          "label": "Zenith Bank — Customer Service & Registered Head Office (official, Plot 84 Ajose Adeogun Street, VI)",
+          "url": "https://www.zenithbank.com/customer-service/",
+          "kind": "primary"
+        },
+        {
           "label": "Zenith Bank — USSD Banking *966# (official, lists *966#, *966*00#, *966*911#, *966*0#)",
-          "url": "https://www.zenithbank.com/966/"
+          "url": "https://www.zenithbank.com/966/",
+          "kind": "primary"
         },
         {
           "label": "Zenith Bank — Debuts *966*911# Account Control Code (official news)",
-          "url": "https://www.zenithbank.com/media/news/zenith-bank-debuts-star966star911-account-control-code/"
+          "url": "https://www.zenithbank.com/media/news/zenith-bank-debuts-star966star911-account-control-code/",
+          "kind": "primary"
         },
         {
-          "label": "Mansa API — Nigerian bank codes (Zenith 057, USSD *966#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (International Authorization & Plot 84 Ajose Adeogun HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes (Zenith 057)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "Mansa API — Nigerian bank codes compilation (Zenith 057, USSD *966#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (Zenith 057, 057150013)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Use phone linked to Zenith account. Indemnity may be needed for >NGN100k USSD transfers. Verify in Zenith app/branch."
+      "notes": "Use the phone number linked to your Zenith account. Additional indemnity or token verification may apply above standard daily USSD transfer tiers. Verify in Zenith mobile app or branch."
     },
     {
       "slug": "first-bank",
       "name": "First Bank",
-      "fullName": "First Bank of Nigeria Ltd",
+      "fullName": "First Bank of Nigeria Limited",
+      "fullLegalName": "First Bank of Nigeria Limited",
+      "parentGroup": "First HoldCo Plc",
+      "officialWebsite": "https://www.firstbanknigeria.com",
+      "headquarters": "Samuel Asabia House, 35 Marina, Lagos Island, Lagos",
+      "headquartersCity": "Marina, Lagos Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos",
+        "postalLabel": "Lagos State postal codes",
+        "geoHref": "/geo/lagos/lagos-island",
+        "geoLabel": "Lagos Island LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — International Authorization",
+      "statusNote": "Incorporated in 1894 and headquartered at Samuel Asabia House, 35 Marina, Lagos Island; operates as First Bank of Nigeria Limited under First HoldCo Plc with CBN International Authorization.",
       "sortCodes": [
         {
           "code": "011",
@@ -278,26 +398,51 @@
       ],
       "sources": [
         {
-          "label": "First Bank — USSD (*894#) official page (lists *894#, *894*0#, *894*00#, *894*Amount#, *894*911#)",
-          "url": "https://www.firstbanknigeria.com/personal/ways-to-bank/ussd/"
+          "label": "First Bank of Nigeria — Official Contact & Head Office Page (Samuel Asabia House, 35 Marina, Lagos)",
+          "url": "https://www.firstbanknigeria.com/contact/",
+          "kind": "primary"
         },
         {
-          "label": "Mansa API — Nigerian bank codes (First Bank 011, USSD *894#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "First Bank of Nigeria — USSD (*894#) Official Page (lists *894#, *894*0#, *894*00#, *894*Amount#, *894*911#)",
+          "url": "https://www.firstbanknigeria.com/personal/ways-to-bank/ussd/",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes (First Bank 011)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (International Authorization & 35 Marina HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes compilation (First Bank 011, USSD *894#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (First Bank 011, 011151003)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Only individual accounts registered on SMS alert can use *894#. Corporate/joint accounts excluded. USSD daily limits apply; verify in FirstMobile app/branch."
+      "notes": "Only individual accounts registered on SMS alert can use *894#. Corporate and joint accounts use FirstDirect or branch channels. Daily USSD limits apply; verify in FirstMobile app or branch."
     },
     {
       "slug": "uba",
       "name": "UBA",
       "fullName": "United Bank for Africa (UBA) Plc",
+      "fullLegalName": "United Bank for Africa Plc",
+      "officialWebsite": "https://www.ubagroup.com/nigeria/",
+      "headquarters": "UBA House, 57 Marina, Lagos Island, Lagos",
+      "headquartersCity": "Marina, Lagos Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos",
+        "postalLabel": "Lagos State postal codes",
+        "geoHref": "/geo/lagos/lagos-island",
+        "geoLabel": "Lagos Island LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — International Authorization",
+      "statusNote": "Incorporated in Nigeria in 1961 (merged with Standard Trust Bank in 2005) and headquartered at UBA House, 57 Marina, Lagos Island; operates across 20 African countries plus the UK, USA, France and UAE under CBN International Authorization.",
       "sortCodes": [
         {
           "code": "033",
@@ -306,7 +451,7 @@
         },
         {
           "code": "033154282",
-          "label": "Head-office sort code (Lagos example)",
+          "label": "Head-office sort code (Lagos Marina example)",
           "type": "head-office"
         }
       ],
@@ -319,7 +464,7 @@
         {
           "code": "*919*00#",
           "label": "Check balance",
-          "purpose": "Balance enquiry"
+          "purpose": "Balance enquiry on registered mobile number"
         },
         {
           "code": "*919*3#",
@@ -329,7 +474,7 @@
         {
           "code": "*919*4#",
           "label": "Transfer to other banks",
-          "purpose": "NIP transfer to other banks"
+          "purpose": "NIP transfer to other Nigerian banks"
         },
         {
           "code": "*919*Amount#",
@@ -340,30 +485,65 @@
           "code": "*919*PhoneNumber*Amount#",
           "label": "Airtime — others",
           "purpose": "Airtime for third party"
+        },
+        {
+          "code": "*919*911#",
+          "label": "Block card",
+          "purpose": "Emergency card block via UBA self-service prompt"
         }
       ],
       "sources": [
         {
-          "label": "Current Affairs Nigeria — Bank codes list (UBA CBN 033, USSD *919#)",
-          "url": "https://currentaffairs.com.ng/bank-codes/"
+          "label": "UBA Nigeria — *919# USSD Banking Official Page",
+          "url": "https://www.ubagroup.com/nigeria/personal-banking/digital-banking/919-ussd-banking/",
+          "kind": "primary"
         },
         {
-          "label": "Mansa API — Nigerian bank codes (UBA 033, USSD *919#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "UBA Group — Self-Service Help Page (official, lists *919*00# balance, *919*20# account opening, *919*911# card block)",
+          "url": "https://www.ubagroup.com/help/self-service/",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes (UBA 033, USSD *919#)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "UBA Group — Privacy & Corporate Contact Directory (official, UBA House, 57 Marina, Lagos Island)",
+          "url": "https://www.ubagroup.com/privacy-policy/",
+          "kind": "primary"
+        },
+        {
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (International Authorization & 57 Marina HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes compilation (UBA 033, USSD *919#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (UBA 033, 033154282)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Dial from number linked to UBA account. Verify exact transfer shortcuts (*919*3# vs *919*4#) in UBA mobile app or branch; USSD flows can be updated."
+      "notes": "Dial from the number linked to your UBA account. Verify exact transfer shortcuts (*919*3# vs *919*4#) in the UBA Mobile App or by dialling *919# directly; menu prompts are updated periodically."
     },
     {
       "slug": "fidelity-bank",
       "name": "Fidelity Bank",
       "fullName": "Fidelity Bank Plc",
+      "fullLegalName": "Fidelity Bank Plc",
+      "officialWebsite": "https://www.fidelitybank.ng",
+      "headquarters": "Fidelity Place, 2 Kofo Abayomi Street, Victoria Island, Lagos",
+      "headquartersCity": "Victoria Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos/victoria-island",
+        "postalLabel": "Victoria Island postal code (101241)",
+        "geoHref": "/geo/lagos/eti-osa",
+        "geoLabel": "Eti-Osa LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — International Authorization",
+      "statusNote": "Publicly listed Deposit Money Bank (Fidelity Bank Plc, RC 103022) at Fidelity Place, 2 Kofo Abayomi Street, Victoria Island; converted from merchant to commercial banking in 1999 and holds CBN International Authorization (with UK subsidiary FidBank UK Limited).",
       "sortCodes": [
         {
           "code": "070",
@@ -372,14 +552,14 @@
         },
         {
           "code": "070150003",
-          "label": "Head-office sort code (example)",
+          "label": "Head-office sort code (Victoria Island example)",
           "type": "head-office"
         }
       ],
       "ussd": [
         {
           "code": "*770#",
-          "label": "Main USSD",
+          "label": "Main USSD (Instant Banking)",
           "purpose": "Fidelity Instant Banking entry"
         },
         {
@@ -388,9 +568,14 @@
           "purpose": "Balance enquiry"
         },
         {
+          "code": "*770*01#",
+          "label": "Account number & BVN details",
+          "purpose": "Retrieve account and BVN details on registered line"
+        },
+        {
           "code": "*770*AccountNumber*Amount#",
           "label": "Transfer",
-          "purpose": "Transfer to any bank"
+          "purpose": "Transfer to Fidelity or other Nigerian banks"
         },
         {
           "code": "*770*Amount#",
@@ -405,26 +590,57 @@
       ],
       "sources": [
         {
-          "label": "Mansa API — Nigerian bank codes (Fidelity 070, USSD *770#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "Fidelity Bank Plc — Official Contact & Corporate Head Office Page (Fidelity Place, 2 Kofo Abayomi Street, VI)",
+          "url": "https://www.fidelitybank.ng/contact-us/",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes (Fidelity 070, USSD *770#)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "Fidelity Bank Plc — My 770 Instant Banking Official Page (*770#)",
+          "url": "https://www.fidelitybank.ng/personal-banking/personal-e-banking/my-770/",
+          "kind": "primary"
         },
         {
-          "label": "Current Affairs Nigeria — Bank codes list (Fidelity 070, *770#)",
-          "url": "https://currentaffairs.com.ng/bank-codes/"
+          "label": "Fidelity Bank Plc — Frequently Asked Questions (official, lists *770#, *770*01#, *770*02#, *770*08#)",
+          "url": "https://www.fidelitybank.ng/help-support/faqs/",
+          "kind": "primary"
+        },
+        {
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (International Authorization & 2 Kofo Abayomi HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes compilation (Fidelity 070, USSD *770#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (Fidelity 070, 070150003)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Verify full menu flow in Fidelity Bank app or dial *770# directly; third-party compilations vary on exact shortcut syntax."
+      "notes": "Dial *770# from the mobile number registered on your Fidelity account; confirm direct transfer/balance sub-shortcuts in the Fidelity Online Banking app if menu prompts change."
     },
     {
       "slug": "ecobank",
       "name": "Ecobank",
-      "fullName": "Ecobank Nigeria Ltd",
+      "fullName": "Ecobank Nigeria Limited",
+      "fullLegalName": "Ecobank Nigeria Limited",
+      "parentGroup": "Ecobank Transnational Incorporated (ETI)",
+      "officialWebsite": "https://www.ecobank.com/ng/personal-banking",
+      "headquarters": "Plot 270B1 Ozumba Mbadiwe Avenue, Victoria Island, Lagos (CBN register also lists 21 Ahmadu Bello Way, Victoria Island)",
+      "headquartersCity": "Victoria Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos/victoria-island",
+        "postalLabel": "Victoria Island postal code (101241)",
+        "geoHref": "/geo/lagos/eti-osa",
+        "geoLabel": "Eti-Osa LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — National Authorization",
+      "statusNote": "Nigerian commercial banking subsidiary of Lomé-headquartered Ecobank Transnational Incorporated (ETI), operating nationwide under CBN National Authorization; Ecobank Nigeria’s official page lists its head office at Plot 270B1 Ozumba Mbadiwe Avenue, Victoria Island, while CBN’s April 2024 DMB register records 21 Ahmadu Bello Way, Victoria Island.",
       "sortCodes": [
         {
           "code": "050",
@@ -433,7 +649,7 @@
         },
         {
           "code": "050150010",
-          "label": "Head-office sort code (VI example)",
+          "label": "Head-office sort code (Victoria Island example)",
           "type": "head-office"
         }
       ],
@@ -441,42 +657,71 @@
         {
           "code": "*326#",
           "label": "Main USSD (Ecobank Mobile)",
-          "purpose": "Entry for Ecobank USSD banking"
+          "purpose": "Entry for Ecobank Nigeria USSD banking (transfers, Xpress Cash, airtime, bills)"
         },
         {
           "code": "*326*0#",
           "label": "Check balance",
-          "purpose": "Balance enquiry"
+          "purpose": "Balance enquiry (secondary compilation — confirm via *326# menu)"
         },
         {
           "code": "*326*Amount*AccountNumber#",
           "label": "Transfer",
-          "purpose": "Transfer to any bank"
+          "purpose": "Transfer to Nigerian bank account (confirm prompt via *326#)"
         },
         {
           "code": "*326*Amount#",
           "label": "Airtime — self",
-          "purpose": "Airtime for self"
+          "purpose": "Airtime top-up for registered line"
         }
       ],
       "sources": [
         {
-          "label": "Mansa API — Nigerian bank codes (Ecobank 050, USSD *326#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "Ecobank Nigeria — Personal Banking Official Page (Head Office: Plot 270B1 Ozumba Mbadiwe Avenue, VI, Lagos)",
+          "url": "https://www.ecobank.com/ng/personal-banking",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes (Ecobank 050, USSD *326#)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "Ecobank — MobileMoney & Country USSD Short Codes (official, lists *326# for Nigeria)",
+          "url": "https://ecobank.com/personal-banking/ways-to-bank/mobilemoney",
+          "kind": "primary"
+        },
+        {
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (National Authorization & 21 Ahmadu Bello Way HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes compilation (Ecobank 050, USSD *326#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (Ecobank 050, 050150010)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Ecobank USSD branded *326#. Verify exact shortcuts in Ecobank app/branch; compilation sources vary."
+      "notes": "Ecobank’s official Nigerian USSD entry code is *326# (uses your 6-digit Ecobank Mobile PIN). Dial *326# and follow the interactive menu for Xpress Account, transfers, and bills."
     },
     {
       "slug": "union-bank",
       "name": "Union Bank",
       "fullName": "Union Bank of Nigeria Plc",
+      "fullLegalName": "Union Bank of Nigeria Plc",
+      "officialWebsite": "https://www.unionbankng.com",
+      "headquarters": "Stallion Plaza, 36 Marina, Lagos Island, Lagos",
+      "headquartersCity": "Marina, Lagos Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos",
+        "postalLabel": "Lagos State postal codes",
+        "geoHref": "/geo/lagos/lagos-island",
+        "geoLabel": "Lagos Island LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — National Authorization",
+      "statusNote": "Established in 1917 (Union Bank of Nigeria Plc, RC 6262) at Stallion Plaza, 36 Marina, Lagos; completed its CBN-approved merger absorbing Titan Trust Bank Limited on 1 September 2025, continuing operations nationwide under the Union Bank brand.",
       "sortCodes": [
         {
           "code": "032",
@@ -485,15 +730,15 @@
         },
         {
           "code": "032156825",
-          "label": "Head-office sort code (example)",
+          "label": "Head-office sort code (Marina example)",
           "type": "head-office"
         }
       ],
       "ussd": [
         {
           "code": "*826#",
-          "label": "Main USSD (UnionMobile)",
-          "purpose": "Entry for Union Bank USSD"
+          "label": "Main USSD (*826# / UnionMobile)",
+          "purpose": "Entry for Union Bank USSD banking"
         },
         {
           "code": "*826*4#",
@@ -508,32 +753,77 @@
         {
           "code": "*826*2*Amount*AccountNumber#",
           "label": "Transfer to other banks",
-          "purpose": "NIP to other banks"
+          "purpose": "NIP transfer to other Nigerian banks"
         },
         {
           "code": "*826*Amount#",
           "label": "Airtime — self",
-          "purpose": "Airtime for self"
+          "purpose": "Buy airtime for own line"
+        },
+        {
+          "code": "*826*Amount*PhoneNumber#",
+          "label": "Airtime — others",
+          "purpose": "Buy airtime for third-party number"
+        },
+        {
+          "code": "*826*6#",
+          "label": "Block account",
+          "purpose": "Emergency block from registered phone (*826*6*MobileNumber# from another phone)"
         }
       ],
       "sources": [
         {
-          "label": "Mansa API — Nigerian bank codes (Union Bank 032, USSD *826#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "Union Bank of Nigeria — Official *826# USSD Banking Page (lists *826#, *826*4#, *826*1#, *826*2#, *826*6#)",
+          "url": "https://www.unionbankng.com/services/247-banking/826-2/",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes (Union Bank 032, USSD *826#)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "Union Bank of Nigeria — Completes Merger with Titan Trust Bank (official release, 1 September 2025)",
+          "url": "https://www.unionbankng.com/press-releases/union-bank-of-nigeria-completes-merger-with-titan-trust-bank/",
+          "kind": "primary"
+        },
+        {
+          "label": "Union Bank of Nigeria — About Us & Corporate History (official)",
+          "url": "https://unionbankng.com/about-us/",
+          "kind": "primary"
+        },
+        {
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (National Authorization & Stallion Plaza, 36 Marina HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes compilation (Union Bank 032, USSD *826#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (Union Bank 032, 032156825)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Use line linked to Union Bank account. Confirm transfer shortcuts in UnionDigital app; secondary compilations differ."
+      "notes": "Use the phone line linked to your Union Bank account. Former Titan Trust Bank branches and accounts were absorbed into Union Bank on 1 September 2025; confirm any migrated account settings in UnionMobile or branch."
     },
     {
       "slug": "sterling-bank",
       "name": "Sterling Bank",
-      "fullName": "Sterling Bank Plc",
+      "fullName": "Sterling Bank Limited",
+      "fullLegalName": "Sterling Bank Limited",
+      "parentGroup": "Sterling Financial Holdings Company Plc",
+      "officialWebsite": "https://sterling.ng",
+      "headquarters": "Sterling Towers, 20 Marina, Lagos Island, Lagos",
+      "headquartersCity": "Marina, Lagos Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos",
+        "postalLabel": "Lagos State postal codes",
+        "geoHref": "/geo/lagos/lagos-island",
+        "geoLabel": "Lagos Island LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — National Authorization",
+      "statusNote": "Commercial banking subsidiary (Sterling Bank Limited, tracing roots to NAL Bank in 1960) of Sterling Financial Holdings Company Plc at Sterling Towers, 20 Marina, Lagos Island; operates OneBank and *822# USSD nationwide under CBN National Authorization.",
       "sortCodes": [
         {
           "code": "232",
@@ -542,7 +832,7 @@
         },
         {
           "code": "232150029",
-          "label": "Head-office sort code (example)",
+          "label": "Head-office sort code (Marina example)",
           "type": "head-office"
         }
       ],
@@ -553,39 +843,83 @@
           "purpose": "Entry for Sterling USSD banking"
         },
         {
-          "code": "*822*6#",
-          "label": "Check balance",
-          "purpose": "Balance enquiry"
+          "code": "*822*1#",
+          "label": "Register for USSD",
+          "purpose": "Self-service *822# registration"
         },
         {
-          "code": "*822*4*Amount*AccountNumber#",
+          "code": "*822*6#",
+          "label": "Check balance",
+          "purpose": "Account balance enquiry"
+        },
+        {
+          "code": "*822*Amount*AccountNumber#",
           "label": "Transfer",
-          "purpose": "Transfer to any bank"
+          "purpose": "Transfer to Sterling or any Nigerian bank"
         },
         {
           "code": "*822*Amount#",
           "label": "Airtime — self",
-          "purpose": "Airtime for self"
+          "purpose": "Airtime top-up for self"
+        },
+        {
+          "code": "*822*Amount*PhoneNumber#",
+          "label": "Airtime — others",
+          "purpose": "Airtime top-up for beneficiary number"
+        },
+        {
+          "code": "*822*911#",
+          "label": "Block account",
+          "purpose": "Emergency block account from any mobile device"
         }
       ],
       "sources": [
         {
-          "label": "Mansa API — Nigerian bank codes (Sterling 232, USSD *822#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "Sterling Bank — Official E-Channels & *822# USSD Shortcuts Page (lists *822#, *822*1#, *822*6#, transfers, *822*911#)",
+          "url": "https://sterling.ng/personal/e-channels/",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes (Sterling 232, USSD *822#)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "Sterling Bank — Official Contact & Head Office Page (Sterling Towers, 20 Marina, Lagos Island)",
+          "url": "https://sterling.ng/support/contact-us/",
+          "kind": "primary"
+        },
+        {
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (National Authorization & Sterling Towers, 20 Marina HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes compilation (Sterling 232, USSD *822#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (Sterling 232, 232150029)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Secondary compilation sourced; verify in Sterling Bank OneBank app or branch before relying on exact shortcut."
+      "notes": "Dial *822# on the mobile line registered with Sterling Bank, or verify limits and shortcuts in the OneBank app."
     },
     {
       "slug": "wema-bank",
       "name": "Wema Bank",
       "fullName": "Wema Bank Plc (ALAT)",
+      "fullLegalName": "Wema Bank Plc",
+      "officialWebsite": "https://www.wemabank.com",
+      "headquarters": "Wema Towers, 54 Marina, Lagos Island, Lagos",
+      "headquartersCity": "Marina, Lagos Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos",
+        "postalLabel": "Lagos State postal codes",
+        "geoHref": "/geo/lagos/lagos-island",
+        "geoLabel": "Lagos Island LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — National Authorization",
+      "statusNote": "Founded in 1945 as Agbonmagbe Bank Limited (Wema Bank Plc) and headquartered at Wema Towers, 54 Marina, Lagos Island; operates Nigeria’s ALAT digital banking platform alongside *945# USSD under CBN National Authorization.",
       "sortCodes": [
         {
           "code": "035",
@@ -594,15 +928,15 @@
         },
         {
           "code": "035150103",
-          "label": "Head-office sort code (example)",
+          "label": "Head-office sort code (Marina example)",
           "type": "head-office"
         }
       ],
       "ussd": [
         {
           "code": "*945#",
-          "label": "Main USSD (ALAT/*945#)",
-          "purpose": "Wema/ALAT USSD banking entry"
+          "label": "Main USSD (ALAT / *945#)",
+          "purpose": "Wema & ALAT USSD banking entry across MTN, Airtel, Glo and 9mobile"
         },
         {
           "code": "*945*0#",
@@ -610,34 +944,79 @@
           "purpose": "Balance enquiry"
         },
         {
+          "code": "*945*01#",
+          "label": "Register / profile on *945#",
+          "purpose": "Self-service USSD registration"
+        },
+        {
           "code": "*945*AccountNumber*Amount#",
           "label": "Transfer",
-          "purpose": "Transfer to any bank"
+          "purpose": "Transfer to Wema or other Nigerian banks"
         },
         {
           "code": "*945*Amount#",
           "label": "Airtime — self",
-          "purpose": "Airtime for self"
+          "purpose": "Buy airtime for own line"
+        },
+        {
+          "code": "*945*PhoneNumber*Amount#",
+          "label": "Airtime — others",
+          "purpose": "Buy airtime for another phone number"
+        },
+        {
+          "code": "*945*911#",
+          "label": "Account restriction / block",
+          "purpose": "Emergency USSD account restriction"
         }
       ],
       "sources": [
         {
-          "label": "Mansa API — Nigerian bank codes (Wema 035, USSD *945#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "Wema Bank — Official *945# USSD Codes & Transfer Guide (lists *945#, *945*0#, *945*01#, transfers, *945*911#)",
+          "url": "https://www.wemabank.com/personal/e-banking/945-2/",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes (Wema 035, USSD *945#)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "Wema Bank — Account Services & 54 Marina Head Office Contact (official)",
+          "url": "https://wemabank.com/personal/accounts-services/savings-account/reactivate/",
+          "kind": "primary"
+        },
+        {
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (National Authorization & Wema Towers, 54 Marina HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes compilation (Wema 035, USSD *945#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (Wema 035, 035150103)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Wema Bank USSD is *945# (ALAT). Confirm exact transfer syntax in ALAT app or branch."
+      "notes": "Wema Bank and ALAT accounts share CBN code 035 and USSD *945#. Confirm current limits and PIN prompts in the ALAT app or branch."
     },
     {
       "slug": "stanbic-ibtc",
       "name": "Stanbic IBTC",
-      "fullName": "Stanbic IBTC Bank Plc",
+      "fullName": "Stanbic IBTC Bank Limited",
+      "fullLegalName": "Stanbic IBTC Bank Limited",
+      "parentGroup": "Stanbic IBTC Holdings Plc (Standard Bank Group)",
+      "officialWebsite": "https://www.stanbicibtcbank.com",
+      "headquarters": "IBTC Place (Stanbic IBTC Towers), Walter Carrington Crescent, Victoria Island, Lagos",
+      "headquartersCity": "Victoria Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos/victoria-island",
+        "postalLabel": "Victoria Island postal code (101241)",
+        "geoHref": "/geo/lagos/eti-osa",
+        "geoLabel": "Eti-Osa LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — National Authorization",
+      "statusNote": "Commercial banking subsidiary (Stanbic IBTC Bank Limited, RC 125097) of Stanbic IBTC Holdings Plc and member of Standard Bank Group, headquartered at IBTC Place / Stanbic IBTC Towers on Walter Carrington Crescent, Victoria Island under CBN National Authorization.",
       "sortCodes": [
         {
           "code": "221",
@@ -646,7 +1025,7 @@
         },
         {
           "code": "221159522",
-          "label": "Head-office sort code (example)",
+          "label": "Head-office sort code (Victoria Island example)",
           "type": "head-office"
         }
       ],
@@ -654,42 +1033,87 @@
         {
           "code": "*909#",
           "label": "Main USSD",
-          "purpose": "Stanbic IBTC USSD banking entry"
+          "purpose": "Stanbic IBTC USSD banking menu (balance, transfers, bills, card requests)"
         },
         {
-          "code": "*909*00#",
-          "label": "Check balance",
-          "purpose": "Balance enquiry"
+          "code": "*909*11*1#",
+          "label": "Register / create USSD PIN",
+          "purpose": "Enrol on *909# using debit card or BVN"
         },
         {
-          "code": "*909*Amount*AccountNumber#",
-          "label": "Transfer",
-          "purpose": "Transfer to any bank"
+          "code": "*909*11*Amount*AccountNumber#",
+          "label": "Transfer to Stanbic IBTC",
+          "purpose": "Intrabank transfer to a Stanbic IBTC account"
         },
         {
-          "code": "*909*Amount#",
-          "label": "Airtime — self",
-          "purpose": "Airtime for self"
+          "code": "*909*22*Amount*AccountNumber#",
+          "label": "Transfer to other banks",
+          "purpose": "Interbank NIP transfer to any Nigerian bank"
+        },
+        {
+          "code": "*909*1#",
+          "label": "Buy airtime",
+          "purpose": "Airtime recharge menu"
+        },
+        {
+          "code": "*909*37#",
+          "label": "Open zero-balance account",
+          "purpose": "Instant personal account opening via USSD"
+        },
+        {
+          "code": "*909*1*911#",
+          "label": "Instant account blocking",
+          "purpose": "Emergency block if phone or card is compromised"
         }
       ],
       "sources": [
         {
-          "label": "Mansa API — Nigerian bank codes (Stanbic IBTC 221, USSD *909#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "Stanbic IBTC Bank — Official *909# USSD Banking Page (lists *909#, *909*11*1#, *909*11#, *909*22#, *909*1*911#, *909*37#)",
+          "url": "https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/self-service-banking/ussd-banking",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes (Stanbic IBTC 221, USSD *909#)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "Stanbic IBTC Bank — Official Contact & IBTC Place / Towers Head Office Page (Walter Carrington Crescent, VI)",
+          "url": "https://www.stanbicibtcbank.com/nigeriabank/personal/contact-us",
+          "kind": "primary"
+        },
+        {
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (National Authorization & IBTC Place HQ)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes compilation (Stanbic IBTC 221, USSD *909#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (Stanbic IBTC 221, 221159522)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Secondary compilation sourced; verify in Stanbic IBTC app/branch for exact transfer syntax."
+      "notes": "Stanbic IBTC uses separate transfer prefixes for intrabank (*909*11*Amount*AccountNumber#) vs interbank (*909*22*Amount*AccountNumber#) on its official *909# page; dial *909# for interactive balance and service prompts."
     },
     {
       "slug": "fcmb",
       "name": "FCMB",
-      "fullName": "First City Monument Bank (FCMB) Ltd",
+      "fullName": "First City Monument Bank (FCMB) Limited",
+      "fullLegalName": "First City Monument Bank Limited",
+      "parentGroup": "FCMB Group Plc",
+      "officialWebsite": "https://www.fcmb.com",
+      "headquarters": "Primrose Tower, 17A Tinubu Street, Marina, Lagos Island, Lagos",
+      "headquartersCity": "Marina, Lagos Island, Lagos",
+      "headquartersLinks": {
+        "postalHref": "/codes/postal/lagos",
+        "postalLabel": "Lagos State postal codes",
+        "geoHref": "/geo/lagos/lagos-island",
+        "geoLabel": "Lagos Island LGA, Lagos"
+      },
+      "licenceType": "Commercial Bank — International Authorization",
+      "statusNote": "Commercial banking subsidiary (First City Monument Bank Limited) of FCMB Group Plc, headquartered at Primrose Tower, 17A Tinubu Street, Lagos Island, operating retail *329# USSD and SME banking under CBN International Authorization.",
       "sortCodes": [
         {
           "code": "214",
@@ -698,45 +1122,82 @@
         },
         {
           "code": "214150018",
-          "label": "Head-office sort code (example)",
+          "label": "Head-office sort code (Tinubu Square example)",
           "type": "head-office"
         }
       ],
       "ussd": [
         {
           "code": "*329#",
-          "label": "Main USSD (FCMB Mobile)",
-          "purpose": "Entry for FCMB USSD banking"
+          "label": "Main USSD (FCMB *329#)",
+          "purpose": "Entry for FCMB USSD banking on any phone"
+        },
+        {
+          "code": "*329*00#",
+          "label": "Check balance",
+          "purpose": "Instant account balance enquiry"
         },
         {
           "code": "*329*0#",
-          "label": "Check balance",
-          "purpose": "Balance enquiry"
+          "label": "Reset PIN / transaction code",
+          "purpose": "Create or reset 4-digit transaction code or USSD PIN"
         },
         {
           "code": "*329*Amount*AccountNumber#",
           "label": "Transfer",
-          "purpose": "Transfer to any bank"
+          "purpose": "Transfer to FCMB or other Nigerian banks"
         },
         {
           "code": "*329*Amount#",
           "label": "Airtime — self",
-          "purpose": "Airtime for self"
+          "purpose": "Top up registered mobile phone"
+        },
+        {
+          "code": "*329*Amount*PhoneNumber#",
+          "label": "Airtime — others",
+          "purpose": "Send airtime to another mobile number"
+        },
+        {
+          "code": "*329*1*PhoneNumber#",
+          "label": "Buy mobile data",
+          "purpose": "Purchase data bundle on any phone"
+        },
+        {
+          "code": "*329*11#",
+          "label": "FastCash / loan menu",
+          "purpose": "Instant FastCash or airtime loan menu"
         }
       ],
       "sources": [
         {
-          "label": "Mansa API — Nigerian bank codes (FCMB 214, USSD *329#)",
-          "url": "https://mansaapi.com/banks/nigeria"
+          "label": "FCMB — Official *329# USSD Banking Page (lists *329#, *329*00# balance, *329*0# PIN/code, transfers, airtime, data)",
+          "url": "https://www.fcmb.com/personal-banking/USSD.php",
+          "kind": "primary"
         },
         {
-          "label": "YouVerify — Nigerian bank codes (FCMB 214, USSD *329#)",
-          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes"
+          "label": "FCMB — Official Privacy Policy & Corporate Address (Primrose Tower, 17A Tinubu Street, Marina, Lagos)",
+          "url": "https://www.fcmb.com/about-us/our-policies/privacy-policy.php",
+          "kind": "primary"
+        },
+        {
+          "label": "Central Bank of Nigeria (CBN) — Official List of Deposit Money Banks (International Authorization & FCMB)",
+          "url": "https://www.cbn.gov.ng/Out/2024/CCD/LIST%20OF%20DEPOSIT%20MONEY%20BANKS%20AS%20AT%2026TH%20APRIL,%202024%20(1).pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Mansa API — Nigerian bank codes compilation (FCMB 214, USSD *329#)",
+          "url": "https://mansaapi.com/banks/nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "YouVerify — Nigerian bank codes & sort codes compilation (FCMB 214, 214150018)",
+          "url": "https://youverify.co/en/blogs/list-of-nigerian-bank-codes-and-sort-codes",
+          "kind": "secondary"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-23",
       "verification": "manual",
-      "notes": "Secondary compilation sourced; verify exact shortcuts in FCMB mobile app/branch."
+      "notes": "On FCMB’s official USSD guide, *329*00# checks account balance while *329*0# creates or resets your transaction code/PIN. Verify limits in the FCMB New Mobile app or branch."
     }
   ]
 }

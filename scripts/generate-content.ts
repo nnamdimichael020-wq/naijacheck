@@ -1436,7 +1436,7 @@ const fixedSearch = [
   { path: "/prices/fuel", title: "Fuel Depot Prices — Petrol, Diesel & LPG History", kind: "charts", desc: "Depot petrol & diesel medians — stored gantry readings, honest gaps.", keys: "fuel petrol diesel lpg depot gantry pms ago cooking gas price history" },
   { path: "/charts", title: "Naira Price History Charts — Dollar, CBN & Fuel Depot", kind: "charts", desc: "Parallel USD buy, CBN NFEM, depot petrol, diesel & LPG — every stored monitor reading charted.", keys: "charts naira dollar cbn depot petrol diesel lpg history price" },
   { path: "/codes", title: "Nigerian Codes — Bank Sort & USSD plus Postal/ZIP & LGAs", kind: "hub", desc: "Bank sort codes + USSD + postal/ZIP codes + 774 LGAs — the codes home.", keys: "codes bank sort ussd postal zip lga 044 058" },
-  { path: "/codes/banks", title: "Nigerian Bank Sort & USSD Codes — All Banks", kind: "banks", desc: "12 major banks — 3-digit sort codes (044, 058…) + USSD menus (*901#, *737#…).", keys: "bank sort ussd code nip cbn 044 058 057 011 gtbank access zenith firstbank 737 901" },
+  { path: "/codes/banks", title: "List of Commercial Banks in Nigeria — Sort Codes, USSD & Headquarters", kind: "banks", desc: "12 major retail commercial banks — 3-digit CBN/NIP sort codes (044, 058…), USSD (*901#, *737#…), Lagos headquarters & CBN licence tiers.", keys: "list of banks in nigeria commercial banks bank sort ussd code nip cbn headquarters licence 044 058 057 011 gtbank access zenith firstbank 737 901" },
   { path: "/codes/postal", title: "Nigerian Postal Codes — 6-digit NIPOST by State", kind: "postal", desc: "37 states/FCT · 77 places — head-office codes 100001–900001, district codes.", keys: "postal zip nipost 100001 900001 zip code state lga place" },
   { path: "/geo", title: "Nigeria 774 LGAs — Complete Local Government Areas by State", kind: "geo", desc: "All 774 LGAs (768 LGAs + 6 FCT Area Councils) — browse by state, search any LGA.", keys: "lga local government area 774 abia lagos kano council state" },
   { path: "/tools/quiz", title: "NaijaCheck Price IQ & Slang Quiz", kind: "tools", desc: "Test your Price IQ on dated FX & fuel snapshots plus Nigerian slang from the trends desk.", keys: "quiz price iq slang check game test tools" },
@@ -1452,15 +1452,42 @@ const chartSearchEntries = [
 ];
 
 // Banks — 12 real pages from data/banks.json SSOT
-const bankEntries = (banksData as { banks: Array<{ slug: string; name: string; sortCodes: Array<{ code: string }>; ussd: Array<{ code: string }> }> }).banks.map((b) => {
+const bankEntries = (
+  banksData as {
+    banks: Array<{
+      slug: string;
+      name: string;
+      fullLegalName?: string;
+      parentGroup?: string;
+      headquartersCity?: string;
+      licenceType?: string;
+      sortCodes: Array<{ code: string }>;
+      ussd: Array<{ code: string }>;
+    }>;
+  }
+).banks.map((b) => {
   const sortDigits = b.sortCodes.map((s) => s.code).join(" ");
   const ussdCodes = b.ussd.map((u) => u.code).join(" ");
+  const hqPart = b.headquartersCity ? ` · HQ: ${b.headquartersCity}` : "";
+  const licencePart = b.licenceType ? ` · ${b.licenceType}` : "";
   return {
     path: `/codes/banks/${b.slug}`,
     title: `${b.name} — ${b.sortCodes[0]?.code ?? ""} · ${b.ussd[0]?.code ?? ""}`,
     kind: "banks",
-    desc: `Sort code ${sortDigits} — USSD ${ussdCodes} — verified source & last-checked date.`,
-    keys: `${b.name} ${b.slug.replace(/-/g, " ")} ${sortDigits} ${ussdCodes} bank sort code ussd nip cbn`,
+    desc: `Sort code ${sortDigits} — USSD ${ussdCodes}${hqPart}${licencePart}.`,
+    keys: [
+      b.name,
+      b.fullLegalName ?? "",
+      b.parentGroup ?? "",
+      b.headquartersCity ?? "",
+      b.licenceType ?? "",
+      b.slug.replace(/-/g, " "),
+      sortDigits,
+      ussdCodes,
+      "bank sort code ussd nip cbn headquarters",
+    ]
+      .filter(Boolean)
+      .join(" "),
   };
 });
 

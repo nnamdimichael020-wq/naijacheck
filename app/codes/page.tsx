@@ -82,7 +82,7 @@ export default function CodesHubPage() {
             Open full banks index — searchable →
           </Link>
         </div>
-        <p className="text-sm text-muted-foreground">12 major retail banks to start — quality over “all 200+ codes”. Each page lists sort code(s), USSD shortcuts (only when sourced), notes, source links and last-verified date.</p>
+        <p className="text-sm text-muted-foreground">12 major retail commercial banks — quality over “all 200+ codes”. Each page lists corporate headquarters, CBN licence tier, sort code(s), USSD shortcuts (only when sourced), source links and last-verified date ({banksUpdatedAt()}).</p>
         <ul className="grid gap-3 sm:grid-cols-2">
           {featured.map((b) => (
             <li key={b.slug}>
