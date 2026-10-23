@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { SITE_CONFIG } from "@/config/site";
-import { DATA_DATE } from "@/lib/data";
 import { absUrl } from "@/lib/seo";
 import { ShareControls } from "@/components/share-controls";
 import { SearchResultsClient } from "@/components/search-results-client";
@@ -33,7 +32,7 @@ export default function SearchPage() {
           placement="inline"
           title={`Search ${SITE_CONFIG.name}`}
           url={absUrl("/search")}
-          summary={`search Nigerian rates, bank codes, postal codes, 774 LGAs and guides, ${DATA_DATE}`}
+          summary="search Nigerian FX & fuel charts, bank codes, postal codes, 774 LGAs and guides"
         />
       </div>
     </div>

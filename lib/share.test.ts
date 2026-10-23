@@ -152,7 +152,30 @@ function run(): void {
   assert.ok(component.includes('rel="noopener noreferrer"'), "outbound share links are safely isolated");
   assert.ok(!/window\.open\(/.test(component), "WhatsApp/X use normal links so middle-click and no-JS both work");
 
-  console.log("Share tests passed (WhatsApp + X prefills carry only public title, dated line and canonical URL; no unverified handle).");
+  /* ---------- global DATA_DATE & share summary honesty guards ---------- */
+  const dataTs = fs.readFileSync(path.join(process.cwd(), "lib/data.ts"), "utf8");
+  assert.ok(dataTs.includes('export const DATA_DATE = "9 October 2026";'), "DATA_DATE stays honest and never invents fresher dates");
+
+  const homeSrc = fs.readFileSync(path.join(process.cwd(), "app/page.tsx"), "utf8");
+  assert.ok(!homeSrc.includes("Updated {DATA_DATE}") && !/Updated 9 October/i.test(homeSrc), "homepage must not display a global Updated DATA_DATE banner");
+  assert.ok(!homeSrc.includes("prices as of ${DATA_DATE}"), "homepage share summary must not imply the whole site is frozen on DATA_DATE");
+  assert.ok(
+    homeSrc.includes("Planning estimates dated {DATA_DATE} — not live market quotes.") &&
+      homeSrc.includes("Source &amp; status → /status"),
+    "homepage scopes DATA_DATE locally to food planning estimates with /status link",
+  );
+
+  const aboutSrc = fs.readFileSync(path.join(process.cwd(), "app/about/page.tsx"), "utf8");
+  assert.ok(!aboutSrc.includes("Figures on this site were last reviewed on"), "/about must not claim all site figures were frozen on DATA_DATE");
+  assert.ok(!aboutSrc.includes("check our figures, ${DATA_DATE}"), "/about share summary must not imply the whole site is frozen on DATA_DATE");
+
+  const searchPageSrc = fs.readFileSync(path.join(process.cwd(), "app/search/page.tsx"), "utf8");
+  assert.ok(!searchPageSrc.includes("DATA_DATE"), "/search share summary must not imply the whole product is frozen on DATA_DATE");
+
+  const sidebarSrc = fs.readFileSync(path.join(process.cwd(), "components/site-sidebar.tsx"), "utf8");
+  assert.ok(!sidebarSrc.includes("Sourced {DATA_DATE}"), "desktop sidebar must use monitored Freshness timestamps rather than global Sourced DATA_DATE");
+
+  console.log("Share tests passed (WhatsApp + X prefills carry only public title, dated line and canonical URL; no unverified handle; no misleading global DATA_DATE freeze claims).");
 }
 
 run();

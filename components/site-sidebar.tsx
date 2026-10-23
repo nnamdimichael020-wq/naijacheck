@@ -3,13 +3,22 @@ import { TrendingUp, Droplet, ArrowUpRight } from "lucide-react";
 import { AdSlot } from "@/components/ads/ad-slot";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FUEL, RATES, SLANG_BY_SLUG, TRENDING_SLUGS, naira, DATA_DATE } from "@/lib/data";
+import { Freshness } from "@/components/live/freshness";
+import { LIVE_FUEL, LIVE_FX } from "@/lib/live";
+import { DATASET_REGISTRY } from "@/lib/source-registry";
+import { RATES, SLANG_BY_SLUG, TRENDING_SLUGS, naira } from "@/lib/data";
 
-/** Desktop-only sidebar: Trending Now, Today's Rates, related links, one sidebar ad. */
+/** Desktop-only sidebar: Trending Now, Monitored FX & Depot Fuel, related links, one sidebar ad. */
 export function SiteSidebar() {
   const trending = TRENDING_SLUGS.map((s) => SLANG_BY_SLUG[s]).filter(Boolean).slice(0, 5);
-  const diesel = FUEL.depots.find((d) => d.name.includes("National median depot (diesel)"));
-  const petrolLagos = FUEL.petrolPump.find((p) => p.slug === "lagos");
+  const official = LIVE_FX.official.USD ?? RATES.official.USD;
+  const parallel = LIVE_FX.blackMarket?.USD.buy ?? RATES.blackMarket.USD;
+  const petrolMedian = LIVE_FUEL.medians.petrol;
+  const dieselMedian = LIVE_FUEL.medians.diesel;
+
+  const officialFxRecord = DATASET_REGISTRY.find((d) => d.id === "cbn-usd")!;
+  const parallelFxRecord = DATASET_REGISTRY.find((d) => d.id === "parallel-fx")!;
+  const fuelRecord = DATASET_REGISTRY.find((d) => d.id === "fuel-depot")!;
 
   return (
     <div className="sticky top-40 space-y-4">
@@ -40,31 +49,48 @@ export function SiteSidebar() {
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="flex items-center gap-2 text-base">
-            <Droplet className="size-4 text-accent" aria-hidden="true" /> Today&apos;s Rates
+            <Droplet className="size-4 text-accent" aria-hidden="true" /> Monitored FX &amp; Depot
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <dl className="space-y-2 text-sm">
-            <div className="flex justify-between gap-2">
-              <dt className="text-muted-foreground">USD official</dt>
-              <dd className="font-semibold tabular-nums">₦{RATES.official.USD.toLocaleString("en-NG", { minimumFractionDigits: 2 })}</dd>
+          <dl className="space-y-2.5 text-sm">
+            <div className="space-y-0.5">
+              <div className="flex justify-between gap-2">
+                <dt className="text-muted-foreground">USD official (CBN)</dt>
+                <dd className="font-semibold tabular-nums">₦{official.toLocaleString("en-NG", { minimumFractionDigits: 2 })}</dd>
+              </div>
+              <Freshness asOf={officialFxRecord.sourceTime} state={officialFxRecord.state} source="CBN" className="text-[11px]" />
             </div>
-            <div className="flex justify-between gap-2">
-              <dt className="text-muted-foreground">USD black market</dt>
-              <dd className="font-semibold tabular-nums">₦{RATES.blackMarket.USD.toLocaleString("en-NG")}</dd>
+            <div className="space-y-0.5">
+              <div className="flex justify-between gap-2">
+                <dt className="text-muted-foreground">USD parallel quote</dt>
+                <dd className="font-semibold tabular-nums">₦{parallel.toLocaleString("en-NG")}</dd>
+              </div>
+              <Freshness asOf={parallelFxRecord.sourceTime} state={parallelFxRecord.state} source="Aboki" className="text-[11px]" />
             </div>
-            <div className="flex justify-between gap-2">
-              <dt className="text-muted-foreground">Petrol, Lagos pump</dt>
-              <dd className="font-semibold tabular-nums">{petrolLagos ? naira(petrolLagos.price) : "n/a"}/L</dd>
+            <div className="space-y-0.5">
+              <div className="flex justify-between gap-2">
+                <dt className="text-muted-foreground">Petrol, depot median</dt>
+                <dd className="font-semibold tabular-nums">{petrolMedian ? naira(petrolMedian) : "n/a"}/L</dd>
+              </div>
+              <Freshness asOf={fuelRecord.sourceTime} state={fuelRecord.state} source="Awajis" className="text-[11px]" />
             </div>
-            <div className="flex justify-between gap-2">
-              <dt className="text-muted-foreground">Diesel, depot median</dt>
-              <dd className="font-semibold tabular-nums">{diesel ? naira(diesel.price as number) : "n/a"}/L</dd>
+            <div className="space-y-0.5">
+              <div className="flex justify-between gap-2">
+                <dt className="text-muted-foreground">Diesel, depot median</dt>
+                <dd className="font-semibold tabular-nums">{dieselMedian ? naira(dieselMedian) : "n/a"}/L</dd>
+              </div>
             </div>
           </dl>
-          <p className="mt-3 text-[11px] text-muted-foreground">Indicative. Sourced {DATA_DATE}. GBP and EUR are derived.</p>
-          <Link href="/prices" className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
-            All prices <ArrowUpRight className="size-3.5" aria-hidden="true" />
+          <p className="mt-3 text-[11px] text-muted-foreground">
+            Wholesale depot ≠ station pump. Source timestamps &amp; health on{" "}
+            <Link href="/status" className="font-medium text-primary hover:underline">
+              /status
+            </Link>
+            .
+          </p>
+          <Link href="/rates" className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
+            FX &amp; fuel charts <ArrowUpRight className="size-3.5" aria-hidden="true" />
           </Link>
         </CardContent>
       </Card>

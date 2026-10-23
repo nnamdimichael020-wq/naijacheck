@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SITE_CONFIG, SITE_TAGLINE, SOCIAL_HANDLE } from "@/config/site";
 import { DATA_DATE } from "@/lib/data";
 import { pageMetadata, absUrl } from "@/lib/seo";
@@ -18,7 +19,12 @@ export default function AboutPage() {
         <h1 className="mt-1 text-3xl font-extrabold tracking-tight md:text-4xl">
           {SITE_CONFIG.name}: {SITE_TAGLINE}
         </h1>
-        <ShareControls placement="inline" title={`About ${SITE_CONFIG.name}`} url={absUrl("/about")} summary={`how we source and check our figures, ${DATA_DATE}`} />
+        <ShareControls
+          placement="inline"
+          title={`About ${SITE_CONFIG.name}`}
+          url={absUrl("/about")}
+          summary="how we source monitored FX & fuel readings and dated Nigerian reference guides"
+        />
       </header>
       <div className="space-y-4 text-[17px] leading-relaxed text-foreground/90">
         <p>
@@ -41,7 +47,14 @@ export default function AboutPage() {
           <li>Food prices, pump prices and telecom bundle prices are not auto-read yet. They carry their survey or check date.</li>
           <li>Ranges beat false precision. Confirm before you spend.</li>
         </ul>
-        <p className="text-sm text-muted-foreground">Figures on this site were last reviewed on {DATA_DATE}.</p>
+        <p className="text-sm text-muted-foreground">
+          Monitored FX, wholesale fuel, news and trend feeds carry their own check timestamps on{" "}
+          <Link href="/status" className="font-medium text-primary underline underline-offset-2">
+            /status
+          </Link>
+          ; manual food, retail pump and telecom planning tables carry their individual check dates (baseline {DATA_DATE} unless a newer verification date is
+          shown).
+        </p>
       </section>
 
       <section className="space-y-3">

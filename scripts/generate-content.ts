@@ -458,7 +458,7 @@ function buildPricesHubs() {
     path: "/prices/fuel", section: "prices-static", navLabel: "Dated fuel references", kicker: "Prices · Fuel",
     title: "Dated Petrol Pump References and Monitored Depot Fuel",
     metaTitle: "Nigeria Fuel References: Pump Lists & Depot Monitoring",
-    metaDescription: "Petrol pump prices by state (NNPC list), Dangote gantry prices, depot diesel and LPG, with sources and dates. Updated 9 October 2026.",
+    metaDescription: "Monitored wholesale depot petrol, diesel & LPG medians alongside dated NNPC retail pump references (9 October 2026), with sources and timestamps.",
     keywords: ["petrol price today nigeria", "diesel price today nigeria", "NNPC petrol price lagos", "dangote petrol price"],
     params: {},
     intro: [
