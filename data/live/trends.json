@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-22T21:34:24.770Z",
+  "checkedAt": "2026-10-23T04:47:04.870Z",
   "seeded": false,
   "method": "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
   "limitation": "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
@@ -13,8 +13,8 @@
     {
       "slug": "achalugo",
       "term": "Achalugo",
-      "mentions7d": 2,
-      "score": 50
+      "mentions7d": 3,
+      "score": 75
     },
     {
       "slug": "detty-december",
@@ -128,39 +128,39 @@
   "wiki": [
     {
       "article": "Nigeria",
-      "views7d": 45260,
-      "prev7d": 44539,
-      "changePct": 1.6
+      "views7d": 45464,
+      "prev7d": 44615,
+      "changePct": 1.9
     },
     {
       "article": "Nigerian naira",
-      "views7d": 3507,
-      "prev7d": 3625,
-      "changePct": -3.3
+      "views7d": 3517,
+      "prev7d": 3621,
+      "changePct": -2.9
     },
     {
       "article": "Dangote Refinery",
-      "views7d": 439,
-      "prev7d": 474,
-      "changePct": -7.4
+      "views7d": 427,
+      "prev7d": 502,
+      "changePct": -14.9
     },
     {
       "article": "Lagos",
-      "views7d": 15547,
-      "prev7d": 14907,
-      "changePct": 4.3
+      "views7d": 15634,
+      "prev7d": 14908,
+      "changePct": 4.9
     },
     {
       "article": "Joint Admissions and Matriculation Board",
-      "views7d": 979,
-      "prev7d": 618,
-      "changePct": 58.4
+      "views7d": 972,
+      "prev7d": 600,
+      "changePct": 62
     },
     {
       "article": "Afrobeats",
-      "views7d": 3613,
-      "prev7d": 2407,
-      "changePct": 50.1
+      "views7d": 3589,
+      "prev7d": 2457,
+      "changePct": 46.1
     }
   ],
   "sources": [
