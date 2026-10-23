@@ -12,7 +12,6 @@ import { heroMotionForPath } from "@/config/site";
 import type { Article } from "@/lib/types";
 import { articleSchema, absUrl } from "@/lib/seo";
 import { articleShareSummary } from "@/lib/share";
-import { DATA_DATE } from "@/lib/data";
 import { ShareControls } from "@/components/share-controls";
 
 /** Human label for an honest verification state. Never says "live" for statutory or manual figures. */
@@ -97,7 +96,15 @@ export function ArticleView({ article, children, showSchema = true }: { article:
           <span className="inline-flex items-center gap-1">
             <Clock className="size-4" aria-hidden="true" /> About {readMins} min read
           </span>
-          <span>Updated {dateLabel(article.lastVerified ?? article.updatedAt)}</span>
+          <span>
+            {article.lastVerified
+              ? `Verified ${dateLabel(article.lastVerified)}`
+              : article.path === "/prices" || article.path === "/prices/fuel" || article.path === "/trends"
+                ? `Reference guide dated ${dateLabel(article.updatedAt)} · monitored feeds show their own timestamps`
+                : article.section.startsWith("prices") || article.section === "cookbook" || article.section.startsWith("hustle")
+                  ? `Estimates dated ${dateLabel(article.updatedAt)}`
+                  : `Guide dated ${dateLabel(article.updatedAt)}`}
+          </span>
         </p>
         <ShareControls
           placement="inline"
@@ -363,8 +370,8 @@ export function ArticleView({ article, children, showSchema = true }: { article:
       </section>
 
       <p className="mt-8 rounded-md bg-secondary p-3 text-xs text-muted-foreground">
-        Figures on this page are indicative for {DATA_DATE} unless a source is named. This is general information, not financial, legal or medical
-        advice. Check the official source before you pay or decide.
+        Editorial planning figures on this page are dated {dateLabel(article.lastVerified ?? article.updatedAt)} unless a monitored or official source
+        timestamp is shown above. This is general information, not financial, legal or medical advice. Check the official source before you pay or decide.
       </p>
       <ShareControls title={article.title} url={absUrl(article.path)} summary={articleShareSummary(article)} />
       <AdSlot variant="inline" index={2} />

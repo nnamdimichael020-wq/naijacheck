@@ -8,7 +8,7 @@ import { formatWatClock } from "@/lib/wat-clock";
 /**
  * Site-wide WAT clock.
  * - Fixed Africa/Lagos (Intl + Africa/Lagos), never visitor local TZ.
- * - Detailed human format: "Thursday, 22 Oct 2026 · 01:42:15 WAT".
+ * - Detailed 12-hour human format: "Friday, 23 Oct 2026 · 2:17:05 am WAT".
  * - Live tick every 1s (cheap — single Intl format per tick).
  * - SSR-friendly: server renders first-paint time; client hydrates with
  *   suppressHydrationWarning to avoid mismatch flash when seconds differ.

@@ -77,7 +77,7 @@ export function CityPriceTable() {
 export function CityItemsTable({ citySlug }: { citySlug: string }) {
   const city = CITY_BY_SLUG[citySlug];
   return (
-    <Wrap caption={`All tracked items in ${city.name}. Indicative, ${DATA_DATE}.`}>
+    <Wrap caption={`All tracked items in ${city.name}. Planning estimates dated ${DATA_DATE} — not live market quotes.`}>
       <thead>
         <tr>
           <th scope="col" className={HEAD}>
@@ -125,7 +125,7 @@ export function ItemCitiesTable({ itemSlug }: { itemSlug: string }) {
     .map((c) => ({ c, band: priceBand(itemSlug, c.slug) }))
     .sort((a, b) => bandMid(a.band) - bandMid(b.band));
   return (
-    <Wrap caption={`${short(item.name)} across Nigeria, cheapest first. ${item.unit}. Indicative.`}>
+    <Wrap caption={`${short(item.name)} across Nigeria, cheapest first (${item.unit}). Planning estimates dated ${DATA_DATE} — not live market quotes.`}>
       <thead>
         <tr>
           <th scope="col" className={HEAD}>

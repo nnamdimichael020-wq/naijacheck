@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SITE_CONFIG, SITE_TAGLINE } from "@/config/site";
 import { AdsenseLoader } from "@/components/ads/adsense-loader";
+import { SiteSidebar } from "@/components/site-sidebar";
 import { SiteSidebarFrame } from "@/components/site-sidebar-frame";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
@@ -79,7 +80,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main id="main" className="min-w-0 flex-1 pb-28 pt-6 lg:pb-12">
               {children}
             </main>
-            <SiteSidebarFrame />
+            <SiteSidebarFrame>
+              <SiteSidebar />
+            </SiteSidebarFrame>
           </div>
           <SiteFooter />
           <BottomNav />

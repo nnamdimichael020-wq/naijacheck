@@ -85,13 +85,13 @@ export default function HomePage() {
       <header className="space-y-2">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <Badge variant="accent">
-            Updated {DATA_DATE} · every figure shows source &amp; status
+            Every figure shows its source, timestamp &amp; status
           </Badge>
           <ShareControls
             placement="inline"
             title={`${SITE_CONFIG.name}: ${SITE_TAGLINE}`}
             url={absUrl("/")}
-            summary={`prices as of ${DATA_DATE}`}
+            summary="monitored FX & depot fuel, dated planning guides and Nigerian codes — every figure shows source & status"
           />
         </div>
         <h1 className="text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl md:text-4xl">
@@ -263,7 +263,12 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-2 text-xs text-muted-foreground">Ranges for planning. Confirm at the market.</p>
+              <p className="mt-2 text-xs text-muted-foreground">
+                Planning estimates dated {DATA_DATE} — not live market quotes.{" "}
+                <Link href="/status" className="font-semibold text-primary hover:underline">
+                  Source &amp; status → /status
+                </Link>
+              </p>
             </CardContent>
           </Card>
 
