@@ -24,6 +24,7 @@ import {
 } from "./category-bubble-controller";
 import { getAllBanks } from "./banks";
 import { getAllAirports } from "./airports";
+import { getAllOilGasOperators } from "./oil-gas";
 import { getAllPostalStates } from "./postal";
 import { getAllLgaStates } from "./lgas";
 import { GOV_DOCS } from "./data";
@@ -138,6 +139,14 @@ function run() {
     placesAirportsSub.children?.length,
     getAllAirports().length + 1,
     "Places -> Airports lists hub + all 24 SSOT airports",
+  );
+  const placesOilGasSub = placesBubble.subcategories.find((s) => s.id === "places-oil-gas")!;
+  assert.ok(placesOilGasSub, "Oil & Gas Operators lives under Places bubble (strictly 6 top-level bubbles)");
+  assert.equal(placesOilGasSub.href, "/oil-gas");
+  assert.equal(
+    placesOilGasSub.children?.length,
+    getAllOilGasOperators().length + 1,
+    "Places -> Oil & Gas Operators lists hub + all 16 SSOT operators",
   );
 
   // Guides: includes all GovHowTo slugs from SSOT

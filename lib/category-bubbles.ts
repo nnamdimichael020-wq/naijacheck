@@ -1,6 +1,7 @@
 import { ARTICLES } from "@/lib/articles";
 import { getAllAirports } from "@/lib/airports";
 import { getAllBanks } from "@/lib/banks";
+import { getAllOilGasOperators, operatorTypeShortLabel } from "@/lib/oil-gas";
 import { CHART_PAGES } from "@/lib/chart-pages";
 import {
   BLUEPRINTS,
@@ -116,6 +117,7 @@ function compactSubs(items: Array<BubbleSubcategory | null>): BubbleSubcategory[
 export function buildCategoryBubbleTree(): CategoryBubble[] {
   const banks = getAllBanks();
   const airports = getAllAirports();
+  const oilGasOperators = getAllOilGasOperators();
   const postalStates = getAllPostalStates();
   const postalDistricts = getAllPostalAreaParams()
     .slice(0, POSTAL_DISTRICT_CAP)
@@ -301,6 +303,24 @@ export function buildCategoryBubbleTree(): CategoryBubble[] {
             label: `${a.city} — ${a.name}`,
             href: `/airports/${a.slug}`,
             meta: [a.iata, a.icao].filter(Boolean).join(" · "),
+          })),
+        ],
+      }),
+      makeSubcategory({
+        id: "places-oil-gas",
+        label: "Oil & Gas Operators",
+        href: "/oil-gas",
+        meta: `${oilGasOperators.length} operators`,
+        children: [
+          {
+            label: "All Oil & Gas Operators in Nigeria",
+            href: "/oil-gas",
+            meta: `${oilGasOperators.length} operators`,
+          },
+          ...oilGasOperators.map((o) => ({
+            label: o.name,
+            href: `/oil-gas/${o.slug}`,
+            meta: [operatorTypeShortLabel(o.type), o.headquartersCity].filter(Boolean).join(" · "),
           })),
         ],
       }),

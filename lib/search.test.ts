@@ -200,7 +200,7 @@ function check() {
   assert.ok(!isTopLevelPath("/admin"), "/admin excluded from public hubs");
   assert.ok(!isTopLevelPath("/search"), "/search excluded from hub dropdown");
 
-  assert.equal(DROPDOWN_TOP_LEVEL_ALLOWLIST.length, 19, "17 one-segment hubs + 2 explicit product hubs (/codes/banks, /codes/postal)");
+  assert.equal(DROPDOWN_TOP_LEVEL_ALLOWLIST.length, 20, "18 one-segment hubs + 2 explicit product hubs (/codes/banks, /codes/postal)");
   const exceptionSet = new Set<string>(DROPDOWN_TWO_SEGMENT_HUB_EXCEPTIONS);
   for (const p of DROPDOWN_TOP_LEVEL_ALLOWLIST) {
     if (!exceptionSet.has(p)) {
@@ -224,6 +224,8 @@ function check() {
     "/geo/lagos/ikeja",
     "/airports/lagos-murtala-muhammed",
     "/airports/abuja-nnamdi-azikiwe",
+    "/oil-gas/nnpc-limited",
+    "/oil-gas/shell-nigeria",
     "/charts/parallel-usd-buy",
     "/howto/nin-correction",
     "/learn/budget-80k",
@@ -279,6 +281,27 @@ function check() {
   assert.ok(
     deepAbujaAirport.some((r) => r.path === "/airports/abuja-nnamdi-azikiwe"),
     'full /search "Abuja airport" finds /airports/abuja-nnamdi-azikiwe',
+  );
+
+  // Oil & Gas search checks: "Shell Nigeria", "NNPC", and "SPDC" surface /oil-gas in dropdown and deep operator pages on /search
+  assert.deepEqual(rankedDropdownSearch(index, "", "oil-gas", 8).map((r) => r.path), ["/oil-gas"]);
+  const ddShell = rankedDropdownSearch(index, "Shell Nigeria", "all", 8);
+  assert.ok(ddShell.some((r) => r.path === "/oil-gas"), 'dropdown "Shell Nigeria" surfaces /oil-gas hub');
+  assert.ok(!ddShell.some((r) => r.path.startsWith("/oil-gas/")), 'dropdown "Shell Nigeria" excludes deep /oil-gas/[slug]');
+  const deepShell = rankedSearch(index, "Shell Nigeria", "all", 8);
+  assert.ok(
+    deepShell.some((r) => r.path === "/oil-gas/shell-nigeria"),
+    'full /search "Shell Nigeria" finds /oil-gas/shell-nigeria',
+  );
+  const deepNnpc = rankedSearch(index, "NNPC", "all", 8);
+  assert.ok(
+    deepNnpc.some((r) => r.path === "/oil-gas/nnpc-limited"),
+    'full /search "NNPC" finds /oil-gas/nnpc-limited',
+  );
+  const deepSpdc = rankedSearch(index, "SPDC", "all", 8);
+  assert.ok(
+    deepSpdc.some((r) => r.path === "/oil-gas/renaissance-africa-energy"),
+    'full /search "SPDC" finds /oil-gas/renaissance-africa-energy',
   );
   assert.deepEqual(rankedDropdownSearch(index, "", "postal", 8).map((r) => r.path), ["/codes/postal"]);
   assert.deepEqual(rankedDropdownSearch(index, "", "geo", 8).map((r) => r.path), ["/geo"]);

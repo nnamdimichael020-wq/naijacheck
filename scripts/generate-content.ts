@@ -26,6 +26,7 @@ import recipesData from "../data/recipes.json";
 import learnData from "../data/learn.json";
 import banksData from "../data/banks.json";
 import airportsData from "../data/airports.json";
+import oilGasData from "../data/oil-gas-operators.json";
 import postalData from "../data/postal-codes.json";
 import lgasData from "../data/lgas.json";
 import type { ArticleBodyImage, ArticleImage } from "../lib/types";
@@ -1441,6 +1442,7 @@ const fixedSearch = [
   { path: "/codes/postal", title: "Nigerian Postal Codes — 6-digit NIPOST by State", kind: "postal", desc: "37 states/FCT · 77 places — head-office codes 100001–900001, district codes.", keys: "postal zip nipost 100001 900001 zip code state lga place" },
   { path: "/geo", title: "Nigeria 774 LGAs — Complete Local Government Areas by State", kind: "geo", desc: "All 774 LGAs (768 LGAs + 6 FCT Area Councils) — browse by state, search any LGA.", keys: "lga local government area 774 abia lagos kano council state" },
   { path: "/airports", title: "Airports in Nigeria — International & Domestic IATA / ICAO Directory", kind: "airports", desc: "24 verified public commercial airports — 7 international gateways (LOS, ABV, KAN, PHC, ENU, QUO, MIU) + 17 domestic airports, IATA & DNxx ICAO codes.", keys: "airports in nigeria international airports domestic airports airport code iata icao faan ncaa los abv kan phc enu quo miu dnmm dnaa lagos abuja kano port harcourt enugu uyo maiduguri" },
+  { path: "/oil-gas", title: "Oil & Gas Companies in Nigeria — Major Upstream, LNG & Downstream Operators", kind: "oil-gas", desc: "16 verified major oil and gas operators — NNPC Limited, 5 IOCs (Shell SNEPCo, ExxonMobil Esso, Chevron, TotalEnergies, Eni NAE), NLNG, Renaissance, Seplat, Oando, Aradel & Dangote Refinery.", keys: "oil companies in nigeria oil and gas operators upstream midstream downstream ioc noc nnpc shell spdc renaissance seplat sepnu mpnu exxonmobil chevron totalenergies eni agip naoc oando nlng aradel heirs first ep dangote refinery ardova conoil nuprc nmdpra" },
   { path: "/tools/quiz", title: "NaijaCheck Price IQ & Slang Quiz", kind: "tools", desc: "Test your Price IQ on dated FX & fuel snapshots plus Nigerian slang from the trends desk.", keys: "quiz price iq slang check game test tools" },
 ];
 
@@ -1536,6 +1538,55 @@ const airportEntries = (
   };
 });
 
+// Oil & Gas — 16 verified major operators from data/oil-gas-operators.json SSOT
+const oilGasEntries = (
+  oilGasData as {
+    operators: Array<{
+      slug: string;
+      name: string;
+      fullLegalName?: string;
+      alternateNames?: string[];
+      type?: string;
+      segment?: string;
+      focusSummary?: string;
+      headquartersCity?: string;
+      stateName?: string;
+      operationalHubs?: string[];
+    }>;
+  }
+).operators.map((o) => {
+  const typeTag =
+    o.type === "noc"
+      ? "National Oil Company (NOC)"
+      : o.type === "ioc"
+        ? "International Oil Company (IOC)"
+        : o.type === "jv"
+          ? "Incorporated LNG Joint Venture"
+          : "Indigenous operator";
+  const hqTag = o.headquartersCity ? ` · HQ: ${o.headquartersCity}` : "";
+  return {
+    path: `/oil-gas/${o.slug}`,
+    title: `${o.name}${o.headquartersCity ? ` — ${o.headquartersCity} HQ` : ""}`,
+    kind: "oil-gas",
+    desc: `${typeTag}${o.focusSummary ? ` · ${o.focusSummary}` : ""}${hqTag}.`,
+    keys: [
+      o.name,
+      o.fullLegalName ?? "",
+      ...(o.alternateNames ?? []),
+      o.type ?? "",
+      o.segment ?? "",
+      o.focusSummary ?? "",
+      o.headquartersCity ?? "",
+      o.stateName ?? "",
+      ...(o.operationalHubs ?? []),
+      o.slug.replace(/-/g, " "),
+      "oil gas petroleum company operator nigeria upstream midstream downstream",
+    ]
+      .filter(Boolean)
+      .join(" "),
+  };
+});
+
 // Postal — 37 state pages + 12 curated leaves from data/postal-codes.json SSOT (must match sitemap allowlist)
 const postalStateEntries = (postalData as { states: Array<{ slug: string; name: string; capital: string; headOfficeCode: string; places: Array<{ slug?: string; name: string; code: string }> }> }).states.map((s) => ({
   path: `/codes/postal/${s.slug}`,
@@ -1591,7 +1642,7 @@ const geoLgaEntries = (lgasData as { states: Array<{ slug: string; name: string;
   })),
 );
 
-const omniExtras = [...chartSearchEntries, ...bankEntries, ...airportEntries, ...postalStateEntries, ...postalLeafEntries, ...geoStateEntries, ...geoLgaEntries] as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;
+const omniExtras = [...chartSearchEntries, ...bankEntries, ...airportEntries, ...oilGasEntries, ...postalStateEntries, ...postalLeafEntries, ...geoStateEntries, ...geoLgaEntries] as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;
 // Merge fixedSearch + omni extras + articles, de-dupe by path (articles win for overlapping /prices/fuel etc should not duplicate)
 const articleSearchEntries = articles.map((a) => ({ path: a.path, title: a.title, kind: a.section, desc: a.metaDescription, keys: a.keywords.join(" ") }));
 const deduped = new Map<string, { path: string; title: string; kind: string; desc: string; keys: string }>();
@@ -1621,6 +1672,7 @@ const searchTipsSeed = {
     city: cleanPlaceName(a.city),
     iata: a.iata ?? "",
   })),
+  oilGasOperators: (oilGasData as { operators: Array<{ name: string }> }).operators.map((o) => cleanPlaceName(o.name)),
   postalStates: (postalData as { states: Array<{ name: string }> }).states.map((s) => s.name),
   postalPlaces: [
     ...new Set(

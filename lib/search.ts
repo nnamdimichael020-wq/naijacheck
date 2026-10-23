@@ -25,6 +25,7 @@ export const WAT_SEARCH_KIND_LABEL: Record<string, string> = {
   postal: "Postal",
   geo: "LGA",
   airports: "Airport",
+  "oil-gas": "Oil & Gas",
   "trends-slang": "Slang",
   "trends-psych": "Relationships",
   "hustle-blueprint": "Hustle",
@@ -53,6 +54,7 @@ export const SEARCH_CATEGORIES: SearchCategory[] = [
   { id: "postal", label: "Postal/ZIP", kinds: ["postal"], desc: "State & district codes" },
   { id: "geo", label: "LGAs", kinds: ["geo"], desc: "Local Government Areas" },
   { id: "airports", label: "Airports", kinds: ["airports"], desc: "IATA, ICAO & cities" },
+  { id: "oil-gas", label: "Oil & gas", kinds: ["oil-gas"], desc: "NNPC, IOCs & operators" },
   { id: "howto", label: "Gov how-to", kinds: ["howto"], desc: "NIN, passport, CAC…" },
   { id: "tools", label: "Tools & quiz", kinds: ["tools", "cookbook"], desc: "Calculators & quizzes" },
   { id: "trends", label: "Slang/trends", kinds: ["trends-slang", "trends-psych"], desc: "Decoder & trends" },
@@ -97,6 +99,12 @@ export const SEARCH_ALIASES: Record<string, string> = {
   iata: "airport iata",
   icao: "airport icao",
   fuel: "petrol diesel depot",
+  nnpc: "nnpc nnpcl nepl npdc",
+  spdc: "renaissance shell",
+  mpnu: "seplat sepnu exxonmobil",
+  naoc: "oando agip eni",
+  nlng: "nigeria lng bonny",
+  ioc: "shell chevron exxonmobil totalenergies eni",
 };
 
 export function normalizeSearch(value: string): string {
@@ -269,6 +277,7 @@ export const DROPDOWN_TOP_LEVEL_ALLOWLIST: readonly string[] = [
   "/codes/postal",
   "/geo",
   "/airports",
+  "/oil-gas",
   "/howto",
   "/tools",
   "/trends",
@@ -304,6 +313,7 @@ export const DROPDOWN_CATEGORY_HUBS: Record<string, readonly string[]> = {
   postal: ["/codes/postal"],
   geo: ["/geo"],
   airports: ["/airports"],
+  "oil-gas": ["/oil-gas"],
   howto: ["/howto"],
   tools: ["/tools"],
   trends: ["/trends"],
@@ -502,5 +512,10 @@ export const SEARCH_SUGGESTIONS: readonly SearchSuggestion[] = [
     text: "LGAs in Kano State",
     source: "data/lgas.json — Kano State 44 LGAs (/geo/kano)",
     href: "/geo/kano",
+  },
+  {
+    text: "major oil companies in Nigeria",
+    source: "data/oil-gas-operators.json — 16 verified major operators (/oil-gas)",
+    href: "/oil-gas",
   },
 ] as const;
