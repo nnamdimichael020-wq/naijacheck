@@ -1439,6 +1439,7 @@ const fixedSearch = [
   { path: "/codes/banks", title: "Nigerian Bank Sort & USSD Codes — All Banks", kind: "banks", desc: "12 major banks — 3-digit sort codes (044, 058…) + USSD menus (*901#, *737#…).", keys: "bank sort ussd code nip cbn 044 058 057 011 gtbank access zenith firstbank 737 901" },
   { path: "/codes/postal", title: "Nigerian Postal Codes — 6-digit NIPOST by State", kind: "postal", desc: "37 states/FCT · 77 places — head-office codes 100001–900001, district codes.", keys: "postal zip nipost 100001 900001 zip code state lga place" },
   { path: "/geo", title: "Nigeria 774 LGAs — Complete Local Government Areas by State", kind: "geo", desc: "All 774 LGAs (768 LGAs + 6 FCT Area Councils) — browse by state, search any LGA.", keys: "lga local government area 774 abia lagos kano council state" },
+  { path: "/tools/quiz", title: "NaijaCheck Price IQ & Slang Quiz", kind: "tools", desc: "Test your Price IQ on dated FX & fuel snapshots plus Nigerian slang from the trends desk.", keys: "quiz price iq slang check game test tools" },
 ];
 
 // Chart series pages — mirrors lib/chart-pages.ts (kept explicit so generator cannot drift from lib)
