@@ -7,9 +7,9 @@ import { TOP_NAV } from "@/lib/nav";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className="sticky top-0 z-[45] border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       {/* Row 1: brand, centred search (desktop), theme toggle */}
-      <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3">
+      <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-2.5 md:py-3">
         <Link href="/" className="flex shrink-0 items-center gap-2" aria-label={`${SITE_CONFIG.name} home`}>
           <Image src="/logo.svg" alt="" width={36} height={36} priority className="nav-logo-mark size-9" />
           <span className="hidden flex-col leading-none sm:flex">
@@ -18,7 +18,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <div className="hidden flex-1 justify-center md:flex">
+        <div className="relative z-20 hidden flex-1 justify-center md:flex">
           <SearchBar className="max-w-2xl" id="site-search-desktop" />
         </div>
 
@@ -27,13 +27,13 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {/* Mobile search row */}
-      <div className="mx-auto max-w-7xl px-4 pb-3 md:hidden">
+      {/* Mobile search row — shrinks cleanly when user collapses search chrome */}
+      <div className="relative z-20 mx-auto max-w-7xl px-4 pb-2.5 md:hidden">
         <SearchBar id="site-search-mobile" />
       </div>
 
       {/* Row 2: desktop top navigation */}
-      <nav aria-label="Main" className="hidden border-t lg:block">
+      <nav aria-label="Main" className="relative z-10 hidden border-t lg:block">
         <ul className="mx-auto flex max-w-7xl items-center gap-1 px-4">
           {TOP_NAV.map((item) => (
             <li key={item.href}>

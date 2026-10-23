@@ -295,9 +295,24 @@
   .search-glow,
   .search-hands-cue,
   .search-cursor,
-  .search-dot {
+  .search-dot,
+  .search-chrome-toggle {
     animation: none !important;
     transition: none !important;
     transform: none !important;
   }
+}
+
+/* ---------------------------------------------------------------------------
+ * Opaque type-ahead dropdown surface (components/search-bar.tsx)
+ * Solid hsl(var(--popover)) in both light (#ffffff) and dark (hsl(150 20% 8%))
+ * so dense page copy (hero, Trending Now, share buttons) never bleeds through.
+ * ------------------------------------------------------------------------- */
+.search-dropdown-panel {
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+  opacity: 1;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  isolation: isolate;
 }

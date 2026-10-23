@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { Search } from "lucide-react";
+import { ChevronDown, ChevronUp, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { SearchEntry } from "@/lib/types";
 import {
@@ -16,35 +16,17 @@ import {
 import {
   createSearchIdleController,
   INITIAL_IDLE_SNAPSHOT,
+  SEARCH_CHROME_STORAGE_KEY,
+  SEARCH_CHROME_SYNC_EVENT,
+  readSearchChromePreference,
+  writeSearchChromePreference,
+  type SearchChromeState,
 } from "@/lib/search-idle";
+import { createShuffledSearchTips } from "@/lib/search-tips";
 
 const KIND_LABEL: Record<string, string> = WAT_SEARCH_KIND_LABEL;
 
 const STATIC_PLACEHOLDER = "Search rice price, kelebu, GTBank sort, postal code…";
-
-function useHotkeyFocus(inputRef: React.RefObject<HTMLInputElement | null>) {
-  React.useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      const el = inputRef.current;
-      // Only focus the currently visible SearchBar instance (desktop vs mobile header row)
-      if (!el || el.offsetParent === null) return;
-      const target = e.target as HTMLElement | null;
-      const isTyping =
-        target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.tagName === "SELECT" || target.isContentEditable);
-      if (isTyping) return;
-      if (e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey) {
-        e.preventDefault();
-        el.focus();
-      }
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        el.focus();
-      }
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [inputRef]);
-}
 
 function usePrefersReducedMotion(): boolean {
   const [reduced, setReduced] = React.useState(false);
@@ -96,13 +78,14 @@ function CompactLensHandsCue() {
 
 /**
  * Header site search.
+ *  - User-controlled collapse / expand persisted in `localStorage` (`naijacheck.searchChrome`).
  *  - Lazy-fetches `/search-index.json` only on first focus (3G friendly).
- *  - Dropdown shows top-level allowlisted hubs ONLY (`DROPDOWN_TOP_LEVEL_ALLOWLIST`).
+ *  - Dropdown shows top-level allowlisted hubs ONLY (`DROPDOWN_TOP_LEVEL_ALLOWLIST`) on a 100% opaque surface.
  *  - Submitting (Enter / Search button) navigates to `/search` for full omni deep results.
- *  - Runs a lightweight CSS + React idle animation loop when idle, pausing immediately
- *    on focus, typing, desktop hover, open panel, or `prefers-reduced-motion: reduce`.
+ *  - Runs 3 distinct SSOT tip animations in sequence before each ~5s cool-off when expanded & idle.
  */
 export function SearchBar({ className, id = "site-search" }: { className?: string; id?: string }) {
+  const [chrome, setChrome] = React.useState<SearchChromeState>("expanded");
   const [q, setQ] = React.useState("");
   const [category, setCategory] = React.useState("all");
   const [index, setIndex] = React.useState<SearchEntry[] | null>(null);
@@ -118,7 +101,66 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
   const inputRef = React.useRef<HTMLInputElement>(null);
   const containerRef = React.useRef<HTMLDivElement>(null);
   const isReducedMotion = usePrefersReducedMotion();
-  useHotkeyFocus(inputRef);
+
+  const updateChrome = React.useCallback((next: SearchChromeState) => {
+    setChrome(next);
+    writeSearchChromePreference(next);
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent(SEARCH_CHROME_SYNC_EVENT, { detail: next }));
+    }
+  }, []);
+
+  // Hydrate persisted collapse/expand preference & keep desktop/mobile instances synchronized
+  React.useEffect(() => {
+    setChrome(readSearchChromePreference());
+    const onSync = (e: Event) => {
+      const detail = (e as CustomEvent<SearchChromeState>).detail;
+      if (detail === "collapsed" || detail === "expanded") {
+        setChrome(detail);
+      } else {
+        setChrome(readSearchChromePreference());
+      }
+    };
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === SEARCH_CHROME_STORAGE_KEY) {
+        setChrome(readSearchChromePreference());
+      }
+    };
+    window.addEventListener(SEARCH_CHROME_SYNC_EVENT, onSync);
+    window.addEventListener("storage", onStorage);
+    return () => {
+      window.removeEventListener(SEARCH_CHROME_SYNC_EVENT, onSync);
+      window.removeEventListener("storage", onStorage);
+    };
+  }, []);
+
+  // Global `/` and `Ctrl+K` / `Cmd+K` shortcut (expands chrome if collapsed, focuses visible header bar)
+  React.useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const wrap = containerRef.current;
+      if (!wrap || wrap.offsetParent === null) return;
+      const target = e.target as HTMLElement | null;
+      const isTyping =
+        target &&
+        (target.tagName === "INPUT" ||
+          target.tagName === "TEXTAREA" ||
+          target.tagName === "SELECT" ||
+          target.isContentEditable);
+      if (isTyping) return;
+      const isSlash = e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey;
+      const isCmdK = (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k";
+      if (!isSlash && !isCmdK) return;
+      e.preventDefault();
+      if (chrome === "collapsed") {
+        updateChrome("expanded");
+        requestAnimationFrame(() => inputRef.current?.focus());
+      } else {
+        inputRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [chrome, updateChrome]);
 
   // Deterministic idle state machine instance (one per bar)
   const controllerRef = React.useRef<ReturnType<typeof createSearchIdleController> | null>(null);
@@ -144,14 +186,17 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
     }
   }, [index, failed]);
 
-  // Start / stop idle controller across component lifecycle
+  // Start / stop idle controller across component lifecycle with shuffled 1,196-tip SSOT pool
   React.useEffect(() => {
+    idleCtrl.setTips(createShuffledSearchTips());
     const mqReduced =
       typeof window !== "undefined" && window.matchMedia
         ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
         : false;
+    const initialChrome = readSearchChromePreference();
     idleCtrl.start({
       reducedMotion: mqReduced,
+      chromeCollapsed: initialChrome === "collapsed",
       tabHidden: typeof document !== "undefined" && document.visibilityState === "hidden",
     });
     return () => {
@@ -161,16 +206,18 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
 
   // Sync engagement flags with idle controller
   const hasRealInput = q.length > 0;
+  const isChromeCollapsed = chrome === "collapsed";
   React.useEffect(() => {
     idleCtrl.updateEngagement({
       reducedMotion: isReducedMotion,
+      chromeCollapsed: isChromeCollapsed,
       focused: isFocused,
       hovered: isHovered,
       hasInput: hasRealInput,
       panelOpen: open,
       tabHidden: isTabHidden,
     });
-  }, [idleCtrl, isReducedMotion, isFocused, isHovered, hasRealInput, open, isTabHidden]);
+  }, [idleCtrl, isReducedMotion, isChromeCollapsed, isFocused, isHovered, hasRealInput, open, isTabHidden]);
 
   // Pause background timers when browser tab is hidden to save mobile battery/CPU
   React.useEffect(() => {
@@ -227,6 +274,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
   const showBrowse = open && category !== "all" && trimmed.length === 0 && !!index && dropdownResults.length > 0;
   const showResults = open && trimmed.length > 1;
   const showList =
+    !isChromeCollapsed &&
     open &&
     (showResults ||
       showBrowse ||
@@ -262,26 +310,56 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
   }, [q, category, dropdownResults.length]);
 
   const { phase, typed, isCompactVisual: rawCompact, showTypewriterOverlay: rawOverlay } = idleSnapshot;
-  const isCompactVisual = !isReducedMotion && rawCompact;
-  const showTypewriterOverlay = !isReducedMotion && !isFocused && !hasRealInput && rawOverlay;
+  const isCompactVisual = !isReducedMotion && !isChromeCollapsed && rawCompact;
+  const showTypewriterOverlay =
+    !isReducedMotion && !isChromeCollapsed && !isFocused && !hasRealInput && rawOverlay;
 
   const activeCategoryLabel = SEARCH_CATEGORIES.find((c) => c.id === category)?.label ?? "All";
+
+  const handleCollapseChrome = () => {
+    setOpen(false);
+    setActive(-1);
+    setIsFocused(false);
+    setIsHovered(false);
+    inputRef.current?.blur();
+    updateChrome("collapsed");
+  };
+
+  const handleExpandChrome = () => {
+    updateChrome("expanded");
+  };
+
+  // Collapsed chrome: tidy compact chip with pull-down chevron (zero idle motion, minimal height)
+  if (isChromeCollapsed) {
+    return (
+      <div
+        ref={containerRef}
+        data-search-chrome="collapsed"
+        data-search-phase="collapsed"
+        className={cn("relative flex w-full items-center justify-center", className)}
+      >
+        <button
+          type="button"
+          aria-expanded={false}
+          aria-label="Show search"
+          title="Show search"
+          onClick={handleExpandChrome}
+          className="search-chrome-toggle inline-flex h-9 items-center gap-2 rounded-full border border-border bg-card px-4 text-xs font-semibold text-foreground shadow-sm transition-colors hover:border-primary/50 hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:h-10"
+        >
+          <Search className="size-3.5 text-primary" aria-hidden="true" />
+          <span>Search</span>
+          <ChevronDown className="size-4 text-muted-foreground" aria-hidden="true" />
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div
       ref={containerRef}
+      data-search-chrome="expanded"
       data-search-phase={isReducedMotion ? "reduced-motion" : phase}
-      className={cn("relative flex h-12 w-full items-center justify-center md:h-14", className)}
-      onPointerEnter={(e) => {
-        if (e.pointerType !== "touch" && e.pointerType !== "pen") {
-          setIsHovered(true);
-        }
-      }}
-      onPointerLeave={(e) => {
-        if (e.pointerType !== "touch" && e.pointerType !== "pen") {
-          setIsHovered(false);
-        }
-      }}
+      className={cn("relative flex h-12 w-full items-center justify-center gap-1.5 sm:gap-2 md:h-14", className)}
       onFocusCapture={() => {
         setIsFocused(true);
       }}
@@ -298,6 +376,16 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
     >
       <form
         role="search"
+        onPointerEnter={(e) => {
+          if (e.pointerType !== "touch" && e.pointerType !== "pen") {
+            setIsHovered(true);
+          }
+        }}
+        onPointerLeave={(e) => {
+          if (e.pointerType !== "touch" && e.pointerType !== "pen") {
+            setIsHovered(false);
+          }
+        }}
         onSubmit={(e) => {
           e.preventDefault();
           if (trimmed.length > 0 || category !== "all") {
@@ -305,14 +393,14 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
           }
         }}
         className={cn(
-          "search-idle-shell relative flex h-12 w-full flex-nowrap items-center gap-1.5 sm:gap-2 md:h-14",
-          isCompactVisual ? "max-w-[172px] md:max-w-[190px]" : "max-w-full",
+          "search-idle-shell relative flex h-12 min-w-0 flex-1 flex-nowrap items-center gap-1.5 sm:gap-2 md:h-14",
+          isCompactVisual ? "max-w-[168px] md:max-w-[186px]" : "max-w-full",
         )}
       >
         <div className="relative h-full min-w-0 flex-1">
           <Search
             className={cn(
-              "pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground transition-opacity duration-200",
+              "pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground transition-opacity duration-200 sm:left-4 sm:size-5",
               isCompactVisual && "opacity-0",
             )}
             aria-hidden="true"
@@ -379,7 +467,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
               hasDropdown && active >= 0 && dropdownResults[active] ? `${id}-opt-${active}` : undefined
             }
             className={cn(
-              "h-12 w-full rounded-full border-2 bg-card pl-11 pr-3 text-base shadow-sm placeholder:text-muted-foreground focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:pl-12 sm:pr-4 md:h-14",
+              "h-12 w-full rounded-full border-2 bg-card pl-10 pr-3 text-base shadow-sm placeholder:text-muted-foreground focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:pl-12 sm:pr-4 md:h-14",
               isCompactVisual
                 ? "cursor-pointer border-primary/35 caret-transparent"
                 : "border-input",
@@ -404,7 +492,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
             <div
               aria-hidden="true"
               className={cn(
-                "search-idle-overlay pointer-events-none absolute inset-y-1 left-11 right-3 flex items-center gap-1.5 overflow-hidden rounded-r-full bg-card pr-2 text-sm text-muted-foreground transition-opacity duration-250 sm:left-12 sm:right-4",
+                "search-idle-overlay pointer-events-none absolute inset-y-1 left-10 right-3 flex items-center gap-1.5 overflow-hidden rounded-r-full bg-card pr-2 text-sm text-muted-foreground transition-opacity duration-250 sm:left-12 sm:right-4",
                 phase === "fading" ? "opacity-0" : "opacity-100",
               )}
             >
@@ -442,7 +530,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
             "search-idle-accessory flex shrink-0 items-center overflow-hidden transition-all duration-300 ease-out",
             isCompactVisual
               ? "pointer-events-none -ml-1.5 max-w-0 opacity-0 sm:-ml-2"
-              : "max-w-[160px] opacity-100",
+              : "max-w-[155px] opacity-100",
           )}
         >
           <label htmlFor={`${id}-filter`} className="sr-only">
@@ -463,7 +551,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
               load();
             }}
             className={cn(
-              "h-12 min-h-11 w-[96px] truncate rounded-full border-2 bg-card px-3 pr-7 text-xs font-medium shadow-sm focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-auto sm:min-w-[124px] sm:px-4 sm:pr-8 sm:text-sm md:h-14",
+              "h-12 min-h-11 w-[86px] truncate rounded-full border-2 bg-card px-2.5 pr-6 text-xs font-medium shadow-sm focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-auto sm:min-w-[120px] sm:px-4 sm:pr-8 sm:text-sm md:h-14",
               category !== "all" ? "border-primary text-primary" : "border-input",
             )}
             aria-label="Filter by category"
@@ -484,7 +572,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
             "search-idle-accessory inline-flex h-12 min-h-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:h-14",
             isCompactVisual
               ? "pointer-events-none -ml-1.5 max-w-0 min-w-0 px-0 opacity-0 sm:-ml-2"
-              : "min-w-11 max-w-[110px] px-3.5 opacity-100 sm:px-5",
+              : "min-w-11 max-w-[110px] px-3 sm:px-5 opacity-100",
           )}
           aria-label="Search"
         >
@@ -493,11 +581,24 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
         </button>
       </form>
 
+      {/* Collapse search chrome button (pull-up / chevron-up) */}
+      <button
+        type="button"
+        aria-expanded={true}
+        aria-label="Hide search"
+        title="Hide search"
+        onClick={handleCollapseChrome}
+        className="search-chrome-toggle inline-flex size-11 min-h-11 min-w-11 shrink-0 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm transition-colors hover:border-primary/50 hover:bg-secondary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:size-12"
+      >
+        <ChevronUp className="size-4" aria-hidden="true" />
+      </button>
+
+      {/* Opaque, independent type-ahead dropdown panel */}
       {hasDropdown ? (
         <div
           id={listId}
           role="listbox"
-          className="absolute left-0 right-0 top-full z-50 mt-2 max-h-[50vh] overflow-y-auto rounded-xl border bg-popover p-1.5 shadow-xl sm:max-h-96"
+          className="search-dropdown-panel absolute left-0 right-0 top-full z-50 mt-2 max-h-[50vh] overflow-y-auto overscroll-contain rounded-2xl border-2 border-border bg-popover p-2 text-popover-foreground shadow-2xl ring-1 ring-black/10 dark:ring-white/15 sm:max-h-96"
         >
           {!index && !failed ? (
             <p className="px-3 py-2 text-sm text-muted-foreground">Loading search…</p>
@@ -518,15 +619,15 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
                 <Link
                   key={p.path}
                   href={p.path}
-                  className="flex items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-secondary"
+                  className="flex items-center justify-between gap-3 rounded-lg px-3 py-2.5 text-sm text-foreground hover:bg-secondary"
                   onMouseDown={(e) => e.preventDefault()}
                   onClick={() => {
                     setOpen(false);
                     setIsFocused(false);
                   }}
                 >
-                  <span className="font-medium">{p.label}</span>
-                  <span className="shrink-0 rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-semibold text-primary">
+                  <span className="font-semibold text-foreground">{p.label}</span>
+                  <span className="shrink-0 rounded-full border border-primary/25 bg-primary/15 px-2.5 py-0.5 text-[11px] font-semibold text-primary">
                     {KIND_LABEL[p.kind] ?? p.kind}
                   </span>
                 </Link>
@@ -551,7 +652,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
                   role="option"
                   aria-selected={i === active}
                   className={cn(
-                    "flex items-start justify-between gap-3 rounded-md px-3 py-2 text-sm",
+                    "flex items-start justify-between gap-3 rounded-lg px-3 py-2.5 text-sm text-foreground",
                     i === active ? "bg-secondary" : "hover:bg-secondary",
                   )}
                   onMouseDown={(e) => e.preventDefault()}
@@ -561,15 +662,15 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
                   }}
                 >
                   <span className="min-w-0">
-                    <span className="block truncate font-medium">{r.title}</span>
+                    <span className="block truncate font-semibold text-foreground">{r.title}</span>
                     <span className="block truncate text-xs text-muted-foreground">{r.desc}</span>
                   </span>
-                  <span className="shrink-0 rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-semibold text-primary">
+                  <span className="shrink-0 rounded-full border border-primary/25 bg-primary/15 px-2.5 py-0.5 text-[11px] font-semibold text-primary">
                     {KIND_LABEL[r.kind] ?? r.kind}
                   </span>
                 </Link>
               ))}
-              <div className="border-t px-3 py-2 text-xs text-muted-foreground">
+              <div className="border-t border-border px-3 py-2 text-xs text-muted-foreground">
                 <button
                   type="button"
                   onMouseDown={(e) => e.preventDefault()}
@@ -586,8 +687,8 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
           {showResults ? (
             <>
               {index && dropdownResults.length === 0 ? (
-                <div className="px-3 py-3 text-sm">
-                  <p className="font-medium">
+                <div className="px-3 py-3 text-sm text-foreground">
+                  <p className="font-semibold text-foreground">
                     No top-level section matches “{trimmed}”
                     {category !== "all" ? ` in ${activeCategoryLabel}` : ""}.
                   </p>
@@ -608,7 +709,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
                         type="button"
                         onMouseDown={(e) => e.preventDefault()}
                         onClick={() => navigateToSearch(q, "all")}
-                        className="rounded-full border px-2.5 py-1 text-xs hover:bg-secondary"
+                        className="rounded-full border border-border bg-card px-2.5 py-1 text-xs text-foreground hover:bg-secondary"
                       >
                         Search in All categories
                       </button>
@@ -616,14 +717,14 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
                     <Link
                       href="/codes"
                       onClick={() => setOpen(false)}
-                      className="rounded-full border px-2.5 py-1 text-xs hover:bg-secondary"
+                      className="rounded-full border border-border bg-card px-2.5 py-1 text-xs text-foreground hover:bg-secondary"
                     >
                       Codes hub
                     </Link>
                     <Link
                       href="/geo"
                       onClick={() => setOpen(false)}
-                      className="rounded-full border px-2.5 py-1 text-xs hover:bg-secondary"
+                      className="rounded-full border border-border bg-card px-2.5 py-1 text-xs text-foreground hover:bg-secondary"
                     >
                       774 LGAs
                     </Link>
@@ -639,7 +740,7 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
                   role="option"
                   aria-selected={i === active}
                   className={cn(
-                    "flex items-start justify-between gap-3 rounded-md px-3 py-2 text-sm",
+                    "flex items-start justify-between gap-3 rounded-lg px-3 py-2.5 text-sm text-foreground",
                     i === active ? "bg-secondary" : "hover:bg-secondary",
                   )}
                   onMouseDown={(e) => e.preventDefault()}
@@ -650,20 +751,20 @@ export function SearchBar({ className, id = "site-search" }: { className?: strin
                   }}
                 >
                   <span className="min-w-0">
-                    <span className="block truncate font-medium">{r.title}</span>
+                    <span className="block truncate font-semibold text-foreground">{r.title}</span>
                     <span className="block truncate text-xs text-muted-foreground">{r.desc}</span>
                   </span>
-                  <span className="shrink-0 rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-semibold text-primary">
+                  <span className="shrink-0 rounded-full border border-primary/25 bg-primary/15 px-2.5 py-0.5 text-[11px] font-semibold text-primary">
                     {KIND_LABEL[r.kind] ?? r.kind}
                   </span>
                 </Link>
               ))}
 
               {dropdownResults.length > 0 ? (
-                <div className="mt-0.5 border-t pt-1">
+                <div className="mt-1 border-t border-border pt-1">
                   <button
                     type="button"
-                    className="w-full rounded-md px-3 py-2 text-left text-xs font-semibold text-primary hover:bg-secondary"
+                    className="w-full rounded-lg px-3 py-2 text-left text-xs font-semibold text-primary hover:bg-secondary"
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => navigateToSearch(q, category)}
                   >

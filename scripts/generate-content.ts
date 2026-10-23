@@ -1529,6 +1529,47 @@ const searchIndex = [...deduped.values()];
 fs.mkdirSync(path.join(root, "public"), { recursive: true });
 fs.writeFileSync(path.join(root, "public", "search-index.json"), JSON.stringify(searchIndex));
 
+// Compact SSOT seed for header idle search-bar tips (lib/search-tips.ts).
+// Every name/topic below is read directly from committed /data SSOT and live articles — zero invented codes or cities.
+const cleanPlaceName = (raw: string) => raw.split("—")[0].replace(/\s*\(.*?\)\s*/g, " ").replace(/\s+/g, " ").trim();
+const livePriceCities = articles
+  .filter((a) => a.section === "prices-city")
+  .map((a) => {
+    const slug = a.path.replace("/prices/", "");
+    return cities.cities.find((c) => c.slug === slug)?.name ?? slug;
+  });
+const liveMarkets = articles
+  .filter((a) => a.section === "prices-market")
+  .map((a) => a.navLabel);
+
+const searchTipsSeed = {
+  banks: (banksData as { banks: Array<{ name: string }> }).banks.map((b) => b.name),
+  postalStates: (postalData as { states: Array<{ name: string }> }).states.map((s) => s.name),
+  postalPlaces: [
+    ...new Set(
+      (postalData as { states: Array<{ capital: string; places: Array<{ name: string }> }> }).states.flatMap((s) => [
+        cleanPlaceName(s.capital),
+        ...s.places.map((p) => cleanPlaceName(p.name)),
+      ]),
+    ),
+  ].filter((n) => n.length >= 2),
+  lgasByState: (lgasData as { states: Array<{ name: string; lgas: Array<{ name: string }> }> }).states.map(
+    (s) => [s.name, s.lgas.map((l) => l.name)] as [string, string[]],
+  ),
+  slangTerms: slangData.terms.map((t) => t.term),
+  psychTerms: slangData.psychTerms.map((t) => t.term),
+  howtoTitles: govhowto.docs.map((d) => ({ slug: d.slug, title: d.title })),
+  recipes: recipesData.recipes.map((r) => r.name),
+  blueprints: blueprintsData.blueprints.map((b) => b.name),
+  examInstitutions: exam.institutions.map((i) => i.short),
+  examGuides: exam.guides.map((g) => g.title),
+  telecomNetworks: telecom.networks.map((n) => n.name),
+  learnTitles: learnData.topics.map((t) => t.title),
+  priceCities: livePriceCities,
+  markets: liveMarkets,
+};
+fs.writeFileSync(path.join(outDir, "search-tips-seed.json"), JSON.stringify(searchTipsSeed));
+
 const bySection: Record<string, number> = {};
 for (const a of articles) bySection[a.section] = (bySection[a.section] ?? 0) + 1;
 const avg = Math.round(articles.reduce((s, a) => s + a.wordCount, 0) / articles.length);

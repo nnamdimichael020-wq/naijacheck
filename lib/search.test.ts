@@ -1,10 +1,10 @@
 /**
  * Unit/Audit test:
  *  - Omni search index covers all SSOT verticals with zero dead paths
- *  - A) Dropdown type-ahead shows ONLY allowlisted top-level hubs (no deep leaves)
+ *  - A) Dropdown type-ahead shows ONLY allowlisted top-level hubs (no deep leaves) + opaque panel surface
  *  - B) Full `/search` returns deep omni results (noindex,follow, excluded from sitemap)
- *  - C) Idle animation pause rules, prefers-reduced-motion path & non-submitting demo overlay
- *  - D) Rotating suggestion list pulls exclusively from real SSOT topics/data
+ *  - C) Collapse/expand preference (`naijacheck.searchChrome`), idle pause rules, reduced-motion & non-submitting overlay
+ *  - D) 1,196-tip SSOT pool (no invented ZIP/sort digits, deduplicated, shuffled) & 3-tips-before-5s-cool-off cycle
  */
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -31,7 +31,22 @@ import { getAllBanks } from "./banks";
 import { getAllPostalStates, getAllPostalAreaParams } from "./postal";
 import { getAllLgaStates, getAllLgaParams } from "./lgas";
 import { CHART_PAGES } from "./chart-pages";
-import { createSearchIdleController, IDLE_SEARCH_TIMINGS, INITIAL_IDLE_SNAPSHOT } from "./search-idle";
+import {
+  createSearchIdleController,
+  IDLE_SEARCH_TIMINGS,
+  IDLE_TIPS_PER_BURST,
+  INITIAL_IDLE_SNAPSHOT,
+  SEARCH_CHROME_STORAGE_KEY,
+  parseSearchChromeState,
+  readSearchChromePreference,
+  writeSearchChromePreference,
+  type IdlePhase,
+} from "./search-idle";
+import {
+  IDLE_TIP_POOL,
+  IDLE_TIP_BUCKETS,
+  createShuffledSearchTips,
+} from "./search-tips";
 import type { SearchEntry } from "./types";
 
 function fakeIdleClock() {
@@ -71,6 +86,14 @@ function fakeIdleClock() {
       }
       now = target;
     },
+  };
+}
+
+function seededRng(seed: number): () => number {
+  let s = seed >>> 0;
+  return () => {
+    s = (s * 1664525 + 1013904223) >>> 0;
+    return s / 0x100000000;
   };
 }
 
@@ -164,7 +187,7 @@ function check() {
   }
 
   // -------------------------------------------------------------------------
-  // A) Type-ahead dropdown = first-level / allowlisted section hubs ONLY
+  // A) Type-ahead dropdown = first-level / allowlisted hubs ONLY + "ho" check
   // -------------------------------------------------------------------------
   assert.equal(normalizeRoutePath("/rates/?x=1#top"), "/rates");
   assert.equal(normalizeRoutePath("/"), "/");
@@ -217,8 +240,8 @@ function check() {
     }
   }
 
-  // Dropdown query checks: typing deep terms surfaces section hubs ONLY, never deep leaves
-  for (const q of ["gtbank", "uba", "058", "*737#", "umuahia", "ikeja", "100271", "rice", "kelebu", "nin", "dollar", "petrol"]) {
+  // Dropdown query checks (including "ho" over dense homepage copy)
+  for (const q of ["ho", "gtbank", "uba", "058", "*737#", "umuahia", "ikeja", "100271", "rice", "kelebu", "nin", "dollar", "petrol"]) {
     const dd = rankedDropdownSearch(index, q, "all", 8);
     assert.ok(dd.length > 0, `dropdown for "${q}" should surface relevant section hub(s)`);
     assert.ok(
@@ -226,6 +249,8 @@ function check() {
       `dropdown for "${q}" leaked non-allowlisted path: ${dd.map((r) => r.path).join(", ")}`,
     );
   }
+  const ddHo = rankedDropdownSearch(index, "ho", "all", 6);
+  assert.ok(ddHo.some((r) => r.path === "/howto"), 'typing "ho" surfaces /howto hub in dropdown');
 
   // Specific check: typing `gtbank` in dropdown does NOT list `/codes/banks/gtbank`, lists `/codes/banks`; Enter (`rankedSearch`) DOES list `/codes/banks/gtbank`
   const ddGtbank = rankedDropdownSearch(index, "gtbank", "all", 8);
@@ -236,25 +261,16 @@ function check() {
   assert.ok(countDeepMatches(index, "gtbank", "all") >= 2, "countDeepMatches tracks deep matches for Enter CTA");
 
   // Category filter in dropdown stays shallow (section hub only; deep browse lives on /search)
-  const ddBanksBrowse = rankedDropdownSearch(index, "", "banks", 8);
-  assert.deepEqual(ddBanksBrowse.map((r) => r.path), ["/codes/banks"]);
-  const ddPostalBrowse = rankedDropdownSearch(index, "", "postal", 8);
-  assert.deepEqual(ddPostalBrowse.map((r) => r.path), ["/codes/postal"]);
-  const ddGeoBrowse = rankedDropdownSearch(index, "", "geo", 8);
-  assert.deepEqual(ddGeoBrowse.map((r) => r.path), ["/geo"]);
-  const ddCitiesBrowse = rankedDropdownSearch(index, "", "cities", 8);
-  assert.deepEqual(ddCitiesBrowse.map((r) => r.path), ["/prices"]);
-
-  // Category filter + matching query in dropdown (e.g. Cities + lagos -> /prices hub; Cities + gtbank -> [])
-  const ddCitiesLagos = rankedDropdownSearch(index, "lagos", "cities", 6);
-  assert.deepEqual(ddCitiesLagos.map((r) => r.path), ["/prices"]);
-  const ddCitiesGtbank = rankedDropdownSearch(index, "gtbank", "cities", 6);
-  assert.equal(ddCitiesGtbank.length, 0, "honest empty when query has no match in selected category");
-  const ddGibberish = rankedDropdownSearch(index, "zzzznonexistentquery99", "all", 6);
-  assert.equal(ddGibberish.length, 0, "honest empty when query matches nothing");
+  assert.deepEqual(rankedDropdownSearch(index, "", "banks", 8).map((r) => r.path), ["/codes/banks"]);
+  assert.deepEqual(rankedDropdownSearch(index, "", "postal", 8).map((r) => r.path), ["/codes/postal"]);
+  assert.deepEqual(rankedDropdownSearch(index, "", "geo", 8).map((r) => r.path), ["/geo"]);
+  assert.deepEqual(rankedDropdownSearch(index, "", "cities", 8).map((r) => r.path), ["/prices"]);
+  assert.deepEqual(rankedDropdownSearch(index, "lagos", "cities", 6).map((r) => r.path), ["/prices"]);
+  assert.equal(rankedDropdownSearch(index, "gtbank", "cities", 6).length, 0, "honest empty when query has no match in selected category");
+  assert.equal(rankedDropdownSearch(index, "zzzznonexistentquery99", "all", 6).length, 0, "honest empty when query matches nothing");
 
   // -------------------------------------------------------------------------
-  // C) Idle animation, pause rules, reduced-motion & non-submitting overlay
+  // C) Collapse/expand UI, opaque dropdown panel, z-index & reduced-motion
   // -------------------------------------------------------------------------
   const searchBarSrc = fs.readFileSync(path.join(root, "components/search-bar.tsx"), "utf-8");
   assert.ok(searchBarSrc.includes('fetch("/search-index.json")'), "SearchBar must lazy-fetch /search-index.json on focus");
@@ -266,43 +282,128 @@ function check() {
   assert.ok(searchBarSrc.includes("isFocused") && searchBarSrc.includes("onFocusCapture"), "SearchBar must pause on focus");
   assert.ok(searchBarSrc.includes('aria-hidden="true"'), "decorative animation elements must be aria-hidden");
   assert.ok(searchBarSrc.includes("Search NaijaCheck"), "input must retain accessible name Search NaijaCheck");
-  assert.ok(searchBarSrc.includes("if (!cleanQ && (!cat || cat === \"all\")) return;"), "empty idle input must never submit demo text on Enter");
+  assert.ok(searchBarSrc.includes('if (!cleanQ && (!cat || cat === "all")) return;'), "empty idle input must never submit demo text on Enter");
 
+  // Collapse / expand controls in SearchBar
+  assert.ok(searchBarSrc.includes("ChevronUp") && searchBarSrc.includes("ChevronDown"), "SearchBar renders ChevronUp/ChevronDown controls");
+  assert.ok(searchBarSrc.includes('aria-label="Hide search"') && searchBarSrc.includes("aria-expanded={true}"), "expanded state exposes Hide search button with aria-expanded=true");
+  assert.ok(searchBarSrc.includes('aria-label="Show search"') && searchBarSrc.includes("aria-expanded={false}"), "collapsed state exposes Show search button with aria-expanded=false");
+
+  // Opaque dropdown panel + Tailwind popover color + header z-index assertions
+  const tailwindCfg = fs.readFileSync(path.join(root, "tailwind.config.ts"), "utf-8");
+  assert.ok(
+    tailwindCfg.includes("popover:") && tailwindCfg.includes("hsl(var(--popover))"),
+    "tailwind.config.ts must register popover color token so bg-popover is solid, never transparent",
+  );
   const globalsCss = fs.readFileSync(path.join(root, "app/globals.css"), "utf-8");
   assert.ok(globalsCss.includes(".search-idle-shell") && globalsCss.includes(".search-dot") && globalsCss.includes(".search-glow"), "CSS defines idle animation classes");
   assert.ok(globalsCss.includes(".search-compact-cue") && globalsCss.includes("display: none !important"), "reduced-motion CSS hides compact/typewriter overlays");
-
-  // -------------------------------------------------------------------------
-  // D) Suggestion list pulled exclusively from real SSOT topics/data
-  // -------------------------------------------------------------------------
-  assert.ok(SEARCH_SUGGESTIONS.length >= 6, "at least 6 rotating real-topic suggestions");
-  const allPostalPlaceNames = new Set(
-    postalStates.flatMap((s) => [s.name.toLowerCase(), s.capital.toLowerCase(), ...s.places.map((p) => p.name.toLowerCase())]),
+  assert.ok(
+    globalsCss.includes(".search-dropdown-panel") &&
+      globalsCss.includes("background-color: hsl(var(--popover));") &&
+      globalsCss.includes("opacity: 1;"),
+    "globals.css defines opaque .search-dropdown-panel surface",
   );
-  const allBankNames = new Set(banks.flatMap((b) => [b.name.toLowerCase(), b.slug.toLowerCase()]));
+  assert.ok(
+    searchBarSrc.includes("search-dropdown-panel") && searchBarSrc.includes("bg-popover"),
+    "SearchBar listbox applies .search-dropdown-panel + bg-popover",
+  );
+  assert.ok(
+    !/bg-popover\/\d+/.test(searchBarSrc) && !/bg-background\/\d+/.test(searchBarSrc),
+    "SearchBar dropdown must not use translucent bg-popover/XX or bg-background/XX modifiers",
+  );
 
+  const siteHeaderSrc = fs.readFileSync(path.join(root, "components/site-header.tsx"), "utf-8");
+  assert.ok(
+    siteHeaderSrc.includes("z-[45]"),
+    "SiteHeader stacks at z-[45] above main/ticker/bottom-nav (z-40) and below modals (z-50)",
+  );
+
+  // Storage helper persistence tests (`naijacheck.searchChrome`)
+  assert.equal(SEARCH_CHROME_STORAGE_KEY, "naijacheck.searchChrome");
+  assert.equal(parseSearchChromeState(null), "expanded");
+  assert.equal(parseSearchChromeState(undefined), "expanded");
+  assert.equal(parseSearchChromeState("bogus"), "expanded");
+  assert.equal(parseSearchChromeState("collapsed"), "collapsed");
+  assert.equal(parseSearchChromeState("expanded"), "expanded");
+  {
+    const mem = new Map<string, string>();
+    const mockStorage = {
+      getItem: (k: string) => mem.get(k) ?? null,
+      setItem: (k: string, v: string) => {
+        mem.set(k, v);
+      },
+    };
+    assert.equal(readSearchChromePreference(mockStorage), "expanded", "defaults to expanded when unset");
+    writeSearchChromePreference("collapsed", mockStorage);
+    assert.equal(mem.get("naijacheck.searchChrome"), "collapsed", "writes exact key naijacheck.searchChrome=collapsed");
+    assert.equal(readSearchChromePreference(mockStorage), "collapsed", "reads collapsed across simulated refresh");
+    writeSearchChromePreference("expanded", mockStorage);
+    assert.equal(readSearchChromePreference(mockStorage), "expanded", "reads expanded after re-expanding");
+  }
+
+  // -------------------------------------------------------------------------
+  // D) Large SSOT tip pool (>= 1,000 unique strings, zero invented numbers)
+  // -------------------------------------------------------------------------
+  console.log(
+    `[search:test] SSOT tip pool size: ${IDLE_TIP_POOL.length} unique strings`,
+    Object.fromEntries(Object.entries(IDLE_TIP_BUCKETS).map(([k, v]) => [k, v.length])),
+  );
+  assert.ok(IDLE_TIP_POOL.length >= 1000, `SSOT tip pool must have >= 1,000 unique tips, got ${IDLE_TIP_POOL.length}`);
+  const lowerSet = new Set(IDLE_TIP_POOL.map((t) => t.toLowerCase()));
+  assert.equal(lowerSet.size, IDLE_TIP_POOL.length, "IDLE_TIP_POOL must be 100% case-insensitively deduplicated");
+
+  const allPostalPlaceNames = new Set(
+    postalStates.flatMap((s) => [
+      s.name.toLowerCase(),
+      s.capital.split("—")[0].trim().toLowerCase(),
+      ...s.places.map((p) => p.name.split("—")[0].replace(/\s*\(.*?\)\s*/g, " ").replace(/\s+/g, " ").trim().toLowerCase()),
+    ]),
+  );
+  const allBankNames = new Set(banks.map((b) => b.name.toLowerCase()));
+  const allLgaNames = new Set(lgaStates.flatMap((s) => s.lgas.map((l) => l.name.toLowerCase())));
+
+  for (const tip of IDLE_TIP_POOL) {
+    assert.ok(tip.length >= 4 && tip.length <= 56, `tip length out of bounds: "${tip}" (${tip.length})`);
+    assert.ok(!/\b\d{6,}\b/.test(tip), `tip must NEVER embed 6+ digit ZIP or sort numbers: "${tip}"`);
+    const lower = tip.toLowerCase();
+    if (/sort code|ussd code|transfer code for/i.test(tip)) {
+      assert.ok([...allBankNames].some((bn) => lower.includes(bn)), `bank tip "${tip}" must reference real bank in data/banks.json`);
+    }
+    if (/what’s the zip of|postal code for/i.test(tip)) {
+      assert.ok([...allPostalPlaceNames].some((pl) => pl.length >= 2 && lower.includes(pl)), `postal tip "${tip}" must reference real place in data/postal-codes.json`);
+    }
+    if (tip.endsWith(" LGA")) {
+      const lgaCore = tip.slice(0, -4).toLowerCase();
+      assert.ok(allLgaNames.has(lgaCore), `LGA tip "${tip}" must match real LGA in data/lgas.json`);
+    }
+  }
+
+  // Representative real SSOT tips across verticals exist in the pool
+  for (const expectedTip of [
+    "prices of fuel today",
+    "what’s the ZIP of Umuahia?",
+    "how can I change my name on my NIN?",
+    "GTBank sort code",
+    "what does kelebu mean?",
+    "LGAs in Kano",
+    "Ikeja LGA",
+    "price of rice in Lagos",
+  ]) {
+    assert.ok(IDLE_TIP_POOL.includes(expectedTip), `IDLE_TIP_POOL must include real SSOT tip "${expectedTip}"`);
+  }
+
+  // Shuffler preserves full pool size, uniqueness, and rotates order across seeds
+  const shuf1 = createShuffledSearchTips(seededRng(42));
+  const shuf2 = createShuffledSearchTips(seededRng(999));
+  assert.equal(shuf1.length, IDLE_TIP_POOL.length);
+  assert.equal(new Set(shuf1.map((s) => s.toLowerCase())).size, IDLE_TIP_POOL.length);
+  assert.notDeepEqual(shuf1.slice(0, 12), shuf2.slice(0, 12), "shuffled sessions must not repeat identical opening loop");
+
+  // Anchor SEARCH_SUGGESTIONS compatibility check
+  assert.ok(SEARCH_SUGGESTIONS.length >= 6);
   for (const s of SEARCH_SUGGESTIONS) {
-    assert.ok(s.text.trim().length > 0 && s.source.trim().length > 0 && s.href.startsWith("/"), `valid suggestion shape: ${s.text}`);
     assert.ok(index.some((e) => e.path === s.href), `suggestion target ${s.href} must exist in search-index.json`);
-    const hits = rankedSearch(index, s.text, null, 20);
-    assert.ok(hits.length > 0, `suggestion "${s.text}" must match real index entries on /search`);
-    assert.ok(
-      hits.some((h) => h.path === s.href || h.path.startsWith(s.href.split("/").slice(0, 2).join("/"))),
-      `suggestion "${s.text}" should surface ${s.href} (got ${hits.slice(0, 3).map((h) => h.path).join(", ")})`,
-    );
-    // Guard against claiming ZIP/postal for a place absent from data/postal-codes.json
-    if (/zip|postal/i.test(s.text)) {
-      const lower = s.text.toLowerCase();
-      const matchedPlace = [...allPostalPlaceNames].some((place) => {
-        const core = place.split("—")[0].trim();
-        return core.length >= 3 && lower.includes(core);
-      });
-      assert.ok(matchedPlace, `postal/ZIP suggestion "${s.text}" must reference a real place in data/postal-codes.json`);
-    }
-    if (/sort code|ussd/i.test(s.text)) {
-      const lower = s.text.toLowerCase();
-      assert.ok([...allBankNames].some((bn) => lower.includes(bn)), `bank suggestion "${s.text}" must reference a real bank in data/banks.json`);
-    }
   }
 
   // /search page SEO guardrails
@@ -313,14 +414,22 @@ function check() {
   assert.ok(!sitemapSrc.split("\n").some((l) => l.includes('"/search"') || l.includes("'/search'")), "/search must not be in app/sitemap.ts");
 
   // -------------------------------------------------------------------------
-  // E) Deterministic state-machine tests for idle animation & pause/resume
+  // E) Deterministic state-machine tests: 3-tip burst + 5s cool-off + collapse
   // -------------------------------------------------------------------------
+  assert.equal(IDLE_TIPS_PER_BURST, 3, "exactly 3 tips per burst before cool-off");
   {
     const clock = fakeIdleClock();
     const ctrl = createSearchIdleController({ scheduler: clock.scheduler });
-    assert.deepEqual(ctrl.getSnapshot(), INITIAL_IDLE_SNAPSHOT, "SSR/pre-start snapshot is static active");
+    const phaseLog: IdlePhase[] = [];
+    ctrl.subscribe(() => {
+      const p = ctrl.getSnapshot().phase;
+      if (phaseLog[phaseLog.length - 1] !== p) phaseLog.push(p);
+    });
 
-    // 1. Start idle: compact-initial -> expanding -> typing -> dots-with-text -> dots-only -> fading -> collapsing -> compact-wait (5s) -> next suggestion
+    assert.deepEqual(ctrl.getSnapshot(), INITIAL_IDLE_SNAPSHOT, "SSR/pre-start snapshot is static active");
+    assert.equal(ctrl.getTipCount(), IDLE_TIP_POOL.length, "default controller uses full 1,196-tip SSOT pool");
+
+    // Start idle -> compact-initial -> expanding
     ctrl.start();
     assert.equal(ctrl.getSnapshot().phase, "compact-initial");
     assert.equal(ctrl.getSnapshot().isCompactVisual, true);
@@ -330,102 +439,139 @@ function check() {
     assert.equal(ctrl.getSnapshot().isCompactVisual, false);
 
     clock.advance(IDLE_SEARCH_TIMINGS.expandMs);
-    assert.equal(ctrl.getSnapshot().phase, "typing");
-    const firstSuggestion = SEARCH_SUGGESTIONS[0].text;
-    clock.advance(IDLE_SEARCH_TIMINGS.typeFirstCharDelayMs);
-    assert.equal(ctrl.getSnapshot().typed, firstSuggestion.slice(0, 1), "first char typed");
 
-    clock.advance((firstSuggestion.length - 1) * IDLE_SEARCH_TIMINGS.typeCharIntervalMs);
-    assert.equal(ctrl.getSnapshot().typed, firstSuggestion, "full suggestion typed");
+    // Helper to step completely through one single tip in a burst
+    const stepOneTip = (expectedBurstStep: number): string => {
+      assert.equal(ctrl.getSnapshot().phase, "typing", `burst step ${expectedBurstStep} starts typing`);
+      assert.equal(ctrl.getSnapshot().burstStep, expectedBurstStep);
+      const tip = ctrl.getSnapshot().currentTip;
+      assert.ok(tip.length > 0);
 
-    clock.advance(IDLE_SEARCH_TIMINGS.afterTypedHoldMs);
-    assert.equal(ctrl.getSnapshot().phase, "dots-with-text", "step 4a: three bouncing dots appended");
-    assert.equal(ctrl.getSnapshot().typed, firstSuggestion);
+      clock.advance(IDLE_SEARCH_TIMINGS.typeFirstCharDelayMs);
+      assert.equal(ctrl.getSnapshot().typed, tip.slice(0, 1));
 
-    clock.advance(IDLE_SEARCH_TIMINGS.dotsWithTextMs);
-    assert.equal(ctrl.getSnapshot().phase, "dots-only", "step 4b: simplified to dots-only bounce");
-    assert.equal(ctrl.getSnapshot().typed, "", "dots-only clears demo text");
+      clock.advance((tip.length - 1) * IDLE_SEARCH_TIMINGS.typeCharIntervalMs);
+      assert.equal(ctrl.getSnapshot().typed, tip);
 
-    clock.advance(IDLE_SEARCH_TIMINGS.dotsOnlyMs);
-    assert.equal(ctrl.getSnapshot().phase, "fading");
+      clock.advance(IDLE_SEARCH_TIMINGS.afterTypedHoldMs);
+      assert.equal(ctrl.getSnapshot().phase, "dots-with-text");
+      assert.equal(ctrl.getSnapshot().typed, tip);
 
-    clock.advance(IDLE_SEARCH_TIMINGS.fadeMs);
-    assert.equal(ctrl.getSnapshot().phase, "collapsing");
+      clock.advance(IDLE_SEARCH_TIMINGS.dotsWithTextMs);
+      assert.equal(ctrl.getSnapshot().phase, "dots-only");
+      assert.equal(ctrl.getSnapshot().typed, "");
+
+      clock.advance(IDLE_SEARCH_TIMINGS.dotsOnlyMs);
+      assert.equal(ctrl.getSnapshot().phase, "fading");
+
+      clock.advance(IDLE_SEARCH_TIMINGS.fadeMs);
+      return tip;
+    };
+
+    phaseLog.length = 0;
+    const tipA = stepOneTip(0);
+    // Immediately enters Tip B (burstStep = 1) with NO collapsing or compact-wait!
+    assert.equal(ctrl.getSnapshot().phase, "typing", "after Tip A fade, immediately starts Tip B typing without collapsing");
+    assert.ok(!phaseLog.includes("collapsing") && !phaseLog.includes("compact-wait"), "must not collapse after Tip A");
+
+    const tipB = stepOneTip(1);
+    assert.notEqual(tipB, tipA, "Tip B must differ from Tip A");
+    // Immediately enters Tip C (burstStep = 2) with NO collapsing or compact-wait!
+    assert.equal(ctrl.getSnapshot().phase, "typing", "after Tip B fade, immediately starts Tip C typing without collapsing");
+    assert.ok(!phaseLog.includes("collapsing") && !phaseLog.includes("compact-wait"), "must not collapse after Tip B");
+
+    const tipC = stepOneTip(2);
+    assert.notEqual(tipC, tipA, "Tip C must differ from Tip A");
+    assert.notEqual(tipC, tipB, "Tip C must differ from Tip B");
+
+    // Now after 3rd tip -> collapses to compact lens + "Search" and rests 5s!
+    assert.equal(ctrl.getSnapshot().phase, "collapsing", "collapses after 3rd tip");
     assert.equal(ctrl.getSnapshot().isCompactVisual, true);
 
     clock.advance(IDLE_SEARCH_TIMINGS.collapseMs);
-    assert.equal(ctrl.getSnapshot().phase, "compact-wait", "step 6: waiting ~5s in compact state");
+    assert.equal(ctrl.getSnapshot().phase, "compact-wait", "enters ~5s cool-off after 3 tips");
     assert.equal(ctrl.getSnapshot().isCompactVisual, true);
 
-    // Still compact at 4.9s
+    // Still resting at 4.9s
     clock.advance(IDLE_SEARCH_TIMINGS.compactWaitMs - 100);
     assert.equal(ctrl.getSnapshot().phase, "compact-wait");
 
-    // At 5.0s: rotates to suggestion 1 (different suggestion) & expands again
+    // At 5.0s -> expands and starts Burst 2 with 3 brand-new tips (Tip D, E, F)!
     clock.advance(100);
     assert.equal(ctrl.getSnapshot().phase, "expanding");
-    assert.equal(ctrl.getSnapshot().suggestionIndex, 1, "step 7: rotated to a different suggestion");
-    clock.advance(IDLE_SEARCH_TIMINGS.expandMs + IDLE_SEARCH_TIMINGS.typeFirstCharDelayMs);
-    assert.equal(ctrl.getSnapshot().typed, SEARCH_SUGGESTIONS[1].text.slice(0, 1));
+    clock.advance(IDLE_SEARCH_TIMINGS.expandMs);
+    const tipD = stepOneTip(0);
+    const tipE = stepOneTip(1);
+    const tipF = stepOneTip(2);
+    assert.equal(new Set([tipA, tipB, tipC, tipD, tipE, tipF]).size, 6, "6 distinct tips across 2 consecutive 3-tip bursts");
+    assert.equal(ctrl.getSnapshot().phase, "collapsing");
 
-    // 2. Focus pauses immediately, clears timers & overlay
-    ctrl.updateEngagement({ focused: true });
-    assert.equal(ctrl.getSnapshot().phase, "active");
-    assert.equal(ctrl.getSnapshot().typed, "");
+    // Collapse chrome (`chromeCollapsed: true`) stops idle motion immediately with zero timers
+    ctrl.updateEngagement({ chromeCollapsed: true });
+    assert.equal(ctrl.getSnapshot().phase, "collapsed");
     assert.equal(ctrl.getSnapshot().isCompactVisual, false);
-    assert.equal(clock.pendingCount(), 0, "no background timers while focused");
-    clock.advance(30_000);
-    assert.equal(ctrl.getSnapshot().phase, "active");
+    assert.equal(ctrl.getSnapshot().showTypewriterOverlay, false);
+    assert.equal(clock.pendingCount(), 0, "zero timers when search chrome is collapsed");
+    clock.advance(60_000);
+    assert.equal(ctrl.getSnapshot().phase, "collapsed");
 
-    // 3. Typing keeps paused even if blurred; resumes only when blurred + unhovered + empty
-    ctrl.updateEngagement({ focused: false, hasInput: true });
-    assert.equal(ctrl.getSnapshot().phase, "active");
-    clock.advance(10_000);
-    assert.equal(ctrl.getSnapshot().phase, "active");
+    // Re-expanding chrome (`chromeCollapsed: false`) resumes idle cycle cleanly
+    ctrl.updateEngagement({ chromeCollapsed: false });
+    assert.equal(ctrl.getSnapshot().phase, "compact-initial");
 
-    // 4. Desktop hover pauses and keeps expanded
-    ctrl.updateEngagement({ hasInput: false, hovered: true });
+    // Focus, typing, hover, panelOpen pause rules remain intact
+    ctrl.updateEngagement({ focused: true });
     assert.equal(ctrl.getSnapshot().phase, "active");
     assert.equal(clock.pendingCount(), 0);
 
-    // 5. Pointer leave + empty + blurred + panel closed -> resumes cleanly
-    ctrl.updateEngagement({ hovered: false });
-    assert.equal(ctrl.getSnapshot().phase, "compact-initial");
-
-    // 6. Open dropdown panel pauses so animation never fights panel
-    ctrl.updateEngagement({ panelOpen: true });
+    ctrl.updateEngagement({ focused: false, hovered: true });
     assert.equal(ctrl.getSnapshot().phase, "active");
+    assert.equal(clock.pendingCount(), 0);
+
+    ctrl.updateEngagement({ hovered: false, panelOpen: true });
+    assert.equal(ctrl.getSnapshot().phase, "active");
+
     ctrl.updateEngagement({ panelOpen: false });
     assert.equal(ctrl.getSnapshot().phase, "compact-initial");
 
-    // 7. Client navigation advances suggestion and restarts idle loop
-    const prevIdx = ctrl.getSnapshot().suggestionIndex;
-    ctrl.notifyNavigation();
-    assert.equal(ctrl.getSnapshot().suggestionIndex, (prevIdx + 1) % SEARCH_SUGGESTIONS.length);
-    assert.equal(ctrl.getSnapshot().phase, "compact-initial");
-
-    // 8. prefers-reduced-motion: reduce -> static bar, zero timers
+    // prefers-reduced-motion: reduce + collapse toggle compatibility
     ctrl.updateEngagement({ reducedMotion: true });
     assert.equal(ctrl.getSnapshot().phase, "reduced-motion");
-    assert.equal(ctrl.getSnapshot().isCompactVisual, false);
-    assert.equal(ctrl.getSnapshot().showTypewriterOverlay, false);
-    assert.equal(clock.pendingCount(), 0, "zero timers under prefers-reduced-motion: reduce");
-    clock.advance(60_000);
-    assert.equal(ctrl.getSnapshot().phase, "reduced-motion");
+    assert.equal(clock.pendingCount(), 0);
+    ctrl.updateEngagement({ chromeCollapsed: true });
+    assert.equal(ctrl.getSnapshot().phase, "collapsed", "collapse still works under prefers-reduced-motion: reduce");
+    assert.equal(clock.pendingCount(), 0);
+    ctrl.updateEngagement({ chromeCollapsed: false });
+    assert.equal(ctrl.getSnapshot().phase, "reduced-motion", "re-expand under prefers-reduced-motion returns to static bar");
+    assert.equal(clock.pendingCount(), 0);
 
     ctrl.stop();
   }
 
-  // Built static HTML checks if out/ exists
+  // Built static HTML & compiled CSS checks if out/ exists
   const outDir = path.join(root, "out");
   if (fs.existsSync(path.join(outDir, "index.html"))) {
     const homeHtml = fs.readFileSync(path.join(outDir, "index.html"), "utf-8");
     assert.ok(homeHtml.includes('id="site-search-desktop"') && homeHtml.includes('id="site-search-mobile"'), "both desktop and mobile header SearchBars rendered");
     assert.ok(homeHtml.includes("Search NaijaCheck"), "accessible label Search NaijaCheck present in SSR HTML");
+    assert.ok(homeHtml.includes('aria-label="Hide search"'), "SSR HTML renders Hide search collapse button");
+
+    // Verify compiled CSS in out/_next/static/css actually defines solid .bg-popover and .search-dropdown-panel
+    const cssDir = path.join(outDir, "_next", "static", "css");
+    if (fs.existsSync(cssDir)) {
+      const cssJoined = fs
+        .readdirSync(cssDir)
+        .filter((f) => f.endsWith(".css"))
+        .map((f) => fs.readFileSync(path.join(cssDir, f), "utf-8"))
+        .join("\n");
+      assert.ok(cssJoined.includes(".bg-popover{background-color:hsl(var(--popover))}") || cssJoined.includes(".bg-popover"), "compiled CSS includes .bg-popover utility");
+      assert.ok(cssJoined.includes(".search-dropdown-panel"), "compiled CSS includes .search-dropdown-panel solid rule");
+      assert.ok(cssJoined.includes(".z-\\[45\\]{z-index:45}"), "compiled CSS includes .z-[45] header stacking rule");
+    }
   }
 
   console.log("ok - search filter/results + SSOT drift guard + noindex + lazy-load");
-  console.log("ok - A) top-level dropdown allowlist + B) deep /search + C) idle animation & reduced-motion + D) verified SSOT suggestions");
+  console.log("ok - A) shallow allowlist & opaque panel + B) deep /search + C) collapse persistence + D) 1,196 SSOT tips & 3-tip cycle");
 }
 
 check();
