@@ -1,0 +1,1053 @@
+{
+  "updatedAt": "2026-10-23",
+  "scope": "Curated reference of 16 verified major oil and gas operators in Nigeria across the national oil company (NNPC Limited), 5 international oil company (IOC) groups active in Nigeria, Nigeria LNG Limited (incorporated midstream LNG joint venture), and 9 major indigenous upstream, refining, and downstream operators — reflecting verified 2024–2026 onshore/shallow-water divestments and corporate renamings. Explicitly excludes minor retail filling-station brands, oilfield service contractors, unverified modular refinery proposals, live crude oil price feeds, and equity investment advice.",
+  "notes": "Under Nigeria's Petroleum Industry Act (PIA) 2021, technical and commercial oversight is split between the Nigerian Upstream Petroleum Regulatory Commission (NUPRC) for exploration and production and the Nigerian Midstream and Downstream Petroleum Regulatory Authority (NMDPRA) for gas processing, LNG, refining, depots, and retail marketing. Between August 2024 and March 2025, three landmark divestments reshaped onshore and shallow-water operatorship: Eni completed the sale of Nigerian Agip Oil Company (NAOC) to Oando Plc (August 2024), ExxonMobil completed the sale of Mobil Producing Nigeria Unlimited (MPNU) to Seplat Energy Plc as SEPNU (December 2024), and Shell completed the sale of SPDC to Renaissance Africa Energy Company Limited (March 2025), while the IOCs retained deepwater and LNG stakes.",
+  "hubSources": [
+    {
+      "label": "Nigerian Upstream Petroleum Regulatory Commission (NUPRC) — Official Upstream Regulator",
+      "url": "https://www.nuprc.gov.ng/",
+      "kind": "primary"
+    },
+    {
+      "label": "NUPRC HostComply — Official Register of Upstream Settlors / Operators",
+      "url": "https://hostcomply.nuprc.gov.ng/settlor",
+      "kind": "primary"
+    },
+    {
+      "label": "Nigerian Midstream and Downstream Petroleum Regulatory Authority (NMDPRA) — Official Regulator",
+      "url": "https://www.nmdpra.gov.ng/",
+      "kind": "primary"
+    },
+    {
+      "label": "Nigerian Content Development and Monitoring Board (NCDMB) — Industry Announcements",
+      "url": "https://ncdmb.gov.ng/",
+      "kind": "primary"
+    },
+    {
+      "label": "NNPC Limited — Official Corporate Portal",
+      "url": "https://www.nnpcgroup.com/",
+      "kind": "primary"
+    },
+    {
+      "label": "Nigerian Exchange Limited (NGX) — Listed Energy Companies Directory",
+      "url": "https://ngxgroup.com/exchange/data/company-profile/",
+      "kind": "primary"
+    }
+  ],
+  "operators": [
+    {
+      "slug": "nnpc-limited",
+      "name": "NNPC Limited",
+      "fullLegalName": "Nigerian National Petroleum Company Limited",
+      "alternateNames": [
+        "NNPC",
+        "NNPCL",
+        "NNPC E&P Limited",
+        "NEPL",
+        "NPDC",
+        "NNPC Gas Marketing Limited",
+        "NGML",
+        "NNPC Retail"
+      ],
+      "type": "noc",
+      "segment": "integrated",
+      "focusSummary": "Integrated — Upstream E&P, Gas Infrastructure & Downstream Retail",
+      "headquartersCity": "Abuja",
+      "headquartersLocality": "NNPC Towers, Herbert Macaulay Way, Central Business District",
+      "stateSlug": "fct-abuja",
+      "stateName": "FCT — Abuja",
+      "lgaSlug": "abuja",
+      "lgaName": "Abuja Municipal",
+      "postalHref": "/codes/postal/fct-abuja",
+      "postalLabel": "Abuja CBD — 900211",
+      "operationalHubs": [
+        "Abuja FCT (Corporate HQ)",
+        "Benin City, Edo State (NEPL upstream HQ)",
+        "Port Harcourt & Bonny, Rivers State",
+        "Warri, Delta State",
+        "Lagos (Apapa / Mosimi logistics & retail)"
+      ],
+      "airportSlugs": [
+        "abuja-nnamdi-azikiwe",
+        "benin-airport",
+        "port-harcourt-international",
+        "warri-osubi",
+        "lagos-murtala-muhammed"
+      ],
+      "listingStatus": "Commercial state-owned limited liability company incorporated under the Petroleum Industry Act (PIA) 2021",
+      "regulatorScope": "NUPRC (upstream) & NMDPRA (midstream gas, refining & retail)",
+      "operationsSummary": "Nigeria's national commercial energy company, transitioned from a statutory corporation into a CAMA-incorporated limited liability company under the Petroleum Industry Act 2021 (unveiled in July 2022). NNPC Limited holds the Federation's majority equity in upstream joint ventures, manages production sharing contracts through NUIMS, operates upstream acreages directly via NNPC Exploration & Production Limited (NEPL, formerly NPDC, headquartered in Benin City), markets natural gas via NNPC Gas Marketing Limited (NGML), holds 49% of Nigeria LNG Limited, and runs a nationwide filling-station network through NNPC Retail Limited.",
+      "keyAssets": [
+        "NNPC Exploration & Production Limited (NEPL, formerly NPDC) — flagship upstream operating subsidiary based in Benin City, Edo State",
+        "NNPC Upstream Investment Management Services (NUIMS) — manages majority joint-venture and PSC interests with IOC and indigenous operators",
+        "NNPC Gas Marketing Limited (NGML) & NNPC Gas Infrastructure Company — domestic gas transmission (including ELPS and OB3 corridors) and industrial supply",
+        "NNPC Retail Limited — nationwide downstream PMS, AGO, kerosene, and LPG retail station network, plus 49% equity stake in Nigeria LNG Limited (NLNG)"
+      ],
+      "website": "https://www.nnpcgroup.com/",
+      "sources": [
+        {
+          "label": "NNPC Limited — Official Contact & NNPC Towers Headquarters",
+          "url": "https://nnpcgroup.com/contact",
+          "kind": "primary"
+        },
+        {
+          "label": "NNPC Gas Marketing Limited (NGML) — Official Subsidiary Page",
+          "url": "https://nnpcgroup.com/nnpc-gas-marketing-limited",
+          "kind": "primary"
+        },
+        {
+          "label": "NNPC Retail Limited — Official Downstream Contact Page",
+          "url": "https://retail.nnpcgroup.com/web/guest/contact",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — NNPC Exploration and Production Limited Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Statutory regulator duties formerly associated with NNPC/DPR now sit separately with NUPRC and NMDPRA under the PIA 2021."
+    },
+    {
+      "slug": "shell-nigeria",
+      "name": "Shell Companies in Nigeria (SNEPCo & SNG)",
+      "fullLegalName": "Shell Nigeria Exploration and Production Company Limited (SNEPCo)",
+      "alternateNames": [
+        "Shell Nigeria",
+        "SNEPCo",
+        "Shell Nigeria Gas",
+        "SNG",
+        "Bonga FPSO",
+        "SPDC divestment"
+      ],
+      "type": "ioc",
+      "segment": "upstream",
+      "focusSummary": "Upstream (Deepwater) & Midstream Industrial Gas Distribution",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "Freeman House, Marina / Victoria Island",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "lagos-island",
+      "lgaName": "Lagos Island",
+      "operationalHubs": [
+        "Lagos (Corporate & deepwater support)",
+        "Offshore Niger Delta — Bonga deepwater block (OML 118)",
+        "Ogun, Abia & Rivers industrial gas distribution zones (SNG)",
+        "Bonny Island, Rivers State (25.6% non-operated NLNG shareholder)"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "port-harcourt-international"
+      ],
+      "listingStatus": "Nigerian operating subsidiaries of Shell plc",
+      "regulatorScope": "NUPRC (deepwater upstream) & NMDPRA (industrial piped gas via SNG)",
+      "operationsSummary": "Following the 13 March 2025 completion of the sale of its onshore subsidiary (The Shell Petroleum Development Company of Nigeria Limited — SPDC) to Renaissance Africa Energy Company Limited, Shell's Nigerian footprint centres on deepwater exploration and production, piped industrial gas, and LNG. Shell Nigeria Exploration and Production Company Limited (SNEPCo), established in 1993, operates the landmark deepwater Bonga field (OML 118) via the Bonga FPSO and increased its stake in Bonga to 65% in November 2025.",
+      "keyAssets": [
+        "Shell Nigeria Exploration and Production Company Limited (SNEPCo) — operator of deepwater OML 118 (Bonga main and Bonga North expansion)",
+        "Shell Nigeria Gas Limited (SNG) — domestic natural gas transmission and distribution to industrial clusters in Ogun, Abia, and Rivers States",
+        "Nigeria LNG Limited (NLNG) — 25.6% shareholding via Shell Gas B.V. alongside long-term gas supply commitments",
+        "Daystar Power — commercial and industrial solar and hybrid power subsidiary operating across West Africa"
+      ],
+      "website": "https://www.shell.com.ng/",
+      "sources": [
+        {
+          "label": "Shell Nigeria — Official Country Portal (Businesses in Nigeria)",
+          "url": "https://www.shell.com.ng/",
+          "kind": "primary"
+        },
+        {
+          "label": "Shell plc — Completion of SPDC Sale to Renaissance (13 March 2025)",
+          "url": "https://www.shell.com/news-and-insights/newsroom/news-and-media-releases/2025/shell-completes-sale-of-spdc/spdc-sale.html",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Shell Nigeria Exploration and Production Company Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Onshore SPDC was sold to Renaissance Africa Energy Company Limited on 13 March 2025; retail Shell-branded fuel stations in Nigeria exited earlier (historically succeeded by Conoil / Forte-Ardova lineages)."
+    },
+    {
+      "slug": "exxonmobil-nigeria",
+      "name": "ExxonMobil in Nigeria (Esso E&P)",
+      "fullLegalName": "Esso Exploration and Production Nigeria Limited (EEPNL)",
+      "alternateNames": [
+        "ExxonMobil Nigeria",
+        "Esso Nigeria",
+        "EEPNL",
+        "EEPNL-OE",
+        "Erha",
+        "Usan",
+        "Mobil deepwater"
+      ],
+      "type": "ioc",
+      "segment": "upstream",
+      "focusSummary": "Upstream — Deepwater Crude Oil Exploration & Production",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "Karaa Place, 26 Acacia Drive, Osborne Foreshore Phase II, Ikoyi",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "eti-osa",
+      "lgaName": "Eti-Osa",
+      "postalHref": "/codes/postal/lagos",
+      "postalLabel": "Ikoyi — 101233",
+      "operationalHubs": [
+        "Ikoyi, Lagos (Corporate HQ)",
+        "Deepwater offshore Nigeria — Erha (OML 133), Usan (OML 138) & Bonga (OML 118 non-operated)"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "uyo-victor-attah",
+        "port-harcourt-international"
+      ],
+      "listingStatus": "Nigerian deepwater affiliates of Exxon Mobil Corporation",
+      "regulatorScope": "NUPRC (deepwater upstream production sharing contracts)",
+      "operationsSummary": "ExxonMobil concentrates its Nigerian operations on deepwater crude exploration and production through Esso Exploration and Production Nigeria Limited (EEPNL) and Esso Exploration and Production Nigeria (Offshore East) Limited. On 12 December 2024, ExxonMobil completed the divestment of its shallow-water joint-venture subsidiary, Mobil Producing Nigeria Unlimited (MPNU), to Seplat Energy Plc (now SEPNU).",
+      "keyAssets": [
+        "Erha & Erha North deepwater development (OML 133) — operated via FPSO offshore Nigeria",
+        "Usan deepwater field (OML 138) — operated via the Usan FPSO through Esso E&P Nigeria (Offshore East) Limited",
+        "Bonga deepwater block (OML 118) — 20% non-operated contractor interest alongside operator SNEPCo"
+      ],
+      "website": "https://corporate.exxonmobil.com/locations/nigeria",
+      "sources": [
+        {
+          "label": "ExxonMobil — Official Nigeria Operations & Lagos Office",
+          "url": "https://corporate.exxonmobil.com/locations/nigeria",
+          "kind": "primary"
+        },
+        {
+          "label": "Seplat Energy — Completion of MPNU Acquisition from ExxonMobil (Dec 2024)",
+          "url": "https://www.seplatenergy.com/investors/acquisition-of-mpnu/",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Esso Exploration and Production Nigeria Ltd Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Mobil Producing Nigeria Unlimited (MPNU, shallow-water OMLs 67, 68, 70, 104 & Qua Iboe terminal) transferred to Seplat Energy Plc in December 2024; downstream Mobil-branded retail stations in Nigeria are operated separately by 11Plc (formerly Mobil Oil Nigeria Plc, divested in 2017)."
+    },
+    {
+      "slug": "chevron-nigeria",
+      "name": "Chevron Nigeria Limited (CNL)",
+      "fullLegalName": "Chevron Nigeria Limited",
+      "alternateNames": [
+        "Chevron Nigeria",
+        "CNL",
+        "Star Deep Water Petroleum",
+        "Agbami",
+        "Escravos",
+        "EGTL",
+        "Texaco Nigeria"
+      ],
+      "type": "ioc",
+      "segment": "upstream",
+      "focusSummary": "Upstream (Onshore, Swamp, Shallow & Deepwater) & Midstream Gas/GTL",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "2 Chevron Drive, Lekki Peninsula",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "eti-osa",
+      "lgaName": "Eti-Osa",
+      "postalHref": "/codes/postal/lagos/lekki",
+      "postalLabel": "Lekki — 105102",
+      "operationalHubs": [
+        "Lekki, Lagos (Corporate HQ)",
+        "Escravos & Warri corridor, Delta State (EGP, EGTL & export terminal)",
+        "Deepwater offshore Nigeria — Agbami field (OML 127/128)"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "warri-osubi",
+        "port-harcourt-international"
+      ],
+      "listingStatus": "Nigerian upstream and gas subsidiaries of Chevron Corporation",
+      "regulatorScope": "NUPRC (upstream JV & deepwater) & NMDPRA (gas processing / EGTL)",
+      "operationsSummary": "Chevron Nigeria Limited operates onshore, swamp, and near-offshore concessions in the western Niger Delta under a 40% joint venture with NNPC Limited (60%) and manages major deepwater assets through Star Deep Water Petroleum Limited and affiliates. Its Escravos complex in Delta State anchors crude export, domestic gas supply into the Escravos–Lagos Pipeline System, and the Escravos Gas-to-Liquids (EGTL) facility.",
+      "keyAssets": [
+        "NNPC / CNL Joint Venture — 40% operator interest across western Niger Delta onshore and near-offshore leases plus the Escravos terminal",
+        "Agbami deepwater field — operated via the Agbami FPSO (leases renewed through 2044), alongside a 30% non-operated stake in deepwater Usan",
+        "Escravos Gas Plant (EGP) & Escravos Gas-to-Liquids (EGTL) — natural gas processing, LPG, and synthetic diesel/naphtha conversion in Delta State",
+        "West African Gas Pipeline Company Limited (WAPCo) — largest shareholder supporting regional gas transmission from Nigeria to Benin, Togo, and Ghana"
+      ],
+      "website": "https://www.chevron.com/worldwide/nigeria",
+      "sources": [
+        {
+          "label": "Chevron — Official Nigeria Operations Portfolio",
+          "url": "https://www.chevron.com/worldwide/nigeria",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Chevron Nigeria Limited Settlor Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Downstream Texaco/MRS retail stations in Nigeria were divested earlier to MRS Oil Nigeria Plc; Chevron's active Nigerian presence is concentrated in upstream E&P and Escravos gas infrastructure."
+    },
+    {
+      "slug": "totalenergies-nigeria",
+      "name": "TotalEnergies in Nigeria",
+      "fullLegalName": "TotalEnergies EP Nigeria Limited & TotalEnergies Marketing Nigeria Plc",
+      "alternateNames": [
+        "TotalEnergies Nigeria",
+        "Total Nigeria",
+        "TEPNG",
+        "TUPNI",
+        "TotalEnergies Marketing Nigeria",
+        "Akpo",
+        "Egina",
+        "Amenam"
+      ],
+      "type": "ioc",
+      "segment": "integrated",
+      "focusSummary": "Integrated — Deepwater/Offshore/Gas Upstream, LNG & Downstream Retail",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "TotalEnergies House, Plot 247 Herbert Macaulay Way / Plot 1415E Adetokunbo Ademola Street, Victoria Island",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "eti-osa",
+      "lgaName": "Eti-Osa",
+      "postalHref": "/codes/postal/lagos/victoria-island",
+      "postalLabel": "Victoria Island — 101241",
+      "operationalHubs": [
+        "Victoria Island, Lagos (Upstream & Marketing HQs)",
+        "Port Harcourt & OML 58 (Obagi / Ubeta gas), Rivers State",
+        "Deepwater OML 130 (Akpo & Egina FPSOs) and offshore OML 99/100/102",
+        "Bonny Island, Rivers State (15% NLNG shareholder)"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "port-harcourt-international",
+        "abuja-nnamdi-azikiwe"
+      ],
+      "listingStatus": "Upstream affiliates of TotalEnergies SE; downstream TotalEnergies Marketing Nigeria Plc is listed on Nigerian Exchange (NGX: TOTAL)",
+      "regulatorScope": "NUPRC (upstream) & NMDPRA (downstream retail, aviation fuel, lubricants & gas)",
+      "operationsSummary": "Uniquely among international energy majors in Nigeria, TotalEnergies maintains both large-scale upstream E&P operations and an NGX-listed nationwide downstream retail marketing company. Upstream entities (TotalEnergies EP Nigeria Limited and TotalEnergies Upstream Nigeria Limited) operate deepwater OML 130 (Akpo and Egina FPSOs), shallow-water OML 99/100/102, and onshore gas-rich OML 58 (including the Ubeta gas project), while holding 15% of Nigeria LNG Limited. Downstream TotalEnergies Marketing Nigeria Plc operates over 500 service stations, lubricant blending plants, and aviation fuel depots nationwide.",
+      "keyAssets": [
+        "Deepwater OML 130 (Akpo & Egina FPSOs) and shallow-water Amenam-Kpono / Ofon / Ikike offshore complexes",
+        "Onshore OML 58 (Obite gas plant & Ubeta gas development in Rivers State) supplying feedgas to Nigeria LNG",
+        "Nigeria LNG Limited (NLNG) — 15% shareholder stake",
+        "TotalEnergies Marketing Nigeria Plc (NGX: TOTAL) — nationwide retail fuel, solar, LPG, aviation, and lubricants network"
+      ],
+      "website": "https://services.totalenergies.ng/",
+      "sources": [
+        {
+          "label": "TotalEnergies — Nigeria Bonga Stake Divestment Completion (Nov 2025)",
+          "url": "https://totalenergies.com/news/press-releases/nigeria-totalenergies-completes-divestment-its-non-operated-interest-bonga",
+          "kind": "primary"
+        },
+        {
+          "label": "TotalEnergies — Nigeria Renaissance JV Non-Operated Oil SPA Announcement (Jan 2026)",
+          "url": "https://totalenergies.com/news/press-releases/nigeria-totalenergies-signs-sale-and-purchase-agreement-view-divesting-its-oil",
+          "kind": "primary"
+        },
+        {
+          "label": "TotalEnergies Marketing Nigeria Plc — Official Downstream Portal",
+          "url": "https://services.totalenergies.ng/",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — TotalEnergies Exploration and Production Nigeria Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "TotalEnergies completed the sale of its 12.5% non-operated Bonga interest in November 2025 and signed an SPA in January 2026 with Vaaris for its 10% non-operated oil interest in the Renaissance JV while retaining JV gas economic interests supplying NLNG."
+    },
+    {
+      "slug": "eni-nigeria",
+      "name": "Eni in Nigeria (Nigerian Agip Exploration)",
+      "fullLegalName": "Nigerian Agip Exploration Limited (NAE)",
+      "alternateNames": [
+        "Eni Nigeria",
+        "Agip",
+        "NAE",
+        "AENR",
+        "Agip Energy and Natural Resources",
+        "Abo FPSO",
+        "NAOC divestment"
+      ],
+      "type": "ioc",
+      "segment": "upstream",
+      "focusSummary": "Upstream (Deepwater & Offshore) & Midstream LNG Equity",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "Victoria Island",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "eti-osa",
+      "lgaName": "Eti-Osa",
+      "postalHref": "/codes/postal/lagos/victoria-island",
+      "postalLabel": "Victoria Island — 101241",
+      "operationalHubs": [
+        "Lagos & Abuja (Corporate offices)",
+        "Deepwater offshore Nigeria — Abo (OML 125), Zabazaba-Etan (OPL 245) & Bonga (OML 118 non-operated)",
+        "Bonny Island, Rivers State (10.4% NLNG shareholder)"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "port-harcourt-international"
+      ],
+      "listingStatus": "Nigerian deepwater and midstream affiliates of Eni S.p.A.",
+      "regulatorScope": "NUPRC (deepwater & offshore upstream)",
+      "operationsSummary": "Present in Nigeria since 1962, Eni streamlined its Nigerian portfolio in August 2024 by completing the sale of its onshore subsidiary, Nigerian Agip Oil Company Limited (NAOC), to Oando Plc. Eni remains active in Nigeria through deepwater subsidiary Nigerian Agip Exploration Limited (NAE), Agip Energy and Natural Resources (AENR), and its 10.4% equity shareholding in Nigeria LNG Limited (NLNG).",
+      "keyAssets": [
+        "Nigerian Agip Exploration Limited (NAE) — deepwater operator (including Abo OML 125) and 15% non-operated partner in Bonga (OML 118)",
+        "Agip Energy and Natural Resources (AENR) — offshore service/JV interests and 5% non-operated stake in the Renaissance JV",
+        "Nigeria LNG Limited (NLNG) — 10.4% shareholder stake on Bonny Island"
+      ],
+      "website": "https://www.eni.com/en-IT/actions/global-activities/nigeria.html",
+      "sources": [
+        {
+          "label": "Eni S.p.A. — Official Activities in Nigeria",
+          "url": "https://www.eni.com/en-IT/actions/global-activities/nigeria.html",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Nigerian Agip Exploration Ltd Settlor Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Onshore NAOC (OMLs 60–63, Brass terminal, and Okpai power plant interest) was acquired by Oando Plc on 22 August 2024."
+    },
+    {
+      "slug": "nigeria-lng",
+      "name": "Nigeria LNG Limited (NLNG)",
+      "fullLegalName": "Nigeria LNG Limited",
+      "alternateNames": [
+        "NLNG",
+        "Nigeria Liquefied Natural Gas",
+        "Bonny LNG",
+        "NLNG Train 7",
+        "Bonny Gas Transport"
+      ],
+      "type": "jv",
+      "segment": "midstream",
+      "focusSummary": "Midstream — Natural Gas Liquefaction, NGL & Domestic LPG Supply",
+      "headquartersCity": "Port Harcourt",
+      "headquartersLocality": "NLNG Corporate Head Office, Amadi Creek, Off Eastern By-Pass (Plant on Bonny Island)",
+      "stateSlug": "rivers",
+      "stateName": "Rivers",
+      "lgaSlug": "port-harcourt",
+      "lgaName": "Port Harcourt",
+      "postalHref": "/codes/postal/rivers/port-harcourt",
+      "postalLabel": "Port Harcourt — 500001",
+      "operationalHubs": [
+        "Port Harcourt, Rivers State (Corporate Head Office at Amadi Creek)",
+        "Bonny Island, Bonny LGA, Rivers State (6-train LNG/NGL liquefaction plant, marine terminal & Train 7 project)",
+        "Abuja & Lagos liaison offices"
+      ],
+      "airportSlugs": [
+        "port-harcourt-international",
+        "abuja-nnamdi-azikiwe",
+        "lagos-murtala-muhammed"
+      ],
+      "listingStatus": "Incorporated joint-venture limited liability company: NNPC Limited (49%), Shell Gas B.V. (25.6%), TotalEnergies Gaz & Electricité Holdings (15%), Eni International N.A. N.V. S.à r.l. (10.4%)",
+      "regulatorScope": "NMDPRA (midstream gas liquefaction, storage, marine export & domestic LPG supply)",
+      "operationsSummary": "Incorporated on 17 May 1989 to harness Nigeria's associated and non-associated natural gas and curb routine flaring, Nigeria LNG Limited operates a six-train liquefaction complex on Bonny Island, Rivers State (capable of producing 22 million tonnes per annum of LNG and 5 MTPA of natural gas liquids), alongside the ongoing Train 7 expansion project and dedicated domestic LPG supply into the Nigerian cooking-gas market.",
+      "keyAssets": [
+        "Bonny Island LNG Complex (Trains 1–6 operational + Train 7 expansion under construction) in Bonny LGA, Rivers State",
+        "Corporate Head Office at Amadi Creek, Port Harcourt, Rivers State",
+        "Bonny Gas Transport Limited (BGT) & NLNG Shipping and Marine Services Limited (NSML) — LNG carrier fleet and marine operations",
+        "Domestic LPG Supply Scheme — dedicated liquefied petroleum gas allocations into Nigerian coastal receiving terminals"
+      ],
+      "website": "https://www.nlng.com/",
+      "sources": [
+        {
+          "label": "Nigeria LNG Limited — Official Corporate Website",
+          "url": "https://www.nlng.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigeria LNG Limited — Doing Business & Corporate Profile",
+          "url": "https://www.nlng.com/business/doing-business-with-nlng",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigeria LNG Limited — Official Facts & Figures Publication (PDF)",
+          "url": "https://www.nlng.com/documents/2024_NLNG_FACTS_FIGURESB_compressed.pdf",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "NLNG is an incorporated midstream company with its own board and management, distinct from unincorporated upstream NNPC/IOC joint ventures."
+    },
+    {
+      "slug": "renaissance-africa-energy",
+      "name": "Renaissance Africa Energy Company Limited",
+      "fullLegalName": "Renaissance Africa Energy Company Limited",
+      "alternateNames": [
+        "Renaissance Africa Energy",
+        "RAEC",
+        "formerly SPDC",
+        "Shell Petroleum Development Company acquisition",
+        "Renaissance JV",
+        "Bonny Terminal",
+        "Forcados Terminal"
+      ],
+      "type": "independent",
+      "segment": "upstream",
+      "focusSummary": "Upstream & Midstream Gas — Onshore & Shallow-Water Niger Delta JV Operator",
+      "headquartersCity": "Port Harcourt",
+      "headquartersLocality": "Renaissance Industrial Area, Rumuobiakani",
+      "stateSlug": "rivers",
+      "stateName": "Rivers",
+      "lgaSlug": "obio-akpor",
+      "lgaName": "Obio/Akpor",
+      "postalHref": "/codes/postal/rivers",
+      "postalLabel": "Obio/Akpor — 500102",
+      "operationalHubs": [
+        "Port Harcourt, Rivers State (Renaissance Industrial Area HQ & Bonny Oil and Gas Terminal)",
+        "Warri & Forcados Terminal, Delta State",
+        "Bayelsa & Imo Niger Delta onshore gas/oil hubs",
+        "Lagos corporate office"
+      ],
+      "airportSlugs": [
+        "port-harcourt-international",
+        "warri-osubi",
+        "lagos-murtala-muhammed"
+      ],
+      "listingStatus": "Privately held Nigerian-led energy consortium (ND Western Limited, Aradel Holdings Plc, FIRST E&P, Waltersmith Group, and Petrolin Group)",
+      "regulatorScope": "NUPRC (upstream joint-venture operator) & NMDPRA (gas processing & export terminals)",
+      "operationsSummary": "On 13 March 2025, Renaissance Africa Energy Company Limited completed the landmark acquisition of The Shell Petroleum Development Company of Nigeria Limited (SPDC) following regulatory approvals. Formed by four Nigerian independent producers (ND Western, Aradel Holdings, FIRST E&P, and Waltersmith) alongside international energy group Petrolin, Renaissance holds the 30% operating interest in Nigeria's largest onshore/shallow-water joint venture alongside NNPC Limited (55%), TotalEnergies (10% oil subject to Jan 2026 Vaaris SPA), and Eni/AENR (5%).",
+      "keyAssets": [
+        "Operator of the Renaissance JV across 15 onshore and 3 shallow-water Niger Delta oil mining leases",
+        "Bonny Oil and Gas Terminal (Rivers State) and Forcados Oil Terminal (Delta State)",
+        "Major associated and non-associated gas processing hubs supplying feedgas to Nigeria LNG (NLNG) and domestic power/industrial off-takers"
+      ],
+      "website": "https://renaissanceafrica.com/",
+      "sources": [
+        {
+          "label": "Shell plc — Completion of SPDC Sale to Renaissance (13 March 2025)",
+          "url": "https://www.shell.com/news-and-insights/newsroom/news-and-media-releases/2025/shell-completes-sale-of-spdc/spdc-sale.html",
+          "kind": "primary"
+        },
+        {
+          "label": "NCDMB — Official Release on Renaissance Energy Post-SPDC Acquisition",
+          "url": "https://ncdmb.gov.ng/ncdmb-renaissance-energy-commit-to-collaboration-local-content-development/",
+          "kind": "primary"
+        },
+        {
+          "label": "FIRST E&P — Consortium Completion Statement on SPDC Acquisition",
+          "url": "https://www.first-epdc.com/news-articles/first-e-p-and-consortium-partners-complete-landmark-acquisition-of-spdc-lagos-nigeria---march-14-2025",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Renaissance Africa Energy Company Settlor Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Searches for 'SPDC' or 'Shell onshore Nigeria' after March 2025 refer operationally to Renaissance Africa Energy Company Limited."
+    },
+    {
+      "slug": "seplat-energy",
+      "name": "Seplat Energy Plc",
+      "fullLegalName": "Seplat Energy Plc (including Seplat Energy Producing Nigeria Unlimited — SEPNU)",
+      "alternateNames": [
+        "Seplat",
+        "SEPLAT",
+        "SEPNU",
+        "formerly MPNU",
+        "Mobil Producing Nigeria Unlimited acquisition",
+        "ANOH Gas",
+        "Qua Iboe Terminal"
+      ],
+      "type": "independent",
+      "segment": "upstream",
+      "focusSummary": "Upstream (Onshore & Shallow-Water Oil) & Midstream Domestic Gas Processing",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "Seplat House, 1 Lekki-Epe Expressway, Victoria Island / 16A Temple Road, Ikoyi",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "eti-osa",
+      "lgaName": "Eti-Osa",
+      "postalHref": "/codes/postal/lagos/victoria-island",
+      "postalLabel": "Victoria Island — 101241",
+      "operationalHubs": [
+        "Victoria Island & Ikoyi, Lagos (Corporate HQ)",
+        "Eket & Qua Iboe Terminal, Akwa Ibom State (SEPNU shallow-water operations)",
+        "Sapele & Oben gas hubs, Delta & Edo States",
+        "Assa North-Ohaji South (ANOH), Imo State"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "uyo-victor-attah",
+        "warri-osubi",
+        "owerri-sam-mbakwe"
+      ],
+      "listingStatus": "Dual-listed public company on the Nigerian Exchange Premium Board (NGX: SEPLAT) and London Stock Exchange Main Market (LSE: SEPL)",
+      "regulatorScope": "NUPRC (upstream onshore & shallow-water operator) & NMDPRA (Oben, Sapele & ANOH gas processing)",
+      "operationsSummary": "Founded by Nigerian independents in 2009 and dual-listed in Lagos and London since 2014, Seplat Energy Plc scaled into one of Africa's largest independent producers on 12 December 2024 upon completing the acquisition of Mobil Producing Nigeria Unlimited (MPNU) from ExxonMobil, renamed Seplat Energy Producing Nigeria Unlimited (SEPNU). Alongside onshore oil and gas blocks in Edo, Delta, and Imo States, Seplat operates major domestic gas plants supplying Nigeria's power grid.",
+      "keyAssets": [
+        "Seplat Energy Producing Nigeria Unlimited (SEPNU, formerly MPNU) — 40% operator of shallow-water OMLs 67, 68, 70, 104 and the Qua Iboe Terminal in Akwa Ibom State alongside NNPC (60%)",
+        "Onshore Niger Delta oil and gas blocks (including OMLs 4, 38, 41, 40 via Elcrest, and OML 53)",
+        "Oben and Sapele Gas Processing Plants plus the ANOH Gas Processing Company Limited (50/50 incorporated JV with NGIC in Imo State)"
+      ],
+      "website": "https://www.seplatenergy.com/",
+      "sources": [
+        {
+          "label": "Seplat Energy Plc — Official MPNU Acquisition Investor Hub",
+          "url": "https://www.seplatenergy.com/investors/acquisition-of-mpnu/",
+          "kind": "primary"
+        },
+        {
+          "label": "Seplat Energy Plc — FY 2025 Audited Financial Results (Feb 2026 PDF)",
+          "url": "https://www.seplatenergy.com/media/gbtmbhan/seplat-energy-fy25-results-final-260226-1.pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Seplat Energy Plc & SEPNU Settlor Records",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Shallow-water Qua Iboe operations historically run by ExxonMobil's MPNU operate under Seplat Energy Producing Nigeria Unlimited (SEPNU) since December 2024."
+    },
+    {
+      "slug": "oando",
+      "name": "Oando Plc",
+      "fullLegalName": "Oando Plc (Upstream via Oando Energy Resources)",
+      "alternateNames": [
+        "Oando",
+        "OANDO",
+        "Oando Energy Resources",
+        "OER",
+        "formerly NAOC",
+        "Nigerian Agip Oil Company acquisition",
+        "Brass Terminal"
+      ],
+      "type": "independent",
+      "segment": "integrated",
+      "focusSummary": "Integrated — Upstream Onshore/Swamp JV Operator, Power/Gas & Energy Trading",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "The Wings Office Complex, 17A Ozumba Mbadiwe Avenue, Victoria Island",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "eti-osa",
+      "lgaName": "Eti-Osa",
+      "postalHref": "/codes/postal/lagos/victoria-island",
+      "postalLabel": "Victoria Island — 101241",
+      "operationalHubs": [
+        "Victoria Island, Lagos (Corporate HQ at The Wings)",
+        "Port Harcourt, Rivers State (Onshore JV operations)",
+        "Brass Oil Terminal, Bayelsa State",
+        "Kwale-Okpai IPP & OMLs 60–63 across Rivers, Bayelsa, Delta & Imo States"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "port-harcourt-international",
+        "warri-osubi",
+        "owerri-sam-mbakwe"
+      ],
+      "listingStatus": "Dual-listed public company on the Nigerian Exchange (NGX: OANDO) and Johannesburg Stock Exchange (JSE: OAO)",
+      "regulatorScope": "NUPRC (upstream JV operator) & NMDPRA (gas processing, terminals & trading)",
+      "operationsSummary": "An indigenous Nigerian energy group listed on the NGX and JSE, Oando Plc doubled its upstream reserves and assumed operatorship of the NNPC/Oando/AENR onshore joint venture on 22 August 2024 when it completed the acquisition of Nigerian Agip Oil Company Limited (NAOC) from Eni. Alongside upstream exploration and production under Oando Energy Resources, the group operates crude and refined product trading via Oando Trading and clean energy initiatives via Oando Clean Energy.",
+      "keyAssets": [
+        "40% operating interest in OMLs 60, 61, 62, and 63 across Bayelsa, Rivers, Delta, and Imo States (doubled from 20% following the August 2024 NAOC acquisition)",
+        "Brass River Oil Terminal in Bayelsa State, Obiafu-Obrikom (Ob-Ob) and Kwale gas processing plants, and the Okpai Phases 1 & 2 Independent Power Plants",
+        "Oando Trading & Oando Clean Energy — international crude/product supply and electric mass-transit / renewable infrastructure"
+      ],
+      "website": "https://www.oandoplc.com/",
+      "sources": [
+        {
+          "label": "Oando Plc — Official Corporate Website",
+          "url": "https://www.oandoplc.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "Oando Plc — Corporate Contact & Victoria Island Headquarters",
+          "url": "https://oandoplc.com/contact-us",
+          "kind": "primary"
+        },
+        {
+          "label": "Eni S.p.A. — Nigeria Portfolio & August 2024 NAOC Sale Confirmation",
+          "url": "https://www.eni.com/en-IT/actions/global-activities/nigeria.html",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Oando Energy Resources Nigeria Limited Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Oando's legacy retail fuel-station network (Oando Marketing) was divested earlier and rebranded as OVH Energy (subsequently acquired by NNPC Retail in 2022)."
+    },
+    {
+      "slug": "aradel-holdings",
+      "name": "Aradel Holdings Plc",
+      "fullLegalName": "Aradel Holdings Plc",
+      "alternateNames": [
+        "Aradel",
+        "ARADEL",
+        "Aradel Energy",
+        "Aradel Refineries",
+        "formerly NDEP",
+        "Niger Delta Exploration & Production",
+        "Ogbele Refinery"
+      ],
+      "type": "independent",
+      "segment": "integrated",
+      "focusSummary": "Integrated — Upstream Oil & Gas, Gas Processing & Modular Refining",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "15 Babatunde Jose Street, Victoria Island",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "eti-osa",
+      "lgaName": "Eti-Osa",
+      "postalHref": "/codes/postal/lagos/victoria-island",
+      "postalLabel": "Victoria Island — 101241",
+      "operationalHubs": [
+        "Victoria Island, Lagos (Corporate HQ)",
+        "Ogbele (PML 14 / former OML 54), Ahoada East LGA, Rivers State — integrated oil, gas & modular refinery hub"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "port-harcourt-international"
+      ],
+      "listingStatus": "Public company listed on the Main Board of the Nigerian Exchange (NGX: ARADEL, listed October 2024)",
+      "regulatorScope": "NUPRC (upstream E&P via Aradel Energy) & NMDPRA (Ogbele gas plant & 11,000 bpd refinery via Aradel Gas / Aradel Refineries)",
+      "operationsSummary": "Incorporated in 1992 as Midas Drilling Fund and long known as Niger Delta Exploration & Production Plc (NDEP) before rebranding to Aradel Holdings Plc in 2023 and listing on the Nigerian Exchange in October 2024, Aradel is Nigeria's pioneer integrated indigenous energy group. At its Ogbele hub in Rivers State, Aradel produces crude oil, processes natural gas for NLNG and domestic buyers, and operates an active 11,000-barrel-per-day three-train modular refinery producing diesel, kerosene, naphtha, and fuel oil, alongside strategic equity stakes in ND Western Limited and Renaissance Africa Energy.",
+      "keyAssets": [
+        "Aradel Energy Limited — upstream operator of the Ogbele marginal/petroleum mining field and Omerelu field in Rivers State",
+        "Aradel Gas Limited — 100 MMscf/d Ogbele gas processing plant tied directly into Nigeria LNG feedgas pipelines",
+        "Aradel Refineries Limited — operational 11,000 bpd modular refinery at Ogbele, Rivers State",
+        "Strategic equity shareholdings in ND Western Limited (OML 34 JV) and Renaissance Africa Energy Company Limited"
+      ],
+      "website": "https://www.aradel.com/",
+      "sources": [
+        {
+          "label": "Aradel Holdings Plc — Official About Us & Integrated Subsidiaries",
+          "url": "https://www.aradel.com/about-us/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Exchange (NGX) — Aradel Holdings Plc Official Company Profile",
+          "url": "https://ngxgroup.com/exchange/data/company-profile/?symbol=ARADEL",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Aradel Energy Limited Settlor Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual"
+    },
+    {
+      "slug": "heirs-energies",
+      "name": "Heirs Energies Limited",
+      "fullLegalName": "Heirs Energies Limited",
+      "alternateNames": [
+        "Heirs Energies",
+        "formerly Heirs Oil & Gas",
+        "HHOG",
+        "OML 17"
+      ],
+      "type": "independent",
+      "segment": "upstream",
+      "focusSummary": "Upstream Oil & Domestic Non-Associated Gas Production (OML 17)",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "Victoria Island",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "eti-osa",
+      "lgaName": "Eti-Osa",
+      "postalHref": "/codes/postal/lagos/victoria-island",
+      "postalLabel": "Victoria Island — 101241",
+      "operationalHubs": [
+        "Victoria Island, Lagos (Corporate HQ)",
+        "Port Harcourt & Obigbo/Agbada fields (OML 17), Rivers State"
+      ],
+      "airportSlugs": [
+        "port-harcourt-international",
+        "lagos-murtala-muhammed"
+      ],
+      "listingStatus": "Privately held Nigerian indigenous energy company within the Heirs Holdings group",
+      "regulatorScope": "NUPRC (upstream OML 17 JV operator) & NMDPRA (domestic gas supply)",
+      "operationsSummary": "Formerly known as Heirs Holdings Oil & Gas (HHOG), Heirs Energies Limited acquired the 45% operating interest in Oil Mining Lease 17 (OML 17) surrounding Port Harcourt in Rivers State in 2021 (in joint venture with NNPC Limited's 55% stake). The company produces crude oil exported via the Bonny Terminal and supplies substantial domestic gas to electricity generation plants and industrial manufacturers across eastern Nigeria.",
+      "keyAssets": [
+        "45% operating interest in OML 17 (Port Harcourt corridor, Rivers State) in joint venture with NNPC Limited (55%)",
+        "Agbada and Obigbo oil and gas processing facilities supplying power plants and industrial gas off-takers in Rivers and Abia States"
+      ],
+      "website": "https://heirsenergies.com/",
+      "sources": [
+        {
+          "label": "Heirs Energies Limited — Official Corporate Website",
+          "url": "https://heirsenergies.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "Heirs Energies — Official News & Corporate Releases",
+          "url": "https://heirsenergies.com/category/news-press-releases/news/",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Heirs Energies Settlor Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual"
+    },
+    {
+      "slug": "first-ep",
+      "name": "FIRST E&P",
+      "fullLegalName": "FIRST Exploration & Petroleum Development Company Limited",
+      "alternateNames": [
+        "FIRST E&P",
+        "FIRST EPDC",
+        "Anyala",
+        "Madu",
+        "OML 83",
+        "OML 85",
+        "Abigail-Joseph FPSO"
+      ],
+      "type": "independent",
+      "segment": "upstream",
+      "focusSummary": "Upstream — Shallow-Water Offshore & Niger Delta E&P Operator",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "Ikoyi",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "eti-osa",
+      "lgaName": "Eti-Osa",
+      "postalHref": "/codes/postal/lagos",
+      "postalLabel": "Ikoyi — 101233",
+      "operationalHubs": [
+        "Ikoyi, Lagos (Corporate HQ)",
+        "Shallow-water offshore Bayelsa State — Anyala (OML 83) & Madu (OML 85) via Abigail-Joseph FPSO",
+        "Port Harcourt / Onne marine logistics base, Rivers State"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "port-harcourt-international"
+      ],
+      "listingStatus": "Privately held Nigerian independent exploration and production company",
+      "regulatorScope": "NUPRC (upstream shallow-water & onshore joint-venture interests)",
+      "operationsSummary": "Incorporated in 2011 and commencing commercial crude production in October 2020, FIRST Exploration & Petroleum Development Company Limited (FIRST E&P) is a Nigerian independent upstream operator holding a 40% operating interest in shallow-water blocks OML 83 (Anyala) and OML 85 (Madu) offshore Bayelsa State in joint venture with NNPC Limited (60%), alongside Upstream JV stakes and consortium membership in Renaissance Africa Energy Company Limited.",
+      "keyAssets": [
+        "40% operator of shallow-water OML 83 (Anyala field) and OML 85 (Madu field) offshore Bayelsa State alongside NNPC Limited (60%)",
+        "Abigail-Joseph FPSO — dedicated floating production, storage, and offloading vessel processing Anyala-Madu crude",
+        "Consortium shareholder in Renaissance Africa Energy Company Limited (completed acquisition of SPDC in March 2025)"
+      ],
+      "website": "https://www.first-epdc.com/",
+      "sources": [
+        {
+          "label": "FIRST E&P — Official Corporate Website",
+          "url": "https://www.first-epdc.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "FIRST E&P — Official Statement on Renaissance / SPDC Acquisition Completion",
+          "url": "https://www.first-epdc.com/news-articles/first-e-p-and-consortium-partners-complete-landmark-acquisition-of-spdc-lagos-nigeria---march-14-2025",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — First Exploration and Development Company Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual"
+    },
+    {
+      "slug": "dangote-refinery",
+      "name": "Dangote Petroleum Refinery & Petrochemicals",
+      "fullLegalName": "Dangote Petroleum Refinery and Petrochemicals FZE",
+      "alternateNames": [
+        "Dangote Refinery",
+        "DPRP",
+        "Lekki Refinery",
+        "Dangote Petrochemicals",
+        "Ibeju-Lekki Refinery"
+      ],
+      "type": "independent",
+      "segment": "downstream",
+      "focusSummary": "Downstream — Crude Oil Refining (700,000 bpd CDU) & Petrochemicals",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "Lekki Free Trade Zone, Ibeju-Lekki (Corporate HQ: Union Marble House, 1 Alfred Rewane Road, Falomo, Ikoyi)",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ibeju-lekki",
+      "lgaName": "Ibeju-Lekki",
+      "postalHref": "/codes/postal/lagos",
+      "postalLabel": "Ibeju-Lekki — 105101",
+      "operationalHubs": [
+        "Lekki Free Trade Zone, Ibeju-Lekki LGA, Lagos State (Refinery, marine SPM jetties, gantry & polypropylene plant)",
+        "Falomo, Ikoyi, Lagos (Dangote Industries corporate head office)"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed"
+      ],
+      "listingStatus": "Free Zone Enterprise subsidiary of Dangote Industries Limited (with NNPC Limited holding a minority equity stake)",
+      "regulatorScope": "NMDPRA (petroleum refining, gantry/coastal product evacuation & petrochemicals)",
+      "operationsSummary": "Located in the Lekki Free Zone of Ibeju-Lekki, Lagos State, Dangote Petroleum Refinery & Petrochemicals is Africa's largest crude oil refinery and the world's largest single-train refining facility. Commencing diesel and aviation fuel output in January 2024 followed by Premium Motor Spirit (petrol) later in 2024 and expanding its crude distillation capacity from 650,000 bpd to 700,000 bpd in 2026, the complex produces Euro V fuels (≤10 ppm sulphur PMS, AGO, and Jet A-1) alongside an integrated polypropylene petrochemical plant.",
+      "keyAssets": [
+        "Single-train integrated petroleum refinery in Ibeju-Lekki, Lagos (650,000 bpd nameplate expanded to 700,000 bpd CDU capacity)",
+        "Euro V refined fuel output: Premium Motor Spirit (PMS), Automotive Gas Oil (AGO / diesel), Dual Purpose Kerosene, and Jet A-1 aviation fuel",
+        "Integrated Polypropylene Petrochemical Plant, marine single-point mooring (SPM) crude/product terminals, and multi-bay road tanker gantry"
+      ],
+      "website": "https://refinery.dangote.com/about-us/",
+      "sources": [
+        {
+          "label": "Dangote Petroleum Refinery & Petrochemicals — Official About Us",
+          "url": "https://refinery.dangote.com/about-us/",
+          "kind": "primary"
+        },
+        {
+          "label": "Dangote Petroleum Refinery — Official Contact & Lekki Free Zone Address",
+          "url": "https://petroleumrefinerysales.dangote.com/contact_us",
+          "kind": "primary"
+        },
+        {
+          "label": "Dangote Industries Limited — Oil & Gas Projects Overview",
+          "url": "https://www.dangote.com/businesses/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "For dated Lagos gantry/depot petrol, diesel, and LPG readings tracked separately from this corporate profile, see NaijaCheck's /prices/fuel reference."
+    },
+    {
+      "slug": "ardova",
+      "name": "Ardova Plc",
+      "fullLegalName": "Ardova Plc",
+      "alternateNames": [
+        "Ardova",
+        "AP",
+        "formerly Forte Oil",
+        "African Petroleum",
+        "AP LPG"
+      ],
+      "type": "independent",
+      "segment": "downstream",
+      "focusSummary": "Downstream — Retail Fuel Stations, Storage Terminals, Aviation Fuel, Lubricants & LPG",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "1 AP/Conoil Road, Ijora, Apapa / Victoria Island",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "apapa",
+      "lgaName": "Apapa",
+      "postalHref": "/codes/postal/lagos",
+      "postalLabel": "Apapa — 102272",
+      "operationalHubs": [
+        "Apapa / Ijora, Lagos State (Coastal storage terminal, lubricant blending plant & registered office)",
+        "Onne Terminal, Rivers State",
+        "Nationwide retail service stations & airport into-plane aviation fuel depots"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "port-harcourt-international"
+      ],
+      "listingStatus": "Privately held Nigerian integrated downstream group (majority-owned by Ignite Investments and Commodities Limited; delisted from NGX in July 2023)",
+      "regulatorScope": "NMDPRA (coastal terminals, bulk LPG, lubricants, aviation fuel & retail stations)",
+      "operationsSummary": "Tracing its Nigerian roots to 1964 (incorporated as British Petroleum Nigeria, nationalised as African Petroleum — AP in 1979, rebranded as Forte Oil Plc in 2010, and renamed Ardova Plc in February 2020 following acquisition by Ignite Investments and Commodities Limited), Ardova Plc is one of Nigeria's largest indigenous downstream marketers. It operates hundreds of retail stations across all six geopolitical zones alongside coastal tank farms in Apapa (Lagos) and Onne (Rivers), bulk LPG facilities, lubricant blending, and aircraft refuelling.",
+      "keyAssets": [
+        "Nationwide retail filling-station network marketing PMS, AGO (diesel), kerosene, and AP lubricants across all 36 states and FCT",
+        "Coastal petroleum & bulk LPG storage terminals at Ijora/Apapa (Lagos State) and Onne (Rivers State)",
+        "Aviation Turbine Kerosene (Jet A-1) storage and into-plane refuelling operations at major Nigerian airports"
+      ],
+      "website": "https://ardovaplc.com/",
+      "sources": [
+        {
+          "label": "Ardova Plc — Official Corporate Website",
+          "url": "https://ardovaplc.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "Ardova Plc — Corporate History & Financial Report (PDF)",
+          "url": "https://cms.ardovaplc.com/reportfiles/finance/1739352645AP%20Unaudited%20FS%20for%20Q4%202024-%20Signed.pdf",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Retains the 'Plc' corporate suffix under CAMA following its 2023 take-private buyout from the Nigerian Exchange."
+    },
+    {
+      "slug": "conoil",
+      "name": "Conoil Plc",
+      "fullLegalName": "Conoil Plc",
+      "alternateNames": [
+        "Conoil",
+        "CONOIL",
+        "formerly National Oil",
+        "NOLCHEM",
+        "National Oil and Chemical Marketing"
+      ],
+      "type": "independent",
+      "segment": "downstream",
+      "focusSummary": "Downstream — Retail Fuel Marketing, Aviation Fuel, Lubricants & LPG",
+      "headquartersCity": "Lagos",
+      "headquartersLocality": "Bull Plaza, 38/39 Marina, Lagos Island",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "lagos-island",
+      "lgaName": "Lagos Island",
+      "operationalHubs": [
+        "Marina & Apapa, Lagos State (Corporate HQ, installation & lube blending)",
+        "Port Harcourt & Warri installations",
+        "Nationwide retail fuel stations & airport aviation depots (Ikeja, Abuja, Port Harcourt, Kano)"
+      ],
+      "airportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "port-harcourt-international",
+        "kano-mallam-aminu-kano"
+      ],
+      "listingStatus": "Public company listed on the Nigerian Exchange (NGX: CONOIL; majority equity held by Conpetro Limited)",
+      "regulatorScope": "NMDPRA (downstream retail stations, aviation turbine kerosene, lubricants & LPG)",
+      "operationsSummary": "Originally incorporated in 1960 for downstream marketing, converted into National Oil and Chemical Marketing Plc (NOLCHEM), and renamed Conoil Plc in January 2003 following privatisation to Conpetro Limited, Conoil Plc is one of Nigeria's oldest NGX-listed major petroleum marketers. It distributes PMS, diesel, aviation turbine kerosene (Jet A-1), LPG, and branded lubricants across retail stations, commercial/industrial clients, and airport aviation depots nationwide.",
+      "keyAssets": [
+        "Nationwide retail filling-station network, Apapa coastal depot, and regional storage depots",
+        "Aviation refuelling depots supplying domestic and international carriers at major Nigerian airports",
+        "Lubricants manufacturing and blending lines alongside household and industrial LPG distribution"
+      ],
+      "website": "https://ngxgroup.com/exchange/data/company-profile/?symbol=CONOIL",
+      "sources": [
+        {
+          "label": "Conoil Plc — FY 2025 Audited Financial Statements on NGX DocLib (June 2026 PDF)",
+          "url": "https://doclib.ngxgroup.com/Financial_NewsDocs/47162_CONOIL_PLC-_QUARTER_5_-_FINANCIAL_STATEMENT_FOR_2025_FINANCIAL_STATEMENTS_JUNE_2026.pdf",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Exchange (NGX) — Conoil Plc Listed Company Profile",
+          "url": "https://ngxgroup.com/exchange/data/company-profile/?symbol=CONOIL",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Conoil Plc (downstream NGX-listed marketer) is a distinct legal entity from Conoil Producing Limited (upstream shallow-water operator)."
+    }
+  ]
+}

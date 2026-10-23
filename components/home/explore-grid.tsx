@@ -5,6 +5,7 @@ import {
   Calculator,
   Droplet,
   FileText,
+  Flame,
   Landmark,
   Mail,
   MapPinned,
@@ -14,6 +15,7 @@ import {
 } from "lucide-react";
 import { getAirportsStats } from "@/lib/airports";
 import { getAllBanks } from "@/lib/banks";
+import { getOilGasStats } from "@/lib/oil-gas";
 import { getAllPostalStates, postalPlaceCount } from "@/lib/postal";
 import { lgaCounts } from "@/lib/lgas";
 import { GOV_DOCS } from "@/lib/data";
@@ -31,6 +33,7 @@ type Tile = {
 function buildTiles(): Tile[] {
   const banks = getAllBanks();
   const airportStats = getAirportsStats();
+  const oilGasStats = getOilGasStats();
   const postalStates = getAllPostalStates();
   const postalPlaces = postalPlaceCount();
   const { lgas, states } = lgaCounts();
@@ -79,6 +82,13 @@ function buildTiles(): Tile[] {
       promise: "International & domestic IATA / ICAO codes by state",
       Icon: Plane,
       badge: airportStats.total ? `${airportStats.total} airports · ${airportStats.international} int'l` : undefined,
+    },
+    {
+      href: "/oil-gas",
+      label: "Oil & gas operators",
+      promise: "NNPC, IOCs, NLNG, Dangote Refinery & major independents",
+      Icon: Flame,
+      badge: oilGasStats.total ? `${oilGasStats.total} operators · cited` : undefined,
     },
     {
       href: "/howto",
