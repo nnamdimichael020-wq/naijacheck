@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-23T11:36:25.608Z",
+  "checkedAt": "2026-10-23T17:05:18.913Z",
   "official": {
-    "USD": 1344.4049,
+    "USD": 1361.8394,
     "GBP": 1774.04,
     "EUR": 1485.77
   },
@@ -9,7 +9,7 @@
   "officialStatus": "recent",
   "blackMarketStatus": "recent",
   "crossRateStatus": "recent",
-  "officialAsOf": "2026-10-22T14:00:00.000Z",
+  "officialAsOf": "2026-10-23T14:00:00.000Z",
   "officialSource": {
     "label": "Central Bank of Nigeria: NFEM exchange rates",
     "url": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
@@ -34,7 +34,7 @@
       "sell": 1520
     }
   },
-  "blackMarketAsOf": "2026-10-23T11:07:00.000Z",
+  "blackMarketAsOf": "2026-10-23T16:06:00.000Z",
   "blackMarketSource": {
     "label": "Aboki Forex: black market and CBN widget",
     "url": "https://abokiforex.app/"
