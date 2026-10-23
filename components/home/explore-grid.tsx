@@ -9,8 +9,10 @@ import {
   Mail,
   MapPinned,
   MessagesSquare,
+  Plane,
   ShieldCheck,
 } from "lucide-react";
+import { getAirportsStats } from "@/lib/airports";
 import { getAllBanks } from "@/lib/banks";
 import { getAllPostalStates, postalPlaceCount } from "@/lib/postal";
 import { lgaCounts } from "@/lib/lgas";
@@ -28,6 +30,7 @@ type Tile = {
 
 function buildTiles(): Tile[] {
   const banks = getAllBanks();
+  const airportStats = getAirportsStats();
   const postalStates = getAllPostalStates();
   const postalPlaces = postalPlaceCount();
   const { lgas, states } = lgaCounts();
@@ -69,6 +72,13 @@ function buildTiles(): Tile[] {
       promise: "Every Local Government Area by state",
       Icon: MapPinned,
       badge: lgas ? `${lgas} LGAs · ${states} states/FCT` : undefined,
+    },
+    {
+      href: "/airports",
+      label: "Airports in Nigeria",
+      promise: "International & domestic IATA / ICAO codes by state",
+      Icon: Plane,
+      badge: airportStats.total ? `${airportStats.total} airports · ${airportStats.international} int'l` : undefined,
     },
     {
       href: "/howto",

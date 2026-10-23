@@ -23,6 +23,7 @@ import {
   createCategoryBubbleController,
 } from "./category-bubble-controller";
 import { getAllBanks } from "./banks";
+import { getAllAirports } from "./airports";
 import { getAllPostalStates } from "./postal";
 import { getAllLgaStates } from "./lgas";
 import { GOV_DOCS } from "./data";
@@ -130,6 +131,14 @@ function run() {
     assert.equal(segments.length, 2, `Places leaf ${leaf.href} must be /geo/[state], never a 3-segment inline LGA`);
     assert.match(leaf.label, /^All LGAs in /, "Places state label uses 'All LGAs in {State}'");
   }
+  const placesAirportsSub = placesBubble.subcategories.find((s) => s.id === "places-airports")!;
+  assert.ok(placesAirportsSub, "Airports lives under Places bubble (no 7th top-level bubble)");
+  assert.equal(placesAirportsSub.href, "/airports");
+  assert.equal(
+    placesAirportsSub.children?.length,
+    getAllAirports().length + 1,
+    "Places -> Airports lists hub + all 24 SSOT airports",
+  );
 
   // Guides: includes all GovHowTo slugs from SSOT
   const guidesBubble = tree.find((b) => b.id === "guides")!;

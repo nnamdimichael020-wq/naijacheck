@@ -25,6 +25,7 @@ import telecom from "../data/telecom.json";
 import recipesData from "../data/recipes.json";
 import learnData from "../data/learn.json";
 import banksData from "../data/banks.json";
+import airportsData from "../data/airports.json";
 import postalData from "../data/postal-codes.json";
 import lgasData from "../data/lgas.json";
 import type { ArticleBodyImage, ArticleImage } from "../lib/types";
@@ -1439,6 +1440,7 @@ const fixedSearch = [
   { path: "/codes/banks", title: "List of Commercial Banks in Nigeria — Sort Codes, USSD & Headquarters", kind: "banks", desc: "12 major retail commercial banks — 3-digit CBN/NIP sort codes (044, 058…), USSD (*901#, *737#…), Lagos headquarters & CBN licence tiers.", keys: "list of banks in nigeria commercial banks bank sort ussd code nip cbn headquarters licence 044 058 057 011 gtbank access zenith firstbank 737 901" },
   { path: "/codes/postal", title: "Nigerian Postal Codes — 6-digit NIPOST by State", kind: "postal", desc: "37 states/FCT · 77 places — head-office codes 100001–900001, district codes.", keys: "postal zip nipost 100001 900001 zip code state lga place" },
   { path: "/geo", title: "Nigeria 774 LGAs — Complete Local Government Areas by State", kind: "geo", desc: "All 774 LGAs (768 LGAs + 6 FCT Area Councils) — browse by state, search any LGA.", keys: "lga local government area 774 abia lagos kano council state" },
+  { path: "/airports", title: "Airports in Nigeria — International & Domestic IATA / ICAO Directory", kind: "airports", desc: "24 verified public commercial airports — 7 international gateways (LOS, ABV, KAN, PHC, ENU, QUO, MIU) + 17 domestic airports, IATA & DNxx ICAO codes.", keys: "airports in nigeria international airports domestic airports airport code iata icao faan ncaa los abv kan phc enu quo miu dnmm dnaa lagos abuja kano port harcourt enugu uyo maiduguri" },
   { path: "/tools/quiz", title: "NaijaCheck Price IQ & Slang Quiz", kind: "tools", desc: "Test your Price IQ on dated FX & fuel snapshots plus Nigerian slang from the trends desk.", keys: "quiz price iq slang check game test tools" },
 ];
 
@@ -1485,6 +1487,49 @@ const bankEntries = (
       sortDigits,
       ussdCodes,
       "bank sort code ussd nip cbn headquarters",
+    ]
+      .filter(Boolean)
+      .join(" "),
+  };
+});
+
+// Airports — 24 verified public commercial airports from data/airports.json SSOT
+const airportEntries = (
+  airportsData as {
+    airports: Array<{
+      slug: string;
+      name: string;
+      alternateNames?: string[];
+      city: string;
+      locality?: string;
+      stateName: string;
+      lgaName?: string;
+      type: "international" | "domestic";
+      iata?: string;
+      icao?: string;
+      operator?: string;
+    }>;
+  }
+).airports.map((a) => {
+  const codePair = [a.iata, a.icao].filter(Boolean).join(" / ");
+  const typeLabel = a.type === "international" ? "International gateway" : "Domestic commercial airport";
+  return {
+    path: `/airports/${a.slug}`,
+    title: `${a.name} (${codePair}) — ${a.city}, ${a.stateName}`,
+    kind: "airports",
+    desc: `${typeLabel} in ${a.city}, ${a.stateName}${a.iata ? ` · IATA ${a.iata}` : ""}${a.icao ? ` · ICAO ${a.icao}` : ""}.`,
+    keys: [
+      a.name,
+      ...(a.alternateNames ?? []),
+      a.city,
+      a.locality ?? "",
+      a.stateName,
+      a.lgaName ?? "",
+      a.iata ?? "",
+      a.icao ?? "",
+      a.type,
+      a.slug.replace(/-/g, " "),
+      "airport code iata icao nigeria faan aviation",
     ]
       .filter(Boolean)
       .join(" "),
@@ -1546,7 +1591,7 @@ const geoLgaEntries = (lgasData as { states: Array<{ slug: string; name: string;
   })),
 );
 
-const omniExtras = [...chartSearchEntries, ...bankEntries, ...postalStateEntries, ...postalLeafEntries, ...geoStateEntries, ...geoLgaEntries] as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;
+const omniExtras = [...chartSearchEntries, ...bankEntries, ...airportEntries, ...postalStateEntries, ...postalLeafEntries, ...geoStateEntries, ...geoLgaEntries] as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;
 // Merge fixedSearch + omni extras + articles, de-dupe by path (articles win for overlapping /prices/fuel etc should not duplicate)
 const articleSearchEntries = articles.map((a) => ({ path: a.path, title: a.title, kind: a.section, desc: a.metaDescription, keys: a.keywords.join(" ") }));
 const deduped = new Map<string, { path: string; title: string; kind: string; desc: string; keys: string }>();
@@ -1572,6 +1617,10 @@ const liveMarkets = articles
 
 const searchTipsSeed = {
   banks: (banksData as { banks: Array<{ name: string }> }).banks.map((b) => b.name),
+  airports: (airportsData as { airports: Array<{ city: string; iata?: string }> }).airports.map((a) => ({
+    city: cleanPlaceName(a.city),
+    iata: a.iata ?? "",
+  })),
   postalStates: (postalData as { states: Array<{ name: string }> }).states.map((s) => s.name),
   postalPlaces: [
     ...new Set(

@@ -200,7 +200,7 @@ function check() {
   assert.ok(!isTopLevelPath("/admin"), "/admin excluded from public hubs");
   assert.ok(!isTopLevelPath("/search"), "/search excluded from hub dropdown");
 
-  assert.equal(DROPDOWN_TOP_LEVEL_ALLOWLIST.length, 18, "16 one-segment hubs + 2 explicit product hubs (/codes/banks, /codes/postal)");
+  assert.equal(DROPDOWN_TOP_LEVEL_ALLOWLIST.length, 19, "17 one-segment hubs + 2 explicit product hubs (/codes/banks, /codes/postal)");
   const exceptionSet = new Set<string>(DROPDOWN_TWO_SEGMENT_HUB_EXCEPTIONS);
   for (const p of DROPDOWN_TOP_LEVEL_ALLOWLIST) {
     if (!exceptionSet.has(p)) {
@@ -222,6 +222,8 @@ function check() {
     "/codes/postal/lagos/ikeja",
     "/geo/lagos",
     "/geo/lagos/ikeja",
+    "/airports/lagos-murtala-muhammed",
+    "/airports/abuja-nnamdi-azikiwe",
     "/charts/parallel-usd-buy",
     "/howto/nin-correction",
     "/learn/budget-80k",
@@ -262,6 +264,22 @@ function check() {
 
   // Category filter in dropdown stays shallow (section hub only; deep browse lives on /search)
   assert.deepEqual(rankedDropdownSearch(index, "", "banks", 8).map((r) => r.path), ["/codes/banks"]);
+  assert.deepEqual(rankedDropdownSearch(index, "", "airports", 8).map((r) => r.path), ["/airports"]);
+
+  // Airports search checks: "LOS" and "Abuja airport" surface /airports in dropdown and deep airport pages on /search
+  const ddLos = rankedDropdownSearch(index, "LOS", "all", 8);
+  assert.ok(ddLos.some((r) => r.path === "/airports"), 'dropdown "LOS" surfaces /airports hub');
+  assert.ok(!ddLos.some((r) => r.path.startsWith("/airports/")), 'dropdown "LOS" excludes deep /airports/[slug]');
+  const deepLos = rankedSearch(index, "LOS", "all", 8);
+  assert.ok(
+    deepLos.some((r) => r.path === "/airports/lagos-murtala-muhammed"),
+    'full /search "LOS" finds /airports/lagos-murtala-muhammed',
+  );
+  const deepAbujaAirport = rankedSearch(index, "Abuja airport", "all", 8);
+  assert.ok(
+    deepAbujaAirport.some((r) => r.path === "/airports/abuja-nnamdi-azikiwe"),
+    'full /search "Abuja airport" finds /airports/abuja-nnamdi-azikiwe',
+  );
   assert.deepEqual(rankedDropdownSearch(index, "", "postal", 8).map((r) => r.path), ["/codes/postal"]);
   assert.deepEqual(rankedDropdownSearch(index, "", "geo", 8).map((r) => r.path), ["/geo"]);
   assert.deepEqual(rankedDropdownSearch(index, "", "cities", 8).map((r) => r.path), ["/prices"]);

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ShareControls } from "@/components/share-controls";
 import LgaTableFilter from "@/components/geo/lga-table-filter";
 import { getAllLgaStates, getLgaState, LGAS_FILE_SOURCES } from "@/lib/lgas";
+import { getAirportsByState } from "@/lib/airports";
 import { getPostalLeavesForState } from "@/lib/postal-geo";
 
 export async function generateStaticParams(){
@@ -28,6 +29,7 @@ export default async function StatePage({params}:{params:Promise<{state:string}>
   const state=getLgaState(slug);
   if(!state) notFound();
   const postal=getPostalLeavesForState(slug);
+  const stateAirports=getAirportsByState(slug);
   const jsonLd={
     "@context":"https://schema.org",
     "@type":"CollectionPage",
@@ -69,6 +71,20 @@ export default async function StatePage({params}:{params:Promise<{state:string}>
             ))}
           </div>
           <div><Link href={`/codes/postal/${slug}`} className="text-xs underline">All postal places in {state.name} →</Link></div>
+        </section>
+      )}
+
+      {stateAirports.length>0 && (
+        <section className="rounded-2xl border border-border bg-card p-4 space-y-3">
+          <h2 className="text-sm font-semibold">Commercial airport{stateAirports.length!==1?"s":""} in {state.name}</h2>
+          <div className="flex flex-wrap gap-2">
+            {stateAirports.map(a=>(
+              <Link key={a.slug} href={`/airports/${a.slug}`} className="rounded-full border border-border px-3 py-1.5 text-xs hover:bg-muted">
+                {a.name} ({[a.iata, a.icao].filter(Boolean).join(" / ")})<span className="text-muted-foreground"> ↗</span>
+              </Link>
+            ))}
+          </div>
+          <div><Link href="/airports" className="text-xs underline">All Nigerian airports directory →</Link></div>
         </section>
       )}
 
