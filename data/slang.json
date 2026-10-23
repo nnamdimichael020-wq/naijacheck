@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-23T04:47:04.870Z",
+  "updatedAt": "2026-10-23T11:36:25.608Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "japa",
-    "achalugo",
+    "chop-life",
     "detty-december",
     "oblee",
     "wahala"
@@ -36,8 +36,8 @@
       "slug": "oblee",
       "term": "Oblee",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 20,
       "confidence": "medium-high",
       "meaning": "Going out to enjoy yourself: vibes, party, outside life, whether you have money or not.",
       "detail": "Oblee became the clarion call of the festive nightlife season. Giftgram and other explainers define it as enjoying life, being outside, partying and living lavishly, even on a small budget. Some outlets give it a looser meaning, so context matters, but the common use is 'we dey oblee' meaning we are out here having fun.",
@@ -59,8 +59,8 @@
       "slug": "achalugo",
       "term": "Achalugo",
       "kind": "slang",
-      "trend": "rising",
-      "trendScore": 75,
+      "trend": "quiet",
+      "trendScore": 0,
       "confidence": "medium",
       "meaning": "An Igbo expression for a beautiful, graceful woman. Some people also use it for a carefree, go-with-the-flow vibe.",
       "detail": "Achalugo is Igbo. Most usage is a compliment meaning a woman of beauty, grace and character, with some online sources translating it as 'God's treasure' or 'the abode of an eagle'. Gen Z also picked it up for its chill energy, so you will see it used for someone who is calm and unbothered. Check the context before you use it on someone.",
@@ -75,7 +75,7 @@
       ],
       "platform": "TikTok, WhatsApp status",
       "source": "Premium Times year-in-review (Dec 2025), public TikTok explainers (Mar-Aug 2026), Awajis dictionary (Aug 2026). Translations vary.",
-      "mentions7d": 3
+      "mentions7d": 0
     },
     {
       "slug": "sope-purr",
@@ -165,7 +165,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage. See our passport and visa guides for the costs.",
-      "mentions7d": 4
+      "mentions7d": 5
     },
     {
       "slug": "soft-life",
@@ -194,8 +194,8 @@
       "slug": "wahala",
       "term": "Wahala",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 20,
       "confidence": "high",
       "meaning": "Trouble, stress or problems. Sometimes a dramatic word for conflict.",
       "detail": "Wahala comes from Hausa and entered Nigerian pidgin long ago. It covers everything from small stress to full drama. 'No wahala' means no problem, and 'Wahala dey' means there is trouble. It is one of the most used words in Nigerian English.",
@@ -217,7 +217,7 @@
       "term": "Chop life",
       "kind": "slang",
       "trend": "steady",
-      "trendScore": 25,
+      "trendScore": 40,
       "confidence": "high",
       "meaning": "Eating well, enjoying good food, and living the good life through meals.",
       "detail": "Chop is pidgin for eat. Chop life is about enjoying food, sometimes for less money, like buying a plate of jollof and sharing it with friends. It is also a way to talk about the food economy and how far a naira goes at the market.",
@@ -232,7 +232,7 @@
       ],
       "platform": "Instagram, WhatsApp",
       "source": "Common usage in Nigerian pidgin.",
-      "mentions7d": 1
+      "mentions7d": 2
     },
     {
       "slug": "sharp-sharp",
@@ -283,8 +283,8 @@
       "slug": "gbese",
       "term": "Gbese",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 20,
       "confidence": "high",
       "meaning": "Debt or a serious financial problem. Often used as a joke, but it is real stress for many people.",
       "detail": "Gbese is Yoruba and pidgin. It is used for loans, owed money and bills. In Naija, gbese can ruin relationships, so many people use the word to talk about credit responsibly and avoid getting trapped in the cycle of borrowing for ego.",
@@ -306,7 +306,7 @@
       "term": "Detty December",
       "kind": "trend",
       "trend": "steady",
-      "trendScore": 50,
+      "trendScore": 40,
       "confidence": "high",
       "meaning": "The December festive season when diaspora Africans come home and spend heavily on parties, travel and fashion.",
       "detail": "Detty December started as a Ghanaian and Nigerian festive phrase. It describes the nightlife and money flow when returning diaspora folk spend in Lagos, Accra and other cities. For traders, it is the busiest season of the year: food, fashion and events see huge spikes.",
@@ -327,8 +327,8 @@
       "slug": "sabi",
       "term": "Sabi",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 20,
       "confidence": "high",
       "meaning": "To know or to have skill in something. 'E sabi' means he knows his stuff.",
       "detail": "Sabi is pidgin for knowing. It is used for skills and street knowledge: 'she sabi cook', 'he sabi phones'. In the hustle world, sabi is your real competitive advantage, which is why we ask about your skills in the hustle generator.",
@@ -371,8 +371,8 @@
       "slug": "jara",
       "term": "Jara",
       "kind": "slang",
-      "trend": "steady",
-      "trendScore": 25,
+      "trend": "quiet",
+      "trendScore": 20,
       "confidence": "medium-high",
       "meaning": "Extra or bonus, especially a small extra you add to a purchase for goodwill.",
       "detail": "Jara is a Yoruba word that means extra. Market traders often add jara to a bag or a bunch to keep customers happy. It is a small thing that builds loyalty, and it is a smart tactic for any small business.",

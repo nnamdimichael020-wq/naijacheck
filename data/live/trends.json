@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-23T04:47:04.870Z",
+  "checkedAt": "2026-10-23T11:36:25.608Z",
   "seeded": false,
   "method": "Mentions = Google News items for \"term\" Nigeria published in the last 7 days (the feed returns the most recent items, so this is a floor). Score = mentions scaled to the highest term today. Wikipedia = official pageviews, last 7 days vs previous 7.",
   "limitation": "X and TikTok are not read. Their data needs a paid API, so these signals come from news and Wikipedia only.",
@@ -7,60 +7,60 @@
     {
       "slug": "japa",
       "term": "Japa",
-      "mentions7d": 4,
+      "mentions7d": 5,
       "score": 100
     },
     {
-      "slug": "achalugo",
-      "term": "Achalugo",
-      "mentions7d": 3,
-      "score": 75
+      "slug": "chop-life",
+      "term": "Chop life",
+      "mentions7d": 2,
+      "score": 40
     },
     {
       "slug": "detty-december",
       "term": "Detty December",
       "mentions7d": 2,
-      "score": 50
+      "score": 40
     },
     {
       "slug": "oblee",
       "term": "Oblee",
       "mentions7d": 1,
-      "score": 25
+      "score": 20
     },
     {
       "slug": "wahala",
       "term": "Wahala",
       "mentions7d": 1,
-      "score": 25
-    },
-    {
-      "slug": "chop-life",
-      "term": "Chop life",
-      "mentions7d": 1,
-      "score": 25
+      "score": 20
     },
     {
       "slug": "gbese",
       "term": "Gbese",
       "mentions7d": 1,
-      "score": 25
+      "score": 20
     },
     {
       "slug": "sabi",
       "term": "Sabi",
       "mentions7d": 1,
-      "score": 25
+      "score": 20
     },
     {
       "slug": "jara",
       "term": "Jara",
       "mentions7d": 1,
-      "score": 25
+      "score": 20
     },
     {
       "slug": "kelebu",
       "term": "Kelebu",
+      "mentions7d": 0,
+      "score": 0
+    },
+    {
+      "slug": "achalugo",
+      "term": "Achalugo",
       "mentions7d": 0,
       "score": 0
     },

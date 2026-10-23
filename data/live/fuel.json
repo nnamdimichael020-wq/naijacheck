@@ -1,8 +1,8 @@
 {
-  "asOf": "2026-10-22T23:21:00.000Z",
+  "asOf": "2026-10-23T11:21:00.000Z",
   "medians": {
-    "petrol": 1342,
-    "diesel": 1785,
+    "petrol": 1343,
+    "diesel": 1787.5,
     "lpg": 1217.5
   },
   "depots": {
@@ -11,7 +11,7 @@
     "lpg": []
   },
   "trend30d": [],
-  "checkedAt": "2026-10-23T04:47:04.870Z",
+  "checkedAt": "2026-10-23T11:36:25.608Z",
   "seeded": false,
   "source": {
     "label": "Awajis fuel tables (petroleumprice.ng depot data)",
