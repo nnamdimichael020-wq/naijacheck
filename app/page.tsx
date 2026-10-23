@@ -16,6 +16,7 @@ import { InstallTip } from "@/components/install-tip";
 import { LocationCard } from "@/components/live/location-card";
 import { LiveNewsFeed } from "@/components/live/news-feed";
 import { ShareControls } from "@/components/share-controls";
+import { CategoryBubbleBar } from "@/components/home/category-bubble-bar";
 import { ExploreGrid } from "@/components/home/explore-grid";
 import { DATASET_REGISTRY } from "@/lib/source-registry";
 import {
@@ -81,6 +82,9 @@ export default function HomePage() {
 
   return (
     <div className="space-y-8">
+      {/* Slim 6-bubble main-hub category rail (home-first, directly under header/WAT/ticker, above briefing) */}
+      <CategoryBubbleBar />
+
       {/* Above-the-fold Daily Briefing */}
       <header className="space-y-2">
         <div className="flex flex-wrap items-center justify-between gap-2">
