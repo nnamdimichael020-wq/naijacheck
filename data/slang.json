@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-23T17:05:18.913Z",
+  "updatedAt": "2026-10-23T21:23:36.629Z",
   "slangOfTheDay": "sope-purr",
   "trendingNow": [
     "japa",
     "detty-december",
     "achalugo",
     "chop-life",
-    "oblee"
+    "sabi"
   ],
   "terms": [
     {
@@ -36,8 +36,8 @@
       "slug": "oblee",
       "term": "Oblee",
       "kind": "slang",
-      "trend": "quiet",
-      "trendScore": 20,
+      "trend": "steady",
+      "trendScore": 25,
       "confidence": "medium-high",
       "meaning": "Going out to enjoy yourself: vibes, party, outside life, whether you have money or not.",
       "detail": "Oblee became the clarion call of the festive nightlife season. Giftgram and other explainers define it as enjoying life, being outside, partying and living lavishly, even on a small budget. Some outlets give it a looser meaning, so context matters, but the common use is 'we dey oblee' meaning we are out here having fun.",
@@ -60,7 +60,7 @@
       "term": "Achalugo",
       "kind": "slang",
       "trend": "steady",
-      "trendScore": 40,
+      "trendScore": 50,
       "confidence": "medium",
       "meaning": "An Igbo expression for a beautiful, graceful woman. Some people also use it for a carefree, go-with-the-flow vibe.",
       "detail": "Achalugo is Igbo. Most usage is a compliment meaning a woman of beauty, grace and character, with some online sources translating it as 'God's treasure' or 'the abode of an eagle'. Gen Z also picked it up for its chill energy, so you will see it used for someone who is calm and unbothered. Check the context before you use it on someone.",
@@ -165,7 +165,7 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage. See our passport and visa guides for the costs.",
-      "mentions7d": 5
+      "mentions7d": 4
     },
     {
       "slug": "soft-life",
@@ -194,8 +194,8 @@
       "slug": "wahala",
       "term": "Wahala",
       "kind": "slang",
-      "trend": "quiet",
-      "trendScore": 20,
+      "trend": "steady",
+      "trendScore": 25,
       "confidence": "high",
       "meaning": "Trouble, stress or problems. Sometimes a dramatic word for conflict.",
       "detail": "Wahala comes from Hausa and entered Nigerian pidgin long ago. It covers everything from small stress to full drama. 'No wahala' means no problem, and 'Wahala dey' means there is trouble. It is one of the most used words in Nigerian English.",
@@ -217,7 +217,7 @@
       "term": "Chop life",
       "kind": "slang",
       "trend": "steady",
-      "trendScore": 40,
+      "trendScore": 50,
       "confidence": "high",
       "meaning": "Eating well, enjoying good food, and living the good life through meals.",
       "detail": "Chop is pidgin for eat. Chop life is about enjoying food, sometimes for less money, like buying a plate of jollof and sharing it with friends. It is also a way to talk about the food economy and how far a naira goes at the market.",
@@ -284,7 +284,7 @@
       "term": "Gbese",
       "kind": "slang",
       "trend": "quiet",
-      "trendScore": 20,
+      "trendScore": 0,
       "confidence": "high",
       "meaning": "Debt or a serious financial problem. Often used as a joke, but it is real stress for many people.",
       "detail": "Gbese is Yoruba and pidgin. It is used for loans, owed money and bills. In Naija, gbese can ruin relationships, so many people use the word to talk about credit responsibly and avoid getting trapped in the cycle of borrowing for ego.",
@@ -299,14 +299,14 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage in Nigerian English and pidgin.",
-      "mentions7d": 1
+      "mentions7d": 0
     },
     {
       "slug": "detty-december",
       "term": "Detty December",
       "kind": "trend",
       "trend": "rising",
-      "trendScore": 60,
+      "trendScore": 75,
       "confidence": "high",
       "meaning": "The December festive season when diaspora Africans come home and spend heavily on parties, travel and fashion.",
       "detail": "Detty December started as a Ghanaian and Nigerian festive phrase. It describes the nightlife and money flow when returning diaspora folk spend in Lagos, Accra and other cities. For traders, it is the busiest season of the year: food, fashion and events see huge spikes.",
@@ -327,8 +327,8 @@
       "slug": "sabi",
       "term": "Sabi",
       "kind": "slang",
-      "trend": "quiet",
-      "trendScore": 20,
+      "trend": "steady",
+      "trendScore": 50,
       "confidence": "high",
       "meaning": "To know or to have skill in something. 'E sabi' means he knows his stuff.",
       "detail": "Sabi is pidgin for knowing. It is used for skills and street knowledge: 'she sabi cook', 'he sabi phones'. In the hustle world, sabi is your real competitive advantage, which is why we ask about your skills in the hustle generator.",
@@ -343,14 +343,14 @@
       ],
       "platform": "Everywhere",
       "source": "Common usage in Nigerian pidgin.",
-      "mentions7d": 1
+      "mentions7d": 2
     },
     {
       "slug": "gist",
       "term": "Gist",
       "kind": "slang",
-      "trend": "quiet",
-      "trendScore": 20,
+      "trend": "steady",
+      "trendScore": 50,
       "confidence": "high",
       "meaning": "News, gossip or a story. 'Give me the gist' means tell me what's happening.",
       "detail": "Gist is a Nigerian English word for information, usually gossip. It moves fast in group chats. Everyone wants the gist, but be careful: gist can mean facts or rumours, so check before you share.",
@@ -365,14 +365,14 @@
       ],
       "platform": "WhatsApp, X",
       "source": "Common usage in Nigerian English.",
-      "mentions7d": 1
+      "mentions7d": 2
     },
     {
       "slug": "jara",
       "term": "Jara",
       "kind": "slang",
-      "trend": "quiet",
-      "trendScore": 20,
+      "trend": "steady",
+      "trendScore": 25,
       "confidence": "medium-high",
       "meaning": "Extra or bonus, especially a small extra you add to a purchase for goodwill.",
       "detail": "Jara is a Yoruba word that means extra. Market traders often add jara to a bag or a bunch to keep customers happy. It is a small thing that builds loyalty, and it is a smart tactic for any small business.",

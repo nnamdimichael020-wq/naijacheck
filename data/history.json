@@ -2,15 +2,6 @@
   "collectionStartedAt": "2026-10-10T08:00:42.158Z",
   "points": [
     {
-      "dataset": "parallel-usd-ngn-buy",
-      "observedAt": "2026-10-10T08:00:42.158Z",
-      "sourceTime": "2026-10-10T07:06:00.000Z",
-      "value": 1370,
-      "unit": "NGN per USD",
-      "geography": "Nigeria indicative quote",
-      "sourceUrl": "https://abokiforex.app/"
-    },
-    {
       "dataset": "fuel-depot-petrol",
       "observedAt": "2026-10-10T08:00:42.158Z",
       "sourceTime": "2026-10-09T23:21:00.000Z",
@@ -1895,6 +1886,42 @@
       "dataset": "fuel-depot-lpg",
       "observedAt": "2026-10-23T17:05:18.913Z",
       "sourceTime": "2026-10-23T16:21:00.000Z",
+      "value": 1217.5,
+      "unit": "NGN per kg",
+      "geography": "Nigeria depot median",
+      "sourceUrl": "https://awajis.com/fuel-price-in-nigeria-today/"
+    },
+    {
+      "dataset": "parallel-usd-ngn-buy",
+      "observedAt": "2026-10-23T21:23:36.629Z",
+      "sourceTime": "2026-10-23T21:07:00.000Z",
+      "value": 1372,
+      "unit": "NGN per USD",
+      "geography": "Nigeria indicative quote",
+      "sourceUrl": "https://abokiforex.app/"
+    },
+    {
+      "dataset": "fuel-depot-petrol",
+      "observedAt": "2026-10-23T21:23:36.629Z",
+      "sourceTime": "2026-10-23T20:21:00.000Z",
+      "value": 1343,
+      "unit": "NGN per litre",
+      "geography": "Nigeria depot median",
+      "sourceUrl": "https://awajis.com/fuel-price-in-nigeria-today/"
+    },
+    {
+      "dataset": "fuel-depot-diesel",
+      "observedAt": "2026-10-23T21:23:36.629Z",
+      "sourceTime": "2026-10-23T20:21:00.000Z",
+      "value": 1840,
+      "unit": "NGN per litre",
+      "geography": "Nigeria depot median",
+      "sourceUrl": "https://awajis.com/fuel-price-in-nigeria-today/"
+    },
+    {
+      "dataset": "fuel-depot-lpg",
+      "observedAt": "2026-10-23T21:23:36.629Z",
+      "sourceTime": "2026-10-23T20:21:00.000Z",
       "value": 1217.5,
       "unit": "NGN per kg",
       "geography": "Nigeria depot median",
