@@ -1,4 +1,5 @@
 import { ARTICLES } from "@/lib/articles";
+import { getAllAirports } from "@/lib/airports";
 import { getAllBanks } from "@/lib/banks";
 import { CHART_PAGES } from "@/lib/chart-pages";
 import {
@@ -114,6 +115,7 @@ function compactSubs(items: Array<BubbleSubcategory | null>): BubbleSubcategory[
  */
 export function buildCategoryBubbleTree(): CategoryBubble[] {
   const banks = getAllBanks();
+  const airports = getAllAirports();
   const postalStates = getAllPostalStates();
   const postalDistricts = getAllPostalAreaParams()
     .slice(0, POSTAL_DISTRICT_CAP)
@@ -264,7 +266,7 @@ export function buildCategoryBubbleTree(): CategoryBubble[] {
     ]),
   };
 
-  // 3) Places — 37 states + FCT -> `/geo/[state]` ("All LGAs in {State}"), NEVER 774 rows inline
+  // 3) Places — 37 states + FCT (`/geo/[state]`) + Nigerian Airports (`/airports`), NEVER 774 rows inline
   const places: CategoryBubble = {
     id: "places",
     label: "Places",
@@ -283,6 +285,24 @@ export function buildCategoryBubbleTree(): CategoryBubble[] {
           href: `/geo/${s.slug}`,
           meta: `${s.count} LGAs`,
         })),
+      }),
+      makeSubcategory({
+        id: "places-airports",
+        label: "Airports in Nigeria",
+        href: "/airports",
+        meta: `${airports.length} airports`,
+        children: [
+          {
+            label: "All Nigerian Airports Directory",
+            href: "/airports",
+            meta: `${airports.length} airports`,
+          },
+          ...airports.map((a) => ({
+            label: `${a.city} — ${a.name}`,
+            href: `/airports/${a.slug}`,
+            meta: [a.iata, a.icao].filter(Boolean).join(" · "),
+          })),
+        ],
       }),
     ]),
   };

@@ -1,0 +1,953 @@
+{
+  "updatedAt": "2026-10-23",
+  "scope": "24 major public commercial airports in Nigeria (7 federally designated scheduled international passenger gateways and 17 major domestic commercial airports, including seasonal Hajj and cargo-capable terminals), manually verified from FAAN, NCAA, Federal Ministry of Aviation, state airport portals, and established aeronautical references. Excludes military airbases, private oil-company helipads, and unscheduled bush airstrips.",
+  "notes": "Classification reflects regular scheduled passenger designation as verified on 2026-10-23: 'international' covers the 7 gateways designated by the Federal Government for scheduled cross-border passenger traffic (Lagos, Abuja, Kano, Port Harcourt, Enugu, Uyo, and Maiduguri). Several Nigerian domestic commercial airports carry 'International' in their ceremonial or cargo names or handle seasonal Hajj charters while operating scheduled domestic passenger routes; those nuances are stated explicitly per airport. Unassigned global IATA codes are omitted rather than guessed. NaijaCheck does not display live flight status, ticket fares, or booking schedules.",
+  "hubSources": [
+    {
+      "label": "Federal Airports Authority of Nigeria (FAAN) — International Airports Network (official)",
+      "url": "https://faan.gov.ng/international-airports/",
+      "kind": "primary"
+    },
+    {
+      "label": "Federal Airports Authority of Nigeria (FAAN) — Domestic Airports Profiles & Runway Data (official)",
+      "url": "https://faan.gov.ng/local-airports/",
+      "kind": "primary"
+    },
+    {
+      "label": "Nigeria Civil Aviation Authority (NCAA) — Aerodrome Certification & Safety Oversight (official)",
+      "url": "https://ncaa.gov.ng/media/news/ncaa-certifies-lagos-abuja-international-airports/",
+      "kind": "primary"
+    },
+    {
+      "label": "Federal Ministry of Information — Federal Government International Airport Upgrades (official)",
+      "url": "https://fmino.gov.ng/fg-upgrades-muhammadu-buhari-airport-maiduguri-to-an-international-airport/",
+      "kind": "primary"
+    },
+    {
+      "label": "US FAA International Flight Information Manual — Nigeria ICAO Location Indicators (NG)",
+      "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+      "kind": "secondary"
+    },
+    {
+      "label": "UN Logistics Cluster — Nigeria Aviation Infrastructure Assessment",
+      "url": "https://lca.logcluster.org/22-nigeria-aviation",
+      "kind": "secondary"
+    }
+  ],
+  "airports": [
+    {
+      "slug": "abuja-nnamdi-azikiwe",
+      "name": "Nnamdi Azikiwe International Airport",
+      "alternateNames": [
+        "Abuja International Airport",
+        "NAIA Abuja"
+      ],
+      "city": "Abuja",
+      "locality": "Airport Road corridor, Abuja Municipal",
+      "stateSlug": "fct-abuja",
+      "stateName": "FCT — Abuja",
+      "lgaSlug": "abuja",
+      "lgaName": "Abuja Municipal",
+      "postalHref": "/codes/postal/fct-abuja",
+      "postalLabel": "FCT Abuja postal codes (900001)",
+      "type": "international",
+      "iata": "ABV",
+      "icao": "DNAA",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "Single 3,610 m × 60 m asphalt runway (04/22); separate international terminal (commissioned December 2018) and General Aviation / domestic wing.",
+      "operationsNote": "Primary diplomatic and capital-city gateway serving Nigeria's Federal Capital Territory with scheduled international flights across Africa, Europe, and the Middle East alongside Nigeria's second-busiest domestic trunk network. Recertified by the NCAA under Nig.CARs Part 12 in November 2024.",
+      "sources": [
+        {
+          "label": "FAAN — Nnamdi Azikiwe International Airport Abuja Profile (official)",
+          "url": "https://faan.gov.ng/naia-abuja/",
+          "kind": "primary"
+        },
+        {
+          "label": "NCAA — Recertification of Lagos and Abuja International Airports (official)",
+          "url": "https://ncaa.gov.ng/media/news/ncaa-certifies-lagos-abuja-international-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Entry & ICAO DNAA Listing",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Located roughly 20–40 km southwest of central Abuja districts (Garki, Wuse, Maitama) along the Umaru Musa Yar'Adua Expressway."
+    },
+    {
+      "slug": "akure-airport",
+      "name": "Akure Airport",
+      "alternateNames": [
+        "Olumuyiwa Bernard Aliu Airport"
+      ],
+      "city": "Akure",
+      "locality": "Obale community, Akure North",
+      "stateSlug": "ondo",
+      "stateName": "Ondo",
+      "lgaSlug": "akure-north",
+      "lgaName": "Akure North",
+      "postalHref": "/codes/postal/ondo",
+      "postalLabel": "Ondo State postal codes (340001)",
+      "type": "domestic",
+      "iata": "AKR",
+      "icao": "DNAK",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "2,800 m × 45 m asphalt runway (03R/21L) published in FAAN domestic aerodrome specifications.",
+      "operationsNote": "Commissioned on 8 February 1986 as a domestic commercial airport serving Akure and Ondo State, about 12 km east of Akure city centre at Obale. Named Olumuyiwa Bernard Aliu Airport in the June 2023 federal aviation directive in honour of the Nigerian former President of the ICAO Council.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Akure Airport Profile (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "UN Logistics Cluster — Nigeria Aviation Aerodrome Reference",
+          "url": "https://lca.logcluster.org/22-nigeria-aviation",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Serves scheduled domestic flights linking Ondo and neighbouring Ekiti communities to Lagos and Abuja."
+    },
+    {
+      "slug": "anambra-chinua-achebe",
+      "name": "Chinua Achebe International Cargo and Passenger Airport",
+      "alternateNames": [
+        "Anambra International Cargo Airport",
+        "Umueri Airport"
+      ],
+      "city": "Umueri (Onitsha / Awka)",
+      "locality": "Ivite-Umueri, Anambra East",
+      "stateSlug": "anambra",
+      "stateName": "Anambra",
+      "lgaSlug": "anambra-east",
+      "lgaName": "Anambra East",
+      "postalHref": "/codes/postal/anambra",
+      "postalLabel": "Anambra State postal codes (420001)",
+      "type": "domestic",
+      "icao": "DNAN",
+      "operator": "Anambra State Government (Anambra Airport City Infrastructure Limited), with FAAN safety/firefighting partnership",
+      "runwayNote": "3,700 m asphalt runway (06/24) designed for wide-body cargo and commercial passenger aircraft.",
+      "operationsNote": "Inaugurated on 30 October 2021 by the Anambra State Government, cleared by the NCAA for commercial passenger flights in December 2021, and renamed after literary icon Chinua Achebe on 1 October 2023. Operates scheduled domestic commercial routes linking the Onitsha–Awka–Nnewi commercial corridor to Lagos and Abuja.",
+      "sources": [
+        {
+          "label": "Chinua Achebe International Cargo Airport — Official Anambra State Airport Site",
+          "url": "https://caica.anambrastate.gov.ng/about-us/",
+          "kind": "primary"
+        },
+        {
+          "label": "OurAirports — Nigeria Anambra State Aerodrome Record (DNAN)",
+          "url": "https://ourairports.com/countries/NG/AN/airports.hxl",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Official ICAO location indicator is DNAN. Global 3-letter IATA code is omitted here because international aeronautical registries record no assigned IATA code for Umueri (in IATA's global directory, ANA is assigned to Anaa Airport, French Polynesia, although Nigerian domestic airline booking engines use ANA as a local booking code)."
+    },
+    {
+      "slug": "asaba-airport",
+      "name": "Asaba International Airport",
+      "alternateNames": [
+        "Asaba Airport"
+      ],
+      "city": "Asaba",
+      "locality": "Benin–Asaba Expressway, Oshimili South",
+      "stateSlug": "delta",
+      "stateName": "Delta",
+      "lgaSlug": "oshimili-south",
+      "lgaName": "Oshimili South",
+      "postalHref": "/codes/postal/delta",
+      "postalLabel": "Delta State postal codes (320001)",
+      "type": "domestic",
+      "iata": "ABB",
+      "icao": "DNAS",
+      "operator": "Asaba Airport Company Limited (30-year PPP concession from Delta State Government signed February 2021)",
+      "runwayNote": "3,400 m asphalt runway (11/29) rehabilitated and upgraded to NCAA Category 6 standards.",
+      "operationsNote": "State-owned commercial airport serving Delta State's capital Asaba as well as the neighbouring Onitsha commercial bridgehead across the River Niger. Operated under a 30-year public-private concession by Asaba Airport Company Limited with scheduled domestic passenger flights to Lagos and Abuja.",
+      "sources": [
+        {
+          "label": "UN Logistics Cluster — Nigeria Aviation: Asaba Airport (DNAS / ABB)",
+          "url": "https://lca.logcluster.org/22-nigeria-aviation",
+          "kind": "secondary"
+        },
+        {
+          "label": "The Guardian Nigeria — Delta State 30-Year Concession of Asaba Airport to Asaba Airport Company",
+          "url": "https://guardian.ng/business-services/aviation-business/airport-concessioning-turning-states-liabilities-to-assets/",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Despite 'International' in its branding name, regular scheduled commercial passenger services at Asaba are domestic."
+    },
+    {
+      "slug": "benin-airport",
+      "name": "Benin Airport",
+      "alternateNames": [
+        "Oba Akenzua II Airport"
+      ],
+      "city": "Benin City",
+      "locality": "Airport Road, Ogba-Oko, Oredo",
+      "stateSlug": "edo",
+      "stateName": "Edo",
+      "lgaSlug": "oredo",
+      "lgaName": "Oredo",
+      "postalHref": "/codes/postal/edo",
+      "postalLabel": "Edo State postal codes (300001)",
+      "type": "domestic",
+      "iata": "BNI",
+      "icao": "DNBE",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "2,400 m × 45 m asphalt runway (05R/23L) published by FAAN.",
+      "operationsNote": "Constructed in 1956 during the colonial aviation expansion and located roughly 2 km southwest of central Benin City in Edo State. One of Nigeria's busiest South-South domestic commercial airports, renamed Oba Akenzua II Airport under the June 2023 federal naming directive.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Benin Airport Profile (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "UN Logistics Cluster — Nigeria Aviation: Benin Airport (DNBE / BNI)",
+          "url": "https://lca.logcluster.org/22-nigeria-aviation",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Handles high-frequency scheduled domestic passenger flights to Lagos and Abuja."
+    },
+    {
+      "slug": "calabar-margaret-ekpo",
+      "name": "Margaret Ekpo International Airport",
+      "alternateNames": [
+        "Calabar Airport"
+      ],
+      "city": "Calabar",
+      "locality": "Idundu / Airport Road, Calabar Municipal",
+      "stateSlug": "cross-river",
+      "stateName": "Cross River",
+      "lgaSlug": "calabar-municipal",
+      "lgaName": "Calabar Municipal",
+      "postalHref": "/codes/postal/cross-river",
+      "postalLabel": "Cross River postal codes (540001)",
+      "type": "domestic",
+      "iata": "CBQ",
+      "icao": "DNCA",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "2,450 m × 45 m asphalt runway (03R/21L) listed on FAAN's domestic airports directory.",
+      "operationsNote": "Commissioned in 1983 and named after pioneering Nigerian women's rights activist Margaret Ekpo. Grouped within FAAN's Domestic Airports network, serving scheduled domestic commercial traffic for Calabar, Tinapa, and Cross River State alongside occasional regional charter flights.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Calabar (Margaret Ekpo Airport, CBQ / DNCA) (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNCA)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Classified as domestic here in line with FAAN's Domestic Airports directory and its scheduled commercial passenger profile."
+    },
+    {
+      "slug": "enugu-akanu-ibiam",
+      "name": "Akanu Ibiam International Airport",
+      "alternateNames": [
+        "Enugu Airport",
+        "AIIA Enugu"
+      ],
+      "city": "Enugu",
+      "locality": "Emene, Enugu East",
+      "stateSlug": "enugu",
+      "stateName": "Enugu",
+      "lgaSlug": "enugu-east",
+      "lgaName": "Enugu East",
+      "postalHref": "/codes/postal/enugu",
+      "postalLabel": "Enugu State postal codes (400001)",
+      "type": "international",
+      "iata": "ENU",
+      "icao": "DNEN",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "3,000 m asphalt runway (08/26) at Emene; emergency runway rehabilitation completed with flight resumption on 28 April 2025.",
+      "operationsNote": "Designated South-East international gateway listed among FAAN's 5 core international airports, named after elder statesman Dr. Akanu Ibiam. Serves scheduled international connections (such as Addis Ababa) and major domestic routes across southeastern Nigeria.",
+      "sources": [
+        {
+          "label": "FAAN — Akanu Ibiam International Airport Enugu (official)",
+          "url": "https://faan.gov.ng/akanu-ibiam-international-airport/",
+          "kind": "primary"
+        },
+        {
+          "label": "FAAN — Official Reopening Notice Following Runway Rehabilitation (official)",
+          "url": "https://faan.gov.ng/press-release/akanu-ibiam-international-airport-enugu-to-be-reopened-on-monday-28th-april/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNEN)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Located in Emene industrial-residential district on the eastern approach into Enugu city."
+    },
+    {
+      "slug": "gombe-zakari-maimalari",
+      "name": "Brigadier Zakari Maimalari Airport",
+      "alternateNames": [
+        "Gombe Lawanti International Airport",
+        "Sani Abacha International Airport Gombe"
+      ],
+      "city": "Gombe",
+      "locality": "Lawanti (Bauchi–Gombe Road), Akko",
+      "stateSlug": "gombe",
+      "stateName": "Gombe",
+      "lgaSlug": "akko",
+      "lgaName": "Akko",
+      "postalHref": "/codes/postal/gombe",
+      "postalLabel": "Gombe State postal codes (760001)",
+      "type": "domestic",
+      "iata": "GMO",
+      "icao": "DNGO",
+      "operator": "Gombe State Government (Sole Administrator management pending completion of Federal Government / FAAN handover; NAMA air traffic services)",
+      "runwayNote": "3,000 m asphalt runway capable of handling narrow-body commercial jets and seasonal Hajj wide-body charters.",
+      "operationsNote": "Located near Lawanti village in Akko LGA along the Bauchi–Gombe highway. Renamed Brigadier Zakari Maimalari Airport in June 2023. Serves scheduled domestic passenger flights to Abuja alongside seasonal Hajj pilgrim airlifts certified by the NCAA.",
+      "sources": [
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNGO — Gombe Lawanti)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        },
+        {
+          "label": "Punch Nigeria — Gombe Airport Operations & Federal Handover Status (September 2026)",
+          "url": "https://punchng.com/gombe-airport-battling-revenue-generation-administrator/",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Federal takeover was approved in principle in 2022–2023; as of September 2026 the airport remains administered by Gombe State while inter-ministerial transfer steps continue."
+    },
+    {
+      "slug": "ibadan-airport",
+      "name": "Ibadan Airport",
+      "alternateNames": [
+        "Samuel Ladoke Akintola Airport"
+      ],
+      "city": "Ibadan",
+      "locality": "Alakia (Iwo Road corridor), Egbeda",
+      "stateSlug": "oyo",
+      "stateName": "Oyo",
+      "lgaSlug": "egbeda",
+      "lgaName": "Egbeda",
+      "postalHref": "/codes/postal/oyo",
+      "postalLabel": "Oyo State postal codes (200001)",
+      "type": "domestic",
+      "iata": "IBA",
+      "icao": "DNIB",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "2,400 m × 45 m asphalt runway (05R/23L) published by FAAN, with Oyo State-backed runway and terminal expansion works initiated for larger jet capability.",
+      "operationsNote": "Commissioned in June 1982 at Alakia between Adegbaiji community and Iwo Road on the eastern edge of Ibadan. Renamed Samuel Ladoke Akintola Airport in the June 2023 federal aviation directive; serves domestic commercial traffic across Oyo and Osun states.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Ibadan Airport Profile (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "UN Logistics Cluster — Nigeria Aviation: Ibadan Airport (DNIB / IBA)",
+          "url": "https://lca.logcluster.org/22-nigeria-aviation",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Serves scheduled domestic routes primarily connecting Ibadan with Abuja and Lagos."
+    },
+    {
+      "slug": "ilorin-tunde-idiagbon",
+      "name": "General Tunde Idiagbon International Airport",
+      "alternateNames": [
+        "Ilorin International Airport",
+        "Ilorin Airport"
+      ],
+      "city": "Ilorin",
+      "locality": "Ogbondoroko / Airport Road, Asa",
+      "stateSlug": "kwara",
+      "stateName": "Kwara",
+      "lgaSlug": "asa",
+      "lgaName": "Asa",
+      "postalHref": "/codes/postal/kwara",
+      "postalLabel": "Kwara State postal codes (240001)",
+      "type": "domestic",
+      "iata": "ILR",
+      "icao": "DNIL",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "3,100 m × 60 m asphalt runway (05R/23L) published by FAAN — designated primary diversion alternate for Murtala Muhammed International Airport, Lagos.",
+      "operationsNote": "Commissioned on 16 February 1978 and renamed General Tunde Idiagbon International Airport in June 2023. Listed under FAAN's Domestic Airports directory for regular scheduled passenger routes (Abuja and Lagos), while also serving seasonal Hajj charters and wide-body weather diversions from Lagos.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Ilorin Airport Profile (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNIL)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Classified as domestic for regular scheduled passenger service per FAAN's Domestic Airports listing, with customs/Hajj capability on demand."
+    },
+    {
+      "slug": "jos-yakubu-gowon",
+      "name": "Yakubu Gowon Airport",
+      "alternateNames": [
+        "Jos Airport",
+        "Heipang Airport"
+      ],
+      "city": "Jos",
+      "locality": "Heipang, Barkin Ladi",
+      "stateSlug": "plateau",
+      "stateName": "Plateau",
+      "lgaSlug": "barkin-ladi",
+      "lgaName": "Barkin Ladi",
+      "postalHref": "/codes/postal/plateau",
+      "postalLabel": "Plateau State postal codes (930001)",
+      "type": "domestic",
+      "iata": "JOS",
+      "icao": "DNJO",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "3,000 m × 45 m asphalt runway (10/28) at roughly 1,290 m (4,232 ft) elevation — Nigeria's highest-altitude commercial airport.",
+      "operationsNote": "Located at Heipang in Barkin Ladi LGA, approximately 30 km south of Jos city centre, and named after former Head of State General Yakubu Gowon. Operates scheduled domestic flights and agro-cargo initiatives under a FAAN–Plateau State infrastructure partnership.",
+      "sources": [
+        {
+          "label": "FAAN — FAAN & Plateau State Partnership on Yakubu Gowon Airport Jos (official)",
+          "url": "https://faan.gov.ng/author/corporate/",
+          "kind": "primary"
+        },
+        {
+          "label": "UN Logistics Cluster — Nigeria Aviation: Yakubu Gowon Airport (DNJO / JOS)",
+          "url": "https://lca.logcluster.org/22-nigeria-aviation",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Serves Jos, Bukuru, and Plateau State's temperate agricultural belt."
+    },
+    {
+      "slug": "kaduna-airport",
+      "name": "Kaduna Airport",
+      "alternateNames": [
+        "Hassan Usman Katsina International Airport",
+        "Kaduna New Airport"
+      ],
+      "city": "Kaduna",
+      "locality": "Mando / Isira corridor, Igabi",
+      "stateSlug": "kaduna",
+      "stateName": "Kaduna",
+      "lgaSlug": "igabi",
+      "lgaName": "Igabi",
+      "postalHref": "/codes/postal/kaduna",
+      "postalLabel": "Kaduna State postal codes (800001)",
+      "type": "domestic",
+      "iata": "KAD",
+      "icao": "DNKA",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "3,000 m × 60 m asphalt runway (05R/23L) published by FAAN, located roughly 12 km northwest of Kaduna metropolis.",
+      "operationsNote": "Commissioned in 1982 under the Nigerian Airports Authority (now FAAN) as the civil commercial aerodrome distinct from the older military airfield inside Kaduna city. Renamed after former Northern Region military governor Major General Hassan Usman Katsina in June 2023; operates scheduled domestic routes and seasonal Hajj charters.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Kaduna Airport Profile (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNKA)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Also served historically as the temporary Abuja diversion hub during the 2017 Abuja runway reconstruction."
+    },
+    {
+      "slug": "kano-mallam-aminu-kano",
+      "name": "Mallam Aminu Kano International Airport",
+      "alternateNames": [
+        "Kano International Airport",
+        "MAKIA Kano"
+      ],
+      "city": "Kano",
+      "locality": "Airport Road, Fagge / Ungogo",
+      "stateSlug": "kano",
+      "stateName": "Kano",
+      "lgaSlug": "fagge",
+      "lgaName": "Fagge",
+      "postalHref": "/codes/postal/kano/kano-municipal",
+      "postalLabel": "Kano Municipal postal code (700211)",
+      "type": "international",
+      "iata": "KAN",
+      "icao": "DNKN",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "Primary 3,301 m × 60 m asphalt runway (06/24) plus secondary 2,451 m runway (05/23); separate domestic and international terminals.",
+      "operationsNote": "Nigeria's oldest airport — air operations began in 1936 — and the primary international aviation hub for Northern Nigeria. Handles year-round scheduled international passenger flights (Middle East, North and East Africa), major Hajj airlifts, and domestic trunk routes; certified by the NCAA.",
+      "sources": [
+        {
+          "label": "FAAN — Mallam Aminu Kano International Airport Profile (official)",
+          "url": "https://faan.gov.ng/makia-kano/",
+          "kind": "primary"
+        },
+        {
+          "label": "FAAN — International Airports Directory (official)",
+          "url": "https://faan.gov.ng/international-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNKN)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Named after northern Nigerian politician and reformer Mallam Aminu Kano."
+    },
+    {
+      "slug": "katsina-umaru-musa-yaradua",
+      "name": "Umaru Musa Yar'Adua Airport",
+      "alternateNames": [
+        "Katsina Airport"
+      ],
+      "city": "Katsina",
+      "locality": "Daura Road / Modoju corridor, Katsina",
+      "stateSlug": "katsina",
+      "stateName": "Katsina",
+      "lgaSlug": "katsina",
+      "lgaName": "Katsina",
+      "postalHref": "/codes/postal/katsina",
+      "postalLabel": "Katsina State postal codes (820001)",
+      "type": "domestic",
+      "iata": "DKA",
+      "icao": "DNKT",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "3,045 m × 45 m asphalt runway (05R/23L) published on FAAN's domestic airports directory.",
+      "operationsNote": "Commenced operations on 22 December 1991 about 4 km southwest of Katsina metropolis and named in honour of former President Umaru Musa Yar'Adua. Operates scheduled domestic flights to Abuja and seasonal Hajj pilgrim charters.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Katsina Airport Profile (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNKT)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Note the 3-letter IATA code DKA (distinct from KAD, which belongs to Kaduna Airport)."
+    },
+    {
+      "slug": "lagos-murtala-muhammed",
+      "name": "Murtala Muhammed International Airport",
+      "alternateNames": [
+        "Lagos Airport",
+        "MMIA Lagos",
+        "MMA2 Ikeja"
+      ],
+      "city": "Ikeja, Lagos",
+      "locality": "Ikeja, Lagos mainland",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja postal code (100271)",
+      "type": "international",
+      "iata": "LOS",
+      "icao": "DNMM",
+      "operator": "Federal Airports Authority of Nigeria (FAAN); Domestic Terminal 2 (MMA2) operated under PPP concession by Bi-Courtney Aviation Services Limited (BASL)",
+      "runwayNote": "Dual parallel asphalt runways — 18R/36L (3,900 m × 60 m) for wide-body international traffic and 18L/36R (2,743 m × 45 m) near the domestic terminals.",
+      "operationsNote": "Nigeria's busiest international and domestic aviation hub, situated in Ikeja, Lagos State. Comprises International Terminals 1 and 2 (T2 commissioned March 2022) on the international side, plus the FAAN General Aviation Terminal (GAT / MMA1) and private PPP terminal MMA2 on the domestic side; recertified by the NCAA in November 2024.",
+      "sources": [
+        {
+          "label": "FAAN — Murtala Muhammed International Airport Lagos (official)",
+          "url": "https://faan.gov.ng/mmia-lagos/",
+          "kind": "primary"
+        },
+        {
+          "label": "NCAA — Recertification of Murtala Muhammed International Airport (official)",
+          "url": "https://ncaa.gov.ng/media/news/ncaa-certifies-lagos-abuja-international-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNMM)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "International terminals and domestic terminals (GAT / MMA2) sit on opposite sides of the Ikeja airfield — road transfer between them takes 15–30 minutes depending on Ikeja traffic."
+    },
+    {
+      "slug": "maiduguri-muhammadu-buhari",
+      "name": "General Muhammadu Buhari International Airport",
+      "alternateNames": [
+        "Maiduguri International Airport",
+        "Maiduguri Airport"
+      ],
+      "city": "Maiduguri",
+      "locality": "Bulunkutu / Kano Road corridor, Maiduguri",
+      "stateSlug": "borno",
+      "stateName": "Borno",
+      "lgaSlug": "maiduguri",
+      "lgaName": "Maiduguri",
+      "postalHref": "/codes/postal/borno",
+      "postalLabel": "Borno State postal codes (600001)",
+      "type": "international",
+      "iata": "MIU",
+      "icao": "DNMA",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "3,000 m × 60 m asphalt runway (05R/23L) published by FAAN.",
+      "operationsNote": "Established as an airstrip in the 1950s, expanded in the 1980s, renamed General Muhammadu Buhari Airport in June 2023, and upgraded by Presidential and Federal Ministry of Aviation approval (October 2024 / March 2025) as the designated international gateway for Nigeria's North-East geopolitical zone.",
+      "sources": [
+        {
+          "label": "Federal Ministry of Information — FG Upgrades Muhammadu Buhari Airport Maiduguri to International Airport (official)",
+          "url": "https://fmino.gov.ng/fg-upgrades-muhammadu-buhari-airport-maiduguri-to-an-international-airport/",
+          "kind": "primary"
+        },
+        {
+          "label": "FAAN — Maiduguri Airport Runway & Facility Profile (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNMA)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Serves Maiduguri, Borno State, humanitarian logistics across the Lake Chad basin, and cross-border / Hajj flights."
+    },
+    {
+      "slug": "makurdi-airport",
+      "name": "Makurdi Airport",
+      "alternateNames": [
+        "Joseph Sarwuan Tarka Airport"
+      ],
+      "city": "Makurdi",
+      "locality": "Fili (Makurdi–Gboko Road), Makurdi",
+      "stateSlug": "benue",
+      "stateName": "Benue",
+      "lgaSlug": "makurdi",
+      "lgaName": "Makurdi",
+      "postalHref": "/codes/postal/benue",
+      "postalLabel": "Benue State postal codes (970001)",
+      "type": "domestic",
+      "iata": "MDI",
+      "icao": "DNMK",
+      "operator": "Federal Airports Authority of Nigeria (FAAN) — civil enclave alongside Nigerian Air Force Tactical Air Command",
+      "runwayNote": "2,996 m × 50 m runway (05R/23L) with 266 m paved overrun on each end, published verbatim by FAAN (IATA: MDI, ICAO: DNMK).",
+      "operationsNote": "Civil enclave commenced commercial operations in 1983 at Fili along the Makurdi–Gboko highway in Benue State. Renamed Joseph Sarwuan Tarka Airport in June 2023; handles domestic commercial flights to Abuja and charter movements.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Makurdi Airport (IATA: MDI, ICAO: DNMK) (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "UN Logistics Cluster — Nigeria Aviation Aerodrome Reference",
+          "url": "https://lca.logcluster.org/22-nigeria-aviation",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Civil passenger terminal operates through FAAN alongside the Nigerian Air Force base at Makurdi."
+    },
+    {
+      "slug": "minna-bola-ahmed-tinubu",
+      "name": "Bola Ahmed Tinubu International Airport",
+      "alternateNames": [
+        "Minna Airport",
+        "Mallam Abubakar Imam Airport"
+      ],
+      "city": "Minna",
+      "locality": "Maikunkele, Bosso",
+      "stateSlug": "niger",
+      "stateName": "Niger",
+      "lgaSlug": "bosso",
+      "lgaName": "Bosso",
+      "postalHref": "/codes/postal/niger",
+      "postalLabel": "Niger State postal codes (920001)",
+      "type": "domestic",
+      "iata": "MXJ",
+      "icao": "DNMN",
+      "operator": "Federal Airports Authority of Nigeria (FAAN), with terminal/agro-cargo upgrade partnership by Niger State Government",
+      "runwayNote": "3,400 m × 44 m asphalt runway (05R/23L) published verbatim by FAAN (IATA: MXJ, ICAO: DNMN).",
+      "operationsNote": "Commissioned on 20 June 1990 in Maikunkele, Bosso LGA, 10 km northwest of Minna. Renamed Bola Ahmed Tinubu International Airport in March 2024 following Niger State terminal and agro-cargo upgrades, with scheduled domestic commercial passenger flights resuming in April 2025 alongside seasonal Hajj operations.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Minna Airport (IATA: MXJ, ICAO: DNMN) (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNMN)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Classified as domestic for regular scheduled passenger service, with agro-cargo and seasonal Hajj charter facilities."
+    },
+    {
+      "slug": "owerri-sam-mbakwe",
+      "name": "Sam Mbakwe International Cargo Airport",
+      "alternateNames": [
+        "Imo State Airport",
+        "Owerri Airport",
+        "SMICA"
+      ],
+      "city": "Owerri",
+      "locality": "Obiangwu / Airport Road, Ngor Okpala",
+      "stateSlug": "imo",
+      "stateName": "Imo",
+      "lgaSlug": "ngor-okpala",
+      "lgaName": "Ngor Okpala",
+      "postalHref": "/codes/postal/imo",
+      "postalLabel": "Imo State postal codes (460001)",
+      "type": "domestic",
+      "iata": "QOW",
+      "icao": "DNIM",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "2,700 m × 45 m asphalt runway (17/35) at 114 m (374 ft) elevation.",
+      "operationsNote": "Nigeria's first community-funded state-initiated airport, conceived under Governor Sam Mbakwe, commissioned in 1994, and managed by FAAN. Situated in Ngor Okpala LGA (~23 km southeast of Owerri), it is one of southeastern Nigeria's busiest domestic passenger hubs, serving Imo State as well as Aba and Umuahia in neighbouring Abia State.",
+      "sources": [
+        {
+          "label": "SKYbrary Aviation Safety — DNIM / QOW Sam Mbakwe International Cargo Airport",
+          "url": "https://skybrary.aero/airports/dnim",
+          "kind": "secondary"
+        },
+        {
+          "label": "FAAN — Federal Airports Authority of Nigeria Domestic Operations Network (official)",
+          "url": "https://faan.gov.ng/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Note the IATA code QOW (not IMO, which is assigned globally to Zemio Airport in the Central African Republic). Scheduled passenger services are domestic."
+    },
+    {
+      "slug": "port-harcourt-international",
+      "name": "Port Harcourt International Airport",
+      "alternateNames": [
+        "Omagwa Airport",
+        "PHIA Port Harcourt",
+        "Obafemi Jeremiah Awolowo International Airport"
+      ],
+      "city": "Port Harcourt",
+      "locality": "Omagwa, Ikwerre",
+      "stateSlug": "rivers",
+      "stateName": "Rivers",
+      "lgaSlug": "ikwerre",
+      "lgaName": "Ikwerre",
+      "postalHref": "/codes/postal/rivers/port-harcourt",
+      "postalLabel": "Port Harcourt postal code (500272)",
+      "type": "international",
+      "iata": "PHC",
+      "icao": "DNPO",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "3,000 m × 60 m asphalt runway (03/21); dedicated international terminal (commissioned October 2018) and domestic terminal.",
+      "operationsNote": "Primary international gateway for the Niger Delta oil, gas, and maritime hub at Omagwa in Ikwerre LGA, Rivers State — one of FAAN's 5 core international airports and certified by the NCAA. Handles scheduled international flights to Europe and regional hubs plus dense domestic services to Lagos and Abuja.",
+      "sources": [
+        {
+          "label": "FAAN — Port Harcourt International Airport Profile (official)",
+          "url": "https://faan.gov.ng/ph-international-airport/",
+          "kind": "primary"
+        },
+        {
+          "label": "FAAN — International Airports Directory (official)",
+          "url": "https://faan.gov.ng/international-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNPO)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Named Obafemi Jeremiah Awolowo International Airport in the June 2023 federal directive, though FAAN and airlines continue to publish Port Harcourt International Airport (PHC / DNPO)."
+    },
+    {
+      "slug": "sokoto-sultan-abubakar",
+      "name": "Sultan Abubakar III International Airport",
+      "alternateNames": [
+        "Sokoto Airport",
+        "Saddiq Abubakar III International Airport"
+      ],
+      "city": "Sokoto",
+      "locality": "Gusau Road / Bodinga border, Sokoto",
+      "stateSlug": "sokoto",
+      "stateName": "Sokoto",
+      "lgaSlug": "bodinga",
+      "lgaName": "Bodinga",
+      "postalHref": "/codes/postal/sokoto",
+      "postalLabel": "Sokoto State postal codes (840001)",
+      "type": "domestic",
+      "iata": "SKO",
+      "icao": "DNSO",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "3,000 m × 60 m asphalt runway (08R/26L) published by FAAN.",
+      "operationsNote": "Commissioned on 17 February 1982 and named after the 17th Sultan of Sokoto, Sir Siddiq Abubakar III. Listed on FAAN's Domestic Airports directory for year-round scheduled domestic flights (Abuja and Kano/Lagos connections) while serving as a major North-West Hajj and Umrah international charter hub.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Sokoto Airport Profile (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNSO)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Classified as domestic for regular scheduled commercial routes, with customs/immigration activated for seasonal Hajj and Umrah charters."
+    },
+    {
+      "slug": "uyo-victor-attah",
+      "name": "Victor Attah International Airport",
+      "alternateNames": [
+        "Akwa Ibom International Airport",
+        "Uyo Airport"
+      ],
+      "city": "Uyo",
+      "locality": "Okobo–Oron / Uruan Airport Road, Uyo",
+      "stateSlug": "akwa-ibom",
+      "stateName": "Akwa Ibom",
+      "lgaSlug": "uruan",
+      "lgaName": "Uruan",
+      "postalHref": "/codes/postal/akwa-ibom",
+      "postalLabel": "Akwa Ibom postal codes (520001)",
+      "type": "international",
+      "iata": "QUO",
+      "icao": "DNAI",
+      "operator": "Akwa Ibom State Government (Ibom Airport Development Company Limited), with FAAN/NCAA/NAMA regulatory and security services",
+      "runwayNote": "3,600 m Category II runway with Maintenance, Repair and Overhaul (MRO) hangar complex and international passenger terminal.",
+      "operationsNote": "Opened in 2009, renamed after former Governor Obong Victor Attah in November 2018, and home base of state-owned carrier Ibom Air. Officially designated for full international flight operations by the Federal Government on 27 November 2025, inaugurating scheduled cross-border Uyo–Accra commercial service on 2 May 2026.",
+      "sources": [
+        {
+          "label": "Akwa Ibom State Government — Federal Approval of International Status for Victor Attah Airport (official)",
+          "url": "https://akwaibomstate.gov.ng/gov-eno-secures-federal-approval-for-international-status-for-victor-attah-airport/",
+          "kind": "primary"
+        },
+        {
+          "label": "US FAA IFIM — Nigeria Aeronautical Listing (DNAI)",
+          "url": "https://www.faa.gov/air_traffic/publications/ifim/country_info/PDF/NG.pdf",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Serves Uyo, Eket, Ikot Ekpene, Oron, and cross-regional travellers across Akwa Ibom, Abia, and Cross River states."
+    },
+    {
+      "slug": "warri-osubi",
+      "name": "Osubi Airport",
+      "alternateNames": [
+        "Alfred Diete-Spiff Airport",
+        "Warri Airport",
+        "Osubi Airstrip"
+      ],
+      "city": "Osubi (Warri)",
+      "locality": "Osubi town, Okpe",
+      "stateSlug": "delta",
+      "stateName": "Delta",
+      "lgaSlug": "okpe",
+      "lgaName": "Okpe",
+      "postalHref": "/codes/postal/delta",
+      "postalLabel": "Delta State postal codes (320001)",
+      "type": "domestic",
+      "iata": "QRW",
+      "icao": "DNSU",
+      "operator": "Federal Airports Authority of Nigeria (FAAN) — managing operations since March 2021 on behalf of the NNPCL joint-venture owners",
+      "runwayNote": "1,800 m usable landing runway (45 m wide), suited to regional turboprop and light jet commercial aircraft.",
+      "operationsNote": "Commissioned in April 1999 in Osubi town (Okpe LGA), about 10 km northeast of Effurun and Warri in Delta State, and reopened under FAAN management in 2021. Renamed Alfred Diete-Spiff Airport in June 2023; operates scheduled domestic passenger routes to Lagos and Abuja.",
+      "sources": [
+        {
+          "label": "Daily Trust — Federal Ministry of Aviation Statement on Osubi Airport (DNSU / QRW) (August 2026)",
+          "url": "https://dailytrust.com/keyamo-seeks-iata-review-of-osubi-airport-code/",
+          "kind": "secondary"
+        },
+        {
+          "label": "TheCable — Federal Government Reopening of Osubi Airport Under FAAN Management",
+          "url": "https://www.thecable.ng/warri-airport-resumes-flight-operations-17-months-after-closure/",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Current assigned IATA code is QRW and ICAO is DNSU. On 17 August 2026, Nigeria's Minister of Aviation formally requested IATA to review replacing QRW with an Osubi-specific 3-letter code; QRW remains active until any formal IATA reassignment."
+    },
+    {
+      "slug": "yola-airport",
+      "name": "Yola Airport",
+      "alternateNames": [
+        "Lamido Aliyu Mustapha International Airport",
+        "Jimeta Airport"
+      ],
+      "city": "Yola",
+      "locality": "Jimeta, Yola North",
+      "stateSlug": "adamawa",
+      "stateName": "Adamawa",
+      "lgaSlug": "yola-north",
+      "lgaName": "Yola North",
+      "postalHref": "/codes/postal/adamawa",
+      "postalLabel": "Adamawa State postal codes (640001)",
+      "type": "domestic",
+      "iata": "YOL",
+      "icao": "DNYO",
+      "operator": "Federal Airports Authority of Nigeria (FAAN)",
+      "runwayNote": "2,999 m × 45 m asphalt runway (17R/35L) published on FAAN's domestic airports directory.",
+      "operationsNote": "Commissioned on 27 October 1984 at Jimeta, roughly 8 km northwest of Yola in Adamawa State, and named Lamido Aliyu Mustapha Airport in June 2023. Listed under FAAN's Domestic Airports directory for regular scheduled domestic flights to Abuja and Lagos, plus seasonal Hajj pilgrim operations.",
+      "sources": [
+        {
+          "label": "FAAN — Domestic Airports: Yola Airport Profile (official)",
+          "url": "https://faan.gov.ng/local-airports/",
+          "kind": "primary"
+        },
+        {
+          "label": "UN Logistics Cluster — Nigeria Aviation: Yola Airport",
+          "url": "https://lca.logcluster.org/22-nigeria-aviation",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-23",
+      "verification": "manual",
+      "notes": "Serves Jimeta, Yola, Mubi, and cross-regional travellers in Adamawa and northern Taraba states."
+    }
+  ]
+}

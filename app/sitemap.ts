@@ -3,6 +3,7 @@ import { ARTICLES } from "@/lib/articles";
 import { LIVE_FUEL, LIVE_FX, datasetHistoryPoints } from "@/lib/live";
 import { CHART_PAGES } from "@/lib/chart-pages";
 import { BANKS_FILE_UPDATED_AT, getAllBanks } from "@/lib/banks";
+import { AIRPORTS_FILE_UPDATED_AT, getAllAirports } from "@/lib/airports";
 import { getAllPostalStates, getAllPostalAreaParams, POSTAL_FILE_UPDATED_AT } from "@/lib/postal";
 import { LGAS_FILE_UPDATED_AT, getAllLgaStates, getAllLgaParams } from "@/lib/lgas";
 import { absUrl } from "@/lib/seo";
@@ -110,6 +111,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   ];
 
+  // Airports — 1 hub (/airports) + 24 verified public commercial airport pages (/airports/[slug]).
+  // LastModified comes strictly from data/airports.json SSOT (never new Date()).
+  const airportsUpdatedAt =
+    AIRPORTS_FILE_UPDATED_AT && /^\d{4}-\d{2}-\d{2}/.test(AIRPORTS_FILE_UPDATED_AT)
+      ? AIRPORTS_FILE_UPDATED_AT.slice(0, 10)
+      : FIXED_LASTMOD;
+  const airportsSitemap: MetadataRoute.Sitemap = [
+    { url: absUrl("/airports"), lastModified: airportsUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
+    ...getAllAirports().map((a) => ({
+      url: absUrl(`/airports/${a.slug}`),
+      lastModified: a.lastVerified.slice(0, 10),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+  ];
+
   // Dedicated chart pages. Their lastModified is the newest stored observation for the series, so
   // the sitemap agrees with the page instead of using the build clock.
   const charts: MetadataRoute.Sitemap = [
@@ -139,5 +156,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...fixed, ...charts, ...bankSitemap, ...postalSitemap, ...geoSitemap, ...generated];
+  return [...fixed, ...charts, ...bankSitemap, ...postalSitemap, ...geoSitemap, ...airportsSitemap, ...generated];
 }
