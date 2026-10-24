@@ -18,6 +18,7 @@ import {
   operatorTypeShortLabel,
   type OilGasOperator,
 } from "@/lib/oil-gas";
+import { getPortsForOilGasOperator, portCategoryShortLabel } from "@/lib/ports";
 
 export const dynamicParams = false;
 
@@ -112,6 +113,8 @@ export default async function OilGasOperatorDetailPage({ params }: { params: Pro
   const linkedAirports: Airport[] = (op.airportSlugs ?? [])
     .map((aSlug) => getAirportBySlug(aSlug))
     .filter((a): a is Airport => a !== null);
+
+  const linkedPorts = getPortsForOilGasOperator(op.slug);
 
   const orgEntityLd: Record<string, unknown> = {
     "@type": "Organization",
@@ -339,11 +342,13 @@ export default async function OilGasOperatorDetailPage({ params }: { params: Pro
         </section>
       ) : null}
 
-      {/* Operational corridors & commercial aviation links */}
-      {(op.operationalHubs && op.operationalHubs.length > 0) || linkedAirports.length > 0 ? (
+      {/* Operational corridors, maritime terminals & commercial aviation links */}
+      {(op.operationalHubs && op.operationalHubs.length > 0) ||
+      linkedAirports.length > 0 ||
+      linkedPorts.length > 0 ? (
         <section aria-labelledby="corridors-h" className="space-y-4 rounded-xl border bg-card/40 p-5">
           <h2 id="corridors-h" className="text-lg font-bold">
-            Operational corridors &amp; commercial aviation gateways
+            Operational corridors, maritime terminals &amp; aviation gateways
           </h2>
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -376,6 +381,31 @@ export default async function OilGasOperatorDetailPage({ params }: { params: Pro
                       </li>
                     );
                   })}
+                </ul>
+              </div>
+            ) : null}
+
+            {linkedPorts.length > 0 ? (
+              <div className="rounded-lg border bg-background p-3.5 text-xs sm:col-span-2">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <p className="font-bold text-foreground">
+                    Linked Nigerian seaports &amp; marine export terminals (/ports)
+                  </p>
+                  <Link href="/ports" className="font-semibold text-primary hover:underline">
+                    All 12 Nigerian ports →
+                  </Link>
+                </div>
+                <ul className="mt-2 grid gap-1.5 text-muted-foreground sm:grid-cols-2">
+                  {linkedPorts.map((port) => (
+                    <li key={port.slug}>
+                      •{" "}
+                      <Link href={`/ports/${port.slug}`} className="font-medium text-primary hover:underline">
+                        {port.name}
+                        {port.unLocode ? ` (${port.unLocode})` : ""}
+                      </Link>{" "}
+                      — {portCategoryShortLabel(port.category)} ({port.stateName})
+                    </li>
+                  ))}
                 </ul>
               </div>
             ) : null}
@@ -477,6 +507,9 @@ export default async function OilGasOperatorDetailPage({ params }: { params: Pro
           </Link>
           <Link href="/airports" className="text-primary hover:underline">
             Nigerian airports directory (/airports) →
+          </Link>
+          <Link href="/ports" className="text-primary hover:underline">
+            Nigerian seaports directory (/ports) →
           </Link>
         </div>
       </section>

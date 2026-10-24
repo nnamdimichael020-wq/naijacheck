@@ -26,6 +26,7 @@ import { getAllBanks } from "./banks";
 import { getAllAirports } from "./airports";
 import { getAllAirlines } from "./airlines";
 import { getAllOilGasOperators } from "./oil-gas";
+import { getAllPorts } from "./ports";
 import { getAllPostalStates } from "./postal";
 import { getAllLgaStates } from "./lgas";
 import { GOV_DOCS } from "./data";
@@ -156,6 +157,14 @@ function run() {
     placesOilGasSub.children?.length,
     getAllOilGasOperators().length + 1,
     "Places -> Oil & Gas Operators lists hub + all 16 SSOT operators",
+  );
+  const placesPortsSub = placesBubble.subcategories.find((s) => s.id === "places-ports")!;
+  assert.ok(placesPortsSub, "Seaports lives under Places bubble (strictly 6 top-level bubbles)");
+  assert.equal(placesPortsSub.href, "/ports");
+  assert.equal(
+    placesPortsSub.children?.length,
+    getAllPorts().length + 1,
+    "Places -> Seaports lists hub + all 12 SSOT ports",
   );
 
   // Guides: includes all GovHowTo slugs from SSOT

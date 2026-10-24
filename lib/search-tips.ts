@@ -18,6 +18,7 @@ type TipsSeed = {
   airports?: { city: string; iata: string }[];
   airlines?: string[];
   oilGasOperators?: string[];
+  ports?: string[];
   postalStates: string[];
   postalPlaces: string[];
   lgasByState: [string, string[]][];
@@ -175,10 +176,11 @@ export function buildSearchTipBuckets(): TipBuckets {
     addUnique(guidesSlangAndTools, lt);
   }
 
-  // 4) All 37 States + All 774 LGAs (`data/lgas.json`) + Verified Airports, Airlines & Oil/Gas Operators
+  // 4) All 37 States + All 774 LGAs (`data/lgas.json`) + Verified Airports, Airlines, Oil/Gas & Seaports
   addUnique(geoStatesAndLgas, "international airports in Nigeria");
   addUnique(geoStatesAndLgas, "airlines operating in Nigeria");
   addUnique(geoStatesAndLgas, "major oil companies in Nigeria");
+  addUnique(geoStatesAndLgas, "major seaports in Nigeria");
   for (const ap of SEED.airports ?? []) {
     if (ap.city) addUnique(geoStatesAndLgas, `${ap.city} airport code`);
   }
@@ -187,6 +189,9 @@ export function buildSearchTipBuckets(): TipBuckets {
   }
   for (const opName of SEED.oilGasOperators ?? []) {
     if (opName) addUnique(geoStatesAndLgas, `${opName} Nigeria`);
+  }
+  for (const portName of SEED.ports ?? []) {
+    if (portName) addUnique(geoStatesAndLgas, `${portName} UN/LOCODE`);
   }
   for (const [stateName, lgas] of SEED.lgasByState) {
     addUnique(geoStatesAndLgas, `LGAs in ${stateName}`);

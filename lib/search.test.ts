@@ -200,7 +200,7 @@ function check() {
   assert.ok(!isTopLevelPath("/admin"), "/admin excluded from public hubs");
   assert.ok(!isTopLevelPath("/search"), "/search excluded from hub dropdown");
 
-  assert.equal(DROPDOWN_TOP_LEVEL_ALLOWLIST.length, 21, "19 one-segment hubs + 2 explicit product hubs (/codes/banks, /codes/postal)");
+  assert.equal(DROPDOWN_TOP_LEVEL_ALLOWLIST.length, 22, "20 one-segment hubs + 2 explicit product hubs (/codes/banks, /codes/postal)");
   const exceptionSet = new Set<string>(DROPDOWN_TWO_SEGMENT_HUB_EXCEPTIONS);
   for (const p of DROPDOWN_TOP_LEVEL_ALLOWLIST) {
     if (!exceptionSet.has(p)) {
@@ -228,6 +228,8 @@ function check() {
     "/airlines/nigeria-airways",
     "/oil-gas/nnpc-limited",
     "/oil-gas/shell-nigeria",
+    "/ports/lagos-apapa-port",
+    "/ports/onne-port",
     "/charts/parallel-usd-buy",
     "/howto/nin-correction",
     "/learn/budget-80k",
@@ -330,6 +332,37 @@ function check() {
   assert.ok(
     deepSpdc.some((r) => r.path === "/oil-gas/renaissance-africa-energy"),
     'full /search "SPDC" finds /oil-gas/renaissance-africa-energy',
+  );
+
+  // Seaports search checks: "Apapa", "Onne", "NGLKK", "Koko" surface /ports in dropdown and deep port pages on /search
+  assert.deepEqual(rankedDropdownSearch(index, "", "ports", 8).map((r) => r.path), ["/ports"]);
+  const ddApapa = rankedDropdownSearch(index, "Apapa port", "all", 8);
+  assert.ok(ddApapa.some((r) => r.path === "/ports"), 'dropdown "Apapa port" surfaces /ports hub');
+  assert.ok(!ddApapa.some((r) => r.path.startsWith("/ports/")), 'dropdown "Apapa port" excludes deep /ports/[slug]');
+  const deepApapa = rankedSearch(index, "Apapa", "all", 8);
+  assert.ok(
+    deepApapa.some((r) => r.path === "/ports/lagos-apapa-port"),
+    'full /search "Apapa" finds /ports/lagos-apapa-port',
+  );
+  const deepOnne = rankedSearch(index, "Onne", "all", 8);
+  assert.ok(
+    deepOnne.some((r) => r.path === "/ports/onne-port"),
+    'full /search "Onne" finds /ports/onne-port',
+  );
+  const deepNglkk = rankedSearch(index, "NGLKK", "all", 8);
+  assert.ok(
+    deepNglkk.some((r) => r.path === "/ports/lekki-deep-sea-port"),
+    'full /search "NGLKK" finds /ports/lekki-deep-sea-port',
+  );
+  const deepTinCan = rankedSearch(index, "Tin Can", "all", 8);
+  assert.ok(
+    deepTinCan.some((r) => r.path === "/ports/tin-can-island-port"),
+    'full /search "Tin Can" finds /ports/tin-can-island-port',
+  );
+  const deepKoko = rankedSearch(index, "Koko Port", "all", 8);
+  assert.ok(
+    deepKoko.some((r) => r.path === "/ports/delta-warri-port"),
+    'full /search "Koko Port" finds /ports/delta-warri-port via sub-port alias',
   );
   assert.deepEqual(rankedDropdownSearch(index, "", "postal", 8).map((r) => r.path), ["/codes/postal"]);
   assert.deepEqual(rankedDropdownSearch(index, "", "geo", 8).map((r) => r.path), ["/geo"]);

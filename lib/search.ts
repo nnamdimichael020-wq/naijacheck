@@ -27,6 +27,7 @@ export const WAT_SEARCH_KIND_LABEL: Record<string, string> = {
   airports: "Airport",
   airlines: "Airline",
   "oil-gas": "Oil & Gas",
+  ports: "Seaport",
   "trends-slang": "Slang",
   "trends-psych": "Relationships",
   "hustle-blueprint": "Hustle",
@@ -57,6 +58,7 @@ export const SEARCH_CATEGORIES: SearchCategory[] = [
   { id: "airports", label: "Airports", kinds: ["airports"], desc: "IATA, ICAO & cities" },
   { id: "airlines", label: "Airlines", kinds: ["airlines"], desc: "Active & historical carriers" },
   { id: "oil-gas", label: "Oil & gas", kinds: ["oil-gas"], desc: "NNPC, IOCs & operators" },
+  { id: "ports", label: "Seaports", kinds: ["ports"], desc: "NPA ports & UN/LOCODEs" },
   { id: "howto", label: "Gov how-to", kinds: ["howto"], desc: "NIN, passport, CAC…" },
   { id: "tools", label: "Tools & quiz", kinds: ["tools", "cookbook"], desc: "Calculators & quizzes" },
   { id: "trends", label: "Slang/trends", kinds: ["trends-slang", "trends-psych"], desc: "Decoder & trends" },
@@ -110,6 +112,13 @@ export const SEARCH_ALIASES: Record<string, string> = {
   naoc: "oando agip eni",
   nlng: "nigeria lng bonny",
   ioc: "shell chevron exxonmobil totalenergies eni",
+  port: "seaport seaports ports npa unlocode",
+  seaport: "seaports ports npa unlocode",
+  seaports: "seaport ports npa unlocode",
+  npa: "nigerian ports authority seaport",
+  locode: "unlocode seaport port",
+  unlocode: "locode seaport port",
+  tincan: "tin can island ngtin",
 };
 
 export function normalizeSearch(value: string): string {
@@ -157,8 +166,8 @@ export function scoreEntry(entry: SearchEntry, terms: string[]): number {
       if (keys.includes(t)) s += 2;
       if (desc.includes(t)) s += 1;
       if (t.length >= 4 && words.some((word) => oneEditAway(t, word))) s += 1;
-      // Boost exact whole-word short codes (2-4 char IATA/ICAO designators like P4, QI, VK, LOS, ABV, APK)
-      if (t.length >= 2 && t.length <= 4 && words.includes(t)) {
+      // Boost exact whole-word short codes (2-4 char IATA/ICAO designators like P4, QI, VK, LOS, ABV, APK or 5-char NGxxx UN/LOCODEs)
+      if (((t.length >= 2 && t.length <= 4) || /^ng[a-z]{3}$/.test(t)) && words.includes(t)) {
         s += titleWords.includes(t) ? 5 : 3;
       }
       // Boost exact digit/code matches (e.g. 058, 100001)
@@ -289,6 +298,7 @@ export const DROPDOWN_TOP_LEVEL_ALLOWLIST: readonly string[] = [
   "/airports",
   "/airlines",
   "/oil-gas",
+  "/ports",
   "/howto",
   "/tools",
   "/trends",
@@ -326,6 +336,7 @@ export const DROPDOWN_CATEGORY_HUBS: Record<string, readonly string[]> = {
   airports: ["/airports"],
   airlines: ["/airlines"],
   "oil-gas": ["/oil-gas"],
+  ports: ["/ports"],
   howto: ["/howto"],
   tools: ["/tools"],
   trends: ["/trends"],
@@ -534,5 +545,10 @@ export const SEARCH_SUGGESTIONS: readonly SearchSuggestion[] = [
     text: "airlines operating in Nigeria",
     source: "data/airlines.json — 23 verified Nigerian airlines (/airlines)",
     href: "/airlines",
+  },
+  {
+    text: "major seaports in Nigeria",
+    source: "data/ports.json — 12 verified Nigerian seaports & marine terminals (/ports)",
+    href: "/ports",
   },
 ] as const;

@@ -28,6 +28,7 @@ import banksData from "../data/banks.json";
 import airportsData from "../data/airports.json";
 import airlinesData from "../data/airlines.json";
 import oilGasData from "../data/oil-gas-operators.json";
+import portsData from "../data/ports.json";
 import postalData from "../data/postal-codes.json";
 import lgasData from "../data/lgas.json";
 import type { ArticleBodyImage, ArticleImage } from "../lib/types";
@@ -1445,6 +1446,7 @@ const fixedSearch = [
   { path: "/airports", title: "Airports in Nigeria — International & Domestic IATA / ICAO Directory", kind: "airports", desc: "24 verified public commercial airports — 7 international gateways (LOS, ABV, KAN, PHC, ENU, QUO, MIU) + 17 domestic airports, IATA & DNxx ICAO codes.", keys: "airports in nigeria international airports domestic airports airport code iata icao faan ncaa los abv kan phc enu quo miu dnmm dnaa lagos abuja kano port harcourt enugu uyo maiduguri" },
   { path: "/airlines", title: "Airlines in Nigeria — Active, Suspended & Historical IATA / ICAO Directory", kind: "airlines", desc: "23 verified scheduled passenger airlines in Nigeria — 11 operating carriers (Air Peace P4, Ibom Air QI, United Nigeria U5, ValueJet VK…), 2 suspended (Dana Air, Azman Air) & 10 historical carriers.", keys: "airlines in nigeria list of airlines in nigeria domestic airlines active airlines defunct airlines airline code iata icao ncaa air peace ibom air united nigeria valuejet overland green africa arik aero contractors max air rano air xejet dana air azman nigeria airways virgin nigeria air nigeria bellview adc okada sosoliso chanchangi irs med-view first nation" },
   { path: "/oil-gas", title: "Oil & Gas Companies in Nigeria — Major Upstream, LNG & Downstream Operators", kind: "oil-gas", desc: "16 verified major oil and gas operators — NNPC Limited, 5 IOCs (Shell SNEPCo, ExxonMobil Esso, Chevron, TotalEnergies, Eni NAE), NLNG, Renaissance, Seplat, Oando, Aradel & Dangote Refinery.", keys: "oil companies in nigeria oil and gas operators upstream midstream downstream ioc noc nnpc shell spdc renaissance seplat sepnu mpnu exxonmobil chevron totalenergies eni agip naoc oando nlng aradel heirs first ep dangote refinery ardova conoil nuprc nmdpra" },
+  { path: "/ports", title: "Seaports in Nigeria — Major NPA Ports, Deep-Sea & Marine Terminals Directory", kind: "ports", desc: "12 verified major seaports and marine export terminals in Nigeria — Apapa (NGAPP), Tin Can Island (NGTIN), Lekki Deep Sea Port (NGLKK), Onne (NGONN), Port Harcourt (NGPHC), Warri/Delta (NGWAR), Calabar (NGCBQ), Bonny (NGBON), Qua Iboe (NGOBO), Forcados (NGFOR), Escravos (NGESC) & Brass (NGBRA).", keys: "seaports in nigeria ports in nigeria major ports nigerian ports authority npa unlocode locode apapa ngapp tin can tincan ngtin lekki deep sea port nglkk onne ngonn port harcourt rivers port ngphc warri delta koko sapele burutu ngwar calabar ngcbq bonny ngbon qua iboe ngobo forcados ngfor escravos ngesc brass ngbra wact apmt tict ptml" },
   { path: "/tools/quiz", title: "NaijaCheck Price IQ & Slang Quiz", kind: "tools", desc: "Test your Price IQ on dated FX & fuel snapshots plus Nigerian slang from the trends desk.", keys: "quiz price iq slang check game test tools" },
 ];
 
@@ -1641,6 +1643,68 @@ const oilGasEntries = (
   };
 });
 
+// Ports — 12 verified major seaports & marine export terminals from data/ports.json SSOT
+const portEntries = (
+  portsData as {
+    ports: Array<{
+      slug: string;
+      name: string;
+      alternateNames?: string[];
+      city?: string;
+      locality?: string;
+      stateName: string;
+      lgaName?: string;
+      category: string;
+      npaZone?: string;
+      unLocode?: string;
+      subPortCodes?: string[];
+      operator?: string;
+      terminalOperators?: string[];
+      role?: string;
+      cargoTypes?: string[];
+    }>;
+  }
+).ports.map((p) => {
+  const catTag =
+    p.category === "deep-sea-port"
+      ? "Deep-sea port"
+      : p.category === "commercial-seaport"
+        ? "NPA commercial seaport"
+        : "Marine export terminal";
+  const spacedCode = p.unLocode ? `${p.unLocode.slice(0, 2)} ${p.unLocode.slice(2)}` : "";
+  const locText =
+    p.lgaName && p.city && p.lgaName.toLowerCase() !== p.city.toLowerCase()
+      ? `${p.lgaName}, ${p.city}`
+      : (p.city ?? p.stateName);
+  return {
+    path: `/ports/${p.slug}`,
+    title: `${p.name}${p.unLocode ? ` (${p.unLocode})` : ""} — ${p.city ?? p.stateName}, ${p.stateName}`,
+    kind: "ports",
+    desc: `${catTag} in ${locText}, ${p.stateName} State${p.unLocode ? ` · UN/LOCODE ${p.unLocode}` : ""}${p.role ? ` · ${p.role}` : ""}.`,
+    keys: [
+      p.name,
+      ...(p.alternateNames ?? []),
+      ...(p.subPortCodes ?? []),
+      p.city ?? "",
+      p.locality ?? "",
+      p.stateName,
+      p.lgaName ?? "",
+      p.category,
+      p.npaZone ?? "",
+      p.unLocode ?? "",
+      spacedCode,
+      p.operator ?? "",
+      ...(p.terminalOperators ?? []),
+      p.role ?? "",
+      ...(p.cargoTypes ?? []),
+      p.slug.replace(/-/g, " "),
+      "seaport port marine terminal npa unlocode locode shipping nigeria",
+    ]
+      .filter(Boolean)
+      .join(" "),
+  };
+});
+
 // Postal — 37 state pages + 12 curated leaves from data/postal-codes.json SSOT (must match sitemap allowlist)
 const postalStateEntries = (postalData as { states: Array<{ slug: string; name: string; capital: string; headOfficeCode: string; places: Array<{ slug?: string; name: string; code: string }> }> }).states.map((s) => ({
   path: `/codes/postal/${s.slug}`,
@@ -1696,7 +1760,7 @@ const geoLgaEntries = (lgasData as { states: Array<{ slug: string; name: string;
   })),
 );
 
-const omniExtras = [...chartSearchEntries, ...bankEntries, ...airportEntries, ...airlineEntries, ...oilGasEntries, ...postalStateEntries, ...postalLeafEntries, ...geoStateEntries, ...geoLgaEntries] as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;
+const omniExtras = [...chartSearchEntries, ...bankEntries, ...airportEntries, ...airlineEntries, ...oilGasEntries, ...portEntries, ...postalStateEntries, ...postalLeafEntries, ...geoStateEntries, ...geoLgaEntries] as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;
 // Merge fixedSearch + omni extras + articles, de-dupe by path (articles win for overlapping /prices/fuel etc should not duplicate)
 const articleSearchEntries = articles.map((a) => ({ path: a.path, title: a.title, kind: a.section, desc: a.metaDescription, keys: a.keywords.join(" ") }));
 const deduped = new Map<string, { path: string; title: string; kind: string; desc: string; keys: string }>();
@@ -1728,6 +1792,7 @@ const searchTipsSeed = {
   })),
   airlines: (airlinesData as { airlines: Array<{ name: string }> }).airlines.map((a) => cleanPlaceName(a.name)),
   oilGasOperators: (oilGasData as { operators: Array<{ name: string }> }).operators.map((o) => cleanPlaceName(o.name)),
+  ports: (portsData as { ports: Array<{ name: string }> }).ports.map((p) => cleanPlaceName(p.name)),
   postalStates: (postalData as { states: Array<{ name: string }> }).states.map((s) => s.name),
   postalPlaces: [
     ...new Set(
