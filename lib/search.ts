@@ -25,6 +25,7 @@ export const WAT_SEARCH_KIND_LABEL: Record<string, string> = {
   postal: "Postal",
   geo: "LGA",
   airports: "Airport",
+  airlines: "Airline",
   "oil-gas": "Oil & Gas",
   "trends-slang": "Slang",
   "trends-psych": "Relationships",
@@ -54,6 +55,7 @@ export const SEARCH_CATEGORIES: SearchCategory[] = [
   { id: "postal", label: "Postal/ZIP", kinds: ["postal"], desc: "State & district codes" },
   { id: "geo", label: "LGAs", kinds: ["geo"], desc: "Local Government Areas" },
   { id: "airports", label: "Airports", kinds: ["airports"], desc: "IATA, ICAO & cities" },
+  { id: "airlines", label: "Airlines", kinds: ["airlines"], desc: "Active & historical carriers" },
   { id: "oil-gas", label: "Oil & gas", kinds: ["oil-gas"], desc: "NNPC, IOCs & operators" },
   { id: "howto", label: "Gov how-to", kinds: ["howto"], desc: "NIN, passport, CAC…" },
   { id: "tools", label: "Tools & quiz", kinds: ["tools", "cookbook"], desc: "Calculators & quizzes" },
@@ -96,8 +98,11 @@ export const SEARCH_ALIASES: Record<string, string> = {
   zip: "postal",
   lga: "local government area council",
   airport: "airports iata icao",
-  iata: "airport iata",
-  icao: "airport icao",
+  airline: "airlines carrier aviation iata icao",
+  iata: "airport airline iata",
+  icao: "airport airline icao",
+  waac: "nigeria airways waac",
+  virgin: "air nigeria virgin",
   fuel: "petrol diesel depot",
   nnpc: "nnpc nnpcl nepl npdc",
   spdc: "renaissance shell",
@@ -142,6 +147,7 @@ export function scoreEntry(entry: SearchEntry, terms: string[]): number {
   const title = normalizeSearch(entry.title);
   const keys = normalizeSearch(entry.keys);
   const desc = normalizeSearch(entry.desc);
+  const titleWords = title.split(/\s+/);
   const words = `${title} ${keys}`.split(/\s+/);
   let s = 0;
   for (const raw of terms) {
@@ -151,6 +157,10 @@ export function scoreEntry(entry: SearchEntry, terms: string[]): number {
       if (keys.includes(t)) s += 2;
       if (desc.includes(t)) s += 1;
       if (t.length >= 4 && words.some((word) => oneEditAway(t, word))) s += 1;
+      // Boost exact whole-word short codes (2-4 char IATA/ICAO designators like P4, QI, VK, LOS, ABV, APK)
+      if (t.length >= 2 && t.length <= 4 && words.includes(t)) {
+        s += titleWords.includes(t) ? 5 : 3;
+      }
       // Boost exact digit/code matches (e.g. 058, 100001)
       if (/^\d+$/.test(t) && (title.includes(t) || keys.includes(t))) s += 2;
     }
@@ -277,6 +287,7 @@ export const DROPDOWN_TOP_LEVEL_ALLOWLIST: readonly string[] = [
   "/codes/postal",
   "/geo",
   "/airports",
+  "/airlines",
   "/oil-gas",
   "/howto",
   "/tools",
@@ -313,6 +324,7 @@ export const DROPDOWN_CATEGORY_HUBS: Record<string, readonly string[]> = {
   postal: ["/codes/postal"],
   geo: ["/geo"],
   airports: ["/airports"],
+  airlines: ["/airlines"],
   "oil-gas": ["/oil-gas"],
   howto: ["/howto"],
   tools: ["/tools"],
@@ -517,5 +529,10 @@ export const SEARCH_SUGGESTIONS: readonly SearchSuggestion[] = [
     text: "major oil companies in Nigeria",
     source: "data/oil-gas-operators.json — 16 verified major operators (/oil-gas)",
     href: "/oil-gas",
+  },
+  {
+    text: "airlines operating in Nigeria",
+    source: "data/airlines.json — 23 verified Nigerian airlines (/airlines)",
+    href: "/airlines",
   },
 ] as const;

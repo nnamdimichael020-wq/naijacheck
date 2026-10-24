@@ -260,7 +260,16 @@ export default function AirportsIndexPage() {
         <h2 id="related-h" className="text-base font-bold">
           Related Nigerian reference hubs
         </h2>
-        <div className="grid gap-3 sm:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <Link
+            href="/airlines"
+            className="rounded-lg border bg-background p-3.5 transition-colors hover:border-primary/60"
+          >
+            <p className="font-bold text-foreground">Airlines in Nigeria (Past &amp; Present) →</p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Active, suspended, and historical Nigerian passenger airlines with IATA/ICAO codes and hub airports.
+            </p>
+          </Link>
           <Link
             href="/geo"
             className="rounded-lg border bg-background p-3.5 transition-colors hover:border-primary/60"

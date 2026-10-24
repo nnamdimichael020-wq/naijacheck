@@ -26,6 +26,7 @@ import recipesData from "../data/recipes.json";
 import learnData from "../data/learn.json";
 import banksData from "../data/banks.json";
 import airportsData from "../data/airports.json";
+import airlinesData from "../data/airlines.json";
 import oilGasData from "../data/oil-gas-operators.json";
 import postalData from "../data/postal-codes.json";
 import lgasData from "../data/lgas.json";
@@ -1442,6 +1443,7 @@ const fixedSearch = [
   { path: "/codes/postal", title: "Nigerian Postal Codes — 6-digit NIPOST by State", kind: "postal", desc: "37 states/FCT · 77 places — head-office codes 100001–900001, district codes.", keys: "postal zip nipost 100001 900001 zip code state lga place" },
   { path: "/geo", title: "Nigeria 774 LGAs — Complete Local Government Areas by State", kind: "geo", desc: "All 774 LGAs (768 LGAs + 6 FCT Area Councils) — browse by state, search any LGA.", keys: "lga local government area 774 abia lagos kano council state" },
   { path: "/airports", title: "Airports in Nigeria — International & Domestic IATA / ICAO Directory", kind: "airports", desc: "24 verified public commercial airports — 7 international gateways (LOS, ABV, KAN, PHC, ENU, QUO, MIU) + 17 domestic airports, IATA & DNxx ICAO codes.", keys: "airports in nigeria international airports domestic airports airport code iata icao faan ncaa los abv kan phc enu quo miu dnmm dnaa lagos abuja kano port harcourt enugu uyo maiduguri" },
+  { path: "/airlines", title: "Airlines in Nigeria — Active, Suspended & Historical IATA / ICAO Directory", kind: "airlines", desc: "23 verified scheduled passenger airlines in Nigeria — 11 operating carriers (Air Peace P4, Ibom Air QI, United Nigeria U5, ValueJet VK…), 2 suspended (Dana Air, Azman Air) & 10 historical carriers.", keys: "airlines in nigeria list of airlines in nigeria domestic airlines active airlines defunct airlines airline code iata icao ncaa air peace ibom air united nigeria valuejet overland green africa arik aero contractors max air rano air xejet dana air azman nigeria airways virgin nigeria air nigeria bellview adc okada sosoliso chanchangi irs med-view first nation" },
   { path: "/oil-gas", title: "Oil & Gas Companies in Nigeria — Major Upstream, LNG & Downstream Operators", kind: "oil-gas", desc: "16 verified major oil and gas operators — NNPC Limited, 5 IOCs (Shell SNEPCo, ExxonMobil Esso, Chevron, TotalEnergies, Eni NAE), NLNG, Renaissance, Seplat, Oando, Aradel & Dangote Refinery.", keys: "oil companies in nigeria oil and gas operators upstream midstream downstream ioc noc nnpc shell spdc renaissance seplat sepnu mpnu exxonmobil chevron totalenergies eni agip naoc oando nlng aradel heirs first ep dangote refinery ardova conoil nuprc nmdpra" },
   { path: "/tools/quiz", title: "NaijaCheck Price IQ & Slang Quiz", kind: "tools", desc: "Test your Price IQ on dated FX & fuel snapshots plus Nigerian slang from the trends desk.", keys: "quiz price iq slang check game test tools" },
 ];
@@ -1532,6 +1534,58 @@ const airportEntries = (
       a.type,
       a.slug.replace(/-/g, " "),
       "airport code iata icao nigeria faan aviation",
+    ]
+      .filter(Boolean)
+      .join(" "),
+  };
+});
+
+// Airlines — 23 verified Nigerian scheduled passenger airlines (past & present) from data/airlines.json SSOT
+const airlineEntries = (
+  airlinesData as {
+    airlines: Array<{
+      slug: string;
+      name: string;
+      fullLegalName?: string;
+      formerNames?: string[];
+      status: string;
+      iata?: string;
+      icao?: string;
+      callsign?: string;
+      yearsActive?: string;
+      headquartersCity?: string;
+      stateName: string;
+      hubAirportSlugs: string[];
+      notes?: string;
+    }>;
+  }
+).airlines.map((a) => {
+  const codePair = [a.iata, a.icao].filter(Boolean).join(" / ");
+  const statusTag =
+    a.status === "operating"
+      ? "Operating scheduled carrier"
+      : a.status === "suspended"
+        ? "Suspended carrier"
+        : "Historical / ceased airline";
+  return {
+    path: `/airlines/${a.slug}`,
+    title: `${a.name} (${codePair}) — ${statusTag}`,
+    kind: "airlines",
+    desc: `${statusTag}${a.yearsActive ? ` (${a.yearsActive})` : ""}${a.iata ? ` · IATA ${a.iata}` : ""}${a.icao ? ` · ICAO ${a.icao}` : ""}${a.headquartersCity ? ` · HQ: ${a.headquartersCity}` : ""}.`,
+    keys: [
+      a.name,
+      a.fullLegalName ?? "",
+      ...(a.formerNames ?? []),
+      a.status,
+      a.iata ?? "",
+      a.icao ?? "",
+      a.callsign ?? "",
+      a.yearsActive ?? "",
+      a.headquartersCity ?? "",
+      a.stateName,
+      ...a.hubAirportSlugs.map((h) => h.replace(/-/g, " ")),
+      a.slug.replace(/-/g, " "),
+      "airline airlines carrier aviation iata icao ncaa nigeria",
     ]
       .filter(Boolean)
       .join(" "),
@@ -1642,7 +1696,7 @@ const geoLgaEntries = (lgasData as { states: Array<{ slug: string; name: string;
   })),
 );
 
-const omniExtras = [...chartSearchEntries, ...bankEntries, ...airportEntries, ...oilGasEntries, ...postalStateEntries, ...postalLeafEntries, ...geoStateEntries, ...geoLgaEntries] as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;
+const omniExtras = [...chartSearchEntries, ...bankEntries, ...airportEntries, ...airlineEntries, ...oilGasEntries, ...postalStateEntries, ...postalLeafEntries, ...geoStateEntries, ...geoLgaEntries] as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;
 // Merge fixedSearch + omni extras + articles, de-dupe by path (articles win for overlapping /prices/fuel etc should not duplicate)
 const articleSearchEntries = articles.map((a) => ({ path: a.path, title: a.title, kind: a.section, desc: a.metaDescription, keys: a.keywords.join(" ") }));
 const deduped = new Map<string, { path: string; title: string; kind: string; desc: string; keys: string }>();
@@ -1672,6 +1726,7 @@ const searchTipsSeed = {
     city: cleanPlaceName(a.city),
     iata: a.iata ?? "",
   })),
+  airlines: (airlinesData as { airlines: Array<{ name: string }> }).airlines.map((a) => cleanPlaceName(a.name)),
   oilGasOperators: (oilGasData as { operators: Array<{ name: string }> }).operators.map((o) => cleanPlaceName(o.name)),
   postalStates: (postalData as { states: Array<{ name: string }> }).states.map((s) => s.name),
   postalPlaces: [

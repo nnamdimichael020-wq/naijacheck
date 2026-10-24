@@ -11,9 +11,11 @@ import {
   MapPinned,
   MessagesSquare,
   Plane,
+  PlaneTakeoff,
   ShieldCheck,
 } from "lucide-react";
 import { getAirportsStats } from "@/lib/airports";
+import { getAirlinesStats } from "@/lib/airlines";
 import { getAllBanks } from "@/lib/banks";
 import { getOilGasStats } from "@/lib/oil-gas";
 import { getAllPostalStates, postalPlaceCount } from "@/lib/postal";
@@ -33,6 +35,7 @@ type Tile = {
 function buildTiles(): Tile[] {
   const banks = getAllBanks();
   const airportStats = getAirportsStats();
+  const airlineStats = getAirlinesStats();
   const oilGasStats = getOilGasStats();
   const postalStates = getAllPostalStates();
   const postalPlaces = postalPlaceCount();
@@ -82,6 +85,13 @@ function buildTiles(): Tile[] {
       promise: "International & domestic IATA / ICAO codes by state",
       Icon: Plane,
       badge: airportStats.total ? `${airportStats.total} airports · ${airportStats.international} int'l` : undefined,
+    },
+    {
+      href: "/airlines",
+      label: "Airlines in Nigeria",
+      promise: "Active, suspended & historical carriers + IATA / ICAO codes",
+      Icon: PlaneTakeoff,
+      badge: airlineStats.total ? `${airlineStats.total} airlines · ${airlineStats.operating} active` : undefined,
     },
     {
       href: "/oil-gas",

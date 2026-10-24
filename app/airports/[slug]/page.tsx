@@ -17,6 +17,11 @@ import {
   getAllAirports,
   type Airport,
 } from "@/lib/airports";
+import {
+  airlineCodeSummary,
+  airlineStatusShortLabel,
+  getAirlinesByHubAirportSlug,
+} from "@/lib/airlines";
 
 export const dynamicParams = false;
 
@@ -124,6 +129,7 @@ export default async function AirportDetailPage({ params }: { params: Promise<{ 
   const codes = codeSummaryLabel(airport);
   const typeLabel = airportTypeLabel(airport.type);
   const stateSiblings = getAirportsByState(airport.stateSlug).filter((a) => a.slug !== airport.slug);
+  const hubAirlines = getAirlinesByHubAirportSlug(airport.slug);
   const related = peerAirports(airport);
   const faqs = buildAirportFaqs(airport);
 
@@ -313,6 +319,39 @@ export default async function AirportDetailPage({ params }: { params: Promise<{ 
           check directly with your operating airline or FAAN before travelling.
         </p>
       </section>
+
+      {hubAirlines.length > 0 ? (
+        <section aria-labelledby="hub-airlines-h" className="space-y-3 rounded-xl border bg-card/40 p-4 text-sm">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h2 id="hub-airlines-h" className="text-lg font-bold">
+              Nigerian airlines with verified hub or historical base at {airport.city}
+            </h2>
+            <Link href="/airlines" className="text-xs font-semibold text-primary underline-offset-2 hover:underline">
+              All 23 Nigerian airlines →
+            </Link>
+          </div>
+          <div className="grid gap-2.5 sm:grid-cols-2">
+            {hubAirlines.map((airline) => (
+              <Link
+                key={airline.slug}
+                href={`/airlines/${airline.slug}`}
+                className="flex items-center justify-between gap-2 rounded-lg border bg-background p-3 transition-colors hover:border-primary/60"
+              >
+                <div>
+                  <p className="font-bold text-foreground">{airline.name}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {airlineStatusShortLabel(airline.status)}
+                    {airline.yearsActive ? ` · ${airline.yearsActive}` : ""}
+                  </p>
+                </div>
+                <span className="shrink-0 rounded border bg-secondary/40 px-2 py-0.5 font-mono text-xs font-bold">
+                  {airlineCodeSummary(airline)}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section aria-labelledby="faq-h" className="space-y-3 rounded-xl border bg-card/40 p-4 text-sm">
         <h2 id="faq-h" className="text-lg font-bold">

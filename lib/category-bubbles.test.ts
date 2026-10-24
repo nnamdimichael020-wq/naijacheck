@@ -24,6 +24,7 @@ import {
 } from "./category-bubble-controller";
 import { getAllBanks } from "./banks";
 import { getAllAirports } from "./airports";
+import { getAllAirlines } from "./airlines";
 import { getAllOilGasOperators } from "./oil-gas";
 import { getAllPostalStates } from "./postal";
 import { getAllLgaStates } from "./lgas";
@@ -139,6 +140,14 @@ function run() {
     placesAirportsSub.children?.length,
     getAllAirports().length + 1,
     "Places -> Airports lists hub + all 24 SSOT airports",
+  );
+  const placesAirlinesSub = placesBubble.subcategories.find((s) => s.id === "places-airlines")!;
+  assert.ok(placesAirlinesSub, "Airlines lives under Places bubble next to Airports (strictly 6 top-level bubbles)");
+  assert.equal(placesAirlinesSub.href, "/airlines");
+  assert.equal(
+    placesAirlinesSub.children?.length,
+    getAllAirlines().length + 1,
+    "Places -> Airlines lists hub + all 23 SSOT airlines",
   );
   const placesOilGasSub = placesBubble.subcategories.find((s) => s.id === "places-oil-gas")!;
   assert.ok(placesOilGasSub, "Oil & Gas Operators lives under Places bubble (strictly 6 top-level bubbles)");

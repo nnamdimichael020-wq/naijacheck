@@ -1,5 +1,6 @@
 import { ARTICLES } from "@/lib/articles";
 import { getAllAirports } from "@/lib/airports";
+import { airlineCodeSummary, airlineStatusShortLabel, getAllAirlines } from "@/lib/airlines";
 import { getAllBanks } from "@/lib/banks";
 import { getAllOilGasOperators, operatorTypeShortLabel } from "@/lib/oil-gas";
 import { CHART_PAGES } from "@/lib/chart-pages";
@@ -117,6 +118,7 @@ function compactSubs(items: Array<BubbleSubcategory | null>): BubbleSubcategory[
 export function buildCategoryBubbleTree(): CategoryBubble[] {
   const banks = getAllBanks();
   const airports = getAllAirports();
+  const airlines = getAllAirlines();
   const oilGasOperators = getAllOilGasOperators();
   const postalStates = getAllPostalStates();
   const postalDistricts = getAllPostalAreaParams()
@@ -303,6 +305,24 @@ export function buildCategoryBubbleTree(): CategoryBubble[] {
             label: `${a.city} — ${a.name}`,
             href: `/airports/${a.slug}`,
             meta: [a.iata, a.icao].filter(Boolean).join(" · "),
+          })),
+        ],
+      }),
+      makeSubcategory({
+        id: "places-airlines",
+        label: "Airlines in Nigeria",
+        href: "/airlines",
+        meta: `${airlines.length} airlines`,
+        children: [
+          {
+            label: "All Nigerian Airlines Directory",
+            href: "/airlines",
+            meta: `${airlines.length} airlines`,
+          },
+          ...airlines.map((a) => ({
+            label: a.name,
+            href: `/airlines/${a.slug}`,
+            meta: [airlineStatusShortLabel(a.status), airlineCodeSummary(a)].join(" · "),
           })),
         ],
       }),
