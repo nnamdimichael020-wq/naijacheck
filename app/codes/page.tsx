@@ -14,7 +14,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/codes",
   title: "Nigerian codes — bank sort & USSD codes plus postal / ZIP codes by state",
   description:
-    "Nigerian codes hub: bank sort codes (CBN/NIP) + USSD codes for GTB *737#, Access *901# and 10 more banks, plus postal/ZIP codes for all 36 states + FCT — 6-digit NIPOST codes by area with sources and copy button. Plus 774 LGAs via /geo. Last verified 2026-10-21.",
+    "Nigerian codes hub: CBN/NIP bank sort & USSD codes across commercial banks and fintechs, plus 262 verified 6-digit NIPOST postal / ZIP codes across all 36 states + FCT with public sources and 1-tap copy, plus all 774 LGAs via /geo. Last verified 2026-10-24.",
   keywords: [
     "Nigeria bank sort codes",
     "GTBank sort code",

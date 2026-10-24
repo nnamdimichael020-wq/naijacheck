@@ -77,7 +77,7 @@ export type CategoryBubble = {
 };
 
 export const STREET_SLANG_CAP = 12 as const;
-export const POSTAL_DISTRICT_CAP = 12 as const;
+export const POSTAL_DISTRICT_CAP = 20 as const;
 
 function makeSubcategory(
   sub: Omit<BubbleSubcategory, "children"> & { children?: BubbleLeafLink[] },

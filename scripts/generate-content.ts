@@ -31,6 +31,7 @@ import oilGasData from "../data/oil-gas-operators.json";
 import portsData from "../data/ports.json";
 import postalData from "../data/postal-codes.json";
 import lgasData from "../data/lgas.json";
+import { CURATED_POSTAL_LEAVES } from "../lib/postal";
 import type { ArticleBodyImage, ArticleImage } from "../lib/types";
 import {
   ARTICLE_IMAGE_CONFIG,
@@ -1441,7 +1442,7 @@ const fixedSearch = [
   { path: "/charts", title: "Naira Price History Charts — Dollar, CBN & Fuel Depot", kind: "charts", desc: "Parallel USD buy, CBN NFEM, depot petrol, diesel & LPG — every stored monitor reading charted.", keys: "charts naira dollar cbn depot petrol diesel lpg history price" },
   { path: "/codes", title: "Nigerian Codes — Bank Sort & USSD plus Postal/ZIP & LGAs", kind: "hub", desc: "Bank sort codes + USSD + postal/ZIP codes + 774 LGAs — the codes home.", keys: "codes bank sort ussd postal zip lga 044 058" },
   { path: "/codes/banks", title: "List of Commercial Banks in Nigeria — Sort Codes, USSD & Headquarters", kind: "banks", desc: "12 major retail commercial banks — 3-digit CBN/NIP sort codes (044, 058…), USSD (*901#, *737#…), Lagos headquarters & CBN licence tiers.", keys: "list of banks in nigeria commercial banks bank sort ussd code nip cbn headquarters licence 044 058 057 011 gtbank access zenith firstbank 737 901" },
-  { path: "/codes/postal", title: "Nigerian Postal Codes — 6-digit NIPOST by State", kind: "postal", desc: "37 states/FCT · 77 places — head-office codes 100001–900001, district codes.", keys: "postal zip nipost 100001 900001 zip code state lga place" },
+  { path: "/codes/postal", title: "Nigerian Postal Codes — 6-digit NIPOST by State", kind: "postal", desc: `36 states + FCT · ${(postalData as { states: Array<{ places: unknown[] }> }).states.reduce((n, s) => n + s.places.length, 0)} verified places — head-office codes 100001–900001, urban districts & major towns.`, keys: "postal zip nipost 100001 900001 zip code state lga place aba onitsha lekki ajah wuse sango ota" },
   { path: "/geo", title: "Nigeria 774 LGAs — Complete Local Government Areas by State", kind: "geo", desc: "All 774 LGAs (768 LGAs + 6 FCT Area Councils) — browse by state, search any LGA.", keys: "lga local government area 774 abia lagos kano council state" },
   { path: "/airports", title: "Airports in Nigeria — International & Domestic IATA / ICAO Directory", kind: "airports", desc: "24 verified public commercial airports — 7 international gateways (LOS, ABV, KAN, PHC, ENU, QUO, MIU) + 17 domestic airports, IATA & DNxx ICAO codes.", keys: "airports in nigeria international airports domestic airports airport code iata icao faan ncaa los abv kan phc enu quo miu dnmm dnaa lagos abuja kano port harcourt enugu uyo maiduguri" },
   { path: "/airlines", title: "Airlines in Nigeria — Active, Suspended & Historical IATA / ICAO Directory", kind: "airlines", desc: "23 verified scheduled passenger airlines in Nigeria — 11 operating carriers (Air Peace P4, Ibom Air QI, United Nigeria U5, ValueJet VK…), 2 suspended (Dana Air, Azman Air) & 10 historical carriers.", keys: "airlines in nigeria list of airlines in nigeria domestic airlines active airlines defunct airlines airline code iata icao ncaa air peace ibom air united nigeria valuejet overland green africa arik aero contractors max air rano air xejet dana air azman nigeria airways virgin nigeria air nigeria bellview adc okada sosoliso chanchangi irs med-view first nation" },
@@ -1705,39 +1706,25 @@ const portEntries = (
   };
 });
 
-// Postal — 37 state pages + 12 curated leaves from data/postal-codes.json SSOT (must match sitemap allowlist)
-const postalStateEntries = (postalData as { states: Array<{ slug: string; name: string; capital: string; headOfficeCode: string; places: Array<{ slug?: string; name: string; code: string }> }> }).states.map((s) => ({
+// Postal — 37 state pages + curated high-intent leaves from data/postal-codes.json & lib/postal.ts SSOT (must match sitemap allowlist)
+const postalStateEntries = (postalData as { states: Array<{ slug: string; name: string; capital: string; headOfficeCode: string; places: Array<{ slug?: string; name: string; code: string; label?: string }> }> }).states.map((s) => ({
   path: `/codes/postal/${s.slug}`,
-  title: `${s.name} State Postal Codes — ${s.headOfficeCode}`,
+  title: `${s.slug === "fct-abuja" ? s.name : `${s.name} State`} Postal Codes — ${s.headOfficeCode}`,
   kind: "postal",
-  desc: `Head office ${s.headOfficeCode} — ${s.places.length} place${s.places.length !== 1 ? "s" : ""} inc. ${s.capital}`,
-  keys: `${s.name} ${s.slug.replace(/-/g, " ")} ${s.capital} ${s.headOfficeCode} postal zip nipost ${s.places.map((p) => `${p.name} ${p.code}`).join(" ")}`,
+  desc: `Head office ${s.headOfficeCode} — ${s.places.length} verified places inc. ${s.capital}`,
+  keys: `${s.name} ${s.slug.replace(/-/g, " ")} ${s.capital} ${s.headOfficeCode} postal zip nipost ${s.places.map((p) => `${p.name} ${p.code} ${p.label ?? ""}`).join(" ")}`,
 }));
-const postalCuratedLeaves: Array<{ state: string; area: string }> = [
-  { state: "lagos", area: "ikeja" },
-  { state: "lagos", area: "victoria-island" },
-  { state: "lagos", area: "lekki" },
-  { state: "lagos", area: "surulere" },
-  { state: "lagos", area: "ikorodu" },
-  { state: "fct-abuja", area: "garki" },
-  { state: "fct-abuja", area: "wuse" },
-  { state: "fct-abuja", area: "maitama" },
-  { state: "fct-abuja", area: "asokoro" },
-  { state: "fct-abuja", area: "gwarinpa" },
-  { state: "rivers", area: "port-harcourt" },
-  { state: "kano", area: "kano-municipal" },
-];
-const postalLeafEntries = postalCuratedLeaves
+const postalLeafEntries = CURATED_POSTAL_LEAVES
   .map(({ state, area }) => {
-    const st = (postalData as { states: Array<{ slug: string; name: string; places: Array<{ slug?: string; name: string; code: string }> }> }).states.find((s) => s.slug === state);
+    const st = (postalData as { states: Array<{ slug: string; name: string; places: Array<{ slug?: string; name: string; code: string; label?: string }> }> }).states.find((s) => s.slug === state);
     const place = st?.places.find((p) => p.slug === area);
     if (!st || !place) return null;
     return {
       path: `/codes/postal/${state}/${area}`,
       title: `${place.name} — ${st.name} Postal Code ${place.code}`,
       kind: "postal",
-      desc: `${place.name} district ${place.code} — verified NIPOST 6-digit code in ${st.name} State.`,
-      keys: `${place.name} ${st.name} ${place.code} ${area.replace(/-/g, " ")} postal zip district nipost`,
+      desc: `${place.name} district ${place.code} — verified NIPOST 6-digit code in ${st.slug === "fct-abuja" ? st.name : `${st.name} State`}.`,
+      keys: `${place.name} ${st.name} ${place.code} ${area.replace(/-/g, " ")} ${place.label ?? ""} postal zip district nipost`,
     };
   })
   .filter(Boolean) as Array<{ path: string; title: string; kind: string; desc: string; keys: string }>;

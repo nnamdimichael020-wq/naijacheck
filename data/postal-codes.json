@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-21",
-  "notes": "Nigeria ZIP = NIPOST 6-digit numeric code. First digit region (1–9), next two dispatch district, last three delivery location. Head office codes end in 001. On 1 Oct 2026 NIPOST launched 11-char National Digital Alphanumeric Postcode (NDAPS) per-building — 6-digit codes remain accepted on most forms; use 6-digit unless building asks for NDAPS. Every code quoted cites a public source; conflicting listings documented with note. Do not claim NIPOST endorsement.",
+  "updatedAt": "2026-10-24",
+  "notes": "Nigeria uses a 6-digit NIPOST postal code system (first digit = postal region 1–9, first three digits = dispatch district, last three = delivery post office; 001 = General Post Office / head office). On 1 October 2026 NIPOST also introduced the 11-character alphanumeric National Digital Addressing and Postcode System (NDAPS), while 6-digit postal codes remain standard across international forms, KYC, banks, customs, and couriers. Honest coverage note: this directory curates verified state GPOs, major urban districts, LGA seats, and commercial centres — not every street or village in Nigeria. Where public NIPOST compilations disagree on a code, we record the conflict in notes rather than guessing.",
   "states": [
     {
       "slug": "abia",
@@ -8,9 +8,9 @@
       "capital": "Umuahia",
       "zoneCode": "440",
       "headOfficeCode": "440001",
-      "range": "440001–450005",
+      "range": "440001–453120",
       "intro": "Abia’s mail hubs around Aba and Umuahia — commercial cities where correct codes help parcels avoid Aba’s busy markets.",
-      "description": "Abia State routes via Umuahia and Aba; commercial parcels use Aba’s sub-codes.",
+      "description": "Abia postal codes via Umuahia GPO (440001) and Aba commercial hub (450101), plus Ohafia, Arochukwu and Bende.",
       "places": [
         {
           "name": "Umuahia — Head office / GPO",
@@ -31,9 +31,78 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Aba (Ariaria / Aba North)",
+          "code": "450101",
+          "slug": "aba",
+          "label": "Aba North industrial & Ariaria market belt (450101–450272)",
+          "notes": "Aba GPO appears as 450001 in national city summary tables while Aba North delivery districts run 450101–450272.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Abia major towns — Aba 450101",
+              "url": "https://nigeriazipcode.com/abia/"
+            },
+            {
+              "label": "NigeriaZipCode — Major Nigerian cities (Aba 450001)",
+              "url": "https://nigeriazipcode.com/"
+            }
+          ]
+        },
+        {
+          "name": "Aba South",
+          "code": "450103",
+          "slug": "aba-south",
+          "label": "Aba South — Eziukwu, Asa Road & main trading core (450103–450104)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Abia LGA list — Aba South 450103–450104",
+              "url": "https://nigeriazipcode.com/abia/"
+            }
+          ]
+        },
+        {
+          "name": "Ohafia",
+          "code": "442108",
+          "slug": "ohafia",
+          "label": "Ohafia LGA — Ebem, Elu & Abiriba axis (442108–442115)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Abia major towns — Ohafia 442108",
+              "url": "https://nigeriazipcode.com/abia/"
+            }
+          ]
+        },
+        {
+          "name": "Arochukwu",
+          "code": "442101",
+          "slug": "arochukwu",
+          "label": "Arochukwu LGA (442101–442107)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Abia major towns — Arochukwu 442101",
+              "url": "https://nigeriazipcode.com/abia/"
+            }
+          ]
+        },
+        {
+          "name": "Bende",
+          "code": "441113",
+          "slug": "bende",
+          "label": "Bende LGA — Uzuakoli & Bende axis (441113–441123)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Abia major towns — Bende 441113",
+              "url": "https://nigeriazipcode.com/abia/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Abia State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/abia/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -47,7 +116,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -57,9 +126,9 @@
       "capital": "Yola",
       "zoneCode": "640",
       "headOfficeCode": "640001",
-      "range": "640001–650005",
+      "range": "640001–652105",
       "intro": "Adamawa’s vast, river-crossed terrain means Yola’s routing codes are the anchor for any delivery north of the Benue.",
-      "description": "Adamawa’s routes via Yola through savannah to Mubi.",
+      "description": "Adamawa postal codes via Yola GPO (640001) and Jimeta (640101) to Mubi, Numan and Ganye.",
       "places": [
         {
           "name": "Yola — Head office / GPO",
@@ -80,9 +149,61 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Jimeta (Yola South)",
+          "code": "640101",
+          "slug": "jimeta",
+          "label": "Jimeta commercial core & Yola South (640101)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Adamawa major towns — Jimeta 640101",
+              "url": "https://nigeriazipcode.com/adamawa/"
+            }
+          ]
+        },
+        {
+          "name": "Mubi",
+          "code": "650101",
+          "slug": "mubi",
+          "label": "Mubi North commercial & ADSU university town (Mubi South 650102)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Adamawa major towns — Mubi 650101",
+              "url": "https://nigeriazipcode.com/adamawa/"
+            }
+          ]
+        },
+        {
+          "name": "Numan",
+          "code": "642101",
+          "slug": "numan",
+          "label": "Numan — Benue/Gongola confluence town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Adamawa major towns — Numan 642101",
+              "url": "https://nigeriazipcode.com/adamawa/"
+            }
+          ]
+        },
+        {
+          "name": "Ganye",
+          "code": "641110",
+          "slug": "ganye",
+          "label": "Ganye LGA — southern agricultural market hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Adamawa major towns — Ganye 641110",
+              "url": "https://nigeriazipcode.com/adamawa/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Adamawa State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/adamawa/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -96,7 +217,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -106,9 +227,9 @@
       "capital": "Uyo",
       "zoneCode": "520",
       "headOfficeCode": "520001",
-      "range": "520001–530005",
+      "range": "520001–534107",
       "intro": "Akwa Ibom moved quickly to Uyo as hub — its 520001 code is what most forms accept for any Uyo address.",
-      "description": "Akwa Ibom via Uyo with coastal Eket codes nearby.",
+      "description": "Akwa Ibom postal codes via Uyo GPO (520001) to Eket, Ikot Ekpene, Oron and Ikot Abasi.",
       "places": [
         {
           "name": "Uyo — Head office / GPO",
@@ -129,9 +250,73 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Uyo Urban",
+          "code": "520101",
+          "slug": "uyo-urban",
+          "label": "Uyo metropolitan LGA delivery district (520001–520114)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Akwa Ibom LGA list — Uyo 520101",
+              "url": "https://nigeriazipcode.com/akwa-ibom/"
+            }
+          ]
+        },
+        {
+          "name": "Eket",
+          "code": "521103",
+          "slug": "eket",
+          "label": "Eket oil & gas hub (adjacent Ibeno / Qua Iboe terminal uses 524110)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Akwa Ibom major towns — Eket 521103",
+              "url": "https://nigeriazipcode.com/akwa-ibom/"
+            }
+          ]
+        },
+        {
+          "name": "Ikot Ekpene",
+          "code": "530101",
+          "slug": "ikot-ekpene",
+          "label": "Ikot Ekpene — Raffia City commercial centre",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Akwa Ibom major towns — Ikot Ekpene 530101",
+              "url": "https://nigeriazipcode.com/akwa-ibom/"
+            }
+          ]
+        },
+        {
+          "name": "Oron",
+          "code": "525101",
+          "slug": "oron",
+          "label": "Oron — Cross River estuary & maritime town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Akwa Ibom major towns — Oron 525101",
+              "url": "https://nigeriazipcode.com/akwa-ibom/"
+            }
+          ]
+        },
+        {
+          "name": "Ikot Abasi",
+          "code": "534101",
+          "slug": "ikot-abasi",
+          "label": "Ikot Abasi coastal industrial hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Akwa Ibom major towns — Ikot Abasi 534101",
+              "url": "https://nigeriazipcode.com/akwa-ibom/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Akwa Ibom State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/akwa-ibom/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -145,7 +330,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -155,9 +340,9 @@
       "capital": "Awka",
       "zoneCode": "420",
       "headOfficeCode": "420001",
-      "range": "420001–430005",
+      "range": "420001–435115",
       "intro": "Awka’s 420001 routes mail into Onitsha and Nnewi’s commercial belt — getting the LGA code right matters more than the state one.",
-      "description": "Anambra via Awka linking Onitsha/Nnewi commercial hubs.",
+      "description": "Anambra postal codes via Awka (420001/420102), Onitsha (430001/430212), Nnewi (435001), Ihiala and Ekwulobia.",
       "places": [
         {
           "name": "Awka — Head office / GPO",
@@ -204,11 +389,80 @@
             {
               "label": "NigeriaZipCode Nnewi",
               "url": "https://nigeriazipcode.com/"
+            },
+            {
+              "label": "NigeriaZipCode — Anambra LGA & town codes (Nnewi 435101)",
+              "url": "https://nigeriazipcode.com/anambra/"
+            }
+          ],
+          "notes": "435001 is Nnewi GPO; Nnewi North urban delivery districts use 435101 (Nnewi South 435102–435113)."
+        },
+        {
+          "name": "Awka Urban (Awka South)",
+          "code": "420102",
+          "slug": "awka-urban",
+          "label": "Awka South — Aroma, UNIZIK & Amawbia (420102–420110)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Anambra major towns — Awka 420102",
+              "url": "https://nigeriazipcode.com/anambra/"
+            }
+          ]
+        },
+        {
+          "name": "Onitsha South (Fegge)",
+          "code": "430212",
+          "slug": "onitsha-south",
+          "label": "Onitsha South — Fegge, Bridgehead & Ochanja (430212–430283)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Anambra LGA list — Onitsha South 430212–430283",
+              "url": "https://nigeriazipcode.com/anambra/"
+            }
+          ]
+        },
+        {
+          "name": "Ihiala",
+          "code": "431116",
+          "slug": "ihiala",
+          "label": "Ihiala LGA — Onitsha–Owerri highway town (431116–431125)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Anambra major towns — Ihiala 431116",
+              "url": "https://nigeriazipcode.com/anambra/"
+            }
+          ]
+        },
+        {
+          "name": "Ekwulobia (Aguata)",
+          "code": "422111",
+          "slug": "ekwulobia",
+          "label": "Aguata LGA commercial junction",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Anambra major towns — Ekwulobia 422111",
+              "url": "https://nigeriazipcode.com/anambra/"
+            }
+          ]
+        },
+        {
+          "name": "Aguleri (Anambra East)",
+          "code": "432101",
+          "slug": "aguleri",
+          "label": "Anambra East — Umueri airport corridor (432101–432108)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Anambra major towns — Aguleri 432101",
+              "url": "https://nigeriazipcode.com/anambra/"
             }
           ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Anambra State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/anambra/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -222,7 +476,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -232,9 +486,9 @@
       "capital": "Bauchi",
       "zoneCode": "740",
       "headOfficeCode": "740001",
-      "range": "740001–750005",
+      "range": "740001–752105",
       "intro": "Bauchi’s savannah-wide routes rely on the 740001 head office — rural codes then fan out to Dass and Misau.",
-      "description": "Bauchi via Bauchi city across savannah LGAs.",
+      "description": "Bauchi postal codes via Bauchi GPO (740001) to Azare, Misau, Toro and Ningi.",
       "places": [
         {
           "name": "Bauchi — Head office / GPO",
@@ -255,9 +509,61 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Azare (Katagum)",
+          "code": "751001",
+          "slug": "azare",
+          "label": "Katagum LGA — northern Bauchi commercial & emirate hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Bauchi major towns — Azare 751001",
+              "url": "https://nigeriazipcode.com/bauchi/"
+            }
+          ]
+        },
+        {
+          "name": "Misau",
+          "code": "750001",
+          "slug": "misau",
+          "label": "Misau LGA & emirate headquarters",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Bauchi major towns — Misau 750001",
+              "url": "https://nigeriazipcode.com/bauchi/"
+            }
+          ]
+        },
+        {
+          "name": "Toro",
+          "code": "740004",
+          "slug": "toro",
+          "label": "Toro LGA — western highland corridor bordering Jos",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Bauchi major towns — Toro 740004",
+              "url": "https://nigeriazipcode.com/bauchi/"
+            }
+          ]
+        },
+        {
+          "name": "Ningi",
+          "code": "742101",
+          "slug": "ningi",
+          "label": "Ningi LGA headquarters",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Bauchi major towns — Ningi 742101",
+              "url": "https://nigeriazipcode.com/bauchi/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Bauchi State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/bauchi/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -271,7 +577,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -281,9 +587,9 @@
       "capital": "Yenagoa",
       "zoneCode": "561",
       "headOfficeCode": "561001",
-      "range": "560001–562103",
+      "range": "560001–561102",
       "intro": "Bayelsa’s creeks make Yenagoa’s 561001 the practical gateway — riverine codes depend on correct dispatch prefix.",
-      "description": "Bayelsa via Yenagoa across creeks and riverine LGAs.",
+      "description": "Bayelsa postal codes across Yenagoa (561001/560001), Brass (561001), Nembe, Ogbia and Amassoma.",
       "places": [
         {
           "name": "Yenagoa — Head office / GPO",
@@ -305,9 +611,74 @@
             }
           ],
           "notes": "Some single-page lists quote 560001 for Yenagoa; 561001 is listed consistently for Bayelsa head office across secondary compilations — we use 561001 with note.  Alternative value  appears in some compilations."
+        },
+        {
+          "name": "Yenagoa Urban",
+          "code": "560001",
+          "slug": "yenagoa-urban",
+          "label": "Yenagoa LGA delivery range (560001–560103)",
+          "notes": "NigeriaZipCode records 560001 for Yenagoa LGA and 561001 for Brass, whereas state-capital summary tables list 561001 as Bayelsa GPO.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Bayelsa LGA list — Yenagoa 560001",
+              "url": "https://nigeriazipcode.com/bayelsa/"
+            }
+          ]
+        },
+        {
+          "name": "Brass",
+          "code": "561001",
+          "slug": "brass",
+          "label": "Brass Island & Twon-Brass crude export terminal",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Bayelsa major towns — Brass 561001",
+              "url": "https://nigeriazipcode.com/bayelsa/"
+            }
+          ]
+        },
+        {
+          "name": "Nembe",
+          "code": "561002",
+          "slug": "nembe",
+          "label": "Nembe LGA — Ogbolomabiri & Bassambiri creek hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Bayelsa major towns — Nembe 561002",
+              "url": "https://nigeriazipcode.com/bayelsa/"
+            }
+          ]
+        },
+        {
+          "name": "Ogbia",
+          "code": "561003",
+          "slug": "ogbia",
+          "label": "Ogbia LGA — Oloibiri & Kolo Creek corridor",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Bayelsa major towns — Ogbia 561003",
+              "url": "https://nigeriazipcode.com/bayelsa/"
+            }
+          ]
+        },
+        {
+          "name": "Amassoma (Southern Ijaw)",
+          "code": "560103",
+          "slug": "amassoma",
+          "label": "Southern Ijaw LGA — Niger Delta University town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Bayelsa major towns — Amassoma 560103",
+              "url": "https://nigeriazipcode.com/bayelsa/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Bayelsa State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/bayelsa/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -321,7 +692,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Some single-page lists quote 560001 for Yenagoa; 561001 is listed consistently for Bayelsa head office across secondary compilations — we use 561001 with note."
     },
@@ -331,9 +702,9 @@
       "capital": "Makurdi",
       "zoneCode": "970",
       "headOfficeCode": "970001",
-      "range": "970001–982112",
+      "range": "970001–982105",
       "intro": "Benue’s 970001 in Makurdi anchors routes from food-belt towns — the longest range in Nigeria (to 982112) sits here.",
-      "description": "Benue via Makurdi into food-belt towns with widest range.",
+      "description": "Benue postal codes via Makurdi GPO (970001) to Gboko, Otukpo, Katsina-Ala and Vandeikya.",
       "places": [
         {
           "name": "Makurdi — Head office / GPO",
@@ -354,9 +725,61 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Gboko",
+          "code": "981001",
+          "slug": "gboko",
+          "label": "Gboko — Tiv commercial & industrial town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Benue major towns — Gboko 981001",
+              "url": "https://nigeriazipcode.com/benue/"
+            }
+          ]
+        },
+        {
+          "name": "Otukpo",
+          "code": "972001",
+          "slug": "otukpo",
+          "label": "Otukpo — southern Benue / Idoma commercial hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Benue major towns — Otukpo 972001",
+              "url": "https://nigeriazipcode.com/benue/"
+            }
+          ]
+        },
+        {
+          "name": "Katsina-Ala",
+          "code": "980001",
+          "slug": "katsina-ala",
+          "label": "Katsina-Ala river & market town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Benue major towns — Katsina-Ala 980001",
+              "url": "https://nigeriazipcode.com/benue/"
+            }
+          ]
+        },
+        {
+          "name": "Vandeikya",
+          "code": "982105",
+          "slug": "vandeikya",
+          "label": "Vandeikya LGA — south-eastern border trade town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Benue major towns — Vandeikya 982105",
+              "url": "https://nigeriazipcode.com/benue/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Benue State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/benue/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -370,7 +793,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -380,9 +803,9 @@
       "capital": "Maiduguri",
       "zoneCode": "600",
       "headOfficeCode": "600001",
-      "range": "600001–610005",
+      "range": "600001–612104",
       "intro": "Maiduguri’s 600001 persists as hub despite huge distances — Borno routes stretch furthest north-east.",
-      "description": "Borno via Maiduguri across north-east.",
+      "description": "Borno postal codes via Maiduguri GPO (600001) and Jere (600104) to Biu, Bama and Monguno.",
       "places": [
         {
           "name": "Maiduguri — Head office / GPO",
@@ -403,9 +826,63 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Jere (Greater Maiduguri)",
+          "code": "600104",
+          "slug": "jere",
+          "label": "Jere LGA — University of Maiduguri & eastern metropolis",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Borno LGA list — Jere 600104",
+              "url": "https://nigeriazipcode.com/borno/"
+            }
+          ]
+        },
+        {
+          "name": "Biu",
+          "code": "603101",
+          "slug": "biu",
+          "label": "Biu plateau & emirate town (urban layouts also cite 603211)",
+          "notes": "NigeriaZipCode lists 603101 for Biu LGA and 603211 for Biu urban layout.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Borno LGA & major towns — Biu 603101 / 603211",
+              "url": "https://nigeriazipcode.com/borno/"
+            }
+          ]
+        },
+        {
+          "name": "Bama",
+          "code": "610101",
+          "slug": "bama",
+          "label": "Bama LGA (town layouts also cite 610211)",
+          "notes": "NigeriaZipCode lists 610101 for Bama LGA and 610211 for Bama urban layout.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Borno LGA & major towns — Bama 610101 / 610211",
+              "url": "https://nigeriazipcode.com/borno/"
+            }
+          ]
+        },
+        {
+          "name": "Monguno",
+          "code": "612101",
+          "slug": "monguno",
+          "label": "Monguno — northern Borno / Lake Chad axis",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Borno major towns — Monguno 612101",
+              "url": "https://nigeriazipcode.com/borno/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Borno State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/borno/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -419,7 +896,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -429,9 +906,9 @@
       "capital": "Calabar",
       "zoneCode": "540",
       "headOfficeCode": "540001",
-      "range": "540001–550005",
+      "range": "540001–553114",
       "intro": "Calabar’s 540001 gateway serves coastal and highland codes — correct prefix avoids Akamkpa misrouting.",
-      "description": "Cross River via Calabar to highland LGAs.",
+      "description": "Cross River postal codes via Calabar GPO (540001) and Calabar Municipal/South to Ikom, Ogoja and Obudu.",
       "places": [
         {
           "name": "Calabar — Head office / GPO",
@@ -452,9 +929,73 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Calabar Municipal",
+          "code": "540211",
+          "slug": "calabar-municipal",
+          "label": "Marian Rd, State Housing, EPZ & port belt (540211–540281)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Cross River LGA list — Calabar Municipal 540211–540281",
+              "url": "https://nigeriazipcode.com/cross-river/"
+            }
+          ]
+        },
+        {
+          "name": "Calabar South",
+          "code": "540221",
+          "slug": "calabar-south",
+          "label": "Watt Market, Marina & Henshaw Town (540221–540281)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Cross River LGA list — Calabar South 540221–540281",
+              "url": "https://nigeriazipcode.com/cross-river/"
+            }
+          ]
+        },
+        {
+          "name": "Ikom",
+          "code": "550211",
+          "slug": "ikom",
+          "label": "Ikom — central cocoa & Cameroon border trade hub (550211–550281)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Cross River major towns — Ikom 550211",
+              "url": "https://nigeriazipcode.com/cross-river/"
+            }
+          ]
+        },
+        {
+          "name": "Ogoja",
+          "code": "550101",
+          "slug": "ogoja",
+          "label": "Ogoja — northern Cross River administrative hub (550101–550112)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Cross River major towns — Ogoja 550101",
+              "url": "https://nigeriazipcode.com/cross-river/"
+            }
+          ]
+        },
+        {
+          "name": "Obudu",
+          "code": "552101",
+          "slug": "obudu",
+          "label": "Obudu LGA & highland gateway (Obanliku ranch axis 552103)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Cross River major towns — Obudu 552101",
+              "url": "https://nigeriazipcode.com/cross-river/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Cross River State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/cross-river/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -468,7 +1009,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -478,9 +1019,9 @@
       "capital": "Asaba",
       "zoneCode": "320",
       "headOfficeCode": "320001",
-      "range": "320001–330005",
+      "range": "320001–334196",
       "intro": "Delta splits between Asaba (320001) and Warri — using the LGA district code is essential for oil-city mail.",
-      "description": "Delta via Asaba/Warri dual hubs.",
+      "description": "Delta postal codes via Asaba (320001/320211) and Warri (330001/332101) to Effurun, Sapele, Ughelli, Agbor and Kwale.",
       "places": [
         {
           "name": "Asaba — Head office / GPO",
@@ -511,11 +1052,119 @@
             {
               "label": "NigeriaZipCode Delta 320001 Warri",
               "url": "https://nigeriazipcode.com/"
+            },
+            {
+              "label": "NigeriaZipCode — Delta LGA & town codes (Warri 332101)",
+              "url": "https://nigeriazipcode.com/delta/"
+            }
+          ],
+          "notes": "330001 is the general Warri dispatch head-office code; Warri South urban layouts use 332101–332281 (e.g. GRA / Okuamagba 332211, Ekpan 332281)."
+        },
+        {
+          "name": "Asaba Urban (Oshimili South)",
+          "code": "320211",
+          "slug": "asaba-urban",
+          "label": "Cable Point, Okpanam Rd & central Asaba layouts (320211–320242)",
+          "notes": "BusinessConnect details Asaba urban street layouts 320211–320242; NigeriaZipCode also lists 320102 for Oshimili South rural/peri-urban range.",
+          "sources": [
+            {
+              "label": "BusinessConnect — Delta Asaba urban codes 320211–320242",
+              "url": "https://businessconnect.com.ng/delta-state-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Delta Oshimili South 320102 / Asaba 320001",
+              "url": "https://nigeriazipcode.com/delta/"
+            }
+          ]
+        },
+        {
+          "name": "Effurun (Uvwie)",
+          "code": "330102",
+          "slug": "effurun",
+          "label": "Uvwie LGA — Effurun, PTI & Warri-Osubi airport corridor",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Delta major towns — Effurun 330102",
+              "url": "https://nigeriazipcode.com/delta/"
+            },
+            {
+              "label": "BusinessConnect — Delta Effurun / Uvwie 330102",
+              "url": "https://businessconnect.com.ng/delta-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Sapele",
+          "code": "331101",
+          "slug": "sapele",
+          "label": "Sapele port & timber industrial town",
+          "notes": "BusinessConnect lists 331101 for Sapele (331101–331262); NigeriaZipCode cites 331001 town GPO and 331107 LGA range.",
+          "sources": [
+            {
+              "label": "BusinessConnect — Delta major towns — Sapele 331101",
+              "url": "https://businessconnect.com.ng/delta-state-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Delta major towns — Sapele 331001 / 331107",
+              "url": "https://nigeriazipcode.com/delta/"
+            }
+          ]
+        },
+        {
+          "name": "Ughelli",
+          "code": "333105",
+          "slug": "ughelli",
+          "label": "Ughelli North commercial & onshore oil hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Delta major towns — Ughelli 333105",
+              "url": "https://nigeriazipcode.com/delta/"
+            },
+            {
+              "label": "BusinessConnect — Delta Ughelli North 333105",
+              "url": "https://businessconnect.com.ng/delta-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Agbor (Ika South)",
+          "code": "321101",
+          "slug": "agbor",
+          "label": "Agbor & Boji-Boji commercial hub",
+          "notes": "Ika South / Agbor spans 321001 (GPO), 321101–321103 (LGA/town), and 321211–321271 (Boji-Boji & GRA).",
+          "sources": [
+            {
+              "label": "BusinessConnect — Delta Ika South / Agbor 321101–321271",
+              "url": "https://businessconnect.com.ng/delta-state-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Delta major towns — Agbor 321001 / 321102",
+              "url": "https://nigeriazipcode.com/delta/"
+            }
+          ]
+        },
+        {
+          "name": "Kwale (Ndokwa West)",
+          "code": "322101",
+          "slug": "kwale",
+          "label": "Ndokwa West headquarters & gas corridor",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Delta LGA list — Ndokwa West 322101",
+              "url": "https://nigeriazipcode.com/delta/"
+            },
+            {
+              "label": "BusinessConnect — Delta major towns — Kwale 322101",
+              "url": "https://businessconnect.com.ng/delta-state-postal-codes/"
             }
           ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Delta State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/delta/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -529,7 +1178,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -539,9 +1188,9 @@
       "capital": "Abakaliki",
       "zoneCode": "840",
       "headOfficeCode": "840001",
-      "range": "840001–842103",
-      "intro": "Abakaliki’s 840001 heads Ebonyi’s new-state grid — rural codes around Afikpo use the same dispatch block.",
-      "description": "Ebonyi via Abakaliki to Afikpo.",
+      "range": "480001–491110",
+      "intro": "Ebonyi’s NIPOST South-East delivery districts run 480001–491110 (Abakaliki 480103, Afikpo 490101), though several state-capital summary tables print 840001 — check the conflict note below.",
+      "description": "Ebonyi postal codes: NIPOST South-East delivery districts 480001–491110 (Abakaliki 480103, Afikpo 490101, Onueke, Uburu) plus 840001 capital-table note.",
       "places": [
         {
           "name": "Abakaliki — Head office / GPO",
@@ -563,9 +1212,62 @@
             }
           ],
           "notes": "Ebonyi 840001 conflicts with Sokoto 840001 in one compilation — both share dispatch prefix 84 in different NIPOST regions; Ebonyi commonly cited as 840001, Sokoto as 840001 as well (regional split). We keep commonly cited 840001 for both with note.  Alternative value  appears in some compilations."
+        },
+        {
+          "name": "Abakaliki Urban",
+          "code": "480103",
+          "slug": "abakaliki-urban",
+          "label": "Abakaliki LGA NIPOST South-East delivery district (480103–480282; GPO 480001)",
+          "notes": "Prefer 480103 (or 480001 GPO) for physical South-East parcel routing; 840001 is a widely copied state-table misprint from Sokoto's 840 zone.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ebonyi LGA & major towns — Abakaliki 480103",
+              "url": "https://nigeriazipcode.com/ebonyi/"
+            }
+          ]
+        },
+        {
+          "name": "Afikpo",
+          "code": "490101",
+          "slug": "afikpo",
+          "label": "Afikpo North — Ebonyi's second urban & polytechnic town (490101–490103)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ebonyi major towns — Afikpo 490101",
+              "url": "https://nigeriazipcode.com/ebonyi/"
+            }
+          ]
+        },
+        {
+          "name": "Onueke (Ezza South)",
+          "code": "482137",
+          "slug": "onueke",
+          "label": "Ezza South LGA headquarters & central market town (482137–482145)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ebonyi major towns — Onueke 482137",
+              "url": "https://nigeriazipcode.com/ebonyi/"
+            }
+          ]
+        },
+        {
+          "name": "Uburu (Ohaozara)",
+          "code": "491101",
+          "slug": "uburu",
+          "label": "Ohaozara LGA — Uburu salt-lake & medical university town (491101–491103)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ebonyi major towns — Uburu 491101",
+              "url": "https://nigeriazipcode.com/ebonyi/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Ebonyi State full LGA & major town postal codes (480001–491110)",
+          "url": "https://nigeriazipcode.com/ebonyi/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -579,9 +1281,9 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
-      "notes": "Ebonyi 840001 conflicts with Sokoto 840001 in one compilation — both share dispatch prefix 84 in different NIPOST regions; Ebonyi commonly cited as 840001, Sokoto as 840001 as well (regional split). We keep commonly cited 840001 for both with note."
+      "notes": "Source conflict documented: NIPOST South-East delivery districts for Ebonyi run 480001–491110 (carved from old Enugu 400 and Abia 440/450), with Abakaliki urban at 480103 and Afikpo at 490101. Several single-table state-capital compilations (including eBills) print 840001 (Sokoto's 840 prefix); we retain 840001 on the legacy head-office row with this warning and list verified 480xxx–491xxx delivery codes below."
     },
     {
       "slug": "edo",
@@ -589,9 +1291,9 @@
       "capital": "Benin City",
       "zoneCode": "300",
       "headOfficeCode": "300001",
-      "range": "300001–302116",
+      "range": "300001–313111",
       "intro": "Benin City 300001 is legacy hub — Edo’s codes radiate from Ring Road post offices.",
-      "description": "Edo via Benin City ring.",
+      "description": "Edo postal codes via Benin City GPO (300001), Ugbowo, GRA and Ikpoba-Okha to Ekpoma, Auchi and Uromi.",
       "places": [
         {
           "name": "Benin City — Head office / GPO",
@@ -612,9 +1314,111 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Ugbowo / Egor (Benin)",
+          "code": "300103",
+          "slug": "ugbowo",
+          "label": "Egor LGA — UNIBEN, UBTH & Uselu corridor",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Edo LGA list — Egor 300103",
+              "url": "https://nigeriazipcode.com/edo/"
+            },
+            {
+              "label": "BusinessConnect — Edo Benin City — Ugbowo 300103",
+              "url": "https://businessconnect.com.ng/edo-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Ikpoba-Okha (Benin)",
+          "code": "300104",
+          "slug": "ikpoba-okha",
+          "label": "Sapele Road, Ikpoba Hill & Aduwawa (300104–300105)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Edo LGA list — Ikpoba-Okha 300104",
+              "url": "https://nigeriazipcode.com/edo/"
+            },
+            {
+              "label": "BusinessConnect — Edo Ikpoba-Okha 300104",
+              "url": "https://businessconnect.com.ng/edo-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Benin GRA (Oredo)",
+          "code": "300251",
+          "slug": "benin-gra",
+          "label": "GRA Benin, Airport Road & Oredo urban district (300001–300283)",
+          "sources": [
+            {
+              "label": "BusinessConnect — Edo Benin City — GRA 300251",
+              "url": "https://businessconnect.com.ng/edo-state-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Edo Oredo range 300001–300283",
+              "url": "https://nigeriazipcode.com/edo/"
+            }
+          ]
+        },
+        {
+          "name": "Ekpoma (Esan West)",
+          "code": "310101",
+          "slug": "ekpoma",
+          "label": "Ekpoma — Ambrose Alli University town (310101–310108)",
+          "notes": "NigeriaZipCode lists 310101 for Ekpoma; BusinessConnect cites 310001 as Esan West head-office code.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Edo major towns — Ekpoma 310101",
+              "url": "https://nigeriazipcode.com/edo/"
+            },
+            {
+              "label": "BusinessConnect — Edo Ekpoma 310001",
+              "url": "https://businessconnect.com.ng/edo-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Auchi (Etsako West)",
+          "code": "312101",
+          "slug": "auchi",
+          "label": "Auchi — northern Edo commercial & Polytechnic town (312101–312106)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Edo major towns — Auchi 312101",
+              "url": "https://nigeriazipcode.com/edo/"
+            },
+            {
+              "label": "BusinessConnect — Edo Auchi 312101",
+              "url": "https://businessconnect.com.ng/edo-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Uromi (Esan North-East)",
+          "code": "311115",
+          "slug": "uromi",
+          "label": "Uromi — Esan commercial centre",
+          "notes": "NigeriaZipCode lists 311115–311116 for Esan North-East (Uromi); BusinessConnect cites 311001 town GPO.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Edo major towns — Uromi 311115",
+              "url": "https://nigeriazipcode.com/edo/"
+            },
+            {
+              "label": "BusinessConnect — Edo Uromi 311001",
+              "url": "https://businessconnect.com.ng/edo-state-postal-codes/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Edo State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/edo/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -628,7 +1432,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -638,9 +1442,9 @@
       "capital": "Ado-Ekiti",
       "zoneCode": "360",
       "headOfficeCode": "360001",
-      "range": "360001–362103",
-      "intro": "Ekiti’s compact hill towns all key off Ado-Ekiti 360001 — one prefix covers all 16 LGAs.",
-      "description": "Ekiti via Ado-Ekiti hill towns.",
+      "range": "360001–372109",
+      "intro": "Ekiti’s highland towns key off Ado-Ekiti (360001 GPO, 360211 urban) while Ikere-Ekiti (361101), Ikole (370101) and Oye-Ekiti (371104) use separate 360–372 prefixes.",
+      "description": "Ekiti postal codes via Ado-Ekiti (360001/360211) to Ikere-Ekiti, Oye-Ekiti and Ikole-Ekiti.",
       "places": [
         {
           "name": "Ado-Ekiti — Head office / GPO",
@@ -661,9 +1465,61 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Ado-Ekiti Urban",
+          "code": "360211",
+          "slug": "ado-ekiti-urban",
+          "label": "Fajuyi, Basiri, EKSU & ABUAD corridor (360211–360282)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ekiti major towns — Ado-Ekiti 360211",
+              "url": "https://nigeriazipcode.com/ekiti/"
+            }
+          ]
+        },
+        {
+          "name": "Ikere-Ekiti",
+          "code": "361101",
+          "slug": "ikere-ekiti",
+          "label": "Ikere LGA — BOUESTI university town (361101–361272)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ekiti major towns — Ikere-Ekiti 361101",
+              "url": "https://nigeriazipcode.com/ekiti/"
+            }
+          ]
+        },
+        {
+          "name": "Oye-Ekiti",
+          "code": "371104",
+          "slug": "oye-ekiti",
+          "label": "Oye LGA — Federal University Oye-Ekiti (371104–371106)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ekiti major towns — Oye-Ekiti 371104",
+              "url": "https://nigeriazipcode.com/ekiti/"
+            }
+          ]
+        },
+        {
+          "name": "Ikole-Ekiti",
+          "code": "370101",
+          "slug": "ikole-ekiti",
+          "label": "Ikole LGA — northern Ekiti hub (370101–370282)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ekiti major towns — Ikole-Ekiti 370101",
+              "url": "https://nigeriazipcode.com/ekiti/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Ekiti State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/ekiti/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -677,7 +1533,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -687,9 +1543,9 @@
       "capital": "Enugu",
       "zoneCode": "400",
       "headOfficeCode": "400001",
-      "range": "400001–402005",
+      "range": "400001–413111",
       "intro": "Enugu’s 400001 is East’s oldest hub — routes from coal city to Nsukka branch off this prefix.",
-      "description": "Enugu via Enugu coal city.",
+      "description": "Enugu postal codes via Enugu GPO (400001), Enugu North/New Haven, Enugu South & East to Nsukka and Agbani.",
       "places": [
         {
           "name": "Enugu — Head office / GPO",
@@ -722,9 +1578,77 @@
               "url": "https://ebills.africa/nigerian-postal-codes/"
             }
           ]
+        },
+        {
+          "name": "New Haven (Enugu)",
+          "code": "400221",
+          "slug": "new-haven",
+          "label": "New Haven & Enugu North urban layouts (Ogui 400211, Ogbete 400251)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Enugu city layout postcodes (New Haven 400221)",
+              "url": "https://nigeriazipcode.com/south-east/enugu-state/enugu-postal-codes-enugu-state-postal-codes-zip-code-list/"
+            },
+            {
+              "label": "NigeriaZipCode — Enugu North 400102–400281",
+              "url": "https://nigeriazipcode.com/enugu/"
+            }
+          ]
+        },
+        {
+          "name": "Enugu South (Uwani)",
+          "code": "400105",
+          "slug": "enugu-south",
+          "label": "Uwani, Achara Layout & Maryland Enugu (400105–400108)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Enugu LGA list — Enugu South 400105–400108",
+              "url": "https://nigeriazipcode.com/enugu/"
+            }
+          ]
+        },
+        {
+          "name": "Enugu East (Abakpa / Emene)",
+          "code": "400103",
+          "slug": "enugu-east",
+          "label": "Abakpa Nike, Trans-Ekulu & Akanu Ibiam Airport Emene axis (400103–400104)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Enugu LGA list — Enugu East 400103–400104",
+              "url": "https://nigeriazipcode.com/enugu/"
+            }
+          ]
+        },
+        {
+          "name": "Nsukka",
+          "code": "410101",
+          "slug": "nsukka",
+          "label": "Nsukka LGA — University of Nigeria Nsukka town (410101–410116)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Enugu major towns — Nsukka 410101",
+              "url": "https://nigeriazipcode.com/enugu/"
+            }
+          ]
+        },
+        {
+          "name": "Agbani (Nkanu West)",
+          "code": "402101",
+          "slug": "agbani",
+          "label": "Nkanu West — ESUT & Nigerian Law School Enugu campus (402101–402110)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Enugu major towns — Agbani 402101",
+              "url": "https://nigeriazipcode.com/enugu/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Enugu State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/enugu/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -738,7 +1662,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -750,7 +1674,7 @@
       "headOfficeCode": "900001",
       "range": "900001–905001",
       "intro": "Abuja doesn’t have one code — Garki 900001 is head office only; districts like Maitama and Wuse have their own and delivery fails without them.",
-      "description": "FCT via Garki HQ to districts: Maitama, Asokoro, Wuse, Gwarinpa, Lugbe.",
+      "description": "FCT Abuja postal codes across all 6 Area Councils (AMAC, Bwari, Gwagwalada, Kuje, Kwali, Abaji) and 15 urban/satellite districts.",
       "places": [
         {
           "name": "Abuja (Garki) — Head office / GPO",
@@ -947,9 +1871,130 @@
               "url": "https://nigeriazipcode.com/abuja/"
             }
           ]
+        },
+        {
+          "name": "Wuse II",
+          "code": "900288",
+          "slug": "wuse-2",
+          "label": "Wuse II — Adetokunbo Ademola, Aminu Kano & Banex commercial district",
+          "notes": "BusinessConnect separates Wuse II as 900288 above Wuse Zones 1–7 (900281–900287); NigeriaZipCode groups Wuse/Wuse II under 900281.",
+          "sources": [
+            {
+              "label": "BusinessConnect — FCT Abuja — Wuse II 900288",
+              "url": "https://businessconnect.com.ng/abuja-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Abuja major districts — Wuse II 900281",
+              "url": "https://nigeriazipcode.com/abuja/"
+            }
+          ]
+        },
+        {
+          "name": "Three Arms Zone",
+          "code": "900221",
+          "slug": "three-arms-zone",
+          "label": "National Assembly, Supreme Court & Presidential Villa precinct",
+          "sources": [
+            {
+              "label": "BusinessConnect — FCT Abuja — Three Arms Zone 900221",
+              "url": "https://businessconnect.com.ng/abuja-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Jabi / Utako",
+          "code": "900108",
+          "slug": "jabi-utako",
+          "label": "Jabi Lake, Utako & Life Camp commercial/residential belt",
+          "notes": "Shares NIPOST 900108 western AMAC dispatch district with Gwarinpa and Kado.",
+          "sources": [
+            {
+              "label": "Nigeria Housing Market — Abuja directory — Jabi & Utako 900108",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/abuja"
+            }
+          ]
+        },
+        {
+          "name": "Guzape",
+          "code": "900104",
+          "slug": "guzape",
+          "label": "Guzape District & Asokoro Extension hillside layouts",
+          "sources": [
+            {
+              "label": "Nigeria Housing Market — Abuja directory — Guzape 900104",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/abuja"
+            }
+          ]
+        },
+        {
+          "name": "Nyanya",
+          "code": "900103",
+          "slug": "nyanya-town",
+          "label": "Nyanya town along Abuja–Keffi Expressway (adjoining Karu uses 900110)",
+          "sources": [
+            {
+              "label": "BusinessConnect — FCT Abuja — Nyanya 900103",
+              "url": "https://businessconnect.com.ng/abuja-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Orozo / Karshi",
+          "code": "900109",
+          "slug": "orozo",
+          "label": "Orozo & Karshi south-east AMAC corridor",
+          "notes": "BusinessConnect lists 900109 for Orozo; Nigeria Housing Market lists 900101 for neighbouring Karshi.",
+          "sources": [
+            {
+              "label": "BusinessConnect — FCT Abuja — Orozo 900109",
+              "url": "https://businessconnect.com.ng/abuja-postal-codes/"
+            },
+            {
+              "label": "Nigeria Housing Market — Abuja directory — Karshi 900101",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/abuja"
+            }
+          ]
+        },
+        {
+          "name": "Kwali Area Council",
+          "code": "904001",
+          "slug": "kwali",
+          "label": "Kwali Area Council headquarters along Abuja–Lokoja highway",
+          "notes": "NigeriaZipCode lists 904001 for Kwali Area Council HQ; BusinessConnect lists 904101 for Kwali town delivery.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — FCT Area Councils — Kwali 904001",
+              "url": "https://nigeriazipcode.com/abuja/"
+            },
+            {
+              "label": "BusinessConnect — FCT Area Councils — Kwali 904101",
+              "url": "https://businessconnect.com.ng/abuja-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Abaji Area Council",
+          "code": "905001",
+          "slug": "abaji",
+          "label": "Abaji Area Council — southern FCT gateway",
+          "notes": "NigeriaZipCode lists 905001 for Abaji Area Council (within FCT 900–905 band); BusinessConnect cites 950101.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — FCT Area Councils — Abaji 905001",
+              "url": "https://nigeriazipcode.com/abuja/"
+            },
+            {
+              "label": "BusinessConnect — FCT Area Councils — Abaji 950101",
+              "url": "https://businessconnect.com.ng/abuja-postal-codes/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — FCT Abuja full Area Council & district postal codes",
+          "url": "https://nigeriazipcode.com/abuja/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -963,7 +2008,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -973,9 +2018,9 @@
       "capital": "Gombe",
       "zoneCode": "760",
       "headOfficeCode": "760001",
-      "range": "760001–761005",
+      "range": "760001–771104",
       "intro": "Gombe’s 760001 bridges north-east corridor — desert routes depend on correct last-three digits.",
-      "description": "Gombe via Gombe city.",
+      "description": "Gombe postal codes via Gombe GPO (760001) and Gombe Urban (760211) to Kaltungo, Billiri and Bajoga.",
       "places": [
         {
           "name": "Gombe — Head office / GPO",
@@ -996,9 +2041,61 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Gombe Urban",
+          "code": "760211",
+          "slug": "gombe-urban",
+          "label": "Gombe metropolis residential & commercial layouts (760211–760253)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Gombe major towns — Gombe 760211",
+              "url": "https://nigeriazipcode.com/gombe/"
+            }
+          ]
+        },
+        {
+          "name": "Kaltungo",
+          "code": "770101",
+          "slug": "kaltungo",
+          "label": "Kaltungo LGA (770101–770117)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Gombe major towns — Kaltungo 770101",
+              "url": "https://nigeriazipcode.com/gombe/"
+            }
+          ]
+        },
+        {
+          "name": "Billiri",
+          "code": "771101",
+          "slug": "billiri",
+          "label": "Billiri LGA — Tangale southern hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Gombe major towns — Billiri 771101",
+              "url": "https://nigeriazipcode.com/gombe/"
+            }
+          ]
+        },
+        {
+          "name": "Bajoga (Funakaye)",
+          "code": "762101",
+          "slug": "bajoga",
+          "label": "Funakaye LGA — Bajoga & Ashaka cement industrial belt (762101–762102)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Gombe major towns — Bajoga 762101",
+              "url": "https://nigeriazipcode.com/gombe/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Gombe State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/gombe/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1012,7 +2109,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1022,9 +2119,9 @@
       "capital": "Owerri",
       "zoneCode": "460",
       "headOfficeCode": "460001",
-      "range": "460001–470005",
+      "range": "460001–475126",
       "intro": "Owerri 460001 feeds Imo’s dense township network — Orlu and Okigwe branches diverge quickly.",
-      "description": "Imo via Owerri dense network.",
+      "description": "Imo postal codes via Owerri GPO (460001), Owerri West/North to Orlu, Okigwe and Oguta.",
       "places": [
         {
           "name": "Owerri — Head office / GPO",
@@ -1045,9 +2142,73 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Owerri West (Nekede / FUTO)",
+          "code": "460102",
+          "slug": "owerri-west",
+          "label": "Owerri West — Ihiagwa, FUTO, Irete & Nekede (Nekede urban also cites 460271)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Imo LGA & major towns — Owerri West 460102 / Nekede 460271",
+              "url": "https://nigeriazipcode.com/imo/"
+            }
+          ]
+        },
+        {
+          "name": "Owerri North",
+          "code": "460103",
+          "slug": "owerri-north",
+          "label": "Egbu, Orji, Naze & Amakohia peri-urban belt",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Imo LGA list — Owerri North 460103",
+              "url": "https://nigeriazipcode.com/imo/"
+            }
+          ]
+        },
+        {
+          "name": "Orlu",
+          "code": "473211",
+          "slug": "orlu",
+          "label": "Orlu commercial & pharmaceutical trading city",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Imo major towns — Orlu 473211",
+              "url": "https://nigeriazipcode.com/imo/"
+            }
+          ]
+        },
+        {
+          "name": "Okigwe",
+          "code": "470101",
+          "slug": "okigwe",
+          "label": "Okigwe northern senatorial zone hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Imo major towns — Okigwe 470101",
+              "url": "https://nigeriazipcode.com/imo/"
+            }
+          ]
+        },
+        {
+          "name": "Oguta",
+          "code": "464101",
+          "slug": "oguta",
+          "label": "Oguta Lake & oil-producing western district",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Imo major towns — Oguta 464101",
+              "url": "https://nigeriazipcode.com/imo/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Imo State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/imo/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1061,7 +2222,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1071,9 +2232,9 @@
       "capital": "Dutse",
       "zoneCode": "720",
       "headOfficeCode": "720001",
-      "range": "720001–730005",
-      "intro": "Dutse 720001 is thinly quoted — most Jiagwa residents still default to the head office code and add full street address.",
-      "description": "Jigawa via Dutse.",
+      "range": "705101–733101",
+      "intro": "Dutse 720001 anchors Jigawa’s capital while historic emirate hubs Hadejia (731101), Gumel (732101) and Kazaure (705101) carry distinct delivery prefixes.",
+      "description": "Jigawa postal codes via Dutse GPO (720001) to Hadejia, Gumel, Kazaure and Birnin Kudu.",
       "places": [
         {
           "name": "Dutse — Head office / GPO",
@@ -1094,9 +2255,61 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Hadejia",
+          "code": "731101",
+          "slug": "hadejia",
+          "label": "Hadejia emirate & wetland trade hub (town layouts also cite 731211)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Jigawa LGA & major towns — Hadejia 731101 / 731211",
+              "url": "https://nigeriazipcode.com/jigawa/"
+            }
+          ]
+        },
+        {
+          "name": "Gumel",
+          "code": "732101",
+          "slug": "gumel",
+          "label": "Gumel emirate & northern border corridor",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Jigawa major towns — Gumel 732101",
+              "url": "https://nigeriazipcode.com/jigawa/"
+            }
+          ]
+        },
+        {
+          "name": "Kazaure",
+          "code": "705101",
+          "slug": "kazaure",
+          "label": "Kazaure emirate & polytechnic town (shares 705 prefix bordering Kano)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Jigawa major towns — Kazaure 705101",
+              "url": "https://nigeriazipcode.com/jigawa/"
+            }
+          ]
+        },
+        {
+          "name": "Birnin Kudu",
+          "code": "721101",
+          "slug": "birnin-kudu",
+          "label": "Birnin Kudu southern market & medical hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Jigawa major towns — Birnin Kudu 721101",
+              "url": "https://nigeriazipcode.com/jigawa/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Jigawa State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/jigawa/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1110,7 +2323,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1120,9 +2333,9 @@
       "capital": "Kaduna",
       "zoneCode": "800",
       "headOfficeCode": "800001",
-      "range": "800001–810005",
+      "range": "800001–812103",
       "intro": "Kaduna 800001 anchors north-west’s rail town — Zaria and Kafanchan carry distinct district codes.",
-      "description": "Kaduna via Kaduna-Zaria axis.",
+      "description": "Kaduna postal codes via Kaduna GPO (800001), Kaduna South (800211) & Chikun to Zaria, Sabon Gari and Kafanchan.",
       "places": [
         {
           "name": "Kaduna — Head office / GPO",
@@ -1167,9 +2380,61 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Kaduna South (Barnawa)",
+          "code": "800211",
+          "slug": "kaduna-south",
+          "label": "Barnawa, Kakuri, Makera & Tudun Wada industrial/residential zone",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kaduna LGA list — Kaduna South 800211",
+              "url": "https://nigeriazipcode.com/kaduna/"
+            }
+          ]
+        },
+        {
+          "name": "Chikun (Sabon Tasha)",
+          "code": "800104",
+          "slug": "chikun",
+          "label": "Sabon Tasha, Narayi, KRPC refinery & Millennium City belt",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kaduna LGA list — Chikun 800104",
+              "url": "https://nigeriazipcode.com/kaduna/"
+            }
+          ]
+        },
+        {
+          "name": "Sabon Gari (Zaria / ABU)",
+          "code": "810103",
+          "slug": "sabon-gari-zaria",
+          "label": "Sabon Gari & Samaru Ahmadu Bello University corridor",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kaduna major towns — Sabon Gari 810103",
+              "url": "https://nigeriazipcode.com/kaduna/"
+            }
+          ]
+        },
+        {
+          "name": "Kafanchan (Jema'a)",
+          "code": "801102",
+          "slug": "kafanchan",
+          "label": "Jema'a LGA — Southern Kaduna rail & commercial hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kaduna major towns — Kafanchan 801102",
+              "url": "https://nigeriazipcode.com/kaduna/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Kaduna State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/kaduna/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1183,7 +2448,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1193,9 +2458,9 @@
       "capital": "Kano",
       "zoneCode": "700",
       "headOfficeCode": "700001",
-      "range": "700001–710005",
+      "range": "700001–713211",
       "intro": "Kano 700001 heads Africa’s oldest trading city — historic walled city and new estates use adjacent prefixes.",
-      "description": "Kano via Kano metropolis.",
+      "description": "Kano postal codes via Kano GPO (700001) across Kano Municipal, Fagge, Gwale, Nassarawa, Tarauni & Ungogo to Wudil and Bichi.",
       "places": [
         {
           "name": "Kano — Head office / GPO",
@@ -1256,9 +2521,73 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Fagge (Sabon Gari / Kwari)",
+          "code": "700202",
+          "slug": "fagge",
+          "label": "Fagge LGA — Kantin Kwari textile market & Sabon Gari Kano",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kano LGA list — Fagge 700202",
+              "url": "https://nigeriazipcode.com/kano/"
+            }
+          ]
+        },
+        {
+          "name": "Tarauni",
+          "code": "700283",
+          "slug": "tarauni",
+          "label": "Tarauni LGA — Gyadi-Gyadi, Hotoro South & AKTH corridor",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kano LGA list — Tarauni 700283",
+              "url": "https://nigeriazipcode.com/kano/"
+            }
+          ]
+        },
+        {
+          "name": "Ungogo",
+          "code": "700105",
+          "slug": "ungogo",
+          "label": "Ungogo LGA — northern Kano metropolitan belt",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kano LGA list — Ungogo 700105",
+              "url": "https://nigeriazipcode.com/kano/"
+            }
+          ]
+        },
+        {
+          "name": "Wudil",
+          "code": "713101",
+          "slug": "wudil",
+          "label": "Wudil — ADUSTECH university & eastern highway town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kano major towns — Wudil 713101",
+              "url": "https://nigeriazipcode.com/kano/"
+            }
+          ]
+        },
+        {
+          "name": "Bichi",
+          "code": "703101",
+          "slug": "bichi",
+          "label": "Bichi emirate & Federal College of Education town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kano major towns — Bichi 703101",
+              "url": "https://nigeriazipcode.com/kano/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Kano State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/kano/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1272,7 +2601,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1282,9 +2611,9 @@
       "capital": "Katsina",
       "zoneCode": "820",
       "headOfficeCode": "820001",
-      "range": "820001–830005",
+      "range": "820001–833102",
       "intro": "Katsina 820001 fronts border routes — Niger-crossing mail needs exact LGA code.",
-      "description": "Katsina via Katsina border routes.",
+      "description": "Katsina postal codes via Katsina GPO (820001) to Daura, Funtua, Malumfashi and Dutsin-Ma.",
       "places": [
         {
           "name": "Katsina — Head office / GPO",
@@ -1305,9 +2634,62 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Daura",
+          "code": "821001",
+          "slug": "daura",
+          "label": "Daura emirate & northern border corridor",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Katsina major towns — Daura 821001",
+              "url": "https://nigeriazipcode.com/katsina/"
+            }
+          ]
+        },
+        {
+          "name": "Funtua",
+          "code": "830101",
+          "slug": "funtua",
+          "label": "Funtua southern commercial & cotton/grain hub (town GPO also cites 830001)",
+          "notes": "NigeriaZipCode lists 830101 for Funtua LGA delivery and 830001 for Funtua GPO.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Katsina LGA & major towns — Funtua 830101 / 830001",
+              "url": "https://nigeriazipcode.com/katsina/"
+            }
+          ]
+        },
+        {
+          "name": "Malumfashi",
+          "code": "832101",
+          "slug": "malumfashi",
+          "label": "Malumfashi agricultural trading town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Katsina major towns — Malumfashi 832101",
+              "url": "https://nigeriazipcode.com/katsina/"
+            }
+          ]
+        },
+        {
+          "name": "Dutsin-Ma",
+          "code": "821101",
+          "slug": "dutsin-ma",
+          "label": "Dutsin-Ma — Federal University Dutsin-Ma town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Katsina major towns — Dutsin-Ma 821101",
+              "url": "https://nigeriazipcode.com/katsina/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Katsina State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/katsina/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1321,7 +2703,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1331,9 +2713,9 @@
       "capital": "Birnin Kebbi",
       "zoneCode": "860",
       "headOfficeCode": "860001",
-      "range": "860001–870005",
+      "range": "860001–872211",
       "intro": "Birnin Kebbi 860001 covers Kebbi’s river plain — Argungu and Yauri then fan out.",
-      "description": "Kebbi via Birnin Kebbi river plain.",
+      "description": "Kebbi postal codes via Birnin Kebbi GPO (860001) to Argungu, Jega, Yauri and Zuru.",
       "places": [
         {
           "name": "Birnin Kebbi — Head office / GPO",
@@ -1354,9 +2736,61 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Argungu",
+          "code": "861101",
+          "slug": "argungu",
+          "label": "Argungu emirate & rice/fishing hub (town layouts also cite 861214)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kebbi LGA & major towns — Argungu 861101 / 861214",
+              "url": "https://nigeriazipcode.com/kebbi/"
+            }
+          ]
+        },
+        {
+          "name": "Jega",
+          "code": "863101",
+          "slug": "jega",
+          "label": "Jega commercial market junction",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kebbi major towns — Jega 863101",
+              "url": "https://nigeriazipcode.com/kebbi/"
+            }
+          ]
+        },
+        {
+          "name": "Yauri",
+          "code": "870101",
+          "slug": "yauri",
+          "label": "Yauri emirate on Kainji Lake (town layouts also cite 870211)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kebbi LGA & major towns — Yauri 870101 / 870211",
+              "url": "https://nigeriazipcode.com/kebbi/"
+            }
+          ]
+        },
+        {
+          "name": "Zuru",
+          "code": "872101",
+          "slug": "zuru",
+          "label": "Zuru emirate & Federal University of Agriculture Zuru (town layouts 872211)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kebbi LGA & major towns — Zuru 872101 / 872211",
+              "url": "https://nigeriazipcode.com/kebbi/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Kebbi State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/kebbi/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1370,7 +2804,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1380,9 +2814,9 @@
       "capital": "Lokoja",
       "zoneCode": "260",
       "headOfficeCode": "260001",
-      "range": "260001–270005",
+      "range": "260001–272105",
       "intro": "Lokoja 260001 sits at Niger-Benue confluence — confluence codes are often mislabelled 270001; check the branch you post from.",
-      "description": "Kogi via Lokoja confluence.",
+      "description": "Kogi postal codes via Lokoja (260001/260101) to Okene, Idah, Kabba and Ajaokuta.",
       "places": [
         {
           "name": "Lokoja — Head office / GPO",
@@ -1404,9 +2838,73 @@
             }
           ],
           "notes": "Some directories list Lokoja as 270001 — first-digit region shift; we use 260001 per most consistent table and note alternative. Alternative value 270001 appears in some compilations."
+        },
+        {
+          "name": "Lokoja Urban",
+          "code": "260101",
+          "slug": "lokoja-urban",
+          "label": "Lokoja Confluence, Felele & FULokoja corridor (260101–260105)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kogi major towns — Lokoja 260101",
+              "url": "https://nigeriazipcode.com/kogi/"
+            }
+          ]
+        },
+        {
+          "name": "Okene",
+          "code": "263101",
+          "slug": "okene",
+          "label": "Okene — Central Kogi commercial hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kogi major towns — Okene 263101",
+              "url": "https://nigeriazipcode.com/kogi/"
+            }
+          ]
+        },
+        {
+          "name": "Idah",
+          "code": "271101",
+          "slug": "idah",
+          "label": "Idah — eastern Niger River port & Federal Polytechnic Idah",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kogi major towns — Idah 271101",
+              "url": "https://nigeriazipcode.com/kogi/"
+            }
+          ]
+        },
+        {
+          "name": "Kabba",
+          "code": "261101",
+          "slug": "kabba",
+          "label": "Kabba/Bunu LGA (Kabba urban layouts also cite 261221)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kogi LGA & major towns — Kabba 261101 / 261221",
+              "url": "https://nigeriazipcode.com/kogi/"
+            }
+          ]
+        },
+        {
+          "name": "Ajaokuta",
+          "code": "263104",
+          "slug": "ajaokuta",
+          "label": "Ajaokuta Steel Township & River Niger industrial belt",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kogi major towns — Ajaokuta 263104",
+              "url": "https://nigeriazipcode.com/kogi/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Kogi State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/kogi/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1420,7 +2918,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Some directories list Lokoja as 270001 — first-digit region shift; we use 260001 per most consistent table and note alternative."
     },
@@ -1430,9 +2928,9 @@
       "capital": "Ilorin",
       "zoneCode": "240",
       "headOfficeCode": "240001",
-      "range": "240001–250005",
+      "range": "240001–252104",
       "intro": "Ilorin 240001 bridges north-south — Offa and Jebba diverge off Ilorin’s sorting line.",
-      "description": "Kwara via Ilorin bridge.",
+      "description": "Kwara postal codes via Ilorin GPO (240001), Ilorin South/West to Offa and Omu-Aran.",
       "places": [
         {
           "name": "Ilorin — Head office / GPO",
@@ -1453,9 +2951,78 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Ilorin South (Tanke / Fate)",
+          "code": "240101",
+          "slug": "ilorin-south",
+          "label": "Tanke, UNILORIN corridor, Fate & GRA Ilorin",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kwara LGA list — Ilorin South 240101",
+              "url": "https://nigeriazipcode.com/kwara/"
+            },
+            {
+              "label": "BusinessConnect — Kwara Ilorin codes",
+              "url": "https://businessconnect.com.ng/kwara-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Ilorin West",
+          "code": "240103",
+          "slug": "ilorin-west",
+          "label": "Taiwo Road, Oja-Oba & Airport corridor",
+          "notes": "NigeriaZipCode lists 240103 for Ilorin West and 240101 for Ilorin South; BusinessConnect reverses the two within the same 240101–240104 Ilorin metropolitan band.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kwara LGA list — Ilorin West 240103",
+              "url": "https://nigeriazipcode.com/kwara/"
+            },
+            {
+              "label": "BusinessConnect — Kwara LGA list",
+              "url": "https://businessconnect.com.ng/kwara-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Offa",
+          "code": "250101",
+          "slug": "offa",
+          "label": "Offa commercial & Federal Polytechnic Offa town (250101–250103)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kwara major towns — Offa 250101",
+              "url": "https://nigeriazipcode.com/kwara/"
+            },
+            {
+              "label": "BusinessConnect — Kwara Offa 250101",
+              "url": "https://businessconnect.com.ng/kwara-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Omu-Aran (Irepodun)",
+          "code": "251101",
+          "slug": "omu-aran",
+          "label": "Irepodun LGA — Landmark University town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Kwara major towns — Omu-Aran 251101",
+              "url": "https://nigeriazipcode.com/kwara/"
+            },
+            {
+              "label": "BusinessConnect — Kwara Omu-Aran 251101",
+              "url": "https://businessconnect.com.ng/kwara-state-postal-codes/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Kwara State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/kwara/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1469,7 +3036,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1481,12 +3048,12 @@
       "headOfficeCode": "100001",
       "range": "100001–106104",
       "intro": "Lagos has no single ZIP — Ikeja GPO is 100001 but Lekki, VI and Ikorodu each have their own; using 100001 for everywhere delays delivery.",
-      "description": "Lagos via Ikeja hub to 20 LGAs: VI, Lekki, Ikeja, Surulere, Ikorodu.",
+      "description": "Lagos postal codes across all 20 LGAs via Ikeja GPO (100001): Ikeja (100271), VI (101241), Lekki (105102), Ajah, Yaba, Apapa, Surulere, Lagos Island, Festac, Oshodi, Mushin, Agege, Kosofe and Ikorodu.",
       "places": [
         {
           "name": "Ikeja — Head office / GPO",
           "code": "100001",
-          "slug": "ikeja",
+          "slug": "ikeja-gpo",
           "label": "Head office/GPO — main code for Ikeja (100001–106104)",
           "sources": [
             {
@@ -1608,8 +3175,13 @@
             {
               "label": "BusinessConnect Apapa 102272",
               "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Lagos LGA & town codes (Apapa 101251–101254)",
+              "url": "https://nigeriazipcode.com/lagos/"
             }
-          ]
+          ],
+          "notes": "BusinessConnect lists 102272 for Apapa GRA/Tincan corridor; NigeriaZipCode and Apartments.ng also record 101251–101254 for Apapa Quays and Creek Road."
         },
         {
           "name": "Ikorodu",
@@ -1674,9 +3246,284 @@
               "url": "https://www.nigeriahousingmarket.com/postal-codes/lagos"
             }
           ]
+        },
+        {
+          "name": "Lagos Island (Broad St)",
+          "code": "101223",
+          "slug": "lagos-island",
+          "label": "Broad Street, CMS & Marina commercial core (Lagos Island GPO 101001; Marina 101221)",
+          "notes": "Apartments.ng and BusinessConnect list 101223 for Broad Street / Lagos Island and 101221 for Marina; Nigeria Housing Market cites 101001 for Lagos Island GPO.",
+          "sources": [
+            {
+              "label": "Apartments.ng — Lagos postal codes area & LGA guide",
+              "url": "https://apartments.ng/blog/article/lagos-postal-codes-comprehensive-area-guide-apartmentsng-b1536"
+            },
+            {
+              "label": "BusinessConnect — Lagos Island 101223 / Marina 101221",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "Nigeria Housing Market — Lagos Island 101001",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/lagos"
+            }
+          ]
+        },
+        {
+          "name": "Obalende",
+          "code": "101232",
+          "slug": "obalende",
+          "label": "Obalende transit & commercial junction between Lagos Island and Ikoyi",
+          "sources": [
+            {
+              "label": "Apartments.ng — Lagos postal codes area & LGA guide",
+              "url": "https://apartments.ng/blog/article/lagos-postal-codes-comprehensive-area-guide-apartmentsng-b1536"
+            },
+            {
+              "label": "BusinessConnect — Lagos Obalende 101232",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Ebute Metta",
+          "code": "101211",
+          "slug": "ebute-metta",
+          "label": "Ebute Metta & NRC railway compound — Lagos Mainland LGA",
+          "sources": [
+            {
+              "label": "Apartments.ng — Lagos postal codes area & LGA guide",
+              "url": "https://apartments.ng/blog/article/lagos-postal-codes-comprehensive-area-guide-apartmentsng-b1536"
+            },
+            {
+              "label": "BusinessConnect — Lagos Ebute Metta 101211",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Ajah",
+          "code": "105101",
+          "slug": "ajah",
+          "label": "Ajah, Sangotedo & Abraham Adesanya along Lekki–Epe Expressway",
+          "notes": "Source split documented: BusinessConnect lists 105101 for Ajah/Sangotedo/Abraham Adesanya, while Apartments.ng and NigeriaZipCode list 101245 for Eti-Osa's Ajah end and 105101 for Sangotedo/general Lekki.",
+          "sources": [
+            {
+              "label": "BusinessConnect — Lagos Ajah & Sangotedo 105101",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "Apartments.ng — Lagos postal codes area & LGA guide",
+              "url": "https://apartments.ng/blog/article/lagos-postal-codes-comprehensive-area-guide-apartmentsng-b1536"
+            },
+            {
+              "label": "NigeriaZipCode — Lagos Ajah 101245 / Ibeju-Lekki 105101",
+              "url": "https://nigeriazipcode.com/lagos/"
+            }
+          ]
+        },
+        {
+          "name": "Festac Town",
+          "code": "102102",
+          "slug": "festac-town",
+          "label": "Amuwo-Odofin LGA — Festac Town, Mile 2 & Satellite belt",
+          "notes": "Apartments.ng and Nigeria Housing Market list 102102 for Amuwo-Odofin / Festac Town; BusinessConnect and NigeriaZipCode also record dedicated Festac estate sub-codes 102311–102312.",
+          "sources": [
+            {
+              "label": "Apartments.ng — Lagos postal codes area & LGA guide",
+              "url": "https://apartments.ng/blog/article/lagos-postal-codes-comprehensive-area-guide-apartmentsng-b1536"
+            },
+            {
+              "label": "Nigeria Housing Market — Amuwo-Odofin / Festac 102102",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/lagos"
+            },
+            {
+              "label": "BusinessConnect — Amuwo-Odofin 102102 / Festac 102312",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Festac Town 102311",
+              "url": "https://nigeriazipcode.com/lagos/"
+            }
+          ]
+        },
+        {
+          "name": "Ojo (Alaba / LASU)",
+          "code": "102101",
+          "slug": "ojo",
+          "label": "Ojo LGA — Alaba International Market, Iba (LASU) & Okokomaiko",
+          "sources": [
+            {
+              "label": "BusinessConnect — Lagos Ojo 102101",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "Nigeria Housing Market — Lagos Ojo 102101",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/lagos"
+            }
+          ]
+        },
+        {
+          "name": "Ajegunle (Ajeromi-Ifelodun)",
+          "code": "102103",
+          "slug": "ajegunle",
+          "label": "Ajeromi-Ifelodun LGA — Boundary & Ajegunle (102101–102103)",
+          "sources": [
+            {
+              "label": "BusinessConnect — Lagos Ajegunle 102103",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Ajeromi-Ifelodun 102101–102103",
+              "url": "https://nigeriazipcode.com/lagos/"
+            }
+          ]
+        },
+        {
+          "name": "Oshodi",
+          "code": "100261",
+          "slug": "oshodi",
+          "label": "Oshodi-Isolo LGA — Oshodi transport interchange & Mafoluku airport approach",
+          "sources": [
+            {
+              "label": "Apartments.ng — Lagos postal codes area & LGA guide",
+              "url": "https://apartments.ng/blog/article/lagos-postal-codes-comprehensive-area-guide-apartmentsng-b1536"
+            },
+            {
+              "label": "BusinessConnect — Lagos Oshodi 100261",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Lagos Oshodi 100261",
+              "url": "https://nigeriazipcode.com/lagos/"
+            }
+          ]
+        },
+        {
+          "name": "Isolo",
+          "code": "100263",
+          "slug": "isolo",
+          "label": "Oshodi-Isolo LGA — Isolo, Ajao Estate & Okota (100261–100264)",
+          "sources": [
+            {
+              "label": "BusinessConnect — Lagos Isolo 100263",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Oshodi-Isolo 100261–100264",
+              "url": "https://nigeriazipcode.com/lagos/"
+            }
+          ]
+        },
+        {
+          "name": "Mushin",
+          "code": "100253",
+          "slug": "mushin",
+          "label": "Mushin LGA — Idi-Araba (LUTH), Papa Ajao & Ilasamaja",
+          "sources": [
+            {
+              "label": "Apartments.ng — Lagos postal codes area & LGA guide",
+              "url": "https://apartments.ng/blog/article/lagos-postal-codes-comprehensive-area-guide-apartmentsng-b1536"
+            },
+            {
+              "label": "BusinessConnect — Lagos Mushin 100253",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "Nigeria Housing Market — Lagos Mushin 100253",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/lagos"
+            }
+          ]
+        },
+        {
+          "name": "Ilupeju",
+          "code": "100252",
+          "slug": "ilupeju",
+          "label": "Ilupeju industrial & residential estate off Ikorodu Road",
+          "sources": [
+            {
+              "label": "BusinessConnect — Lagos Ilupeju 100252",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Mushin/Ilupeju range 100251–100254",
+              "url": "https://nigeriazipcode.com/lagos/"
+            }
+          ]
+        },
+        {
+          "name": "Gbagada",
+          "code": "100234",
+          "slug": "gbagada",
+          "label": "Gbagada Phases 1 & 2, Anthony & Oworonshoki link (Somolu adjacent 100231–100233)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Lagos major towns — Gbagada 100234",
+              "url": "https://nigeriazipcode.com/lagos/"
+            }
+          ]
+        },
+        {
+          "name": "Magodo / Kosofe",
+          "code": "100242",
+          "slug": "magodo-kosofe",
+          "label": "Kosofe LGA — Magodo Phases 1 & 2, Ketu, Ojota & Ikosi (100234–100247)",
+          "sources": [
+            {
+              "label": "Apartments.ng — Lagos postal codes area & LGA guide",
+              "url": "https://apartments.ng/blog/article/lagos-postal-codes-comprehensive-area-guide-apartmentsng-b1536"
+            },
+            {
+              "label": "Nigeria Housing Market — Kosofe / Magodo 100242",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/lagos"
+            },
+            {
+              "label": "NigeriaZipCode — Kosofe 100234–100247",
+              "url": "https://nigeriazipcode.com/lagos/"
+            }
+          ]
+        },
+        {
+          "name": "Agege",
+          "code": "100283",
+          "slug": "agege",
+          "label": "Agege & Orile-Agege — Pen Cinema & Oko-Oba",
+          "sources": [
+            {
+              "label": "Apartments.ng — Lagos postal codes area & LGA guide",
+              "url": "https://apartments.ng/blog/article/lagos-postal-codes-comprehensive-area-guide-apartmentsng-b1536"
+            },
+            {
+              "label": "BusinessConnect — Lagos Agege 100283",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "Nigeria Housing Market — Lagos Agege 100283",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/lagos"
+            }
+          ]
+        },
+        {
+          "name": "Ifako-Ijaiye (Ogba)",
+          "code": "100215",
+          "slug": "ifako-ijaiye",
+          "label": "Ifako-Ijaiye, Iju & Alagbado (adjoining Ogba commercial zone also cites 100218)",
+          "sources": [
+            {
+              "label": "BusinessConnect — Ifako-Ijaiye 100215 / Ogba 100218",
+              "url": "https://businessconnect.com.ng/lagos-postal-codes/"
+            },
+            {
+              "label": "Nigeria Housing Market — Ifako-Ijaiye 100215",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/lagos"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Lagos State full LGA & district postal codes",
+          "url": "https://nigeriazipcode.com/lagos/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1690,7 +3537,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1700,9 +3547,9 @@
       "capital": "Lafia",
       "zoneCode": "962",
       "headOfficeCode": "962001",
-      "range": "950001–962009",
+      "range": "950103–962104",
       "intro": "Lafia 962001 often mislisted as 950001 — the 96 prefix is correct for Nasarawa’s allocation; verify with the counter for Keffi.",
-      "description": "Nasarawa via Lafia.",
+      "description": "Nasarawa postal codes via Lafia (962001/961001) to Keffi, Karu/Mararaba and Akwanga.",
       "places": [
         {
           "name": "Lafia — Head office / GPO",
@@ -1724,9 +3571,62 @@
             }
           ],
           "notes": "Teezab lists Nasarawa as 950001; eBills/NigeriaZipCode list Lafia as 962001 — we use 962001 with note, matching region prefix 96. Alternative value 950001 appears in some compilations."
+        },
+        {
+          "name": "Lafia Urban",
+          "code": "961001",
+          "slug": "lafia-urban",
+          "label": "Lafia LGA urban delivery district & FULafia corridor (961001–961003)",
+          "notes": "NigeriaZipCode lists 961001 for Lafia LGA delivery while national state-capital summary tables quote 962001.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Nasarawa major towns — Lafia 961001",
+              "url": "https://nigeriazipcode.com/nasarawa/"
+            }
+          ]
+        },
+        {
+          "name": "Keffi",
+          "code": "961101",
+          "slug": "keffi",
+          "label": "Keffi emirate, NSUK university & Abuja highway hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Nasarawa major towns — Keffi 961101",
+              "url": "https://nigeriazipcode.com/nasarawa/"
+            }
+          ]
+        },
+        {
+          "name": "Karu / Mararaba",
+          "code": "961103",
+          "slug": "karu-mararaba",
+          "label": "Karu LGA (Nasarawa) — Mararaba, Ado & New Nyanya (distinct from AMAC Karu 900110)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Nasarawa major towns — Karu (Mararaba) 961103",
+              "url": "https://nigeriazipcode.com/nasarawa/"
+            }
+          ]
+        },
+        {
+          "name": "Akwanga",
+          "code": "960101",
+          "slug": "akwanga",
+          "label": "Akwanga central highway junction town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Nasarawa major towns — Akwanga 960101",
+              "url": "https://nigeriazipcode.com/nasarawa/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Nasarawa State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/nasarawa/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1740,7 +3640,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Teezab lists Nasarawa as 950001; eBills/NigeriaZipCode list Lafia as 962001 — we use 962001 with note, matching region prefix 96."
     },
@@ -1750,9 +3650,9 @@
       "capital": "Minna",
       "zoneCode": "920",
       "headOfficeCode": "920001",
-      "range": "920001–930005",
+      "range": "900105–923107",
       "intro": "Minna 920001 heads Nigeria’s largest state by area — Suleja and Bida carry different delivery blocks.",
-      "description": "Niger via Minna large area.",
+      "description": "Niger postal codes via Minna GPO (920001) and Chanchaga/Bosso to Suleja, Bida, Kontagora and Mokwa.",
       "places": [
         {
           "name": "Minna — Head office / GPO",
@@ -1773,9 +3673,87 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Minna Urban (Chanchaga)",
+          "code": "920101",
+          "slug": "minna-urban",
+          "label": "Chanchaga (920101) & Bosso FUTMinna corridor (920102)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Niger LGA list — Chanchaga 920101 / Bosso 920102",
+              "url": "https://nigeriazipcode.com/niger/"
+            }
+          ]
+        },
+        {
+          "name": "Suleja",
+          "code": "900105",
+          "slug": "suleja",
+          "label": "Suleja commercial town & Madalla FCT northern gateway",
+          "notes": "NigeriaZipCode records 900105 for Suleja (routed under the 900 Abuja-Suleja dispatch hub); BusinessConnect cites 910101.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Niger major towns — Suleja 900105",
+              "url": "https://nigeriazipcode.com/niger/"
+            },
+            {
+              "label": "BusinessConnect — Niger Suleja 910101",
+              "url": "https://businessconnect.com.ng/niger-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Bida",
+          "code": "912101",
+          "slug": "bida",
+          "label": "Bida — Nupe emirate & Federal Polytechnic Bida town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Niger major towns — Bida 912101",
+              "url": "https://nigeriazipcode.com/niger/"
+            },
+            {
+              "label": "BusinessConnect — Niger Bida 912101",
+              "url": "https://businessconnect.com.ng/niger-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Kontagora",
+          "code": "910002",
+          "slug": "kontagora",
+          "label": "Kontagora north-western emirate & market town",
+          "notes": "NigeriaZipCode lists 910002 for Kontagora; BusinessConnect lists 923101.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Niger major towns — Kontagora 910002",
+              "url": "https://nigeriazipcode.com/niger/"
+            },
+            {
+              "label": "BusinessConnect — Niger Kontagora 923101",
+              "url": "https://businessconnect.com.ng/niger-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Mokwa",
+          "code": "913103",
+          "slug": "mokwa",
+          "label": "Mokwa north-south road & rail transit hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Niger LGA list — Mokwa 913103",
+              "url": "https://nigeriazipcode.com/niger/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Niger State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/niger/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1789,7 +3767,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1799,9 +3777,9 @@
       "capital": "Abeokuta",
       "zoneCode": "110",
       "headOfficeCode": "110001",
-      "range": "110001–120005",
+      "range": "110001–122107",
       "intro": "Abeokuta 110001 links Ogun’s industrial belt — Sagamu and Ijebu-Ode use adjacent dispatch districts.",
-      "description": "Ogun via Abeokuta industrial belt.",
+      "description": "Ogun postal codes via Abeokuta GPO (110001) to Sango-Ota/Ota, Sagamu, Ijebu-Ode, Mowe/Obafemi-Owode, Ilaro and Ijebu-Igbo.",
       "places": [
         {
           "name": "Abeokuta — Head office / GPO",
@@ -1822,9 +3800,127 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Abeokuta South (Ibara)",
+          "code": "110271",
+          "slug": "abeokuta-south",
+          "label": "Oke-Mosan secretariat, Ibara, Panseke & Isabo (110211–110282)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ogun LGA list — Abeokuta South 110271",
+              "url": "https://nigeriazipcode.com/ogun/"
+            },
+            {
+              "label": "BusinessConnect — Abeokuta districts 110211–110282",
+              "url": "https://businessconnect.com.ng/ogun-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Sango-Ota / Ota",
+          "code": "112001",
+          "slug": "sango-ota",
+          "label": "Ado-Odo/Ota industrial corridor — Covenant Univ., Ota (112101) & Agbara (112104)",
+          "notes": "112001 is Sango-Ota / Ota GPO; Ota town districts run 112101–112272 (Agbara industrial estate 112104).",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ogun major towns — Ota 112001 (112001–112272)",
+              "url": "https://nigeriazipcode.com/ogun/"
+            },
+            {
+              "label": "BusinessConnect — Sango-Ota 112001 / Ota 112101",
+              "url": "https://businessconnect.com.ng/ogun-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Sagamu",
+          "code": "121101",
+          "slug": "sagamu",
+          "label": "Sagamu industrial & expressway interchange hub (121101–121102; Ikenne/Babcock 121003/121103)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ogun major towns — Sagamu 121101",
+              "url": "https://nigeriazipcode.com/ogun/"
+            },
+            {
+              "label": "BusinessConnect — Ogun Sagamu 121101",
+              "url": "https://businessconnect.com.ng/ogun-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Ijebu-Ode",
+          "code": "120211",
+          "slug": "ijebu-ode",
+          "label": "Ijebu-Ode urban districts (120211–120282; LGA range 120101)",
+          "notes": "NigeriaZipCode lists 120211–120282 for Ijebu-Ode urban layouts while BusinessConnect cites 120101 at LGA level.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ogun major towns — Ijebu-Ode 120211",
+              "url": "https://nigeriazipcode.com/ogun/"
+            },
+            {
+              "label": "BusinessConnect — Ogun Ijebu-Ode 120101–120282",
+              "url": "https://businessconnect.com.ng/ogun-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Mowe / Obafemi-Owode",
+          "code": "110104",
+          "slug": "obafemi-owode",
+          "label": "Obafemi-Owode LGA (110104–110118) — Mowe, Ibafo, Arepo & Redemption City (110113)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ogun LGA list — Obafemi-Owode 110104–110118",
+              "url": "https://nigeriazipcode.com/ogun/"
+            },
+            {
+              "label": "BusinessConnect — Mowe, Ibafo & Redemption City 110113",
+              "url": "https://businessconnect.com.ng/ogun-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Ilaro (Yewa South)",
+          "code": "111102",
+          "slug": "ilaro",
+          "label": "Yewa South — Ilaro & Federal Polytechnic Ilaro (Idiroko border in Ipokia uses 111103)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ogun major towns — Ilaro 111102",
+              "url": "https://nigeriazipcode.com/ogun/"
+            },
+            {
+              "label": "BusinessConnect — Ogun Yewa South 111102",
+              "url": "https://businessconnect.com.ng/ogun-state-postal-codes/"
+            }
+          ]
+        },
+        {
+          "name": "Ijebu-Igbo (Ijebu North)",
+          "code": "120105",
+          "slug": "ijebu-igbo",
+          "label": "Ijebu North — Ijebu-Igbo (120105) & Ago-Iwoye OOU campus (120107)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ogun major towns — Ijebu-Igbo 120105",
+              "url": "https://nigeriazipcode.com/ogun/"
+            },
+            {
+              "label": "BusinessConnect — Ijebu-Igbo 120105 / Ago-Iwoye 120107",
+              "url": "https://businessconnect.com.ng/ogun-state-postal-codes/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Ogun State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/ogun/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1838,7 +3934,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1848,9 +3944,9 @@
       "capital": "Akure",
       "zoneCode": "340",
       "headOfficeCode": "340001",
-      "range": "340001–350005",
+      "range": "340001–352120",
       "intro": "Akure 340001 covers Ondo’s cocoa highlands — Owo and Ore diverge with separate last-three codes.",
-      "description": "Ondo via Akure cocoa highlands.",
+      "description": "Ondo postal codes via Akure GPO (340001) and Akure South to Ondo Town, Owo, Ore and Okitipupa.",
       "places": [
         {
           "name": "Akure — Head office / GPO",
@@ -1871,9 +3967,73 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Akure Urban (Akure South)",
+          "code": "340101",
+          "slug": "akure-urban",
+          "label": "Alagbaka, FUTA & Oba Adesida commercial belt (340101–340284)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ondo major towns — Akure 340101",
+              "url": "https://nigeriazipcode.com/ondo/"
+            }
+          ]
+        },
+        {
+          "name": "Ondo Town",
+          "code": "351101",
+          "slug": "ondo-town",
+          "label": "Ondo West & UNIMED university town (351101–351106)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ondo major towns — Ondo Town 351101",
+              "url": "https://nigeriazipcode.com/ondo/"
+            }
+          ]
+        },
+        {
+          "name": "Owo",
+          "code": "341101",
+          "slug": "owo",
+          "label": "Owo historic & medical centre town (341101–341108)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ondo major towns — Owo 341101",
+              "url": "https://nigeriazipcode.com/ondo/"
+            }
+          ]
+        },
+        {
+          "name": "Ore (Odigbo)",
+          "code": "350101",
+          "slug": "ore",
+          "label": "Odigbo LGA — Ore interstate highway interchange (350101–350107)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ondo major towns — Ore 350101",
+              "url": "https://nigeriazipcode.com/ondo/"
+            }
+          ]
+        },
+        {
+          "name": "Okitipupa",
+          "code": "350104",
+          "slug": "okitipupa",
+          "label": "Okitipupa southern Ondo & OAUSTECH town (350104–350113)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Ondo major towns — Okitipupa 350104",
+              "url": "https://nigeriazipcode.com/ondo/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Ondo State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/ondo/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1887,7 +4047,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1897,9 +4057,9 @@
       "capital": "Osogbo",
       "zoneCode": "230",
       "headOfficeCode": "230001",
-      "range": "230001–240005",
+      "range": "220001–234103",
       "intro": "Osogbo 230001 is centre for Osun’s Yoruba heartland — Ilesa and Ife follow closely.",
-      "description": "Osun via Osogbo heartland.",
+      "description": "Osun postal codes via Osogbo GPO (230001/230211) to Ile-Ife, Ilesa, Ede and Iwo.",
       "places": [
         {
           "name": "Osogbo — Head office / GPO",
@@ -1920,9 +4080,77 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Osogbo Urban",
+          "code": "230211",
+          "slug": "osogbo-urban",
+          "label": "Oke-Fia, Abere secretariat & Osogbo urban layouts (230211–230283)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Osun major towns — Osogbo 230211",
+              "url": "https://nigeriazipcode.com/osun/"
+            }
+          ]
+        },
+        {
+          "name": "Ile-Ife",
+          "code": "220211",
+          "slug": "ile-ife",
+          "label": "Ife Central & Obafemi Awolowo University town (220211–220282; Ife GPO 220001)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Osun major towns — Ile-Ife 220211 / Ife East 220001",
+              "url": "https://nigeriazipcode.com/osun/"
+            }
+          ]
+        },
+        {
+          "name": "Ilesa",
+          "code": "233211",
+          "slug": "ilesa",
+          "label": "Ilesa East & Ilesa West urban districts (233211–233283)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Osun major towns — Ilesa 233211",
+              "url": "https://nigeriazipcode.com/osun/"
+            }
+          ]
+        },
+        {
+          "name": "Ede",
+          "code": "232101",
+          "slug": "ede",
+          "label": "Ede North & Ede South (232101–232103) — Federal Poly Ede & Redeemer's Univ.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Osun major towns — Ede 232101",
+              "url": "https://nigeriazipcode.com/osun/"
+            }
+          ]
+        },
+        {
+          "name": "Iwo",
+          "code": "232102",
+          "slug": "iwo",
+          "label": "Iwo — Bowen University town (232101–232102)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Osun LGA list — Iwo 232101–232102",
+              "url": "https://nigeriazipcode.com/osun/"
+            },
+            {
+              "label": "BusinessConnect — Osun Iwo 232102",
+              "url": "https://businessconnect.com.ng/osun-state-postal-codes/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Osun State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/osun/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -1936,7 +4164,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -1946,9 +4174,9 @@
       "capital": "Ibadan",
       "zoneCode": "200",
       "headOfficeCode": "200001",
-      "range": "200001–210005",
+      "range": "200001–212104",
       "intro": "Ibadan 200001 is West Africa’s largest city footprint — 200xxx codes sprawl across 33 LGAs.",
-      "description": "Oyo via Ibadan sprawl.",
+      "description": "Oyo postal codes via Ibadan GPO (200001) and Ibadan districts to Ogbomosho, Oyo Town, Iseyin, Saki and Eruwa.",
       "places": [
         {
           "name": "Ibadan — Head office / GPO",
@@ -1993,9 +4221,73 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Ogbomosho",
+          "code": "210211",
+          "slug": "ogbomosho",
+          "label": "Ogbomosho North & South — LAUTECH university city (210211–210271)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Oyo major towns — Ogbomoso 210211",
+              "url": "https://nigeriazipcode.com/oyo/"
+            }
+          ]
+        },
+        {
+          "name": "Oyo Town",
+          "code": "211211",
+          "slug": "oyo-town",
+          "label": "Oyo East & Oyo West historic city layouts (211211–211273)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Oyo major towns — Oyo Town 211211",
+              "url": "https://nigeriazipcode.com/oyo/"
+            }
+          ]
+        },
+        {
+          "name": "Iseyin",
+          "code": "202101",
+          "slug": "iseyin",
+          "label": "Iseyin — Oke-Ogun gateway & weaving centre (202101–202103)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Oyo major towns — Iseyin 202101",
+              "url": "https://nigeriazipcode.com/oyo/"
+            }
+          ]
+        },
+        {
+          "name": "Saki",
+          "code": "203101",
+          "slug": "saki",
+          "label": "Saki West — northern Oke-Ogun commercial hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Oyo major towns — Saki 203101",
+              "url": "https://nigeriazipcode.com/oyo/"
+            }
+          ]
+        },
+        {
+          "name": "Eruwa (Ibarapa East)",
+          "code": "201101",
+          "slug": "eruwa",
+          "label": "Ibarapa East headquarters (201101–201102)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Oyo major towns — Eruwa 201101",
+              "url": "https://nigeriazipcode.com/oyo/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Oyo State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/oyo/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -2009,7 +4301,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -2019,9 +4311,9 @@
       "capital": "Jos",
       "zoneCode": "930",
       "headOfficeCode": "930001",
-      "range": "930001–940005",
+      "range": "930001–942105",
       "intro": "Jos 930001 heads highland routes — cold-chain parcels for Plateau crops need correct LGA prefix.",
-      "description": "Plateau via Jos highland.",
+      "description": "Plateau postal codes via Jos GPO (930001) and Bukuru/Jos South to Barkin Ladi, Pankshin and Shendam.",
       "places": [
         {
           "name": "Jos — Head office / GPO",
@@ -2053,10 +4345,63 @@
               "label": "eBills Plateau 930001",
               "url": "https://ebills.africa/nigerian-postal-codes/"
             }
+          ],
+          "notes": "Jos North central districts fall under 930001–930211; NigeriaZipCode assigns 930101 primarily to adjoining Jos South (Bukuru)."
+        },
+        {
+          "name": "Bukuru (Jos South)",
+          "code": "930101",
+          "slug": "bukuru",
+          "label": "Jos South — Bukuru, Rayfield government house & Kuru NIPSS belt",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Plateau major towns — Bukuru (Jos South) 930101",
+              "url": "https://nigeriazipcode.com/plateau/"
+            }
+          ]
+        },
+        {
+          "name": "Barkin Ladi",
+          "code": "931102",
+          "slug": "barkin-ladi",
+          "label": "Barkin Ladi — Yakubu Gowon Airport (Heipang) & Plateau Polytechnic corridor",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Plateau major towns — Barkin Ladi 931102",
+              "url": "https://nigeriazipcode.com/plateau/"
+            }
+          ]
+        },
+        {
+          "name": "Pankshin",
+          "code": "933101",
+          "slug": "pankshin",
+          "label": "Pankshin central highland & FCE Pankshin town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Plateau major towns — Pankshin 933101",
+              "url": "https://nigeriazipcode.com/plateau/"
+            }
+          ]
+        },
+        {
+          "name": "Shendam",
+          "code": "940101",
+          "slug": "shendam",
+          "label": "Shendam southern Plateau lowland hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Plateau major towns — Shendam 940101",
+              "url": "https://nigeriazipcode.com/plateau/"
+            }
           ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Plateau State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/plateau/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -2070,7 +4415,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -2082,12 +4427,12 @@
       "headOfficeCode": "500001",
       "range": "500001–512102",
       "intro": "Port Harcourt 500001 heads oil city — Trans-Amadi, Obio-Akpor and Bonny each carry different delivery codes.",
-      "description": "Rivers via Port Harcourt oil city.",
+      "description": "Rivers postal codes via Port Harcourt GPO (500001), PH City/GRA, Obio-Akpor, Eleme/Onne & Okrika to Bonny Island, Ikwerre, Oyigbo, Ahoada and Omoku.",
       "places": [
         {
           "name": "Port Harcourt — Head office / GPO",
           "code": "500001",
-          "slug": "port-harcourt",
+          "slug": "port-harcourt-gpo",
           "label": "Head office/GPO — main code for Port Harcourt (500001–512102)",
           "sources": [
             {
@@ -2145,8 +4490,13 @@
             {
               "label": "BusinessConnect Rivers Okrika",
               "url": "https://businessconnect.com.ng/rivers-state-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Rivers LGA postal codes (Okrika 500106)",
+              "url": "https://nigeriazipcode.com/rivers/"
             }
-          ]
+          ],
+          "notes": "BusinessConnect Rivers cites 500221 for Okrika; NigeriaZipCode lists 500106 and Nigeria Housing Market lists 500103 for Okrika LGA delivery."
         },
         {
           "name": "Eleme",
@@ -2157,11 +4507,111 @@
             {
               "label": "BusinessConnect Rivers Eleme",
               "url": "https://businessconnect.com.ng/rivers-state-postal-codes/"
+            },
+            {
+              "label": "NigeriaZipCode — Rivers LGA postal codes (Eleme 501101)",
+              "url": "https://nigeriazipcode.com/rivers/"
+            }
+          ],
+          "notes": "BusinessConnect Rivers cites 504101 for Eleme; NigeriaZipCode and Nigeria Housing Market list 501101 for Eleme (Onne / Alesa / Alode) and 504101 for Degema."
+        },
+        {
+          "name": "Port Harcourt City (Old GRA)",
+          "code": "500101",
+          "slug": "port-harcourt-city",
+          "label": "Old GRA, Town, D-Line & Diobu — Port Harcourt City LGA",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Rivers major towns — Port Harcourt 500101",
+              "url": "https://nigeriazipcode.com/rivers/"
+            },
+            {
+              "label": "Nigeria Housing Market — Rivers directory — Port Harcourt City 500101",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/rivers"
+            }
+          ]
+        },
+        {
+          "name": "Bonny Island",
+          "code": "500113",
+          "slug": "bonny-island",
+          "label": "Bonny Island, Finima & NLNG/crude export terminal",
+          "notes": "NigeriaZipCode lists 500113 for Bonny LGA; Nigeria Housing Market cites 503101.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Rivers major towns — Bonny 500113",
+              "url": "https://nigeriazipcode.com/rivers/"
+            },
+            {
+              "label": "Nigeria Housing Market — Rivers directory — Bonny 503101",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/rivers"
+            }
+          ]
+        },
+        {
+          "name": "Ikwerre (Omagwa / Igwuruta)",
+          "code": "500115",
+          "slug": "ikwerre",
+          "label": "Port Harcourt International Airport (Omagwa), Igwuruta & Isiokpo",
+          "notes": "NigeriaZipCode lists 500115 for Ikwerre LGA; Nigeria Housing Market cites 511101.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Rivers LGA list — Ikwerre 500115",
+              "url": "https://nigeriazipcode.com/rivers/"
+            },
+            {
+              "label": "Nigeria Housing Market — Rivers directory — Ikwerre 511101",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/rivers"
+            }
+          ]
+        },
+        {
+          "name": "Oyigbo",
+          "code": "500109",
+          "slug": "oyigbo",
+          "label": "Oyigbo (Obigbo) & Afam power station corridor on Aba–PH border",
+          "notes": "NigeriaZipCode lists 500109 for Oyigbo LGA; Nigeria Housing Market cites 502103.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Rivers LGA list — Oyigbo 500109",
+              "url": "https://nigeriazipcode.com/rivers/"
+            },
+            {
+              "label": "Nigeria Housing Market — Rivers directory — Oyigbo 502103",
+              "url": "https://www.nigeriahousingmarket.com/postal-codes/rivers"
+            }
+          ]
+        },
+        {
+          "name": "Ahoada",
+          "code": "510101",
+          "slug": "ahoada",
+          "label": "Ahoada West (510101) & Ahoada East (500107) — East-West Road hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Rivers major towns — Ahoada 510101 / Ahoada East 500107",
+              "url": "https://nigeriazipcode.com/rivers/"
+            }
+          ]
+        },
+        {
+          "name": "Omoku",
+          "code": "510103",
+          "slug": "omoku",
+          "label": "Ogba/Egbema/Ndoni LGA — onshore oil & gas processing hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Rivers major towns — Omoku 510103",
+              "url": "https://nigeriazipcode.com/rivers/"
             }
           ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Rivers State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/rivers/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -2175,7 +4625,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -2185,9 +4635,9 @@
       "capital": "Sokoto",
       "zoneCode": "840",
       "headOfficeCode": "840001",
-      "range": "840001–850005",
+      "range": "840001–853102",
       "intro": "Sokoto 840001 matches Sokoto Caliphate capital — far-north routes share the same dispatch block as Ebonyi in one compilation, so note matters.",
-      "description": "Sokoto via Sokoto Caliphate.",
+      "description": "Sokoto postal codes via Sokoto GPO (840001) and Sokoto North/Wamako to Tambuwal and Illela.",
       "places": [
         {
           "name": "Sokoto — Head office / GPO",
@@ -2209,9 +4659,61 @@
             }
           ],
           "notes": "Same prefix as Ebonyi 840001 in one compilation; Sokoto commonly listed as 840001 in North-West region — kept with note.  Alternative value  appears in some compilations."
+        },
+        {
+          "name": "Sokoto North",
+          "code": "840101",
+          "slug": "sokoto-north",
+          "label": "Sokoto Central Market & Sultanate core",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Sokoto LGA list — Sokoto North 840101",
+              "url": "https://nigeriazipcode.com/sokoto/"
+            }
+          ]
+        },
+        {
+          "name": "Wamako (UDUS)",
+          "code": "840104",
+          "slug": "wamako",
+          "label": "Wamako LGA — Usmanu Danfodiyo University & cement corridor",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Sokoto LGA list — Wamako 840104",
+              "url": "https://nigeriazipcode.com/sokoto/"
+            }
+          ]
+        },
+        {
+          "name": "Tambuwal",
+          "code": "850102",
+          "slug": "tambuwal",
+          "label": "Tambuwal southern highway town (urban layouts also cite 850221)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Sokoto LGA & major towns — Tambuwal 850102 / 850221",
+              "url": "https://nigeriazipcode.com/sokoto/"
+            }
+          ]
+        },
+        {
+          "name": "Illela",
+          "code": "843101",
+          "slug": "illela",
+          "label": "Illela international border trade town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Sokoto major towns — Illela 843101",
+              "url": "https://nigeriazipcode.com/sokoto/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Sokoto State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/sokoto/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -2225,7 +4727,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Same prefix as Ebonyi 840001 in one compilation; Sokoto commonly listed as 840001 in North-West region — kept with note."
     },
@@ -2235,9 +4737,9 @@
       "capital": "Jalingo",
       "zoneCode": "660",
       "headOfficeCode": "660001",
-      "range": "660001–670005",
+      "range": "660001–672101",
       "intro": "Jalingo 660001 is Taraba’s gateway — Mambilla routes branch from this point.",
-      "description": "Taraba via Jalingo.",
+      "description": "Taraba postal codes via Jalingo GPO (660001/660101) to Wukari, Gembu (Mambilla) and Takum.",
       "places": [
         {
           "name": "Jalingo — Head office / GPO",
@@ -2258,9 +4760,61 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Jalingo Urban",
+          "code": "660101",
+          "slug": "jalingo-urban",
+          "label": "Jalingo LGA — Taraba State University & Mile Six",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Taraba LGA list — Jalingo 660101",
+              "url": "https://nigeriazipcode.com/taraba/"
+            }
+          ]
+        },
+        {
+          "name": "Wukari",
+          "code": "670101",
+          "slug": "wukari",
+          "label": "Wukari — southern Taraba & Federal University Wukari hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Taraba major towns — Wukari 670101",
+              "url": "https://nigeriazipcode.com/taraba/"
+            }
+          ]
+        },
+        {
+          "name": "Gembu (Sardauna)",
+          "code": "663102",
+          "slug": "gembu",
+          "label": "Sardauna LGA — Mambilla Plateau tea & highland hub",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Taraba major towns — Gembu 663102",
+              "url": "https://nigeriazipcode.com/taraba/"
+            }
+          ]
+        },
+        {
+          "name": "Takum",
+          "code": "671101",
+          "slug": "takum",
+          "label": "Takum LGA commercial town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Taraba major towns — Takum 671101",
+              "url": "https://nigeriazipcode.com/taraba/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Taraba State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/taraba/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -2274,7 +4828,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -2284,9 +4838,9 @@
       "capital": "Damaturu",
       "zoneCode": "620",
       "headOfficeCode": "620001",
-      "range": "620001–630005",
+      "range": "620001–632102",
       "intro": "Damaturu 620001 anchors Yobe’s Sahel corridor — Potiskum uses nearby but distinct district.",
-      "description": "Yobe via Damaturu Sahel.",
+      "description": "Yobe postal codes via Damaturu GPO (620001) to Potiskum, Nguru, Gashua and Geidam.",
       "places": [
         {
           "name": "Damaturu — Head office / GPO",
@@ -2307,9 +4861,61 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Potiskum",
+          "code": "622101",
+          "slug": "potiskum",
+          "label": "Potiskum — Yobe's largest commercial & livestock market city",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Yobe major towns — Potiskum 622101",
+              "url": "https://nigeriazipcode.com/yobe/"
+            }
+          ]
+        },
+        {
+          "name": "Nguru",
+          "code": "630101",
+          "slug": "nguru",
+          "label": "Nguru rail terminus & wetland trade town (urban layouts also cite 630211)",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Yobe LGA & major towns — Nguru 630101 / 630211",
+              "url": "https://nigeriazipcode.com/yobe/"
+            }
+          ]
+        },
+        {
+          "name": "Gashua (Bade)",
+          "code": "631101",
+          "slug": "gashua",
+          "label": "Bade LGA — Federal University Gashua town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Yobe major towns — Gashua 631101",
+              "url": "https://nigeriazipcode.com/yobe/"
+            }
+          ]
+        },
+        {
+          "name": "Geidam",
+          "code": "632101",
+          "slug": "geidam",
+          "label": "Geidam northern trading town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Yobe major towns — Geidam 632101",
+              "url": "https://nigeriazipcode.com/yobe/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Yobe State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/yobe/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -2323,7 +4929,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     },
@@ -2333,9 +4939,9 @@
       "capital": "Gusau",
       "zoneCode": "880",
       "headOfficeCode": "880001",
-      "range": "880001–890005",
+      "range": "860211–883105",
       "intro": "Gusau 880001 anchors Zamfara’s gold belt — Kaura-Namoda and Shinkafi then branch.",
-      "description": "Zamfara via Gusau gold belt.",
+      "description": "Zamfara postal codes via Gusau (880001/860211) to Kaura Namoda, Talata Mafara and Anka.",
       "places": [
         {
           "name": "Gusau — Head office / GPO",
@@ -2356,9 +4962,62 @@
               "url": "https://nigeriazipcode.com/"
             }
           ]
+        },
+        {
+          "name": "Gusau Urban",
+          "code": "860211",
+          "slug": "gusau-urban",
+          "label": "Gusau urban delivery layouts (860211–860283; state GPO 880001)",
+          "notes": "NIPOST street delivery in Gusau retains legacy 860211–860283 codes from the pre-1996 Sokoto/Kebbi dispatch block, alongside 880001 state GPO.",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Zamfara major towns — Gusau 860211",
+              "url": "https://nigeriazipcode.com/zamfara/"
+            }
+          ]
+        },
+        {
+          "name": "Kaura Namoda",
+          "code": "883101",
+          "slug": "kaura-namoda",
+          "label": "Kaura Namoda rail & Federal Polytechnic town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Zamfara major towns — Kaura Namoda 883101",
+              "url": "https://nigeriazipcode.com/zamfara/"
+            }
+          ]
+        },
+        {
+          "name": "Talata Mafara",
+          "code": "881102",
+          "slug": "talata-mafara",
+          "label": "Talata Mafara — Bakolori irrigation & polytechnic town",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Zamfara major towns — Talata Mafara 881102",
+              "url": "https://nigeriazipcode.com/zamfara/"
+            }
+          ]
+        },
+        {
+          "name": "Anka",
+          "code": "882101",
+          "slug": "anka",
+          "label": "Anka historic emirate headquarters",
+          "sources": [
+            {
+              "label": "NigeriaZipCode — Zamfara major towns — Anka 882101",
+              "url": "https://nigeriazipcode.com/zamfara/"
+            }
+          ]
         }
       ],
       "sources": [
+        {
+          "label": "NigeriaZipCode — Zamfara State full LGA & major town postal codes",
+          "url": "https://nigeriazipcode.com/zamfara/"
+        },
         {
           "label": "eBills Africa — Nigerian postal codes (updated 2026)",
           "url": "https://ebills.africa/nigerian-postal-codes/"
@@ -2372,7 +5031,7 @@
           "url": "https://en.wikipedia.org/wiki/Postal_codes_in_Nigeria"
         }
       ],
-      "lastVerified": "2026-10-21",
+      "lastVerified": "2026-10-24",
       "verification": "manual",
       "notes": "Head office codes end 001; districts use same dispatch prefix with different last-three digits. Ask NIPOST counter for exact street."
     }
