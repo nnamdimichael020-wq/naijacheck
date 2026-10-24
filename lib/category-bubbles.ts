@@ -3,6 +3,7 @@ import { getAllAirports } from "@/lib/airports";
 import { airlineCodeSummary, airlineStatusShortLabel, getAllAirlines } from "@/lib/airlines";
 import { getAllBanks } from "@/lib/banks";
 import { getAllOilGasOperators, operatorTypeShortLabel } from "@/lib/oil-gas";
+import { getAllPorts, portCategoryShortLabel } from "@/lib/ports";
 import { CHART_PAGES } from "@/lib/chart-pages";
 import {
   BLUEPRINTS,
@@ -120,6 +121,7 @@ export function buildCategoryBubbleTree(): CategoryBubble[] {
   const airports = getAllAirports();
   const airlines = getAllAirlines();
   const oilGasOperators = getAllOilGasOperators();
+  const ports = getAllPorts();
   const postalStates = getAllPostalStates();
   const postalDistricts = getAllPostalAreaParams()
     .slice(0, POSTAL_DISTRICT_CAP)
@@ -341,6 +343,24 @@ export function buildCategoryBubbleTree(): CategoryBubble[] {
             label: o.name,
             href: `/oil-gas/${o.slug}`,
             meta: [operatorTypeShortLabel(o.type), o.headquartersCity].filter(Boolean).join(" · "),
+          })),
+        ],
+      }),
+      makeSubcategory({
+        id: "places-ports",
+        label: "Seaports in Nigeria",
+        href: "/ports",
+        meta: `${ports.length} ports`,
+        children: [
+          {
+            label: "All Nigerian Seaports & Marine Terminals",
+            href: "/ports",
+            meta: `${ports.length} ports`,
+          },
+          ...ports.map((p) => ({
+            label: p.name,
+            href: `/ports/${p.slug}`,
+            meta: [p.unLocode, portCategoryShortLabel(p.category)].filter(Boolean).join(" · "),
           })),
         ],
       }),

@@ -1,0 +1,974 @@
+{
+  "updatedAt": "2026-10-24",
+  "scope": "Curated reference of 12 verified major operational seaports and maritime export terminals in Nigeria: all 7 major public commercial seaport complexes listed by the Nigerian Ports Authority (NPA) across Western and Eastern Ports (including Nigeria's first operational deep-sea port at Lekki) plus 5 major onshore/coastal crude oil, gas-to-liquids, and LNG marine export terminals carrying official UNECE Function-1 seaport UN/LOCODEs within NPA pilotage districts. Explicitly excludes unbuilt greenfield port proposals, minor fishing jetties, private tank-farm piers without public port status, live AIS vessel positions, freight rate quotes, and cargo booking.",
+  "prefixChoice": "Uses `/ports` rather than `/seaports` so the URL prefix stays short, matches `/airports` and `/airlines`, and naturally accommodates river-estuary ocean ports (Warri, Port Harcourt, Onne, Calabar) alongside coastal deep-sea and hydrocarbon export terminals while keeping page titles and headings anchored on Nigerian seaports.",
+  "notes": "Under the Nigerian Ports Authority Act (formerly Ports Act 1954) and the 2006 federal port concessioning reform, NPA operates a landlord model across Nigeria's public commercial seaport complexes: the Federal Government retains ownership of port land, quays, breakwaters, and common-user channels while NPA provides marine, pilotage, towage, and ISPS security oversight and private concessionaires operate cargo terminals. UN/LOCODEs follow the United Nations Economic Commission for Europe (UNECE) registry for Nigeria (`NG`), shown in standard 5-character shipping format (`NGXXX`, equivalent to UNECE `NG XXX`).",
+  "hubSources": [
+    {
+      "label": "Nigerian Ports Authority (NPA) — Official Port Locations & Landlord Mandate",
+      "url": "https://nigerianports.gov.ng/",
+      "kind": "primary"
+    },
+    {
+      "label": "Nigerian Ports Authority (NPA) — Concessioned Terminals & Operators Directory",
+      "url": "https://nigerianports.gov.ng/terminals/",
+      "kind": "primary"
+    },
+    {
+      "label": "UNECE — Official UN/LOCODE Code List for Nigeria (NG)",
+      "url": "https://service.unece.org/trade/locode/ng.htm",
+      "kind": "primary"
+    },
+    {
+      "label": "Lekki Deep Sea Port (LPLEL) — Official Port Operations Portal",
+      "url": "https://lekkiport.com/",
+      "kind": "primary"
+    },
+    {
+      "label": "Nigerian Upstream Petroleum Regulatory Commission (NUPRC) — Export Terminals & Upstream Oversight",
+      "url": "https://www.nuprc.gov.ng/",
+      "kind": "primary"
+    },
+    {
+      "label": "Nigerian Midstream and Downstream Petroleum Regulatory Authority (NMDPRA) — Midstream & Coastal Terminals",
+      "url": "https://www.nmdpra.gov.ng/",
+      "kind": "primary"
+    }
+  ],
+  "ports": [
+    {
+      "slug": "lagos-apapa-port",
+      "name": "Lagos Port Complex, Apapa",
+      "alternateNames": [
+        "Apapa Port",
+        "Apapa Quays",
+        "Premiere Port",
+        "LPC Apapa",
+        "Port of Lagos",
+        "NG APP",
+        "NGLOS",
+        "NG LOS"
+      ],
+      "city": "Lagos",
+      "locality": "Apapa Quays, Marina / Lagos Harbour Channel",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "apapa",
+      "lgaName": "Apapa",
+      "postalHref": "/codes/postal/lagos",
+      "postalLabel": "Lagos State — 100001",
+      "category": "commercial-seaport",
+      "npaZone": "Western Ports",
+      "unLocode": "NGAPP",
+      "subPortCodes": [
+        "NGLOS (Lagos city multimodal UN/LOCODE)"
+      ],
+      "landlordAuthority": "Nigerian Ports Authority (NPA — Lagos Pilotage District)",
+      "operator": "NPA (Landlord); concessioned terminals operated by APM Terminals Apapa Ltd, ENL Consortium Ltd, Apapa Bulk Terminal Ltd (ABTL), Greenview Development Nigeria Ltd (GDNL), and Lilypond Inland Container Terminal",
+      "terminalOperators": [
+        "APM Terminals Apapa Ltd — Container Terminal (Berths 15–18A)",
+        "ENL Consortium Ltd — Terminals C & D, break bulk, general cargo & containers (Berths 6–14)",
+        "Apapa Bulk Terminal Ltd (ABTL) — Terminals A & B, dry & bulk cargo (Berths 1–5)",
+        "Greenview Development Nigeria Ltd (GDNL) — Terminal E, bulk cargo (Berths 19–20)",
+        "Lilypond Inland Container Terminal (Ijora) & offshore logistics bases (LADOL and Eko Support Services)"
+      ],
+      "role": "Container, dry bulk, break bulk & intermodal rail-connected landlord seaport",
+      "cargoTypes": [
+        "Containerised cargo",
+        "Dry bulk (wheat, sugar, salt, bulk inputs)",
+        "Break bulk & general cargo",
+        "Oversized & project cargo",
+        "Refined petroleum jetties"
+      ],
+      "waterway": "Lagos Harbour / Commodore Channel, Bight of Benin",
+      "establishedNote": "Established 1913; first four deep-water berths commenced 1921; terminals concessioned under landlord model in 2006",
+      "operationsSummary": "Known historically as Apapa Quays or Premiere Port, the Lagos Port Complex is Nigeria's oldest and largest traditional commercial seaport. Situated in Apapa LGA, Lagos State, the complex features road, inland-waterway barge, and standard-gauge/narrow-gauge rail links into Lagos and the hinterland. Since the 2006 federal port reform, the Nigerian Ports Authority serves as statutory landlord and marine regulator while five concessioned terminal operators manage container, dry-bulk, and general-cargo berths alongside port-side flour, sugar, and salt processing plants, eight petroleum/specialty jetties, and offshore logistics bases including LADOL and Eko Support Services.",
+      "keyFacilities": [
+        "Five concessioned cargo terminals (APMT Apapa, ENL Consortium C & D, ABTL A & B, Greenview Terminal E, and Lilypond Ijora off-dock facility)",
+        "Direct rail-to-port corridor alongside Lagos Harbour waterway barge evacuation and 8-metre wide gate clearance for oversized project cargo",
+        "Two dedicated offshore oil-and-gas fabrication and support bases within the harbour zone: Lagos Deep Offshore Logistics Base (LADOL) and Eko Support Services",
+        "Eight specialist liquid-bulk and coastal petroleum jetties serving the Apapa/Ijora downstream storage corridor"
+      ],
+      "relatedAirportSlugs": [
+        "lagos-murtala-muhammed"
+      ],
+      "relatedOilGasSlugs": [
+        "nnpc-limited",
+        "ardova",
+        "conoil"
+      ],
+      "website": "https://nigerianports.gov.ng/lagos-port/",
+      "sources": [
+        {
+          "label": "Nigerian Ports Authority — Official Lagos Port Complex Profile",
+          "url": "https://nigerianports.gov.ng/lagos-port/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Ports Authority — Western Ports Terminal Operators Table",
+          "url": "https://nigerianports.gov.ng/terminals/",
+          "kind": "primary"
+        },
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG APP (Apapa) & NG LOS (Lagos)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Shipping manifests and bills of lading discharging at Apapa terminals may reference either `NGAPP` (Apapa port code) or `NGLOS` (Lagos multimodal city/port code); Tin Can Island (`NGTIN`) and Lekki (`NGLKK`) use distinct UN/LOCODEs."
+    },
+    {
+      "slug": "tin-can-island-port",
+      "name": "Tin Can Island Port Complex",
+      "alternateNames": [
+        "Tin Can Port",
+        "Tincan Port",
+        "TCIP",
+        "TCIPC",
+        "PTML RoRo Port",
+        "Kirikiri Lighter Terminal",
+        "KLT",
+        "NG TIN",
+        "NGKIK"
+      ],
+      "city": "Lagos",
+      "locality": "Tin Can Island, Apapa Creek / Badagry Creek Corridor",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "apapa",
+      "lgaName": "Apapa",
+      "postalHref": "/codes/postal/lagos",
+      "postalLabel": "Lagos State — 100001",
+      "category": "commercial-seaport",
+      "npaZone": "Western Ports",
+      "unLocode": "NGTIN",
+      "subPortCodes": [
+        "NGKIK (Kirikiri off-dock lighter/road terminal — UNECE Function 3)"
+      ],
+      "landlordAuthority": "Nigerian Ports Authority (NPA — Lagos Pilotage District)",
+      "operator": "NPA (Landlord); concessioned terminals operated by Tin Can Island Container Terminal Ltd (TICT), Ports & Cargo Handling Services Ltd, Five Star Logistics Ltd, Josepdam Port Services Ltd, and Ports & Terminal Multiservices Ltd (PTML)",
+      "terminalOperators": [
+        "Josepdam Port Services Ltd — Terminal A, dry & liquid bulk (Berths 1–2)",
+        "Tin Can Island Container Terminal Ltd (TICT) — Terminal B, containers (Berths 3–5)",
+        "Ports & Cargo Handling Services Ltd (SIFAX Group) — Terminal C, containers & general cargo (Berths 6–8)",
+        "Five Star Logistics Ltd — Terminal D, RoRo vehicles, containers & general cargo (Berths 9–10)",
+        "Ports & Terminal Multiservices Ltd (PTML, Grimaldi Group BOT) — dedicated RoRo vehicle & container terminal"
+      ],
+      "role": "Container, roll-on/roll-off (RoRo) vehicle, bulk & barge-linked seaport complex",
+      "cargoTypes": [
+        "Roll-on/roll-off (RoRo) vehicles",
+        "Containerised cargo",
+        "Dry & wet bulk cargo",
+        "General & break-bulk cargo"
+      ],
+      "waterway": "Badagry Creek / Porto-Novo Creek off Lagos Harbour, Bight of Benin",
+      "establishedNote": "Construction started 1976; commissioned 14 October 1977; merged with former RoRo Port and concessioned in May–September 2006",
+      "operationsSummary": "Built during the mid-1970s trade boom to relieve congestion at Apapa Quays and commissioned on 14 October 1977, the Tin Can Island Port Complex occupies roughly 73 hectares northwest of Lagos Port Complex. During the 2006 landlord port reform, the complex merged administratively with the adjacent RoRo Port and was concessioned across five terminal operators handling containers, roll-on/roll-off vehicle imports, dry bulk, and break-bulk vessels up to 260 metres in length, supported by Kirikiri Lighter Terminals (KLT) I and II along Badagry Creek for barge transfers and export processing.",
+      "keyFacilities": [
+        "Five concessioned main-quay terminals (Josepdam Terminal A, TICT Terminal B, Ports & Cargo Terminal C, Five Star Logistics Terminal D, and PTML RoRo BOT terminal)",
+        "Nigeria's primary maritime gateway for roll-on/roll-off (RoRo) vehicle carriers alongside high-volume container berths",
+        "Kirikiri Lighter Terminal (KLT) Phases I & II — off-dock barge and lighterage terminals (each with 780 m quay wall and up to 4 m water depth) serving container transfers and NPA-licensed Export Processing Terminals",
+        "24-hour pilotage jurisdiction shared across the Lagos Harbour channel with Marine Police and Nigerian Navy anchorage patrols"
+      ],
+      "relatedAirportSlugs": [
+        "lagos-murtala-muhammed"
+      ],
+      "website": "https://nigerianports.gov.ng/tincan/",
+      "sources": [
+        {
+          "label": "Nigerian Ports Authority — Official Tin Can Island Port Complex (TCIP) Profile",
+          "url": "https://nigerianports.gov.ng/tincan/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Ports Authority — Western Ports Terminal Concessionaires",
+          "url": "https://nigerianports.gov.ng/terminals/",
+          "kind": "primary"
+        },
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG TIN (Tincan/Lagos) & NG KIK (Kirikiri)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Kirikiri Lighter Terminals I & II (`NGKIK`) receive container barges stemmed from Tin Can (`NGTIN`) and Apapa (`NGAPP`) mother vessels under a dedicated Nigeria Customs Service off-dock command."
+    },
+    {
+      "slug": "lekki-deep-sea-port",
+      "name": "Lekki Deep Sea Port",
+      "alternateNames": [
+        "Lekki Port",
+        "Lekki Freeport Terminal",
+        "LFT",
+        "LPLEL",
+        "Ibeju-Lekki Deep Sea Port",
+        "NG LKK"
+      ],
+      "city": "Ibeju-Lekki",
+      "locality": "Lagos Free Zone (LFZ), ~65 km east of central Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ibeju-lekki",
+      "lgaName": "Ibeju-Lekki",
+      "postalHref": "/codes/postal/lagos/lekki",
+      "postalLabel": "Lekki Corridor — 105102",
+      "category": "deep-sea-port",
+      "npaZone": "Western Ports",
+      "unLocode": "NGLKK",
+      "landlordAuthority": "Nigerian Ports Authority (NPA — Regulator, Marine Services & 5% PPP Shareholder)",
+      "operator": "Lekki Port LFTZ Enterprise Limited (LPLEL — 45-year BOOT concessionaire: CHEC/Tolaram 75%, Lagos State Govt 20%, NPA 5%); Container terminal operated by Lekki Freeport Terminal (CMA Terminals)",
+      "terminalOperators": [
+        "Lekki Port LFTZ Enterprise Limited (LPLEL) — Master 45-year Build-Own-Operate-Transfer (BOOT) concessionaire",
+        "Lekki Freeport Terminal (LFT, a CMA CGM / CMA Terminals subsidiary) — Automated container terminal sub-concessionaire",
+        "Nigerian Ports Authority (NPA) — Statutory harbour master, marine pilotage, towage, and port security authority"
+      ],
+      "role": "Deep-sea container, transshipment & multipurpose port (16.5 m channel draft)",
+      "cargoTypes": [
+        "Deep-sea containers & regional transshipment",
+        "Dry bulk cargo (planned/phased berths)",
+        "Liquid bulk cargo (planned/phased berths)"
+      ],
+      "waterway": "Open Atlantic Coast, Bight of Benin (protected by 1.9 km main breakwater)",
+      "establishedNote": "45-year BOOT concession signed 12 December 2018; construction completed late 2022; commercial operations commenced 1 April 2023",
+      "operationsSummary": "Located inside the Lagos Free Zone in Ibeju-Lekki LGA roughly 65 kilometres east of central Lagos, Lekki Deep Sea Port is Nigeria's first operational deep-sea port. Developed under a 45-year Build, Own, Operate, and Transfer (BOOT) public-private partnership among private sponsors China Harbour Engineering Company and Tolaram Group (75%), the Lagos State Government (20%), and the Nigerian Ports Authority (5%), it commenced commercial operations in April 2023. With a 16.5-metre dredged depth and Ship-to-Shore Super Post-Panamax cranes, it handles large container mainline vessels and West African transshipment traffic that cannot enter shallower river or lagoon ports.",
+      "keyFacilities": [
+        "16.5-metre navigation channel and turning basin engineered for large mainline container vessels (14,000+ TEU class)",
+        "Phase 1 container quay (680 m initial quay wall with Ship-to-Shore cranes and automated gate/scanner systems operated by Lekki Freeport Terminal)",
+        "Direct integration with the Lagos Free Zone industrial cluster in Ibeju-Lekki and barge connections back to Lagos Lagoon terminals",
+        "Statutory marine pilotage and towage services provided by the Nigerian Ports Authority"
+      ],
+      "relatedAirportSlugs": [
+        "lagos-murtala-muhammed"
+      ],
+      "relatedOilGasSlugs": [
+        "dangote-refinery"
+      ],
+      "website": "https://lekkiport.com/",
+      "sources": [
+        {
+          "label": "Nigerian Ports Authority — Official Lekki Deep Sea Port PPP Profile",
+          "url": "https://nigerianports.gov.ng/lekki/",
+          "kind": "primary"
+        },
+        {
+          "label": "Lekki Port LFTZ Enterprise Limited — Official Port Website",
+          "url": "https://lekkiport.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG LKK (Ibeju - Lekki, Function 1-3)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Lekki Deep Sea Port (`NGLKK`) is a public commercial multipurpose port and is distinct from the captive offshore Single Point Mooring (SPM) crude and product marine terminals operated nearby in Ibeju-Lekki by Dangote Petroleum Refinery."
+    },
+    {
+      "slug": "onne-port",
+      "name": "Onne Port Complex",
+      "alternateNames": [
+        "Onne Port",
+        "Federal Ocean Terminal",
+        "FOT Onne",
+        "Federal Lighter Terminal",
+        "FLT Onne",
+        "WACT Onne",
+        "Onne Oil and Gas Free Zone",
+        "NG ONN"
+      ],
+      "city": "Onne",
+      "locality": "Onne Oil and Gas Free Zone, Ogu Creek / Bonny River Estuary",
+      "stateSlug": "rivers",
+      "stateName": "Rivers",
+      "lgaSlug": "eleme",
+      "lgaName": "Eleme",
+      "postalHref": "/codes/postal/rivers",
+      "postalLabel": "Rivers State — 500001",
+      "category": "commercial-seaport",
+      "npaZone": "Eastern Ports",
+      "unLocode": "NGONN",
+      "landlordAuthority": "Nigerian Ports Authority (NPA — Bonny / Port Harcourt Pilotage District)",
+      "operator": "NPA (Landlord); concessioned terminals operated by West Africa Container Terminal (WACT / APM Terminals), INTELS Nigeria Ltd, Brawal Oil Services Ltd, and Atlas Cement Co. Ltd",
+      "terminalOperators": [
+        "West Africa Container Terminal Nigeria Ltd (WACT, APM Terminals) — Federal Ocean Terminal (FOT) container terminal, eastern Nigeria's largest container gateway",
+        "INTELS Nigeria Ltd — FOT & FLT oil-and-gas logistics, offshore supply vessel & general-cargo berths",
+        "Brawal Oil Services Ltd — Federal Lighter Terminal (FLT Terminal A) offshore support & multipurpose berths",
+        "Atlas Cement Company Ltd — FOT bulk cement jetty"
+      ],
+      "role": "Eastern Nigeria container gateway & offshore oil-and-gas Free Zone logistics hub",
+      "cargoTypes": [
+        "Containerised imports & agricultural/industrial exports",
+        "Offshore oil & gas subsea equipment, drill pipes & project cargo",
+        "Dry bulk & break-bulk cargo",
+        "Liquid bulk & offshore supply vessel support"
+      ],
+      "waterway": "Ogu Creek off the Bonny River Estuary, Gulf of Guinea",
+      "establishedNote": "Federal Lighter Terminal (FLT) developed late 1970s/early 1980s followed by Federal Ocean Terminal (FOT); designated Oil and Gas Free Zone and concessioned under NPA landlord model in 2006",
+      "operationsSummary": "Spanning more than 2,538 hectares across Eleme, Ogu/Bolo, and Bonny corridors in Rivers State along Ogu Creek off the Bonny River estuary, Onne Port Complex is Nigeria's largest oil-and-gas free-zone logistics port and the primary container gateway outside Lagos. Administered by the Nigerian Ports Authority as landlord, the complex comprises two major facilities — the deeper-draft Federal Ocean Terminal (FOT) and the Federal Lighter Terminal (FLT) — serving deepwater exploration supply vessels across the Gulf of Guinea alongside mainline container ships calling at West Africa Container Terminal (WACT) for South-South, South-East, and North-Central markets.",
+      "keyFacilities": [
+        "Federal Ocean Terminal (FOT) — deep-draft multipurpose and container berths hosting West Africa Container Terminal (WACT) and INTELS offshore logistics bases",
+        "Federal Lighter Terminal (FLT) — multi-berth supply-vessel and lighterage terminal supporting Niger Delta and deepwater Gulf of Guinea oilfields",
+        "Co-location within the Onne Oil and Gas Free Zone, enabling duty-free staging, pipe-coating, subsea fabrication, and regional re-export",
+        "Road haulage links to the East–West Road and Port Harcourt–Aba–Enugu trade corridor"
+      ],
+      "relatedAirportSlugs": [
+        "port-harcourt-international"
+      ],
+      "relatedOilGasSlugs": [
+        "nnpc-limited",
+        "shell-nigeria",
+        "totalenergies-nigeria",
+        "exxonmobil-nigeria",
+        "eni-nigeria",
+        "first-ep",
+        "ardova"
+      ],
+      "website": "https://nigerianports.gov.ng/onne/",
+      "sources": [
+        {
+          "label": "Nigerian Ports Authority — Official Onne Port Complex Profile",
+          "url": "https://nigerianports.gov.ng/onne/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Ports Authority — Eastern Ports Terminal Concessionaires",
+          "url": "https://nigerianports.gov.ng/terminals/",
+          "kind": "primary"
+        },
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG ONN (Onne, Rivers State)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Onne (`NGONN`) is an independent NPA port complex ~25 km southeast of central Port Harcourt and distinct from Rivers Port Complex (`NGPHC`) at Port Harcourt Quays."
+    },
+    {
+      "slug": "rivers-port-port-harcourt",
+      "name": "Rivers Port Complex (Port of Port Harcourt)",
+      "alternateNames": [
+        "Rivers Port",
+        "Port Harcourt Port",
+        "Port of Port Harcourt",
+        "PH Port",
+        "Okrika Jetty",
+        "Abonnema Wharf",
+        "NG PHC",
+        "NGOKR"
+      ],
+      "city": "Port Harcourt",
+      "locality": "Basket House / Harbour Road, Old GRA Waterfront",
+      "stateSlug": "rivers",
+      "stateName": "Rivers",
+      "lgaSlug": "port-harcourt",
+      "lgaName": "Port Harcourt",
+      "postalHref": "/codes/postal/rivers/port-harcourt",
+      "postalLabel": "Port Harcourt — 500001",
+      "category": "commercial-seaport",
+      "npaZone": "Eastern Ports",
+      "unLocode": "NGPHC",
+      "subPortCodes": [
+        "NGOKR (Okrika refined petroleum jetty)"
+      ],
+      "landlordAuthority": "Nigerian Ports Authority (NPA — Bonny / Port Harcourt Pilotage District)",
+      "operator": "NPA (Landlord); concessioned main-quay terminals operated by Ports & Terminal Operators Nigeria Ltd (PTOL) and BUA Ports & Terminals Ltd",
+      "terminalOperators": [
+        "Ports & Terminal Operators Nigeria Ltd (PTOL) — Terminal A, liquid bulk, dry bulk & break bulk (Berths 1–4, commenced June 2006)",
+        "BUA Ports & Terminals Ltd — Terminal B, liquid bulk, dry bulk & break bulk (Berths 5–8, commenced July 2006)",
+        "Satellite jetty oversight — Okrika Refined Petroleum Oil Jetty (`NGOKR`), Kidney Island, Abonnema Wharf & Macobar jetties"
+      ],
+      "role": "Dry bulk, liquid bulk, break bulk & satellite petroleum-jetty mother port",
+      "cargoTypes": [
+        "Dry bulk (wheat, sugar, gypsum, salt, bulk grains)",
+        "Liquid bulk & refined petroleum products",
+        "Break bulk, frozen fish & general merchandise"
+      ],
+      "waterway": "Bonny River (66 km upstream from Bonny Fairway Buoy), Gulf of Guinea",
+      "establishedNote": "Opened 1913 originally to export Enugu coal via the Eastern Railway Line; concessioned to private terminal operators in June–July 2006",
+      "operationsSummary": "Opened in 1913 alongside the Eastern Railway Line to ship coal from Enugu to the sea, Rivers Port Complex in Port Harcourt is Nigeria's second-oldest commercial seaport. Located roughly 66 kilometres upstream from the Bonny Fairway Buoy with a 1,259-metre main quay capable of berthing eight ocean-going vessels simultaneously, the port operates under the Nigerian Ports Authority landlord model with two concessioned terminal operators — PTOL (Terminal A) and BUA Ports & Terminals (Terminal B) — while acting as the pilotage and towage mother port for surrounding satellite facilities including the Okrika Refined Petroleum Oil Jetty serving the Port Harcourt Refining Complex.",
+      "keyFacilities": [
+        "1,259-metre main Port Harcourt quay divided into Terminal A (Berths 1–4, PTOL) and Terminal B (Berths 5–8, BUA Ports & Terminals)",
+        "Port-side industrial bulk storage, transit sheds, dockyard engineering base, and Port Harcourt–Aba narrow/standard-gauge rail corridor connection",
+        "Mother-port pilotage and marine jurisdiction over Okrika Refined Petroleum Oil Jetty (`NGOKR`) and surrounding Bonny River industrial jetties",
+        "Channel navigation and capital/maintenance dredging supported via the Bonny Channel Company (BCC) joint venture"
+      ],
+      "relatedAirportSlugs": [
+        "port-harcourt-international"
+      ],
+      "relatedOilGasSlugs": [
+        "nnpc-limited",
+        "conoil"
+      ],
+      "website": "https://nigerianports.gov.ng/rivers/",
+      "sources": [
+        {
+          "label": "Nigerian Ports Authority — Official Rivers Port Complex Profile",
+          "url": "https://nigerianports.gov.ng/rivers/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Ports Authority — Eastern Ports Terminal Operators (Rivers Port)",
+          "url": "https://nigerianports.gov.ng/terminals/",
+          "kind": "primary"
+        },
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG PHC (Port Harcourt) & NG OKR (Okrika)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "In IATA/UN coding, `PHC` (`NGPHC`) identifies Port Harcourt across both maritime shipping and aviation (`/airports/port-harcourt-international`)."
+    },
+    {
+      "slug": "delta-warri-port",
+      "name": "Delta Ports Complex (Warri, Koko, Sapele & Burutu)",
+      "alternateNames": [
+        "Delta Ports",
+        "Warri Port",
+        "Port of Warri",
+        "Koko Port",
+        "Sapele Port",
+        "Burutu Port",
+        "NG WAR",
+        "NGKOK",
+        "NGSPL",
+        "NGBUR"
+      ],
+      "city": "Warri",
+      "locality": "Warri River Harbour (plus Koko on Benin River, Sapele on Ethiope/Benin River & Burutu Island)",
+      "stateSlug": "delta",
+      "stateName": "Delta",
+      "lgaSlug": "warri-south",
+      "lgaName": "Warri South",
+      "postalHref": "/codes/postal/delta",
+      "postalLabel": "Delta State — 320001",
+      "category": "commercial-seaport",
+      "npaZone": "Eastern Ports",
+      "unLocode": "NGWAR",
+      "subPortCodes": [
+        "NGKOK (Koko Port)",
+        "NGSPL (Sapele Port)",
+        "NGBUR (Burutu Port)"
+      ],
+      "landlordAuthority": "Nigerian Ports Authority (NPA — Warri / Delta Pilotage District)",
+      "operator": "NPA (Landlord & Sapele/Burutu oversight); concessioned Warri & Koko terminals operated by INTELS Nigeria Ltd, Julius Berger Services Nigeria Ltd, Associated Maritime Services Ltd, and Koko terminal concessionaires",
+      "terminalOperators": [
+        "INTELS Nigeria Ltd — Terminal A (Old Port Warri) & Terminal B (New Port Warri), general & oilfield cargo",
+        "Julius Berger Services Nigeria Ltd — Terminal C (Old Port Canal Berth, Warri), general & project cargo",
+        "Associated Maritime Services Ltd (AMS) — Warri New/Old Port multipurpose berth operations",
+        "Koko Port (`NGKOK`), Sapele Port (`NGSPL`) & Burutu Port (`NGBUR`) — satellite river ports within NPA Delta Ports jurisdiction"
+      ],
+      "role": "Multi-port Niger Delta river harbour complex for general, project, steel & oilfield cargo",
+      "cargoTypes": [
+        "General & break-bulk cargo",
+        "Oilfield, pipeline & project cargo",
+        "Dry & liquid bulk cargo",
+        "Containerised feeder cargo"
+      ],
+      "waterway": "Warri River, Benin River & Forcados River Estuaries (Warri 52 NM / 96 km; Koko 41.5 NM / 77 km from Fairway Buoy)",
+      "establishedNote": "Private colonial merchant ports at Warri and Burutu transferred to NPA in 1969; New Warri Port commissioned 1979; terminals concessioned in June 2006",
+      "operationsSummary": "Headquartered in Warri, Delta State, the Delta Ports Complex administers a quartet of river-estuary seaports across the western Niger Delta — Warri (Old and New Ports), Koko (`NGKOK`), Sapele (`NGSPL`), and historic island port Burutu (`NGBUR`) — alongside pilotage oversight of industrial jetties such as the Aladja steel jetty and offshore crude terminals at Escravos and Forcados. Positioned with shorter road-haulage distances into Delta, Edo, Anambra (Onitsha/Nnewi), Imo, Kogi, and Benue markets than Lagos ports, Warri serves general merchandise, construction, and oilfield logistics, subject to river-channel draft management along the Escravos bar.",
+      "keyFacilities": [
+        "Old Warri Port & New Warri Port (commissioned 1979) offering 20 combined berths across Old and New quays plus Canal Berth",
+        "Koko Port (`NGKOK`) in Warri North LGA along the Benin River (77 km from Fairway Buoy), adjacent to the Koko export/free-zone corridor",
+        "Sapele Port (`NGSPL`, including Nigerian Navy Engineering/logistics presence) at the confluence of the Ethiope and Jamieson rivers and historic Burutu Island Port (`NGBUR`) in Burutu LGA",
+        "Daytime marine pilotage coordination on VHF Channels 12, 14, and 16 under the NPA Warri Pilotage District"
+      ],
+      "relatedAirportSlugs": [
+        "warri-osubi",
+        "asaba-airport",
+        "benin-airport"
+      ],
+      "relatedOilGasSlugs": [
+        "nnpc-limited",
+        "chevron-nigeria",
+        "renaissance-africa-energy",
+        "seplat-energy",
+        "conoil"
+      ],
+      "website": "https://nigerianports.gov.ng/delta/",
+      "sources": [
+        {
+          "label": "Nigerian Ports Authority — Official Delta Port Complex Profile",
+          "url": "https://nigerianports.gov.ng/delta/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Ports Authority — Warri & Koko Technical Port Profile",
+          "url": "https://nigerianports.gov.ng/delta/port-profile/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Ports Authority — Eastern Ports Terminal Operators (Delta Ports)",
+          "url": "https://nigerianports.gov.ng/terminals/",
+          "kind": "primary"
+        },
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG WAR, NG KOK, NG SPL & NG BUR",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "While Warri (`NGWAR`) handles active commercial and oilfield concessions, satellite ports at Sapele (`NGSPL`) and Burutu (`NGBUR`) have experienced prolonged commercial underuse and remain subjects of federal port-rehabilitation plans."
+    },
+    {
+      "slug": "calabar-port",
+      "name": "Calabar Port Complex",
+      "alternateNames": [
+        "Calabar Port",
+        "Port of Calabar",
+        "Calabar New Port",
+        "Calabar Old Port",
+        "Tinapa / Calabar Free Trade Zone Port",
+        "NG CBQ"
+      ],
+      "city": "Calabar",
+      "locality": "Esuk Utan / Calabar River Waterfront, adjacent to Calabar Free Trade Zone",
+      "stateSlug": "cross-river",
+      "stateName": "Cross River",
+      "lgaSlug": "calabar-municipal",
+      "lgaName": "Calabar Municipal",
+      "postalHref": "/codes/postal/cross-river",
+      "postalLabel": "Cross River State — 540001",
+      "category": "commercial-seaport",
+      "npaZone": "Eastern Ports",
+      "unLocode": "NGCBQ",
+      "landlordAuthority": "Nigerian Ports Authority (NPA — Calabar Pilotage District)",
+      "operator": "NPA (Landlord); concessioned terminals operated by ECM Terminals Ltd (Ecomarine), INTELS Nigeria Ltd, and Shoreline Logistics Nigeria Ltd",
+      "terminalOperators": [
+        "ECM Terminals Ltd (Ecomarine) — New Port Terminal B, dry bulk, break bulk, general cargo & containers",
+        "INTELS Nigeria Ltd — New Port Terminal A, offshore oil-and-gas logistics & general cargo",
+        "Shoreline Logistics Nigeria Ltd — Old Port Calabar multipurpose & coastal support terminal"
+      ],
+      "role": "Eastern corridor river-estuary seaport serving Cross River, South-East & North-East hinterlands",
+      "cargoTypes": [
+        "Dry bulk (wheat, cement clinker, aggregates)",
+        "General & break-bulk cargo",
+        "Oil & gas offshore support cargo",
+        "Refined petroleum jetties & containerised feeder cargo"
+      ],
+      "waterway": "Calabar River Estuary (~45 nautical miles / 83 km upstream from Fairway Buoy), Bight of Bonny",
+      "establishedNote": "Pre-colonial & colonial merchant harbour vested in NPA in December 1969; modern New Port commissioned 9 June 1979; concessioned in 2006–2007",
+      "operationsSummary": "Serving historically since pre-colonial times as a maritime outlet for eastern Nigeria and the Benue–North-East corridor, Calabar Port was transferred from private merchant shipping lines to the Nigerian Ports Authority in December 1969 and expanded with the commissioning of the modern New Port on 9 June 1979 adjacent to what is now the Calabar Free Trade Zone. Lying roughly 45 nautical miles (83 kilometres) upstream along the Calabar River from the Fairway Buoy, the complex comprises the Old Port, New Port, and Dockyard across three concessioned terminals (ECM Terminals, INTELS, and Shoreline Logistics), while exercising pilotage jurisdiction over private tank-farm jetties and offshore crude terminals including Qua Iboe, Antan, Odudu, and Yoho.",
+      "keyFacilities": [
+        "New Port Calabar (Terminals A & B operated by INTELS Nigeria Ltd and ECM Terminals Ltd) directly serving the Calabar Free Trade Zone industrial cluster",
+        "Old Port Calabar (operated by Shoreline Logistics) and NPA Calabar Dockyard marine engineering section",
+        "Calabar Pilotage District oversight covering private petroleum/industrial jetties (NNPC, NIWA, Dozzy, Northwest, ALSCON) and offshore crude export moorings",
+        "Direct highway corridor north via the Calabar–Ikom–Ogoja–Katsina-Ala–Maiduguri trunk route toward North-Central and North-East Nigeria"
+      ],
+      "relatedAirportSlugs": [
+        "calabar-margaret-ekpo",
+        "uyo-victor-attah"
+      ],
+      "website": "https://nigerianports.gov.ng/calabar/",
+      "sources": [
+        {
+          "label": "Nigerian Ports Authority — Official Calabar Port Complex Profile",
+          "url": "https://nigerianports.gov.ng/calabar/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Ports Authority — Eastern Ports Terminal Operators (Calabar)",
+          "url": "https://nigerianports.gov.ng/terminals/",
+          "kind": "primary"
+        },
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG CBQ (Calabar)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Like Port Harcourt (`PHC`), Calabar shares the 3-letter identifier `CBQ` across both its UN/LOCODE (`NGCBQ`) and Margaret Ekpo International Airport (`/airports/calabar-margaret-ekpo`)."
+    },
+    {
+      "slug": "bonny-island-terminal",
+      "name": "Bonny Island Oil & LNG Marine Terminal",
+      "alternateNames": [
+        "Bonny Terminal",
+        "Port of Bonny",
+        "Bonny Offshore Terminal",
+        "Bonny Inshore Terminal",
+        "NLNG Bonny Marine Terminal",
+        "Finima LNG Terminal",
+        "NG BON"
+      ],
+      "city": "Bonny",
+      "locality": "Bonny Island & Finima, mouth of the Bonny River",
+      "stateSlug": "rivers",
+      "stateName": "Rivers",
+      "lgaSlug": "bonny",
+      "lgaName": "Bonny",
+      "postalHref": "/codes/postal/rivers",
+      "postalLabel": "Rivers State — 500001",
+      "category": "energy-terminal",
+      "npaZone": "Eastern Ports",
+      "unLocode": "NGBON",
+      "landlordAuthority": "Nigerian Ports Authority (Bonny / Port Harcourt Pilotage District) with NUPRC & NMDPRA hydrocarbon oversight",
+      "operator": "Crude terminal: Renaissance Africa Energy Company Ltd (formerly SPDC, operator of NNPC/Renaissance JV); LNG/NGL marine jetties: Nigeria LNG Limited (NLNG)",
+      "terminalOperators": [
+        "Renaissance Africa Energy Company Ltd — Bonny Oil and Gas Terminal (onshore tank farm & offshore Single Buoy Mooring crude export loading, transferred from SPDC in March 2025)",
+        "Nigeria LNG Limited (NLNG) — Finima 6-train liquefaction marine export jetties (LNG, NGL/condensate & domestic coastal LPG carriers; Train 7 expansion underway)",
+        "Nigerian Ports Authority & Bonny Channel Company — Statutory pilotage, towage & Bonny River channel navigation"
+      ],
+      "role": "Strategic Bonny Light crude oil & liquefied natural gas (LNG / NGL / LPG) export terminal",
+      "cargoTypes": [
+        "Liquefied Natural Gas (LNG)",
+        "Bonny Light crude oil",
+        "Natural gas liquids (NGL), condensate & coastal LPG"
+      ],
+      "waterway": "Mouth of the Bonny River / Bight of Bonny, Atlantic Coast",
+      "establishedNote": "Bonny crude export terminal commissioned 1961; Nigeria LNG first export cargo shipped October 1999; SPDC crude terminal operatorship transferred to Renaissance in March 2025",
+      "operationsSummary": "Positioned at the Atlantic mouth of the Bonny River in Bonny LGA, Rivers State, Bonny Island hosts Nigeria's single most strategic hydrocarbon maritime export cluster. It combines the historic Bonny Oil and Gas Terminal — exporting benchmark Bonny Light crude via offshore Single Buoy Moorings under Renaissance Africa Energy Company Limited (following the March 2025 SPDC acquisition) — with Nigeria LNG Limited's Finima marine export jetties, which load specialized LNG carriers and coastal domestic LPG vessels from a six-train liquefaction complex (22 MTPA LNG capacity, with Train 7 expanding capacity further) within the Nigerian Ports Authority's Bonny Pilotage District.",
+      "keyFacilities": [
+        "Bonny Oil and Gas Terminal onshore storage tank farm and offshore Single Buoy Mooring (SBM) crude-tanker loading buoys",
+        "Nigeria LNG (NLNG) dedicated marine export jetties at Finima serving Bonny Gas Transport (BGT) and international LNG/LPG tankers",
+        "Deep-draft Bonny Approach Channel maintained by Bonny Channel Company (NPA joint venture) serving Bonny, Onne, and Port Harcourt shipping",
+        "Material offloading jetties supporting NLNG Train 7 construction and Bonny Island industrial logistics"
+      ],
+      "relatedAirportSlugs": [
+        "port-harcourt-international"
+      ],
+      "relatedOilGasSlugs": [
+        "nigeria-lng",
+        "renaissance-africa-energy",
+        "nnpc-limited",
+        "shell-nigeria",
+        "totalenergies-nigeria",
+        "eni-nigeria"
+      ],
+      "website": "https://www.nlng.com/",
+      "sources": [
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG BON (Bonny, Function 1 Seaport)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigeria LNG Limited — Official Bonny Island Plant & Marine Operations",
+          "url": "https://www.nlng.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "Shell plc — Completion of SPDC (including Bonny Terminal) Sale to Renaissance (March 2025)",
+          "url": "https://www.shell.com/news-and-insights/newsroom/news-and-media-releases/2025/shell-completes-sale-of-spdc/spdc-sale.html",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Ports Authority — Rivers / Bonny Pilotage District Overview",
+          "url": "https://nigerianports.gov.ng/rivers/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Bonny (`NGBON`) is a restricted ISPS-certified hydrocarbon and LNG export marine terminal, not a public walk-in container or general-merchandise quay; containerised cargo in Rivers State discharges at Onne (`NGONN`) or Port Harcourt (`NGPHC`)."
+    },
+    {
+      "slug": "qua-iboe-terminal",
+      "name": "Qua Iboe Terminal (QIT, Ibeno)",
+      "alternateNames": [
+        "Qua Iboe Terminal",
+        "QIT",
+        "QIT Ibeno",
+        "Eket Terminal",
+        "Que Oboe Terminal",
+        "Mobil Terminal Ibeno",
+        "SEPNU Qua Iboe",
+        "NG OBO"
+      ],
+      "city": "Ibeno / Eket",
+      "locality": "Qua Iboe River Mouth, Ibeno Atlantic Coastline",
+      "stateSlug": "akwa-ibom",
+      "stateName": "Akwa Ibom",
+      "lgaSlug": "ibeno",
+      "lgaName": "Ibeno",
+      "postalHref": "/codes/postal/akwa-ibom",
+      "postalLabel": "Akwa Ibom State — 520001",
+      "category": "energy-terminal",
+      "npaZone": "Eastern Ports",
+      "unLocode": "NGOBO",
+      "landlordAuthority": "Nigerian Ports Authority (Calabar Pilotage District) with NUPRC & NMDPRA oversight",
+      "operator": "Seplat Energy Producing Nigeria Unlimited (SEPNU, formerly Mobil Producing Nigeria Unlimited — 40% operator) in joint venture with NNPC Limited (60%)",
+      "terminalOperators": [
+        "Seplat Energy Producing Nigeria Unlimited (SEPNU) — Onshore crude treatment/storage complex & offshore Single Point Mooring (SPM) tanker loading buoys (acquired from ExxonMobil in December 2024)"
+      ],
+      "role": "Major Nigerian light sweet crude oil processing, storage & offshore SPM export terminal",
+      "cargoTypes": [
+        "Qua Iboe Light crude oil",
+        "Condensate & associated offshore field streams"
+      ],
+      "waterway": "Atlantic Coast off Ibeno / Bight of Bonny (offshore SPM loading ~20+ miles seaward)",
+      "establishedNote": "Commissioned 1971 by Mobil Producing Nigeria; shallow-water JV operatorship transferred from ExxonMobil to Seplat Energy (SEPNU) on 12 December 2024",
+      "operationsSummary": "Situated on the Atlantic coast at Ibeno near Eket in Akwa Ibom State, Qua Iboe Terminal (QIT) is one of Nigeria's largest crude oil Stabilization, storage, and export facilities, handling the benchmark Qua Iboe Light grade gathered from shallow-water offshore blocks OMLs 67, 68, 70, and 104. Listed in UNECE under `NGOBO` (`NG OBO`) and falling under the marine pilotage jurisdiction of the Nigerian Ports Authority's Calabar Pilotage District, the terminal transitioned operationally on 12 December 2024 when Seplat Energy Plc completed its acquisition of Mobil Producing Nigeria Unlimited from ExxonMobil, renaming the operating subsidiary Seplat Energy Producing Nigeria Unlimited (SEPNU) in joint venture with NNPC Limited.",
+      "keyFacilities": [
+        "Onshore crude oil dehydration, stabilization, and tank-farm storage complex at Ibeno, Akwa Ibom State",
+        "Subsea export pipelines feeding offshore Single Point Mooring (SPM) buoys capable of loading Very Large Crude Carriers (VLCCs)",
+        "Marine support jetty and aviation logistics links via Victor Attah International Airport (`QUO`, Uyo)"
+      ],
+      "relatedAirportSlugs": [
+        "uyo-victor-attah",
+        "calabar-margaret-ekpo"
+      ],
+      "relatedOilGasSlugs": [
+        "seplat-energy",
+        "nnpc-limited",
+        "exxonmobil-nigeria"
+      ],
+      "website": "https://www.seplatenergy.com/",
+      "sources": [
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG OBO (Que Oboe Terminal / Eket, Function 1)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        },
+        {
+          "label": "Seplat Energy Plc — Official Completion of MPNU / Qua Iboe Terminal Acquisition",
+          "url": "https://www.seplatenergy.com/investors/acquisition-of-mpnu/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Ports Authority — Calabar Port Complex Jurisdiction over Qua Iboe Terminal",
+          "url": "https://nigerianports.gov.ng/calabar/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "UNECE spells the location entry `Que Oboe Terminal/Eket` (`NG OBO`). Note that Akwa Ibom's proposed Ibom Deep Sea Port remains a greenfield development project rather than an operational commercial seaport as of lastVerified."
+    },
+    {
+      "slug": "forcados-terminal",
+      "name": "Forcados Marine Oil Terminal",
+      "alternateNames": [
+        "Forcados Terminal",
+        "Port of Forcados",
+        "Forcados Offshore Terminal",
+        "FOT Forcados",
+        "NG FOR"
+      ],
+      "city": "Forcados / Burutu",
+      "locality": "South Point Forcados, Forcados River Estuary",
+      "stateSlug": "delta",
+      "stateName": "Delta",
+      "lgaSlug": "burutu",
+      "lgaName": "Burutu",
+      "postalHref": "/codes/postal/delta",
+      "postalLabel": "Delta State — 320001",
+      "category": "energy-terminal",
+      "npaZone": "Eastern Ports",
+      "unLocode": "NGFOR",
+      "landlordAuthority": "Nigerian Ports Authority (Warri / Delta Pilotage District) with NUPRC & NMDPRA oversight",
+      "operator": "Renaissance Africa Energy Company Ltd (formerly SPDC — 30% operator) in joint venture with NNPC Limited (55%) and JV partners",
+      "terminalOperators": [
+        "Renaissance Africa Energy Company Ltd — Onshore crude oil dehydration/storage tank farm & offshore Single Buoy Mooring export system (transferred from SPDC on 13 March 2025)"
+      ],
+      "role": "Major western Niger Delta crude oil dehydration, storage & offshore tanker export terminal",
+      "cargoTypes": [
+        "Forcados Blend crude oil"
+      ],
+      "waterway": "Forcados River Estuary & Offshore Bight of Benin",
+      "establishedNote": "Commissioned 1971 in western Delta; operatorship transferred from Shell's SPDC to Renaissance Africa Energy Company Limited on 13 March 2025",
+      "operationsSummary": "Located near the mouth of the Forcados River in Burutu LGA, Delta State, the Forcados Oil Terminal (`NGFOR`) is the primary maritime export gateway for crude oil produced across onshore and swamp fields in the western Niger Delta via the Trans-Forcados Pipeline network. Administered for marine pilotage under the Nigerian Ports Authority's Delta Ports / Warri Pilotage District, the onshore storage complex pumps stabilized Forcados Blend crude to offshore Single Buoy Mooring loading points for ocean-going tankers. Operational leadership moved from SPDC to Nigerian-led Renaissance Africa Energy Company Limited upon completion of the SPDC divestment in March 2025.",
+      "keyFacilities": [
+        "Onshore crude oil receiving manifolds, dehydration/stabilization trains, and tank-farm storage at South Point Forcados",
+        "Subsea export pipelines connected to offshore Single Buoy Mooring (SBM) loading points in deep water",
+        "Evacuation hub for multiple western Niger Delta producers injecting into the Trans-Forcados trunkline system"
+      ],
+      "relatedAirportSlugs": [
+        "warri-osubi"
+      ],
+      "relatedOilGasSlugs": [
+        "renaissance-africa-energy",
+        "nnpc-limited",
+        "seplat-energy",
+        "heirs-energies"
+      ],
+      "website": "https://renaissanceafrica.com/",
+      "sources": [
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG FOR (Forcados, Function 1 Seaport)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        },
+        {
+          "label": "Shell plc — Completion of SPDC (including Forcados Terminal) Sale to Renaissance (March 2025)",
+          "url": "https://www.shell.com/news-and-insights/newsroom/news-and-media-releases/2025/shell-completes-sale-of-spdc/spdc-sale.html",
+          "kind": "primary"
+        },
+        {
+          "label": "NCDMB — Official Release on Renaissance Energy Post-SPDC Operations",
+          "url": "https://ncdmb.gov.ng/ncdmb-renaissance-energy-commit-to-collaboration-local-content-development/",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Renaissance Africa Energy Company Settlor Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Dedicated hydrocarbon export facility (`NGFOR`); general cargo and dry-bulk vessels in Delta State call at Warri (`NGWAR`) or Koko (`NGKOK`)."
+    },
+    {
+      "slug": "escravos-terminal",
+      "name": "Escravos Marine Terminal",
+      "alternateNames": [
+        "Escravos Terminal",
+        "Port of Escravos",
+        "Chevron Escravos Terminal",
+        "EGTL Marine Terminal",
+        "Escravos Gas-to-Liquids",
+        "NG ESC"
+      ],
+      "city": "Escravos",
+      "locality": "Mouth of the Escravos River, Ugborodo / Ogidigben Axis",
+      "stateSlug": "delta",
+      "stateName": "Delta",
+      "lgaSlug": "warri-south-west",
+      "lgaName": "Warri South West",
+      "postalHref": "/codes/postal/delta",
+      "postalLabel": "Delta State — 320001",
+      "category": "energy-terminal",
+      "npaZone": "Eastern Ports",
+      "unLocode": "NGESC",
+      "landlordAuthority": "Nigerian Ports Authority (Warri / Delta Pilotage District) with NUPRC & NMDPRA oversight",
+      "operator": "Chevron Nigeria Limited (CNL — 40% operator) in joint venture with NNPC Limited (60%)",
+      "terminalOperators": [
+        "Chevron Nigeria Limited (NNPC / CNL Joint Venture) — Escravos crude oil tank farm, offshore SPM buoys, Escravos Gas Plant (EGP) LPG FSO & Escravos Gas-to-Liquids (EGTL) product export facilities"
+      ],
+      "role": "Crude oil, LPG & synthetic Gas-to-Liquids (EGTL) maritime export hub",
+      "cargoTypes": [
+        "Escravos Light crude oil",
+        "Liquefied Petroleum Gas (LPG) & condensate",
+        "Synthetic GTL diesel & naphtha (EGTL)"
+      ],
+      "waterway": "Escravos River Mouth & Offshore Bight of Benin",
+      "establishedNote": "Crude export operations commenced late 1960s under Gulf Oil (now Chevron); Escravos Gas Plant & EGTL commissioned subsequently",
+      "operationsSummary": "Situated at the Atlantic mouth of the Escravos River in Warri South West LGA, Delta State, Escravos Marine Terminal (`NGESC`) is the flagship operational complex of the NNPC Limited (60%) and Chevron Nigeria Limited (40%) joint venture. Within the Nigerian Ports Authority's Warri/Delta pilotage corridor, Escravos integrates onshore crude oil storage and offshore Single Point Mooring tanker loading for Escravos Light crude with the Escravos Gas Plant (EGP), the Escravos Gas-to-Liquids (EGTL) synthetic fuels export plant, and onshore compression feeding both the domestic Escravos–Lagos Pipeline System and the West African Gas Pipeline.",
+      "keyFacilities": [
+        "Onshore Escravos crude oil storage complex and subsea pipelines serving offshore Single Point Mooring (SPM) export buoys",
+        "Escravos Gas-to-Liquids (EGTL) facility and Escravos Gas Plant (EGP) supporting marine export of synthetic diesel, naphtha, and LPG/condensate",
+        "Logistics marine dock and airstrip supporting western Niger Delta swamp and shallow-water operations"
+      ],
+      "relatedAirportSlugs": [
+        "warri-osubi",
+        "lagos-murtala-muhammed"
+      ],
+      "relatedOilGasSlugs": [
+        "chevron-nigeria",
+        "nnpc-limited"
+      ],
+      "website": "https://www.chevron.com/worldwide/nigeria",
+      "sources": [
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG ESC (Escravos, Function 1 Seaport)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        },
+        {
+          "label": "Chevron — Official Nigeria Operations (Escravos Terminal, EGP & EGTL)",
+          "url": "https://www.chevron.com/worldwide/nigeria",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigerian Ports Authority — Delta Port Complex & EGTL Export Note",
+          "url": "https://nigerianports.gov.ng/delta/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Restricted ISPS hydrocarbon and gas-processing marine terminal (`NGESC`); general commercial shipping in the same estuary transits the Escravos bar upstream to Warri (`NGWAR`)."
+    },
+    {
+      "slug": "brass-oil-terminal",
+      "name": "Brass Marine Oil Terminal",
+      "alternateNames": [
+        "Brass Terminal",
+        "Brass River Terminal",
+        "Port of Brass",
+        "NAOC Brass Terminal",
+        "Oando Brass Terminal",
+        "NG BRA"
+      ],
+      "city": "Brass",
+      "locality": "Twon-Brass / Brass Island, Brass River Mouth",
+      "stateSlug": "bayelsa",
+      "stateName": "Bayelsa",
+      "lgaSlug": "brass",
+      "lgaName": "Brass",
+      "postalHref": "/codes/postal/bayelsa",
+      "postalLabel": "Bayelsa State — 560001",
+      "category": "energy-terminal",
+      "npaZone": "Eastern Ports",
+      "unLocode": "NGBRA",
+      "landlordAuthority": "Nigerian Ports Authority (Eastern Ports Pilotage Zone) with NUPRC & NMDPRA oversight",
+      "operator": "Oando Energy Resources (formerly Nigerian Agip Oil Company — 40% JV operator) in joint venture with NNPC Limited (60%)",
+      "terminalOperators": [
+        "Oando Energy Resources Nigeria Ltd (acquired NAOC from Eni in August 2024) — Onshore Brass crude oil tank farm & offshore Single Buoy Mooring export loading"
+      ],
+      "role": "Central Niger Delta Brass River crude oil storage & offshore export terminal",
+      "cargoTypes": [
+        "Brass River Light crude oil"
+      ],
+      "waterway": "Mouth of the Brass River, Central Niger Delta Atlantic Coast",
+      "establishedNote": "Commissioned 1973 by Nigerian Agip Oil Company (NAOC); operatorship acquired by Oando Plc on 22 August 2024",
+      "operationsSummary": "Located at Twon-Brass on Brass Island at the mouth of the Brass River in Bayelsa State, the Brass Marine Oil Terminal (`NGBRA`) is the principal maritime export terminal in Bayelsa State, evacuating light sweet Brass River crude gathered from onshore and swamp blocks OMLs 60, 61, 62, and 63 across Bayelsa, Rivers, Delta, and Imo States. Originally developed by Eni's onshore subsidiary Nigerian Agip Oil Company (NAOC) and carrying official UNECE seaport code `NGBRA`, the terminal came under indigenous operatorship on 22 August 2024 when Oando Plc completed its acquisition of NAOC alongside majority JV partner NNPC Limited.",
+      "keyFacilities": [
+        "Onshore crude oil stabilization and storage tank farm on Brass Island, Brass LGA, Bayelsa State",
+        "Subsea pipelines feeding offshore Single Buoy Mooring (SBM) export loading points in the Gulf of Guinea",
+        "Coastal marine logistics jetty supporting central Niger Delta swamp and island operations"
+      ],
+      "relatedAirportSlugs": [
+        "port-harcourt-international"
+      ],
+      "relatedOilGasSlugs": [
+        "oando",
+        "nnpc-limited",
+        "eni-nigeria",
+        "aradel-holdings"
+      ],
+      "website": "https://www.oandoplc.com/",
+      "sources": [
+        {
+          "label": "UNECE UN/LOCODE Nigeria — NG BRA (Brass, Function 1 Seaport)",
+          "url": "https://service.unece.org/trade/locode/ng.htm",
+          "kind": "primary"
+        },
+        {
+          "label": "Oando Plc — Official Corporate Operations & NAOC Acquisition",
+          "url": "https://www.oandoplc.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "Eni S.p.A. — Nigeria Portfolio & August 2024 NAOC / Brass Terminal Sale Confirmation",
+          "url": "https://www.eni.com/en-IT/actions/global-activities/nigeria.html",
+          "kind": "primary"
+        },
+        {
+          "label": "NUPRC HostComply — Oando Energy Resources Settlor Record",
+          "url": "https://hostcomply.nuprc.gov.ng/settlor",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Brass (`NGBRA`) operates as an active crude export terminal; separate greenfield proposals on Brass Island (such as Brass LNG or Brass Fertilizer marine facilities) are not counted as commercial general-cargo ports."
+    }
+  ]
+}

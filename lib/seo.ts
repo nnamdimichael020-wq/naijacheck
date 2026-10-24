@@ -121,6 +121,7 @@ const SECTION_LABELS: Record<string, { label: string; path: string }> = {
   airports: { label: "Airports in Nigeria", path: "/airports" },
   airlines: { label: "Airlines in Nigeria", path: "/airlines" },
   "oil-gas": { label: "Oil & Gas Operators", path: "/oil-gas" },
+  ports: { label: "Seaports in Nigeria", path: "/ports" },
 };
 
 export function breadcrumbSchema(path: string, leaf: string) {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  Anchor,
   Banknote,
   BarChart3,
   Calculator,
@@ -18,6 +19,7 @@ import { getAirportsStats } from "@/lib/airports";
 import { getAirlinesStats } from "@/lib/airlines";
 import { getAllBanks } from "@/lib/banks";
 import { getOilGasStats } from "@/lib/oil-gas";
+import { getPortsStats } from "@/lib/ports";
 import { getAllPostalStates, postalPlaceCount } from "@/lib/postal";
 import { lgaCounts } from "@/lib/lgas";
 import { GOV_DOCS } from "@/lib/data";
@@ -37,6 +39,7 @@ function buildTiles(): Tile[] {
   const airportStats = getAirportsStats();
   const airlineStats = getAirlinesStats();
   const oilGasStats = getOilGasStats();
+  const portStats = getPortsStats();
   const postalStates = getAllPostalStates();
   const postalPlaces = postalPlaceCount();
   const { lgas, states } = lgaCounts();
@@ -99,6 +102,13 @@ function buildTiles(): Tile[] {
       promise: "NNPC, IOCs, NLNG, Dangote Refinery & major independents",
       Icon: Flame,
       badge: oilGasStats.total ? `${oilGasStats.total} operators · cited` : undefined,
+    },
+    {
+      href: "/ports",
+      label: "Seaports in Nigeria",
+      promise: "Apapa, Tin Can, Lekki, Onne & major marine UN/LOCODEs",
+      Icon: Anchor,
+      badge: portStats.total ? `${portStats.total} ports · UN/LOCODE` : undefined,
     },
     {
       href: "/howto",

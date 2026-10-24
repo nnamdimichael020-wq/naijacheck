@@ -22,6 +22,7 @@ import {
   airlineStatusShortLabel,
   getAirlinesByHubAirportSlug,
 } from "@/lib/airlines";
+import { getPortsForAirport, portCategoryShortLabel } from "@/lib/ports";
 
 export const dynamicParams = false;
 
@@ -130,6 +131,7 @@ export default async function AirportDetailPage({ params }: { params: Promise<{ 
   const typeLabel = airportTypeLabel(airport.type);
   const stateSiblings = getAirportsByState(airport.stateSlug).filter((a) => a.slug !== airport.slug);
   const hubAirlines = getAirlinesByHubAirportSlug(airport.slug);
+  const corridorPorts = getPortsForAirport(airport.slug);
   const related = peerAirports(airport);
   const faqs = buildAirportFaqs(airport);
 
@@ -347,6 +349,41 @@ export default async function AirportDetailPage({ params }: { params: Promise<{ 
                 <span className="shrink-0 rounded border bg-secondary/40 px-2 py-0.5 font-mono text-xs font-bold">
                   {airlineCodeSummary(airline)}
                 </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {corridorPorts.length > 0 ? (
+        <section aria-labelledby="corridor-ports-h" className="space-y-3 rounded-xl border bg-card/40 p-4 text-sm">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h2 id="corridor-ports-h" className="text-lg font-bold">
+              Seaports &amp; marine terminals in the {airport.city} corridor
+            </h2>
+            <Link href="/ports" className="text-xs font-semibold text-primary underline-offset-2 hover:underline">
+              All 12 Nigerian ports →
+            </Link>
+          </div>
+          <div className="grid gap-2.5 sm:grid-cols-2">
+            {corridorPorts.map((port) => (
+              <Link
+                key={port.slug}
+                href={`/ports/${port.slug}`}
+                className="flex items-center justify-between gap-2 rounded-lg border bg-background p-3 transition-colors hover:border-primary/60"
+              >
+                <div>
+                  <p className="font-bold text-foreground">{port.name}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {port.city ? `${port.city}, ` : ""}
+                    {port.stateName} · {portCategoryShortLabel(port.category)}
+                  </p>
+                </div>
+                {port.unLocode ? (
+                  <span className="shrink-0 rounded border bg-secondary/40 px-2 py-0.5 font-mono text-xs font-bold">
+                    {port.unLocode}
+                  </span>
+                ) : null}
               </Link>
             ))}
           </div>
