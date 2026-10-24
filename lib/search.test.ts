@@ -110,7 +110,7 @@ function check() {
   // Evidence counts
   assert.ok(index.length >= 1000, `index should be ~1054 entries, got ${index.length}`);
   assert.ok(byKind["geo"] >= 800, `geo should be 812 (got ${byKind["geo"]})`);
-  assert.ok((byKind["postal"] ?? 0) >= 45, `postal should be 49-50, got ${byKind["postal"]}`);
+  assert.ok((byKind["postal"] ?? 0) >= 55, `postal should be 58 (1 hub + 37 states + 20 curated leaves), got ${byKind["postal"]}`);
   assert.ok((byKind["banks"] ?? 0) >= 12, `banks should be 12-13, got ${byKind["banks"]}`);
   assert.ok((byKind["rates"] ?? 0) >= 2, `rates should be 2, got ${byKind["rates"]}`);
   assert.ok((byKind["charts"] ?? 0) >= 5, `charts should be >=5, got ${byKind["charts"]}`);
@@ -170,10 +170,13 @@ function check() {
     assert.ok(index.some((e) => e.path === `/codes/postal/${s.slug}`), `index must include postal state ${s.slug}`);
   }
   const postalLeaves = getAllPostalAreaParams();
-  assert.equal(postalLeaves.length, 12, "SSOT 12 curated postal leaves");
+  assert.equal(postalLeaves.length, 20, "SSOT 20 curated postal leaves");
   for (const p of postalLeaves) {
     assert.ok(index.some((e) => e.path === `/codes/postal/${p.state}/${p.area}`), `index must include postal leaf ${p.state}/${p.area}`);
   }
+  assert.ok(rankedSearch(index, "Sango-Ota", "postal", 5).some((r) => r.path === "/codes/postal/ogun"), "Sango-Ota postal query should hit Ogun postal page");
+  assert.ok(rankedSearch(index, "Nsukka", "postal", 5).some((r) => r.path === "/codes/postal/enugu"), "Nsukka postal query should hit Enugu postal page");
+  assert.ok(rankedSearch(index, "Aba", "postal", 5).some((r) => r.path === "/codes/postal/abia/aba" || r.path === "/codes/postal/abia"), "Aba postal query should hit Abia/Aba postal page");
   const lgaStates = getAllLgaStates();
   assert.equal(getAllLgaParams().length, 774, "SSOT 774 LGAs");
   for (const s of lgaStates) {
