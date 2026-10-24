@@ -1,38 +1,38 @@
 {
   "cbn": {
     "ok": true,
-    "checkedAt": "2026-10-23T21:23:36.629Z",
+    "checkedAt": "2026-10-24T04:34:19.232Z",
     "asOf": "2026-10-23T14:00:00.000Z",
-    "lastSuccessfulAt": "2026-10-23T21:23:36.629Z"
+    "lastSuccessfulAt": "2026-10-24T04:34:19.232Z"
   },
   "aboki": {
     "ok": true,
-    "checkedAt": "2026-10-23T21:23:36.629Z",
-    "asOf": "2026-10-23T21:07:00.000Z",
-    "lastSuccessfulAt": "2026-10-23T21:23:36.629Z"
+    "checkedAt": "2026-10-24T04:34:19.232Z",
+    "asOf": "2026-10-24T04:06:00.000Z",
+    "lastSuccessfulAt": "2026-10-24T04:34:19.232Z"
   },
   "openEr": {
     "ok": true,
-    "checkedAt": "2026-10-23T21:23:36.629Z",
-    "asOf": "2026-10-23T00:02:31.000Z",
-    "lastSuccessfulAt": "2026-10-23T21:23:36.629Z"
+    "checkedAt": "2026-10-24T04:34:19.232Z",
+    "asOf": "2026-10-24T00:02:31.000Z",
+    "lastSuccessfulAt": "2026-10-24T04:34:19.232Z"
   },
   "awajis": {
     "ok": true,
-    "checkedAt": "2026-10-23T21:23:36.629Z",
-    "asOf": "2026-10-23T20:21:00.000Z",
-    "lastSuccessfulAt": "2026-10-23T21:23:36.629Z"
+    "checkedAt": "2026-10-24T04:34:19.232Z",
+    "asOf": "2026-10-23T23:21:00.000Z",
+    "lastSuccessfulAt": "2026-10-24T04:34:19.232Z"
   },
   "news": {
     "ok": true,
-    "checkedAt": "2026-10-23T21:23:36.629Z",
-    "asOf": "2026-10-23T21:23:36.629Z",
-    "lastSuccessfulAt": "2026-10-23T21:23:36.629Z"
+    "checkedAt": "2026-10-24T04:34:19.232Z",
+    "asOf": "2026-10-24T04:34:19.232Z",
+    "lastSuccessfulAt": "2026-10-24T04:34:19.232Z"
   },
   "wiki": {
     "ok": true,
-    "checkedAt": "2026-10-23T21:23:36.629Z",
-    "asOf": "2026-10-23T21:23:36.629Z",
-    "lastSuccessfulAt": "2026-10-23T21:23:36.629Z"
+    "checkedAt": "2026-10-24T04:34:19.232Z",
+    "asOf": "2026-10-24T04:34:19.232Z",
+    "lastSuccessfulAt": "2026-10-24T04:34:19.232Z"
   }
 }
