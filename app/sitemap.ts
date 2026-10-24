@@ -4,6 +4,7 @@ import { LIVE_FUEL, LIVE_FX, datasetHistoryPoints } from "@/lib/live";
 import { CHART_PAGES } from "@/lib/chart-pages";
 import { BANKS_FILE_UPDATED_AT, getAllBanks } from "@/lib/banks";
 import { AIRPORTS_FILE_UPDATED_AT, getAllAirports } from "@/lib/airports";
+import { AIRLINES_FILE_UPDATED_AT, getAllAirlines } from "@/lib/airlines";
 import { OIL_GAS_FILE_UPDATED_AT, getAllOilGasOperators } from "@/lib/oil-gas";
 import { getAllPostalStates, getAllPostalAreaParams, POSTAL_FILE_UPDATED_AT } from "@/lib/postal";
 import { LGAS_FILE_UPDATED_AT, getAllLgaStates, getAllLgaParams } from "@/lib/lgas";
@@ -128,6 +129,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
+  // Airlines — 1 hub (/airlines) + 23 verified Nigerian scheduled airline pages (/airlines/[slug]).
+  const airlinesUpdatedAt =
+    AIRLINES_FILE_UPDATED_AT && /^\d{4}-\d{2}-\d{2}/.test(AIRLINES_FILE_UPDATED_AT)
+      ? AIRLINES_FILE_UPDATED_AT.slice(0, 10)
+      : FIXED_LASTMOD;
+  const airlinesSitemap: MetadataRoute.Sitemap = [
+    { url: absUrl("/airlines"), lastModified: airlinesUpdatedAt, changeFrequency: "weekly", priority: 0.7 },
+    ...getAllAirlines().map((a) => ({
+      url: absUrl(`/airlines/${a.slug}`),
+      lastModified: a.lastVerified.slice(0, 10),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+  ];
+
   // Oil & Gas — 1 hub (/oil-gas) + 16 verified major operator profiles (/oil-gas/[slug]).
   const oilGasUpdatedAt =
     OIL_GAS_FILE_UPDATED_AT && /^\d{4}-\d{2}-\d{2}/.test(OIL_GAS_FILE_UPDATED_AT)
@@ -172,5 +188,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...fixed, ...charts, ...bankSitemap, ...postalSitemap, ...geoSitemap, ...airportsSitemap, ...oilGasSitemap, ...generated];
+  return [
+    ...fixed,
+    ...charts,
+    ...bankSitemap,
+    ...postalSitemap,
+    ...geoSitemap,
+    ...airportsSitemap,
+    ...airlinesSitemap,
+    ...oilGasSitemap,
+    ...generated,
+  ];
 }

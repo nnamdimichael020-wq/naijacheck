@@ -16,6 +16,7 @@ import seedData from "@/content/generated/search-tips-seed.json";
 type TipsSeed = {
   banks: string[];
   airports?: { city: string; iata: string }[];
+  airlines?: string[];
   oilGasOperators?: string[];
   postalStates: string[];
   postalPlaces: string[];
@@ -174,11 +175,15 @@ export function buildSearchTipBuckets(): TipBuckets {
     addUnique(guidesSlangAndTools, lt);
   }
 
-  // 4) All 37 States + All 774 LGAs (`data/lgas.json`) + Verified Airports & Oil/Gas Operators
+  // 4) All 37 States + All 774 LGAs (`data/lgas.json`) + Verified Airports, Airlines & Oil/Gas Operators
   addUnique(geoStatesAndLgas, "international airports in Nigeria");
+  addUnique(geoStatesAndLgas, "airlines operating in Nigeria");
   addUnique(geoStatesAndLgas, "major oil companies in Nigeria");
   for (const ap of SEED.airports ?? []) {
     if (ap.city) addUnique(geoStatesAndLgas, `${ap.city} airport code`);
+  }
+  for (const airlineName of SEED.airlines ?? []) {
+    if (airlineName) addUnique(geoStatesAndLgas, `${airlineName} airline status`);
   }
   for (const opName of SEED.oilGasOperators ?? []) {
     if (opName) addUnique(geoStatesAndLgas, `${opName} Nigeria`);

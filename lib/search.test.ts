@@ -200,7 +200,7 @@ function check() {
   assert.ok(!isTopLevelPath("/admin"), "/admin excluded from public hubs");
   assert.ok(!isTopLevelPath("/search"), "/search excluded from hub dropdown");
 
-  assert.equal(DROPDOWN_TOP_LEVEL_ALLOWLIST.length, 20, "18 one-segment hubs + 2 explicit product hubs (/codes/banks, /codes/postal)");
+  assert.equal(DROPDOWN_TOP_LEVEL_ALLOWLIST.length, 21, "19 one-segment hubs + 2 explicit product hubs (/codes/banks, /codes/postal)");
   const exceptionSet = new Set<string>(DROPDOWN_TWO_SEGMENT_HUB_EXCEPTIONS);
   for (const p of DROPDOWN_TOP_LEVEL_ALLOWLIST) {
     if (!exceptionSet.has(p)) {
@@ -224,6 +224,8 @@ function check() {
     "/geo/lagos/ikeja",
     "/airports/lagos-murtala-muhammed",
     "/airports/abuja-nnamdi-azikiwe",
+    "/airlines/air-peace",
+    "/airlines/nigeria-airways",
     "/oil-gas/nnpc-limited",
     "/oil-gas/shell-nigeria",
     "/charts/parallel-usd-buy",
@@ -281,6 +283,32 @@ function check() {
   assert.ok(
     deepAbujaAirport.some((r) => r.path === "/airports/abuja-nnamdi-azikiwe"),
     'full /search "Abuja airport" finds /airports/abuja-nnamdi-azikiwe',
+  );
+
+  // Airlines search checks: "Air Peace", "P4", "QI", and "Virgin Nigeria" surface /airlines in dropdown and deep airline pages on /search
+  assert.deepEqual(rankedDropdownSearch(index, "", "airlines", 8).map((r) => r.path), ["/airlines"]);
+  const ddAirPeace = rankedDropdownSearch(index, "Air Peace", "all", 8);
+  assert.ok(ddAirPeace.some((r) => r.path === "/airlines"), 'dropdown "Air Peace" surfaces /airlines hub');
+  assert.ok(!ddAirPeace.some((r) => r.path.startsWith("/airlines/")), 'dropdown "Air Peace" excludes deep /airlines/[slug]');
+  const deepAirPeace = rankedSearch(index, "Air Peace", "all", 8);
+  assert.ok(
+    deepAirPeace.some((r) => r.path === "/airlines/air-peace"),
+    'full /search "Air Peace" finds /airlines/air-peace',
+  );
+  const deepP4 = rankedSearch(index, "P4", "all", 8);
+  assert.ok(
+    deepP4.some((r) => r.path === "/airlines/air-peace"),
+    'full /search "P4" finds /airlines/air-peace',
+  );
+  const deepQi = rankedSearch(index, "QI", "all", 8);
+  assert.ok(
+    deepQi.some((r) => r.path === "/airlines/ibom-air"),
+    'full /search "QI" finds /airlines/ibom-air',
+  );
+  const deepVirgin = rankedSearch(index, "Virgin Nigeria", "all", 8);
+  assert.ok(
+    deepVirgin.some((r) => r.path === "/airlines/air-nigeria"),
+    'full /search "Virgin Nigeria" finds /airlines/air-nigeria via formerNames',
   );
 
   // Oil & Gas search checks: "Shell Nigeria", "NNPC", and "SPDC" surface /oil-gas in dropdown and deep operator pages on /search

@@ -1,0 +1,1063 @@
+{
+  "updatedAt": "2026-10-24",
+  "scope": "23 verified major scheduled passenger airlines in Nigeria (past and present): 11 active scheduled passenger carriers, 2 carriers with suspended scheduled operations as of October 2026, and 10 landmark historical scheduled airlines from 1958 to 2019.",
+  "notes": "Manually curated Nigerian civil aviation reference verified against Nigeria Civil Aviation Authority (NCAA) Air Operator Certificate (AOC) and regulatory notices, International Air Transport Association (IATA) member records, ICAO Doc 8585 designator records, Federal Airports Authority of Nigeria (FAAN) hub records, and official airline publications. Excludes private business-jet charter-only operators, offshore helicopter-only contractors, cargo-only carriers, and short-lived single-aircraft operators without verifiable scheduled passenger histories. NaijaCheck does not sell tickets, quote airfares, or publish flight timetables.",
+  "hubSources": [
+    {
+      "label": "Nigeria Civil Aviation Authority (NCAA) — Official Regulatory Portal & AOC Notices",
+      "url": "https://ncaa.gov.ng/",
+      "kind": "primary"
+    },
+    {
+      "label": "International Air Transport Association (IATA) — Current Airline Members Directory",
+      "url": "https://www.iata.org/en/about/members/airline-list/",
+      "kind": "primary"
+    },
+    {
+      "label": "Federal Airports Authority of Nigeria (FAAN) — Nigerian Commercial Airports Network",
+      "url": "https://faan.gov.ng/",
+      "kind": "primary"
+    },
+    {
+      "label": "Aviation Codes Central (avcodes.co.uk) — IATA & ICAO Airline Designators Database",
+      "url": "https://www.avcodes.co.uk/airlcoderes.asp",
+      "kind": "secondary"
+    }
+  ],
+  "airlines": [
+    {
+      "slug": "air-peace",
+      "name": "Air Peace",
+      "fullLegalName": "Air Peace Limited",
+      "status": "operating",
+      "iata": "P4",
+      "icao": "APK",
+      "callsign": "PEACE BIRD",
+      "yearsActive": "2014–present",
+      "foundedYear": 2013,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "port-harcourt-international"
+      ],
+      "serviceScope": "Nigeria's largest private scheduled carrier by fleet and passenger volume, operating domestic trunk and secondary routes, West African regional services, and intercontinental flights including London.",
+      "statusContext": "Active NCAA Air Operator Certificate (AOC) holder and IATA member airline (accounting code 710). Founded by Allen Onyema in 2013, Air Peace commenced commercial passenger operations in October 2014 from Murtala Muhammed Airport in Lagos.",
+      "website": "https://flyairpeace.com/",
+      "sources": [
+        {
+          "label": "Air Peace Limited — Official Corporate Website",
+          "url": "https://flyairpeace.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "IATA Member Airline Profile — Air Peace Ltd. (P4 / APK / 710)",
+          "url": "https://www.iata.org/en/about/members/airline-list/air-peace/500/",
+          "kind": "primary"
+        },
+        {
+          "label": "Nigeria Civil Aviation Authority (NCAA) — Domestic & International Carrier Oversight",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Largest Nigerian scheduled passenger carrier; IATA member (P4 / APK) with domestic, West African, and London services."
+    },
+    {
+      "slug": "ibom-air",
+      "name": "Ibom Air",
+      "fullLegalName": "Ibom Airlines Limited",
+      "status": "operating",
+      "iata": "QI",
+      "icao": "IAN",
+      "callsign": "IBOM",
+      "yearsActive": "2019–present",
+      "foundedYear": 2019,
+      "headquartersCity": "Uyo",
+      "stateSlug": "akwa-ibom",
+      "stateName": "Akwa Ibom",
+      "lgaSlug": "uyo",
+      "lgaName": "Uyo",
+      "postalHref": "/codes/postal/akwa-ibom",
+      "postalLabel": "Akwa Ibom State postal codes (520001)",
+      "hubAirportSlugs": [
+        "uyo-victor-attah",
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe"
+      ],
+      "serviceScope": "State-backed scheduled domestic and West African regional passenger carrier operating Airbus A220 and Bombardier CRJ900 jets out of Victor Attah International Airport in Uyo.",
+      "statusContext": "Active NCAA AOC holder and IATA member airline (accounting code 704), wholly owned by the Akwa Ibom State Government. Commenced commercial passenger flights on 7 June 2019 and expanded into regional West African service including Accra.",
+      "website": "https://www.ibomair.com/",
+      "sources": [
+        {
+          "label": "Ibom Airlines Limited — Official Website",
+          "url": "https://www.ibomair.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "IATA Member Airline Profile — Ibom Airlines Limited (QI / IAN / 704)",
+          "url": "https://www.iata.org/en/about/members/airline-list/ibom-air/590/",
+          "kind": "primary"
+        },
+        {
+          "label": "NCAA — Domestic Scheduled Operator Records",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Owned by Akwa Ibom State Government; IATA member (QI / IAN) hubbed at Victor Attah Airport, Uyo (QUO)."
+    },
+    {
+      "slug": "united-nigeria-airlines",
+      "name": "United Nigeria Airlines",
+      "fullLegalName": "United Nigeria Airlines Company Limited",
+      "status": "operating",
+      "iata": "U5",
+      "icao": "UNA",
+      "callsign": "UNITED NIGERIA",
+      "yearsActive": "2021–present",
+      "foundedYear": 2020,
+      "headquartersCity": "Enugu",
+      "stateSlug": "enugu",
+      "stateName": "Enugu",
+      "lgaSlug": "enugu-north",
+      "lgaName": "Enugu North",
+      "postalHref": "/codes/postal/enugu",
+      "postalLabel": "Enugu State postal codes (400001)",
+      "hubAirportSlugs": [
+        "enugu-akanu-ibiam",
+        "abuja-nnamdi-azikiwe",
+        "lagos-murtala-muhammed"
+      ],
+      "serviceScope": "Privately owned Nigerian scheduled passenger carrier connecting Enugu, Abuja, Lagos, Port Harcourt, Owerri, Asaba, Warri, Sokoto, Kano, and regional West African gateways.",
+      "statusContext": "Active NCAA AOC holder and IOSA-certified Nigerian carrier. Incorporated in 2020 by Obiora Okonkwo, granted its NCAA AOC on 1 February 2021, and commenced commercial passenger flights on 12 February 2021 between Lagos and Enugu.",
+      "website": "https://flyunitednigeria.com/",
+      "sources": [
+        {
+          "label": "United Nigeria Airlines — Official Website",
+          "url": "https://flyunitednigeria.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "NCAA — Scheduled Commercial Air Transport Oversight",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        },
+        {
+          "label": "Wikipedia — United Nigeria Airlines (U5 / UNA operational history)",
+          "url": "https://en.wikipedia.org/wiki/United_Nigeria_Airlines",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Headquartered in Enugu with primary operational bases at Enugu (ENU), Abuja (ABV), and Lagos (LOS)."
+    },
+    {
+      "slug": "valuejet",
+      "name": "ValueJet",
+      "fullLegalName": "ValueJet Airline Limited",
+      "status": "operating",
+      "iata": "VK",
+      "icao": "FVJ",
+      "callsign": "VALUEJET",
+      "yearsActive": "2022–present",
+      "foundedYear": 2018,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe"
+      ],
+      "serviceScope": "Private Nigerian scheduled domestic and regional passenger airline operating Bombardier CRJ900 aircraft from Lagos Murtala Muhammed Terminal 2 (MMA2) and Abuja.",
+      "statusContext": "Active NCAA AOC holder founded in 2018 by Kunle Soname. Commenced scheduled commercial passenger flights on 10 October 2022. Holds the active 2-character IATA designator VK (reassigned by IATA years after Air Nigeria ceased operations in 2012) alongside ICAO code FVJ.",
+      "website": "https://flyvaluejet.com/",
+      "sources": [
+        {
+          "label": "ValueJet — Official Airline Website",
+          "url": "https://flyvaluejet.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "NCAA — Domestic Scheduled Operator Oversight",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        },
+        {
+          "label": "Wikipedia — ValueJet (Nigeria) (VK / FVJ profile)",
+          "url": "https://en.wikipedia.org/wiki/ValueJet_(Nigeria)",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "CRJ900 scheduled operator from Lagos (LOS) and Abuja (ABV); holds active IATA code VK and ICAO FVJ."
+    },
+    {
+      "slug": "overland-airways",
+      "name": "Overland Airways",
+      "fullLegalName": "Overland Airways Limited",
+      "formerNames": [
+        "OJ (former IATA designator)"
+      ],
+      "status": "operating",
+      "iata": "OF",
+      "icao": "OLA",
+      "callsign": "OVERLAND",
+      "yearsActive": "2002–present",
+      "foundedYear": 1998,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "abuja-nnamdi-azikiwe",
+        "lagos-murtala-muhammed",
+        "ilorin-tunde-idiagbon"
+      ],
+      "serviceScope": "Long-running Nigerian regional and hinterland scheduled carrier linking Abuja and Lagos with secondary state capitals including Ilorin, Akure, Ibadan, Jalingo, and Minna using Embraer E175 and ATR turboprop aircraft.",
+      "statusContext": "Active NCAA AOC holder, IATA member airline (accounting code 559), and IOSA-registered operator since 2015. Incorporated in September 1998 by Capt. Edward Boyo and commenced commercial operations in November 2002; its IATA designator transitioned from OJ to OF.",
+      "website": "https://www.overlandairways.com/",
+      "sources": [
+        {
+          "label": "Overland Airways Limited — Official Company Profile",
+          "url": "https://www.overlandairways.com/About-Us/CompanyProfile",
+          "kind": "primary"
+        },
+        {
+          "label": "IATA Member Airline Profile — Overland Airways Ltd. (OF / OLA / 559)",
+          "url": "https://www.iata.org/en/about/members/airline-list/overland-airways/483/",
+          "kind": "primary"
+        },
+        {
+          "label": "Aviation Codes Central — Overland Airways (OF, formerly OJ / OLA)",
+          "url": "https://www.avcodes.co.uk/details.asp?ID=27149",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "IATA member (OF / OLA; formerly OJ) specialising in secondary Nigerian state capitals alongside Abuja and Lagos."
+    },
+    {
+      "slug": "green-africa-airways",
+      "name": "Green Africa Airways",
+      "fullLegalName": "Green Africa Airways Limited",
+      "status": "operating",
+      "iata": "Q9",
+      "icao": "GWG",
+      "callsign": "GREEN AFRICA",
+      "yearsActive": "2021–present",
+      "foundedYear": 2015,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe"
+      ],
+      "serviceScope": "Lagos-based value scheduled passenger airline operating ATR 72-600 turboprops across southern and central Nigerian routes including Lagos, Abuja, Port Harcourt, Benin City, Owerri, Akure, Ibadan, Enugu, and Ilorin.",
+      "statusContext": "Active NCAA AOC holder founded by Babawande Afolabi. Received its NCAA AOC on 9 August 2021 and operated its inaugural commercial passenger flight on 12 August 2021 from Lagos; expanded owned ATR 72-600 capacity in February 2026.",
+      "website": "https://www.greenafrica.com/",
+      "sources": [
+        {
+          "label": "Green Africa Airways — Official Website",
+          "url": "https://www.greenafrica.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "Aviation Codes Central — Green Africa Airways (IATA Q9 / ICAO GWG)",
+          "url": "https://www.avcodes.co.uk/details.asp?ID=29671",
+          "kind": "secondary"
+        },
+        {
+          "label": "NCAA — Domestic Scheduled Airline Oversight",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Value ATR 72-600 carrier based at Lagos (LOS); IATA code is 2-character Q9 and ICAO code is 3-letter GWG."
+    },
+    {
+      "slug": "arik-air",
+      "name": "Arik Air",
+      "fullLegalName": "Arik Air Limited",
+      "status": "operating",
+      "iata": "W3",
+      "icao": "ARA",
+      "callsign": "ARIK AIR",
+      "yearsActive": "2006–present",
+      "foundedYear": 2002,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "port-harcourt-international"
+      ],
+      "serviceScope": "Scheduled domestic passenger airline operating Boeing 737 and Bombardier Q400/CRJ aircraft from Lagos and Abuja to Port Harcourt, Benin City, Warri, Asaba, and Jos.",
+      "statusContext": "Active NCAA AOC holder (IATA W3 / ICAO ARA, accounting code 725). Commenced flights on 30 October 2006 from the former Nigeria Airways hanger complex in Ikeja; placed under Asset Management Corporation of Nigeria (AMCON) receivership in February 2017 and continues domestic scheduled operations.",
+      "website": "https://www.arikair.com/",
+      "sources": [
+        {
+          "label": "Arik Air Limited — Official Website",
+          "url": "https://www.arikair.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "NCAA — Domestic Airline Operations Summary",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        },
+        {
+          "label": "Wikipedia — Arik Air (W3 / ARA history & AMCON receivership)",
+          "url": "https://en.wikipedia.org/wiki/Arik_Air",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Operates domestic scheduled routes under AMCON receivership (since 2017) from Lagos (LOS) and Abuja (ABV)."
+    },
+    {
+      "slug": "aero-contractors",
+      "name": "Aero Contractors",
+      "fullLegalName": "Aero Contractors Company of Nigeria Limited",
+      "formerNames": [
+        "Aero"
+      ],
+      "status": "operating",
+      "iata": "N2",
+      "icao": "NIG",
+      "callsign": "AEROLINE",
+      "yearsActive": "1959–present",
+      "foundedYear": 1959,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "port-harcourt-international"
+      ],
+      "serviceScope": "Nigeria's oldest continuously registered aviation company, combining fixed-wing scheduled domestic passenger services, rotary-wing offshore oil-and-gas support, and certified aircraft maintenance (MRO) in Lagos.",
+      "statusContext": "Active NCAA AOC holder and approved Maintenance Organisation. Formed in 1959 (incorporated in Nigeria in 1960), majority-owned (60%) by the Asset Management Corporation of Nigeria (AMCON) since financial restructuring in 2013, and active on scheduled domestic routes.",
+      "website": "https://www.flyaero.com/",
+      "sources": [
+        {
+          "label": "Aero Contractors Company of Nigeria Limited — Official Website",
+          "url": "https://www.flyaero.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "NCAA — Licensed Scheduled Airlines & Approved MRO Oversight",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        },
+        {
+          "label": "Wikipedia — Aero Contractors (Nigeria) (N2 / NIG)",
+          "url": "https://en.wikipedia.org/wiki/Aero_Contractors_(Nigeria)",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Founded 1959; operates scheduled fixed-wing domestic flights, offshore rotary-wing support, and Lagos MRO under AMCON majority ownership."
+    },
+    {
+      "slug": "max-air",
+      "name": "Max Air",
+      "fullLegalName": "Max Air Limited",
+      "formerNames": [
+        "Mangal Airlines"
+      ],
+      "status": "operating",
+      "iata": "VM",
+      "icao": "NGL",
+      "callsign": "MAXAIR NIGERIA",
+      "yearsActive": "2008–present",
+      "foundedYear": 2006,
+      "headquartersCity": "Kano",
+      "stateSlug": "kano",
+      "stateName": "Kano",
+      "lgaSlug": "kano-municipal",
+      "lgaName": "Kano Municipal",
+      "postalHref": "/codes/postal/kano/kano-municipal",
+      "postalLabel": "Kano Municipal — 700211",
+      "hubAirportSlugs": [
+        "kano-mallam-aminu-kano",
+        "abuja-nnamdi-azikiwe",
+        "lagos-murtala-muhammed"
+      ],
+      "serviceScope": "Kano-headquartered scheduled domestic passenger carrier and major wide-body Hajj/Umrah pilgrimage operator flying Boeing 737 and Boeing 747-400 aircraft.",
+      "statusContext": "Active NCAA AOC holder founded by Alhaji Dahiru Barau Mangal (originally as Mangal Airlines in 2006, rebranded Max Air in 2008; domestic scheduled flights began in 2018). Following a temporary suspension in January 2025, the NCAA cleared Max Air to resume domestic passenger operations effective 17 March 2025 after completing safety and economic audits.",
+      "website": "https://maxair.com.ng/",
+      "sources": [
+        {
+          "label": "NCAA Press Release — Resumption of Domestic Operations by Max Air (17 March 2025)",
+          "url": "https://ncaa.gov.ng/media/news/press-release-resumption-of-domestic-operations-max-air/",
+          "kind": "primary"
+        },
+        {
+          "label": "Max Air Limited — Official Website",
+          "url": "https://maxair.com.ng/",
+          "kind": "primary"
+        },
+        {
+          "label": "Wikipedia — Max Air (VM / NGL history)",
+          "url": "https://en.wikipedia.org/wiki/Max_Air",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Kano-based domestic and Hajj carrier (VM / NGL); cleared by NCAA audit to resume domestic flights on 17 March 2025."
+    },
+    {
+      "slug": "rano-air",
+      "name": "Rano Air",
+      "fullLegalName": "Rano Air Limited",
+      "status": "operating",
+      "iata": "R4",
+      "icao": "RAN",
+      "yearsActive": "2023–present",
+      "foundedYear": 2019,
+      "headquartersCity": "Abuja",
+      "stateSlug": "fct-abuja",
+      "stateName": "FCT — Abuja",
+      "lgaSlug": "abuja",
+      "lgaName": "Abuja",
+      "postalHref": "/codes/postal/fct-abuja",
+      "postalLabel": "FCT — Abuja postal codes (900001)",
+      "hubAirportSlugs": [
+        "abuja-nnamdi-azikiwe",
+        "kano-mallam-aminu-kano",
+        "maiduguri-muhammadu-buhari"
+      ],
+      "serviceScope": "Scheduled domestic passenger airline operating Embraer ERJ-145 regional jets linking Abuja, Kano, Lagos, Maiduguri, Sokoto, Katsina, and Kaduna.",
+      "statusContext": "Active NCAA AOC holder incorporated in 2019 by Alhaji Auwalu Abdullahi Rano (AA Rano Group) and inaugurated scheduled commercial passenger flights in May 2023.",
+      "website": "https://www.ranoair.com/",
+      "sources": [
+        {
+          "label": "Rano Air Limited — Official Airline Website",
+          "url": "https://www.ranoair.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "NCAA — Domestic Scheduled Operator Oversight",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        },
+        {
+          "label": "Wikipedia — List of Airlines of Nigeria (Rano Air R4 / RAN)",
+          "url": "https://en.wikipedia.org/wiki/List_of_airlines_of_Nigeria",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "ERJ-145 domestic regional jet operator connecting Abuja (ABV), Kano (KAN), Maiduguri (MIU), Sokoto (SKO), and Lagos (LOS)."
+    },
+    {
+      "slug": "xejet",
+      "name": "XEJet",
+      "fullLegalName": "XE Jet Aviation Limited",
+      "formerNames": [
+        "XE Jet"
+      ],
+      "status": "operating",
+      "iata": "4U",
+      "icao": "XEJ",
+      "callsign": "RED TAIL",
+      "yearsActive": "2022–present",
+      "foundedYear": 2021,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe"
+      ],
+      "serviceScope": "Premium business-class and scheduled trunk carrier operating Bombardier CRJ200 and Embraer regional aircraft between Lagos and Abuja alongside executive charter and ACMI services.",
+      "statusContext": "Active NCAA AOC holder founded by Emmanuel Iza. Certified for charter operations in early 2022, expanded its NCAA AOC to cover scheduled passenger operations in September 2024, and launched scheduled Abuja–Lagos flights in November 2024 under designators 4U / XEJ.",
+      "website": "https://www.xejet.com/",
+      "sources": [
+        {
+          "label": "XEJet — Official Website & Scheduled Flight Designator (4U)",
+          "url": "https://www.xejet.com/",
+          "kind": "primary"
+        },
+        {
+          "label": "Aviation Codes Central — XE Jet Aviation Ltd (IATA 4U / ICAO XEJ / Callsign RED TAIL)",
+          "url": "https://www.avcodes.co.uk/details.asp?ID=30180",
+          "kind": "secondary"
+        },
+        {
+          "label": "CAPA Centre for Aviation — XeJet Profile",
+          "url": "https://centreforaviation.com/data/profiles/airlines/xejet-4u",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Premium scheduled trunk and charter carrier (4U / XEJ) operating Lagos–Abuja services since November 2024."
+    },
+    {
+      "slug": "dana-air",
+      "name": "Dana Air",
+      "fullLegalName": "Dana Airlines Limited",
+      "status": "suspended",
+      "iata": "9J",
+      "icao": "DAN",
+      "callsign": "DANACO",
+      "yearsActive": "2008–2024 (suspended)",
+      "foundedYear": 2008,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe"
+      ],
+      "serviceScope": "Private Nigerian domestic trunk carrier (part of Dana Group) that operated McDonnell Douglas MD-82/MD-83 and Boeing 737-300 aircraft on Lagos, Abuja, Port Harcourt, Owerri, and Enugu routes.",
+      "statusContext": "Suspended by regulator: commenced commercial flights on 10 November 2008, but the NCAA suspended Dana Air's Air Operator Certificate effective 24 April 2024 following an MD-82 (5N-BKI) runway excursion at Lagos and ordered a comprehensive safety and financial audit. No scheduled passenger resumption had been cleared as of October 2026.",
+      "sources": [
+        {
+          "label": "Nigeria Civil Aviation Authority (NCAA) — Regulatory Safety & Audit Notices",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        },
+        {
+          "label": "Wikipedia — Dana Air (9J / DAN operational & 2024 NCAA suspension history)",
+          "url": "https://en.wikipedia.org/wiki/Dana_Air",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "NCAA suspended AOC on 24 April 2024 for safety and financial audit after Lagos runway excursion; remains grounded as of October 2026."
+    },
+    {
+      "slug": "azman-air",
+      "name": "Azman Air",
+      "fullLegalName": "Azman Air Services Limited",
+      "formerNames": [
+        "ZQ (former IATA designator)"
+      ],
+      "status": "suspended",
+      "icao": "AZM",
+      "callsign": "AZMAN AIR",
+      "yearsActive": "2014–2024 (suspended)",
+      "foundedYear": 2010,
+      "headquartersCity": "Kano",
+      "stateSlug": "kano",
+      "stateName": "Kano",
+      "lgaSlug": "kano-municipal",
+      "lgaName": "Kano Municipal",
+      "postalHref": "/codes/postal/kano/kano-municipal",
+      "postalLabel": "Kano Municipal — 700211",
+      "hubAirportSlugs": [
+        "kano-mallam-aminu-kano",
+        "abuja-nnamdi-azikiwe",
+        "lagos-murtala-muhammed"
+      ],
+      "serviceScope": "Kano-based domestic passenger and Hajj carrier founded by Abdulmunaf Yunusa Sarina that operated Boeing 737 Classic jets and an Airbus A340-600.",
+      "statusContext": "Scheduled domestic flights suspended: incorporated in 2010 and commenced domestic passenger services in May 2014 from Kano. In August 2024, Azman Air indefinitely halted domestic passenger operations and placed staff on unpaid leave citing overseas C-check maintenance delays across its Boeing 737 fleet; active IATA designator is omitted because international profiles list IATA n/a post-suspension (historically ZQ).",
+      "sources": [
+        {
+          "label": "CAPA Centre for Aviation — Azman Air (ICAO: AZM) Carrier Profile",
+          "url": "https://centreforaviation.com/data/profiles/airlines/azman-air-azm",
+          "kind": "secondary"
+        },
+        {
+          "label": "NCAA — Nigerian Air Operator Regulatory Oversight",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        },
+        {
+          "label": "Wikipedia — Azman Air (2014–2024 domestic operations & suspension)",
+          "url": "https://en.wikipedia.org/wiki/Azman_Air",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Suspended scheduled domestic operations in August 2024 amid fleet C-check delays; ICAO AZM (active IATA unassigned; historically ZQ)."
+    },
+    {
+      "slug": "nigeria-airways",
+      "name": "Nigeria Airways",
+      "fullLegalName": "Nigeria Airways Limited",
+      "formerNames": [
+        "WAAC Nigeria",
+        "West African Airways Corporation (Nigeria) Limited"
+      ],
+      "status": "ceased",
+      "iata": "WT",
+      "iataHistoricalNote": "Historical IATA designator WT held 1958–2003 (subsequently reassigned globally by IATA after liquidation).",
+      "icao": "NGA",
+      "callsign": "NIGERIA",
+      "yearsActive": "1958–2003",
+      "foundedYear": 1958,
+      "ceasedYear": 2003,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "kano-mallam-aminu-kano",
+        "port-harcourt-international"
+      ],
+      "serviceScope": "Nigeria's state-owned national flag carrier for 45 years, operating domestic, West African, European (London), North American (New York), and Jeddah routes with Vickers VC10, Boeing 707/737/747, McDonnell Douglas DC-10, and Airbus A310 aircraft.",
+      "statusContext": "Ceased and liquidated in 2003: established on 23 August 1958 (commencing flights 1 October 1958) as WAAC Nigeria following the dissolution of the colonial West African Airways Corporation, became 100% federally owned in 1961, adopted the Nigeria Airways name and 'Skypower' elephant emblem in 1971, and closed in 2003 under heavy debt.",
+      "sources": [
+        {
+          "label": "Wikipedia — Nigeria Airways (WT / NGA, 1958–2003 national flag carrier)",
+          "url": "https://en.wikipedia.org/wiki/Nigeria_Airways",
+          "kind": "secondary"
+        },
+        {
+          "label": "Federal Airports Authority of Nigeria (FAAN) — Aviation Heritage & Hub Airports",
+          "url": "https://faan.gov.ng/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Former national flag carrier ('Skypower', WT / NGA); founded as WAAC Nigeria in 1958, renamed in 1971, liquidated in 2003."
+    },
+    {
+      "slug": "air-nigeria",
+      "name": "Air Nigeria",
+      "fullLegalName": "Air Nigeria Development Limited",
+      "formerNames": [
+        "Virgin Nigeria Airways",
+        "Nigerian Eagle Airlines",
+        "VGN (former ICAO designator)"
+      ],
+      "status": "ceased",
+      "iata": "VK",
+      "iataHistoricalNote": "Historical IATA designator VK held 2005–2012 (reassigned by IATA to Nigerian carrier ValueJet in the 2020s).",
+      "icao": "ANP",
+      "callsign": "NICON FLIERS",
+      "yearsActive": "2005–2012",
+      "foundedYear": 2004,
+      "ceasedYear": 2012,
+      "headquartersCity": "Lagos Island, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "lagos-island",
+      "lgaName": "Lagos Island",
+      "postalHref": "/codes/postal/lagos",
+      "postalLabel": "Lagos State postal codes (100001)",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe"
+      ],
+      "serviceScope": "Designated post-Nigeria Airways flag carrier joint venture that operated domestic, West/Central African regional, London Heathrow/Gatwick, and Johannesburg passenger routes.",
+      "statusContext": "Rebranded twice before ceasing operations on 10 September 2012: founded in 2004 by Nigerian institutional investors (51%) and Virgin Atlantic (49%) as Virgin Nigeria Airways (inaugural Lagos–London flight 28 June 2005, ICAO VGN). Following Virgin Atlantic's exit, it rebranded to Nigerian Eagle Airlines in September 2009 and Air Nigeria (ICAO ANP) in June 2010 before shutting down in September 2012.",
+      "sources": [
+        {
+          "label": "Wikipedia — Air Nigeria (Virgin Nigeria / Nigerian Eagle, 2004–2012)",
+          "url": "https://en.wikipedia.org/wiki/Air_Nigeria",
+          "kind": "secondary"
+        },
+        {
+          "label": "NCAA — Historical Nigerian Scheduled Operators Record",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Founded as Virgin Nigeria (2004), rebranded Nigerian Eagle (2009) and Air Nigeria (2010); ceased 10 September 2012. Historical IATA VK later reassigned to ValueJet."
+    },
+    {
+      "slug": "bellview-airlines",
+      "name": "Bellview Airlines",
+      "fullLegalName": "Bellview Airlines Nigeria Limited",
+      "status": "ceased",
+      "iata": "B3",
+      "iataHistoricalNote": "Historical IATA designator B3 held 1992–2009 (subsequently reassigned by IATA to Bhutan Airlines).",
+      "icao": "BLV",
+      "callsign": "BELLVIEW AIRLINES",
+      "yearsActive": "1992–2009",
+      "foundedYear": 1992,
+      "ceasedYear": 2009,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "port-harcourt-international"
+      ],
+      "serviceScope": "Major private Nigerian scheduled carrier of the 1990s and 2000s that operated domestic trunk services, West African coastal network flights, and Boeing 767-200ER services to London Heathrow.",
+      "statusContext": "Ceased operations in October 2009: evolved out of Bellview Travels in Lagos in 1992, began scheduled domestic DC-9 passenger services in 1993, expanded across West Africa and to London, and shut down in late 2009 following fleet grounding and IATA Billing and Settlement Plan (BSP) suspension.",
+      "sources": [
+        {
+          "label": "Wikipedia — Bellview Airlines (B3 / BLV, 1992–2009)",
+          "url": "https://en.wikipedia.org/wiki/Bellview_Airlines",
+          "kind": "secondary"
+        },
+        {
+          "label": "List of Defunct Airlines of Nigeria — Historical Aviation Record",
+          "url": "https://en.wikipedia.org/wiki/List_of_defunct_airlines_of_Nigeria",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Major 1990s–2000s private Nigerian carrier on domestic, West African, and London routes; ceased October 2009 (historical IATA B3 / ICAO BLV)."
+    },
+    {
+      "slug": "adc-airlines",
+      "name": "ADC Airlines",
+      "fullLegalName": "Aviation Development Company Plc",
+      "formerNames": [
+        "Aviation Development Company"
+      ],
+      "status": "ceased",
+      "iata": "Z7",
+      "iataHistoricalNote": "Historical IATA designator Z7 held during scheduled operations in the 1990s and 2000s.",
+      "icao": "ADK",
+      "callsign": "ADCO",
+      "yearsActive": "1991–2007",
+      "foundedYear": 1984,
+      "ceasedYear": 2007,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "calabar-margaret-ekpo",
+        "port-harcourt-international"
+      ],
+      "serviceScope": "Pioneer pilot-founded private Nigerian scheduled carrier that operated Boeing 737-200 and DC-9 flights connecting Lagos, Abuja, Calabar, Port Harcourt, Sokoto, Yola, and West African capitals.",
+      "statusContext": "Ceased operations in 2006–2007: Aviation Development Company opened in December 1984, commenced ADC Airlines flight operations on 1 January 1991, listed on the Nigerian Stock Exchange in 1994, had its licence suspended following the October 2006 Flight 053 accident near Abuja, and did not re-register under the April 2007 NCAA recapitalisation deadline.",
+      "sources": [
+        {
+          "label": "Wikipedia — ADC Airlines / Aviation Development Company Plc (Z7 / ADK)",
+          "url": "https://en.wikipedia.org/wiki/ADC_Airlines",
+          "kind": "secondary"
+        },
+        {
+          "label": "List of Defunct Airlines of Nigeria — Historical Aviation Record",
+          "url": "https://en.wikipedia.org/wiki/List_of_defunct_airlines_of_Nigeria",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Pilot-founded private airline (Aviation Development Company Plc, listed on NSE 1994); operated 1991–2007 under historical codes Z7 / ADK."
+    },
+    {
+      "slug": "okada-air",
+      "name": "Okada Air",
+      "fullLegalName": "Okada Air Limited",
+      "status": "ceased",
+      "iata": "9H",
+      "iataHistoricalNote": "Historical IATA designator 9H held 1983–1997 (subsequently reassigned globally by IATA).",
+      "icao": "OKJ",
+      "callsign": "OKADA AIR",
+      "yearsActive": "1983–1997",
+      "foundedYear": 1983,
+      "ceasedYear": 1997,
+      "headquartersCity": "Benin City",
+      "stateSlug": "edo",
+      "stateName": "Edo",
+      "lgaSlug": "oredo",
+      "lgaName": "Oredo",
+      "postalHref": "/codes/postal/edo",
+      "postalLabel": "Edo State postal codes (300001)",
+      "hubAirportSlugs": [
+        "benin-airport",
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe"
+      ],
+      "serviceScope": "Nigeria's trailblazing private domestic passenger and charter airline of the 1980s and 1990s, operating a large fleet of BAC One-Eleven and Boeing 727 jets from Benin Airport across nine Nigerian cities.",
+      "statusContext": "Ceased operations in 1997: founded in 1983 by Chief Gabriel Igbinedion in Benin City, commenced flights in September 1983, won scheduled domestic and international route rights in the early 1990s after air deregulation, and wound down operations in 1997.",
+      "sources": [
+        {
+          "label": "Wikipedia — Okada Air (9H / OKJ, 1983–1997 Benin City hub)",
+          "url": "https://en.wikipedia.org/wiki/Okada_Air",
+          "kind": "secondary"
+        },
+        {
+          "label": "List of Defunct Airlines of Nigeria — Historical Aviation Record",
+          "url": "https://en.wikipedia.org/wiki/List_of_defunct_airlines_of_Nigeria",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Pioneering private Nigerian airline founded in Benin City (BNI) in 1983 with BAC One-Elevens; ceased 1997 (historical codes 9H / OKJ)."
+    },
+    {
+      "slug": "sosoliso-airlines",
+      "name": "Sosoliso Airlines",
+      "fullLegalName": "Sosoliso Airlines Limited",
+      "status": "ceased",
+      "iata": "SO",
+      "iataHistoricalNote": "Historical IATA designator SO held 2000–2007.",
+      "icao": "OSL",
+      "callsign": "SOSOLISO",
+      "yearsActive": "2000–2007",
+      "foundedYear": 1994,
+      "ceasedYear": 2007,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "enugu-akanu-ibiam",
+        "lagos-murtala-muhammed",
+        "port-harcourt-international",
+        "owerri-sam-mbakwe"
+      ],
+      "serviceScope": "Scheduled domestic passenger airline linking Lagos and Abuja with South-East and South-South commercial centres at Enugu, Port Harcourt, and Owerri using McDonnell Douglas DC-9 and MD-81/82 aircraft.",
+      "statusContext": "Ceased operations in April 2007: incorporated in 1994 (originally headquartered at Enugu Airport before relocating its head office to Ikeja, Lagos) and commenced scheduled flights in July 2000; grounded when it did not meet the Federal Government's 30 April 2007 airline recapitalisation deadline.",
+      "sources": [
+        {
+          "label": "Wikipedia — Sosoliso Airlines (SO / OSL, 2000–2007)",
+          "url": "https://en.wikipedia.org/wiki/Sosoliso_Airlines",
+          "kind": "secondary"
+        },
+        {
+          "label": "List of Defunct Airlines of Nigeria — Historical Aviation Record",
+          "url": "https://en.wikipedia.org/wiki/List_of_defunct_airlines_of_Nigeria",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Domestic scheduled carrier on Enugu, Port Harcourt, Owerri, Abuja, and Lagos routes (2000–2007; historical codes SO / OSL)."
+    },
+    {
+      "slug": "chanchangi-airlines",
+      "name": "Chanchangi Airlines",
+      "fullLegalName": "Chanchangi Airlines Nigeria Limited",
+      "status": "ceased",
+      "iata": "5B",
+      "iataHistoricalNote": "Historical IATA designator 5B held 1997–2012 (subsequently reassigned globally by IATA).",
+      "icao": "NCH",
+      "callsign": "CHANCHANGI",
+      "yearsActive": "1997–2012",
+      "foundedYear": 1994,
+      "ceasedYear": 2012,
+      "headquartersCity": "Kaduna",
+      "stateSlug": "kaduna",
+      "stateName": "Kaduna",
+      "lgaSlug": "kaduna-north",
+      "lgaName": "Kaduna North",
+      "postalHref": "/codes/postal/kaduna",
+      "postalLabel": "Kaduna State postal codes (800001)",
+      "hubAirportSlugs": [
+        "kaduna-airport",
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "port-harcourt-international"
+      ],
+      "serviceScope": "Privately owned Kaduna-headquartered domestic carrier that operated high-frequency Boeing 727-200 and Boeing 737 passenger shuttles between Kaduna, Lagos, Abuja, Port Harcourt, and Owerri.",
+      "statusContext": "Ceased scheduled operations in 2012: incorporated on 5 January 1994 by Alhaji Ahmadu Chanchangi and launched commercial flights on 2 May 1997, winning multiple FAAN Domestic Airline of the Year awards before fleet attrition led to intermittent NCAA groundings between 2010 and final closure in 2012.",
+      "sources": [
+        {
+          "label": "Wikipedia — Chanchangi Airlines (5B / NCH, 1997–2012)",
+          "url": "https://en.wikipedia.org/wiki/Chanchangi_Airlines",
+          "kind": "secondary"
+        },
+        {
+          "label": "List of Defunct Airlines of Nigeria — Historical Aviation Record",
+          "url": "https://en.wikipedia.org/wiki/List_of_defunct_airlines_of_Nigeria",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Kaduna-headquartered private trunk carrier active 1997–2012 on Kaduna, Lagos, Abuja, and Port Harcourt routes (historical codes 5B / NCH)."
+    },
+    {
+      "slug": "irs-airlines",
+      "name": "IRS Airlines",
+      "fullLegalName": "IRS Airlines Limited",
+      "status": "ceased",
+      "iata": "IS",
+      "iataHistoricalNote": "Historical IATA designator IS held 2002–2013.",
+      "icao": "LVB",
+      "callsign": "SILVERBIRD",
+      "yearsActive": "2002–2013",
+      "foundedYear": 2002,
+      "ceasedYear": 2013,
+      "headquartersCity": "Abuja",
+      "stateSlug": "fct-abuja",
+      "stateName": "FCT — Abuja",
+      "lgaSlug": "abuja",
+      "lgaName": "Abuja",
+      "postalHref": "/codes/postal/fct-abuja",
+      "postalLabel": "FCT — Abuja postal codes (900001)",
+      "hubAirportSlugs": [
+        "abuja-nnamdi-azikiwe",
+        "lagos-murtala-muhammed",
+        "kano-mallam-aminu-kano",
+        "maiduguri-muhammadu-buhari",
+        "yola-airport"
+      ],
+      "serviceScope": "Abuja-headquartered scheduled domestic passenger airline that operated Fokker 100 regional jets linking Abuja and Lagos with Kano, Kaduna, Maiduguri, and Yola.",
+      "statusContext": "Ceased scheduled operations in 2013: founded by the Isyaku Rabiu Group and commenced commercial passenger flights in March 2002 before halting scheduled services in late 2013.",
+      "sources": [
+        {
+          "label": "Wikipedia — IRS Airlines (IS / LVB, 2002–2013)",
+          "url": "https://en.wikipedia.org/wiki/IRS_Airlines",
+          "kind": "secondary"
+        },
+        {
+          "label": "List of Defunct Airlines of Nigeria — Historical Aviation Record",
+          "url": "https://en.wikipedia.org/wiki/List_of_defunct_airlines_of_Nigeria",
+          "kind": "secondary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Abuja-based Fokker 100 domestic carrier serving Lagos, Kano, Maiduguri, Kaduna, and Yola from 2002 to 2013 (historical codes IS / LVB)."
+    },
+    {
+      "slug": "med-view-airline",
+      "name": "Med-View Airline",
+      "fullLegalName": "Med-View Airline Plc",
+      "status": "ceased",
+      "iata": "VL",
+      "iataHistoricalNote": "Historical IATA designator VL held during scheduled operations (subsequently reassigned by IATA).",
+      "icao": "MEV",
+      "callsign": "MED-VIEW",
+      "yearsActive": "2007–2019",
+      "foundedYear": 2007,
+      "ceasedYear": 2019,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "kano-mallam-aminu-kano"
+      ],
+      "serviceScope": "Nigerian Stock Exchange-listed carrier that started as a Hajj pilgrimage charter operator in 2007, expanded into domestic scheduled routes in November 2012, and flew West African, Jeddah, Dubai, and London Gatwick services.",
+      "statusContext": "Ceased flight operations in August 2019: listed on the Nigerian Stock Exchange in January 2017, halted scheduled passenger operations in 2019 after fleet depletion and financial liabilities, and was confirmed by the NCAA to hold no active AOC by November 2022.",
+      "sources": [
+        {
+          "label": "Wikipedia — Med-View Airline Plc (VL / MEV, 2007–2019)",
+          "url": "https://en.wikipedia.org/wiki/Med-View_Airline",
+          "kind": "secondary"
+        },
+        {
+          "label": "NCAA — Nigerian Air Operator Regulatory Oversight",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Hajj, domestic, and London Gatwick carrier listed on NSE in 2017; ceased scheduled flights in August 2019 (historical codes VL / MEV)."
+    },
+    {
+      "slug": "first-nation-airways",
+      "name": "First Nation Airways",
+      "fullLegalName": "First Nation Airways (SS) Limited",
+      "status": "ceased",
+      "icao": "FRN",
+      "callsign": "FIRST NATION",
+      "yearsActive": "2011–2018",
+      "foundedYear": 2010,
+      "ceasedYear": 2018,
+      "headquartersCity": "Ikeja, Lagos",
+      "stateSlug": "lagos",
+      "stateName": "Lagos",
+      "lgaSlug": "ikeja",
+      "lgaName": "Ikeja",
+      "postalHref": "/codes/postal/lagos/ikeja",
+      "postalLabel": "Ikeja — 100271",
+      "hubAirportSlugs": [
+        "lagos-murtala-muhammed",
+        "abuja-nnamdi-azikiwe",
+        "port-harcourt-international"
+      ],
+      "serviceScope": "Lagos-headquartered domestic trunk passenger carrier that operated Airbus A320 and Airbus A319 aircraft between Lagos, Abuja, and Port Harcourt.",
+      "statusContext": "Ceased scheduled operations in May 2018: founded in 2010 by former Bellview executives and commenced A320 flights in 2011; NCAA suspended its scheduled passenger certification indefinitely in May 2018 after its fleet dropped below the two-aircraft regulatory minimum for scheduled carriers. IATA code is omitted because none was assigned.",
+      "sources": [
+        {
+          "label": "Wikipedia — First Nation Airways (ICAO: FRN, 2011–2018)",
+          "url": "https://en.wikipedia.org/wiki/First_Nation_Airways",
+          "kind": "secondary"
+        },
+        {
+          "label": "NCAA — Nigerian Air Operator Regulatory Oversight",
+          "url": "https://ncaa.gov.ng/",
+          "kind": "primary"
+        }
+      ],
+      "lastVerified": "2026-10-24",
+      "verification": "manual",
+      "notes": "Airbus A320/A319 Lagos–Abuja–Port Harcourt trunk operator (2011–2018); ICAO FRN (no IATA designator assigned)."
+    }
+  ]
+}
